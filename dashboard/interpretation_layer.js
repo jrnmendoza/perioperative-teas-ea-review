@@ -1796,14 +1796,10 @@ window.INTERPRETATION_LAYER = {
       "label": "Target C — postoperative pain at rest, 24 h",
       "unit": "VAS 0–10",
       "comparator": "Sham",
-      "context": "The pooled estimate corresponds to approximately 0.18 VAS 0–10 lower in the intervention arm than the comparator, across 2 contributing trials (N = 158). The 95% confidence interval runs from −0.68 to 0.33 and includes no difference, so the data are compatible with a worthwhile effect, with none at all, and with a small effect in the opposite direction. Between-study heterogeneity is low (I² = 0.0%). With only 2 contributing trials, both the interval and the heterogeneity estimate are themselves imprecise. This should therefore be read as a possible signal rather than firm evidence of benefit.",
-      "results_safe": "2 trials contributed to the postoperative pain at rest, 24 h (Sham) synthesis (N = 158). The pooled mean difference was −0.18 VAS 0–10 (95% CI −0.68 to 0.33; p = 0.141; I² = 0.0%; REML + Hartung-Knapp).",
-      "discussion_safe": "The point estimate favours the intervention, but the confidence interval includes no difference; only 2 trials contributed; certainty of evidence was low, so this is best described as a possible effect that this evidence cannot confirm.",
+      "context": "The pooled estimate corresponds to approximately 0.20 VAS 0–10 lower in the intervention arm than the comparator, across 4 contributing trials (N = 1898). The 95% confidence interval (−0.34 to −0.07) excludes no difference, so the direction of effect is consistent across the interval, though its size remains uncertain. Between-study heterogeneity is low (I² = 0.0%). With only 4 contributing trials, both the interval and the heterogeneity estimate are themselves imprecise. This should therefore be read as a consistent but not precisely sized effect.",
+      "results_safe": "4 trials contributed to the postoperative pain at rest, 24 h (Sham) synthesis (N = 1898). The pooled mean difference was −0.20 VAS 0–10 (95% CI −0.34 to −0.07; p = 0.017; I² = 0.0%; REML + Hartung-Knapp).",
+      "discussion_safe": "The point estimate favours the intervention, but only 4 trials contributed; certainty of evidence was low, so this is best described as an effect whose size this evidence cannot pin down.",
       "do_not_say": [
-        {
-          "text": "“The intervention significantly reduces postoperative pain at rest, 24 h.”",
-          "why": "The 95% confidence interval includes no difference; there is no statistically significant effect to report."
-        },
         {
           "text": "“This demonstrates / establishes a benefit.”",
           "why": "Certainty of evidence for this analysis is low; the wording should not imply more than the certainty rating supports."
@@ -1813,80 +1809,65 @@ window.INTERPRETATION_LAYER = {
         {
           "level": "supported",
           "claim": "The point estimate favours the intervention.",
-          "basis": "Point estimate −0.18; a direct reading of the fitted model."
+          "basis": "Point estimate −0.20; a direct reading of the fitted model."
         },
         {
           "level": "supported",
-          "claim": "The estimated difference was approximately 0.18 VAS 0–10.",
+          "claim": "The estimated difference was approximately 0.20 VAS 0–10.",
           "basis": "The computed pooled estimate for this model."
         },
         {
           "level": "qualified",
           "claim": "The magnitude may be clinically meaningful.",
-          "basis": "Must be stated with the qualification that the confidence interval includes no difference."
+          "basis": "Must be stated with the qualification that certainty is low."
         },
         {
           "level": "unsupported",
           "claim": "The intervention definitively changes postoperative pain at rest, 24 h.",
-          "basis": "The interval includes no difference. A definitive claim is not available from this analysis."
+          "basis": "Certainty is low. A definitive claim is not available from this analysis."
         }
       ],
       "reviewer_questions": [
         {
-          "question": "Why did only 2 trials contribute, when the review includes 69 RCTs?",
-          "trigger": "k = 2",
+          "question": "Why did only 4 trials contribute, when the review includes 69 RCTs?",
+          "trigger": "k = 4",
           "pathway": "Derivability audit and evidence flow (v33 tiered panel)"
         },
         {
-          "question": "Does the confidence interval include effects a clinician would call unimportant?",
-          "trigger": "95% CI −0.68 to 0.33 includes 0",
-          "pathway": "Clinical Importance / MCID studio"
-        },
-        {
-          "question": "How much does the result depend on the 2 contributing results at high risk of bias?",
-          "trigger": "2 of 2 contributing results judged High risk",
+          "question": "How much does the result depend on the 1 contributing result at high risk of bias?",
+          "trigger": "1 of 4 contributing results judged High risk",
           "pathway": "Result-specific RoB 2 panel and model rollup"
         }
       ],
       "discussion_prompts": [
         {
-          "prompt": "The point estimate favours the intervention but the interval includes no difference. Do we frame this as a possible effect that needs better-powered trials, or as evidence of absence? Those two readings give different abstract conclusions.",
-          "trigger": "−0.18 (95% CI −0.68 to 0.33) favours the intervention and includes no effect",
-          "source": "rule"
-        },
-        {
-          "prompt": "With only 2 contributing trials, does pooling communicate more than describing them individually?",
-          "trigger": "k = 2",
-          "source": "rule"
-        },
-        {
           "prompt": "Should the leave-one-out result appear next to this estimate in the manuscript, or is the supplement enough?",
-          "trigger": "2 contributing results at high risk of bias",
+          "trigger": "1 contributing result at high risk of bias",
           "source": "rule"
         }
       ],
       "why_k": {
-        "headline": "69 RCTs included → k = 2 in this analysis",
+        "headline": "69 RCTs included → k = 4 in this analysis",
         "explanation": "The review's 69 included RCTs span multiple outcomes, time windows, stimulation modalities and comparator types, so most of them were never candidates for this particular estimand. For the 0–24 h opioid endpoint specifically, a 93-row derivability audit covering the 63 trials that report any 0–24 h opioid result found 10 contrasts, across 7 trials, that report the exact endpoint as a mean and SD in a dose unit with a sourced conversion factor. This analysis then takes the subset matching its own modality and comparator stratum, because the protocol does not combine TEAS with EA, or sham with usual care.",
         "pathway": "Derivability audit / evidence flow"
       },
       "status": "stable",
       "status_reason": "No open source-QC flag, unjudged result or estimator dependence on this analysis's own inputs.",
       "bound_evidence": {
-        "k": 2,
-        "estimate": -0.1765,
-        "ci_low": -0.6828,
-        "ci_high": 0.3298,
+        "k": 4,
+        "estimate": -0.2048,
+        "ci_low": -0.3392,
+        "ci_high": -0.0703,
         "i2": 0.0,
         "grade": "Low",
         "rob_low": 0,
-        "rob_some": 0,
-        "rob_high": 2,
+        "rob_some": 3,
+        "rob_high": 1,
         "estimator": "REML + Hartung-Knapp"
       },
-      "fingerprint": "a56f8db01188b280",
+      "fingerprint": "1e67f2e5481d2659",
       "stale": false,
-      "includes_null": true,
+      "includes_null": false,
       "stale_detail": "",
       "review_state": "reviewed",
       "reviewed_on": "2026-09-12"
@@ -1896,9 +1877,9 @@ window.INTERPRETATION_LAYER = {
       "label": "Target D — PONV 0–24 h",
       "unit": "risk ratio",
       "comparator": "Sham / usual care",
-      "context": "The pooled estimate is a risk ratio of 0.56 in the intervention arm relative to the comparator (a lower event rate), across 2 contributing trials (N = 463). The 95% confidence interval runs from 0.14 to 2.32 and includes no difference, so the data are compatible with a worthwhile effect, with none at all, and with a small effect in the opposite direction. Between-study heterogeneity is low (I² = 0.0%). With only 2 contributing trials, both the interval and the heterogeneity estimate are themselves imprecise. This should therefore be read as a possible signal rather than firm evidence of benefit.",
-      "results_safe": "2 trials contributed to the PONV 0–24 h (Sham / usual care) synthesis (N = 463). The pooled risk ratio was 0.56 (95% CI 0.14 to 2.32; p = 0.122; I² = 0.0%; REML + Hartung-Knapp).",
-      "discussion_safe": "The point estimate favours the intervention, but the confidence interval includes no difference; only 2 trials contributed; certainty of evidence was low, so this is best described as a possible effect that this evidence cannot confirm.",
+      "context": "The pooled estimate is a risk ratio of 0.65 in the intervention arm relative to the comparator (a lower event rate), across 4 contributing trials (N = 2118). The 95% confidence interval runs from 0.39 to 1.07 and includes no difference, so the data are compatible with a worthwhile effect, with none at all, and with a small effect in the opposite direction. Between-study heterogeneity is substantial (I² = 66.9%). With only 4 contributing trials, both the interval and the heterogeneity estimate are themselves imprecise. This should therefore be read as a possible signal rather than firm evidence of benefit.",
+      "results_safe": "4 trials contributed to the PONV 0–24 h (Sham / usual care) synthesis (N = 2118). The pooled risk ratio was 0.65 (95% CI 0.39 to 1.07; p = 0.071; I² = 66.9%; REML + Hartung-Knapp).",
+      "discussion_safe": "The point estimate favours the intervention, but the confidence interval includes no difference; between-study heterogeneity was substantial (I² = 66.9%); only 4 trials contributed; certainty of evidence was low, so this is best described as a possible effect that this evidence cannot confirm.",
       "do_not_say": [
         {
           "text": "“The intervention significantly reduces PONV 0–24 h.”",
@@ -1913,11 +1894,11 @@ window.INTERPRETATION_LAYER = {
         {
           "level": "supported",
           "claim": "The point estimate favours the intervention.",
-          "basis": "Point estimate 0.56; a direct reading of the fitted model."
+          "basis": "Point estimate 0.65; a direct reading of the fitted model."
         },
         {
           "level": "supported",
-          "claim": "The estimated difference was approximately a risk ratio of 0.56.",
+          "claim": "The estimated difference was approximately a risk ratio of 0.65.",
           "basis": "The computed pooled estimate for this model."
         },
         {
@@ -1933,13 +1914,13 @@ window.INTERPRETATION_LAYER = {
       ],
       "reviewer_questions": [
         {
-          "question": "Why did only 2 trials contribute, when the review includes 69 RCTs?",
-          "trigger": "k = 2",
+          "question": "Why did only 4 trials contribute, when the review includes 69 RCTs?",
+          "trigger": "k = 4",
           "pathway": "Derivability audit and evidence flow (v33 tiered panel)"
         },
         {
           "question": "Does the confidence interval include effects a clinician would call unimportant?",
-          "trigger": "95% CI 0.14 to 2.32 includes 0",
+          "trigger": "95% CI 0.39 to 1.07 includes 0",
           "pathway": "Clinical Importance / MCID studio"
         },
         {
@@ -1951,12 +1932,7 @@ window.INTERPRETATION_LAYER = {
       "discussion_prompts": [
         {
           "prompt": "The point estimate favours the intervention but the interval includes no difference. Do we frame this as a possible effect that needs better-powered trials, or as evidence of absence? Those two readings give different abstract conclusions.",
-          "trigger": "0.56 (95% CI 0.14 to 2.32) favours the intervention and includes no effect",
-          "source": "rule"
-        },
-        {
-          "prompt": "With only 2 contributing trials, does pooling communicate more than describing them individually?",
-          "trigger": "k = 2",
+          "trigger": "0.65 (95% CI 0.39 to 1.07) favours the intervention and includes no effect",
           "source": "rule"
         },
         {
@@ -1966,25 +1942,25 @@ window.INTERPRETATION_LAYER = {
         }
       ],
       "why_k": {
-        "headline": "69 RCTs included → k = 2 in this analysis",
+        "headline": "69 RCTs included → k = 4 in this analysis",
         "explanation": "The review's 69 included RCTs span multiple outcomes, time windows, stimulation modalities and comparator types, so most of them were never candidates for this particular estimand. For the 0–24 h opioid endpoint specifically, a 93-row derivability audit covering the 63 trials that report any 0–24 h opioid result found 10 contrasts, across 7 trials, that report the exact endpoint as a mean and SD in a dose unit with a sourced conversion factor. This analysis then takes the subset matching its own modality and comparator stratum, because the protocol does not combine TEAS with EA, or sham with usual care.",
         "pathway": "Derivability audit / evidence flow"
       },
       "status": "stable",
       "status_reason": "No open source-QC flag, unjudged result or estimator dependence on this analysis's own inputs.",
       "bound_evidence": {
-        "k": 2,
-        "estimate": 0.5604,
-        "ci_low": 0.1377,
-        "ci_high": 2.3202,
-        "i2": 0.0,
+        "k": 4,
+        "estimate": 0.6477,
+        "ci_low": 0.3918,
+        "ci_high": 1.0708,
+        "i2": 66.89,
         "grade": "Low",
         "rob_low": 0,
-        "rob_some": 2,
+        "rob_some": 4,
         "rob_high": 0,
         "estimator": "REML + Hartung-Knapp"
       },
-      "fingerprint": "5460c726718f50d0",
+      "fingerprint": "f1dde7a28743721e",
       "stale": false,
       "includes_null": true,
       "stale_detail": "",
@@ -1996,8 +1972,8 @@ window.INTERPRETATION_LAYER = {
       "label": "Target D — PONV 0–48 h",
       "unit": "risk ratio",
       "comparator": "Sham / usual care",
-      "context": "The pooled estimate is a risk ratio of 0.52 in the intervention arm relative to the comparator (a lower event rate), across 2 contributing trials (N = 120). The 95% confidence interval runs from 0.26 to 1.11 and includes no difference, so the data are compatible with a worthwhile effect, with none at all, and with a small effect in the opposite direction. Between-study heterogeneity is low (I² = 0.0%). With only 2 contributing trials, both the interval and the heterogeneity estimate are themselves imprecise. This should therefore be read as a possible signal rather than firm evidence of benefit.",
-      "results_safe": "2 trials contributed to the PONV 0–48 h (Sham / usual care) synthesis (N = 120). The pooled risk ratio was 0.52 (95% CI 0.26 to 1.11; p = 0.058; I² = 0.0%; REML + Hartung-Knapp).",
+      "context": "The pooled estimate is a risk ratio of 0.54 in the intervention arm relative to the comparator (a lower event rate), across 2 contributing trials (N = 120). The 95% confidence interval runs from 0.26 to 1.11 and includes no difference, so the data are compatible with a worthwhile effect, with none at all, and with a small effect in the opposite direction. Between-study heterogeneity is low (I² = 0.0%). With only 2 contributing trials, both the interval and the heterogeneity estimate are themselves imprecise. This should therefore be read as a possible signal rather than firm evidence of benefit.",
+      "results_safe": "2 trials contributed to the PONV 0–48 h (Sham / usual care) synthesis (N = 120). The pooled risk ratio was 0.54 (95% CI 0.26 to 1.11; p = 0.058; I² = 0.0%; REML + Hartung-Knapp).",
       "discussion_safe": "The point estimate favours the intervention, but the confidence interval includes no difference; only 2 trials contributed; certainty of evidence was low, so this is best described as a possible effect that this evidence cannot confirm.",
       "do_not_say": [
         {
@@ -2013,11 +1989,11 @@ window.INTERPRETATION_LAYER = {
         {
           "level": "supported",
           "claim": "The point estimate favours the intervention.",
-          "basis": "Point estimate 0.52; a direct reading of the fitted model."
+          "basis": "Point estimate 0.54; a direct reading of the fitted model."
         },
         {
           "level": "supported",
-          "claim": "The estimated difference was approximately a risk ratio of 0.52.",
+          "claim": "The estimated difference was approximately a risk ratio of 0.54.",
           "basis": "The computed pooled estimate for this model."
         },
         {
@@ -2056,7 +2032,7 @@ window.INTERPRETATION_LAYER = {
       "discussion_prompts": [
         {
           "prompt": "The point estimate favours the intervention but the interval includes no difference. Do we frame this as a possible effect that needs better-powered trials, or as evidence of absence? Those two readings give different abstract conclusions.",
-          "trigger": "0.52 (95% CI 0.26 to 1.11) favours the intervention and includes no effect",
+          "trigger": "0.54 (95% CI 0.26 to 1.11) favours the intervention and includes no effect",
           "source": "rule"
         },
         {
@@ -2084,7 +2060,7 @@ window.INTERPRETATION_LAYER = {
       "status_reason": "No open source-QC flag, unjudged result or estimator dependence on this analysis's own inputs.",
       "bound_evidence": {
         "k": 2,
-        "estimate": 0.5234,
+        "estimate": 0.5352,
         "ci_low": 0.2585,
         "ci_high": 1.1078,
         "i2": 0.0,
@@ -2094,7 +2070,7 @@ window.INTERPRETATION_LAYER = {
         "rob_high": 1,
         "estimator": "REML + Hartung-Knapp"
       },
-      "fingerprint": "2d1641fc9f7d14e3",
+      "fingerprint": "8b794d44ad59c45c",
       "stale": false,
       "includes_null": true,
       "stale_detail": "",
@@ -2103,29 +2079,44 @@ window.INTERPRETATION_LAYER = {
     },
     {
       "analysis_id": "AN-07-TARGET-E",
-      "label": "Target E — time to first flatus",
-      "unit": "hours",
+      "label": "Target E — time to first flatus (standardised)",
+      "unit": "Hedges' g",
       "comparator": "Sham / usual care",
-      "context": "The pooled estimate corresponds to approximately 2.00 hours lower in the intervention arm than the comparator, across 6 contributing trials (N = 596). The 95% confidence interval (−3.14 to −0.87) excludes no difference, so the direction of effect is consistent across the interval, though its size remains uncertain. Between-study heterogeneity is low (I² = 0.0%). This should therefore be read as a consistent but not precisely sized effect.",
-      "results_safe": "6 trials contributed to the time to first flatus (Sham / usual care) synthesis (N = 596). The pooled mean difference was −2.00 hours (95% CI −3.14 to −0.87; p = 0.006; I² = 0.0%; MD Hours (REML + KH)).",
-      "discussion_safe": "The estimate favours the intervention, with a consistent interval and limited heterogeneity, supporting a more confident reading than most analyses in this review.",
-      "do_not_say": [],
+      "context": "The pooled estimate corresponds to approximately 0.55 Hedges' g lower in the intervention arm than the comparator, across 7 contributing trials (N = 638). The 95% confidence interval (−0.88 to −0.22) excludes no difference, so the direction of effect is consistent across the interval, though its size remains uncertain. Between-study heterogeneity is low (I² = 39.2%). This should therefore be read as a consistent but not precisely sized effect.",
+      "results_safe": "7 trials contributed to the time to first flatus (standardised) (Sham / usual care) synthesis (N = 638). The pooled standardized mean difference was −0.55 Hedges' g (95% CI −0.88 to −0.22; p = 0.007; I² = 39.2%; SMD Hedges g (REML + KH)).",
+      "discussion_safe": "The point estimate favours the intervention, but certainty of evidence was very low, so this is best described as an effect whose size this evidence cannot pin down.",
+      "do_not_say": [
+        {
+          "text": "“This demonstrates / establishes a benefit.”",
+          "why": "Certainty of evidence for this analysis is very low; the wording should not imply more than the certainty rating supports."
+        }
+      ],
       "claims": [
         {
           "level": "supported",
           "claim": "The point estimate favours the intervention.",
-          "basis": "Point estimate −2.00; a direct reading of the fitted model."
+          "basis": "Point estimate −0.55; a direct reading of the fitted model."
         },
         {
           "level": "supported",
-          "claim": "The estimated difference was approximately 2.00 hours.",
+          "claim": "The estimated difference was approximately 0.55 Hedges' g.",
           "basis": "The computed pooled estimate for this model."
+        },
+        {
+          "level": "qualified",
+          "claim": "The magnitude may be clinically meaningful.",
+          "basis": "Must be stated with the qualification that certainty is very low."
+        },
+        {
+          "level": "unsupported",
+          "claim": "The intervention definitively changes time to first flatus (standardised).",
+          "basis": "Certainty is very low. A definitive claim is not available from this analysis."
         }
       ],
       "reviewer_questions": [
         {
           "question": "How much does the result depend on the 1 contributing result at high risk of bias?",
-          "trigger": "1 of 6 contributing results judged High risk",
+          "trigger": "1 of 7 contributing results judged High risk",
           "pathway": "Result-specific RoB 2 panel and model rollup"
         },
         {
@@ -2136,8 +2127,8 @@ window.INTERPRETATION_LAYER = {
       ],
       "discussion_prompts": [
         {
-          "prompt": "This is one of the firmer results in the review. How prominently should it sit relative to the primary outcome, which is less certain?",
-          "trigger": "Interval excludes the null and certainty is moderate",
+          "prompt": "Certainty is very low. Does this belong in the abstract at all, or only in the full Results where its limitations travel with it?",
+          "trigger": "GRADE certainty is Very Low",
           "source": "rule"
         },
         {
@@ -2152,25 +2143,25 @@ window.INTERPRETATION_LAYER = {
         }
       ],
       "why_k": {
-        "headline": "69 RCTs included → k = 6 in this analysis",
+        "headline": "69 RCTs included → k = 7 in this analysis",
         "explanation": "The review's 69 included RCTs span multiple outcomes, time windows, stimulation modalities and comparator types, so most of them were never candidates for this particular estimand. For the 0–24 h opioid endpoint specifically, a 93-row derivability audit covering the 63 trials that report any 0–24 h opioid result found 10 contrasts, across 7 trials, that report the exact endpoint as a mean and SD in a dose unit with a sourced conversion factor. This analysis then takes the subset matching its own modality and comparator stratum, because the protocol does not combine TEAS with EA, or sham with usual care.",
         "pathway": "Derivability audit / evidence flow"
       },
       "status": "stable",
       "status_reason": "No open source-QC flag, unjudged result or estimator dependence on this analysis's own inputs.",
       "bound_evidence": {
-        "k": 6,
-        "estimate": -2.0039,
-        "ci_low": -3.1419,
-        "ci_high": -0.8659,
-        "i2": 0.0,
-        "grade": "Moderate",
+        "k": 7,
+        "estimate": -0.5521,
+        "ci_low": -0.8834,
+        "ci_high": -0.2208,
+        "i2": 39.22,
+        "grade": "Very Low",
         "rob_low": 0,
-        "rob_some": 5,
+        "rob_some": 6,
         "rob_high": 1,
-        "estimator": "MD Hours (REML + KH)"
+        "estimator": "SMD Hedges g (REML + KH)"
       },
-      "fingerprint": "e2a5032ddcd0fddb",
+      "fingerprint": "efa30f9303aab472",
       "stale": false,
       "includes_null": false,
       "stale_detail": "",

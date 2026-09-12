@@ -3,7 +3,7 @@
        log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/.claude/worktrees/festive-jenni
 > ngs-0689c3/06_FINAL_ANALYSIS_V26/02_STATA/logs/05_ponv.log
   log type:  text
- opened on:  12 Sep 2026, 11:42:27
+ opened on:  12 Sep 2026, 13:07:39
 
 . 
 . di as txt "=================================================================="
@@ -24,8 +24,8 @@ Model: Binary Risk Ratio (RR), REML + Hartung-Knapp
 . describe
 
 Contains data from 06_FINAL_ANALYSIS_V26/01_DATA/target_D_ponv.dta
- Observations:            12                  
-    Variables:            49                  8 Sep 2026 08:50
+ Observations:            14                  
+    Variables:            49                  12 Sep 2026 13:04
 ----------------------------------------------------------------------------------------------------
 Variable      Storage   Display    Value
     name         type    format    label      Variable label
@@ -35,8 +35,8 @@ target          str18   %18s                  target
 endpoint_stra~m str35   %35s                  endpoint_stratum
 study           str25   %25s                  study
 comparison_id   str35   %35s                  comparison_id
-intervention    str128  %128s                 intervention
-comparator      str75   %75s                  comparator
+intervention    str131  %131s                 intervention
+comparator      str85   %85s                  comparator
 outcome         str69   %69s                  outcome
 time_window     str101  %101s                 time_window
 data_type       str42   %42s                  data_type
@@ -47,13 +47,13 @@ sd_i            double  %10.0g                sd_i
 median_i        double  %10.0g                median_i
 q1_i            double  %10.0g                q1_i
 q3_i            double  %10.0g                q3_i
-events_i        byte    %10.0g                events_i
+events_i        int     %10.0g                events_i
 mean_c          double  %10.0g                mean_c
 sd_c            double  %10.0g                sd_c
 median_c        double  %10.0g                median_c
 q1_c            double  %10.0g                q1_c
 q3_c            double  %10.0g                q3_c
-events_c        byte    %10.0g                events_c
+events_c        int     %10.0g                events_c
 unit            str57   %57s                  unit
 reported_p      str54   %54s                  reported_p
 derived_effec~e str2    %9s                   derived_effect_measure
@@ -68,10 +68,10 @@ analysis_action str20   %20s                  analysis_action
 overlap_family  str30   %30s                  overlap_family
 hold_reason     str33   %33s                  hold_reason
 shared_contro~e str101  %101s                 shared_control_issue
-source_qc       str179  %179s                 source_qc
+source_qc       str415  %415s                 source_qc
 record_status   str59   %59s                  record_status
 source_url      str83   %83s                  source_url
-Sourceverifie~t str108  %108s                 Source-verified result
+Sourceverifie~t str160  %160s                 Source-verified result
 rob_d1          str13   %13s                  D1
 rob_d2          str13   %13s                  D2
 rob_d3          str13   %13s                  D3
@@ -91,32 +91,36 @@ Sorted by:
 . list lock_id study endpoint_stratum include_strict include_sensitivity events_i n_i events_c n_c r
 > esult_rob, clean
 
-                lock_id        study   endpoint_stratum   includ~t   includ~y   events_i   n_i   eve
-> nts_c   n_c      result_rob  
-  1.              D-001   Zheng 2025       D_PONV_0-24h          1          0         18    42      
->    29    43   Some concerns  
-  2.              D-002      Lu 2021       D_PONV_0-24h          1          0         35   190      
->    68   188            High  
-  3.              D-003   Xiong 2021       D_PONV_0-48h          1          0         13    31      
->    24    31            High  
-  4.              D-004    Xing 2022       D_PONV_0-48h          1          0          5    29      
->    11    29            High  
-  5.              D-005    Zhou 2025       D_PONV_other          0          1         10    48      
->    19    49   Some concerns  
-  6.              D-006    Yang 2024     D_nausea_0-24h          1          0         24    90      
->    40    90            High  
-  7.              D-007      Ma 2026     D_nausea_0-24h          1          0          6    17      
->     8    16            High  
-  8.              D-008     Luo 2026     D_nausea_0-48h          1          0         24   138      
->    53   139            High  
-  9.              D-009    Yang 2024   D_vomiting_0-24h          1          0         12    90      
->    25    90   Some concerns  
- 10.              D-010      Ma 2026   D_vomiting_0-24h          1          0          6    17      
->     7    16   Some concerns  
- 11.              D-011     Luo 2026   D_vomiting_0-48h          1          0          9   138      
->    27   139   Some concerns  
- 12.   SZMIT21-POSTLOCK   Szmit 2021     D_nausea_0-24h          1          0          0    24      
->     4    24   Some concerns  
+                 lock_id        study   endpoint_stratum   includ~t   includ~y   events_i   n_i   ev
+> ents_c   n_c      result_rob  
+  1.               D-001   Zheng 2025       D_PONV_0-24h          1          0         18    42     
+>     29    43   Some concerns  
+  2.               D-002      Lu 2021       D_PONV_0-24h          1          0         35   190     
+>     68   188            High  
+  3.               D-003   Xiong 2021       D_PONV_0-48h          1          0         13    31     
+>     24    31            High  
+  4.               D-004    Xing 2022       D_PONV_0-48h          1          0          5    29     
+>     11    29            High  
+  5.               D-005    Zhou 2025       D_PONV_other          0          1         10    48     
+>     19    49   Some concerns  
+  6.               D-006    Yang 2024     D_nausea_0-24h          1          0         24    90     
+>     40    90            High  
+  7.               D-007      Ma 2026     D_nausea_0-24h          1          0          6    17     
+>      8    16            High  
+  8.               D-008     Luo 2026     D_nausea_0-48h          1          0         24   138     
+>     53   139            High  
+  9.               D-009    Yang 2024   D_vomiting_0-24h          1          0         12    90     
+>     25    90   Some concerns  
+ 10.               D-010      Ma 2026   D_vomiting_0-24h          1          0          6    17     
+>      7    16   Some concerns  
+ 11.               D-011     Luo 2026   D_vomiting_0-48h          1          0          9   138     
+>     27   139   Some concerns  
+ 12.    SZMIT21-POSTLOCK   Szmit 2021     D_nausea_0-24h          1          0          0    24     
+>      4    24   Some concerns  
+ 13.   SONG20-POSTLOCK-D    Song 2020       D_PONV_0-24h          1          0          3    42     
+>     10    43   Some concerns  
+ 14.    GAO22-POSTLOCK-D     Gao 2022       D_PONV_0-24h          1          0        243   827     
+>    283   828   Some concerns  
 
 . 
 . * Calculate log RR and SE
@@ -157,7 +161,7 @@ Sorted by:
 Meta-analysis setting information
 
  Study information
-    No. of studies: 12
+    No. of studies: 14
        Study label: study
         Study size: N/A
 
@@ -196,23 +200,25 @@ Meta-analysis setting information
           Std. err.: se_lnrr
         Study label: study
 
-Meta-analysis summary                     Number of studies =      2
+Meta-analysis summary                     Number of studies =      4
 Random-effects model                      Heterogeneity:
-Method: REML                                          tau2 =  0.0000
-SE adjustment: Knapp–Hartung                        I2 (%) =    0.00
-                                                        H2 =    1.00
+Method: REML                                          tau2 =  0.0631
+SE adjustment: Knapp–Hartung                        I2 (%) =   66.89
+                                                        H2 =    3.02
 
            exp(ES): exp(Risk Ratio (log scale))
 --------------------------------------------------------------------
             Study |        exp(ES)    [95% conf. interval]  % weight
 ------------------+-------------------------------------------------
-       Zheng 2025 |          0.642       0.429       0.959     43.45
-          Lu 2021 |          0.513       0.361       0.729     56.55
+       Zheng 2025 |          0.642       0.429       0.959     25.61
+          Lu 2021 |          0.513       0.361       0.729     28.23
+        Song 2020 |          0.341       0.110       1.060      6.76
+         Gao 2022 |          0.860       0.746       0.991     39.40
 ------------------+-------------------------------------------------
-       exp(theta) |          0.565       0.138       2.320
+       exp(theta) |          0.648       0.392       1.071
 --------------------------------------------------------------------
-Test of theta = 0: t(1) = -5.13                  Prob > |t| = 0.1225
-Test of homogeneity: Q = chi2(1) = 0.68            Prob > Q = 0.4105
+Test of theta = 0: t(3) = -2.75                  Prob > |t| = 0.0708
+Test of homogeneity: Q = chi2(3) = 10.22           Prob > Q = 0.0168
 
 . matrix res_ponv24 = (exp(r(theta)), exp(r(ci_lb)), exp(r(ci_ub)), r(p), r(N), r(tau2), r(I2), r(Q)
 > , r(p_Q))
@@ -654,7 +660,7 @@ file 06_FINAL_ANALYSIS_V26/03_RESULTS/results_targetD_ponv.csv saved
 >    stratum   k   rr_est~e     ci_low    ci_high    p_value       tau2         i2     q_stat       
 >                 model  
   1.     TD_PONV_0_24H   Postoperative Nausea & Vomiting (PONV)     Composite PONV 0-24h (Zheng 2025
-> , Lu 2021)   2   .5652858   .1377271   2.320153   .1224934   1.76e-07    .000473   .6773252       
+> , Lu 2021)   4   .6477131   .3917858    1.07082    .070784   .0630766   66.88863   10.22051       
 >  REML + Hartung-Knapp  
   2.     TD_PONV_0_48H   Postoperative Nausea & Vomiting (PONV)   Composite PONV 0-48h (Xiong 2021, 
 > Xing 2022)   2   .5351886   .2585465   1.107835   .0581485   6.85e-08   .0000538   .0788017       
@@ -682,5 +688,5 @@ SUCCESS: Target D analyses completed and exported.
        log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/.claude/worktrees/festive-jenni
 > ngs-0689c3/06_FINAL_ANALYSIS_V26/02_STATA/logs/05_ponv.log
   log type:  text
- closed on:  12 Sep 2026, 11:42:29
+ closed on:  12 Sep 2026, 13:07:40
 ----------------------------------------------------------------------------------------------------

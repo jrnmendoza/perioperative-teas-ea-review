@@ -1,9 +1,9 @@
 ----------------------------------------------------------------------------------------------------
       name:  <unnamed>
-       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/02_STATA/
-> logs/06_flatus.log
+       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/.claude/worktrees/festive-jenni
+> ngs-0689c3/06_FINAL_ANALYSIS_V26/02_STATA/logs/06_flatus.log
   log type:  text
- opened on:   8 Sep 2026, 08:50:28
+ opened on:  12 Sep 2026, 13:07:43
 
 . 
 . di as txt "=================================================================="
@@ -24,8 +24,8 @@ Model: Random-Effects REML + Hartung-Knapp (se(kh))
 . describe
 
 Contains data from 06_FINAL_ANALYSIS_V26/01_DATA/target_E_flatus.dta
- Observations:             6                  
-    Variables:            60                  8 Sep 2026 08:50
+ Observations:             7                  
+    Variables:            60                  12 Sep 2026 13:04
 ----------------------------------------------------------------------------------------------------
 Variable      Storage   Display    Value
     name         type    format    label      Variable label
@@ -35,8 +35,8 @@ target          str18   %18s                  target
 endpoint_stra~m str35   %35s                  endpoint_stratum
 study           str25   %25s                  study
 comparison_id   str35   %35s                  comparison_id
-intervention    str128  %128s                 intervention
-comparator      str75   %75s                  comparator
+intervention    str131  %131s                 intervention
+comparator      str85   %85s                  comparator
 outcome         str69   %69s                  outcome
 time_window     str101  %101s                 time_window
 data_type       str42   %42s                  data_type
@@ -47,13 +47,13 @@ sd_i            double  %10.0g                sd_i
 median_i        double  %10.0g                median_i
 q1_i            double  %10.0g                q1_i
 q3_i            double  %10.0g                q3_i
-events_i        byte    %10.0g                events_i
+events_i        int     %10.0g                events_i
 mean_c          double  %10.0g                mean_c
 sd_c            double  %10.0g                sd_c
 median_c        double  %10.0g                median_c
 q1_c            double  %10.0g                q1_c
 q3_c            double  %10.0g                q3_c
-events_c        byte    %10.0g                events_c
+events_c        int     %10.0g                events_c
 unit            str57   %57s                  unit
 reported_p      str54   %54s                  reported_p
 derived_effec~e str2    %9s                   derived_effect_measure
@@ -68,10 +68,10 @@ analysis_action str20   %20s                  analysis_action
 overlap_family  str30   %30s                  overlap_family
 hold_reason     str33   %33s                  hold_reason
 shared_contro~e str101  %101s                 shared_control_issue
-source_qc       str179  %179s                 source_qc
+source_qc       str415  %415s                 source_qc
 record_status   str59   %59s                  record_status
 source_url      str83   %83s                  source_url
-Sourceverifie~t str108  %108s                 Source-verified result
+Sourceverifie~t str160  %160s                 Source-verified result
 rob_d1          str13   %13s                  D1
 rob_d2          str13   %13s                  D2
 rob_d3          str13   %13s                  D3
@@ -102,20 +102,22 @@ Sorted by:
 . list lock_id study comparison_id n_i mean_i sd_i n_c mean_c sd_c unit md_hours se_hours result_rob
 > , clean
 
-       lock_id       study                comparison_id   n_i   mean_i   sd_i   n_c   mean_c   sd_c 
->    unit    md_hours   se_hours      result_rob  
-  1.     E-001   Zhou 2025   ZHOU25_TEAS_vs_SHAM_FLATUS    48     14.1   3.19    49    15.88   3.78 
->   hours       -1.78   .7096493   Some concerns  
-  2.     E-002   Yang 2020              YANG20_EA_vs_UC    29     20.8    4.6    28     24.1    6.2 
->   hours   -3.300001   1.450004   Some concerns  
-  3.     E-003   Yang 2024       YANG24_EA_vs_UC_FLATUS    90     15.4    3.2    90       17    3.7 
->   hours        -1.6   .5156441            High  
-  4.     E-004   Xing 2022      XING22_NTG_vs_NG_FLATUS    29    32.57   6.94    29    36.83   6.19 
->   hours   -4.260002   1.726864   Some concerns  
-  5.     E-006     Lu 2022     LU22_TEAS_vs_CTRL_FLATUS    47     34.5   16.7    47     42.4   22.9 
->   hours   -7.900002   4.134185   Some concerns  
-  6.     E-007     Ng 2013       NG13_EA_vs_SHAM_FLATUS    55        2     .9    55      2.3    1.1 
->    days   -7.200001   4.599447   Some concerns  
+                  lock_id        study                comparison_id   n_i   mean_i    sd_i   n_c   m
+> ean_c     sd_c    unit    md_hours   se_hours      result_rob  
+  1.                E-001    Zhou 2025   ZHOU25_TEAS_vs_SHAM_FLATUS    48     14.1    3.19    49    
+> 15.88     3.78   hours       -1.78   .7096493   Some concerns  
+  2.                E-002    Yang 2020              YANG20_EA_vs_UC    29     20.8     4.6    28    
+>  24.1      6.2   hours   -3.300001   1.450004   Some concerns  
+  3.                E-003    Yang 2024       YANG24_EA_vs_UC_FLATUS    90     15.4     3.2    90    
+>    17      3.7   hours        -1.6   .5156441            High  
+  4.                E-004    Xing 2022      XING22_NTG_vs_NG_FLATUS    29    32.57    6.94    29    
+> 36.83     6.19   hours   -4.260002   1.726864   Some concerns  
+  5.                E-006      Lu 2022     LU22_TEAS_vs_CTRL_FLATUS    47     34.5    16.7    47    
+>  42.4     22.9   hours   -7.900002   4.134185   Some concerns  
+  6.                E-007      Ng 2013       NG13_EA_vs_SHAM_FLATUS    55        2      .9    55    
+>   2.3      1.1    days   -7.200001   4.599447   Some concerns  
+  7.   ZHANG18-POSTLOCK-E   Zhang 2018   ZHANG18_TEA_vs_SHAM_FLATUS    21    51.33   12.74    21   8
+> 0.051   20.145   hours     -28.721   5.201322   Some concerns  
 
 . 
 . * ------------------------------------------------------------------------------
@@ -139,7 +141,7 @@ Note: Ng 2013 converted from days (2.0+-0.9 vs 2.3+-1.1 d) to hours.
 Meta-analysis setting information
 
  Study information
-    No. of studies: 6
+    No. of studies: 7
        Study label: study
         Study size: N/A
 
@@ -164,27 +166,28 @@ Meta-analysis setting information
           Std. err.: se_hours
         Study label: study
 
-Meta-analysis summary                     Number of studies =      6
+Meta-analysis summary                     Number of studies =      7
 Random-effects model                      Heterogeneity:
-Method: REML                                          tau2 =  0.0000
-SE adjustment: Knapp–Hartung                        I2 (%) =    0.00
-                                                        H2 =    1.00
+Method: REML                                          tau2 = 55.3007
+SE adjustment: Knapp–Hartung                        I2 (%) =   97.33
+                                                        H2 =   37.40
 
        Effect size: Mean Difference (Hours)
 --------------------------------------------------------------------
             Study |    Effect size    [95% conf. interval]  % weight
 ------------------+-------------------------------------------------
-        Zhou 2025 |         -1.780      -3.171      -0.389     29.80
-        Yang 2020 |         -3.300      -6.142      -0.458      7.14
-        Yang 2024 |         -1.600      -2.611      -0.589     56.44
-        Xing 2022 |         -4.260      -7.645      -0.875      5.03
-          Lu 2022 |         -7.900     -16.003       0.203      0.88
-          Ng 2013 |         -7.200     -16.215       1.815      0.71
+        Zhou 2025 |         -1.780      -3.171      -0.389     16.36
+        Yang 2020 |         -3.300      -6.142      -0.458     15.90
+        Yang 2024 |         -1.600      -2.611      -0.589     16.43
+        Xing 2022 |         -4.260      -7.645      -0.875     15.66
+          Lu 2022 |         -7.900     -16.003       0.203     12.61
+          Ng 2013 |         -7.200     -16.215       1.815     11.94
+       Zhang 2018 |        -28.721     -38.915     -18.527     11.09
 ------------------+-------------------------------------------------
-            theta |         -2.004      -3.142      -0.866
+            theta |         -6.786     -14.838       1.265
 --------------------------------------------------------------------
-Test of theta = 0: t(5) = -4.53                  Prob > |t| = 0.0062
-Test of homogeneity: Q = chi2(5) = 6.53            Prob > Q = 0.2581
+Test of theta = 0: t(6) = -2.06                  Prob > |t| = 0.0848
+Test of homogeneity: Q = chi2(6) = 32.77           Prob > Q = 0.0000
 
 . matrix res_flatus_md = (r(theta), r(ci_lb), r(ci_ub), r(p), r(N), r(tau2), r(I2), r(Q), r(p_Q))
 
@@ -211,7 +214,7 @@ Test of homogeneity: Q = chi2(5) = 6.53            Prob > Q = 0.2581
 Meta-analysis setting information
 
  Study information
-    No. of studies: 6
+    No. of studies: 7
        Study label: study
         Study size: N/A
 
@@ -236,27 +239,28 @@ Meta-analysis setting information
           Std. err.: hedges_se
         Study label: study
 
-Meta-analysis summary                     Number of studies =      6
+Meta-analysis summary                     Number of studies =      7
 Random-effects model                      Heterogeneity:
-Method: REML                                          tau2 =  0.0000
-SE adjustment: Knapp–Hartung                        I2 (%) =    0.00
-                                                        H2 =    1.00
+Method: REML                                          tau2 =  0.0309
+SE adjustment: Knapp–Hartung                        I2 (%) =   39.22
+                                                        H2 =    1.65
 
        Effect size: Standardized Mean Difference (Hedges' g)
 --------------------------------------------------------------------
             Study |    Effect size    [95% conf. interval]  % weight
 ------------------+-------------------------------------------------
-        Zhou 2025 |         -0.504      -0.909      -0.100     16.20
-        Yang 2020 |         -0.598      -1.129      -0.067      9.40
-        Yang 2024 |         -0.461      -0.757      -0.165     30.23
-        Xing 2022 |         -0.639      -1.167      -0.111      9.51
-          Lu 2022 |         -0.391      -0.799       0.017     15.90
-          Ng 2013 |         -0.296      -0.672       0.079     18.76
+        Zhou 2025 |         -0.504      -0.909      -0.100     15.83
+        Yang 2020 |         -0.598      -1.129      -0.067     11.15
+        Yang 2024 |         -0.461      -0.757      -0.165     21.65
+        Xing 2022 |         -0.639      -1.167      -0.111     11.24
+          Lu 2022 |         -0.391      -0.799       0.017     15.65
+          Ng 2013 |         -0.296      -0.672       0.079     17.18
+       Zhang 2018 |         -1.672      -2.375      -0.969      7.29
 ------------------+-------------------------------------------------
-            theta |         -0.456      -0.576      -0.336
+            theta |         -0.552      -0.883      -0.221
 --------------------------------------------------------------------
-Test of theta = 0: t(5) = -9.75                  Prob > |t| = 0.0002
-Test of homogeneity: Q = chi2(5) = 1.58            Prob > Q = 0.9033
+Test of theta = 0: t(6) = -4.08                  Prob > |t| = 0.0065
+Test of homogeneity: Q = chi2(6) = 12.51           Prob > Q = 0.0516
 
 . matrix res_flatus_smd = (r(theta), r(ci_lb), r(ci_ub), r(p), r(N), r(tau2), r(I2), r(Q), r(p_Q))
 
@@ -279,7 +283,7 @@ Test of homogeneity: Q = chi2(5) = 1.58            Prob > Q = 0.9033
 Meta-analysis setting information
 
  Study information
-    No. of studies: 6
+    No. of studies: 7
        Study label: study
         Study size: N/A
 
@@ -304,26 +308,27 @@ Meta-analysis setting information
           Std. err.: se_hours
         Study label: study
 
-Meta-analysis summary                     Number of studies =      5
+Meta-analysis summary                     Number of studies =      6
 Random-effects model                      Heterogeneity:
-Method: REML                                          tau2 =  0.0000
-SE adjustment: Knapp–Hartung                        I2 (%) =    0.00
-                                                        H2 =    1.00
+Method: REML                                          tau2 = 71.4833
+SE adjustment: Knapp–Hartung                        I2 (%) =   98.23
+                                                        H2 =   56.51
 
        Effect size: Mean Difference (Hours)
 --------------------------------------------------------------------
             Study |    Effect size    [95% conf. interval]  % weight
 ------------------+-------------------------------------------------
-        Zhou 2025 |         -1.780      -3.171      -0.389     30.01
-        Yang 2020 |         -3.300      -6.142      -0.458      7.19
-        Yang 2024 |         -1.600      -2.611      -0.589     56.85
-        Xing 2022 |         -4.260      -7.645      -0.875      5.07
-          Lu 2022 |         -7.900     -16.003       0.203      0.88
+        Zhou 2025 |         -1.780      -3.171      -0.389     18.21
+        Yang 2020 |         -3.300      -6.142      -0.458     17.81
+        Yang 2024 |         -1.600      -2.611      -0.589     18.27
+        Xing 2022 |         -4.260      -7.645      -0.875     17.60
+          Lu 2022 |         -7.900     -16.003       0.203     14.80
+       Zhang 2018 |        -28.721     -38.915     -18.527     13.30
 ------------------+-------------------------------------------------
-            theta |         -1.967      -3.203      -0.731
+            theta |         -6.944     -17.027       3.139
 --------------------------------------------------------------------
-Test of theta = 0: t(4) = -4.42                  Prob > |t| = 0.0115
-Test of homogeneity: Q = chi2(4) = 5.24            Prob > Q = 0.2632
+Test of theta = 0: t(5) = -1.77                  Prob > |t| = 0.1369
+Test of homogeneity: Q = chi2(5) = 31.55           Prob > Q = 0.0000
 
 . matrix res_sens_no_ng = (r(theta), r(ci_lb), r(ci_ub), r(p), r(N), r(tau2), r(I2), r(Q), r(p_Q))
 
@@ -354,26 +359,27 @@ Test of homogeneity: Q = chi2(4) = 5.24            Prob > Q = 0.2632
           Std. err.: se_hours
         Study label: study
 
-Meta-analysis summary                     Number of studies =      5
+Meta-analysis summary                     Number of studies =      6
 Random-effects model                      Heterogeneity:
-Method: REML                                          tau2 =  1.0945
-SE adjustment: Knapp–Hartung                        I2 (%) =   28.06
-                                                        H2 =    1.39
+Method: REML                                          tau2 = 67.3037
+SE adjustment: Knapp–Hartung                        I2 (%) =   95.22
+                                                        H2 =   20.93
 
        Effect size: Mean Difference (Hours)
 --------------------------------------------------------------------
             Study |    Effect size    [95% conf. interval]  % weight
 ------------------+-------------------------------------------------
-        Zhou 2025 |         -1.780      -3.171      -0.389     48.74
-        Yang 2020 |         -3.300      -6.142      -0.458     24.36
-        Xing 2022 |         -4.260      -7.645      -0.875     19.11
-          Lu 2022 |         -7.900     -16.003       0.203      4.28
-          Ng 2013 |         -7.200     -16.215       1.815      3.50
+        Zhou 2025 |         -1.780      -3.171      -0.389     19.12
+        Yang 2020 |         -3.300      -6.142      -0.458     18.68
+        Xing 2022 |         -4.260      -7.645      -0.875     18.45
+          Lu 2022 |         -7.900     -16.003       0.203     15.36
+          Ng 2013 |         -7.200     -16.215       1.815     14.66
+       Zhang 2018 |        -28.721     -38.915     -18.527     13.74
 ------------------+-------------------------------------------------
-            theta |         -3.076      -5.353      -0.799
+            theta |         -7.957     -17.792       1.877
 --------------------------------------------------------------------
-Test of theta = 0: t(4) = -3.75                  Prob > |t| = 0.0199
-Test of homogeneity: Q = chi2(4) = 5.12            Prob > Q = 0.2751
+Test of theta = 0: t(5) = -2.08                  Prob > |t| = 0.0921
+Test of homogeneity: Q = chi2(5) = 30.16           Prob > Q = 0.0000
 .     matrix res_sens_rob = (r(theta), r(ci_lb), r(ci_ub), r(p), r(N), r(tau2), r(I2), r(Q), r(p_Q))
 . }
 
@@ -402,27 +408,28 @@ Test of homogeneity: Q = chi2(4) = 5.12            Prob > Q = 0.2751
           Std. err.: se_hours
         Study label: study
 
-Meta-analysis summary                     Number of studies =      6
+Meta-analysis summary                     Number of studies =      7
 Random-effects model                      Heterogeneity:
-Method: DerSimonian–Laird                             tau2 =  0.3924
-SE adjustment: Knapp–Hartung                        I2 (%) =   23.42
-                                                        H2 =    1.31
+Method: DerSimonian–Laird                             tau2 =  6.7781
+SE adjustment: Knapp–Hartung                        I2 (%) =   81.69
+                                                        H2 =    5.46
 
        Effect size: Mean Difference (Hours)
 --------------------------------------------------------------------
             Study |    Effect size    [95% conf. interval]  % weight
 ------------------+-------------------------------------------------
-        Zhou 2025 |         -1.780      -3.171      -0.389     32.48
-        Yang 2020 |         -3.300      -6.142      -0.458     11.67
-        Yang 2024 |         -1.600      -2.611      -0.589     44.21
-        Xing 2022 |         -4.260      -7.645      -0.875      8.62
-          Lu 2022 |         -7.900     -16.003       0.203      1.66
-          Ng 2013 |         -7.200     -16.215       1.815      1.35
+        Zhou 2025 |         -1.780      -3.171      -0.389     22.83
+        Yang 2020 |         -3.300      -6.142      -0.458     18.72
+        Yang 2024 |         -1.600      -2.611      -0.589     23.60
+        Xing 2022 |         -4.260      -7.645      -0.875     17.03
+          Lu 2022 |         -7.900     -16.003       0.203      6.96
+          Ng 2013 |         -7.200     -16.215       1.815      5.95
+       Zhang 2018 |        -28.721     -38.915     -18.527      4.91
 ------------------+-------------------------------------------------
-            theta |         -2.267      -3.720      -0.814
+            theta |         -4.517     -10.343       1.309
 --------------------------------------------------------------------
-Test of theta = 0: t(5) = -4.01                  Prob > |t| = 0.0102
-Test of homogeneity: Q = chi2(5) = 6.53            Prob > Q = 0.2581
+Test of theta = 0: t(6) = -1.90                  Prob > |t| = 0.1066
+Test of homogeneity: Q = chi2(6) = 32.77           Prob > Q = 0.0000
 
 . matrix res_flatus_dl_kh = (r(theta), r(ci_lb), r(ci_ub), r(p), r(N), r(tau2), r(I2), r(Q), r(p_Q))
 
@@ -434,27 +441,28 @@ Test of homogeneity: Q = chi2(5) = 6.53            Prob > Q = 0.2581
           Std. err.: se_hours
         Study label: study
 
-Meta-analysis summary                     Number of studies =      6
+Meta-analysis summary                     Number of studies =      7
 Random-effects model                      Heterogeneity:
-Method: DerSimonian–Laird                             tau2 =  0.3924
-                                                    I2 (%) =   23.42
-                                                        H2 =    1.31
+Method: DerSimonian–Laird                             tau2 =  6.7781
+                                                    I2 (%) =   81.69
+                                                        H2 =    5.46
 
        Effect size: Mean Difference (Hours)
 --------------------------------------------------------------------
             Study |    Effect size    [95% conf. interval]  % weight
 ------------------+-------------------------------------------------
-        Zhou 2025 |         -1.780      -3.171      -0.389     32.48
-        Yang 2020 |         -3.300      -6.142      -0.458     11.67
-        Yang 2024 |         -1.600      -2.611      -0.589     44.21
-        Xing 2022 |         -4.260      -7.645      -0.875      8.62
-          Lu 2022 |         -7.900     -16.003       0.203      1.66
-          Ng 2013 |         -7.200     -16.215       1.815      1.35
+        Zhou 2025 |         -1.780      -3.171      -0.389     22.83
+        Yang 2020 |         -3.300      -6.142      -0.458     18.72
+        Yang 2024 |         -1.600      -2.611      -0.589     23.60
+        Xing 2022 |         -4.260      -7.645      -0.875     17.03
+          Lu 2022 |         -7.900     -16.003       0.203      6.96
+          Ng 2013 |         -7.200     -16.215       1.815      5.95
+       Zhang 2018 |        -28.721     -38.915     -18.527      4.91
 ------------------+-------------------------------------------------
-            theta |         -2.267      -3.324      -1.209
+            theta |         -4.517      -7.044      -1.990
 --------------------------------------------------------------------
-Test of theta = 0: z = -4.20                     Prob > |z| = 0.0000
-Test of homogeneity: Q = chi2(5) = 6.53            Prob > Q = 0.2581
+Test of theta = 0: z = -3.50                     Prob > |z| = 0.0005
+Test of homogeneity: Q = chi2(6) = 32.77           Prob > Q = 0.0000
 
 . matrix res_flatus_dl_wald = (r(theta), r(ci_lb), r(ci_ub), r(p), r(N), r(tau2), r(I2), r(Q), r(p_Q
 > ))
@@ -468,7 +476,7 @@ Test of homogeneity: Q = chi2(5) = 6.53            Prob > Q = 0.2581
 Meta-analysis setting information
 
  Study information
-    No. of studies: 6
+    No. of studies: 7
        Study label: study
         Study size: N/A
 
@@ -498,8 +506,8 @@ Meta-analysis setting information
 
 . graph export "06_FINAL_ANALYSIS_V26/04_FIGURES/forest_targetE_flatus.png", width(1800) replace
 file
-    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/04_FIGURES/fores
-    > t_targetE_flatus.png saved as PNG format
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/.claude/worktrees/festive-jennings-068
+    > 9c3/06_FINAL_ANALYSIS_V26/04_FIGURES/forest_targetE_flatus.png saved as PNG format
 
 . 
 . * ------------------------------------------------------------------------------
@@ -741,20 +749,20 @@ file 06_FINAL_ANALYSIS_V26/03_RESULTS/results_targetE_flatus.csv saved
                    analysis_id                outcome                            model_spec   k    e
 > stimate      ci_low     ci_high    p_value       tau2         i2     q_stat                       
 >                           notes  
-  1.      TE_FLATUS_MD_REML_KH   Time to first flatus                  MD Hours (REML + KH)   6   -2
-> .003894   -3.141859   -.8659278   .0062446   3.61e-07   .0000282    6.52922   Primary analysis (k=
+  1.      TE_FLATUS_MD_REML_KH   Time to first flatus                  MD Hours (REML + KH)   7   -6
+> .786435   -14.83824    1.265373   .0847779   55.30074   97.32616   32.76832   Primary analysis (k=
 > 6, Ng 2013 converted from days)  
-  2.     TE_FLATUS_SMD_REML_KH   Time to first flatus              SMD Hedges g (REML + KH)   6   -.
-> 4557298   -.5758376   -.3356221   .0001926   3.38e-07   .0007886   1.583093               Standard
+  2.     TE_FLATUS_SMD_REML_KH   Time to first flatus              SMD Hedges g (REML + KH)   7   -.
+> 5521293   -.8834192   -.2208394   .0065165   .0308689   39.22355   12.50647               Standard
 > ized Mean Difference (Hedges g)  
-  3.         TE_FLATUS_EXCL_NG   Time to first flatus    MD Hours excl. Ng 2013 (REML + KH)   5   -1
-> .966769   -3.202663   -.7308748   .0115255   4.57e-07   .0000437   5.243824       Excluding Ng 201
+  3.         TE_FLATUS_EXCL_NG   Time to first flatus    MD Hours excl. Ng 2013 (REML + KH)   6   -6
+> .944201   -17.02739    3.138987   .1368882   71.48327   98.23042   31.55486       Excluding Ng 201
 > 3 (originally reported in days)  
-  4.   TE_FLATUS_EXCL_HIGH_ROB   Time to first flatus   MD Hours excl. High RoB (REML + KH)   5   -3
-> .076109   -5.353365   -.7988531     .01994   1.094455   28.05648   5.120691                       
+  4.   TE_FLATUS_EXCL_HIGH_ROB   Time to first flatus   MD Hours excl. High RoB (REML + KH)   6   -7
+> .957391   -17.79226    1.877479   .0920786   67.30374   95.22144   30.16285                       
 >  Sensitivity excluding High RoB  
-  5.         TE_FLATUS_DL_WALD   Time to first flatus         MD Hours (DL Wald unadjusted)   6   -2
-> .266708   -3.324069   -1.209347   .0000265   .3923875   23.42118    6.52922                    Una
+  5.         TE_FLATUS_DL_WALD   Time to first flatus         MD Hours (DL Wald unadjusted)   7   -4
+> .516739   -7.043653   -1.989825   .0004595   6.778096   81.68964   32.76832                    Una
 > djusted DerSimonian-Laird model  
 
 . 
@@ -764,8 +772,8 @@ SUCCESS: Target E analyses completed and exported.
 
 . log close
       name:  <unnamed>
-       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/02_STATA/
-> logs/06_flatus.log
+       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/.claude/worktrees/festive-jenni
+> ngs-0689c3/06_FINAL_ANALYSIS_V26/02_STATA/logs/06_flatus.log
   log type:  text
- closed on:   8 Sep 2026, 08:50:28
+ closed on:  12 Sep 2026, 13:07:44
 ----------------------------------------------------------------------------------------------------

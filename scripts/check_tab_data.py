@@ -34,9 +34,12 @@ targets=json.JSONDecoder().raw_decode((ROOT/'dashboard/browser_targets.js').read
 expected={
     'opioid_48h':{'An 2014','Chen 2020','Zhang 2023'},
     'opioid_72h':{'Yang 2024'},
-    'pain_rest_24h':{'Liu 2021','Xing 2022'},
-    'ponv_24h':{'Lu 2021','Zheng 2025'},
-    'flatus_time':{'#105119 - Zhou 2025','Lu 2022','Ng 2013','Xing 2022','Yang 2020','Yang 2024'},
+    # Post-lock admissions 2026-09-12 (eligibility reconciliation pass):
+    # Song 2020 and Gao 2022 join pain_rest_24h and ponv_24h; Zhang 2018
+    # joins flatus_time from the validated Figure 2a digitisation.
+    'pain_rest_24h':{'Liu 2021','Xing 2022','Song 2020','Gao 2022'},
+    'ponv_24h':{'Lu 2021','Zheng 2025','Song 2020','Gao 2022'},
+    'flatus_time':{'#105119 - Zhou 2025','Lu 2022','Ng 2013','Xing 2022','Yang 2020','Yang 2024','Zhang 2018'},
     'intraop_opioid':{'Guo 2023','Liang 2021','Lu 2021','Pan 2023','Wu 2022','Xing 2022','Zheng 2025'},
     'rescue_analgesia':{'#105119 - Zhou 2025','Tu 2024','Xie 2014','Yu 2020'},
 }

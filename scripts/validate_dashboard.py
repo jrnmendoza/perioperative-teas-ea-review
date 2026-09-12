@@ -459,9 +459,14 @@ def t_pain_at_rest_only():
         for bad in ("movement", "cough", "ambulation", "activity"):
             if bad in blob:
                 probs.append(f"{x['study']}: contains '{bad}' pain")
-    if {x["study"] for x in rows} != {"Xing 2022", "Liu 2021"}:
+    # Membership updated 2026-09-12 for the two post-lock admissions the review
+    # team authorised (Song 2020, Gao 2022). The at-rest rule above is unchanged
+    # and still does the real work; this pins the roster so a study cannot join
+    # Target C without someone saying so here.
+    EXPECTED = {"Xing 2022", "Liu 2021", "Song 2020", "Gao 2022"}
+    if {x["study"] for x in rows} != EXPECTED:
         probs.append(f"unexpected Target C membership: {sorted({x['study'] for x in rows})}")
-    check("Target C contains only pain explicitly measured at rest (Xing 2022, Liu 2021)",
+    check("Target C contains only pain explicitly measured at rest (4 studies)",
           not probs, "\n".join(probs))
 
 
@@ -4451,6 +4456,16 @@ def t_post_lock_eligibility_pass_is_complete_and_pools_nothing():
           "; ".join(probs[:4]))
 
 
+def _eligibility_rows():
+    """Rows of the post-lock eligibility reconciliation pass, or [] if absent."""
+    p = DASH / "eligibility_reconciliation.js"
+    if not p.exists():
+        return []
+    raw = p.read_text(encoding="utf-8")
+    return json.JSONDecoder().raw_decode(
+        raw.split("window.ELIGIBILITY_RECONCILIATION = ", 1)[1])[0].get("rows", [])
+
+
 def t_figure_only_values_are_digitized_or_refused_with_evidence():
     """
     The five figure-only / unconverted values, and the QC that settled them.
@@ -4530,10 +4545,17 @@ def t_figure_only_values_are_digitized_or_refused_with_evidence():
             continue
         if "figure_only_values_QC" not in (rec.get("note") or ""):
             probs.append(f"{key}/{outcome}: note does not cite the QC document")
-        # A digitized value must not have been quietly pooled.
-        if isinstance(rec.get("mean_diff"), (int, float)) or isinstance(rec.get("rr"), (int, float)):
-            probs.append(f"{key}/{outcome}: carries a pooled effect, but this value is "
-                         f"digitized-or-refused and has not been admitted to a synthesis")
+        # A digitized value may be pooled only once the reconciliation pass records
+        # it as admitted. Zhang 2018's flatus row was admitted on 2026-09-12; the
+        # other four must still carry no pooled effect.
+        ADMITTED = {(r["study"], r["outcome"])
+                    for r in (_eligibility_rows() or [])
+                    if r.get("disposition") == "admitted"}
+        if (key, outcome) not in ADMITTED and (
+                isinstance(rec.get("mean_diff"), (int, float))
+                or isinstance(rec.get("rr"), (int, float))):
+            probs.append(f"{key}/{outcome}: carries a pooled effect, but the reconciliation "
+                         f"pass does not record it as admitted")
     check("t_figure_only_values_are_digitized_or_refused_with_evidence", not probs,
           "; ".join(probs[:4]))
 

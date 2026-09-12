@@ -239,9 +239,17 @@ LEGACY_ANALYSES = {
     "AN-06-TARGET-D-48": dict(csv_id="TD_PONV_0_48H",
                               label="Target D — PONV 0–48 h",
                               unit="risk ratio", comparator="Sham / usual care"),
-    "AN-07-TARGET-E": dict(csv_id="TE_FLATUS_MD_REML_KH",
-                           label="Target E — time to first flatus",
-                           unit="hours", comparator="Sham / usual care"),
+    # Repointed 2026-09-12 from TE_FLATUS_MD_REML_KH to the standardised model.
+    # Admitting Zhang 2018 took the hours model to I2 = 97.3%, and the data show a
+    # scale effect that makes hours the wrong pooling scale for this outcome:
+    # control-arm means span 15.9-80.1 h, the absolute effect tracks them at
+    # r = 0.91 across all seven trials, and the relative effect is about twice as
+    # consistent (CV 0.56 vs 1.22). The hours model is still computed and
+    # displayed, with its heterogeneity stated; this is which one the Summary of
+    # Findings row reports.
+    "AN-07-TARGET-E": dict(csv_id="TE_FLATUS_SMD_REML_KH",
+                           label="Target E — time to first flatus (standardised)",
+                           unit="Hedges' g", comparator="Sham / usual care"),
     "AN-08-TARGET-F-REMI": dict(csv_id="TF_INTRA_REMI_UG",
                                 label="Target F — intraoperative remifentanil",
                                 unit="µg", comparator="Sham / usual care"),

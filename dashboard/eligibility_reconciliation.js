@@ -29,11 +29,12 @@ window.ELIGIBILITY_RECONCILIATION = {
       "study": "Zhang 2018",
       "outcome": "flatus_time",
       "target": "Target E (time to first flatus)",
-      "disposition": "eligible",
+      "disposition": "admitted",
       "changed": true,
+      "admitted_on": "2026-09-12",
       "rule": "Target E takes time-to-event flatus with no clock-window requirement; its six members carry time_window 'Postoperative' or 'From surgery to first ...'.",
       "evidence": "Unblocked 2026-09-12 by formal vector digitisation of Figure 2a: TEA 51.33 +/- 2.78 SE vs sham-TEA 80.05 +/- 4.40 SE hours, n=21 per arm (SD 12.74 vs 20.15). The extraction reproduces all seven percentage reductions the paper reports, this one to 0.02 pp. See 07_TIERED_V33/03_DIGITIZATION/figure_only_values_QC_2026-09-12.md.",
-      "unblocks": "Review-team admission. This is the only one of the seven that a data problem was blocking and that is now solved."
+      "unblocks": "ADMITTED 2026-09-12 by review-team decision. Consequence recorded: the Target E mean-difference model moves from -2.00 h [-3.14, -0.87], p=0.006, I2=0.0% (k=6) to -6.79 h [-14.84, +1.27], p=0.085, I2=97.3% (k=7). The standardised model survives at -0.55 [-0.88, -0.22], p=0.007. The heterogeneity is clinically interpretable -- this trial is open abdominal GI-cancer surgery with flatus at 51-80 h against a mostly laparoscopic set at 14-42 h -- but an I2 of 97% makes the pooled MD hard to interpret."
     },
     {
       "study": "Zhang 2018",
@@ -49,21 +50,23 @@ window.ELIGIBILITY_RECONCILIATION = {
       "study": "Song 2020",
       "outcome": "pain_rest_24h",
       "target": "Target C (pain at rest ~24 h)",
-      "disposition": "eligible",
+      "disposition": "admitted",
       "changed": true,
+      "admitted_on": "2026-09-12",
       "rule": "A qc_hold is resolved by reading the source. The hold was 'pending resolution of the ITT (85) vs per-protocol (78) denominator inconsistency'.",
       "evidence": "There is no inconsistency. The paper defines both populations and reconciles them exactly: 109 assessed, 15 ineligible, 9 refused, 85 enrolled; 'we included 85 patients in the ITT population and 78 in the PP population (three patients were allergic to TEAS, two patients were transferred to the intensive care unit after surgery, and two patients removal of the drainage tube was delayed)' -- 3+2+2 = 7, and 85-7 = 78. It also names the primary: 'All analyses were based on the intention-to-treat (ITT) population'. The register's 42/43 = 85 is that ITT population. The comparator is a true sham ('The control group also underwent this sham treatment'). The outcome itself is a clean 24-h VAS, 2.76+/-1.1 vs 3.23+/-1.1, P=0.053, directly reported.",
-      "unblocks": "Review-team admission. The blocker was a question, and the source answers it."
+      "unblocks": "ADMITTED 2026-09-12. With Gao 2022, Target C moves from -0.18 VAS [-0.68, +0.33], p=0.141 (k=2) to -0.205 VAS [-0.339, -0.070], p=0.017 (k=4) -- newly significant, though -0.2 on a 0-10 VAS is far below any MCID."
     },
     {
       "study": "Song 2020",
       "outcome": "ponv_24h",
       "target": "Target D (PONV 0-24 h)",
-      "disposition": "eligible",
+      "disposition": "admitted",
       "changed": true,
+      "admitted_on": "2026-09-12",
       "rule": "Same qc_hold, same resolution.",
       "evidence": "24-h PONV 3/42 vs 10/43, P=0.039, directly reported events and totals over the ITT population.",
-      "unblocks": "Review-team admission, and a decision on which Target D stratum it joins."
+      "unblocks": "ADMITTED 2026-09-12 to the composite PONV 0-24 h stratum."
     },
     {
       "study": "Song 2020",
@@ -79,22 +82,24 @@ window.ELIGIBILITY_RECONCILIATION = {
       "study": "Gao 2022",
       "outcome": "pain_rest_24h",
       "target": "Target C (pain at rest ~24 h)",
-      "disposition": "qc_hold",
+      "disposition": "admitted",
       "changed": true,
+      "admitted_on": "2026-09-12",
       "rule": "Held because 'patients could not be fully blinded to real stimulation'.",
       "evidence": "The data are not in question: 24-h pain VAS 2.0+/-1.7 vs 2.2+/-1.8, P=0.006, mean/SD directly reported, clean 24-h window, n=1,655.",
-      "unblocks": "A review-team ruling on the hold itself. THIS PASS'S RECOMMENDATION: the blocker is a risk-of-bias concern, and this review already has an architecture for those -- result-specific RoB 2 feeding GRADE. Excluding a trial from pooling instead of rating it down is a different instrument, and it is applied inconsistently here: incomplete patient blinding is a limitation shared by every sham-controlled stimulation trial in the review, and the others are pooled. Either the hold should become a RoB 2 Domain 2 judgement, or the same exclusion should be applied to the other sham-controlled trials. Note the consequence before deciding: at n=1,655 this trial would dominate Target C.",
-      "caution": "Admitting it would roughly quadruple Target C's sample. That is a reason to decide deliberately, not a reason to decide either way."
+      "unblocks": "RULED AND ADMITTED 2026-09-12. The review team accepted this pass's recommendation. The reasoning was: the blocker is a risk-of-bias concern, and this review already has an architecture for those -- result-specific RoB 2 feeding GRADE. Excluding a trial from pooling instead of rating it down is a different instrument, and it is applied inconsistently here: incomplete patient blinding is a limitation shared by every sham-controlled stimulation trial in the review, and the others are pooled. Either the hold should become a RoB 2 Domain 2 judgement, or the same exclusion should be applied to the other sham-controlled trials. Note the consequence before deciding: at n=1,655 this trial would dominate Target C.",
+      "caution": "It did dominate: Target C's pooled N rises from 158 to 1,898, and Gao 2022 alone is 1,655 of that. The point estimate barely moved (-0.18 to -0.205); what changed is the confidence interval, which is now driven by this one trial."
     },
     {
       "study": "Gao 2022",
       "outcome": "ponv_24h",
       "target": "Target D (PONV 0-24 h)",
-      "disposition": "qc_hold",
+      "disposition": "admitted",
       "changed": true,
+      "admitted_on": "2026-09-12",
       "rule": "Same blinding hold.",
       "evidence": "Composite PONV 243/827 vs 283/828, P=0.036; vomiting 86/827 vs 147/828, P<0.001; nausea 18/827 vs 42/828, P=0.003 -- all directly reported.",
-      "unblocks": "The same ruling as above."
+      "unblocks": "RULED AND ADMITTED 2026-09-12, same ruling. With Song 2020, the composite PONV 0-24 h stratum moves from RR 0.565 [0.138, 2.320], p=0.123, I2=0.0% (k=2) to RR 0.648 [0.392, 1.071], p=0.071, I2=66.9% (k=4) -- still not significant, with materially more heterogeneity."
     },
     {
       "study": "Gao 2022",
@@ -208,20 +213,11 @@ window.ELIGIBILITY_RECONCILIATION = {
     }
   ],
   "tally": {
-    "admitted": 1,
+    "admitted": 6,
     "data_absent": 5,
     "derivation_invalid": 2,
-    "eligible": 3,
-    "qc_hold": 2,
     "scope_mismatch": 6
   },
-  "newly_eligible": [
-    "Zhang 2018 - flatus_time",
-    "Song 2020 - pain_rest_24h",
-    "Song 2020 - ponv_24h"
-  ],
-  "needs_rule_decision": [
-    "Gao 2022 - pain_rest_24h",
-    "Gao 2022 - ponv_24h"
-  ]
+  "newly_eligible": [],
+  "needs_rule_decision": []
 };

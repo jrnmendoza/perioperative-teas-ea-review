@@ -1,2 +1,2 @@
 analysis_id,outcome,stratum,k,estimate,ci_low,ci_high,p_value,tau2,i2,q_stat,model
-TC_REST_PAIN24,Pain at rest ~24 h (VAS 0-10),"Strict Pain at Rest ~24h (Xing 2022, Liu 2021)",2,-.17651609,-.68283278,.32980064,.14134577,5.2779677e-07,.0037239629,.22579002,REML + Hartung-Knapp
+TC_REST_PAIN24,Pain at rest ~24 h (VAS 0-10),"Strict Pain at Rest ~24h (Xing 2022, Liu 2021)",4,-.20475562,-.33917937,-.070331894,.016752329,9.6827002e-08,.00063685654,1.5776376,REML + Hartung-Knapp
