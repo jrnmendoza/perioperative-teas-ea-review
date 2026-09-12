@@ -2689,7 +2689,14 @@ function runLiveEquiCalc() {
       drugName = 'IV Morphine';
       break;
     case 'hydromorphone_mg':
-      factor = 6.667; // 1.5 mg hydromorphone = 10 mg IV morphine -> 1 mg = 6.667 mg
+      // Corrected 2026-09-12 from 6.667 to 5.0. The 2026-09-07 conversion audit
+      // adopted 5:1 (BC MoH palliative table: 2 mg parenteral hydromorphone =
+      // 10 mg parenteral morphine) as the factor the pipeline computes, and
+      // recorded 6.67:1 as the University of Toronto table's value. The
+      // conversion table and 00_prep_data.do were updated then; this widget was
+      // missed and kept contradicting both. Display only -- Chen 1998's pooled
+      // value was always computed by Stata at 5.0, never by this function.
+      factor = 5.0; // 2 mg hydromorphone = 10 mg IV morphine -> 1 mg = 5.0 mg
       unit = 'mg';
       drugName = 'IV Hydromorphone';
       break;
@@ -2722,8 +2729,25 @@ function runLiveEquiCalc() {
 
   const mme = (dose * factor).toFixed(2);
   resElem.innerText = `${mme} mg IV MME`;
+  // Per-drug standing, recorded 2026-09-12. The previous version appended a
+  // single "remains unresolved" caveat to sufentanil and hydromorphone, which
+  // by then was wrong in both directions: both were RESOLVED by the 2026-09-07
+  // conversion audit, while the factors that genuinely rest on no sourced
+  // ratio -- and are applied to no trial -- carried no caveat at all.
+  const FACTOR_NOTE = {
+    sufentanil_mcg: 'Applied to trial data. Corrected 2026-09-07 from 100:1 to 1000:1; residual uncertainty is carried as a published sensitivity range (0.1 / 0.25 / 0.5 / 1.0), not as an unresolved flag.',
+    fentanyl_mcg: 'Applied to trial data (An 2014).',
+    morphine_mg: 'Applied to trial data; self-referential by definition.',
+    hydromorphone_mg: 'Applied to trial data (Chen 1998). 5:1 per the BC MoH palliative table, at one end of the published 5:1–6.67:1 parenteral range.',
+    oxycodone_mg: 'Reference only — applied to no trial in this review.',
+    dezocine_mg: 'Reference only — applied to no trial in this review; attribution not verified in this repository.',
+    tramadol_mg: 'Reference only — applied to no trial in this review. No sourced parenteral tramadol:morphine ratio was located (2026-09-07, 2026-09-12), and MME is defined on µ-agonist activity while tramadol is also an SNRI requiring CYP2D6 activation. Oztas 2019 enters on the scale-free SMD route instead.',
+    pethidine_mg: 'Reference only — applied to no trial in this review; attribution not verified in this repository.',
+    butorphanol_mg: 'Reference only — applied to no trial in this review; attribution not verified in this repository.'
+  };
   if (explElem) {
-    explElem.innerText = `${dose} ${unit} ${drugName} × ${factor} = ${mme} mg IV Morphine Milligram Equivalents. Research conversion only; does not update extracted data.${['sufentanil_mcg','hydromorphone_mg'].includes(drug) ? ' This factor remains unresolved pending independent verification.' : ''}`;
+    const note = FACTOR_NOTE[drug] || '';
+    explElem.innerText = `${dose} ${unit} ${drugName} × ${factor} = ${mme} mg IV Morphine Milligram Equivalents. Research conversion only; does not update extracted data.${note ? ' ' + note : ''}`;
   }
 }
 

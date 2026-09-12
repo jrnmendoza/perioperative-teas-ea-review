@@ -203,11 +203,37 @@ R = [
  dict(study="Oztas 2019", outcome="opioid_24h", target="Primary 0-24 h opioid",
       disposition="derivation_invalid", changed=False,
       rule="An MME pool needs a sourced equianalgesic ratio; the review forbids inventing one.",
-      evidence="0-24 h IV PCA tramadol 228.40+/-87.89 vs 357.81+/-123.70 mg is reported, but "
-               "no sourced parenteral tramadol:morphine ratio was located (searched 2026-09-07 "
-               "against this project's equianalgesic reference family).",
-      unblocks="Locating a citable parenteral tramadol:morphine ratio. This is the one blocker "
-               "in the set that a literature search rather than an author could lift."),
+      evidence="0-24 h IV PCA tramadol 228.40+/-87.89 (TEAS) vs 357.81+/-123.70 mg (control) is "
+               "reported and source-verified (covidence_505_full_article.pdf Table 4, p.132; the "
+               "0-24 h window is a clock window, not the 22-h intervention endpoint that makes "
+               "this trial's resting-pain value a scope_mismatch). No sourced parenteral "
+               "tramadol:morphine ratio was located: searched 2026-09-07 against this project's "
+               "equianalgesic reference family, and again 2026-09-12 against the published "
+               "literature. REVISED 2026-09-12 -- this row previously said a literature search "
+               "was the one thing that could lift the blocker. Two findings retire that claim. "
+               "(1) The search did not merely fail to find a ratio; MME rests on mu-receptor "
+               "agonist activity, and tramadol is a mu-agonist AND a serotonin-norepinephrine "
+               "reuptake inhibitor whose analgesia depends on CYP2D6-mediated activation to "
+               "O-desmethyltramadol, so no single number carries the same meaning for it as for "
+               "a pure mu-agonist. The absence of a citable parenteral ratio is a property of "
+               "the drug, not a gap in the search. (2) The factor does not gate this trial's "
+               "evidence at all: the v33 tiered pipeline already admitted it on the scale-free "
+               "route, where the unit cancels. OZT19_TEAS_vs_UC_SMD, Hedges' g = -1.168 "
+               "[-1.930, -0.406] (V33_TIERE_TEAS_USUAL_SMD), native mg tramadol, no conversion "
+               "applied.",
+      unblocks="Nothing a literature search or an author can supply, and nothing that would "
+               "produce pooled data. A sourced ratio would convert this trial to absolute MME; "
+               "it would still be the only TEAS-versus-usual-care comparison on that scale in "
+               "the Tier E set, and 14_tiered_tierE_smd_v33.do enforces the pre-specified "
+               "prohibition on combining sham/placebo and usual-care comparators without "
+               "stratification, so the result would remain k=1. The binding constraint is the "
+               "composition of the review, not the conversion table. The only route to k>=2 is "
+               "a comparator-stratified standardised model pairing this trial with Szmit 2021's "
+               "PCA-only arm -- a model-specification decision for the review team, not a data "
+               "fix, and one that inherits this trial's High overall RoB 2 and the fact that PCA "
+               "tramadol alone is not complete opioid exposure (rescue pethidine is reported "
+               "separately and its within-person covariance with tramadol is unknown, which is "
+               "why OZT19_TAES_vs_CTRL_TOTALOP24 is excluded outright)."),
  dict(study="Oztas 2019", outcome="pain_rest_24h", target="Target C (pain at rest ~24 h)",
       disposition="scope_mismatch", changed=False,
       rule="Target C takes ~24-hour endpoints.",
