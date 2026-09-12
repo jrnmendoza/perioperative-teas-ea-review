@@ -910,8 +910,11 @@ def t_pathway_counts_derive():
     if not P.get("reconciles"):
         probs.append("pathway does not reconcile to the included-study total")
     total = c["reporting_relevant_24h_info"] + c["other_outcome_contributors"] + c["no_pooled_model"]
-    if total != c["included_rcts"]:
-        probs.append(f"buckets sum to {total}, expected {c['included_rcts']} included RCTs")
+    if "included_rcts" in c:
+        probs.append('counts still carries "included_rcts"; the buckets reconcile over reports, '
+                     'so the key is included_reports (removed 2026-09-12)')
+    if total != c["included_reports"]:
+        probs.append(f"buckets sum to {total}, expected {c['included_reports']} included reports")
     check("Pathway counts are derived from their arrays and reconcile to the review total",
           not probs, "\n".join(probs))
 
@@ -1819,6 +1822,180 @@ def t_oztas_tramadol_is_refused_not_invented():
                          "nothing")
 
     check("t_oztas_tramadol_is_refused_not_invented", not probs, "\n".join(probs))
+
+
+def t_overview_kpi_grid_matches_the_lock():
+    """
+    ADDED 2026-09-12, closing the gap that let four stale figures ship.
+
+    The Overview's "Verified Evidence Synthesis Summary" is the first thing a
+    reader sees, and nothing tied its seven cards to
+    master_reconciled_results_v26.csv. When Song 2020, Gao 2022 and Zhang 2018
+    were admitted on 2026-09-12, the Results-tab narratives and the GRADE rows
+    were updated and these cards were not: the Target E card still showed the
+    superseded MD -2.00 h [-3.14, -0.87], p = 0.0062 at k = 6, N = 596 as a
+    significant current result, when the current model is k = 7 with I2 = 97.3%
+    and the reported measure is the standardised one; the PONV card still showed
+    the k = 2 contrast. Every check in this file passed throughout.
+
+    So: each card's headline estimate, both interval bounds, p and k must equal
+    the locked analysis it reports, to the precision the card displays.
+    """
+    CARDS = {
+        "Primary 24-h Opioid Sparing": "OP24_PRIM_COMB",
+        "Resting Pain at ~24h (Target C)": "TC_REST_PAIN24",
+        "Time to First Flatus (Target E)": "TE_FLATUS_SMD_REML_KH",
+        "Postoperative Nausea &amp; Vomiting (Target D)": "TD_PONV_0_24H",
+        "PCA Demands / Button Presses (Target F)": "TF_PCA_DEMANDS_SMD",
+        "Rescue Analgesia Requirements (Target F)": "TF_RESCUE_OPIOID_STRICT",
+        "Intraoperative Remifentanil (Target F)": "TF_INTRA_REMI_UG",
+    }
+    probs = []
+    grid = HTML[HTML.find("Verified Evidence Synthesis Summary"):]
+    grid = grid[:grid.find("Surgical Specialties Distribution")]
+    if not grid:
+        check("t_overview_kpi_grid_matches_the_lock", False,
+              "the Overview KPI grid could not be located")
+        return
+
+    def nums(text):
+        """Every signed decimal in a fragment, minus glyph and entity normalised."""
+        t = (text.replace("\u2212", "-").replace("&minus;", "-")
+                 .replace("\u2013", "-").replace("&ndash;", "-"))
+        return [float(x) for x in re.findall(r"-?\d+\.\d+", t)]
+
+    for title, aid in CARDS.items():
+        i = grid.find(title)
+        if i < 0:
+            probs.append(f"KPI card {title!r} is gone from the Overview grid")
+            continue
+        card = grid[i:grid.find("</div>\n          </div>", i) + 1] or grid[i:i + 1400]
+        card = card[:card.find("text-transform: uppercase", i + len(title)) if False else len(card)]
+        # stop at the next card's title so a neighbour's numbers cannot satisfy us
+        nxt = min([card.find(t) for t in CARDS if t != title and card.find(t) > 0] or [len(card)])
+        card = card[:nxt]
+        row = BY_ID.get(aid)
+        if row is None:
+            probs.append(f"{title}: locked analysis {aid} is missing from the master results")
+            continue
+        shown = nums(card)
+        for field, label in (("estimate", "estimate"), ("ci_low", "lower bound"),
+                             ("ci_high", "upper bound")):
+            want = abs(float(row[field]))
+            if not any(abs(abs(g) - want) <= 0.006 or abs(abs(g) - want) <= want * 0.002
+                       for g in shown):
+                probs.append(f"{title}: {aid} {label} is {float(row[field]):+.4f} but the card "
+                             f"shows none of {shown}")
+        pw = float(row["p_value"])
+        pm = re.findall(r"p\s*=\s*(0?\.\d+)", card)
+        if not pm:
+            probs.append(f"{title}: card shows no p value; {aid} has p = {pw:.4f}")
+        elif not any(abs(float(x) - pw) <= 0.0006 for x in pm):
+            probs.append(f"{title}: card shows p = {pm} but {aid} has p = {pw:.4f}")
+        km = re.findall(r"k\s*=\s*(\d+)", card)
+        if row.get("k") and km and str(row["k"]).strip() not in km:
+            probs.append(f"{title}: card shows k = {km} but {aid} is k = {row['k']}")
+
+    check("t_overview_kpi_grid_matches_the_lock", not probs, "\n".join(probs))
+
+
+def t_no_stale_pre_admission_figures_presented_as_current():
+    """
+    ADDED 2026-09-12. The 2026-09-12 admissions moved three models, and each
+    superseded figure is still legitimately quotable AS HISTORY. What must not
+    happen is a superseded figure standing on its own as the current result.
+
+    Every occurrence of a retired value therefore has to sit within reach of a
+    word that marks it as past. This is deliberately a wording check, not a
+    numeric one: the numeric check above cannot see a stale figure that lives in
+    prose rather than in a card.
+    """
+    RETIRED = {
+        "-2.00 hours": "Target E MD before Zhang 2018 (now -6.79 h, I2 97.3%)",
+        "k = 6, N = 596": "Target E k/N before Zhang 2018 (now k = 7, N = 638)",
+        "k=6, N=596": "Target E k/N before Zhang 2018",
+        "RR 0.56 / 0.52": "PONV card before Song 2020 + Gao 2022",
+        "k = 2 per window": "PONV k before Song 2020 + Gao 2022",
+        "N = 158": "Target C N before Song 2020 + Gao 2022 (now N = 1,898)",
+    }
+    PAST = ("was ", "were ", "previously", "until ", "Until ", "before ", "Before ",
+            "superseded", "SUPERSEDED", "historical", "HISTORICAL", "Historical",
+            "retired", "changed 2026", "Changed 2026", "earlier", "Earlier",
+            "no longer", "predecessor", "legacy", "LEGACY")
+    probs = []
+    for frag, what in RETIRED.items():
+        for m in re.finditer(re.escape(frag.replace("-", "\u2212")) + "|" + re.escape(frag),
+                             LIVE_UI):
+            window = LIVE_UI[max(0, m.start() - 320):m.end() + 320]
+            if not any(w in window for w in PAST):
+                probs.append(f"{frag!r} ({what}) appears with nothing in 320 characters marking "
+                             f"it as superseded, so it reads as the current result")
+    check("t_no_stale_pre_admission_figures_presented_as_current", not probs,
+          "\n".join(probs[:6]))
+
+
+def t_haldane_anscombe_text_matches_the_do_files():
+    """
+    ADDED 2026-09-12. The dashboard carried two Haldane-Anscombe statements at
+    once: that the Stata analyses were re-run under the universal correction, and
+    that they "still use the uncorrected estimator". Both cannot describe the
+    current analysis. The do-files decide it, not the prose -- so this check
+    reads them.
+    """
+    BINARY_DO = {
+        "06_FINAL_ANALYSIS_V26/02_STATA/05_ponv.do": ("events_i_cc", "n_i_cc"),
+        "06_FINAL_ANALYSIS_V26/02_STATA/07_targetF.do": ("events_i_cc", "n_i_cc"),
+        "06_FINAL_ANALYSIS_V26/02_STATA/12_stratum_compliant_refit.do": ("ei_cc", "ni_cc"),
+    }
+    probs, corrected = [], []
+    for rel, (ev, dn) in BINARY_DO.items():
+        f = ROOT / rel
+        if not f.exists():
+            probs.append(f"{rel} is missing")
+            continue
+        t = f.read_text(encoding="utf-8")
+        has_ev = re.search(rf"gen {ev} = events_i \+ 0\.5", t)
+        has_dn = re.search(rf"gen {dn} = n_i \+ 1(\.0)?", t)
+        corrected.append(bool(has_ev and has_dn))
+        if not has_ev:
+            probs.append(f"{rel}: no +0.5 event correction found ({ev})")
+        if not has_dn:
+            probs.append(f"{rel}: events are corrected but the arm denominator is not (+1 via {dn}); "
+                         f"adding 0.5 to all four cells raises each arm total by 1, not 0.5")
+    all_corrected = bool(corrected) and all(corrected)
+
+    # The prose must agree with what the do-files actually do, and any contrary
+    # sentence must be explicitly marked as history rather than left standing.
+    i = HTML.find('class="estimator-note"')
+    body_raw = HTML[i:HTML.find("forest-helper-bar", i)] if i >= 0 else ""
+    if not body_raw.strip():
+        probs.append("the estimator note is gone; nothing tells a reader which estimator is in use")
+    else:
+        def plain(x):
+            # The sentence at issue was written "<em>uncorrected</em> estimator", so a
+            # literal two-word search over raw HTML silently misses it.
+            return re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", x)).strip()
+
+        # Judge each PARAGRAPH on its own. A wider window fails open: the paragraph
+        # that is current legitimately contains "were re-run", and any generic
+        # past-tense word near the offending sentence would vouch for it.
+        paras = [plain(m.group(1)) for m in re.finditer(r"<p\b[^>]*>(.*?)</p>", body_raw, re.S)]
+        if all_corrected:
+            for para in paras:
+                if not re.search(r"uncorrected\s+estimator", para):
+                    continue
+                # Only an explicit history marker counts, and it has to be in the same
+                # paragraph as the claim it is supposed to be qualifying.
+                if not re.search(r"HISTORICAL|SUPERSEDED|Superseded|superseded|"
+                                 r"no longer (true|the case)|previously", para):
+                    probs.append("every binary do-file applies the universal Haldane-Anscombe "
+                                 "correction, but a paragraph of the estimator note still says "
+                                 "the Stata analyses use the uncorrected estimator, with no "
+                                 "history marker in that same paragraph: " + para[:170])
+        if not all_corrected and re.search(r"re-run under the same", plain(body_raw)):
+            probs.append("the estimator note claims the Stata analyses were re-run under the "
+                         "correction, but at least one binary do-file does not apply it")
+    check("t_haldane_anscombe_text_matches_the_do_files", not probs, "\n".join(probs))
 
 
 def t_cdc_not_misattributed_to_perioperative_iv():
@@ -4883,6 +5060,9 @@ def main() -> int:
                                        t_sufentanil_conversion_documented_and_unresolved,
                                        t_conversion_factors_claim_only_what_they_can_source,
                                        t_oztas_tramadol_is_refused_not_invented,
+                                       t_overview_kpi_grid_matches_the_lock,
+                                       t_no_stale_pre_admission_figures_presented_as_current,
+                                       t_haldane_anscombe_text_matches_the_do_files,
                                        t_cdc_not_misattributed_to_perioperative_iv,
                                        t_mcid_labelled_exploratory, t_version_tag_present,
                                        t_i18n_textcontent_no_html_entities, t_v26_logs_git_tracked,

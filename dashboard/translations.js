@@ -177,7 +177,7 @@ const TRANSLATIONS = {
     },
     findingsTeaser: {
       title: "Key findings at a glance",
-      note: "70 randomized trials are included in this review; 7 contribute to the strict primary synthesis of 0-24 h postoperative opioid consumption (the largest sham/usual-care-controlled set with directly extractable, non-imputed data for that exact window; see the Primary Outcome Contribution Pathway on the Results tab for why the other 63 do not). TEAS and EA are reported separately below because they are different interventions tested against different comparators.",
+      note: "69 unique randomized trials (70 included reports) are in this review; 7 trials contribute to the strict primary synthesis of 0-24 h postoperative opioid consumption (the largest sham/usual-care-controlled set with directly extractable, non-imputed data for that exact window; see the Primary Outcome Contribution Pathway on the Results tab for why the other 62 trials, 63 reports, do not). TEAS and EA are reported separately below because they are different interventions tested against different comparators.",
       more: "See the full primary-outcome analysis, all secondary outcomes, RoB 2, and GRADE certainty on the Results tab →"
     },
     stats: {
@@ -374,7 +374,7 @@ const TRANSLATIONS = {
     },
     findingsTeaser: {
       title: "Huvudresultat i korthet",
-      note: "70 randomiserade studier ingår i denna översikt; 7 bidrar till den strikta primära syntesen av kumulativ opioidkonsumtion 0–24 timmar postoperativt (den största sham-/sedvanlig vård-kontrollerade uppsättningen med direkt utvinningsbara, icke-imputerade data för just det tidsfönstret; se flödet för det primära utfallets bidragande studier på fliken Resultat för varför de övriga 63 inte gör det). TEAS och EA redovisas separat nedan eftersom de är olika interventioner testade mot olika jämförelsegrupper.",
+      note: "69 unika randomiserade studier (70 inkluderade rapporter) ingår i denna översikt; 7 studier bidrar till den strikta primära syntesen av kumulativ opioidkonsumtion 0–24 timmar postoperativt (den största sham-/sedvanlig vård-kontrollerade uppsättningen med direkt utvinningsbara, icke-imputerade data för just det tidsfönstret; se flödet för det primära utfallets bidragande studier på fliken Resultat för varför de övriga 62 studierna, 63 rapporter, inte gör det). TEAS och EA redovisas separat nedan eftersom de är olika interventioner testade mot olika jämförelsegrupper.",
       more: "Se den fullständiga primärutfallsanalysen, samtliga sekundära utfall, RoB 2 och GRADE-tillförlitlighet på fliken Resultat →"
     },
     stats: {
