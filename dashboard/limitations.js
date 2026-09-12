@@ -7,9 +7,9 @@ window.LIMITATIONS = {
   "limitations": [
     {
       "domain": "Heterogeneity",
-      "title": "Considerable between-study heterogeneity in 13 of 22 reported analyses",
+      "title": "Considerable between-study heterogeneity in 12 of 22 reported analyses",
       "detail": "Pooled estimates in these analyses describe a distribution of effects rather than one common effect, so a single summary number understates how much the result varies between surgical populations, stimulation protocols and anaesthetic techniques.",
-      "evidence": "I² ≥ 75% in 13 analyses; highest is I² = 98.6% in Primary 0–24 h opioid — TEAS vs sham.",
+      "evidence": "I² ≥ 75% in 12 analyses; highest is I² = 98.6% in Primary 0–24 h opioid — TEAS vs sham.",
       "where": "Each analysis's forest plot and heterogeneity statistics",
       "affects": [
         "gi_first_flatus_TEAS_Sham",
@@ -23,12 +23,11 @@ window.LIMITATIONS = {
         "v34_primary_24h_mme_ALL_AUDIT",
         "AN-01-SMD",
         "AN-02-TARGET-A",
-        "AN-07-TARGET-E",
         "AN-08-TARGET-F-REMI"
       ],
       "metric": {
         "key": "heterogeneity",
-        "count": 13,
+        "count": 12,
         "of": 22
       }
     },
@@ -60,9 +59,9 @@ window.LIMITATIONS = {
     },
     {
       "domain": "Imprecision",
-      "title": "The confidence interval includes no effect in 16 of 22 reported analyses",
+      "title": "The confidence interval includes no effect in 15 of 22 reported analyses",
       "detail": "These analyses are compatible with benefit, no difference and — within the interval — harm. They do not establish absence of an effect either; they are inconclusive at the precision this evidence base supports.",
-      "evidence": "16 of 22 intervals span the null value for their measure (0 for differences and log-ratios, 1 for ratios).",
+      "evidence": "15 of 22 intervals span the null value for their measure (0 for differences and log-ratios, 1 for ratios).",
       "where": "Each analysis's confidence interval and prediction interval",
       "affects": [
         "gi_first_flatus_EA_Usual_care",
@@ -79,12 +78,11 @@ window.LIMITATIONS = {
         "AN-02-TARGET-A",
         "AN-03-TARGET-B",
         "AN-05-TARGET-D-24",
-        "AN-06-TARGET-D-48",
-        "AN-07-TARGET-E"
+        "AN-06-TARGET-D-48"
       ],
       "metric": {
         "key": "imprecision",
-        "count": 16,
+        "count": 15,
         "of": 22
       }
     },

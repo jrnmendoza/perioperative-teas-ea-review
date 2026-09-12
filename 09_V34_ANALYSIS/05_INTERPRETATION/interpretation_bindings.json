@@ -258,43 +258,43 @@
       }
     },
     "AN-04-TARGET-C": {
-      "fingerprint": "a56f8db01188b280",
+      "fingerprint": "1e67f2e5481d2659",
       "reviewed_on": "2026-09-12",
       "bound_evidence": {
-        "k": 2,
-        "estimate": -0.1765,
-        "ci_low": -0.6828,
-        "ci_high": 0.3298,
+        "k": 4,
+        "estimate": -0.2048,
+        "ci_low": -0.3392,
+        "ci_high": -0.0703,
         "i2": 0.0,
         "grade": "Low",
         "rob_low": 0,
-        "rob_some": 0,
-        "rob_high": 2,
+        "rob_some": 3,
+        "rob_high": 1,
         "estimator": "REML + Hartung-Knapp"
       }
     },
     "AN-05-TARGET-D-24": {
-      "fingerprint": "5460c726718f50d0",
+      "fingerprint": "f1dde7a28743721e",
       "reviewed_on": "2026-09-12",
       "bound_evidence": {
-        "k": 2,
-        "estimate": 0.5604,
-        "ci_low": 0.1377,
-        "ci_high": 2.3202,
-        "i2": 0.0,
+        "k": 4,
+        "estimate": 0.6477,
+        "ci_low": 0.3918,
+        "ci_high": 1.0708,
+        "i2": 66.89,
         "grade": "Low",
         "rob_low": 0,
-        "rob_some": 2,
+        "rob_some": 4,
         "rob_high": 0,
         "estimator": "REML + Hartung-Knapp"
       }
     },
     "AN-06-TARGET-D-48": {
-      "fingerprint": "2d1641fc9f7d14e3",
+      "fingerprint": "8b794d44ad59c45c",
       "reviewed_on": "2026-09-12",
       "bound_evidence": {
         "k": 2,
-        "estimate": 0.5234,
+        "estimate": 0.5352,
         "ci_low": 0.2585,
         "ci_high": 1.1078,
         "i2": 0.0,
@@ -306,19 +306,19 @@
       }
     },
     "AN-07-TARGET-E": {
-      "fingerprint": "e2a5032ddcd0fddb",
+      "fingerprint": "efa30f9303aab472",
       "reviewed_on": "2026-09-12",
       "bound_evidence": {
-        "k": 6,
-        "estimate": -2.0039,
-        "ci_low": -3.1419,
-        "ci_high": -0.8659,
-        "i2": 0.0,
-        "grade": "Moderate",
+        "k": 7,
+        "estimate": -0.5521,
+        "ci_low": -0.8834,
+        "ci_high": -0.2208,
+        "i2": 39.22,
+        "grade": "Very Low",
         "rob_low": 0,
-        "rob_some": 5,
+        "rob_some": 6,
         "rob_high": 1,
-        "estimator": "MD Hours (REML + KH)"
+        "estimator": "SMD Hedges g (REML + KH)"
       }
     },
     "AN-08-TARGET-F-REMI": {
