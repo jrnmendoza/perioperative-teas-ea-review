@@ -47,7 +47,7 @@ window.STRATUM_PURITY = {
     },
     {
       "analysis_id": "AN-04-TARGET-C",
-      "k": 2,
+      "k": 4,
       "stratum": "C_rest_pain_~24h",
       "contributors": [
         {
@@ -59,6 +59,16 @@ window.STRATUM_PURITY = {
           "study": "Liu 2021",
           "modality": "TEAS",
           "comparator": "Sham"
+        },
+        {
+          "study": "Song 2020",
+          "modality": "TEAS",
+          "comparator": "Sham"
+        },
+        {
+          "study": "Gao 2022",
+          "modality": "TEAS",
+          "comparator": "Sham"
         }
       ],
       "distinct_strata": [
@@ -68,7 +78,7 @@ window.STRATUM_PURITY = {
     },
     {
       "analysis_id": "AN-05-TARGET-D-24",
-      "k": 2,
+      "k": 4,
       "stratum": "D_PONV_0-24h",
       "contributors": [
         {
@@ -78,6 +88,16 @@ window.STRATUM_PURITY = {
         },
         {
           "study": "Lu 2021",
+          "modality": "TEAS",
+          "comparator": "Sham"
+        },
+        {
+          "study": "Song 2020",
+          "modality": "TEAS",
+          "comparator": "Sham"
+        },
+        {
+          "study": "Gao 2022",
           "modality": "TEAS",
           "comparator": "Sham"
         }
@@ -111,7 +131,7 @@ window.STRATUM_PURITY = {
     },
     {
       "analysis_id": "AN-07-TARGET-E",
-      "k": 6,
+      "k": 7,
       "stratum": "E_time_to_first_flatus",
       "contributors": [
         {
@@ -143,11 +163,17 @@ window.STRATUM_PURITY = {
           "study": "Ng 2013",
           "modality": "EA",
           "comparator": "Sham"
+        },
+        {
+          "study": "Zhang 2018",
+          "modality": "MODALITY_REVIEW_REQUIRED",
+          "comparator": "Sham"
         }
       ],
       "distinct_strata": [
         "EA vs Sham",
         "EA vs Usual care",
+        "MODALITY_REVIEW_REQUIRED vs Sham",
         "TEAS vs Sham",
         "TEAS vs Usual care"
       ],

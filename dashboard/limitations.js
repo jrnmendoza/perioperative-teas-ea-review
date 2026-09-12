@@ -181,9 +181,9 @@ window.LIMITATIONS = {
     },
     {
       "domain": "Selective reporting within this review",
-      "title": "7 analyses were computed and are not reported as findings",
+      "title": "8 analyses were computed and are not reported as findings",
       "detail": "Each is listed with the reason it is not carried forward — a component of a reported composite, a single trial, an inclusion variant, or no adopted certainty. They are disclosed so the review cannot be read as having reported only its favourable analyses.",
-      "evidence": "7 analyses, none carrying a GRADE certainty rating.",
+      "evidence": "8 analyses, none carrying a GRADE certainty rating.",
       "where": "“Analyses computed but not reported as findings — and why”",
       "affects": [],
       "metric": null

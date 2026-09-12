@@ -91,6 +91,13 @@ jobs:
       - name: Locked browser data and mutation checks
         run: python3 scripts/check_tab_data.py
 
+      # A generated bundle that no longer matches its generator shows the reader
+      # something the current data does not produce, and the "do not hand-edit"
+      # header makes them trust it. Three had drifted when this gate was added.
+      # --fast skips the PDF extractor, which reads all 70 source PDFs.
+      - name: Generated artifacts match their generators
+        run: python3 scripts/check_generated_artifacts.py --fast
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:

@@ -154,7 +154,7 @@ window.PRISMA_CHECKLIST = {
       "section": "Methods",
       "requirement": "Sensitivity analyses used to assess robustness.",
       "status": "evidence-ready",
-      "evidence": "21 of 45 computed analyses are sensitivity variants, including leave-one-out and the conversion-factor sensitivity.",
+      "evidence": "20 of 45 computed analyses are sensitivity variants, including leave-one-out and the conversion-factor sensitivity.",
       "where": "Sensitivity analyses; “computed but not reported” panel"
     },
     {
@@ -178,7 +178,7 @@ window.PRISMA_CHECKLIST = {
       "section": "Results",
       "requirement": "Numbers screened, assessed and included, ideally with a flow diagram.",
       "status": "evidence-ready",
-      "evidence": "Full PRISMA flow: 5,100 references resolving to 5,088 studies, 2,160 removed, 2,928 screened, 224 sought, 210 assessed, 70 included.",
+      "evidence": "Full PRISMA flow: 5,100 references resolving to 5,088 studies, 2,160 removed, 2,928 screened, 224 sought, 210 assessed, 70 included reports describing 69 studies.",
       "where": "PRISMA flow panel"
     },
     {
@@ -242,7 +242,7 @@ window.PRISMA_CHECKLIST = {
       "section": "Results",
       "requirement": "Results of sensitivity analyses.",
       "status": "evidence-ready",
-      "evidence": "21 sensitivity analyses computed, with leave-one-out per analysis.",
+      "evidence": "20 sensitivity analyses computed, with leave-one-out per analysis.",
       "where": "Sensitivity analyses"
     },
     {
@@ -250,7 +250,7 @@ window.PRISMA_CHECKLIST = {
       "section": "Results",
       "requirement": "Risk of bias due to missing results in the synthesis.",
       "status": "attention",
-      "evidence": "Not assessable statistically at these k. What can be reported instead is documented: 7 analyses computed and not reported, each with its reason, and the open author-contact roster.",
+      "evidence": "Not assessable statistically at these k. What can be reported instead is documented: 8 analyses computed and not reported, each with its reason, and the open author-contact roster.",
       "where": "“Computed but not reported” panel; author outreach roster"
     },
     {
@@ -274,7 +274,7 @@ window.PRISMA_CHECKLIST = {
       "section": "Discussion",
       "requirement": "Limitations of the evidence included.",
       "status": "evidence-ready",
-      "evidence": "12 limitations assembled from the review's own outputs, each with the figures behind it.",
+      "evidence": "13 limitations assembled from the review's own outputs, each with the figures behind it.",
       "where": "Limitations panel"
     },
     {
@@ -314,7 +314,7 @@ window.PRISMA_CHECKLIST = {
       "section": "Other",
       "requirement": "Amendments to registration or protocol, with rationale.",
       "status": "evidence-ready",
-      "evidence": "2 recorded amendment(s): 2026-08-14 primary outcome screening focus; 2026-08-20 english full text eligibility.",
+      "evidence": "4 recorded amendment(s): 2026-08-14 primary outcome screening focus; 2026-08-20 english full text eligibility; 2026-09-11 unit of analysis companion reports; 2026-09-12 target e effect measure.",
       "where": "00_protocol/amendments/"
     },
     {

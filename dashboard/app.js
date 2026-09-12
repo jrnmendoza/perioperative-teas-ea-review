@@ -5442,15 +5442,32 @@ function stratumPurityFinding(analysisId) {
   return (S.findings || []).find(f => f.analysis_id === analysisId && !f.pure) || null;
 }
 
+// The screen reports strata as "<modality> vs <comparator>" using the V34 outcome
+// register's own modality token, and one of those tokens is a placeholder rather
+// than a modality: MODALITY_REVIEW_REQUIRED. Zhang 2018 carries it on all ten of
+// its rows there while the study register (data.js) records TEAS, and that
+// disagreement only became visible in a pooled stratum when the trial was
+// admitted to Targets C and E on 2026-09-12. Surfaced, not resolved: the two
+// registers disagree and choosing between them is a review-team decision.
+const STRATUM_LABEL = {
+  MODALITY_REVIEW_REQUIRED: 'modality not yet classified in the v34 outcome register '
+    + '(Zhang 2018 \u2014 recorded as TEAS in the study register; the two disagree)'
+};
+
+function readableStratum(s) {
+  return String(s).replace(/MODALITY_REVIEW_REQUIRED/g,
+    STRATUM_LABEL.MODALITY_REVIEW_REQUIRED);
+}
+
 function stratumPurityFlag(analysisId) {
   const f = stratumPurityFinding(analysisId);
   if (!f) return '';
-  const strata = (f.distinct_strata || []).join(' · ');
+  const strata = (f.distinct_strata || []).map(readableStratum).join(' · ');
   return `<div style="margin-top:0.3rem;padding:0.35rem 0.5rem;
                background:rgba(244,63,94,0.14);border-left:3px solid #f43f5e;
                border-radius:var(--radius-sm);font-size:0.7rem;font-weight:600;
                color:#fda4af;line-height:1.5;white-space:normal;"
-               title="${pwEsc(f.distinct_strata.join(' | '))}">
+               title="${pwEsc(f.distinct_strata.map(readableStratum).join(' | '))}">
       ⚠️ Pools across protocol strata — under methodological review.
       This estimate combines ${f.distinct_strata.length} comparison types
       (${pwEsc(strata)}), which the locked protocol keeps separate. Do not quote
