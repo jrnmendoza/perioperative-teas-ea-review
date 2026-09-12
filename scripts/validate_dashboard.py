@@ -4352,6 +4352,105 @@ def t_baseline_conflicts_are_surfaced_not_corrected():
     check("t_baseline_conflicts_are_surfaced_not_corrected", not probs, "; ".join(probs[:4]))
 
 
+def t_post_lock_eligibility_pass_is_complete_and_pools_nothing():
+    """
+    The dedicated eligibility reconciliation pass for the seven post-lock
+    additions, and the promise it makes.
+
+    The dashboard said for weeks that six of the seven were "not yet pooled ...
+    pending a dedicated eligibility reconciliation pass". An open-ended deferral
+    is only honest while it is true, so once the pass exists three things have to
+    hold and are checked here:
+
+      * it covers every post-lock study and leaves none undispositioned;
+      * every disposition states the rule behind it and, where blocked, what
+        would lift it -- a verdict with no stated rule is an opinion;
+      * IT POOLS NOTHING. A study the pass calls eligible must still carry no
+        pooled effect, because admission is a review-team act. If that stopped
+        being true the deferral text would be wrong in the other direction.
+    """
+    path = DASH / "eligibility_reconciliation.js"
+    probs = []
+    if not path.exists():
+        check("t_post_lock_eligibility_pass_is_complete_and_pools_nothing", False,
+              "the reconciliation pass artefact is missing")
+        return
+    raw = path.read_text(encoding="utf-8")
+    E = json.JSONDecoder().raw_decode(raw.split("window.ELIGIBILITY_RECONCILIATION = ", 1)[1])[0]
+
+    POST_LOCK = {"Wu 2016", "Gao 2022", "Liu 2015", "Oztas 2019", "Song 2020",
+                 "Szmit 2021", "Zhang 2018"}
+    covered = {r["study"] for r in E["rows"]}
+    if covered != POST_LOCK:
+        probs.append(f"pass covers {sorted(covered)}, expected {sorted(POST_LOCK)}")
+
+    VALID = {"admitted", "eligible", "qc_hold", "data_absent",
+             "derivation_invalid", "scope_mismatch"}
+    by_key = {s["key"]: s for s in STUDIES}
+    for r in E["rows"]:
+        tag = f"{r['study']}/{r['outcome']}"
+        if r["disposition"] not in VALID:
+            probs.append(f"{tag}: unknown disposition {r['disposition']!r}")
+        if not r.get("rule"):
+            probs.append(f"{tag}: disposition with no rule behind it")
+        if not r.get("evidence"):
+            probs.append(f"{tag}: disposition with no evidence")
+        if r["disposition"] not in ("admitted",) and not r.get("unblocks"):
+            probs.append(f"{tag}: blocked with no statement of what would lift it")
+    # The pass pools nothing -- tested against the ANALYSIS DATASETS, not against
+    # data.js. A register record may carry a derived contrast for display in the
+    # study drawer without being in any synthesis: Liu 2015's intraoperative row
+    # has a mean_diff of -22.1 and no SE, and appears in no target dataset. Only
+    # dataset membership means admitted.
+    import csv as _csv
+    from pathlib import Path as _P
+    pooled: set[str] = set()
+    for f in sorted((ROOT / "06_FINAL_ANALYSIS_V26" / "01_DATA").glob("target_*.csv")) + \
+             [ROOT / "06_FINAL_ANALYSIS_V26" / "01_DATA" / "opioid_24h_primary.csv"]:
+        if not f.exists():
+            continue
+        for row in _csv.DictReader(f.open(encoding="utf-8-sig")):
+            blob = " ".join(str(v) for v in row.values() if v)
+            for s in POST_LOCK:
+                if s in blob:
+                    pooled.add(s)
+    admitted = {r["study"] for r in E["rows"] if r["disposition"] == "admitted"}
+    unexpected = pooled - admitted
+    if unexpected:
+        probs.append(f"{sorted(unexpected)} appear in an analysis dataset but the pass does not "
+                     f"record them as admitted -- either the pass is stale or a study was "
+                     f"pooled without the review-team act the pass defers to")
+    for s in admitted:
+        if s not in pooled:
+            probs.append(f"{s} is recorded as admitted but appears in no analysis dataset")
+
+    if not E.get("pools_nothing"):
+        probs.append("the pass no longer declares that it pools nothing")
+
+    # The old open-ended deferral must not still be on the page. Checked against
+    # the RAW html, not the withdrawal-stripped copy: the paragraph it lived in
+    # now opens with a "Superseded" marker, so stripping hid the very sentence
+    # this is here to catch.
+    DEFER = "not yet pooled into any target pending a dedicated eligibility reconciliation pass"
+    for m in re.finditer(re.escape(DEFER), HTML):
+        window = HTML[max(0, m.start() - 500): m.end() + 500]
+        if "was completed" not in window:
+            probs.append("the dashboard still defers to a pass that has now been completed")
+            break
+    if "reconciliation pass for the other six was completed" not in HTML:
+        probs.append("the dashboard does not say the pass was completed")
+    # Both the renderer's own output text AND its call site. Checking either
+    # alone is satisfiable with the panel dead: the function body keeps the text
+    # after its call is deleted, and the call survives an emptied body.
+    if "Post-lock eligibility reconciliation" not in APP:
+        probs.append("the reconciliation panel no longer renders its own heading")
+    if "${eligibilityReconciliationHtml()}" not in APP:
+        probs.append("the reconciliation panel is defined but never called")
+
+    check("t_post_lock_eligibility_pass_is_complete_and_pools_nothing", not probs,
+          "; ".join(probs[:4]))
+
+
 def t_figure_only_values_are_digitized_or_refused_with_evidence():
     """
     The five figure-only / unconverted values, and the QC that settled them.
@@ -4641,6 +4740,7 @@ def main() -> int:
           t_baseline_conflicts_are_surfaced_not_corrected,
           t_yeh_identity_is_the_adopted_convention,
           t_figure_only_values_are_digitized_or_refused_with_evidence,
+          t_post_lock_eligibility_pass_is_complete_and_pools_nothing,
           t_baseline_denominators_are_unique_trials,
           t_no_live_copy_calls_seventy_reports_seventy_trials,
           t_reconciliation_status_is_not_self_contradictory]),

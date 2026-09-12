@@ -1638,7 +1638,60 @@ function renderPopulationSummary(reportsList) {
     </div>
     ${flagHtml}
     ${resolvedHtml}
+    ${eligibilityReconciliationHtml()}
   `;
+}
+
+/**
+ * The post-lock eligibility reconciliation pass.
+ *
+ * Shown here because this is where a reader asks "why isn't study X in the
+ * pool?". Every row states the rule it turns on and what would lift it, so a
+ * disposition can be argued with rather than merely accepted. The pass pools
+ * nothing: admission stays a review-team act.
+ */
+function eligibilityReconciliationHtml() {
+  const E = window.ELIGIBILITY_RECONCILIATION;
+  if (!E || !E.rows || !E.rows.length) return '';
+  const STYLE = {
+    admitted:           ['badge-emerald', 'Admitted'],
+    eligible:           ['badge-emerald', 'Eligible — awaiting admission'],
+    qc_hold:            ['badge-amber',   'Needs a rule decision'],
+    data_absent:        ['badge-rose',    'Source does not report it'],
+    derivation_invalid: ['badge-rose',    'No defensible derivation'],
+    scope_mismatch:     ['badge-indigo',  'Outside the target definition'],
+  };
+  const order = ['eligible', 'qc_hold', 'derivation_invalid', 'data_absent',
+                 'scope_mismatch', 'admitted'];
+  const rows = E.rows.slice().sort((a, b) =>
+    order.indexOf(a.disposition) - order.indexOf(b.disposition)
+    || a.study.localeCompare(b.study));
+
+  return `
+    <details class="pop-resolved" style="background:rgba(99,102,241,0.05);border-color:rgba(99,102,241,0.28);">
+      <summary style="color:#a5b4fc;"><strong>Post-lock eligibility reconciliation (${E.rows.length} dispositions across ${E.studies.length} studies)</strong>
+        <span class="sd-sub"> &mdash; completed ${pwEsc(E.pass_date)}; pools nothing</span></summary>
+      <div class="sd-sub" style="margin-top:0.5rem;">
+        The seven studies added after the v26 lock, each outcome given a disposition, the rule
+        behind it, and what would lift it. ${E.newly_eligible.length} clear on data grounds and
+        await review-team admission; ${E.needs_rule_decision.length} are blocked by a rule
+        rather than by data. Admitting a study to a locked analysis remains a review-team act.
+      </div>
+      ${rows.map(r => {
+        const [cls, label] = STYLE[r.disposition] || ['badge-indigo', r.disposition];
+        return `
+        <div class="pop-flag">
+          <span class="badge ${cls}">${pwEsc(label)}</span>
+          <strong>${pwEsc(r.study)}</strong> &mdash; ${pwEsc(r.outcome)}
+          <span class="sd-sub">&rarr; ${pwEsc(r.target)}</span>
+          ${r.changed ? '<span class="badge badge-amber" style="margin-left:0.3rem;">changed by this pass</span>' : ''}
+          <div class="sd-sub"><strong>Rule:</strong> ${pwEsc(r.rule)}</div>
+          <div class="sd-sub"><strong>Evidence:</strong> ${pwEsc(r.evidence)}</div>
+          ${r.unblocks ? `<div class="sd-sub"><strong>What would lift it:</strong> ${pwEsc(r.unblocks)}</div>` : ''}
+          ${r.caution ? `<div class="sd-sub"><strong>Before deciding:</strong> ${pwEsc(r.caution)}</div>` : ''}
+        </div>`;
+      }).join('')}
+    </details>`;
 }
 
 // 3. Study Explorer Table
