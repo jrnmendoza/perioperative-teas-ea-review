@@ -18646,15 +18646,15 @@ window.STUDIES_DATA = [
       "total_n": 159,
       "arm1_name": "TEAS Group",
       "arm1_n": 80,
-      "arm1_age": "42.0 ± 9.8",
-      "arm1_female": "9/43 (20.9%)",
-      "arm1_bmi": "24.6 ± 3.5",
+      "arm1_age": "52.3 ± 9.1",
+      "arm1_female": "28/80 (35.0%)",
+      "arm1_bmi": "23.4 ± 3.3",
       "arm2_name": "Sham Group",
       "arm2_n": 79,
-      "arm2_age": "39.5 ± 11.3",
-      "arm2_female": "10/43 (23.3%)",
-      "arm2_bmi": "24.9 ± 3.2",
-      "asa_status": "ASA I: 11 (25.6%), ASA II: 32 (74.4%)"
+      "arm2_age": "54.3 ± 10.9",
+      "arm2_female": "26/79 (32.9%)",
+      "arm2_bmi": "23.7 ± 4.9",
+      "asa_status": "TEAS arm — ASA I: 2/80 (2.5%), ASA II: 74/80 (92.5%), ASA III: 4/80 (5.0%); Sham arm — ASA I: 1/79 (1.3%), ASA II: 72/79 (91.1%), ASA III: 6/79 (7.6%)"
     },
     "rob2": {
       "d1": "Low",
