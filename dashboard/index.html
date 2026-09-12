@@ -3428,18 +3428,18 @@
                   <td><span class="badge-derivation">Chinese Pain Society Consensus / Liu 2020</span></td>
                 </tr>
                 <tr>
-                  <td><strong>Pethidine / Meperidine (IV)</strong></td>
+                  <td><strong>Pethidine / Meperidine (IV)</strong> <span class="badge" style="background: rgba(248,113,113,0.18); color: #fca5a5; font-size: 0.62rem;">NOT APPLIED IN ANY ANALYSIS</span></td>
                   <td><span class="badge badge-amber">0.10–0.13 mg MME / mg</span></td>
                   <td><strong>75.0 – 100.0 mg</strong></td>
-                  <td>Synthetic opioid; 75–100 mg parenteral pethidine provides analgesia equivalent to 10 mg parenteral morphine. Converted at $0.10\text{ mg MME/mg}$.</td>
-                  <td><span class="badge-derivation">ANZCA 2020 / Knotkova 2012</span></td>
+                  <td>Synthetic opioid; 75&ndash;100 mg parenteral pethidine is commonly stated as equivalent to 10 mg parenteral morphine. <strong>Attribution corrected 2026-09-12.</strong> This row previously cited ANZCA 2020 / Knotkova 2012. Neither citation supports it: the ANZCA APM:SE 2020 entry in the reference pane below is applied in this review to intravenous sufentanil, fentanyl, oxycodone and hydromorphone, and pethidine is not among them; Knotkova 2012 appears nowhere in this repository except as this badge and the butorphanol badge &mdash; it has no reference-pane entry, and <code>06_AUDIT/opioid_conversion_audit.csv</code> had already recorded it as &ldquo;also uncited in-repo&rdquo; during the 2026-09-07 sufentanil audit. No factor for pethidine exists in <code>00_prep_data.do</code> and none is applied to any trial. Oztas 2019 reports rescue pethidine 20.66&nbsp;&plusmn;&nbsp;27.89 vs 33.12&nbsp;&plusmn;&nbsp;42.69&nbsp;mg, and it is held out for a second and independent reason: it cannot be added to that trial's PCA tramadol, because the SD of a within-person sum needs a covariance the trial does not report.</td>
+                  <td><span class="badge-derivation" style="background: rgba(248,113,113,0.18); color: #fca5a5;">No attribution verified in this repository</span></td>
                 </tr>
                 <tr>
-                  <td><strong>Tramadol (IV)</strong></td>
+                  <td><strong>Tramadol (IV)</strong> <span class="badge" style="background: rgba(248,113,113,0.18); color: #fca5a5; font-size: 0.62rem;">NOT APPLIED IN ANY ANALYSIS</span></td>
                   <td><span class="badge badge-amber">0.10 mg MME / mg</span></td>
                   <td><strong>100.0 mg</strong></td>
-                  <td>Atypical weak $\mu$-agonist with SNRI dual action; 100 mg IV tramadol is clinically equivalent to approximately 10 mg IV morphine.</td>
-                  <td><span class="badge-derivation">ANZCA 2020 / Treillet 2018</span></td>
+                  <td><strong>Attribution withdrawn 2026-09-12; no ratio is adopted.</strong> This row previously cited ANZCA 2020 / Treillet 2018 for 0.10. Neither citation supports it: the ANZCA APM:SE 2020 entry is applied here to sufentanil, fentanyl, oxycodone and hydromorphone, and the Treillet 2018 entry to the 1000:1 sufentanil ratio &mdash; tramadol appears in neither. A dedicated search (2026-09-07 against this project's reference family, repeated 2026-09-12 against the published literature) located no citable parenteral tramadol:morphine ratio, and the reason is pharmacological rather than bibliographic: MME is defined on $\mu$-receptor agonist activity, whereas tramadol is a weak $\mu$-agonist <em>and</em> a serotonin&ndash;noradrenaline reuptake inhibitor whose analgesia depends on CYP2D6-mediated activation to O-desmethyltramadol, so a single equivalence number does not carry the same meaning for it as for a pure $\mu$-agonist. The figure is retained here only as the clinically quoted approximation it is, marked as applied to nothing. <strong>It gates no evidence:</strong> the one trial reporting tramadol, Oztas 2019 (0&ndash;24 h PCA tramadol 228.40&nbsp;&plusmn;&nbsp;87.89 vs 357.81&nbsp;&plusmn;&nbsp;123.70&nbsp;mg), enters the review on the scale-free route instead, where the unit cancels &mdash; Hedges' <em>g</em> = &minus;1.168 [&minus;1.930, &minus;0.406], <code>V33_TIERE_TEAS_USUAL_SMD</code>, native mg with no conversion applied.</td>
+                  <td><span class="badge-derivation" style="background: rgba(248,113,113,0.18); color: #fca5a5;">No sourced ratio located; none adopted</span></td>
                 </tr>
                 <tr>
                   <td><strong>Butorphanol (IV)</strong></td>
@@ -3450,6 +3450,10 @@
                 </tr>
               </tbody>
             </table>
+            <p style="font-size: 0.74rem; color: var(--text-muted); margin-top: 0.75rem; line-height: 1.55;">
+              <strong style="color: #fca5a5;">Scope of this table, recorded 2026-09-12.</strong>
+              Four of these factors are actually applied to trial data: morphine 1.0 (self-referential), hydromorphone 5.0, sufentanil 1.0&nbsp;mg&nbsp;MME/&micro;g, and fentanyl 0.10&nbsp;mg&nbsp;MME/&micro;g. They are the only <code>mme_factor</code> assignments in <code>06_FINAL_ANALYSIS_V26/02_STATA/00_prep_data.do</code>, alongside a factor of 1.0 for two trials whose authors supply their own MME figure. Every other row is reference material that no estimate in this review depends on. Three attributions on those reference-only rows remain unverified against a source held in this repository and are flagged rather than silently kept: <em>Nielsen 2016</em> (fentanyl row, as a second citation beside ANZCA 2020), and <em>Chinese Pain Society Consensus / Liu 2020</em> (dezocine) have no reference-pane entry; <em>Knotkova 2012</em> (butorphanol) has none either, and the two rows that leant on it hardest have been corrected above. Where a badge names no reference-pane entry but the cell text itself gives a specific, checkable locator &mdash; the BC Ministry of Health palliative equianalgesic table and the FDA sufentanil label, both recorded in <code>06_AUDIT/opioid_conversion_audit.csv</code> &mdash; the attribution stands.
+            </p>
           </div>
         </div>
 
@@ -3497,7 +3501,7 @@
             <!-- Widget 1: Equianalgesic Converter -->
             <div class="calc-box">
               <div style="font-size: 0.85rem; font-weight: 700; color: #34d399; margin-bottom: 0.4rem;">⚡ Equianalgesic Opioid to IV MME Calculator</div>
-              <p style="font-size: 0.74rem; color: var(--text-muted);">Select drug and enter 24h consumption to inspect the review conversion convention. Some factors remain unresolved; see the result note.</p>
+              <p style="font-size: 0.74rem; color: var(--text-muted);">Select drug and enter 24h consumption to inspect the review conversion convention. Only four of these factors are applied to trial data; the rest are reference-only. See the result note.</p>
               
               <div style="margin-top: 0.75rem;">
                 <label style="font-size: 0.75rem; color: var(--text-secondary);">Select Opioid Formulation:</label>
@@ -3505,12 +3509,12 @@
                   <option value="sufentanil_mcg">IV Sufentanil (µg) [Factor: 1.0 mg MME / µg]</option>
                   <option value="fentanyl_mcg">IV Fentanyl (µg) [Factor: 0.10 mg MME / µg]</option>
                   <option value="morphine_mg">IV Morphine (mg) [Factor: 1.0 mg MME / mg]</option>
-                  <option value="hydromorphone_mg">IV Hydromorphone (mg) [Factor: 6.67 mg MME / mg]</option>
-                  <option value="oxycodone_mg">IV Oxycodone (mg) [Factor: 1.0 mg MME / mg]</option>
-                  <option value="dezocine_mg">IV Dezocine (mg) [Factor: 1.0 mg MME / mg]</option>
-                  <option value="tramadol_mg">IV Tramadol (mg) [Factor: 0.10 mg MME / mg]</option>
-                  <option value="pethidine_mg">IV Pethidine (mg) [Factor: 0.10 mg MME / mg]</option>
-                  <option value="butorphanol_mg">IV Butorphanol (mg) [Factor: 5.0 mg MME / mg]</option>
+                  <option value="hydromorphone_mg">IV Hydromorphone (mg) [Factor: 5.0 mg MME / mg]</option>
+                  <option value="oxycodone_mg">IV Oxycodone (mg) [Factor: 1.0 mg MME / mg] — not applied in this review</option>
+                  <option value="dezocine_mg">IV Dezocine (mg) [Factor: 1.0 mg MME / mg] — not applied in this review</option>
+                  <option value="tramadol_mg">IV Tramadol (mg) [Factor: 0.10 mg MME / mg] — not applied in this review</option>
+                  <option value="pethidine_mg">IV Pethidine (mg) [Factor: 0.10 mg MME / mg] — not applied in this review</option>
+                  <option value="butorphanol_mg">IV Butorphanol (mg) [Factor: 5.0 mg MME / mg] — not applied in this review</option>
                 </select>
               </div>
 

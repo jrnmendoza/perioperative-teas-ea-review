@@ -1654,6 +1654,173 @@ def t_sufentanil_conversion_documented_and_unresolved():
           not probs, "\n".join(probs))
 
 
+def t_conversion_factors_claim_only_what_they_can_source():
+    """
+    ADDED 2026-09-12, from the Oztas 2019 conversion pass.
+
+    Every factor the conversion table displays must be one of two honest things:
+    APPLIED to trial data and traceable to the pipeline, or REFERENCE-ONLY and
+    marked as applied to nothing. The defect this check exists to prevent is the
+    third state the table was actually in -- a confident citation badge on a
+    factor that (a) no analysis uses and (b) the named reference does not cover.
+
+    It pins four things at once:
+      1. The set of factors the calculator calls "applied" equals the set of
+         mme_factor assignments in 00_prep_data.do. Nothing may claim to be
+         applied that the pipeline does not apply.
+      2. Tramadol and pethidine are not attributed to ANZCA 2020, Treillet 2018
+         or Knotkova 2012 -- the three citations that were on those rows and do
+         not cover those drugs.
+      3. Knotkova 2012, which has no reference-pane entry anywhere in this
+         repository, is named as unverified wherever it still appears.
+      4. The calculator's hydromorphone factor equals the 5.0 the pipeline
+         computes. It said 6.667 for five days after the 2026-09-07 audit
+         adopted 5.0, contradicting both the table and Stata.
+    """
+    probs = []
+    prep = (ROOT / "06_FINAL_ANALYSIS_V26" / "02_STATA" / "00_prep_data.do").read_text(encoding="utf-8")
+
+    # -- 1. applied-vs-reference-only must match the pipeline ------------------
+    DRUG_UNITS = {
+        "morphine_mg": ("mg morphine", "mg IV morphine", "mg MME", "mg IV morphine-equivalent"),
+        "hydromorphone_mg": ("mg hydromorphone",),
+        "sufentanil_mcg": ("\u00b5g sufentanil",),
+        "fentanyl_mcg": ("mg fentanyl",),
+        "oxycodone_mg": (), "dezocine_mg": (), "tramadol_mg": (),
+        "pethidine_mg": (), "butorphanol_mg": (),
+    }
+    applied_units = set(re.findall(r'replace mme_factor = [0-9.]+ if unit == "([^"]+)"', prep))
+    applied_units |= set(re.findall(r'\| unit == "([^"]+)"', prep))
+    if not applied_units:
+        probs.append("could not parse any mme_factor unit assignment out of 00_prep_data.do")
+
+    m = re.search(r"const FACTOR_NOTE = \{(.*?)\n  \};", APP, re.S)
+    if not m:
+        probs.append("calculator has no FACTOR_NOTE map - per-drug standing is undocumented")
+    else:
+        notes = dict(re.findall(r"(\w+):\s*'((?:[^'\\]|\\.)*)'", m.group(1)))
+        offered = re.findall(r'<option value="(\w+_m?c?g)"', HTML)
+        for drug in offered:
+            if drug not in notes:
+                probs.append(f"calculator offers {drug} with no FACTOR_NOTE entry")
+                continue
+            claims_applied = notes[drug].startswith("Applied to trial data")
+            pipeline_applies = bool(set(DRUG_UNITS.get(drug, ())) & applied_units)
+            if drug not in DRUG_UNITS:
+                probs.append(f"{drug} is offered but this check has no unit mapping for it")
+            elif claims_applied and not pipeline_applies:
+                probs.append(f"{drug} claims 'Applied to trial data' but 00_prep_data.do assigns "
+                             f"it no mme_factor (pipeline units: {sorted(applied_units)})")
+            elif pipeline_applies and not claims_applied:
+                probs.append(f"{drug} IS applied by the pipeline but the calculator does not say so")
+            if not claims_applied and "applied to no trial" not in notes[drug]:
+                probs.append(f"{drug} is reference-only but does not say it is applied to no trial")
+
+    # -- 2. the withdrawn attributions must not come back ---------------------
+    for drug in ("Tramadol (IV)", "Pethidine / Meperidine (IV)"):
+        i = HTML.find(f"<strong>{drug}</strong>")
+        if i < 0:
+            probs.append(f"conversion table row for {drug} not found")
+            continue
+        row = HTML[i:HTML.index("</tr>", i)]
+        for bad in ("ANZCA 2020", "Treillet 2018", "Knotkova 2012"):
+            if f">{bad}<" in row or f"{bad}</span>" in row:
+                probs.append(f"{drug} is attributed to {bad} again; that citation does not "
+                             f"cover this drug (see 06_AUDIT/opioid_conversion_audit.csv)")
+        if "NOT APPLIED IN ANY ANALYSIS" not in row:
+            probs.append(f"{drug} is not marked as applied to no analysis")
+
+    # -- 3. a citation with no reference entry must be named as unverified -----
+    note = re.search(r"<strong[^>]*>Scope of this table[^<]*</strong>(.*?)</p>", HTML, re.S)
+    if note is None:
+        probs.append("the conversion table's scope note is gone; nothing states which factors are "
+                     "applied or which attributions are unverified")
+    else:
+        body = note.group(1)
+        if "unverified" not in body:
+            probs.append("the scope note no longer says any attribution is unverified")
+        for cite in ("Nielsen 2016", "Knotkova 2012", "Liu 2020"):
+            if cite.split()[0] in HTML.replace(body, "") and cite not in body:
+                probs.append(f"{cite} is cited on a conversion-table row but the scope note does "
+                             f"not list it among the attributions unverified in this repository")
+
+    # -- 4. the calculator must not contradict the adopted hydromorphone factor
+    m = re.search(r"case 'hydromorphone_mg':.*?factor = ([0-9.]+);", APP, re.S)
+    if not m:
+        probs.append("could not find the calculator's hydromorphone factor")
+    elif abs(float(m.group(1)) - 5.0) > 1e-9:
+        probs.append(f"calculator uses hydromorphone {m.group(1)}; the 2026-09-07 audit adopted "
+                     f"5.0 and 00_prep_data.do computes 5.0")
+    if re.search(r"6\.67 mg MME / mg", HTML):
+        probs.append("a 6.67 hydromorphone factor is still displayed as current")
+
+    check("t_conversion_factors_claim_only_what_they_can_source", not probs, "\n".join(probs))
+
+
+def t_oztas_tramadol_is_refused_not_invented():
+    """
+    ADDED 2026-09-12. Oztas 2019's 228 vs 358 mg tramadol is a large effect with
+    no sourced conversion to MME. The two failure modes are opposite and both
+    have to stay shut: inventing a ratio to pool it, and describing the trial as
+    blocked when its effect is already reported on the scale-free route.
+
+    Anything the dashboard says about that g must equal what Stata computed.
+    """
+    probs = []
+    audit = read_csv(ROOT / "06_FINAL_ANALYSIS_V26" / "06_AUDIT" / "opioid_conversion_audit.csv")
+    oz = [r for r in audit if r["study_id"].startswith("Oztas")]
+    if len(oz) != 2:
+        probs.append(f"expected 2 Oztas 2019 conversion-audit rows (tramadol, pethidine), found {len(oz)}")
+    for r in oz:
+        if "NONE ADOPTED" not in r["conversion_factor_verified"]:
+            probs.append(f"Oztas 2019 {r['opioid']}: audit records a verified factor "
+                         f"{r['conversion_factor_verified']!r} -- no ratio was sourced")
+        if not r["reference_location"].strip():
+            probs.append(f"Oztas 2019 {r['opioid']}: no source locator")
+
+    # No tramadol or pethidine factor may enter the pipeline.
+    for do in ("00_prep_data.do", "13_tiered_primary_v33.do"):
+        for d in (ROOT / "06_FINAL_ANALYSIS_V26" / "02_STATA", ROOT / "07_TIERED_V33" / "02_STATA"):
+            f = d / do
+            if f.exists() and re.search(r"mme_factor\s*=\s*[0-9.]+\s*if\s*unit\s*==\s*\"[^\"]*"
+                                        r"(tramadol|pethidine)", f.read_text(encoding="utf-8"), re.I):
+                probs.append(f"{f.name} assigns an mme_factor to tramadol or pethidine; "
+                             f"no sourced ratio exists for either")
+
+    # The SMD row is the route that carries this trial; its g must match Stata.
+    tierE = read_csv(V33 / "05_RESULTS" / "TIERED_ANALYSIS_RESULTS_v33_tierE.csv")
+    row = next((r for r in tierE if "TEAS_USUAL" in r.get("analysis_id", r.get("model_id", ""))
+                or "Oztas" in str(r)), None)
+    if row is None:
+        probs.append("no TEAS-vs-usual-care Tier E SMD row found; the route that carries "
+                     "Oztas 2019 without a conversion factor has gone missing")
+    else:
+        g = next((float(v) for k, v in row.items()
+                  if k and "estimate" in k.lower() and v not in (None, "")), None)
+        if g is None:
+            probs.append("Tier E TEAS-vs-usual-care row carries no estimate")
+        else:
+            for shown in set(re.findall(r"Hedges' <em>g</em> = &minus;([0-9.]+)", HTML)) | \
+                         set(re.findall(r"Hedges' g = -([0-9.]+)", ALL_UI)):
+                if abs(abs(g) - float(shown)) > 0.005 and abs(float(shown) - 1.168) < 0.01:
+                    probs.append(f"dashboard shows Oztas g = -{shown}; Stata computed {g:.3f}")
+
+    # The eligibility pass must not still promise a literature search will fix it.
+    elig = (DASH / "eligibility_reconciliation.js").read_text(encoding="utf-8")
+    if "one blocker in the set that a literature search" in elig:
+        probs.append("eligibility pass still claims a literature search could lift the Oztas "
+                     "blocker; the 2026-09-12 search found the obstacle is pharmacological and "
+                     "that the binding constraint is k=1, not the missing ratio")
+    if "OZT19" in elig or "Oztas" in elig:
+        i = elig.find('"study": "Oztas 2019"')
+        if i >= 0 and "V33_TIERE_TEAS_USUAL_SMD" not in elig[i:i + 4000]:
+            probs.append("the Oztas 2019 disposition does not record that the trial is already "
+                         "admitted on the scale-free route; readers would think it contributes "
+                         "nothing")
+
+    check("t_oztas_tramadol_is_refused_not_invented", not probs, "\n".join(probs))
+
+
 def t_cdc_not_misattributed_to_perioperative_iv():
     """
     CDC 2022 is an outpatient acute/subacute/chronic-pain prescribing guideline;
@@ -4714,6 +4881,8 @@ def main() -> int:
                                        t_moderator_matrix_no_fabricated_categories,
                                        t_no_false_no_association_claim, t_cochrane_wording_not_overstated,
                                        t_sufentanil_conversion_documented_and_unresolved,
+                                       t_conversion_factors_claim_only_what_they_can_source,
+                                       t_oztas_tramadol_is_refused_not_invented,
                                        t_cdc_not_misattributed_to_perioperative_iv,
                                        t_mcid_labelled_exploratory, t_version_tag_present,
                                        t_i18n_textcontent_no_html_entities, t_v26_logs_git_tracked,
