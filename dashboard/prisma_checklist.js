@@ -194,7 +194,7 @@ window.PRISMA_CHECKLIST = {
       "section": "Results",
       "requirement": "Cite and describe the characteristics of each included study.",
       "status": "evidence-ready",
-      "evidence": "All 70 included trials carry extracted characteristics and a citation.",
+      "evidence": "All 70 included reports (69 trials) carry extracted characteristics and a citation.",
       "where": "Study characteristics panel"
     },
     {

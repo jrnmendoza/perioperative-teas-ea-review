@@ -53,7 +53,7 @@ const TRANSLATIONS = {
       lowRobOnly: "Low Risk of Bias Only",
       someConcerns: "Some Concerns",
       presets: "Presets:",
-      allStudies: "All 70 Studies",
+      allStudies: "All 70 Reports",
       presetLowRob: "Low RoB Only",
       presetSham: "Sham Only",
       presetLarge: "Large (N ≥ 60)"
@@ -250,7 +250,7 @@ const TRANSLATIONS = {
       lowRobOnly: "Endast låg risk för bias",
       someConcerns: "Viss risk för bias",
       presets: "Förval:",
-      allStudies: "Alla 70 studier",
+      allStudies: "Alla 70 rapporter",
       presetLowRob: "Endast låg RoB",
       presetSham: "Endast sham",
       presetLarge: "Stora studier (N ≥ 60)"
@@ -443,8 +443,8 @@ const STAT_GLOSSARY = {
     nParticipants: {
       term: "N (Total Analyzed Participants)",
       category: "Meta-Analytic Parameters",
-      shortDef: "The cumulative sum of randomized surgical patients across all contributing trial arms in the specific analysis.",
-      context: "Across all 70 included RCTs, total enrolled N is under reconciliation following the addition of 7 post-lock studies (including one 1,655-patient trial) and is not yet re-verified in this pass. For the strict primary 24h opioid synthesis, N = 676 surgical patients.",
+      shortDef: "The cumulative sum of analysed surgical patients across all contributing trial arms in the specific analysis.",
+      context: "Across the 69 included trials (70 reports), 10,618 participants were analysed, summed once per trial so the one linked cohort is not double-counted. That is an ANALYSED total, not a randomized one: only 17 of the 69 trials record a randomized denominator, so no review-wide randomized total is reported. For the strict primary 24h opioid synthesis, N = 676 surgical patients.",
       jumpTab: "explorer"
     },
     randomEffects: {

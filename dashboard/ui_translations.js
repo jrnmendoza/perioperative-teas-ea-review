@@ -455,8 +455,8 @@ Object.assign(window.UI_TRANSLATIONS_SV, {
   "Certainty is adjudicated separately for each synthesis. TEAS and EA differ, so no single rating describes the primary outcome.":
     "Tillförlitligheten bedöms separat för varje syntes. TEAS och EA skiljer sig åt, så ingen enskild gradering beskriver det primära utfallet.",
 
-  "How the included trials contribute — why 70 trials give 7 in the primary analysis":
-    "Hur de inkluderade studierna bidrar — varför 70 studier ger 7 i den primära analysen",
+  "How the included trials contribute — why 69 trials give 7 in the primary analysis":
+    "Hur de inkluderade studierna bidrar — varför 69 studier ger 7 i den primära analysen",
   "Primary outcome contribution pathway — which trials carry 24-hour data":
     "Bidragsväg för det primära utfallet — vilka studier som har 24-timmarsdata",
   "Which 0–24 hour evidence can actually be pooled — tier classification":

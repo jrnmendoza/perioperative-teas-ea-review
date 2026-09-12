@@ -9,6 +9,7 @@ let includedStudyIds = new Set(window.STUDIES_DATA ? window.STUDIES_DATA.map(s =
 let filterModality = 'all';
 let filterComparator = 'all';
 let filterSurgery = 'all';
+let filterCountry = 'all';
 let filterRob = 'all';
 let filterMinN = 20;
 let filterYearMin = 1993;
@@ -191,8 +192,17 @@ function syncToolbarDropdowns() {
   const outSelect = document.getElementById('meta-outcome-select');
   const subSelect = document.getElementById('meta-subgroup-select');
 
+  // Surgery, country and RoB were not synced here, so clearing one of their
+  // filter chips left the visible dropdown showing a value no longer applied.
+  const surgSelect = document.getElementById('filter-surgery');
+  const countrySelect = document.getElementById('filter-country');
+  const robSelect = document.getElementById('filter-rob');
+
   if (modSelect) modSelect.value = filterModality;
   if (compSelect) compSelect.value = filterComparator;
+  if (surgSelect) surgSelect.value = filterSurgery;
+  if (countrySelect) countrySelect.value = filterCountry;
+  if (robSelect) robSelect.value = filterRob;
   if (outSelect) outSelect.value = currentOutcome;
   if (subSelect) subSelect.value = currentSubgroup;
 }
@@ -224,11 +234,26 @@ function initGlobalFilters() {
   if (surgSelect) {
     surgSelect.innerHTML='<option value="all">All Surgical Specialties</option>'+[...new Set(window.STUDIES_DATA.map(s=>s.surgery_category))].sort().map(c=>`<option value="${pwEsc(c)}">${pwEsc(c)}</option>`).join('');
   }
+  // Country of conduct. Populated from the register so a country added or
+  // corrected upstream appears here without a second list to maintain.
+  const countrySelect = document.getElementById('filter-country');
+  if (countrySelect) {
+    const names = [...new Set(window.STUDIES_DATA.map(s => s.country).filter(Boolean))].sort();
+    countrySelect.innerHTML = '<option value="all">All countries of conduct</option>'
+      + names.map(c => {
+          const meta = (window.STUDIES_DATA.find(s => s.country === c) || {}).country_meta;
+          const flag = meta && meta.flag ? meta.flag + ' ' : '';
+          return `<option value="${pwEsc(c)}">${flag}${pwEsc(c)}</option>`;
+        }).join('')
+      + (window.STUDIES_DATA.some(s => !s.country) ? '<option value="__nr">Not recorded</option>' : '');
+  }
+
   const robSelect = document.getElementById('filter-rob');
 
   if (modSelect) modSelect.addEventListener('change', (e) => { filterModality = e.target.value; renderAllViews(); });
   if (compSelect) compSelect.addEventListener('change', (e) => { filterComparator = e.target.value; renderAllViews(); });
   if (surgSelect) surgSelect.addEventListener('change', (e) => { filterSurgery = e.target.value; renderAllViews(); });
+  if (countrySelect) countrySelect.addEventListener('change', (e) => { filterCountry = e.target.value; renderAllViews(); });
 
   // Publication-year range. The filter state (filterYearMin/filterYearMax) already
   // existed and was already applied in getFilteredStudies, but had no control in
@@ -267,6 +292,7 @@ function applyPreset(preset) {
     filterModality = 'all';
     filterComparator = 'all';
     filterSurgery = 'all';
+    filterCountry = 'all';
     filterRob = 'all';
     filterMinN = 20;
     filterYearMin = 1993;
@@ -292,6 +318,7 @@ function applyPreset(preset) {
   if (document.getElementById('filter-comparator')) document.getElementById('filter-comparator').value = filterComparator;
   if (document.getElementById('filter-rob')) document.getElementById('filter-rob').value = filterRob;
   if (document.getElementById('filter-surgery')) document.getElementById('filter-surgery').value = filterSurgery;
+  if (document.getElementById('filter-country')) document.getElementById('filter-country').value = filterCountry;
   if (preset === 'all') {
     filterSearch = '';
     const search = document.getElementById('study-search-input');
@@ -371,6 +398,10 @@ function getFilteredStudies(applyOverrides = true) {
     if (filterModality !== 'all' && s.modality !== filterModality) return false;
     if (filterComparator !== 'all' && s.comparator_short !== filterComparator) return false;
     if (filterSurgery !== 'all' && s.surgery_category !== filterSurgery) return false;
+    if (filterCountry !== 'all') {
+      if (filterCountry === '__nr') { if (s.country) return false; }
+      else if (s.country !== filterCountry) return false;
+    }
     if (filterRob !== 'all') {
       // Filter on the result-specific judgment for the active context, not on a
       // single global study-level label.
@@ -445,19 +476,32 @@ function renderConversionsView() {
 // -- never hardcoded, so a future study addition/removal cannot leave this
 // card stale the way the old hardcoded "5,089 patients / 49 TEAS + 14 EA"
 // figures did (see 06_FINAL_ANALYSIS_V26/06_AUDIT/dashboard_v26_reconciliation.md #26.3).
+// Modality, comparator and participant totals are properties of the TRIALS, so
+// they are counted over unique trials; the report count is stated alongside so
+// the two denominators can never be mistaken for each other. Corrected
+// 2026-09-12: this function previously counted all 70 register rows as studies,
+// and labelled the analysed-participant total "randomized".
 function prismaPopulationSummary() {
-  const studies = window.STUDIES_DATA || [];
-  const n = studies.length;
-  const totalPatients = studies.reduce((sum, s) => sum + ((s.population && s.population.total_n) || 0), 0);
-  const teas = studies.filter(s => s.modality === 'TEAS').length;
-  const ea = studies.filter(s => s.modality === 'EA').length;
-  const sham = studies.filter(s => s.comparator_short === 'Sham').length;
-  const usualCare = studies.filter(s => s.comparator_short === 'Usual Care').length;
+  const reportsList = window.STUDIES_DATA || [];
+  const trials = uniqueTrials(reportsList);
+  const c = reportStudyCounts(reportsList);
+  const n = trials.length;
+  const analysedPatients = trials.reduce((sum, s) => sum + ((s.population && s.population.total_n) || 0), 0);
+  const teas = trials.filter(s => s.modality === 'TEAS').length;
+  const ea = trials.filter(s => s.modality === 'EA').length;
+  const sham = trials.filter(s => s.comparator_short === 'Sham').length;
+  const usualCare = trials.filter(s => s.comparator_short === 'Usual Care').length;
   const other = n - teas - ea;
   const otherComparator = n - sham - usualCare;
   return {
-    n, totalPatients, teas, ea, sham, usualCare,
-    text: `${n} studies • ${totalPatients.toLocaleString()} total randomized patients • ${teas} TEAS / ${ea} EA${other ? ` / ${other} other` : ''} • ${sham} sham-controlled / ${usualCare} usual-care-controlled${otherComparator ? ` / ${otherComparator} other` : ''}.`,
+    n, reports: c.reports, companions: c.companions,
+    totalPatients: analysedPatients, analysedPatients, teas, ea, sham, usualCare,
+    text: `${n} randomized trials from ${c.reports} included reports • `
+        + `${analysedPatients.toLocaleString()} participants analysed across the ${n} trials, `
+        + `counting each trial once • ${teas} TEAS / ${ea} EA${other ? ` / ${other} other` : ''} • `
+        + `${sham} sham-controlled / ${usualCare} usual-care-controlled${otherComparator ? ` / ${otherComparator} other` : ''}. `
+        + 'A review-wide randomized participant total is not reported: most trials state only '
+        + 'their analysed denominators (see Population Characteristics in the Study Explorer).',
   };
 }
 
@@ -778,11 +822,18 @@ function renderKPIs() {
       : `${studyCount} studies`;
   }
 
-  const totalN = filtered.reduce((acc, s) => acc + (s.population ? s.population.total_n : 0), 0);
+  // Participants belong to trials, not to reports: summing all filtered rows
+  // counted the linked Yeh cohort twice. And total_n is the ANALYSED denominator
+  // -- the one the syntheses use -- so it must not be labelled "randomized".
+  const totalN = uniqueTrials(filtered)
+    .reduce((acc, s) => acc + (s.population ? s.population.total_n : 0), 0);
 
   const patientSubEl = document.getElementById('kpi-patient-sub');
   if (patientSubEl) {
-    patientSubEl.innerText = `${totalN.toLocaleString()} randomized surgical patients`;
+    patientSubEl.innerText = `${totalN.toLocaleString()} surgical patients analysed across ${studyCount} trials`;
+    patientSubEl.title = companionReports
+      ? 'Counted once per trial. ' + companionReportNote(filtered)
+      : 'Counted once per trial.';
   }
 
   const effectValEl = document.getElementById('kpi-pooled-md');
@@ -843,25 +894,29 @@ function renderKPIs() {
 // 2. Review Overview
 function renderOverview() {
   const filtered = getFilteredStudies(false);
-  
+  // Specialty, modality and comparator describe the TRIAL, so a companion report
+  // of a trial already present must not add a second tally mark to any of them.
+  const trials = uniqueTrials(filtered);
+
   const surgCounts = {};
-  filtered.forEach(s => {
+  trials.forEach(s => {
     surgCounts[s.surgery_category] = (surgCounts[s.surgery_category] || 0) + 1;
   });
 
   const surgContainer = document.getElementById('overview-surgery-bars');
   if (surgContainer) {
     const heading=surgContainer.closest('.dashboard-card')?.querySelector('h2');
-    if (heading) heading.textContent=`Surgical Specialties Distribution (${filtered.length} Trials)`;
+    // Surgical specialty is a property of the trial, not of the report.
+    if (heading) heading.textContent=`Surgical Specialties Distribution \u2014 ${studiesAndReports(filtered)}`;
     surgContainer.innerHTML = Object.entries(surgCounts)
       .sort((a, b) => b[1] - a[1])
       .map(([cat, cnt]) => {
-        const pct = ((cnt / filtered.length) * 100).toFixed(1);
+        const pct = ((cnt / trials.length) * 100).toFixed(1);
         return `
           <div style="margin-bottom: 0.75rem;">
             <div style="display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 0.2rem;">
               <span><strong>${cat}</strong></span>
-              <span style="color: var(--text-muted);">${cnt} studies (${pct}%)</span>
+              <span style="color: var(--text-muted);">${cnt} trial${cnt === 1 ? '' : 's'} (${pct}%)</span>
             </div>
             <div style="background: rgba(255,255,255,0.06); height: 8px; border-radius: 4px; overflow: hidden;">
               <div style="background: linear-gradient(90deg, #6366f1, #06b6d4); width: ${pct}%; height: 100%;"></div>
@@ -871,10 +926,10 @@ function renderOverview() {
       }).join('') || '<p>No studies match the current filters.</p>';
   }
 
-  const teasCount = filtered.filter(s => s.modality === 'TEAS').length;
-  const eaCount = filtered.filter(s => s.modality === 'EA').length;
-  const shamCount = filtered.filter(s => s.comparator_short === 'Sham').length;
-  const usualCount = filtered.filter(s => s.comparator_short === 'Usual Care').length;
+  const teasCount = trials.filter(s => s.modality === 'TEAS').length;
+  const eaCount = trials.filter(s => s.modality === 'EA').length;
+  const shamCount = trials.filter(s => s.comparator_short === 'Sham').length;
+  const usualCount = trials.filter(s => s.comparator_short === 'Usual Care').length;
 
   const splitContainer = document.getElementById('overview-design-split');
   if (splitContainer) {
@@ -883,12 +938,12 @@ function renderOverview() {
         <div style="background: var(--bg-panel); padding: 1rem; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
           <div style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); font-weight: 700;">Modality Split</div>
           <div style="font-size: 1.25rem; font-weight: 800; color: #818cf8; margin-top: 0.2rem;">TEAS: ${teasCount} <span style="font-size: 0.9rem; color: var(--text-secondary); font-weight: 500;">| EA: ${eaCount}</span></div>
-          <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.3rem;">Non-invasive surface stimulation vs invasive needle electroacupuncture</div>
+          <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.3rem;">Non-invasive surface stimulation vs invasive needle electroacupuncture &mdash; counted over ${trials.length} trial${trials.length === 1 ? '' : 's'}</div>
         </div>
         <div style="background: var(--bg-panel); padding: 1rem; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
           <div style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); font-weight: 700;">Control Design</div>
           <div style="font-size: 1.25rem; font-weight: 800; color: #34d399; margin-top: 0.2rem;">Sham: ${shamCount} <span style="font-size: 0.9rem; color: var(--text-secondary); font-weight: 500;">| Open-label: ${usualCount}</span></div>
-          <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.3rem;">Placebo-controlled double-blind vs usual care standard multimodal analgesia</div>
+          <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.3rem;">Placebo-controlled double-blind vs usual care standard multimodal analgesia &mdash; counted over ${trials.length} trial${trials.length === 1 ? '' : 's'}</div>
         </div>
       </div>
     `;
@@ -1012,6 +1067,56 @@ function inquiryDisposition(s) {
 }
 
 
+// ─── Reports, studies, and which one a denominator belongs to ────────────────
+// PRISMA 2020 keeps reports and studies as separate quantities and so does this
+// review: 70 included reports describe 69 randomised trials, because Yeh 2010
+// and Yeh 2011 are two reports of one lumbar-spine trial (2026-09-11
+// unit-of-analysis amendment; linkage record in 05_study_linkage/cohorts/).
+//
+// window.STUDIES_DATA holds one row per REPORT. Every count taken from it has to
+// declare which unit it is in:
+//   * a property of a trial (specialty, modality, comparator, country, baseline
+//     characteristic, participant count) -> count unique trials;
+//   * a property of the literature (what the search retrieved, what was risk-of-
+//     bias assessed, what the register holds) -> count reports;
+//   * a property of a synthesis (k, N) -> leave the analysis's own denominator
+//     alone. Nothing in this block touches those.
+function isCompanionReport(s) {
+  return Boolean(s && s.duplicate_report_of);
+}
+
+/** One row per randomised trial: companion reports of a trial already present drop out. */
+function uniqueTrials(list) {
+  return (list || []).filter(s => !isCompanionReport(s));
+}
+
+/** {reports, studies, companions} for any filtered subset. */
+function reportStudyCounts(list) {
+  const reports = (list || []).length;
+  const companions = (list || []).filter(isCompanionReport).length;
+  return { reports, studies: reports - companions, companions };
+}
+
+/** "69 studies (70 reports)", or just "69 studies" when the two coincide. */
+function studiesAndReports(list) {
+  const c = reportStudyCounts(list);
+  return c.companions
+    ? `${c.studies} studies (${c.reports} reports)`
+    : `${c.studies} ${c.studies === 1 ? 'study' : 'studies'}`;
+}
+
+/** Sentence explaining a reports/studies gap, or '' when there is none. */
+function companionReportNote(list) {
+  const companions = (list || []).filter(isCompanionReport);
+  if (!companions.length) return '';
+  const pairs = companions
+    .map(s => `${s.duplicate_report_of} / ${s.key}`)
+    .join('; ');
+  return `${companions.length} companion report${companions.length === 1 ? '' : 's'} `
+       + `describe${companions.length === 1 ? 's' : ''} a trial already counted (${pairs}), `
+       + 'so they add reports but not trials.';
+}
+
 // ─── Baseline / participant characteristics ─────────────────────────────────
 // Added 2026-09-10 to answer "who was studied?" alongside "what was studied?".
 // Descriptive only: nothing here feeds an analysis, a RoB 2 judgment or GRADE.
@@ -1041,6 +1146,36 @@ function baselineArms(a, b) {
   return `<span class="arm-pair"><span>${baselineValue(a)}</span><span>${baselineValue(b)}</span></span>`;
 }
 
+/**
+ * Randomised N for the explorer table, kept strictly separate from analysed N.
+ *
+ * Two different quantities can be known, and they are labelled differently
+ * because adding them would be meaningless: the register's randomized_total_n is
+ * the randomised N of the PAIRWISE CONTRAST the review uses, while the source-PDF
+ * extraction's randomised_n is the WHOLE TRIAL's, which is larger whenever the
+ * trial had more than two arms. Where neither is recorded this renders NR, never
+ * the analysed denominator standing in for a randomised one.
+ */
+function randomisedCell(s) {
+  const pop = s.population || {};
+  const pdfRec = (window.PDF_EXTRACTED || {})[s.key] || {};
+  const whole = pdfRec.randomised_n;
+  const bits = [];
+  if (pop.randomized_total_n) {
+    bits.push(`<strong>${pop.randomized_total_n}</strong>`
+      + (pop.randomized_arm1_n ? ` (${pop.randomized_arm1_n} / ${pop.randomized_arm2_n})` : '')
+      + '<br><span class="sd-sub">this contrast</span>');
+  }
+  if (whole && whole.value !== undefined) {
+    const title = `${pdfRec.source_pdf}, p${whole.page}: "${String(whole.quote).replace(/"/g, "'")}"`;
+    bits.push(`${whole.value} <span class="pdf-src" title="${pwEsc(title)}">PDF p${whole.page}</span>`
+      + '<br><span class="sd-sub">whole trial</span>');
+  }
+  return bits.length
+    ? bits.join('<br>')
+    : '<span class="nr-tag" title="No randomised denominator is recorded for this trial in the register or readable from its source PDF. The analysed N is shown in the next column and is not a substitute.">NR</span>';
+}
+
 /** "24/40 (60%)" -> {events:24, total:40}; null when not parseable. */
 function parseFemaleCount(v) {
   if (isNotReported(v)) return null;
@@ -1065,10 +1200,19 @@ function parseLeadingNumber(v) {
  * denominators, and it is labelled as such. Everything else is reported as a
  * range across study means plus a reporting denominator.
  */
-function summarisePopulation(studies) {
+function summarisePopulation(reportsList) {
+  // Baseline characteristics belong to the TRIAL. Counting reports would have
+  // given a 70-row denominator for a 69-trial evidence base and double-counted
+  // the linked Yeh cohort's participants.
+  const studies = uniqueTrials(reportsList);
   const n = studies.length;
-  const out = { n, reported: {}, ranges: {}, female: null, countries: {},
-                anaesthesiaStated: 0, adjunctCount: 0 };
+  const counts = reportStudyCounts(reportsList);
+  const out = { n, reports: counts.reports, companions: counts.companions,
+                reported: {}, ranges: {}, female: null, countries: {},
+                anaesthesiaStated: 0, adjunctCount: 0,
+                analysedTotal: 0, randomisedContrast: 0, randomisedTrial: 0,
+                flags: [] };
+  out.analysedTotal = studies.reduce((a, s) => a + ((s.population && s.population.total_n) || 0), 0);
 
   const spans = {
     age:  ['arm1_age', 'arm2_age'],
@@ -1102,6 +1246,19 @@ function summarisePopulation(studies) {
   });
   out.female = tot > 0 ? { events: fem, total: tot, studies: contributing } : null;
 
+  // Randomised denominators come from two channels that measure different things
+  // and are therefore reported as coverage, never summed into one total: the
+  // register's randomized_total_n is the randomised N of the pairwise contrast
+  // the review uses, while the PDF extractor's randomised_n is the whole trial's,
+  // which is larger for a multi-arm trial.
+  studies.forEach(s => {
+    if (s.population && s.population.randomized_total_n) out.randomisedContrast++;
+    if (((window.PDF_EXTRACTED || {})[s.key] || {}).randomised_n) out.randomisedTrial++;
+  });
+  out.reported.randomised = studies.filter(s =>
+    (s.population && s.population.randomized_total_n)
+    || ((window.PDF_EXTRACTED || {})[s.key] || {}).randomised_n).length;
+
   studies.forEach(s => {
     const pdf = (window.PDF_EXTRACTED || {})[s.key] || {};
     const c = s.country || 'Not reported';
@@ -1114,6 +1271,23 @@ function summarisePopulation(studies) {
     const a = ch.anesthesia || (pdf.anaesthesia && pdf.anaesthesia.value) || null;
     if (a) out.anaesthesiaStated++;
     if (pdf.anaesthesia && pdf.anaesthesia.adjuncts) out.adjunctCount++;
+  });
+
+  // Baseline values that disagree with the publication they were read from, from
+  // the scan in scripts/build_cohort_overlap_scan.py. Surfaced, not corrected:
+  // the register is the locked master, and these fields feed no analysis.
+  const co = window.COHORT_OVERLAP || {};
+  const inScope = new Set(reportsList.map(s => s.key));
+  Object.entries(co.arm_n_conflicts || {}).forEach(([key, f]) => {
+    if (inScope.has(key)) out.flags.push({ kind: 'arm-denominator', study: key, ...f });
+  });
+  (co.cohort_size_disagreements || []).forEach(d => {
+    if (d.studies.some(k => inScope.has(k))) out.flags.push({ kind: 'cohort-size', ...d });
+  });
+  (co.candidates || []).forEach(cand => {
+    if (cand.status === 'flagged_for_review' && cand.studies.some(k => inScope.has(k))) {
+      out.flags.push({ kind: 'possible-shared-cohort', ...cand });
+    }
   });
   return out;
 }
@@ -1139,22 +1313,78 @@ function pdfConflict(studyKey, field) {
   return f && f.conflict ? f.conflict.join(' / ') : null;
 }
 
-function renderPopulationSummary(studies) {
+function renderPopulationSummary(reportsList) {
   const host = document.getElementById('explorer-population-summary');
   if (!host) return;
-  const p = summarisePopulation(studies);
+  const p = summarisePopulation(reportsList);
   if (!p.n) { host.innerHTML = '<h3>Population Characteristics</h3><p>No studies match the current filters.</p>'; return; }
 
   const pct = x => `${(100 * x / p.n).toFixed(0)}%`;
-  const range = r => r ? `${r.lo.toFixed(1)}\u2013${r.hi.toFixed(1)}` : 'not estimable';
-  const countryBits = Object.entries(p.countries).sort((a, b) => b[1] - a[1])
-    .map(([c, k]) => `${pwEsc(c)}: ${k}`).join(' &bull; ');
+  // The unit rides with the number: "not estimable kg/m²" reads as a value.
+  const range = (r, unit) => r
+    ? `${r.lo.toFixed(1)}\u2013${r.hi.toFixed(1)} ${unit}`
+    : 'not estimable \u2014 no trial in this set reports it';
+
+  // Geography: a compact ranked bar list, counted over unique trials. Countries
+  // here are countries of CONDUCT, each verified against the source publication.
+  const countryRows = Object.entries(p.countries).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+  const flagFor = name => {
+    const s = (reportsList || []).find(x => x.country === name && x.country_meta && x.country_meta.flag);
+    return s ? s.country_meta.flag + ' ' : '';
+  };
+  const countryChart = countryRows.map(([c, k]) => `
+    <div class="pop-bar-row">
+      <span class="pop-bar-label">${flagFor(c)}${pwEsc(c)}</span>
+      <span class="pop-bar-track"><i style="width:${(100 * k / p.n).toFixed(1)}%"></i></span>
+      <span class="pop-bar-num">${k} <span style="color:var(--text-muted);">(${pct(k)})</span></span>
+    </div>`).join('');
+
+  const flagHtml = !p.flags.length ? '' : `
+    <details class="pop-flags">
+      <summary><strong>Data-quality flags in this set (${p.flags.length})</strong>
+        <span class="sd-sub"> &mdash; surfaced for manual review, not corrected here</span></summary>
+      ${p.flags.map(f => {
+        if (f.kind === 'arm-denominator') return `
+          <div class="pop-flag">
+            <span class="badge badge-amber">Arm denominator</span>
+            <strong>${pwEsc(f.study)}</strong> &mdash; register <code>${pwEsc(f.field)}</code> =
+            ${f.register}, its source publication says ${f.source_says}.
+            <div class="sd-sub">${pwEsc(f.note)}</div>
+            <div class="sd-sub">Source: <code>${pwEsc(f.source)}</code> &mdash; &ldquo;${pwEsc(f.quote)}&rdquo;</div>
+          </div>`;
+        if (f.kind === 'cohort-size') return `
+          <div class="pop-flag">
+            <span class="badge badge-amber">Cohort size</span>
+            <strong>${f.studies.map(pwEsc).join(' / ')}</strong> &mdash; ${pwEsc(f.summary)}
+            <div class="sd-sub">${pwEsc(f.detail)}</div>
+            <div class="sd-sub">${pwEsc(f.affects)}</div>
+          </div>`;
+        return `
+          <div class="pop-flag">
+            <span class="badge badge-rose">Possible shared cohort</span>
+            <strong>${f.studies.map(pwEsc).join(' / ')}</strong> &mdash; these two reports share
+            ${f.shared.map(pwEsc).join(', ')}.
+            <div class="sd-sub">Analysed N ${f.studies.map(k => `${pwEsc(k)}: ${f.analysed_n[k]}`).join(' vs ')};
+              arms ${f.studies.map(k => `${f.arm_n[k].join('/')}`).join(' vs ')}.
+              ${f.shared_arm_n.length
+                  ? `Shared arm denominator${f.shared_arm_n.length === 1 ? '' : 's'}: ${f.shared_arm_n.join(', ')}.`
+                  : 'No arm denominator is shared, which argues for two separate cohorts.'}</div>
+            <div class="sd-sub">Counted as <strong>two studies</strong> pending source-PDF
+              adjudication. They are <strong>not</strong> merged automatically; if they prove to be
+              one cohort, the study count falls and the linkage record in
+              <code>05_study_linkage/cohorts/</code> gains an entry.</div>
+          </div>`;
+      }).join('')}
+    </details>`;
 
   host.innerHTML = `
     <h3>Population Characteristics
-      <span style="font-weight:500;color:var(--text-muted);font-size:0.8rem;">— who was studied across ${p.n} trial${p.n === 1 ? '' : 's'}</span>
+      <span style="font-weight:500;color:var(--text-muted);font-size:0.8rem;">&mdash; who was studied across ${p.n} randomized trial${p.n === 1 ? '' : 's'}</span>
     </h3>
     <p style="font-size:0.78rem;color:var(--text-muted);margin:0.35rem 0 0.9rem;">
+      Denominators are <strong>unique trials</strong>${p.companions
+        ? `: ${p.reports} reports in this set describe ${p.n} trials, because ${pwEsc(companionReportNote(reportsList)).replace(/\.$/, '')}`
+        : ''}.
       Descriptive only. These are <strong>not</strong> meta-analytic estimates: ranges span individual
       study-arm means, and no unweighted mean of study means is computed.
     </p>
@@ -1162,7 +1392,7 @@ function renderPopulationSummary(studies) {
       <div>
         <span class="pop-label">Age reported</span>
         <span class="pop-value">${p.reported.age}/${p.n}</span>
-        <span class="pop-sub">Study-arm mean age range: ${range(p.ranges.age)} years</span>
+        <span class="pop-sub">Study-arm mean age range: ${range(p.ranges.age, 'years')}</span>
       </div>
       <div>
         <span class="pop-label">Sex reported</span>
@@ -1174,35 +1404,62 @@ function renderPopulationSummary(studies) {
       <div>
         <span class="pop-label">BMI reported</span>
         <span class="pop-value">${p.reported.bmi}/${p.n}</span>
-        <span class="pop-sub">Study-arm mean BMI range: ${range(p.ranges.bmi)} kg/m&sup2;</span>
+        <span class="pop-sub">Study-arm mean BMI range: ${range(p.ranges.bmi, 'kg/m&sup2;')}</span>
       </div>
       <div>
         <span class="pop-label">ASA reported</span>
         <span class="pop-value">${p.reported.asa}/${p.n}</span>
         <span class="pop-sub">Recorded as the trial's stated eligibility class</span>
       </div>
+      <div>
+        <span class="pop-label">Participants analysed</span>
+        <span class="pop-value">${p.analysedTotal.toLocaleString()}</span>
+        <span class="pop-sub">Summed once per trial over the ${p.n} trials &mdash; the denominators the syntheses use</span>
+      </div>
+      <div>
+        <span class="pop-label">Randomised N recorded</span>
+        <span class="pop-value">${p.reported.randomised}/${p.n}</span>
+        <span class="pop-sub">No review-wide randomised total is published: ${p.randomisedContrast}
+          trial${p.randomisedContrast === 1 ? '' : 's'} record the randomised N of the contrast used and
+          ${p.randomisedTrial} record the whole trial's, which are different quantities and not additive</span>
+      </div>
     </div>
     <div class="pop-complete">
-      <strong>Baseline data completeness</strong>
-      <span class="stat-info-btn" title="Reporting denominator varies because not all included trials reported each baseline characteristic. NR means not reported in the source publication; it is never treated as zero.">ⓘ</span>
+      <strong>Baseline reporting completeness</strong>
+      <span class="stat-info-btn" title="Reporting denominators vary because not all included trials reported each baseline characteristic. The denominator is unique randomized trials, not reports. NR means not reported in the source publication; it is never treated as zero, 0%, false or an inferred value.">ⓘ</span>
       <div class="pop-bars">
-        ${[['Age', p.reported.age], ['Sex', p.reported.sex], ['BMI', p.reported.bmi], ['ASA', p.reported.asa]].map(([l, v]) => `
+        ${[['Age', p.reported.age], ['Sex', p.reported.sex], ['BMI', p.reported.bmi],
+           ['ASA', p.reported.asa], ['Randomised N', p.reported.randomised],
+           ['Country of conduct', p.n - (p.countries['Not reported'] || 0)],
+           ['Anaesthesia (as worded)', p.anaesthesiaStated]].map(([l, v]) => `
           <div class="pop-bar-row">
             <span class="pop-bar-label">${l}</span>
             <span class="pop-bar-track"><i style="width:${(100 * v / p.n).toFixed(1)}%"></i></span>
             <span class="pop-bar-num">${v}/${p.n} <span style="color:var(--text-muted);">(${pct(v)})</span></span>
           </div>`).join('')}
       </div>
+    </div>
+    <div class="pop-complete">
+      <strong>Geographic distribution</strong>
+      <span class="stat-info-btn" title="Country of conduct — where the participants were recruited and treated — read from the source publication, not inferred from the lead author's affiliation. Counted over unique randomized trials.">ⓘ</span>
+      <div class="pop-bars">${countryChart}</div>
       <div class="pop-foot">
-        Countries of conduct, each verified against the source publication — ${countryBits}.
-        <br>Anaesthesia is not a varying characteristic here: general anaesthesia is an
+        ${countryRows.filter(([c]) => c !== 'Not reported').length} countr${countryRows.filter(([c]) => c !== 'Not reported').length === 1 ? 'y' : 'ies'} of conduct across ${p.n} trials, each verified against the source publication.
+      </div>
+    </div>
+    <div class="pop-complete">
+      <strong>Anaesthesia</strong>
+      <div class="pop-foot">
+        Not a varying characteristic here: general anaesthesia is an
         <strong>eligibility criterion</strong> for this review, verified at study selection, so all
         ${p.n} trials were conducted under it. ${p.anaesthesiaStated}/${p.n} papers state the
         technique explicitly in their own words${p.adjunctCount
           ? `, and ${p.adjunctCount} also report a regional or neuraxial adjunct, which the protocol permits`
-          : ''}.
+          : ''}. The normalised category is used only for aggregation; each trial's own wording is
+        preserved in its study record.
       </div>
     </div>
+    ${flagHtml}
   `;
 }
 
@@ -1211,11 +1468,15 @@ function renderStudyExplorer() {
   const filtered = getFilteredStudies(false);
   const summary=document.getElementById('explorer-surgery-summary');
   if (summary) {
+    // Specialty is a trial property, so companion reports do not add a tally.
+    const trials=uniqueTrials(filtered);
     const counts={};
-    filtered.forEach(s=>{const category=s.surgery_category || 'Not recorded';counts[category]=(counts[category]||0)+1;});
-    summary.innerHTML=`<h3>Surgical specialties (${filtered.length} studies)</h3><div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:0.6rem;">`+
+    trials.forEach(s=>{const category=s.surgery_category || 'Not recorded';counts[category]=(counts[category]||0)+1;});
+    const note=companionReportNote(filtered);
+    summary.innerHTML=`<h3>Surgical specialties <span style="font-weight:500;color:var(--text-muted);font-size:0.8rem;">&mdash; ${studiesAndReports(filtered)}</span></h3><div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:0.6rem;">`+
       Object.entries(counts).sort((a,b)=>b[1]-a[1]).map(([name,n])=>`<span class="badge badge-indigo">${pwEsc(name)}: ${n}</span>`).join('')+
-      (filtered.length?'':'<p>No studies match the current filters.</p>')+'</div>';
+      (filtered.length?'':'<p>No studies match the current filters.</p>')+'</div>'+
+      (note?`<p class="sd-sub" style="margin-top:0.55rem;">The table below lists one row per <strong>report</strong>. ${pwEsc(note)}</p>`:'');
   }
   renderPopulationSummary(filtered);
 
@@ -1236,26 +1497,33 @@ function renderStudyExplorer() {
       ? `<span class="kpi-badge ${disp.cls === 'rose' ? 'badge-rose' : 'badge-emerald'}" title="${disp.title}">${disp.label}</span>`
       : '';
 
+    // A companion report is one row in this table but not a separate trial. It is
+    // marked here so no reader counts the table's rows as the number of trials.
+    const companionBadge = s.duplicate_report_of
+      ? `<span class="kpi-badge badge-amber" title="Companion report of ${pwEsc(s.duplicate_report_of)} \u2014 same randomised cohort, counted once. It does not add to the trial count and does not contribute to any synthesis independently.">Companion report</span>`
+      : (s.companion_report
+          ? `<span class="kpi-badge badge-emerald" title="This record is the trial record for the study also reported as ${pwEsc(s.companion_report)}.">Trial record</span>`
+          : '');
+
     return `
       <tr style="cursor: pointer;" onclick="openStudyDrawer('${s.id}')">
         <td style="font-weight: 700; color: var(--text-accent);">
-          ${idx + 1}. ${s.key} ${inquiryBadge}
+          ${idx + 1}. ${s.key} ${inquiryBadge} ${companionBadge}
         </td>
         <td>${s.year}</td>
         <td>${s.country ? pwEsc(s.country) : '<span class="nr-tag" title="Country not recorded in the structured register">NR</span>'}</td>
         <td>${s.surgery_category}<br><small style="color:var(--text-muted)">${pwEsc(s.surgery_procedure || 'Procedure not recorded')}</small></td>
         <td><span style="background: rgba(99,102,241,0.15); color: #818cf8; padding: 0.2rem 0.5rem; border-radius: 4px; font-weight: 600; font-size: 0.75rem;">${s.modality}</span></td>
         <td>${s.comparator_short}</td>
-        <td><strong>${s.population.total_n}</strong> (${s.population.arm1_n} / ${s.population.arm2_n})${
-          s.population.randomized_total_n && s.population.randomized_total_n !== s.population.total_n
-            ? `<br><small style="color:var(--text-muted)">randomised ${s.population.randomized_total_n}</small>` : ''}</td>
+        <td style="font-size:0.78rem;">${randomisedCell(s)}</td>
+        <td><strong>${s.population.total_n}</strong> (${s.population.arm1_n} / ${s.population.arm2_n})</td>
         <td style="font-size:0.78rem;">${baselineArms(s.population.arm1_age, s.population.arm2_age)}</td>
         <td style="font-size:0.78rem;">${baselineArms(s.population.arm1_female, s.population.arm2_female)}</td>
         <td>${robBadge}</td>
         <td><button class="btn-preset" style="padding: 0.2rem 0.6rem; font-size: 0.75rem;" onclick="event.stopPropagation(); openStudyDrawer('${s.id}')">Details</button></td>
       </tr>
     `;
-  }).join('') || '<tr><td colspan="11">No studies match the current filters.</td></tr>';
+  }).join('') || '<tr><td colspan="12">No studies match the current filters.</td></tr>';
 
   const ctxEl = document.getElementById('explorer-rob-context');
   if (ctxEl) {
@@ -1267,7 +1535,9 @@ function renderStudyExplorer() {
         const st = resultRob(s, explorerRobOutcome).state;
         return st !== 'not-assessed' && st !== 'pending';
       }).length;
-      ctxEl.innerHTML = `for: ${label} &bull; ${assessed}/${filtered.length} assessed`;
+      // RoB 2 is assessed per REPORT in the source workbook, so the denominator
+      // here is reports, which is what this table lists.
+      ctxEl.innerHTML = `for: ${label} &bull; ${assessed}/${filtered.length} reports assessed`;
     }
   }
 }
@@ -2820,6 +3090,47 @@ function openStudyDrawer(id) {
   const content = document.getElementById('study-modal-content');
   if (!modal || !content) return;
 
+  // A companion report and its trial record are two rows describing one cohort.
+  // Saying so at the top of the drawer is the only place a reader looking at a
+  // single record can learn it; the badge in the table is easy to miss.
+  const linkHtml = (() => {
+    const other = s.duplicate_report_of || s.companion_report;
+    if (!other) return '';
+    const isCompanion = Boolean(s.duplicate_report_of);
+    return `
+      <div style="background: rgba(245, 158, 11, 0.1); border-left: 3px solid #f59e0b; padding: 1rem; border-radius: 4px; font-size: 0.8rem; line-height: 1.6; margin-bottom: 1.5rem;">
+        <h4 style="font-size: 0.82rem; text-transform: uppercase; font-weight: 800; color: #fbbf24; margin-bottom: 0.3rem;">
+          ${isCompanion ? 'Companion report &mdash; not a separate trial' : 'Trial record for a linked pair of reports'}</h4>
+        <p>${isCompanion
+            ? `This report describes the same randomised cohort as <strong>${pwEsc(other)}</strong>, which is retained as the trial record. It is counted as an included <em>report</em> but not as an additional <em>trial</em>, its participants are not added to the review's participant total a second time, and it may not contribute arm-level data to any synthesis independently.`
+            : `This record is the trial record for the study also reported as <strong>${pwEsc(other)}</strong>. The two reports count as one trial.`}</p>
+        ${s.unit_of_analysis_note ? `<p style="margin-top:0.4rem;">${pwEsc(s.unit_of_analysis_note)}</p>` : ''}
+        <p style="margin-top:0.4rem;" class="sd-sub">Review team decision 2026-09-11. Evidence and the linkage record:
+          <code>05_study_linkage/cohorts/yeh_lumbar_spinal_surgery.md</code>;
+          amendment: <code>00_protocol/amendments/2026-09-11_unit_of_analysis_companion_reports.md</code>.</p>
+      </div>`;
+  })();
+
+  // Baseline denominators that disagree with the publication they were read from.
+  // Shown, never silently corrected: the register is the locked master and these
+  // fields feed no effect estimate, RoB 2 judgment or GRADE rating.
+  const conflictHtml = (() => {
+    const co = window.COHORT_OVERLAP || {};
+    const f = (co.arm_n_conflicts || {})[s.key];
+    const sizes = (co.cohort_size_disagreements || []).filter(d => d.studies.includes(s.key));
+    if (!f && !sizes.length) return '';
+    return `
+      <div style="background: rgba(244, 63, 94, 0.08); border-left: 3px solid #fb7185; padding: 1rem; border-radius: 4px; font-size: 0.8rem; line-height: 1.6; margin-bottom: 1.5rem;">
+        <h4 style="font-size: 0.82rem; text-transform: uppercase; font-weight: 800; color: #fda4af; margin-bottom: 0.3rem;">Open data-quality flag &mdash; source verification needed</h4>
+        ${f ? `<p>The register records <code>${pwEsc(f.field)}</code> = <strong>${f.register}</strong>; the source publication states <strong>${f.source_says}</strong>.</p>
+        <p style="margin-top:0.4rem;">${pwEsc(f.note)}</p>
+        <p style="margin-top:0.4rem;" class="sd-sub">Source: <code>${pwEsc(f.source)}</code> &mdash; &ldquo;${pwEsc(f.quote)}&rdquo;</p>` : ''}
+        ${sizes.map(d => `<p style="margin-top:0.4rem;">${pwEsc(d.detail)}</p>
+          <p class="sd-sub">${pwEsc(d.affects)}</p>`).join('')}
+        <p style="margin-top:0.4rem;" class="sd-sub">Flagged, not corrected. The arm denominators below are shown exactly as the locked register holds them.</p>
+      </div>`;
+  })();
+
   const inqHtml = s.author_inquiry && s.author_inquiry.has_inquiry ? `
     <div style="background: rgba(245, 158, 11, 0.1); border-left: 3px solid #f59e0b; padding: 1rem; border-radius: 4px; font-size: 0.8rem; line-height: 1.6; margin-bottom: 1.5rem;">
       <h4 style="font-size: 0.82rem; text-transform: uppercase; font-weight: 800; color: #fbbf24; margin-bottom: 0.3rem;">Recorded Author Clarification Request</h4>
@@ -2844,6 +3155,8 @@ function openStudyDrawer(id) {
       ${s.doi ? `<p style="font-size: 0.78rem; color: var(--text-accent); margin-top: 0.2rem;">DOI: <a href="https://doi.org/${s.doi}" target="_blank" style="color: #818cf8;">${s.doi}</a></p>` : ''}
     </div>
 
+    ${linkHtml}
+    ${conflictHtml}
     ${inqHtml}
 
     ${(() => {
@@ -3149,6 +3462,7 @@ Object.defineProperties(window, {
   filterModality:   {get: () => filterModality,   set: v => { filterModality = v; },   configurable: true},
   filterComparator: {get: () => filterComparator, set: v => { filterComparator = v; }, configurable: true},
   filterSurgery:    {get: () => filterSurgery,    set: v => { filterSurgery = v; },    configurable: true},
+  filterCountry:    {get: () => filterCountry,    set: v => { filterCountry = v; },    configurable: true},
   filterRob:        {get: () => filterRob,        set: v => { filterRob = v; },        configurable: true},
   filterSearch:     {get: () => filterSearch,     set: v => { filterSearch = v; },     configurable: true}
 });
@@ -3278,8 +3592,11 @@ function renderPrimaryPathway() {
 
   const flow = document.getElementById('pathway-flow');
   if (flow) flow.innerHTML =
-    step(c.included_rcts, 'RCTs included in the systematic review',
-         'Every one screened, extracted, reconciled and risk-of-bias assessed.', '#818cf8') +
+    // Reports, not trials: the buckets below reconcile over the 70 included
+    // reports, so the funnel's first step has to be in the same unit.
+    step(c.included_reports, 'reports included in the systematic review',
+         `Describing ${c.included_studies} randomized trials. Every report screened, extracted, `
+         + 'reconciled and risk-of-bias assessed.', '#818cf8') +
     arrow +
     step(c.reporting_relevant_24h_info, 'report potentially relevant postoperative opioid information at ~24 h',
          'Carry a 24-hour opioid candidate row in the locked analysis dataset.', '#38bdf8') +
@@ -3511,7 +3828,7 @@ function renderPathwayTable() {
       .filter(r => r.covers_publications > 1);
     const extra = famRows.reduce((a, r) => a + r.covers_publications - 1, 0);
     cap.innerHTML =
-      `${rows.length} rows covering all ${P.counts.included_rcts} included RCTs.` +
+      `${rows.length} rows covering all ${P.counts.included_reports} included reports (${P.counts.included_studies} trials).` +
       (extra ? ` The row count is lower than the study count because ${famRows.length} publication-family ` +
                `unit${famRows.length === 1 ? '' : 's'} cover${famRows.length === 1 ? 's' : ''} ${extra + famRows.length} reports ` +
                `between them: the v26 lock treats overlapping publications as one study unit, so they are ` +
@@ -3824,9 +4141,16 @@ function renderV33() {
   const V = window.V33_DATA;
   if (!V || !document.getElementById('v33-map')) return;
 
+  // V.canonical_studies is the row count of Study_Master, which holds one row per
+  // REPORT. The contribution map is built from those rows, so 70 is the right
+  // denominator here -- it just has to be labelled reports, with the trial count
+  // stated alongside. Both come from the register via reportStudyCounts().
+  const unit = reportStudyCounts(window.STUDIES_DATA || []);
+
   const sub = document.getElementById('v33-subtitle');
   if (sub) sub.innerHTML =
-    `All <strong>${V.canonical_studies}</strong> included RCTs, mapped across
+    `All <strong>${V.canonical_studies}</strong> included reports, describing
+     <strong>${unit.studies}</strong> randomised trials, mapped across
      <strong>${V.contribution_map.groups.length}</strong> outcome families from
      <strong>${V.outcome_rows}</strong> source-normalised outcome rows in ${pwEsc(V.master)}.
      A trial may contribute to several families. Being included in the review is not the same as
@@ -3846,7 +4170,7 @@ function renderV33() {
           <span style="font-size:0.82rem;font-weight:${primary ? 700 : 600};color:${primary ? '#6ee7b7' : '#e2e8f0'};">
             ${pwEsc(g.label)}</span>
           <span style="font-size:0.78rem;color:var(--text-muted);white-space:nowrap;">
-            <strong style="color:${col};">${g.n_studies}</strong> / ${total} studies</span>
+            <strong style="color:${col};">${g.n_studies}</strong> / ${total} reports</span>
         </div>
         <div style="height:7px;background:rgba(255,255,255,0.07);border-radius:4px;overflow:hidden;margin-top:0.2rem;">
           <div style="height:100%;width:${pct}%;background:${col};opacity:0.85;"></div>
@@ -3863,10 +4187,10 @@ function renderV33() {
     const prim = V.contribution_map.groups.find(g => g.id === 'primary_opioid_24h');
     const graphOnly = V.contribution_map.graph_only_or_unreported || [];
     head.innerHTML =
-      `<strong>${V.canonical_studies} randomised trials are included in this review.
+      `<strong>${unit.studies} randomised trials, reported in ${V.canonical_studies} publications, are included in this review.
        ${prim.n_studies} contribute to the primary 0–24 hour opioid meta-analysis.</strong>
        That gap is a reporting problem, not an exclusion: the other
-       ${V.canonical_studies - prim.n_studies} trials were screened and extracted, and most contribute to other outcome families. Each trial has a RoB 2 assessment on file, but additional results need their own assessments. These trials do not
+       ${V.canonical_studies - prim.n_studies} reports were screened and extracted, and most contribute to other outcome families. Each trial has a RoB 2 assessment on file, but additional results need their own assessments. These trials do not
        report a cumulative 0–24 hour opioid dose in a form that can be pooled.
        ${graphOnly.length ? `${graphOnly.length} trial${graphOnly.length > 1 ? 's' : ''}
        (${graphOnly.map(pwEsc).join(', ')}) report every outcome only as a graph or not at all,
@@ -4918,7 +5242,7 @@ function renderV34() {
   const sub = document.getElementById('v34-subtitle');
   if (sub) sub.innerHTML =
     `Analyses fitted in StataNow 19.5 from <strong>${pwEsc(V.master)}</strong>
-     (${V.canonical_studies} canonical studies, ${V.outcome_rows} outcome rows).
+     (${V.canonical_studies} canonical report rows, ${V.outcome_rows} outcome rows).
      ${V.new_model_count} models are new in v34 and ${V.reproduced_model_count} were
      independently reproduced from the reconciliation's own datasets.
      Every model is a single modality against a single comparator type.`;

@@ -504,8 +504,15 @@ def t_yeh_not_double_counted():
         if len({re.sub(r"\s+", " ", x) for x in labels}) > 1:
             probs.append(f"{path.relative_to(ROOT)} lists Yeh 2010 and Yeh 2011 as separate rows")
     # (c) not presented as two independent trials in live UI prose
+    # The guard list is the set of ways the page is allowed to mention both
+    # records in one breath. Extended 2026-09-12: since the unit-of-analysis
+    # amendment the page states the linkage in PRISMA 2020's own terms -- two
+    # reports of one study, counted once -- which is a stronger statement than
+    # the negations this list originally accepted, not a weaker one.
     guards = ("not ", "never", "forbid", "withdrawn", "hard hold", "excluding",
-              "overlap", "superseded", "must not", "one study unit", "cohort-overlap")
+              "overlap", "superseded", "must not", "one study unit", "cohort-overlap",
+              "two reports of one", "reports of one", "companion report", "count once",
+              "counted once", "one trial", "linked cohort")
     for m in re.finditer(r"Yeh\s*2010[^<]{0,60}Yeh\s*20(10 ATHM|11)", LIVE_UI):
         window = LIVE_UI[max(0, m.start() - 400):m.end() + 400].lower()
         if not any(g in window for g in guards):
@@ -1499,8 +1506,24 @@ def t_ea_comparator_not_mislabelled_sham():
         if "sham" in r["comparator"].lower():
             probs.append(f"{r['study_unit']} comparator {r['comparator']!r} looks sham-controlled; "
                          f"re-verify the EA-vs-usual-care premise")
-    for bad in re.finditer(r"EA vs (?:Control/Sham|Sham/Control|Sham)", LIVE_UI):
+    # The bare form "EA vs Sham" is NOT banned: it is the correct stratum label
+    # for the individual EA trials that really were sham-controlled (Wong 2006
+    # among them), and the register carries it. Only the composite forms, which
+    # can only be describing the strict primary stratum, are wrong.
+    #
+    # 2026-09-12: a stray control character in this pattern had been silently
+    # disabling the third alternative. Removing it made the check fire on Wong
+    # 2006's own correct label, which showed the alternative should never have
+    # been here; what it was reaching for is asserted directly below instead.
+    for bad in re.finditer(r"EA vs (?:Control/Sham|Sham/Control)", LIVE_UI):
         probs.append(f"live UI mislabels the EA stratum: {bad.group(0)!r}")
+    # What actually matters: none of the three strict-primary EA studies may be
+    # recorded as sham-controlled in the register the dashboard renders from.
+    for s in STUDIES:
+        if s["key"] in ("El-Rakshy 2009", "Seevaunnamtum 2016", "Yang 2024") \
+           and "sham" in (s.get("comparator_short", "") + s.get("stratum", "")).lower():
+            probs.append(f"{s['key']} is recorded as sham-controlled in data.js, contradicting "
+                         f"the EA-vs-usual-care premise of the strict primary stratum")
     if "EA vs Usual Care" not in HTML and "EA vs Usual Care" not in APP:
         probs.append("expected corrected label 'EA vs Usual Care' not found")
     check("EA strict stratum is labelled 'vs Usual Care', not 'vs Sham/Control'",
@@ -3954,6 +3977,311 @@ def t_computed_not_reported_is_complete_and_unrated():
           "certainty rating", not probs, "\n".join(probs))
 
 
+
+# ═══════════════════════════════════════════════════════════════════════════
+# REPORTS vs STUDIES vs RESULTS — unit discipline (2026-09-12)
+# ═══════════════════════════════════════════════════════════════════════════
+# The register holds one row per included REPORT. Dashboard copy and dashboard
+# code both used to call that 70 studies, 70 trials and 70 RCTs interchangeably,
+# and summed its population field into a "randomized patient" total that
+# double-counted the one linked cohort. These checks hold the three units apart.
+
+COHORT_OVERLAP_JS = DASH / "cohort_overlap.js"
+
+
+def _cohort_overlap() -> dict:
+    raw = COHORT_OVERLAP_JS.read_text(encoding="utf-8")
+    return json.JSONDecoder().raw_decode(raw.split("window.COHORT_OVERLAP = ", 1)[1])[0]
+
+
+def t_cohort_overlap_scan_is_current():
+    """
+    GENERATED. dashboard/cohort_overlap.js is the output of
+    scripts/build_cohort_overlap_scan.py. If it is hand-edited, or the register
+    changes without the scan being re-run, the report-to-study reconciliation on
+    screen stops following from the data it claims to summarise.
+    """
+    import subprocess
+    r = subprocess.run([sys.executable, str(ROOT / "scripts" / "build_cohort_overlap_scan.py"),
+                        "--check"], capture_output=True, text=True, cwd=ROOT)
+    check("t_cohort_overlap_scan_is_current", r.returncode == 0,
+          (r.stdout + r.stderr).strip())
+
+
+def t_report_and_study_counts_follow_from_the_linkage():
+    """
+    DERIVED. 70 reports and 69 studies are not two typed-in numbers: the gap is
+    exactly the set of records carrying duplicate_report_of. Asserting that here
+    means a future second linked cohort cannot leave "69" stale on the page.
+    """
+    companions = [s["key"] for s in STUDIES if s.get("duplicate_report_of")]
+    reports, studies = len(STUDIES), len(STUDIES) - len(companions)
+    co = _cohort_overlap()
+    probs = []
+    if co["reports"] != reports or co["studies"] != studies:
+        probs.append(f"scan says {co['reports']}/{co['studies']}, register gives {reports}/{studies}")
+    if (reports, studies) != (70, 69):
+        probs.append(f"register now gives {reports} reports / {studies} studies; every "
+                     f"hardcoded 70/69 on the page needs re-deriving")
+    # The scan must re-find every declared link, so the detection rule cannot
+    # silently stop working while still reporting a clean result.
+    declared = {frozenset((d["study_record"], d["companion_report"])) for d in co["declared_links"]}
+    found = {frozenset(c["studies"]) for c in co["candidates"] if c["status"] == "confirmed"}
+    if declared != found:
+        probs.append(f"declared links {declared} not all re-found by the scan ({found})")
+    check("t_report_and_study_counts_follow_from_the_linkage", not probs, "; ".join(probs))
+
+
+def t_trial_level_tallies_exclude_companion_reports():
+    """
+    STRUCTURAL. Specialty, modality, comparator, country and every baseline
+    characteristic are properties of a TRIAL. The renderers that tally them must
+    go through uniqueTrials(), or a companion report adds a second tally mark for
+    a cohort already counted.
+    """
+    probs = []
+    if "function uniqueTrials(" not in APP:
+        probs.append("uniqueTrials() helper is gone")
+    # renderOverview, renderStudyExplorer and summarisePopulation each tally
+    # trial properties and must derive a trials list first.
+    for fn in ("function renderOverview(", "function renderStudyExplorer(",
+               "function summarisePopulation("):
+        if fn not in APP:
+            probs.append(f"{fn.strip('function (')} missing")
+            continue
+        body = APP[APP.index(fn): APP.index(fn) + 2600]
+        if "uniqueTrials(" not in body:
+            probs.append(f"{fn.strip('function (')} tallies trial properties without uniqueTrials()")
+    # prismaPopulationSummary must not tally modality/comparator over raw rows.
+    start = APP.index("function prismaPopulationSummary(")
+    body = APP[start: APP.index("\n}", start)]
+    if "uniqueTrials(" not in body:
+        probs.append("prismaPopulationSummary counts modality/comparator over reports")
+    check("t_trial_level_tallies_exclude_companion_reports", not probs, "; ".join(probs))
+
+
+def t_participant_totals_count_each_trial_once():
+    """
+    DERIVED. Participants belong to a trial. Summing population.total_n over all
+    70 rows counts the linked Yeh cohort twice; the published total must be the
+    69-trial sum, and the figure it replaced must not still appear as a live claim.
+    """
+    companions = {s["key"] for s in STUDIES if s.get("duplicate_report_of")}
+    over_reports = sum(s["population"]["total_n"] for s in STUDIES)
+    over_studies = sum(s["population"]["total_n"] for s in STUDIES if s["key"] not in companions)
+    co = _cohort_overlap()
+    probs = []
+    if co["participants"]["analysed_across_reports"] != over_reports:
+        probs.append("scan's report-level total disagrees with the register")
+    if co["participants"]["analysed_across_studies"] != over_studies:
+        probs.append("scan's trial-level total disagrees with the register")
+    # The live figure on the PRISMA card is the trial-level one.
+    if f"{over_studies:,}" not in HTML:
+        probs.append(f"the trial-level participant total {over_studies:,} appears nowhere in index.html")
+    # The report-level sum may only appear where it is explicitly described as
+    # the superseded 70-report figure.
+    live = strip_withdrawal_prose(HTML)
+    for m in re.finditer(re.escape(f"{over_reports:,}"), live):
+        window = live[max(0, m.start() - 320): m.end() + 320]
+        if not re.search(r"70-report|across reports|earlier figure|previously|superseded|double-count",
+                         window, re.I):
+            probs.append(f"the 70-report sum {over_reports:,} appears as a live claim without "
+                         f"saying it is the report-level figure")
+            break
+    check("t_participant_totals_count_each_trial_once", not probs, "; ".join(probs))
+
+
+def t_analysed_total_is_not_labelled_randomised():
+    """
+    ABSENCE. population.total_n is the ANALYSED denominator -- the one the
+    syntheses use. It was rendered as "randomized surgical patients" in the KPI
+    strip and as "total randomized patients" on the PRISMA card. A randomised
+    total is a quantity this review cannot produce, so the word randomized must
+    not be the label attached to one of these sums.
+
+    The test is positional, which is what makes it specific: the LABEL is the text
+    immediately following the interpolated number. "69 randomized trials" in the
+    same sentence is fine -- that is a trial count, correctly described; what is
+    banned is "<analysed sum> randomized ... patients".
+    """
+    SUM = re.compile(r"\$\{\s*(?:totalN|analysedPatients|analysedTotal|over_studies)\b"
+                     r"[^}]*\}")
+    probs = []
+    for fn in ("function renderKPIs(", "function prismaPopulationSummary(",
+               "function renderPopulationSummary("):
+        if fn not in APP:
+            probs.append(f"{fn.strip('function (')} is gone")
+            continue
+        start = APP.index(fn)
+        body = APP[start: start + 4000]
+        for m in SUM.finditer(body):
+            label = body[m.end(): m.end() + 90]
+            if re.search(r"randomi[sz]ed", label, re.I):
+                probs.append(f"{fn.strip('function (')} labels the sum {m.group(0)!r} as "
+                             f"{label.strip()[:50]!r}")
+    check("t_analysed_total_is_not_labelled_randomised", not probs, "; ".join(probs))
+
+
+def t_no_review_wide_randomised_total_is_published():
+    """
+    DERIVED. A randomised participant total would need a randomised denominator
+    from every trial. The register records one for a handful of contrasts and the
+    PDF extraction records whole-trial figures for a few more -- two different
+    quantities, neither covering the review. The scan must therefore refuse to
+    publish a total, and the page must say so rather than leaving the reader to
+    assume the analysed figure is a randomised one.
+    """
+    co = _cohort_overlap()["participants"]
+    probs = []
+    if co["randomised_total_publishable"] is not False:
+        probs.append("the scan claims a review-wide randomised total is publishable")
+    if not co["randomised_total_reason"]:
+        probs.append("no reason recorded for withholding a randomised total")
+    if "randomized participant total is not reported" not in HTML:
+        probs.append("index.html does not state that no review-wide randomized total is reported")
+    if "randomisedCell(" not in APP:
+        probs.append("the explorer has no per-trial randomised cell, so NR cannot be distinguished "
+                     "from an analysed denominator standing in for it")
+    check("t_no_review_wide_randomised_total_is_published", not probs, "; ".join(probs))
+
+
+def t_possible_shared_cohorts_are_flagged_not_merged():
+    """
+    STRUCTURAL. The scan flags report pairs that may describe one cohort. A flag
+    is for a human; the dashboard must not act on it. So every flagged pair still
+    counts as two studies, and the flag has to be visible rather than sitting in
+    a file nobody reads.
+    """
+    co = _cohort_overlap()
+    flagged = [c for c in co["candidates"] if c["status"] == "flagged_for_review"]
+    probs = []
+    declared = {s["key"] for s in STUDIES if s.get("duplicate_report_of")}
+    for c in flagged:
+        for k in c["studies"]:
+            if k in declared:
+                probs.append(f"{k} is flagged for review AND already merged away -- the scan and "
+                             f"the register disagree about whether this is settled")
+    if flagged and "possible-shared-cohort" not in APP:
+        probs.append("flagged candidates are never rendered, so a reader cannot see them")
+    if flagged and "pop-flags" not in (DASH / "styles.css").read_text(encoding="utf-8"):
+        probs.append("the flag panel has no styles")
+    check("t_possible_shared_cohorts_are_flagged_not_merged", not probs,
+          f"{len(flagged)} flagged: " + "; ".join(probs))
+
+
+def t_baseline_conflicts_are_surfaced_not_corrected():
+    """
+    STRUCTURAL. Where a register baseline value disagrees with the publication it
+    was read from, the brief is to document it, not to edit the locked dataset.
+    So each recorded conflict must still be present in the register exactly as
+    the scan describes it, and must be rendered where the value is shown.
+    """
+    co = _cohort_overlap()
+    by_key = {s["key"]: s for s in STUDIES}
+    probs = []
+    for key, f in co["arm_n_conflicts"].items():
+        rec = by_key.get(key)
+        if not rec:
+            probs.append(f"{key}: conflict recorded for a study not in the register")
+            continue
+        field = f["field"].split(".")[-1]
+        actual = (rec.get("population") or {}).get(field)
+        if actual != f["register"]:
+            probs.append(f"{key}.{field} is now {actual!r}, but the conflict record says "
+                         f"{f['register']!r} -- either the register was edited (it must not be) "
+                         f"or the flag is stale and must be withdrawn with its evidence")
+        if f["register"] == f["source_says"]:
+            probs.append(f"{key}: recorded as a conflict but the two values agree")
+        if not (ROOT / f["source"]).exists():
+            probs.append(f"{key}: source file {f['source']} does not exist")
+        elif f["quote"].split()[0] not in (ROOT / f["source"]).read_text(
+                encoding="utf-8", errors="replace"):
+            probs.append(f"{key}: quoted evidence is not in {f['source']}")
+    if co["arm_n_conflicts"] and "Open data-quality flag" not in APP:
+        probs.append("conflicts are never rendered in the study drawer")
+    check("t_baseline_conflicts_are_surfaced_not_corrected", not probs, "; ".join(probs))
+
+
+def t_baseline_denominators_are_unique_trials():
+    """
+    STRUCTURAL. "Age reported in 52/69" is a statement about trials. Rendering it
+    over 70 rows inflates the denominator and, for the linked cohort, counts one
+    trial's reporting twice. summarisePopulation must therefore reduce to trials
+    before it counts anything, and must expose the report count separately so the
+    display can explain the gap.
+    """
+    start = APP.index("function summarisePopulation(")
+    body = APP[start: APP.index("\n}\n", start)]
+    probs = []
+    if "const studies = uniqueTrials(" not in body:
+        probs.append("summarisePopulation does not reduce to unique trials")
+    if "reportStudyCounts(" not in body:
+        probs.append("summarisePopulation does not carry the report count alongside")
+    # Missing data must stay missing. A denominator check is worthless if the
+    # numerator was padded with zeros.
+    render = APP[APP.index("function renderPopulationSummary("):]
+    render = render[: render.index("\n}\n")]
+    if "|| 0" in render.replace("|| 0)", "XX"):
+        probs.append("renderPopulationSummary substitutes 0 for a missing value somewhere")
+    if "isNotReported" not in APP or "nr-tag" not in APP:
+        probs.append("the not-reported path is gone")
+    check("t_baseline_denominators_are_unique_trials", not probs, "; ".join(probs))
+
+
+def t_no_live_copy_calls_seventy_reports_seventy_trials():
+    """
+    ABSENCE. The phrases that started this pass: "70 RCTs", "70 trials",
+    "70 studies", "Study Explorer (k=70)". Each is a report count wearing a trial
+    label. They are permitted only inside prose that explicitly marks itself as
+    superseded, which strip_withdrawal_prose removes before this check runs.
+    """
+    UI_FILES = {
+        "index.html": HTML,
+        "app.js": APP,
+        "translations.js": TRANS,
+        "ui_translations.js": (DASH / "ui_translations.js").read_text(encoding="utf-8"),
+        "prisma_checklist.js": (DASH / "prisma_checklist.js").read_text(encoding="utf-8"),
+    }
+    bad = re.compile(r"\b70\s+(?:RCTs?|randomi[sz]ed\s+controlled\s+trials?|trials?|studies|"
+                     r"unique\s+(?:trials?|studies))\b|k\s*=\s*70", re.I)
+    probs = []
+    for name, text in UI_FILES.items():
+        live = strip_withdrawal_prose(text) if name == "index.html" else text
+        for m in bad.finditer(live):
+            window = live[max(0, m.start() - 420): m.end() + 220]
+            # Allowed only where the sentence itself is about the reports/studies
+            # distinction, or is labelled as the superseded wording.
+            if re.search(r"previously|superseded|no longer|describing 69|reports? describing|"
+                         r"rather than the 70|70 <em>reports</em>|quoted where the unit is reports",
+                         window, re.I):
+                continue
+            probs.append(f"{name}: {live[m.start():m.end()]!r} in {window[380:520]!r}")
+    check("t_no_live_copy_calls_seventy_reports_seventy_trials", not probs,
+          " || ".join(probs[:4]))
+
+
+def t_reconciliation_status_is_not_self_contradictory():
+    """
+    ABSENCE. The PRISMA panel said the modality, comparator and patient totals
+    "remain under reconciliation" in one paragraph and "(reconciled)" in the next,
+    about the same three quantities. Whichever is true, both cannot be live.
+    """
+    live = strip_withdrawal_prose(HTML)
+    probs = []
+    for m in re.finditer(r"under reconciliation", live, re.I):
+        # Look BACKWARD only, and not far: a withdrawal marker has to INTRODUCE
+        # the phrase it withdraws. Scanning forward as well let a live claim pass
+        # merely because a later sentence happened to contain "previously".
+        lead = live[max(0, m.start() - 240): m.start()]
+        if not re.search(r"previously|superseded|no longer|formerly|used to", lead, re.I):
+            probs.append(f"a live 'under reconciliation' claim remains, introduced by "
+                         f"{lead[-170:]!r}")
+    if "reconciled 2026-09-12" not in HTML.lower():
+        probs.append("the reconciled state carries no date, so a reader cannot tell which "
+                     "statement is current")
+    check("t_reconciliation_status_is_not_self_contradictory", not probs, "; ".join(probs[:2]))
+
+
 def main() -> int:
     print("=" * 78)
     print(f"{BOLD}  DASHBOARD <-> v26 LOCK CONSISTENCY VALIDATOR{RESET}")
@@ -4037,6 +4365,18 @@ def main() -> int:
           t_country_is_verified_country_of_conduct,
           t_companion_publications_cannot_double_count,
           t_quarantine_registry_is_honest]),
+        ("reports vs studies vs results — unit discipline (2026-09-12)",
+         [t_cohort_overlap_scan_is_current,
+          t_report_and_study_counts_follow_from_the_linkage,
+          t_trial_level_tallies_exclude_companion_reports,
+          t_participant_totals_count_each_trial_once,
+          t_analysed_total_is_not_labelled_randomised,
+          t_no_review_wide_randomised_total_is_published,
+          t_possible_shared_cohorts_are_flagged_not_merged,
+          t_baseline_conflicts_are_surfaced_not_corrected,
+          t_baseline_denominators_are_unique_trials,
+          t_no_live_copy_calls_seventy_reports_seventy_trials,
+          t_reconciliation_status_is_not_self_contradictory]),
         ("interpretation layer (manuscript / reviewer overlay)",
          [t_interpretation_layer_cannot_carry_evidence,
           t_interpretation_bound_to_current_evidence,

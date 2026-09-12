@@ -306,6 +306,19 @@ def main() -> int:
               file=sys.stderr)
         return 1
 
+    # The report-to-study reconciliation, the duplicate-cohort scan and the
+    # arm-denominator flags are generated from the register too. Same reasoning:
+    # a stale scan would let the page report "69 studies from 70 reports" while
+    # the register said something else.
+    scan = subprocess.run([sys.executable, "scripts/build_cohort_overlap_scan.py", "--check"],
+                          cwd=ROOT, capture_output=True, text=True)
+    if scan.returncode != 0:
+        print(scan.stdout.strip() or scan.stderr.strip(), file=sys.stderr)
+        print("\nBUILD REFUSED: dashboard/cohort_overlap.js no longer matches the register.\n"
+              "Run  python3 scripts/build_cohort_overlap_scan.py  to regenerate it.",
+              file=sys.stderr)
+        return 1
+
     commit = git_commit(args.commit)
     meta = build_metadata(commit)
 

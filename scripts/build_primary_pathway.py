@@ -313,6 +313,12 @@ payload = {
     "statistical_source": "StataNow 19.5 BE — 06_FINAL_ANALYSIS_V26 + 07_TIERED_V33",
     "prospero": "CRD420251090635",
 
+    # The buckets below reconcile over REPORTS -- every one of the 70 included
+    # reports lands in exactly one bucket, which is what makes the reconciliation
+    # check meaningful. The trial count is carried alongside so the dashboard can
+    # label each figure with its own unit instead of calling 70 reports 70 RCTs.
+    "review_included_reports": len(STUDIES),
+    "review_included_studies": len(STUDIES) - sum(1 for s in STUDIES if s.get("duplicate_report_of")),
     "review_included_rcts": len(STUDIES),
     "candidate_rows": len(CAND),
     "publications_with_24h_info": len(covered_ids),
@@ -326,6 +332,8 @@ payload = {
 
     "counts": {
         "included_rcts": len(STUDIES),
+        "included_reports": len(STUDIES),
+        "included_studies": len(STUDIES) - sum(1 for s in STUDIES if s.get("duplicate_report_of")),
         "reporting_relevant_24h_info": len(covered_ids),
         "candidate_rows": len(CAND),
         "strict": len(strict),
@@ -401,7 +409,7 @@ OUT.write_text(header + "window.PRIMARY_PATHWAY = " +
 
 c = payload["counts"]
 print(f"wrote {OUT.relative_to(ROOT)}")
-print(f"  included RCTs .............. {c['included_rcts']}")
+print(f"  included reports ........... {c['included_reports']} (describing {c['included_studies']} trials)")
 print(f"  report relevant 24-h info .. {c['reporting_relevant_24h_info']}")
 print(f"    strict ................... {c['strict']}  (N={c['strict_n']})")
 print(f"    conditional .............. {c['conditional']}  (N={c['conditional_n']})")
