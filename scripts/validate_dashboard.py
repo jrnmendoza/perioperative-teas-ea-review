@@ -4192,52 +4192,103 @@ def t_possible_shared_cohorts_are_flagged_not_merged():
 
 def t_baseline_conflicts_are_surfaced_not_corrected():
     """
-    STRUCTURAL. Where a register value disagrees with the publication it is
-    attributed to, the brief is to document it, not to edit the locked dataset.
+    STRUCTURAL. Two register rows once carried one paper's arm data beside the
+    other paper's citation, because the two locked sheets named different
+    publications for the same key. That was resolved on 2026-09-12 by adopting the
+    convention 15 of 16 files already used.
 
-    The Yeh pair's defect is an ATTRIBUTION conflict: each row carries one
-    paper's arm-level data and the other paper's citation. The arm denominators
-    themselves trace to Outcome_Data_AF_LOCK and are not in question, so this
-    check holds the finding to its own terms -- it must keep naming both records,
-    must still be true of the register as it stands, and must be rendered where
-    the affected values are shown.
+    What this holds now:
+      * an OPEN attribution conflict must still describe the register (if the rows
+        stop being crossed it is resolved, and must be withdrawn, not left stale);
+      * a RESOLVED one must keep its record, name the script that applied it, and
+        keep the superseded readings on file so they are not re-raised;
+      * the resolution must actually hold in the data -- each row's sex denominator
+        and its own arm denominator must now agree.
     """
     co = _cohort_overlap()
     by_key = {s["key"]: s for s in STUDIES}
     probs = []
+
+    def crossed(studies: list[str]) -> bool:
+        for k in studies:
+            pop = (by_key.get(k) or {}).get("population") or {}
+            others = [by_key[o]["population"]["arm1_n"] for o in studies
+                      if o != k and o in by_key]
+            m = re.match(r"\s*\d+\s*/\s*(\d+)", str(pop.get("arm1_female") or ""))
+            if m and int(m.group(1)) in others:
+                return True
+        return False
+
     for f in co.get("attribution_conflicts", []):
         for k in f["studies"]:
             if k not in by_key:
                 probs.append(f"{k}: attribution conflict recorded for a study not in the register")
-        if len(f.get("papers", [])) != len(f["studies"]):
-            probs.append(f"{f['studies']}: {len(f.get('papers', []))} publications described for "
-                         f"{len(f['studies'])} records -- the pairing cannot be checked")
         if not f.get("evidence"):
             probs.append(f"{f['studies']}: attribution conflict with no evidence recorded")
         if not f.get("decision_needed"):
             probs.append(f"{f['studies']}: no decision recorded as needed, so the flag has no exit")
-        # The finding must still describe the register. If someone resolves it by
-        # moving the citations, the rows stop being crossed and this must be
-        # withdrawn deliberately rather than left standing and stale.
-        crossed = False
-        for k in f["studies"]:
-            pop = (by_key.get(k) or {}).get("population") or {}
-            others = [by_key[o]["population"]["arm1_n"] for o in f["studies"]
-                      if o != k and o in by_key]
-            fem = str(pop.get("arm1_female") or "")
-            m = re.match(r"\s*\d+\s*/\s*(\d+)", fem)
-            if m and int(m.group(1)) in others:
-                crossed = True
-        if not crossed:
+        if not crossed(f["studies"]):
             probs.append(f"{f['studies']}: the records are no longer crossed -- the conflict looks "
                          f"resolved, so withdraw the flag with its evidence rather than leaving it")
-    if co.get("attribution_conflicts") and "Record attribution" not in APP:
-        probs.append("attribution conflicts are never rendered in the population summary")
-    if co.get("attribution_conflicts") and "attribution_conflicts" not in APP:
-        probs.append("the study drawer does not read the attribution conflicts")
 
-    # The denominator screen is a screen: it may not be silently emptied, and a
-    # row it reports must actually be in the register.
+    for f in co.get("resolved_attribution", []):
+        for field in ("verdict", "why", "applied_by", "record", "not_touched"):
+            if not f.get(field):
+                probs.append(f"{f['studies']}: resolution records no {field}")
+        rec = f.get("record")
+        if rec and not (ROOT / rec).exists():
+            probs.append(f"{f['studies']}: decision record {rec} does not exist")
+        applied = f.get("applied_by")
+        if applied and not (ROOT / applied).exists():
+            probs.append(f"{f['studies']}: {applied} does not exist, so the correction cannot "
+                         f"be re-checked or reversed")
+        if not f.get("superseded_findings"):
+            probs.append(f"{f['studies']}: the readings this replaced are not recorded, so they "
+                         f"can be re-raised as if new")
+        # The resolution has to be true of the data, not just asserted.
+        if crossed(f["studies"]):
+            probs.append(f"{f['studies']}: recorded as resolved, but the rows are still crossed "
+                         f"-- a sex denominator still matches the other record's arm size")
+        for k in f["studies"]:
+            pop = (by_key.get(k) or {}).get("population") or {}
+            m = re.match(r"\s*\d+\s*/\s*(\d+)", str(pop.get("arm1_female") or ""))
+            if m and int(m.group(1)) != pop.get("arm1_n"):
+                probs.append(f"{k}: sex denominator {m.group(1)} still disagrees with arm1_n "
+                             f"{pop.get('arm1_n')} after the identity correction")
+
+    if co.get("attribution_conflicts") and "Record attribution" not in APP:
+        probs.append("open attribution conflicts are never rendered")
+    if co.get("resolved_attribution") and "Identity resolved" not in APP:
+        probs.append("the resolution is never rendered, so the answer disappears from the page")
+
+    # The cross-sheet screen must stay wired up, and must still describe the lock.
+    import csv as _csv
+    sheets = ROOT / "06_FINAL_ANALYSIS_V26" / "01_DATA" / "authoritative_sheets"
+    lock_rows = co.get("locked_sheet_disagreements", [])
+    if lock_rows and "locked-sheets-disagree" not in APP:
+        probs.append("locked-sheet disagreements are computed but never rendered")
+    if any(d.get("exchanged_with") for d in lock_rows):
+        probs.append("an identity split is open again: the two locked sheets have exchanged a "
+                     "study's figures between keys")
+    af = sheets / "Outcome_Data_AF_LOCK.csv"
+    if lock_rows and af.exists():
+        analysed = {}
+        for r in _csv.DictReader(af.open(encoding="utf-8-sig")):
+            try:
+                analysed.setdefault(r["Canonicalstudy"], set()).add(
+                    (int(float(r["Analyzednintervention"])), int(float(r["Analyzedncomparator"]))))
+            except (ValueError, TypeError, KeyError):
+                pass
+        for d in lock_rows:
+            got = sorted(list(x) for x in analysed.get(d["study"], set()))
+            if got != d["af_lock_analysed_arms"]:
+                probs.append(f"{d['study']}: screen reports AF_LOCK arms "
+                             f"{d['af_lock_analysed_arms']}, sheet holds {got} -- the lock "
+                             f"changed and the screen was not re-run")
+            if tuple(d["study_master_summary_arms"]) in analysed.get(d["study"], set()):
+                probs.append(f"{d['study']}: reported as a disagreement but the two sheets "
+                             f"now agree -- withdraw it rather than leaving it standing")
+
     for d in co.get("denominator_mismatches", []):
         pop = (by_key.get(d["study"]) or {}).get("population") or {}
         held = pop.get(d["arm"] + "_female")
@@ -4248,6 +4299,34 @@ def t_baseline_conflicts_are_surfaced_not_corrected():
             probs.append(f"{d['study']} {d['arm']}: screen reports analysed n={d['analysed_n']}, "
                          f"register holds {pop.get(d['arm'] + '_n')}")
     check("t_baseline_conflicts_are_surfaced_not_corrected", not probs, "; ".join(probs[:4]))
+
+
+def t_yeh_identity_is_the_adopted_convention():
+    """
+    DERIVED. The 2026-09-12 identity decision must hold in all three places it was
+    applied -- the v34 workbook's Study_Master sheet, its exported CSV, and the
+    register -- and the arm denominators must NOT have moved with it.
+
+    scripts/apply_yeh_identity_correction.py --check is the authority; running it
+    here means the decision cannot silently come undone in one artefact.
+    """
+    import subprocess
+    r = subprocess.run([sys.executable, str(ROOT / "scripts" / "apply_yeh_identity_correction.py"),
+                        "--check"], capture_output=True, text=True, cwd=ROOT)
+    probs = []
+    if r.returncode != 0:
+        probs.append((r.stdout + r.stderr).strip()[:400])
+    # The denominators are the half the decision did not touch; they still have to
+    # trace to Outcome_Data_AF_LOCK, which t_population_denominators asserts for
+    # every study. Here, just pin the two rows the correction ran over.
+    expected = {"Yeh 2010": (33, 30), "Yeh 2011": (30, 30)}
+    for s in STUDIES:
+        if s["key"] in expected:
+            got = (s["population"]["arm1_n"], s["population"]["arm2_n"])
+            if got != expected[s["key"]]:
+                probs.append(f"{s['key']}: arms are {got}, expected {expected[s['key']]} -- the "
+                             f"identity correction must never move a denominator")
+    check("t_yeh_identity_is_the_adopted_convention", not probs, "; ".join(probs))
 
 
 def t_baseline_denominators_are_unique_trials():
@@ -4422,6 +4501,7 @@ def main() -> int:
           t_no_review_wide_randomised_total_is_published,
           t_possible_shared_cohorts_are_flagged_not_merged,
           t_baseline_conflicts_are_surfaced_not_corrected,
+          t_yeh_identity_is_the_adopted_convention,
           t_baseline_denominators_are_unique_trials,
           t_no_live_copy_calls_seventy_reports_seventy_trials,
           t_reconciliation_status_is_not_self_contradictory]),

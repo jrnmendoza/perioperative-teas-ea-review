@@ -9,7 +9,7 @@ window.COHORT_OVERLAP = {
     {
       "study_record": "Yeh 2010",
       "companion_report": "Yeh 2011",
-      "note": "Same trial as Yeh 2010. Both papers report one three-arm randomised study of lumbar spinal surgery by the same author team (Yeh, Chung, Chen, Chen): Altern Ther Health Med 2010;16(6):10-18 states “Ninety-nine patients undergoing lumbar spinal surgery were randomly assigned to one of three groups”, and Int J Nurs Stud 2011;48(6):703-709 reports the same cohort, with the sham arm's figures identical between the two papers. Review team decision 2026-09-11: COUNT ONCE. Yeh 2010 (the later, larger report, n=63) is retained as the trial record; this record is its companion publication and must not contribute independently to any synthesis.",
+      "note": "Same trial as Yeh 2010. This record is the Int J Nurs Stud 2011;48(6):703-709 report (30 per arm); Yeh 2010 is the Altern Ther Health Med 2010;16(6):10-18 report of the same three-arm cohort by the same author team. Review team decision 2026-09-11: COUNT ONCE, with Yeh 2010 retained as the trial record. This record is its companion publication and must not contribute independently to any synthesis. Identity re-assigned 2026-09-12 so that this key names the same publication here as it does in Outcome_Data_AF_LOCK.",
       "linkage_record": "05_study_linkage/cohorts/yeh_lumbar_spinal_surgery.md"
     }
   ],
@@ -94,54 +94,31 @@ window.COHORT_OVERLAP = {
         30
       ],
       "citations": {
-        "Yeh 2010": "Yeh ML, et al. *Int J Nurs Stud*. 2011;48(6):703-709. DOI: 10.1016/j.ijnurstu.2010.10.009. PMID: 21084087",
-        "Yeh 2011": "Yeh ML, et al. *Altern Ther Health Med*. 2010;16(6):10-18. PMID: 21280458"
+        "Yeh 2010": "Yeh ML, et al. *Altern Ther Health Med*. 2010;16(6):10-18. PMID: 21280458",
+        "Yeh 2011": "Yeh ML, et al. *Int J Nurs Stud*. 2011;48(6):703-709. DOI: 10.1016/j.ijnurstu.2010.10.009. PMID: 21084087"
       },
       "procedure": "Patients undergoing surgery for nontraumatic lumbar spine injury/disorders"
     }
   ],
-  "attribution_conflicts": [
+  "attribution_conflicts": [],
+  "resolved_attribution": [
     {
       "studies": [
         "Yeh 2010",
         "Yeh 2011"
       ],
-      "summary": "Each row carries one paper's arm-level data and the other paper's citation.",
-      "papers": [
-        {
-          "label": "Altern Ther Health Med 2010;16(6):10-18",
-          "pdf": "015_PainATHM-2.pdf",
-          "pmid": "21280458",
-          "authors": "Yeh, Chung, Chen K-M, Tsou M-Y, Chen H-H (five authors, includes Tsou)",
-          "setting": "orthopedic departments of a 4000-bed medical center in northern Taiwan",
-          "arms": "EG1 33 / EG2 30 / CG 31",
-          "female": "EG1 22/33 (66.7%), EG2 21/30 (70.0%), CG 15/31 (48.4%)",
-          "cohort_statement": "Ninety-nine patients undergoing lumbar spinal surgery were randomly assigned to one of three groups"
-        },
-        {
-          "label": "Int J Nurs Stud 2011;48(6):703-709",
-          "pdf": "covidence_828_full_article.pdf",
-          "pmid": "21084087",
-          "doi": "10.1016/j.ijnurstu.2010.10.009",
-          "authors": "Yeh, Chung, Chen K-M, Chen H-H (four authors, no Tsou)",
-          "setting": "3000-bed medical center in northern Taiwan",
-          "arms": "AES 30 / Sham 30 / Control 30",
-          "female": "AES 20/30 (66.7%), Sham 21/30 (70.0%), Control 15/30 (50.0%)",
-          "cohort_statement": "Assessed for eligibility (n=99) ... Meet inclusion criteria (n=90) ... Randomized 30 / 30 / 30"
-        }
-      ],
-      "evidence": [
-        "Register row Yeh 2010 holds arm denominators 33 / 30 and cites Int J Nurs Stud 2011 (DOI 10.1016/j.ijnurstu.2010.10.009, PMID 21084087). 33 / 30 are the Altern Ther Health Med figures; Int J Nurs Stud reports 30 in every arm.",
-        "Register row Yeh 2011 holds arm denominators 30 / 30 and cites Altern Ther Health Med 2010 (PMID 21280458). 30 / 30 are the Int J Nurs Stud figures; Altern Ther Health Med reports EG1 = 33.",
-        "The same inversion shows inside each row without opening either PDF: Yeh 2010 records arm1_n = 33 beside a female count of 20/30, and Yeh 2011 records arm1_n = 30 beside a female count of 22/33. Each female fraction is internally consistent with the OTHER row's arm denominator.",
-        "The arm denominators, not the citations, are the values that trace to the lock: Outcome_Data_AF_LOCK holds analysed 33/30 and 33/31 under Yeh 2010, and randomised and analysed 30/30 under Yeh 2011.",
-        "The original extraction records agree with the lock and with the publication years: yeh_2010_spinal_aes_full_data_extraction.md is headed “Yeh et al. 2010 ... Alternative Therapies in Health and Medicine 2010;16(6):10-18” from 015_PainATHM-2.pdf, and yeh_2011_covidence_828_full_data_extraction.md is headed “Yeh et al. 2011 (Study #828) ... International Journal of Nursing Studies 2011;48:703-709”.",
-        "99_audit/consensus_audit_master_log.md line 127 labels Covidence #828 — the Int J Nurs Stud paper — as “Yeh 2010”, which is the likely origin of the inverted citation and is why it propagated into dashboard/data.js."
-      ],
-      "affects": "Bibliographic attribution, the source-PDF pointer, the country-of-conduct evidence sentence, and one female count per row. No effect estimate, risk-of-bias judgement or GRADE rating reads any of these, and neither report contributes arm-level data to any synthesis.",
-      "not_affected": "The arm denominators themselves. They match the locked workbook and each matches a real paper; nothing here suggests the lock is wrong.",
-      "decision_needed": "Two ways to make the rows self-consistent, and they are not equivalent. (a) Move the citations, so each row keeps the arm data it has and gains the matching paper — the register keys then also match the publication years, and the locked workbook is untouched. (b) Move the arm data, which would mean re-cutting Outcome_Data_AF_LOCK. Option (a) leaves the lock alone and is the smaller change, but it contradicts the audit log, so the review team decides.",
-      "superseded_finding": "A first pass on 2026-09-12 recorded this as transposed arm denominators and named the arm Ns as the defective field. That reading was wrong: the arm Ns trace to the lock and to real papers. Recorded here so the earlier wording is not mistaken for a separate, still-open issue."
+      "resolved": "2026-09-12",
+      "verdict": "Yeh 2010 = Altern Ther Health Med 2010;16(6):10-18 (Covidence 823); Yeh 2011 = Int J Nurs Stud 2011;48(6):703-709 (Covidence 828).",
+      "why": "Two locked sheets disagreed about which key named which paper. Counted by each file's own numbers, 15 files already used this convention — Outcome_Data_AF_LOCK, every Stata input, all five v34_reconciliation extracts, the mirror of the locked workbook's Outcome_Data sheet and the 07_TIERED_V33 working set. One file, Study_Master, used the other, on the strength of an Identity correction annotation that had been propagated nowhere.",
+      "applied_by": "scripts/apply_yeh_identity_correction.py",
+      "audited_by": "scripts/audit_yeh_identity_convention.py",
+      "record": "05_study_linkage/cohorts/yeh_lumbar_spinal_surgery.md",
+      "not_touched": "No arm denominator, mean, SD, effect estimate, RoB 2 judgement or GRADE rating. Both records stay on DUPLICATE-OVERLAP HOLD (include_strict = include_sensitivity = 0 on every row), so no synthesis reads either, and the study count of 69 is unchanged.",
+      "superseded_findings": [
+        "First reading: transposed arm denominators, naming arm1_n as the defective field.",
+        "Second reading: inverted citation, naming the arm denominators as the reliable half.",
+        "Both were partial. The lock disagreed with itself, so no single dashboard field was the wrong one."
+      ]
     }
   ],
   "denominator_mismatches": [
@@ -166,16 +143,6 @@ window.COHORT_OVERLAP = {
       "explained_by_randomised": false
     },
     {
-      "study": "Yeh 2010",
-      "arm": "arm1",
-      "arm_name": "EA Group",
-      "female": "20/30 (66.7%)",
-      "female_denominator": 30,
-      "analysed_n": 33,
-      "randomised_n": null,
-      "explained_by_randomised": false
-    },
-    {
       "study": "Lee 2011",
       "arm": "arm1",
       "arm_name": "TEAS Group",
@@ -193,16 +160,6 @@ window.COHORT_OVERLAP = {
       "female_denominator": 20,
       "analysed_n": 12,
       "randomised_n": 12,
-      "explained_by_randomised": false
-    },
-    {
-      "study": "Yeh 2011",
-      "arm": "arm1",
-      "arm_name": "EA Group",
-      "female": "22/33 (66.7%)",
-      "female_denominator": 33,
-      "analysed_n": 30,
-      "randomised_n": 30,
       "explained_by_randomised": false
     },
     {
@@ -254,6 +211,84 @@ window.COHORT_OVERLAP = {
       "analysed_n": 79,
       "randomised_n": 80,
       "explained_by_randomised": false
+    }
+  ],
+  "locked_sheet_disagreements": [
+    {
+      "study": "Jin 2023",
+      "study_master_summary_arms": [
+        53,
+        53
+      ],
+      "af_lock_analysed_arms": [
+        [
+          53,
+          52
+        ]
+      ],
+      "exchanged_with": [],
+      "kind": "arm_figures_differ"
+    },
+    {
+      "study": "Lu 2021",
+      "study_master_summary_arms": [
+        190,
+        198
+      ],
+      "af_lock_analysed_arms": [
+        [
+          190,
+          188
+        ],
+        [
+          198,
+          188
+        ]
+      ],
+      "exchanged_with": [],
+      "kind": "arm_figures_differ"
+    },
+    {
+      "study": "Wang 2024",
+      "study_master_summary_arms": [
+        68,
+        70
+      ],
+      "af_lock_analysed_arms": [
+        [
+          33,
+          35
+        ],
+        [
+          35,
+          35
+        ]
+      ],
+      "exchanged_with": [],
+      "kind": "arm_figures_differ"
+    },
+    {
+      "study": "Zhu 2022",
+      "study_master_summary_arms": [
+        101,
+        98
+      ],
+      "af_lock_analysed_arms": [
+        [
+          98,
+          101
+        ],
+        [
+          100,
+          101
+        ],
+        [
+          101,
+          101
+        ]
+      ],
+      "exchanged_with": [],
+      "kind": "arm_figures_differ"
     }
   ],
   "cohort_size_disagreements": [

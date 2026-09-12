@@ -1281,9 +1281,14 @@ function summarisePopulation(reportsList) {
   (co.attribution_conflicts || []).forEach(f => {
     if (f.studies.some(k => inScope.has(k))) out.flags.push({ kind: 'attribution', ...f });
   });
+  (co.resolved_attribution || []).forEach(f => {
+    if (f.studies.some(k => inScope.has(k))) out.resolved.push({ kind: 'attribution', ...f });
+  });
   const mism = (co.denominator_mismatches || []).filter(d => inScope.has(d.study)
                                                             && !d.explained_by_randomised);
   if (mism.length) out.flags.push({ kind: 'denominator-mismatch', rows: mism });
+  const lockRows = (co.locked_sheet_disagreements || []).filter(d => inScope.has(d.study));
+  if (lockRows.length) out.flags.push({ kind: 'locked-sheets-disagree', rows: lockRows });
   (co.cohort_size_disagreements || []).forEach(d => {
     if (d.studies.some(k => inScope.has(k))) out.flags.push({ kind: 'cohort-size', ...d });
   });
@@ -1355,6 +1360,21 @@ function renderPopulationSummary(reportsList) {
       <summary><strong>Duplicate-cohort questions resolved (${p.resolved.length})</strong>
         <span class="sd-sub"> &mdash; read against the source publications and settled</span></summary>
       ${p.resolved.map(c => {
+        if (c.kind === 'attribution') return `
+        <div class="pop-flag">
+          <span class="badge badge-emerald">Identity resolved</span>
+          <strong>${c.studies.map(pwEsc).join(' / ')}</strong> &mdash; ${pwEsc(c.verdict)}
+          <div class="sd-sub">${pwEsc(c.why)}</div>
+          <div class="sd-sub">Applied ${pwEsc(c.resolved)} by <code>${pwEsc(c.applied_by)}</code>,
+            on the count from <code>${pwEsc(c.audited_by)}</code>. Record:
+            <code>${pwEsc(c.record)}</code>.</div>
+          <div class="sd-sub"><strong>Not touched:</strong> ${pwEsc(c.not_touched)}</div>
+          ${(c.superseded_findings || []).length
+            ? `<div class="sd-sub"><em>Earlier readings, recorded so they are not mistaken for
+                 open issues:</em></div>
+               <ul class="pop-evidence">${c.superseded_findings.map(s => `<li>${pwEsc(s)}</li>`).join('')}</ul>`
+            : ''}
+        </div>`;
         const a = c.adjudication || {};
         return `
         <div class="pop-flag">
@@ -1391,6 +1411,23 @@ function renderPopulationSummary(reportsList) {
             <div class="sd-sub"><strong>Decision needed:</strong> ${pwEsc(f.decision_needed)}</div>
             ${f.superseded_finding
               ? `<div class="sd-sub"><em>Correction:</em> ${pwEsc(f.superseded_finding)}</div>` : ''}
+          </div>`;
+        if (f.kind === 'locked-sheets-disagree') return `
+          <div class="pop-flag">
+            <span class="badge badge-rose">Locked sheets disagree</span>
+            ${f.rows.length} stud${f.rows.length === 1 ? 'y is' : 'ies are'} described with
+            different arm sizes by the two locked sheets: <code>Study_Master</code>'s result
+            summary and <code>Outcome_Data_AF_LOCK</code>'s analysed arms.
+            <div class="sd-sub">The dashboard cannot resolve this &mdash; it reads both sheets.
+              Where the figures are <strong>exchanged</strong> between two keys, the sheets
+              disagree about which publication a key names; where they merely differ, it is
+              usually arm order or a multi-cohort aggregation. Neither is corrected here.</div>
+            <ul class="pop-evidence">${f.rows.map(d => `<li><strong>${pwEsc(d.study)}</strong>
+              &mdash; <code>Study_Master</code> summarises arms of ${d.study_master_summary_arms.join(' / ')},
+              <code>Outcome_Data_AF_LOCK</code> records ${d.af_lock_analysed_arms.map(a => a.join(' / ')).join(' and ')}.
+              ${d.exchanged_with.length
+                  ? `<strong>Exchanged with ${d.exchanged_with.map(pwEsc).join(', ')}</strong> &mdash; an identity split.`
+                  : 'Figures differ; not an exchange.'}</li>`).join('')}</ul>
           </div>`;
         if (f.kind === 'denominator-mismatch') return `
           <div class="pop-flag">
@@ -3170,8 +3207,23 @@ function openStudyDrawer(id) {
   const conflictHtml = (() => {
     const co = window.COHORT_OVERLAP || {};
     const attr = (co.attribution_conflicts || []).filter(f => f.studies.includes(s.key));
+    const done = (co.resolved_attribution || []).filter(f => f.studies.includes(s.key));
     const sizes = (co.cohort_size_disagreements || []).filter(d => d.studies.includes(s.key));
-    if (!attr.length && !sizes.length) return '';
+    if (!attr.length && !sizes.length && !done.length) return '';
+    if (!attr.length && done.length) {
+      // Resolved, and still worth saying on the record itself: a reader who knew
+      // this pair was disputed should be able to see how it was settled.
+      return `
+      <div style="background: rgba(16, 185, 129, 0.07); border-left: 3px solid #34d399; padding: 1rem; border-radius: 4px; font-size: 0.8rem; line-height: 1.6; margin-bottom: 1.5rem;">
+        <h4 style="font-size: 0.82rem; text-transform: uppercase; font-weight: 800; color: #6ee7b7; margin-bottom: 0.3rem;">Identity resolved &mdash; ${pwEsc(done[0].resolved)}</h4>
+        <p>${pwEsc(done[0].verdict)}</p>
+        <p style="margin-top:0.4rem;" class="sd-sub">${pwEsc(done[0].why)}</p>
+        <p class="sd-sub"><strong>Not touched:</strong> ${pwEsc(done[0].not_touched)}</p>
+        ${sizes.map(d => `<p style="margin-top:0.4rem;">${pwEsc(d.detail)}</p>
+          <p class="sd-sub">${pwEsc(d.affects)}</p>`).join('')}
+        <p class="sd-sub">Record: <code>${pwEsc(done[0].record)}</code>.</p>
+      </div>`;
+    }
     return `
       <div style="background: rgba(244, 63, 94, 0.08); border-left: 3px solid #fb7185; padding: 1rem; border-radius: 4px; font-size: 0.8rem; line-height: 1.6; margin-bottom: 1.5rem;">
         <h4 style="font-size: 0.82rem; text-transform: uppercase; font-weight: 800; color: #fda4af; margin-bottom: 0.3rem;">Open data-quality flag &mdash; review-team decision needed</h4>
