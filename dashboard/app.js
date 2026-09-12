@@ -1278,9 +1278,12 @@ function summarisePopulation(reportsList) {
   // the register is the locked master, and these fields feed no analysis.
   const co = window.COHORT_OVERLAP || {};
   const inScope = new Set(reportsList.map(s => s.key));
-  Object.entries(co.arm_n_conflicts || {}).forEach(([key, f]) => {
-    if (inScope.has(key)) out.flags.push({ kind: 'arm-denominator', study: key, ...f });
+  (co.attribution_conflicts || []).forEach(f => {
+    if (f.studies.some(k => inScope.has(k))) out.flags.push({ kind: 'attribution', ...f });
   });
+  const mism = (co.denominator_mismatches || []).filter(d => inScope.has(d.study)
+                                                            && !d.explained_by_randomised);
+  if (mism.length) out.flags.push({ kind: 'denominator-mismatch', rows: mism });
   (co.cohort_size_disagreements || []).forEach(d => {
     if (d.studies.some(k => inScope.has(k))) out.flags.push({ kind: 'cohort-size', ...d });
   });
@@ -1373,13 +1376,33 @@ function renderPopulationSummary(reportsList) {
       <summary><strong>Data-quality flags in this set (${p.flags.length})</strong>
         <span class="sd-sub"> &mdash; surfaced for manual review, not corrected here</span></summary>
       ${p.flags.map(f => {
-        if (f.kind === 'arm-denominator') return `
+        if (f.kind === 'attribution') return `
           <div class="pop-flag">
-            <span class="badge badge-amber">Arm denominator</span>
-            <strong>${pwEsc(f.study)}</strong> &mdash; register <code>${pwEsc(f.field)}</code> =
-            ${f.register}, its source publication says ${f.source_says}.
-            <div class="sd-sub">${pwEsc(f.note)}</div>
-            <div class="sd-sub">Source: <code>${pwEsc(f.source)}</code> &mdash; &ldquo;${pwEsc(f.quote)}&rdquo;</div>
+            <span class="badge badge-rose">Record attribution</span>
+            <strong>${f.studies.map(pwEsc).join(' / ')}</strong> &mdash; ${pwEsc(f.summary)}
+            <div class="sd-sub">The two publications, each read in full:</div>
+            <ul class="pop-evidence">${(f.papers || []).map(pp => `<li><strong>${pwEsc(pp.label)}</strong>
+              (${pwEsc(pp.pdf)}${pp.pmid ? ', PMID ' + pwEsc(pp.pmid) : ''}${pp.doi ? ', DOI ' + pwEsc(pp.doi) : ''}) &mdash;
+              ${pwEsc(pp.authors)}; ${pwEsc(pp.setting)}; arms ${pwEsc(pp.arms)}; female ${pwEsc(pp.female)}.</li>`).join('')}</ul>
+            <div class="sd-sub">Why this is the reading:</div>
+            <ul class="pop-evidence">${(f.evidence || []).map(e => `<li>${pwEsc(e)}</li>`).join('')}</ul>
+            <div class="sd-sub"><strong>Affects:</strong> ${pwEsc(f.affects)}</div>
+            <div class="sd-sub"><strong>Not affected:</strong> ${pwEsc(f.not_affected)}</div>
+            <div class="sd-sub"><strong>Decision needed:</strong> ${pwEsc(f.decision_needed)}</div>
+            ${f.superseded_finding
+              ? `<div class="sd-sub"><em>Correction:</em> ${pwEsc(f.superseded_finding)}</div>` : ''}
+          </div>`;
+        if (f.kind === 'denominator-mismatch') return `
+          <div class="pop-flag">
+            <span class="badge badge-amber">Baseline denominator screen</span>
+            ${f.rows.length} baseline sex count${f.rows.length === 1 ? ' is' : 's are'} reported
+            out of a number that is neither that arm's analysed N nor its randomised N.
+            <div class="sd-sub">A screen, not a verdict: a trial that reported sex over the whole
+              cohort, or over a denominator later revised, lands here legitimately. Each is listed
+              with both figures so it can be checked against the paper.</div>
+            <ul class="pop-evidence">${f.rows.map(d => `<li><strong>${pwEsc(d.study)}</strong>
+              ${pwEsc(d.arm_name || d.arm)}: sex reported as ${pwEsc(d.female)}, but the arm's
+              analysed N is ${d.analysed_n}${d.randomised_n ? ` and its randomised N is ${d.randomised_n}` : ''}.</li>`).join('')}</ul>
           </div>`;
         if (f.kind === 'cohort-size') return `
           <div class="pop-flag">
@@ -3146,18 +3169,23 @@ function openStudyDrawer(id) {
   // fields feed no effect estimate, RoB 2 judgment or GRADE rating.
   const conflictHtml = (() => {
     const co = window.COHORT_OVERLAP || {};
-    const f = (co.arm_n_conflicts || {})[s.key];
+    const attr = (co.attribution_conflicts || []).filter(f => f.studies.includes(s.key));
     const sizes = (co.cohort_size_disagreements || []).filter(d => d.studies.includes(s.key));
-    if (!f && !sizes.length) return '';
+    if (!attr.length && !sizes.length) return '';
     return `
       <div style="background: rgba(244, 63, 94, 0.08); border-left: 3px solid #fb7185; padding: 1rem; border-radius: 4px; font-size: 0.8rem; line-height: 1.6; margin-bottom: 1.5rem;">
-        <h4 style="font-size: 0.82rem; text-transform: uppercase; font-weight: 800; color: #fda4af; margin-bottom: 0.3rem;">Open data-quality flag &mdash; source verification needed</h4>
-        ${f ? `<p>The register records <code>${pwEsc(f.field)}</code> = <strong>${f.register}</strong>; the source publication states <strong>${f.source_says}</strong>.</p>
-        <p style="margin-top:0.4rem;">${pwEsc(f.note)}</p>
-        <p style="margin-top:0.4rem;" class="sd-sub">Source: <code>${pwEsc(f.source)}</code> &mdash; &ldquo;${pwEsc(f.quote)}&rdquo;</p>` : ''}
+        <h4 style="font-size: 0.82rem; text-transform: uppercase; font-weight: 800; color: #fda4af; margin-bottom: 0.3rem;">Open data-quality flag &mdash; review-team decision needed</h4>
+        ${attr.map(f => `
+          <p><strong>${pwEsc(f.summary)}</strong> The citation shown above and the arm denominators
+             shown below do not describe the same publication.</p>
+          <ul class="pop-evidence">${(f.evidence || []).map(e => `<li>${pwEsc(e)}</li>`).join('')}</ul>
+          <p style="margin-top:0.4rem;" class="sd-sub"><strong>Affects:</strong> ${pwEsc(f.affects)}</p>
+          <p class="sd-sub"><strong>Not affected:</strong> ${pwEsc(f.not_affected)}</p>
+          <p class="sd-sub"><strong>Decision needed:</strong> ${pwEsc(f.decision_needed)}</p>`).join('')}
         ${sizes.map(d => `<p style="margin-top:0.4rem;">${pwEsc(d.detail)}</p>
           <p class="sd-sub">${pwEsc(d.affects)}</p>`).join('')}
-        <p style="margin-top:0.4rem;" class="sd-sub">Flagged, not corrected. The arm denominators below are shown exactly as the locked register holds them.</p>
+        <p style="margin-top:0.4rem;" class="sd-sub">Flagged, not corrected. Every value below is
+          shown exactly as the locked register holds it.</p>
       </div>`;
   })();
 

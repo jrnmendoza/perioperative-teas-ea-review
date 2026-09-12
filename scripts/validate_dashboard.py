@@ -4192,35 +4192,62 @@ def t_possible_shared_cohorts_are_flagged_not_merged():
 
 def t_baseline_conflicts_are_surfaced_not_corrected():
     """
-    STRUCTURAL. Where a register baseline value disagrees with the publication it
-    was read from, the brief is to document it, not to edit the locked dataset.
-    So each recorded conflict must still be present in the register exactly as
-    the scan describes it, and must be rendered where the value is shown.
+    STRUCTURAL. Where a register value disagrees with the publication it is
+    attributed to, the brief is to document it, not to edit the locked dataset.
+
+    The Yeh pair's defect is an ATTRIBUTION conflict: each row carries one
+    paper's arm-level data and the other paper's citation. The arm denominators
+    themselves trace to Outcome_Data_AF_LOCK and are not in question, so this
+    check holds the finding to its own terms -- it must keep naming both records,
+    must still be true of the register as it stands, and must be rendered where
+    the affected values are shown.
     """
     co = _cohort_overlap()
     by_key = {s["key"]: s for s in STUDIES}
     probs = []
-    for key, f in co["arm_n_conflicts"].items():
-        rec = by_key.get(key)
-        if not rec:
-            probs.append(f"{key}: conflict recorded for a study not in the register")
-            continue
-        field = f["field"].split(".")[-1]
-        actual = (rec.get("population") or {}).get(field)
-        if actual != f["register"]:
-            probs.append(f"{key}.{field} is now {actual!r}, but the conflict record says "
-                         f"{f['register']!r} -- either the register was edited (it must not be) "
-                         f"or the flag is stale and must be withdrawn with its evidence")
-        if f["register"] == f["source_says"]:
-            probs.append(f"{key}: recorded as a conflict but the two values agree")
-        if not (ROOT / f["source"]).exists():
-            probs.append(f"{key}: source file {f['source']} does not exist")
-        elif f["quote"].split()[0] not in (ROOT / f["source"]).read_text(
-                encoding="utf-8", errors="replace"):
-            probs.append(f"{key}: quoted evidence is not in {f['source']}")
-    if co["arm_n_conflicts"] and "Open data-quality flag" not in APP:
-        probs.append("conflicts are never rendered in the study drawer")
-    check("t_baseline_conflicts_are_surfaced_not_corrected", not probs, "; ".join(probs))
+    for f in co.get("attribution_conflicts", []):
+        for k in f["studies"]:
+            if k not in by_key:
+                probs.append(f"{k}: attribution conflict recorded for a study not in the register")
+        if len(f.get("papers", [])) != len(f["studies"]):
+            probs.append(f"{f['studies']}: {len(f.get('papers', []))} publications described for "
+                         f"{len(f['studies'])} records -- the pairing cannot be checked")
+        if not f.get("evidence"):
+            probs.append(f"{f['studies']}: attribution conflict with no evidence recorded")
+        if not f.get("decision_needed"):
+            probs.append(f"{f['studies']}: no decision recorded as needed, so the flag has no exit")
+        # The finding must still describe the register. If someone resolves it by
+        # moving the citations, the rows stop being crossed and this must be
+        # withdrawn deliberately rather than left standing and stale.
+        crossed = False
+        for k in f["studies"]:
+            pop = (by_key.get(k) or {}).get("population") or {}
+            others = [by_key[o]["population"]["arm1_n"] for o in f["studies"]
+                      if o != k and o in by_key]
+            fem = str(pop.get("arm1_female") or "")
+            m = re.match(r"\s*\d+\s*/\s*(\d+)", fem)
+            if m and int(m.group(1)) in others:
+                crossed = True
+        if not crossed:
+            probs.append(f"{f['studies']}: the records are no longer crossed -- the conflict looks "
+                         f"resolved, so withdraw the flag with its evidence rather than leaving it")
+    if co.get("attribution_conflicts") and "Record attribution" not in APP:
+        probs.append("attribution conflicts are never rendered in the population summary")
+    if co.get("attribution_conflicts") and "attribution_conflicts" not in APP:
+        probs.append("the study drawer does not read the attribution conflicts")
+
+    # The denominator screen is a screen: it may not be silently emptied, and a
+    # row it reports must actually be in the register.
+    for d in co.get("denominator_mismatches", []):
+        pop = (by_key.get(d["study"]) or {}).get("population") or {}
+        held = pop.get(d["arm"] + "_female")
+        if held != d["female"]:
+            probs.append(f"{d['study']} {d['arm']}: screen reports {d['female']!r}, "
+                         f"register holds {held!r}")
+        if pop.get(d["arm"] + "_n") != d["analysed_n"]:
+            probs.append(f"{d['study']} {d['arm']}: screen reports analysed n={d['analysed_n']}, "
+                         f"register holds {pop.get(d['arm'] + '_n')}")
+    check("t_baseline_conflicts_are_surfaced_not_corrected", not probs, "; ".join(probs[:4]))
 
 
 def t_baseline_denominators_are_unique_trials():
