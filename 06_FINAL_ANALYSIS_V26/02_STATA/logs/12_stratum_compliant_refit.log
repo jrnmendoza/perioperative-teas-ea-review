@@ -1,9 +1,9 @@
 ----------------------------------------------------------------------------------------------------
       name:  <unnamed>
-       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/02_STATA/
-> logs/12_stratum_compliant_refit.log
+       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/.claude/worktrees/festive-jenni
+> ngs-0689c3/06_FINAL_ANALYSIS_V26/02_STATA/logs/12_stratum_compliant_refit.log
   log type:  text
- opened on:  10 Sep 2026, 12:29:28
+ opened on:  12 Sep 2026, 11:43:39
 
 . 
 . * -----------------------------------------------------------------------------
@@ -32,18 +32,18 @@
 (encoding automatically selected: ISO-8859-1)
 (5 vars, 11 obs)
 (8 observations deleted)
-(file /var/folders/7q/vsx8qt9d0mlfyhgbdt1b27dw0000gn/T//S_17634.000001 not found)
-file /var/folders/7q/vsx8qt9d0mlfyhgbdt1b27dw0000gn/T//S_17634.000001 saved as .dta format
+(file /var/folders/7q/vsx8qt9d0mlfyhgbdt1b27dw0000gn/T//S_88621.000001 not found)
+file /var/folders/7q/vsx8qt9d0mlfyhgbdt1b27dw0000gn/T//S_88621.000001 saved as .dta format
 (encoding automatically selected: ISO-8859-1)
 (5 vars, 11 obs)
 (9 observations deleted)
-(file /var/folders/7q/vsx8qt9d0mlfyhgbdt1b27dw0000gn/T//S_17634.000002 not found)
-file /var/folders/7q/vsx8qt9d0mlfyhgbdt1b27dw0000gn/T//S_17634.000002 saved as .dta format
+(file /var/folders/7q/vsx8qt9d0mlfyhgbdt1b27dw0000gn/T//S_88621.000002 not found)
+file /var/folders/7q/vsx8qt9d0mlfyhgbdt1b27dw0000gn/T//S_88621.000002 saved as .dta format
 (encoding automatically selected: ISO-8859-1)
 (5 vars, 11 obs)
 (5 observations deleted)
-(file /var/folders/7q/vsx8qt9d0mlfyhgbdt1b27dw0000gn/T//S_17634.000003 not found)
-file /var/folders/7q/vsx8qt9d0mlfyhgbdt1b27dw0000gn/T//S_17634.000003 saved as .dta format
+(file /var/folders/7q/vsx8qt9d0mlfyhgbdt1b27dw0000gn/T//S_88621.000003 not found)
+file /var/folders/7q/vsx8qt9d0mlfyhgbdt1b27dw0000gn/T//S_88621.000003 saved as .dta format
 
 . 
 . * =============================================================================
@@ -185,19 +185,18 @@ Test of homogeneity: Q = chi2(1) = 71.06           Prob > Q = 0.0000
     -----------------------------------------
 
 . 
-. * Same continuity handling as 05_ponv.do, with the arithmetic corrected:
-. * adding 0.5 to all four cells of a 2x2 table raises each ARM TOTAL by 1.0,
-. * not by 0.5. The original raised each total by 0.5, which leaves the risk
-. * ratio unchanged when denominators are equal but perturbs its variance.
-. gen zero_cell = (events_i == 0 | events_c == 0)
+. * Haldane-Anscombe continuity correction, applied UNIVERSALLY (review team
+. * decision 2026-09-11; implemented in Stata 2026-09-12), matching 05_ponv.do.
+. * Adding 0.5 to all four cells of a 2x2 table raises each ARM TOTAL by 1.0, not
+. * by 0.5 -- this file already had that arithmetic right; what changes here is
+. * that the correction is no longer restricted to zero-cell rows.
+. gen ei_cc = events_i + 0.5
 
-. gen ei_cc = events_i + 0.5 * zero_cell
+. gen ec_cc = events_c + 0.5
 
-. gen ec_cc = events_c + 0.5 * zero_cell
+. gen ni_cc = n_i + 1.0
 
-. gen ni_cc = n_i + 1.0 * zero_cell
-
-. gen nc_cc = n_c + 1.0 * zero_cell
+. gen nc_cc = n_c + 1.0
 
 . gen rr_  = (ei_cc / ni_cc) / (ec_cc / nc_cc)
 
@@ -404,8 +403,8 @@ Done. Results are in the log; nothing in 01_DATA or 03_RESULTS was changed.
 
 . log close
       name:  <unnamed>
-       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/02_STATA/
-> logs/12_stratum_compliant_refit.log
+       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/.claude/worktrees/festive-jenni
+> ngs-0689c3/06_FINAL_ANALYSIS_V26/02_STATA/logs/12_stratum_compliant_refit.log
   log type:  text
- closed on:  10 Sep 2026, 12:29:29
+ closed on:  12 Sep 2026, 11:43:40
 ----------------------------------------------------------------------------------------------------

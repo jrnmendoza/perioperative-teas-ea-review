@@ -2476,6 +2476,9 @@ def t_interpretation_bound_to_current_evidence():
         if row:
             models[aid] = row
 
+    LEDGER = json.loads((ROOT / "09_V34_ANALYSIS" / "05_INTERPRETATION" /
+                         "interpretation_bindings.json").read_text(encoding="utf-8"))
+
     probs = []
     for rec in L.get("records", []):
         mid = rec["analysis_id"]
@@ -2497,8 +2500,19 @@ def t_interpretation_bound_to_current_evidence():
         if drift and not rec.get("stale"):
             probs.append(f"{mid}: bound evidence no longer matches the analysis "
                          f"({drift}) but the record is not marked stale")
+        # A stale record whose bound evidence MATCHES the live numbers is the
+        # normal state after an analysis is re-run: the generator rewrites the
+        # wording against the new numbers but deliberately cannot clear the flag,
+        # because only a person re-reading the prose can do that (--accept).
+        # Corrected 2026-09-12: this previously failed that state, which would have
+        # forced either accepting on the team's behalf or leaving the build red.
+        # The ledger is what distinguishes the two cases -- a flag is justified
+        # while the accepted fingerprint is behind the record's current one.
         if not drift and rec.get("stale"):
-            probs.append(f"{mid}: marked stale but its bound evidence matches the analysis")
+            accepted = (LEDGER.get("bindings", {}).get(mid) or {}).get("fingerprint")
+            if accepted and accepted == rec.get("fingerprint"):
+                probs.append(f"{mid}: marked stale although the acceptance ledger already "
+                             f"records this exact fingerprint as reviewed")
     check("Interpretation records are bound to current evidence, or are marked stale",
           not probs, "\n".join(probs))
 

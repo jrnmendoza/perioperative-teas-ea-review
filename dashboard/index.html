@@ -486,8 +486,8 @@
 
           <div style="background: rgba(255,255,255,0.03); padding: 1rem; border-radius: var(--radius-sm); border-top: 3px solid #14b8a6;">
             <div style="font-size: 0.72rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Rescue Analgesia Requirements (Target F)</div>
-            <div style="font-size: 1.3rem; font-weight: 800; color: #2dd4bf; margin-top: 0.25rem;">RR 0.50</div>
-            <div style="font-size: 0.72rem; color: var(--text-secondary); margin-top: 0.2rem;">95% CI: [0.34, 0.75] • <strong style="color:#2dd4bf;">p = 0.0119</strong> (REML + KH)</div>
+            <div style="font-size: 1.3rem; font-weight: 800; color: #2dd4bf; margin-top: 0.25rem;">RR 0.52</div>
+            <div style="font-size: 0.72rem; color: var(--text-secondary); margin-top: 0.2rem;">95% CI: [0.37, 0.73] • <strong style="color:#2dd4bf;">p = 0.0087</strong> (REML + KH)</div>
             <div style="font-size: 0.7rem; color: #99f6e4; margin-top: 0.35rem;">Strict Rescue (k = 4, N = 312) • 50% Relative Risk Cut • I² = 0.0%</div>
           </div>
 
@@ -1060,9 +1060,14 @@
         <div class="estimator-note" role="note">
           <span class="estimator-note-label">Estimator</span>
           <div>
-            <p>Binary outcomes in this interactive plot apply the <strong>Haldane&ndash;Anscombe
-            continuity correction</strong> (+0.5 to every cell) to all contrasts, not only
-            zero-cell tables &mdash; review team decision, 2026-09-11.</p>
+            <p>Binary outcomes apply the <strong>Haldane&ndash;Anscombe continuity
+            correction</strong> (+0.5 to each of the four cells of the 2&times;2 table, so each
+            arm's denominator gains 1) to <strong>all</strong> contrasts, not only zero-cell
+            tables &mdash; review team decision, 2026-09-11. As of 2026-09-12 this holds
+            <strong>everywhere</strong>: the Stata analyses above were re-run under the same
+            correction, so this plot and the source-verified models are on one scale. They
+            remain different analyses with different contributing trials, so their numbers are
+            still not expected to match each other. Continuous outcomes are unaffected.</p>
             <p class="estimator-note-sub">The source-verified Stata analyses above still use the
             uncorrected estimator: their inputs carry precomputed log risk ratios and re-running
             them requires Stata. Those are different analyses from this plot in any case (different
@@ -2330,7 +2335,7 @@
               </a>
             </div>
             <div class="stata-plot-footer">
-              <p><strong>StataNow 19.5 Target D Stratified Synthesis:</strong> Stratum 1: Composite PONV 0–24h (k=2: Zheng 2025, Lu 2021): RR = <strong>0.56</strong> [95% CI: 0.14 to 2.26], p = 0.1191. Stratum 2: Composite PONV 0–48h (k=2: Xiong 2021, Xing 2022): RR = <strong>0.52</strong> [95% CI: 0.22 to 1.27], p = 0.0682. Stratum 3: Nausea 0–24h (k=3: Yang 2024, Ma 2026, Szmit 2021): RR = <strong>0.60</strong> [95% CI: 0.30 to 1.20], p = 0.0877. Stratum 5: Vomiting 0–24h (k=2: Yang 2024, Ma 2026): RR = <strong>0.58</strong> [95% CI: 0.03 to 13.37], p = 0.2682. Single studies (Luo 2026 alone): Nausea 0–48h RR = 0.46 [0.30 to 0.70]; Vomiting 0–48h RR = 0.34 [0.16 to 0.69]. All pooled strata exhibited zero statistical heterogeneity (τ² = 0.00, I² = 0.00%).</p>
+              <p><strong>StataNow 19.5 Target D Stratified Synthesis:</strong> Stratum 1: Composite PONV 0–24h (k=2: Zheng 2025, Lu 2021): RR = <strong>0.56</strong> [95% CI: 0.14 to 2.32], p = 0.1225. Stratum 2: Composite PONV 0–48h (k=2: Xiong 2021, Xing 2022): RR = <strong>0.52</strong> [95% CI: 0.26 to 1.11], p = 0.0581. Stratum 3: Nausea 0–24h (k=3: Yang 2024, Ma 2026, Szmit 2021): RR = <strong>0.60</strong> [95% CI: 0.31 to 1.22], p = 0.0922. Stratum 5: Vomiting 0–24h (k=2: Yang 2024, Ma 2026): RR = <strong>0.58</strong> [95% CI: 0.03 to 13.45], p = 0.2775. Single studies (Luo 2026 alone): Nausea 0–48h RR = 0.46 [0.30 to 0.70]; Vomiting 0–48h RR = 0.34 [0.17 to 0.70]. All pooled strata exhibited zero statistical heterogeneity (τ² = 0.00, I² = 0.00%).</p>
             </div>
           </div>
 
@@ -2387,7 +2392,7 @@
               </a>
             </div>
             <div class="stata-plot-footer">
-              <p><strong>StataNow 19.5 Target F Rescue Synthesis:</strong> Strict binary rescue incidence (k = 4 RCTs: Xie 2014, Yu 2020, Tu 2024, Zhou 2025; N = 312): Pooled REML Risk Ratio = <strong>0.50</strong> [95% CI: 0.34 to 0.75], t(3) = −4.84, <strong style="color: #34d399;">p = 0.0119</strong>, τ² = 0.00, I² = 0.00%. All binary rescue including Liu 2026 burn (k = 5, N = 398): RR = <strong>0.49</strong> [95% CI: 0.36 to 0.67], t(4) = −5.46, <strong style="color: #34d399;">p = 0.0031</strong>, τ² = 0.00, I² = 0.00%. A statistically significant ~50% reduction in the risk (not odds) of requiring postoperative rescue opioids in this exploratory secondary outcome; not adjusted for the multiple secondary/exploratory outcomes examined across this review, and not the protocol-defined primary inference.</p>
+              <p><strong>StataNow 19.5 Target F Rescue Synthesis:</strong> Strict binary rescue incidence (k = 4 RCTs: Xie 2014, Yu 2020, Tu 2024, Zhou 2025; N = 312): Pooled REML Risk Ratio = <strong>0.52</strong> [95% CI: 0.37 to 0.73], t(3) = −6.15, <strong style="color: #34d399;">p = 0.0087</strong>, τ² = 0.00, I² = 0.00%. All binary rescue including Liu 2026 burn (k = 5, N = 398): RR = <strong>0.51</strong> [95% CI: 0.39 to 0.66], t(4) = −7.20, <strong style="color: #34d399;">p = 0.0020</strong>, τ² = 0.00, I² = 0.00%. A statistically significant ~50% reduction in the risk (not odds) of requiring postoperative rescue opioids in this exploratory secondary outcome; not adjusted for the multiple secondary/exploratory outcomes examined across this review, and not the protocol-defined primary inference.</p>
             </div>
           </div>
 
