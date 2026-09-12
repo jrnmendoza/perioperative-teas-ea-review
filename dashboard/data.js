@@ -1662,10 +1662,10 @@ window.STUDIES_DATA = [
     "key": "Yeh 2010",
     "author": "Yeh",
     "year": 2010,
-    "citation": "Yeh ML, et al. *Int J Nurs Stud*. 2011;48(6):703-709. DOI: 10.1016/j.ijnurstu.2010.10.009. PMID: 21084087",
-    "journal": "#828 - Yeh 2010",
-    "doi": "10.1016/j.ijnurstu.2010.10.009",
-    "pmid": "21084087",
+    "citation": "Yeh ML, et al. *Altern Ther Health Med*. 2010;16(6):10-18. PMID: 21280458",
+    "journal": "Altern Ther Health Med",
+    "doi": "",
+    "pmid": "21280458",
     "country": "Taiwan",
     "country_meta": {
       "code": "TW",
@@ -1707,7 +1707,7 @@ window.STUDIES_DATA = [
       "arm1_name": "EA Group",
       "arm1_n": 33,
       "arm1_age": "60.7 ± 12.0",
-      "arm1_female": "20/30 (66.7%)",
+      "arm1_female": "22/33 (66.7%)",
       "arm1_bmi": "not reported",
       "arm2_name": "Sham Group",
       "arm2_n": 30,
@@ -1972,9 +1972,9 @@ window.STUDIES_DATA = [
       "rescue_analgesia": null,
       "intraop_opioid": null
     },
-    "country_evidence": "Nursing Department, Veterans General Hospital, Taipei, Taiwan, ROC",
+    "country_evidence": "carried out by the orthopedic departments of a 4000-bed medical center in northern Taiwan",
     "companion_report": "Yeh 2011",
-    "unit_of_analysis_note": "Retained as the trial record for the study also reported as Yeh 2011 (Altern Ther Health Med 2010;16(6):10-18). Review team decision 2026-09-11: count once."
+    "unit_of_analysis_note": "Trial record for the study also reported as Yeh 2011. This record is the Altern Ther Health Med 2010;16(6):10-18 report (three arms, EG1 33 / EG2 30 / CG 31); Yeh 2011 is the Int J Nurs Stud 2011;48(6):703-709 report of the same cohort (30 per arm). Review team decision 2026-09-11: count once. Identity re-assigned 2026-09-12 so that this key names the same publication here as it does in Outcome_Data_AF_LOCK and every other file holding arm-level data."
   },
   {
     "id": "1879897266",
@@ -2632,10 +2632,10 @@ window.STUDIES_DATA = [
     "key": "Yeh 2011",
     "author": "Yeh",
     "year": 2011,
-    "citation": "Yeh ML, et al. *Altern Ther Health Med*. 2010;16(6):10-18. PMID: 21280458",
-    "journal": "#823 - Yeh 2010 (ATHM)",
-    "doi": "",
-    "pmid": "21280458",
+    "citation": "Yeh ML, et al. *Int J Nurs Stud*. 2011;48(6):703-709. DOI: 10.1016/j.ijnurstu.2010.10.009. PMID: 21084087",
+    "journal": "Int J Nurs Stud",
+    "doi": "10.1016/j.ijnurstu.2010.10.009",
+    "pmid": "21084087",
     "country": "Taiwan",
     "country_meta": {
       "code": "TW",
@@ -2680,7 +2680,7 @@ window.STUDIES_DATA = [
       "arm1_name": "EA Group",
       "arm1_n": 30,
       "arm1_age": "60.7 ± 12.0",
-      "arm1_female": "22/33 (66.7%)",
+      "arm1_female": "20/30 (66.7%)",
       "arm1_bmi": "not reported",
       "arm2_name": "Sham Group",
       "arm2_n": 30,
@@ -2945,9 +2945,9 @@ window.STUDIES_DATA = [
       "rescue_analgesia": null,
       "intraop_opioid": null
     },
-    "country_evidence": "carried out by the orthopedic departments of a 4000-bed medical center in northern Taiwan",
+    "country_evidence": "Nursing Department, Veterans General Hospital, Taipei, Taiwan, ROC",
     "duplicate_report_of": "Yeh 2010",
-    "unit_of_analysis_note": "Same trial as Yeh 2010. Both papers report one three-arm randomised study of lumbar spinal surgery by the same author team (Yeh, Chung, Chen, Chen): Altern Ther Health Med 2010;16(6):10-18 states “Ninety-nine patients undergoing lumbar spinal surgery were randomly assigned to one of three groups”, and Int J Nurs Stud 2011;48(6):703-709 reports the same cohort, with the sham arm's figures identical between the two papers. Review team decision 2026-09-11: COUNT ONCE. Yeh 2010 (the later, larger report, n=63) is retained as the trial record; this record is its companion publication and must not contribute independently to any synthesis."
+    "unit_of_analysis_note": "Same trial as Yeh 2010. This record is the Int J Nurs Stud 2011;48(6):703-709 report (30 per arm); Yeh 2010 is the Altern Ther Health Med 2010;16(6):10-18 report of the same three-arm cohort by the same author team. Review team decision 2026-09-11: COUNT ONCE, with Yeh 2010 retained as the trial record. This record is its companion publication and must not contribute independently to any synthesis. Identity re-assigned 2026-09-12 so that this key names the same publication here as it does in Outcome_Data_AF_LOCK."
   },
   {
     "id": "1879897195",

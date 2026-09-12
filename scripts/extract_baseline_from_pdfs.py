@@ -40,8 +40,11 @@ OUT_JS = ROOT / "dashboard" / "pdf_extracted.js"
 # Studies whose PDF filename is not recoverable from the RoB 2 registers.
 # Resolved by matching each paper's title and journal against its citation.
 EXTRA_PDFS = {
-    "Yeh 2011": "015_PainATHM-2.pdf",              # Altern Ther Health Med 2010;16(6)
-    "Yeh 2010": "covidence_828_full_article.pdf",  # Int J Nurs Stud 2011;48(6), spinal surgery
+    # Identity re-assigned 2026-09-12 to the convention used by Outcome_Data_AF_LOCK
+    # and every other file holding arm-level data; see
+    # 05_study_linkage/cohorts/yeh_lumbar_spinal_surgery.md.
+    "Yeh 2010": "015_PainATHM-2.pdf",              # Altern Ther Health Med 2010;16(6)
+    "Yeh 2011": "covidence_828_full_article.pdf",  # Int J Nurs Stud 2011;48(6), spinal surgery
     "El-Rakshy 2009": "covidence_868_full_article.pdf",
     "Coura 2011": "covidence_819_full_article.pdf",
     "Ao 2021": "download.pdf",

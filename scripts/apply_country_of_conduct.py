@@ -49,8 +49,11 @@ CONDUCT = {
     "Wong 2006": ("Hong Kong",
                   "Surgical Unit of a tertiary referral university-teaching hospital in Hong Kong "
                   "(Prince of Wales Hospital, Shatin)"),
+    # Identity re-assigned 2026-09-12: Yeh 2010 is the Altern Ther Health Med report,
+    # Yeh 2011 the Int J Nurs Stud report. The evidence sentences follow the papers.
     "Yeh 2010": ("Taiwan",
-                 "Nursing Department, Veterans General Hospital, Taipei, Taiwan, ROC"),
+                 "carried out by the orthopedic departments of a 4000-bed medical center in "
+                 "northern Taiwan"),
     "Coura 2011": ("Brazil",
                    "conducted in the Unimed Hospital Centre, Joinville-SC, Brazil, "
                    "from April 2009 to June 2010"),
@@ -59,8 +62,7 @@ CONDUCT = {
                  "were invited to be subjects in the study. Lead affiliation is Victoria "
                  "University, Melbourne; country of CONDUCT is Taiwan."),
     "Yeh 2011": ("Taiwan",
-                 "carried out by the orthopedic departments of a 4000-bed medical center in "
-                 "northern Taiwan"),
+                 "Nursing Department, Veterans General Hospital, Taipei, Taiwan, ROC"),
     "Ng 2013": ("Hong Kong",
                 "conducted the study from October 2008 through October 2010 at the Prince of "
                 "Wales Hospital, a university teaching hospital in Hong Kong"),

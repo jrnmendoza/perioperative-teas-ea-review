@@ -9,7 +9,7 @@ window.COHORT_OVERLAP = {
     {
       "study_record": "Yeh 2010",
       "companion_report": "Yeh 2011",
-      "note": "Same trial as Yeh 2010. Both papers report one three-arm randomised study of lumbar spinal surgery by the same author team (Yeh, Chung, Chen, Chen): Altern Ther Health Med 2010;16(6):10-18 states “Ninety-nine patients undergoing lumbar spinal surgery were randomly assigned to one of three groups”, and Int J Nurs Stud 2011;48(6):703-709 reports the same cohort, with the sham arm's figures identical between the two papers. Review team decision 2026-09-11: COUNT ONCE. Yeh 2010 (the later, larger report, n=63) is retained as the trial record; this record is its companion publication and must not contribute independently to any synthesis.",
+      "note": "Same trial as Yeh 2010. This record is the Int J Nurs Stud 2011;48(6):703-709 report (30 per arm); Yeh 2010 is the Altern Ther Health Med 2010;16(6):10-18 report of the same three-arm cohort by the same author team. Review team decision 2026-09-11: COUNT ONCE, with Yeh 2010 retained as the trial record. This record is its companion publication and must not contribute independently to any synthesis. Identity re-assigned 2026-09-12 so that this key names the same publication here as it does in Outcome_Data_AF_LOCK.",
       "linkage_record": "05_study_linkage/cohorts/yeh_lumbar_spinal_surgery.md"
     }
   ],
@@ -94,54 +94,31 @@ window.COHORT_OVERLAP = {
         30
       ],
       "citations": {
-        "Yeh 2010": "Yeh ML, et al. *Int J Nurs Stud*. 2011;48(6):703-709. DOI: 10.1016/j.ijnurstu.2010.10.009. PMID: 21084087",
-        "Yeh 2011": "Yeh ML, et al. *Altern Ther Health Med*. 2010;16(6):10-18. PMID: 21280458"
+        "Yeh 2010": "Yeh ML, et al. *Altern Ther Health Med*. 2010;16(6):10-18. PMID: 21280458",
+        "Yeh 2011": "Yeh ML, et al. *Int J Nurs Stud*. 2011;48(6):703-709. DOI: 10.1016/j.ijnurstu.2010.10.009. PMID: 21084087"
       },
       "procedure": "Patients undergoing surgery for nontraumatic lumbar spine injury/disorders"
     }
   ],
-  "attribution_conflicts": [
+  "attribution_conflicts": [],
+  "resolved_attribution": [
     {
       "studies": [
         "Yeh 2010",
         "Yeh 2011"
       ],
-      "summary": "The two locked sheets disagree about which register key names which publication, and the dashboard mirrors both.",
-      "papers": [
-        {
-          "label": "Altern Ther Health Med 2010;16(6):10-18",
-          "pdf": "015_PainATHM-2.pdf",
-          "pmid": "21280458",
-          "authors": "Yeh, Chung, Chen K-M, Tsou M-Y, Chen H-H (five authors, includes Tsou)",
-          "setting": "orthopedic departments of a 4000-bed medical center in northern Taiwan",
-          "arms": "EG1 33 / EG2 30 / CG 31",
-          "female": "EG1 22/33 (66.7%), EG2 21/30 (70.0%), CG 15/31 (48.4%)",
-          "opioid_24h": "EG1 18.6 ± 9.7 vs EG2 21.6 ± 13.1 vs CG 27.2 ± 12.5 mg (Table 4; the paper calls the PCA route epidural)"
-        },
-        {
-          "label": "Int J Nurs Stud 2011;48(6):703-709",
-          "pdf": "covidence_828_full_article.pdf",
-          "pmid": "21084087",
-          "doi": "10.1016/j.ijnurstu.2010.10.009",
-          "authors": "Yeh, Chung, Chen K-M, Chen H-H (four authors, no Tsou)",
-          "setting": "3000-bed medical center in northern Taiwan",
-          "arms": "AES 30 / Sham 30 / Control 30",
-          "female": "AES 20/30 (66.7%), Sham 21/30 (70.0%), Control 15/30 (50.0%)",
-          "opioid_24h": "AES 19.3 ± 9.7 vs sham 21.6 ± 13.1 vs control 28.0 ± 12.1 mg IV (Table 3)"
-        }
-      ],
-      "evidence": [
-        "Study_Master.csv files the Int J Nurs Stud trial under key Yeh 2010: Covidence study key 828, internal ID 1879897280, and a result summary of “AES (n=30) 19.3 ± 9.7 mg vs Sham AES (n=30) 21.6 ± 13.1 mg (P = 0.443) [MD -2.30]”.",
-        "Outcome_Data_AF_LOCK.csv files those same three numbers under key Yeh 2011 — arms 30/30, mean 19.3, sham 21.6, derived MD -2.30, Table 3, mg IV morphine — and files the Altern Ther Health Med figures (33/30 and 33/31, mean 18.6, Table 4, “mg morphine; source explicitly calls PCA epidural”) under Yeh 2010.",
-        "So one locked sheet says Yeh 2010 is the Int J Nurs Stud paper and the other says it is the Altern Ther Health Med paper. Both cannot be right, and this is visible from the two sheets alone without opening either PDF.",
-        "Study_Master's Yeh 2011 row carries an Identitycorrection field reading “Yeh 2010 (ATHM) → Yeh 2011” and an Antigravitystudylabel still reading “Yeh 2010 (ATHM)”. A deliberate rename was applied to Study_Master and never applied to Outcome_Data_AF_LOCK, which is the most likely origin of the split.",
-        "dashboard/data.js mirrors both sheets faithfully, which is exactly why each of its rows is crossed: the citation, DOI and PMID follow Study_Master, while the arm denominators follow Outcome_Data_AF_LOCK. Its baseline sex counts follow the citation — Yeh 2010 holds 20/30 (the Int J Nurs Stud figure) and Yeh 2011 holds 22/33 (the Altern Ther Health Med figure) — so within each row the sex denominator and the arm denominator name different papers.",
-        "A sweep of Study_Master's result summaries against Outcome_Data_AF_LOCK's analysed arms across all 63 rows that carry both finds six disagreements; the Yeh pair is the only one where the two sheets' figures are exactly exchanged between two keys. The others (Zhu 2022, Wang 2024, Lu 2021, Jin 2023) are arm-order or multi-cohort differences, listed separately below."
-      ],
-      "affects": "Which publication each register row names. No pooled estimate depends on it: both Yeh records are on DUPLICATE-OVERLAP HOLD in the lock itself (AFincludestrict = 0, AFincludesensitivity = 0 on every row), so neither contributes to any synthesis, and the study count of 69 is unaffected because the pair counts once either way.",
-      "not_affected": "The numbers themselves. Both publications' arm data are present and internally coherent in the lock; what is in dispute is only which key each set is filed under.",
-      "decision_needed": "This cannot be fixed in the dashboard. Aligning dashboard/data.js with either locked sheet would simply change which sheet it contradicts. Resolving it means re-cutting Study_Master or Outcome_Data_AF_LOCK so the two agree, which is a decision about the locked master and belongs to the review team. The Identitycorrection field suggests the intended direction was Yeh 2010 = Int J Nurs Stud and Yeh 2011 = Altern Ther Health Med, which would mean re-cutting Outcome_Data_AF_LOCK — but that sheet is the one the analyses read, so it is not a change to make casually.",
-      "superseded_finding": "Two earlier readings on 2026-09-12 were wrong and are recorded so they are not mistaken for separate open issues. The first called it a transposition of arm denominators and named the arm Ns as the defective field. The second called it an inverted citation and said the arm Ns were the half that traces to the lock. Neither is right: the lock disagrees with itself, so no single field in the dashboard can be named as the wrong one."
+      "resolved": "2026-09-12",
+      "verdict": "Yeh 2010 = Altern Ther Health Med 2010;16(6):10-18 (Covidence 823); Yeh 2011 = Int J Nurs Stud 2011;48(6):703-709 (Covidence 828).",
+      "why": "Two locked sheets disagreed about which key named which paper. Counted by each file's own numbers, 15 files already used this convention — Outcome_Data_AF_LOCK, every Stata input, all five v34_reconciliation extracts, the mirror of the locked workbook's Outcome_Data sheet and the 07_TIERED_V33 working set. One file, Study_Master, used the other, on the strength of an Identity correction annotation that had been propagated nowhere.",
+      "applied_by": "scripts/apply_yeh_identity_correction.py",
+      "audited_by": "scripts/audit_yeh_identity_convention.py",
+      "record": "05_study_linkage/cohorts/yeh_lumbar_spinal_surgery.md",
+      "not_touched": "No arm denominator, mean, SD, effect estimate, RoB 2 judgement or GRADE rating. Both records stay on DUPLICATE-OVERLAP HOLD (include_strict = include_sensitivity = 0 on every row), so no synthesis reads either, and the study count of 69 is unchanged.",
+      "superseded_findings": [
+        "First reading: transposed arm denominators, naming arm1_n as the defective field.",
+        "Second reading: inverted citation, naming the arm denominators as the reliable half.",
+        "Both were partial. The lock disagreed with itself, so no single dashboard field was the wrong one."
+      ]
     }
   ],
   "denominator_mismatches": [
@@ -166,16 +143,6 @@ window.COHORT_OVERLAP = {
       "explained_by_randomised": false
     },
     {
-      "study": "Yeh 2010",
-      "arm": "arm1",
-      "arm_name": "EA Group",
-      "female": "20/30 (66.7%)",
-      "female_denominator": 30,
-      "analysed_n": 33,
-      "randomised_n": null,
-      "explained_by_randomised": false
-    },
-    {
       "study": "Lee 2011",
       "arm": "arm1",
       "arm_name": "TEAS Group",
@@ -193,16 +160,6 @@ window.COHORT_OVERLAP = {
       "female_denominator": 20,
       "analysed_n": 12,
       "randomised_n": 12,
-      "explained_by_randomised": false
-    },
-    {
-      "study": "Yeh 2011",
-      "arm": "arm1",
-      "arm_name": "EA Group",
-      "female": "22/33 (66.7%)",
-      "female_denominator": 33,
-      "analysed_n": 30,
-      "randomised_n": 30,
       "explained_by_randomised": false
     },
     {
@@ -257,44 +214,6 @@ window.COHORT_OVERLAP = {
     }
   ],
   "locked_sheet_disagreements": [
-    {
-      "study": "Yeh 2010",
-      "study_master_summary_arms": [
-        30,
-        30
-      ],
-      "af_lock_analysed_arms": [
-        [
-          33,
-          30
-        ],
-        [
-          33,
-          31
-        ]
-      ],
-      "exchanged_with": [
-        "Yeh 2011"
-      ],
-      "kind": "identity_split"
-    },
-    {
-      "study": "Yeh 2011",
-      "study_master_summary_arms": [
-        33,
-        30
-      ],
-      "af_lock_analysed_arms": [
-        [
-          30,
-          30
-        ]
-      ],
-      "exchanged_with": [
-        "Yeh 2010"
-      ],
-      "kind": "identity_split"
-    },
     {
       "study": "Jin 2023",
       "study_master_summary_arms": [

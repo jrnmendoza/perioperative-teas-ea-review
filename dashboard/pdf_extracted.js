@@ -1209,22 +1209,6 @@ window.PDF_EXTRACTED = {
     "source_pdf": "039_yao_2015.pdf"
   },
   "Yeh 2010": {
-    "anaesthesia": {
-      "value": "General anaesthesia",
-      "page": 4,
-      "quote": "was general anesthesia with intravenous thiopental (2.1 mg/kg) and fentanyl (4.3 mg/kg), and connected to a PCA device programmed to deliver a patient-triggered 1 mg bolus of morphine with a 10 min lockout interval between doses.",
-      "is_general": true,
-      "hits": 1
-    },
-    "country": {
-      "value": "Taiwan",
-      "page": 2,
-      "quote": "spine injuries at a 3000-bed medical center in northern Taiwan.",
-      "hits": 1
-    },
-    "source_pdf": "covidence_828_full_article.pdf"
-  },
-  "Yeh 2011": {
     "pulse_width": {
       "value": "0.25 ms",
       "page": 3,
@@ -1251,6 +1235,22 @@ window.PDF_EXTRACTED = {
       "hits": 1
     },
     "source_pdf": "015_PainATHM-2.pdf"
+  },
+  "Yeh 2011": {
+    "anaesthesia": {
+      "value": "General anaesthesia",
+      "page": 4,
+      "quote": "was general anesthesia with intravenous thiopental (2.1 mg/kg) and fentanyl (4.3 mg/kg), and connected to a PCA device programmed to deliver a patient-triggered 1 mg bolus of morphine with a 10 min lockout interval between doses.",
+      "is_general": true,
+      "hits": 1
+    },
+    "country": {
+      "value": "Taiwan",
+      "page": 2,
+      "quote": "spine injuries at a 3000-bed medical center in northern Taiwan.",
+      "hits": 1
+    },
+    "source_pdf": "covidence_828_full_article.pdf"
   },
   "Yu 2020": {
     "surgical_population": {
