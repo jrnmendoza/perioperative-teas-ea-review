@@ -4236,6 +4236,31 @@ def t_baseline_conflicts_are_surfaced_not_corrected():
     if co.get("attribution_conflicts") and "attribution_conflicts" not in APP:
         probs.append("the study drawer does not read the attribution conflicts")
 
+    # The cross-sheet screen must stay wired up, and must still describe the lock.
+    import csv as _csv
+    sheets = ROOT / "06_FINAL_ANALYSIS_V26" / "01_DATA" / "authoritative_sheets"
+    lock_rows = co.get("locked_sheet_disagreements", [])
+    if lock_rows and "locked-sheets-disagree" not in APP:
+        probs.append("locked-sheet disagreements are computed but never rendered")
+    af = sheets / "Outcome_Data_AF_LOCK.csv"
+    if lock_rows and af.exists():
+        analysed = {}
+        for r in _csv.DictReader(af.open(encoding="utf-8-sig")):
+            try:
+                analysed.setdefault(r["Canonicalstudy"], set()).add(
+                    (int(float(r["Analyzednintervention"])), int(float(r["Analyzedncomparator"]))))
+            except (ValueError, TypeError, KeyError):
+                pass
+        for d in lock_rows:
+            got = sorted(list(x) for x in analysed.get(d["study"], set()))
+            if got != d["af_lock_analysed_arms"]:
+                probs.append(f"{d['study']}: screen reports AF_LOCK arms "
+                             f"{d['af_lock_analysed_arms']}, sheet holds {got} -- the lock "
+                             f"changed and the screen was not re-run")
+            if tuple(d["study_master_summary_arms"]) in analysed.get(d["study"], set()):
+                probs.append(f"{d['study']}: reported as a disagreement but the two sheets "
+                             f"now agree -- withdraw it rather than leaving it standing")
+
     # The denominator screen is a screen: it may not be silently emptied, and a
     # row it reports must actually be in the register.
     for d in co.get("denominator_mismatches", []):

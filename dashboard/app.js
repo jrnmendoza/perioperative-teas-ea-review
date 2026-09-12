@@ -1284,6 +1284,8 @@ function summarisePopulation(reportsList) {
   const mism = (co.denominator_mismatches || []).filter(d => inScope.has(d.study)
                                                             && !d.explained_by_randomised);
   if (mism.length) out.flags.push({ kind: 'denominator-mismatch', rows: mism });
+  const lockRows = (co.locked_sheet_disagreements || []).filter(d => inScope.has(d.study));
+  if (lockRows.length) out.flags.push({ kind: 'locked-sheets-disagree', rows: lockRows });
   (co.cohort_size_disagreements || []).forEach(d => {
     if (d.studies.some(k => inScope.has(k))) out.flags.push({ kind: 'cohort-size', ...d });
   });
@@ -1391,6 +1393,23 @@ function renderPopulationSummary(reportsList) {
             <div class="sd-sub"><strong>Decision needed:</strong> ${pwEsc(f.decision_needed)}</div>
             ${f.superseded_finding
               ? `<div class="sd-sub"><em>Correction:</em> ${pwEsc(f.superseded_finding)}</div>` : ''}
+          </div>`;
+        if (f.kind === 'locked-sheets-disagree') return `
+          <div class="pop-flag">
+            <span class="badge badge-rose">Locked sheets disagree</span>
+            ${f.rows.length} stud${f.rows.length === 1 ? 'y is' : 'ies are'} described with
+            different arm sizes by the two locked sheets: <code>Study_Master</code>'s result
+            summary and <code>Outcome_Data_AF_LOCK</code>'s analysed arms.
+            <div class="sd-sub">The dashboard cannot resolve this &mdash; it reads both sheets.
+              Where the figures are <strong>exchanged</strong> between two keys, the sheets
+              disagree about which publication a key names; where they merely differ, it is
+              usually arm order or a multi-cohort aggregation. Neither is corrected here.</div>
+            <ul class="pop-evidence">${f.rows.map(d => `<li><strong>${pwEsc(d.study)}</strong>
+              &mdash; <code>Study_Master</code> summarises arms of ${d.study_master_summary_arms.join(' / ')},
+              <code>Outcome_Data_AF_LOCK</code> records ${d.af_lock_analysed_arms.map(a => a.join(' / ')).join(' and ')}.
+              ${d.exchanged_with.length
+                  ? `<strong>Exchanged with ${d.exchanged_with.map(pwEsc).join(', ')}</strong> &mdash; an identity split.`
+                  : 'Figures differ; not an exchange.'}</li>`).join('')}</ul>
           </div>`;
         if (f.kind === 'denominator-mismatch') return `
           <div class="pop-flag">

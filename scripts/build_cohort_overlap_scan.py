@@ -33,21 +33,45 @@ DATA_JS = ROOT / "dashboard" / "data.js"
 CHARS_JS = ROOT / "dashboard" / "study_characteristics.js"
 PDF_JS = ROOT / "dashboard" / "pdf_extracted.js"
 OUT_JS = ROOT / "dashboard" / "cohort_overlap.js"
+SHEETS = ROOT / "06_FINAL_ANALYSIS_V26" / "01_DATA" / "authoritative_sheets"
 
-# CORRECTED 2026-09-12 (second pass, both PDFs read in full).
+# CORRECTED TWICE ON 2026-09-12. The reading that stands is the third one, and it
+# is the only one that explains every artefact instead of half of them.
 #
-# The first pass recorded this as a transposition of arm denominators between the
-# two Yeh rows. That was wrong, and the correction matters: the arm denominators
-# are each CORRECT for one of the two papers and trace to Outcome_Data_AF_LOCK.
-# What is attached to the wrong row is the CITATION.
+# The dashboard is not the source of this defect and cannot fix it: the TWO LOCKED
+# SHEETS CONTRADICT EACH OTHER about which register key names which publication,
+# and dashboard/data.js faithfully mirrors both, which is why each of its two Yeh
+# rows ends up crossed within itself.
 #
-# Each register row pairs one paper's arm-level data with the other paper's
-# bibliographic identity. Nothing here is corrected automatically: choosing which
-# half to move is a review-team decision that touches the locked workbook or the
-# audit log, not a value this script may pick.
+#   Study_Master.csv          Yeh 2010 -> Covidence 828, internal ID 1879897280,
+#                                        result summary "AES (n=30) 19.3 +/- 9.7 vs
+#                                        Sham AES (n=30) 21.6 +/- 13.1"   = IJNS
+#                             Yeh 2011 -> Covidence 823, Identitycorrection
+#                                        "Yeh 2010 (ATHM) -> Yeh 2011", summary
+#                                        "EG1 (n=33) 18.6 vs EG2 (n=30) 21.6" = ATHM
+#
+#   Outcome_Data_AF_LOCK.csv  Yeh 2010 -> Table 4, arms 33/30 and 33/31, mean 18.6,
+#                                        "mg morphine; source explicitly calls PCA
+#                                        epidural"                          = ATHM
+#                             Yeh 2011 -> Table 3, arms 30/30, mean 19.3, control
+#                                        28.0, "mg IV morphine"             = IJNS
+#
+# The same three numbers (19.3 +/- 9.7 vs 21.6 +/- 13.1, MD -2.30) are filed under
+# Yeh 2010 in Study_Master and under Yeh 2011 in Outcome_Data_AF_LOCK. That is a
+# direct, provable contradiction inside the locked master, not an inference.
+#
+# Study_Master carries an Identitycorrection field recording that the ATHM paper was
+# renamed from "Yeh 2010 (ATHM)" to "Yeh 2011". Outcome_Data_AF_LOCK never had that
+# rename applied, which is the most likely origin of the split.
+#
+# NOTHING IS CORRECTED HERE, and correcting dashboard/data.js would be worse than
+# leaving it: aligning it with either sheet just changes which locked sheet it
+# contradicts. Resolving this means re-cutting one of the two sheets, which is a
+# review-team decision about the locked master.
 ATTRIBUTION_CONFLICTS = [{
     "studies": ["Yeh 2010", "Yeh 2011"],
-    "summary": "Each row carries one paper's arm-level data and the other paper's citation.",
+    "summary": "The two locked sheets disagree about which register key names which "
+               "publication, and the dashboard mirrors both.",
     "papers": [
         {"label": "Altern Ther Health Med 2010;16(6):10-18",
          "pdf": "015_PainATHM-2.pdf",
@@ -56,8 +80,8 @@ ATTRIBUTION_CONFLICTS = [{
          "setting": "orthopedic departments of a 4000-bed medical center in northern Taiwan",
          "arms": "EG1 33 / EG2 30 / CG 31",
          "female": "EG1 22/33 (66.7%), EG2 21/30 (70.0%), CG 15/31 (48.4%)",
-         "cohort_statement": "Ninety-nine patients undergoing lumbar spinal surgery were "
-                             "randomly assigned to one of three groups"},
+         "opioid_24h": "EG1 18.6 \u00b1 9.7 vs EG2 21.6 \u00b1 13.1 vs CG 27.2 \u00b1 12.5 mg "
+                       "(Table 4; the paper calls the PCA route epidural)"},
         {"label": "Int J Nurs Stud 2011;48(6):703-709",
          "pdf": "covidence_828_full_article.pdf",
          "pmid": "21084087",
@@ -66,52 +90,61 @@ ATTRIBUTION_CONFLICTS = [{
          "setting": "3000-bed medical center in northern Taiwan",
          "arms": "AES 30 / Sham 30 / Control 30",
          "female": "AES 20/30 (66.7%), Sham 21/30 (70.0%), Control 15/30 (50.0%)",
-         "cohort_statement": "Assessed for eligibility (n=99) ... Meet inclusion criteria "
-                             "(n=90) ... Randomized 30 / 30 / 30"},
+         "opioid_24h": "AES 19.3 \u00b1 9.7 vs sham 21.6 \u00b1 13.1 vs control 28.0 \u00b1 12.1 "
+                       "mg IV (Table 3)"},
     ],
     "evidence": [
-        "Register row Yeh 2010 holds arm denominators 33 / 30 and cites Int J Nurs Stud "
-        "2011 (DOI 10.1016/j.ijnurstu.2010.10.009, PMID 21084087). 33 / 30 are the Altern "
-        "Ther Health Med figures; Int J Nurs Stud reports 30 in every arm.",
-        "Register row Yeh 2011 holds arm denominators 30 / 30 and cites Altern Ther Health "
-        "Med 2010 (PMID 21280458). 30 / 30 are the Int J Nurs Stud figures; Altern Ther "
-        "Health Med reports EG1 = 33.",
-        "The same inversion shows inside each row without opening either PDF: Yeh 2010 "
-        "records arm1_n = 33 beside a female count of 20/30, and Yeh 2011 records "
-        "arm1_n = 30 beside a female count of 22/33. Each female fraction is internally "
-        "consistent with the OTHER row's arm denominator.",
-        "The arm denominators, not the citations, are the values that trace to the lock: "
-        "Outcome_Data_AF_LOCK holds analysed 33/30 and 33/31 under Yeh 2010, and "
-        "randomised and analysed 30/30 under Yeh 2011.",
-        "The original extraction records agree with the lock and with the publication "
-        "years: yeh_2010_spinal_aes_full_data_extraction.md is headed \u201cYeh et al. "
-        "2010 ... Alternative Therapies in Health and Medicine 2010;16(6):10-18\u201d from "
-        "015_PainATHM-2.pdf, and yeh_2011_covidence_828_full_data_extraction.md is headed "
-        "\u201cYeh et al. 2011 (Study #828) ... International Journal of Nursing Studies "
-        "2011;48:703-709\u201d.",
-        "99_audit/consensus_audit_master_log.md line 127 labels Covidence #828 \u2014 the "
-        "Int J Nurs Stud paper \u2014 as \u201cYeh 2010\u201d, which is the likely origin "
-        "of the inverted citation and is why it propagated into dashboard/data.js.",
+        "Study_Master.csv files the Int J Nurs Stud trial under key Yeh 2010: Covidence "
+        "study key 828, internal ID 1879897280, and a result summary of \u201cAES (n=30) "
+        "19.3 \u00b1 9.7 mg vs Sham AES (n=30) 21.6 \u00b1 13.1 mg (P = 0.443) [MD -2.30]\u201d.",
+        "Outcome_Data_AF_LOCK.csv files those same three numbers under key Yeh 2011 \u2014 "
+        "arms 30/30, mean 19.3, sham 21.6, derived MD -2.30, Table 3, mg IV morphine \u2014 "
+        "and files the Altern Ther Health Med figures (33/30 and 33/31, mean 18.6, Table 4, "
+        "\u201cmg morphine; source explicitly calls PCA epidural\u201d) under Yeh 2010.",
+        "So one locked sheet says Yeh 2010 is the Int J Nurs Stud paper and the other says "
+        "it is the Altern Ther Health Med paper. Both cannot be right, and this is visible "
+        "from the two sheets alone without opening either PDF.",
+        "Study_Master's Yeh 2011 row carries an Identitycorrection field reading "
+        "\u201cYeh 2010 (ATHM) \u2192 Yeh 2011\u201d and an Antigravitystudylabel still "
+        "reading \u201cYeh 2010 (ATHM)\u201d. A deliberate rename was applied to "
+        "Study_Master and never applied to Outcome_Data_AF_LOCK, which is the most likely "
+        "origin of the split.",
+        "dashboard/data.js mirrors both sheets faithfully, which is exactly why each of its "
+        "rows is crossed: the citation, DOI and PMID follow Study_Master, while the arm "
+        "denominators follow Outcome_Data_AF_LOCK. Its baseline sex counts follow the "
+        "citation \u2014 Yeh 2010 holds 20/30 (the Int J Nurs Stud figure) and Yeh 2011 "
+        "holds 22/33 (the Altern Ther Health Med figure) \u2014 so within each row the sex "
+        "denominator and the arm denominator name different papers.",
+        "A sweep of Study_Master's result summaries against Outcome_Data_AF_LOCK's analysed "
+        "arms across all 63 rows that carry both finds six disagreements; the Yeh pair is "
+        "the only one where the two sheets' figures are exactly exchanged between two keys. "
+        "The others (Zhu 2022, Wang 2024, Lu 2021, Jin 2023) are arm-order or multi-cohort "
+        "differences, listed separately below.",
     ],
-    "affects": "Bibliographic attribution, the source-PDF pointer, the country-of-conduct "
-               "evidence sentence, and one female count per row. No effect estimate, "
-               "risk-of-bias judgement or GRADE rating reads any of these, and neither "
-               "report contributes arm-level data to any synthesis.",
-    "not_affected": "The arm denominators themselves. They match the locked workbook and "
-                    "each matches a real paper; nothing here suggests the lock is wrong.",
-    "decision_needed": "Two ways to make the rows self-consistent, and they are not "
-                       "equivalent. (a) Move the citations, so each row keeps the arm data "
-                       "it has and gains the matching paper \u2014 the register keys then "
-                       "also match the publication years, and the locked workbook is "
-                       "untouched. (b) Move the arm data, which would mean re-cutting "
-                       "Outcome_Data_AF_LOCK. Option (a) leaves the lock alone and is the "
-                       "smaller change, but it contradicts the audit log, so the review "
-                       "team decides.",
-    "superseded_finding": "A first pass on 2026-09-12 recorded this as transposed arm "
-                          "denominators and named the arm Ns as the defective field. That "
-                          "reading was wrong: the arm Ns trace to the lock and to real "
-                          "papers. Recorded here so the earlier wording is not mistaken "
-                          "for a separate, still-open issue.",
+    "affects": "Which publication each register row names. No pooled estimate depends on it: "
+               "both Yeh records are on DUPLICATE-OVERLAP HOLD in the lock itself "
+               "(AFincludestrict = 0, AFincludesensitivity = 0 on every row), so neither "
+               "contributes to any synthesis, and the study count of 69 is unaffected "
+               "because the pair counts once either way.",
+    "not_affected": "The numbers themselves. Both publications' arm data are present and "
+                    "internally coherent in the lock; what is in dispute is only which key "
+                    "each set is filed under.",
+    "decision_needed": "This cannot be fixed in the dashboard. Aligning dashboard/data.js "
+                       "with either locked sheet would simply change which sheet it "
+                       "contradicts. Resolving it means re-cutting Study_Master or "
+                       "Outcome_Data_AF_LOCK so the two agree, which is a decision about the "
+                       "locked master and belongs to the review team. The Identitycorrection "
+                       "field suggests the intended direction was Yeh 2010 = Int J Nurs Stud "
+                       "and Yeh 2011 = Altern Ther Health Med, which would mean re-cutting "
+                       "Outcome_Data_AF_LOCK \u2014 but that sheet is the one the analyses "
+                       "read, so it is not a change to make casually.",
+    "superseded_finding": "Two earlier readings on 2026-09-12 were wrong and are recorded so "
+                          "they are not mistaken for separate open issues. The first called "
+                          "it a transposition of arm denominators and named the arm Ns as the "
+                          "defective field. The second called it an inverted citation and "
+                          "said the arm Ns were the half that traces to the lock. Neither is "
+                          "right: the lock disagrees with itself, so no single field in the "
+                          "dashboard can be named as the wrong one.",
 }]
 
 
@@ -318,6 +351,7 @@ def build() -> dict:
             c["studies"])),
         "attribution_conflicts": ATTRIBUTION_CONFLICTS,
         "denominator_mismatches": denominator_mismatches(studies),
+        "locked_sheet_disagreements": locked_sheet_disagreements(),
         "cohort_size_disagreements": COHORT_SIZE_DISAGREEMENTS,
         "participants": {
             "analysed_across_reports": analysed_reports,
@@ -336,6 +370,56 @@ def build() -> dict:
                 "therefore not reported; the analysed total is.",
         },
     }
+
+
+def locked_sheet_disagreements() -> list[dict]:
+    """
+    Where the two locked sheets describe the same study with different arm sizes.
+
+    Study_Master carries a prose result summary per study; Outcome_Data_AF_LOCK
+    carries the arm-level data the analyses actually read. When the "(n=NN)"
+    figures in the summary match no analysed pair in AF_LOCK, the two sheets are
+    describing different things under one key. That is how the Yeh identity split
+    became visible without opening a PDF, and it is cheap to keep watching.
+
+    Reported, never reconciled here: choosing which sheet is right is a decision
+    about the locked master.
+    """
+    import csv
+    sm_path, af_path = SHEETS / "Study_Master.csv", SHEETS / "Outcome_Data_AF_LOCK.csv"
+    if not sm_path.exists() or not af_path.exists():
+        return []
+    analysed: dict[str, set] = {}
+    for r in csv.DictReader(af_path.open(encoding="utf-8-sig")):
+        try:
+            analysed.setdefault(r["Canonicalstudy"], set()).add(
+                (int(float(r["Analyzednintervention"])), int(float(r["Analyzedncomparator"]))))
+        except (ValueError, TypeError, KeyError):
+            pass
+
+    out = []
+    summaries = {}
+    for r in csv.DictReader(sm_path.open(encoding="utf-8-sig")):
+        key = r.get("Canonicalstudy") or ""
+        ns = [int(x) for x in re.findall(r"\(n\s*=\s*(\d+)\)", r.get("Candidatesourceresultsummary") or "")][:2]
+        if len(ns) == 2:
+            summaries[key] = tuple(ns)
+    for key, pair in summaries.items():
+        if key not in analysed or pair in analysed[key]:
+            continue
+        # Exchanged with another key, or merely different? The first is an identity
+        # split; the second is usually arm order or a multi-cohort aggregation.
+        swapped_with = [k for k, p in summaries.items()
+                        if k != key and pair in analysed.get(k, set())
+                        and summaries.get(k) in analysed.get(key, set())]
+        out.append({
+            "study": key,
+            "study_master_summary_arms": list(pair),
+            "af_lock_analysed_arms": sorted(list(x) for x in analysed[key]),
+            "exchanged_with": swapped_with,
+            "kind": "identity_split" if swapped_with else "arm_figures_differ",
+        })
+    return sorted(out, key=lambda d: (d["kind"] != "identity_split", d["study"]))
 
 
 def denominator_mismatches(studies: list[dict]) -> list[dict]:
@@ -416,6 +500,11 @@ def main(check_only: bool) -> int:
               f"({c['adjudication']['date']})")
     for c in flagged:
         print(f"  FLAG {' / '.join(c['studies'])}: shared {', '.join(c['shared'])}")
+    for d in payload["locked_sheet_disagreements"]:
+        note = (f"exchanged with {', '.join(d['exchanged_with'])}" if d["exchanged_with"]
+                else "figures differ")
+        print(f"  LOCK {d['study']}: Study_Master says {d['study_master_summary_arms']}, "
+              f"AF_LOCK says {d['af_lock_analysed_arms']} ({note})")
     dm = payload["denominator_mismatches"]
     unexplained = [d for d in dm if not d["explained_by_randomised"]]
     print(f"  {len(dm)} female-count denominator(s) differ from the arm's analysed N "

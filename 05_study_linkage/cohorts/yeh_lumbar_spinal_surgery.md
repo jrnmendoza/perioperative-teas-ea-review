@@ -13,39 +13,46 @@
 | PMID as stated | 21084087 | 21280458 |
 | Arm denominators the row actually holds | 33 / 30 | 30 / 30 |
 
-> **Correction, 2026-09-12 — which key names which paper is an open question.**
+> **Correction, 2026-09-12 (superseding two earlier corrections the same day).**
 >
 > An earlier version of this record said "the register keys invert the publication
-> years; the keys are labels, not dates". That is not established, and reading both
-> PDFs in full shows the opposite is at least as likely.
+> years; the keys are labels, not dates". A second correction said the citations
+> were on the wrong rows. **Both were wrong**, and the reason is worth stating
+> plainly: *the two locked sheets contradict each other about which key names which
+> paper*, so no single field in the dashboard can be named as the defective one.
 >
-> The two publications are distinguishable without ambiguity. *Altern Ther Health
-> Med* 2010;16(6):10–18 (`015_PainATHM-2.pdf`, PMID 21280458) has five authors
-> including Tsou M-Y, was run at a **4000-bed** centre, and reports arms of
-> **33 / 30 / 31**. *Int J Nurs Stud* 2011;48(6):703–709
-> (`covidence_828_full_article.pdf`, PMID 21084087, DOI 10.1016/j.ijnurstu.2010.10.009)
-> has four authors, was run at a **3000-bed** centre, and reports **30 in every arm**.
+> | | `Study_Master.csv` says | `Outcome_Data_AF_LOCK.csv` says |
+> |---|---|---|
+> | `Yeh 2010` | Covidence **828**, internal ID 1879897280, summary "AES (n=30) 19.3 ± 9.7 vs Sham AES (n=30) 21.6 ± 13.1, MD −2.30" → **Int J Nurs Stud** | Table 4, arms **33/30** and **33/31**, mean 18.6, "mg morphine; source explicitly calls PCA epidural" → **Altern Ther Health Med** |
+> | `Yeh 2011` | Covidence **823**, `Identitycorrection: "Yeh 2010 (ATHM) → Yeh 2011"`, summary "EG1 (n=33) 18.6 ± 9.7 vs EG2 (n=30) 21.6 ± 13.1" → **Altern Ther Health Med** | Table 3, arms **30/30**, mean 19.3, control 28.0, "mg IV morphine" → **Int J Nurs Stud** |
 >
-> Register row `Yeh 2010` holds arm denominators 33 / 30 — the *Altern Ther Health
-> Med* figures — while citing *Int J Nurs Stud*. Row `Yeh 2011` holds 30 / 30 — the
-> *Int J Nurs Stud* figures — while citing *Altern Ther Health Med*. The same
-> inversion is visible inside each row without opening a PDF: `Yeh 2010` records
-> `arm1_n` 33 beside a female count of 20/30, and `Yeh 2011` records `arm1_n` 30
-> beside 22/33.
+> The same three numbers — 19.3 ± 9.7 versus 21.6 ± 13.1, MD −2.30 — are filed
+> under `Yeh 2010` in `Study_Master` and under `Yeh 2011` in `Outcome_Data_AF_LOCK`.
+> That is a direct contradiction inside the locked master, visible from the two
+> sheets alone.
 >
-> The arm denominators are the half that traces to the lock (`Outcome_Data_AF_LOCK`
-> holds 33/30 and 33/31 under `Yeh 2010`, and 30/30 under `Yeh 2011`), and the
-> original extraction records agree with it — `yeh_2010_spinal_aes_full_data_extraction.md`
-> is headed *Altern Ther Health Med* and `yeh_2011_covidence_828_full_data_extraction.md`
-> is headed *Int J Nurs Stud*, which also makes the key names match the publication
-> years. The inverted citation most likely entered via
-> `99_audit/consensus_audit_master_log.md`, which labels Covidence #828 — the
-> *Int J Nurs Stud* paper — as "Yeh 2010".
+> `dashboard/data.js` mirrors **both** sheets faithfully, which is exactly why each
+> of its rows is crossed within itself: citation, DOI and PMID follow `Study_Master`;
+> arm denominators follow `Outcome_Data_AF_LOCK`; and the baseline sex counts follow
+> the citation, so `Yeh 2010` holds 20/30 beside `arm1_n` 33 and `Yeh 2011` holds
+> 22/33 beside `arm1_n` 30.
 >
-> **Nothing has been changed.** Deciding whether to move the citations (leaving the
-> lock untouched) or the arm data (re-cutting the lock) is a review-team call. It
-> does not affect this record's conclusion below, which rests on the two papers
-> describing one cohort, not on which key names which paper.
+> The likely origin: `Study_Master`'s `Yeh 2011` row carries an `Identitycorrection`
+> recording that the ATHM paper was renamed from "Yeh 2010 (ATHM)" to "Yeh 2011",
+> and its `Antigravitystudylabel` still reads "Yeh 2010 (ATHM)". That rename was
+> applied to `Study_Master` and never applied to `Outcome_Data_AF_LOCK`.
+>
+> **Nothing has been changed, and the dashboard is the wrong place to change it.**
+> Aligning `data.js` with either sheet would only change which locked sheet it
+> contradicts. Resolving this means re-cutting `Study_Master` or
+> `Outcome_Data_AF_LOCK` so the two agree — a decision about the locked master, and
+> one to weigh carefully because `Outcome_Data_AF_LOCK` is the sheet the analyses
+> read.
+>
+> **This record's conclusion is unaffected.** It rests on the two papers describing
+> one cohort, not on which key names which paper, and both Yeh records are on
+> DUPLICATE-OVERLAP HOLD in the lock itself (`AFincludestrict = 0`,
+> `AFincludesensitivity = 0` on every row), so no synthesis reads either.
 
 ## Evidence that these are one study
 

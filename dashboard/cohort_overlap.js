@@ -106,7 +106,7 @@ window.COHORT_OVERLAP = {
         "Yeh 2010",
         "Yeh 2011"
       ],
-      "summary": "Each row carries one paper's arm-level data and the other paper's citation.",
+      "summary": "The two locked sheets disagree about which register key names which publication, and the dashboard mirrors both.",
       "papers": [
         {
           "label": "Altern Ther Health Med 2010;16(6):10-18",
@@ -116,7 +116,7 @@ window.COHORT_OVERLAP = {
           "setting": "orthopedic departments of a 4000-bed medical center in northern Taiwan",
           "arms": "EG1 33 / EG2 30 / CG 31",
           "female": "EG1 22/33 (66.7%), EG2 21/30 (70.0%), CG 15/31 (48.4%)",
-          "cohort_statement": "Ninety-nine patients undergoing lumbar spinal surgery were randomly assigned to one of three groups"
+          "opioid_24h": "EG1 18.6 ± 9.7 vs EG2 21.6 ± 13.1 vs CG 27.2 ± 12.5 mg (Table 4; the paper calls the PCA route epidural)"
         },
         {
           "label": "Int J Nurs Stud 2011;48(6):703-709",
@@ -127,21 +127,21 @@ window.COHORT_OVERLAP = {
           "setting": "3000-bed medical center in northern Taiwan",
           "arms": "AES 30 / Sham 30 / Control 30",
           "female": "AES 20/30 (66.7%), Sham 21/30 (70.0%), Control 15/30 (50.0%)",
-          "cohort_statement": "Assessed for eligibility (n=99) ... Meet inclusion criteria (n=90) ... Randomized 30 / 30 / 30"
+          "opioid_24h": "AES 19.3 ± 9.7 vs sham 21.6 ± 13.1 vs control 28.0 ± 12.1 mg IV (Table 3)"
         }
       ],
       "evidence": [
-        "Register row Yeh 2010 holds arm denominators 33 / 30 and cites Int J Nurs Stud 2011 (DOI 10.1016/j.ijnurstu.2010.10.009, PMID 21084087). 33 / 30 are the Altern Ther Health Med figures; Int J Nurs Stud reports 30 in every arm.",
-        "Register row Yeh 2011 holds arm denominators 30 / 30 and cites Altern Ther Health Med 2010 (PMID 21280458). 30 / 30 are the Int J Nurs Stud figures; Altern Ther Health Med reports EG1 = 33.",
-        "The same inversion shows inside each row without opening either PDF: Yeh 2010 records arm1_n = 33 beside a female count of 20/30, and Yeh 2011 records arm1_n = 30 beside a female count of 22/33. Each female fraction is internally consistent with the OTHER row's arm denominator.",
-        "The arm denominators, not the citations, are the values that trace to the lock: Outcome_Data_AF_LOCK holds analysed 33/30 and 33/31 under Yeh 2010, and randomised and analysed 30/30 under Yeh 2011.",
-        "The original extraction records agree with the lock and with the publication years: yeh_2010_spinal_aes_full_data_extraction.md is headed “Yeh et al. 2010 ... Alternative Therapies in Health and Medicine 2010;16(6):10-18” from 015_PainATHM-2.pdf, and yeh_2011_covidence_828_full_data_extraction.md is headed “Yeh et al. 2011 (Study #828) ... International Journal of Nursing Studies 2011;48:703-709”.",
-        "99_audit/consensus_audit_master_log.md line 127 labels Covidence #828 — the Int J Nurs Stud paper — as “Yeh 2010”, which is the likely origin of the inverted citation and is why it propagated into dashboard/data.js."
+        "Study_Master.csv files the Int J Nurs Stud trial under key Yeh 2010: Covidence study key 828, internal ID 1879897280, and a result summary of “AES (n=30) 19.3 ± 9.7 mg vs Sham AES (n=30) 21.6 ± 13.1 mg (P = 0.443) [MD -2.30]”.",
+        "Outcome_Data_AF_LOCK.csv files those same three numbers under key Yeh 2011 — arms 30/30, mean 19.3, sham 21.6, derived MD -2.30, Table 3, mg IV morphine — and files the Altern Ther Health Med figures (33/30 and 33/31, mean 18.6, Table 4, “mg morphine; source explicitly calls PCA epidural”) under Yeh 2010.",
+        "So one locked sheet says Yeh 2010 is the Int J Nurs Stud paper and the other says it is the Altern Ther Health Med paper. Both cannot be right, and this is visible from the two sheets alone without opening either PDF.",
+        "Study_Master's Yeh 2011 row carries an Identitycorrection field reading “Yeh 2010 (ATHM) → Yeh 2011” and an Antigravitystudylabel still reading “Yeh 2010 (ATHM)”. A deliberate rename was applied to Study_Master and never applied to Outcome_Data_AF_LOCK, which is the most likely origin of the split.",
+        "dashboard/data.js mirrors both sheets faithfully, which is exactly why each of its rows is crossed: the citation, DOI and PMID follow Study_Master, while the arm denominators follow Outcome_Data_AF_LOCK. Its baseline sex counts follow the citation — Yeh 2010 holds 20/30 (the Int J Nurs Stud figure) and Yeh 2011 holds 22/33 (the Altern Ther Health Med figure) — so within each row the sex denominator and the arm denominator name different papers.",
+        "A sweep of Study_Master's result summaries against Outcome_Data_AF_LOCK's analysed arms across all 63 rows that carry both finds six disagreements; the Yeh pair is the only one where the two sheets' figures are exactly exchanged between two keys. The others (Zhu 2022, Wang 2024, Lu 2021, Jin 2023) are arm-order or multi-cohort differences, listed separately below."
       ],
-      "affects": "Bibliographic attribution, the source-PDF pointer, the country-of-conduct evidence sentence, and one female count per row. No effect estimate, risk-of-bias judgement or GRADE rating reads any of these, and neither report contributes arm-level data to any synthesis.",
-      "not_affected": "The arm denominators themselves. They match the locked workbook and each matches a real paper; nothing here suggests the lock is wrong.",
-      "decision_needed": "Two ways to make the rows self-consistent, and they are not equivalent. (a) Move the citations, so each row keeps the arm data it has and gains the matching paper — the register keys then also match the publication years, and the locked workbook is untouched. (b) Move the arm data, which would mean re-cutting Outcome_Data_AF_LOCK. Option (a) leaves the lock alone and is the smaller change, but it contradicts the audit log, so the review team decides.",
-      "superseded_finding": "A first pass on 2026-09-12 recorded this as transposed arm denominators and named the arm Ns as the defective field. That reading was wrong: the arm Ns trace to the lock and to real papers. Recorded here so the earlier wording is not mistaken for a separate, still-open issue."
+      "affects": "Which publication each register row names. No pooled estimate depends on it: both Yeh records are on DUPLICATE-OVERLAP HOLD in the lock itself (AFincludestrict = 0, AFincludesensitivity = 0 on every row), so neither contributes to any synthesis, and the study count of 69 is unaffected because the pair counts once either way.",
+      "not_affected": "The numbers themselves. Both publications' arm data are present and internally coherent in the lock; what is in dispute is only which key each set is filed under.",
+      "decision_needed": "This cannot be fixed in the dashboard. Aligning dashboard/data.js with either locked sheet would simply change which sheet it contradicts. Resolving it means re-cutting Study_Master or Outcome_Data_AF_LOCK so the two agree, which is a decision about the locked master and belongs to the review team. The Identitycorrection field suggests the intended direction was Yeh 2010 = Int J Nurs Stud and Yeh 2011 = Altern Ther Health Med, which would mean re-cutting Outcome_Data_AF_LOCK — but that sheet is the one the analyses read, so it is not a change to make casually.",
+      "superseded_finding": "Two earlier readings on 2026-09-12 were wrong and are recorded so they are not mistaken for separate open issues. The first called it a transposition of arm denominators and named the arm Ns as the defective field. The second called it an inverted citation and said the arm Ns were the half that traces to the lock. Neither is right: the lock disagrees with itself, so no single field in the dashboard can be named as the wrong one."
     }
   ],
   "denominator_mismatches": [
@@ -254,6 +254,122 @@ window.COHORT_OVERLAP = {
       "analysed_n": 79,
       "randomised_n": 80,
       "explained_by_randomised": false
+    }
+  ],
+  "locked_sheet_disagreements": [
+    {
+      "study": "Yeh 2010",
+      "study_master_summary_arms": [
+        30,
+        30
+      ],
+      "af_lock_analysed_arms": [
+        [
+          33,
+          30
+        ],
+        [
+          33,
+          31
+        ]
+      ],
+      "exchanged_with": [
+        "Yeh 2011"
+      ],
+      "kind": "identity_split"
+    },
+    {
+      "study": "Yeh 2011",
+      "study_master_summary_arms": [
+        33,
+        30
+      ],
+      "af_lock_analysed_arms": [
+        [
+          30,
+          30
+        ]
+      ],
+      "exchanged_with": [
+        "Yeh 2010"
+      ],
+      "kind": "identity_split"
+    },
+    {
+      "study": "Jin 2023",
+      "study_master_summary_arms": [
+        53,
+        53
+      ],
+      "af_lock_analysed_arms": [
+        [
+          53,
+          52
+        ]
+      ],
+      "exchanged_with": [],
+      "kind": "arm_figures_differ"
+    },
+    {
+      "study": "Lu 2021",
+      "study_master_summary_arms": [
+        190,
+        198
+      ],
+      "af_lock_analysed_arms": [
+        [
+          190,
+          188
+        ],
+        [
+          198,
+          188
+        ]
+      ],
+      "exchanged_with": [],
+      "kind": "arm_figures_differ"
+    },
+    {
+      "study": "Wang 2024",
+      "study_master_summary_arms": [
+        68,
+        70
+      ],
+      "af_lock_analysed_arms": [
+        [
+          33,
+          35
+        ],
+        [
+          35,
+          35
+        ]
+      ],
+      "exchanged_with": [],
+      "kind": "arm_figures_differ"
+    },
+    {
+      "study": "Zhu 2022",
+      "study_master_summary_arms": [
+        101,
+        98
+      ],
+      "af_lock_analysed_arms": [
+        [
+          98,
+          101
+        ],
+        [
+          100,
+          101
+        ],
+        [
+          101,
+          101
+        ]
+      ],
+      "exchanged_with": [],
+      "kind": "arm_figures_differ"
     }
   ],
   "cohort_size_disagreements": [
