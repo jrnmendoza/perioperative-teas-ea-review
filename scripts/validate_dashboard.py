@@ -2476,6 +2476,9 @@ def t_interpretation_bound_to_current_evidence():
         if row:
             models[aid] = row
 
+    LEDGER = json.loads((ROOT / "09_V34_ANALYSIS" / "05_INTERPRETATION" /
+                         "interpretation_bindings.json").read_text(encoding="utf-8"))
+
     probs = []
     for rec in L.get("records", []):
         mid = rec["analysis_id"]
@@ -2497,8 +2500,19 @@ def t_interpretation_bound_to_current_evidence():
         if drift and not rec.get("stale"):
             probs.append(f"{mid}: bound evidence no longer matches the analysis "
                          f"({drift}) but the record is not marked stale")
+        # A stale record whose bound evidence MATCHES the live numbers is the
+        # normal state after an analysis is re-run: the generator rewrites the
+        # wording against the new numbers but deliberately cannot clear the flag,
+        # because only a person re-reading the prose can do that (--accept).
+        # Corrected 2026-09-12: this previously failed that state, which would have
+        # forced either accepting on the team's behalf or leaving the build red.
+        # The ledger is what distinguishes the two cases -- a flag is justified
+        # while the accepted fingerprint is behind the record's current one.
         if not drift and rec.get("stale"):
-            probs.append(f"{mid}: marked stale but its bound evidence matches the analysis")
+            accepted = (LEDGER.get("bindings", {}).get(mid) or {}).get("fingerprint")
+            if accepted and accepted == rec.get("fingerprint"):
+                probs.append(f"{mid}: marked stale although the acceptance ledger already "
+                             f"records this exact fingerprint as reviewed")
     check("Interpretation records are bound to current evidence, or are marked stale",
           not probs, "\n".join(probs))
 
@@ -4338,6 +4352,93 @@ def t_baseline_conflicts_are_surfaced_not_corrected():
     check("t_baseline_conflicts_are_surfaced_not_corrected", not probs, "; ".join(probs[:4]))
 
 
+def t_figure_only_values_are_digitized_or_refused_with_evidence():
+    """
+    The five figure-only / unconverted values, and the QC that settled them.
+
+    Two were digitized from Zhang 2018's Figure 2 and validated against the
+    seven percentage reductions the paper reports; three were refused. Both
+    outcomes have to stay honest:
+
+      * a digitized value must remain REPRODUCIBLE -- the script re-runs here and
+        must still reproduce every reported percentage, so a silent change to the
+        extraction cannot leave a validated claim standing on nothing;
+      * a digitized value must NOT have crept into a synthesis. Admitting one is
+        a review-team decision, and the workbook's instruction is addressed to
+        exactly that decision;
+      * a refusal must keep its reasoning, and every one of the five notes must
+        point at the QC document, so no one re-opens a settled question or acts
+        on a value without its provenance.
+    """
+    import subprocess
+    QC = ROOT / "07_TIERED_V33" / "03_DIGITIZATION" / "figure_only_values_QC_2026-09-12.md"
+    probs = []
+    if not QC.exists():
+        probs.append("the figure-only QC document is missing")
+
+    r = subprocess.run([sys.executable, str(ROOT / "scripts" / "digitize_zhang2018_figure2.py"),
+                        "--json"], capture_output=True, text=True, cwd=ROOT)
+    if r.returncode != 0:
+        probs.append(f"the digitization script no longer runs: {r.stderr.strip()[:200]}")
+    else:
+        payload = json.loads(r.stdout)
+        checked = [x for x in payload["results"] if "validates" in x]
+        failed = [x for x in checked if not x["validates"]]
+        if len(checked) < 7:
+            probs.append(f"only {len(checked)} of 7 reported reductions are being checked")
+        if failed:
+            probs.append(f"digitization no longer validates: "
+                         f"{[(x['outcome'], x['abs_error_pp']) for x in failed]}")
+        for name, cal in payload["calibration"].items():
+            if cal["max_tick_residual_pct_of_axis"] > 1.0:
+                probs.append(f"panel {name} calibration degraded to "
+                             f"{cal['max_tick_residual_pct_of_axis']}% of axis")
+        # The seven percentage anchors validate RATIOS between the two arms, so a
+        # uniform scale error cancels and passes them unnoticed. The absolute
+        # scale rests entirely on the axis-tick calibration, so pin it here.
+        EXPECTED_SCALE = {"a": 1.515892, "b": 0.189960, "c": 0.041673}
+        for name, want in EXPECTED_SCALE.items():
+            got = payload["calibration"].get(name, {}).get("units_per_point")
+            if got is None:
+                probs.append(f"panel {name} is no longer being calibrated")
+            elif abs(got - want) > 1e-4:
+                probs.append(f"panel {name} scale moved: {got} vs the validated {want} -- "
+                             f"the percentage anchors cannot see this, so it is checked here")
+        # And pin the absolute means the register's notes actually publish. The
+        # scale pin above catches a bad calibration; this catches a corruption
+        # applied AFTER calibration, which would leave units_per_point intact.
+        PUBLISHED = {("time to first flatus", "sham_mean"): 80.051,
+                     ("time to first flatus", "tea_mean"): 51.330,
+                     ("(not reported as a percentage)", "sham_mean"): 3.770,
+                     ("(not reported as a percentage)", "tea_mean"): 3.956}
+        got_rows = {r["outcome"]: r for r in payload["results"]}
+        for (outcome, field), want in PUBLISHED.items():
+            row = got_rows.get(outcome)
+            if not row:
+                probs.append(f"digitization no longer produces {outcome!r}")
+            elif abs(row[field] - want) > 0.01:
+                probs.append(f"{outcome} {field} is {row[field]}, not the published {want}")
+
+    # The five notes must each cite the QC document.
+    want = {("Zhang 2018", "flatus_time"), ("Zhang 2018", "pain_rest_24h"),
+            ("Wu 2016", "pain_rest_24h"), ("Liu 2015", "pain_rest_24h"),
+            ("Gao 2022", "opioid_24h")}
+    by_key = {s["key"]: s for s in STUDIES}
+    for key, outcome in sorted(want):
+        rec = ((by_key.get(key) or {}).get("outcomes") or {}).get(outcome)
+        if not rec:
+            probs.append(f"{key}/{outcome}: outcome record is gone")
+            continue
+        if "figure_only_values_QC" not in (rec.get("note") or ""):
+            probs.append(f"{key}/{outcome}: note does not cite the QC document")
+        # A digitized value must not have been quietly pooled.
+        if isinstance(rec.get("mean_diff"), (int, float)) or isinstance(rec.get("rr"), (int, float)):
+            probs.append(f"{key}/{outcome}: carries a pooled effect, but this value is "
+                         f"digitized-or-refused and has not been admitted to a synthesis")
+    check("t_figure_only_values_are_digitized_or_refused_with_evidence", not probs,
+          "; ".join(probs[:4]))
+
+
 def t_yeh_identity_is_the_adopted_convention():
     """
     DERIVED. The 2026-09-12 identity decision must hold in all three places it was
@@ -4539,6 +4640,7 @@ def main() -> int:
           t_possible_shared_cohorts_are_flagged_not_merged,
           t_baseline_conflicts_are_surfaced_not_corrected,
           t_yeh_identity_is_the_adopted_convention,
+          t_figure_only_values_are_digitized_or_refused_with_evidence,
           t_baseline_denominators_are_unique_trials,
           t_no_live_copy_calls_seventy_reports_seventy_trials,
           t_reconciliation_status_is_not_self_contradictory]),

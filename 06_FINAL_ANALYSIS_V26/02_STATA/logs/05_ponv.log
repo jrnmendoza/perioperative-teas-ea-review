@@ -1,9 +1,9 @@
 ----------------------------------------------------------------------------------------------------
       name:  <unnamed>
-       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/02_STATA/
-> logs/05_ponv.log
+       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/.claude/worktrees/festive-jenni
+> ngs-0689c3/06_FINAL_ANALYSIS_V26/02_STATA/logs/05_ponv.log
   log type:  text
- opened on:   8 Sep 2026, 08:50:27
+ opened on:  12 Sep 2026, 11:42:27
 
 . 
 . di as txt "=================================================================="
@@ -120,20 +120,24 @@ Sorted by:
 
 . 
 . * Calculate log RR and SE
-. * Continuity correction (+0.5 to all four cells, Cochrane Handbook SS10.4.4):
-. * applied ONLY to rows with a zero cell, since an untreated zero makes ln(rr)
-. * and/or se_lnrr undefined (division by zero / ln(0)). First needed by the
-. * Szmit 2021 nausea 0-24h row added 2026-09-07 (0/24 vs 4/24); no pre-existing
-. * Target D row had a zero cell before this addition.
-. gen zero_cell = (events_i == 0 | events_c == 0)
+. * Haldane-Anscombe continuity correction, applied UNIVERSALLY to every binary
+. * contrast rather than only to zero-cell tables (review team decision 2026-09-11;
+. * implemented in Stata 2026-09-12). 0.5 is added to each of the four cells of the
+. * 2x2 table, so each arm's denominator gains 1 -- events + 0.5 and non-events + 0.5.
+. *
+. * Why universally: applying it selectively puts two studies in one forest plot on
+. * different scales, and a zero cell is not the only situation in which the
+. * uncorrected estimator is biased -- sparse cells are too (Xie 2014 is 1/20).
+. *
+. * SUPERSEDED: this file previously corrected only rows where events_i or events_c
+. * was zero, and added 0.5 rather than 1 to the denominators. Both are changed here.
+. gen events_i_cc = events_i + 0.5
 
-. gen events_i_cc = events_i + 0.5 * zero_cell
+. gen events_c_cc = events_c + 0.5
 
-. gen events_c_cc = events_c + 0.5 * zero_cell
+. gen n_i_cc = n_i + 1
 
-. gen n_i_cc = n_i + 0.5 * zero_cell
-
-. gen n_c_cc = n_c + 0.5 * zero_cell
+. gen n_c_cc = n_c + 1
 
 . 
 . gen p_i = events_i_cc / n_i_cc
@@ -202,13 +206,13 @@ SE adjustment: Knapp–Hartung                        I2 (%) =    0.00
 --------------------------------------------------------------------
             Study |        exp(ES)    [95% conf. interval]  % weight
 ------------------+-------------------------------------------------
-       Zheng 2025 |          0.635       0.423       0.954     43.21
-          Lu 2021 |          0.509       0.357       0.726     56.79
+       Zheng 2025 |          0.642       0.429       0.959     43.45
+          Lu 2021 |          0.513       0.361       0.729     56.55
 ------------------+-------------------------------------------------
-       exp(theta) |          0.560       0.139       2.257
+       exp(theta) |          0.565       0.138       2.320
 --------------------------------------------------------------------
-Test of theta = 0: t(1) = -5.28                  Prob > |t| = 0.1191
-Test of homogeneity: Q = chi2(1) = 0.65            Prob > Q = 0.4210
+Test of theta = 0: t(1) = -5.13                  Prob > |t| = 0.1225
+Test of homogeneity: Q = chi2(1) = 0.68            Prob > Q = 0.4105
 
 . matrix res_ponv24 = (exp(r(theta)), exp(r(ci_lb)), exp(r(ci_ub)), r(p), r(N), r(tau2), r(I2), r(Q)
 > , r(p_Q))
@@ -244,13 +248,13 @@ SE adjustment: Knapp–Hartung                        I2 (%) =    0.00
 --------------------------------------------------------------------
             Study |        exp(ES)    [95% conf. interval]  % weight
 ------------------+-------------------------------------------------
-       Xiong 2021 |          0.542       0.343       0.854     80.41
-        Xing 2022 |          0.455       0.181       1.144     19.59
+       Xiong 2021 |          0.551       0.352       0.863     79.41
+        Xing 2022 |          0.478       0.198       1.154     20.59
 ------------------+-------------------------------------------------
-       exp(theta) |          0.523       0.216       1.267
+       exp(theta) |          0.535       0.259       1.108
 --------------------------------------------------------------------
-Test of theta = 0: t(1) = -9.30                  Prob > |t| = 0.0682
-Test of homogeneity: Q = chi2(1) = 0.11            Prob > Q = 0.7386
+Test of theta = 0: t(1) = -10.92                 Prob > |t| = 0.0581
+Test of homogeneity: Q = chi2(1) = 0.08            Prob > Q = 0.7789
 
 . matrix res_ponv48 = (exp(r(theta)), exp(r(ci_lb)), exp(r(ci_ub)), r(p), r(N), r(tau2), r(I2), r(Q)
 > , r(p_Q))
@@ -286,14 +290,14 @@ SE adjustment: Knapp–Hartung                        I2 (%) =    0.00
 --------------------------------------------------------------------
             Study |        exp(ES)    [95% conf. interval]  % weight
 ------------------+-------------------------------------------------
-        Yang 2024 |          0.600       0.397       0.907     78.02
-          Ma 2026 |          0.706       0.314       1.585     20.36
-       Szmit 2021 |          0.111       0.006       1.955      1.62
+        Yang 2024 |          0.605       0.402       0.911     77.08
+          Ma 2026 |          0.722       0.332       1.571     21.36
+       Szmit 2021 |          0.111       0.006       1.957      1.57
 ------------------+-------------------------------------------------
-       exp(theta) |          0.603       0.303       1.203
+       exp(theta) |          0.612       0.307       1.221
 --------------------------------------------------------------------
-Test of theta = 0: t(2) = -3.15                  Prob > |t| = 0.0877
-Test of homogeneity: Q = chi2(2) = 1.48            Prob > Q = 0.4765
+Test of theta = 0: t(2) = -3.06                  Prob > |t| = 0.0922
+Test of homogeneity: Q = chi2(2) = 1.54            Prob > Q = 0.4638
 
 . matrix res_naus24 = (exp(r(theta)), exp(r(ci_lb)), exp(r(ci_ub)), r(p), r(N), r(tau2), r(I2), r(Q)
 > , r(p_Q))
@@ -315,7 +319,7 @@ Test of homogeneity: Q = chi2(2) = 1.48            Prob > Q = 0.4765
 . list study events_i n_i events_c n_c rr if endpoint_stratum == "D_nausea_0-48h", clean
 
           study   events_i   n_i   events_c   n_c         rr  
-  8.   Luo 2026         24   138         53   139   .4561116  
+  8.   Luo 2026         24   138         53   139   .4612385  
 
 . 
 . * ------------------------------------------------------------------------------
@@ -348,13 +352,13 @@ SE adjustment: Knapp–Hartung                        I2 (%) =    0.00
 --------------------------------------------------------------------
             Study |        exp(ES)    [95% conf. interval]  % weight
 ------------------+-------------------------------------------------
-        Yang 2024 |          0.480       0.257       0.895     65.05
-          Ma 2026 |          0.807       0.345       1.888     34.95
+        Yang 2024 |          0.490       0.266       0.903     63.99
+          Ma 2026 |          0.819       0.362       1.849     36.01
 ------------------+-------------------------------------------------
-       exp(theta) |          0.575       0.025      13.370
+       exp(theta) |          0.590       0.026      13.447
 --------------------------------------------------------------------
-Test of theta = 0: t(1) = -2.23                  Prob > |t| = 0.2682
-Test of homogeneity: Q = chi2(1) = 0.93            Prob > Q = 0.3344
+Test of theta = 0: t(1) = -2.15                  Prob > |t| = 0.2775
+Test of homogeneity: Q = chi2(1) = 0.97            Prob > Q = 0.3238
 
 . matrix res_vom24 = (exp(r(theta)), exp(r(ci_lb)), exp(r(ci_ub)), r(p), r(N), r(tau2), r(I2), r(Q),
 >  r(p_Q))
@@ -376,7 +380,7 @@ Test of homogeneity: Q = chi2(1) = 0.93            Prob > Q = 0.3344
 . list study events_i n_i events_c n_c rr if endpoint_stratum == "D_vomiting_0-48h", clean
 
           study   events_i   n_i   events_c   n_c         rr  
- 11.   Luo 2026          9   138         27   139   .3357488  
+ 11.   Luo 2026          9   138         27   139   .3479398  
 
 . 
 . * ------------------------------------------------------------------------------
@@ -394,8 +398,8 @@ Test of homogeneity: Q = chi2(1) = 0.93            Prob > Q = 0.3344
 
 . graph export "06_FINAL_ANALYSIS_V26/04_FIGURES/forest_targetD_ponv.png", width(1800) replace
 file
-    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/04_FIGURES/fores
-    > t_targetD_ponv.png saved as PNG format
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/.claude/worktrees/festive-jennings-068
+    > 9c3/06_FINAL_ANALYSIS_V26/04_FIGURES/forest_targetD_ponv.png saved as PNG format
 
 . 
 . * ------------------------------------------------------------------------------
@@ -555,13 +559,15 @@ variable analysis_id was str13 now str15
 . replace stratum = "Nausea 0-48h (Luo 2026 alone)" in 4
 (1 real change made)
 
-. replace rr_estimate = (24/138) / (53/139) in 4
+. replace rr_estimate = (24.5/139) / (53.5/140) in 4
 (1 real change made)
 
-. replace ci_low      = exp(ln((24/138)/(53/139)) - 1.96*sqrt(1/24 - 1/138 + 1/53 - 1/139)) in 4
+. replace ci_low      = exp(ln((24.5/139)/(53.5/140)) - 1.96*sqrt(1/24.5 - 1/139 + 1/53.5 - 1/140)) 
+> in 4
 (1 real change made)
 
-. replace ci_high     = exp(ln((24/138)/(53/139)) + 1.96*sqrt(1/24 - 1/138 + 1/53 - 1/139)) in 4
+. replace ci_high     = exp(ln((24.5/139)/(53.5/140)) + 1.96*sqrt(1/24.5 - 1/139 + 1/53.5 - 1/140)) 
+> in 4
 (1 real change made)
 
 . replace p_value     = . in 4
@@ -615,13 +621,15 @@ variable model was str20 now str25
 . replace stratum = "Vomiting 0-48h (Luo 2026 alone)" in 6
 (1 real change made)
 
-. replace rr_estimate = (9/138) / (27/139) in 6
+. replace rr_estimate = (9.5/139) / (27.5/140) in 6
 (1 real change made)
 
-. replace ci_low      = exp(ln((9/138)/(27/139)) - 1.96*sqrt(1/9 - 1/138 + 1/27 - 1/139)) in 6
+. replace ci_low      = exp(ln((9.5/139)/(27.5/140)) - 1.96*sqrt(1/9.5 - 1/139 + 1/27.5 - 1/140)) in
+>  6
 (1 real change made)
 
-. replace ci_high     = exp(ln((9/138)/(27/139)) + 1.96*sqrt(1/9 - 1/138 + 1/27 - 1/139)) in 6
+. replace ci_high     = exp(ln((9.5/139)/(27.5/140)) + 1.96*sqrt(1/9.5 - 1/139 + 1/27.5 - 1/140)) in
+>  6
 (1 real change made)
 
 . replace p_value     = . in 6
@@ -646,22 +654,22 @@ file 06_FINAL_ANALYSIS_V26/03_RESULTS/results_targetD_ponv.csv saved
 >    stratum   k   rr_est~e     ci_low    ci_high    p_value       tau2         i2     q_stat       
 >                 model  
   1.     TD_PONV_0_24H   Postoperative Nausea & Vomiting (PONV)     Composite PONV 0-24h (Zheng 2025
-> , Lu 2021)   2   .5604023   .1391345   2.257175    .119129   4.06e-07    .001074   .6474992       
+> , Lu 2021)   2   .5652858   .1377271   2.320153   .1224934   1.76e-07    .000473   .6773252       
 >  REML + Hartung-Knapp  
   2.     TD_PONV_0_48H   Postoperative Nausea & Vomiting (PONV)   Composite PONV 0-48h (Xiong 2021, 
-> Xing 2022)   2   .5233747   .2161516   1.267264   .0681706   9.25e-07   .0006701   .1114011       
+> Xing 2022)   2   .5351886   .2585465   1.107835   .0581485   6.85e-08   .0000538   .0788017       
 >  REML + Hartung-Knapp  
   3.   TD_NAUSEA_0_24H   Postoperative Nausea & Vomiting (PONV)              Nausea 0-24h (Yang 2024
-> , Ma 2026)   3    .603469   .3027264   1.202983   .0877209   2.26e-08   .0000114   1.482674       
+> , Ma 2026)   3   .6118138   .3066239   1.220766    .092245   3.37e-09   1.81e-06   1.536564       
 >  REML + Hartung-Knapp  
   4.   TD_NAUSEA_0_48H   Postoperative Nausea & Vomiting (PONV)                  Nausea 0-48h (Luo 2
-> 026 alone)   1   .4561116   .2994463   .6947414          .          .          .          .   Sing
+> 026 alone)   1   .4612385   .3040974   .6995816          .          .          .          .   Sing
 > le study (Not pooled)  
   5.    TD_VOMIT_0_24H   Postoperative Nausea & Vomiting (PONV)            Vomiting 0-24h (Yang 2024
-> , Ma 2026)   2   .5754997   .0247726   13.36959   .2681651   3.73e-07   .0002578   .9317377       
+> , Ma 2026)   2   .5895854   .0258513   13.44653   .2775182   2.78e-09   2.06e-06   .9733872       
 >  REML + Hartung-Knapp  
   6.    TD_VOMIT_0_48H   Postoperative Nausea & Vomiting (PONV)                Vomiting 0-48h (Luo 2
-> 026 alone)   1   .3357488   .1639676   .6874971          .          .          .          .   Sing
+> 026 alone)   1   .3479398   .1729058   .7001623          .          .          .          .   Sing
 > le study (Not pooled)  
 
 . 
@@ -671,8 +679,8 @@ SUCCESS: Target D analyses completed and exported.
 
 . log close
       name:  <unnamed>
-       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/02_STATA/
-> logs/05_ponv.log
+       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/.claude/worktrees/festive-jenni
+> ngs-0689c3/06_FINAL_ANALYSIS_V26/02_STATA/logs/05_ponv.log
   log type:  text
- closed on:   8 Sep 2026, 08:50:28
+ closed on:  12 Sep 2026, 11:42:29
 ----------------------------------------------------------------------------------------------------

@@ -23,16 +23,21 @@ di as txt _n "=== ALL TARGET D STUDIES AND STRATA ==="
 list lock_id study endpoint_stratum include_strict include_sensitivity events_i n_i events_c n_c result_rob, clean
 
 * Calculate log RR and SE
-* Continuity correction (+0.5 to all four cells, Cochrane Handbook SS10.4.4):
-* applied ONLY to rows with a zero cell, since an untreated zero makes ln(rr)
-* and/or se_lnrr undefined (division by zero / ln(0)). First needed by the
-* Szmit 2021 nausea 0-24h row added 2026-09-07 (0/24 vs 4/24); no pre-existing
-* Target D row had a zero cell before this addition.
-gen zero_cell = (events_i == 0 | events_c == 0)
-gen events_i_cc = events_i + 0.5 * zero_cell
-gen events_c_cc = events_c + 0.5 * zero_cell
-gen n_i_cc = n_i + 0.5 * zero_cell
-gen n_c_cc = n_c + 0.5 * zero_cell
+* Haldane-Anscombe continuity correction, applied UNIVERSALLY to every binary
+* contrast rather than only to zero-cell tables (review team decision 2026-09-11;
+* implemented in Stata 2026-09-12). 0.5 is added to each of the four cells of the
+* 2x2 table, so each arm's denominator gains 1 -- events + 0.5 and non-events + 0.5.
+*
+* Why universally: applying it selectively puts two studies in one forest plot on
+* different scales, and a zero cell is not the only situation in which the
+* uncorrected estimator is biased -- sparse cells are too (Xie 2014 is 1/20).
+*
+* SUPERSEDED: this file previously corrected only rows where events_i or events_c
+* was zero, and added 0.5 rather than 1 to the denominators. Both are changed here.
+gen events_i_cc = events_i + 0.5
+gen events_c_cc = events_c + 0.5
+gen n_i_cc = n_i + 1
+gen n_c_cc = n_c + 1
 
 gen p_i = events_i_cc / n_i_cc
 gen p_c = events_c_cc / n_c_cc
@@ -160,9 +165,9 @@ replace model       = "REML + Hartung-Knapp" in 3
 
 replace analysis_id = "TD_NAUSEA_0_48H" in 4
 replace stratum = "Nausea 0-48h (Luo 2026 alone)" in 4
-replace rr_estimate = (24/138) / (53/139) in 4
-replace ci_low      = exp(ln((24/138)/(53/139)) - 1.96*sqrt(1/24 - 1/138 + 1/53 - 1/139)) in 4
-replace ci_high     = exp(ln((24/138)/(53/139)) + 1.96*sqrt(1/24 - 1/138 + 1/53 - 1/139)) in 4
+replace rr_estimate = (24.5/139) / (53.5/140) in 4
+replace ci_low      = exp(ln((24.5/139)/(53.5/140)) - 1.96*sqrt(1/24.5 - 1/139 + 1/53.5 - 1/140)) in 4
+replace ci_high     = exp(ln((24.5/139)/(53.5/140)) + 1.96*sqrt(1/24.5 - 1/139 + 1/53.5 - 1/140)) in 4
 replace p_value     = . in 4
 replace k           = 1 in 4
 replace model       = "Single study (Not pooled)" in 4
@@ -181,9 +186,9 @@ replace model       = "REML + Hartung-Knapp" in 5
 
 replace analysis_id = "TD_VOMIT_0_48H" in 6
 replace stratum = "Vomiting 0-48h (Luo 2026 alone)" in 6
-replace rr_estimate = (9/138) / (27/139) in 6
-replace ci_low      = exp(ln((9/138)/(27/139)) - 1.96*sqrt(1/9 - 1/138 + 1/27 - 1/139)) in 6
-replace ci_high     = exp(ln((9/138)/(27/139)) + 1.96*sqrt(1/9 - 1/138 + 1/27 - 1/139)) in 6
+replace rr_estimate = (9.5/139) / (27.5/140) in 6
+replace ci_low      = exp(ln((9.5/139)/(27.5/140)) - 1.96*sqrt(1/9.5 - 1/139 + 1/27.5 - 1/140)) in 6
+replace ci_high     = exp(ln((9.5/139)/(27.5/140)) + 1.96*sqrt(1/9.5 - 1/139 + 1/27.5 - 1/140)) in 6
 replace p_value     = . in 6
 replace k           = 1 in 6
 replace model       = "Single study (Not pooled)" in 6

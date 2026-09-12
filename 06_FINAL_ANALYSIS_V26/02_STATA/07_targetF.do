@@ -90,11 +90,25 @@ di as txt _n "=== RESCUE OPIOID REQUIREMENT STUDIES (BINARY) ==="
 list study comparison_id events_i n_i events_c n_c result_rob include_strict, clean
 
 * Calculate log RR and SE
-gen p_i = events_i / n_i
-gen p_c = events_c / n_c
+* Haldane-Anscombe continuity correction, applied UNIVERSALLY to every binary
+* contrast rather than only to zero-cell tables (review team decision 2026-09-11;
+* implemented in Stata 2026-09-12). 0.5 is added to each of the four cells of the
+* 2x2 table, so each arm's denominator gains 1 -- events + 0.5 and non-events + 0.5.
+*
+* Why universally: applying it selectively puts two studies in one forest plot on
+* different scales, and a zero cell is not the only situation in which the
+* uncorrected estimator is biased -- sparse cells are too (Xie 2014 is 1/20).
+*
+* SUPERSEDED: this file previously used the raw events with no correction at all.
+gen events_i_cc = events_i + 0.5
+gen events_c_cc = events_c + 0.5
+gen n_i_cc = n_i + 1
+gen n_c_cc = n_c + 1
+gen p_i = events_i_cc / n_i_cc
+gen p_c = events_c_cc / n_c_cc
 gen rr = p_i / p_c
 gen lnrr = ln(rr)
-gen se_lnrr = sqrt((1/events_i - 1/n_i) + (1/events_c - 1/n_c))
+gen se_lnrr = sqrt((1/events_i_cc - 1/n_i_cc) + (1/events_c_cc - 1/n_c_cc))
 
 * Model 3A: Strict Rescue Opioid (k=4: Xie 2014, Yu 2020, Tu 2024, Zhou 2025)
 meta set lnrr se_lnrr if include_strict == 1, studylabel(study) eslabel("Risk Ratio (log scale)")

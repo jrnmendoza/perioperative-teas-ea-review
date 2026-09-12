@@ -20676,10 +20676,11 @@ window.STUDIES_DATA = [
     },
     "outcomes": {
       "opioid_24h": {
-        "status": "Conditional — Median/IQR, not pooled",
-        "note": "0–24 h analgesic-pump sufentanil dose reported as median (IQR): 33 (0–50) µg TEAS vs 30 (0–60) µg sham, P=0.197. Not converted to mean/SD in this pass; not entered into any MME pool.",
+        "status": "Median/IQR — conversion refused as invalid, not pooled",
+        "note": "0-24 h analgesic-pump sufentanil reported as median (IQR): 33 (0-50) µg TEAS vs 30 (0-60) µg sham, P=0.197. Conversion to mean/SD refused 2026-09-12 and this is not a digitisation question — the value is tabulated. The paper's own preceding row shows only 597/827 (72.2%) and 588/828 (71.0%) of patients received an analgesic pump at all, so ~28% used none; that spike at zero is why Q1 = 0 in both arms and it breaks the normality the Wan et al. estimators assume. Applying them would give mean 27.67 ± 37.13 SD and 30.00 ± 44.56 SD, placing roughly 23% of patients below zero micrograms. The median, IQR and P value stand as source truth; the row stays out of every MME pool. QC: 07_TIERED_V33/03_DIGITIZATION/figure_only_values_QC_2026-09-12.md",
         "mean_diff": null,
-        "se": null
+        "se": null,
+        "digitization_qc": "07_TIERED_V33/03_DIGITIZATION/figure_only_values_QC_2026-09-12.md"
       },
       "opioid_48h": null,
       "opioid_72h": null,
@@ -20886,8 +20887,8 @@ window.STUDIES_DATA = [
       "opioid_48h": null,
       "opioid_72h": null,
       "pain_rest_24h": {
-        "status": "Graph-only, not pooled",
-        "note": "VAS at rest/cough reported lower with true TAES than both comparators from 6-60 h, but exact values are figure-only (Figure 1) and not digitized in this pass.",
+        "status": "Graph-only — digitisation refused, no validation anchor",
+        "note": "VAS at rest/cough reported lower with true TAES than both comparators from 6-60 h, but exact values are figure-only (Figure 1). Digitisation refused 2026-09-12: the paper reports no VAS number anywhere in its text, so there is nothing to validate a digitisation against. Mechanically checked — 27 'mean ± SD' patterns appear in the paper, none within 200 characters of a pain mention. Gu 2019 shows why an anchor is required: it had three, and only because of them was its figure-vs-text discrepancy detectable. Requires author contact. QC: 07_TIERED_V33/03_DIGITIZATION/figure_only_values_QC_2026-09-12.md",
         "d1": "NR",
         "d2": "NR",
         "d3": "NR",
@@ -20896,7 +20897,8 @@ window.STUDIES_DATA = [
         "overall": "NR",
         "outcome_name": "",
         "timepoint": "",
-        "rationale": ""
+        "rationale": "",
+        "digitization_qc": "07_TIERED_V33/03_DIGITIZATION/figure_only_values_QC_2026-09-12.md"
       },
       "pain_movement_24h": null,
       "ponv_24h": {
@@ -20992,8 +20994,8 @@ window.STUDIES_DATA = [
       "opioid_48h": null,
       "opioid_72h": null,
       "pain_rest_24h": {
-        "status": "Graph-only, not pooled",
-        "note": "POD1 pain reported lower with TEAS (P<0.001) but exact mean/SD are graph-only and not digitized in this pass.",
+        "status": "Graph-only — digitisation refused, no validation anchor",
+        "note": "POD1 pain reported lower with TEAS (P<0.001) but exact mean/SD are graph-only (figure 2). Digitisation refused 2026-09-12 on the same ground as Wu 2016: the paper reports no pain number in its text — 34 'mean ± SD' patterns appear, none within 200 characters of a pain mention — so a digitisation could not be validated. Requires author contact. QC: 07_TIERED_V33/03_DIGITIZATION/figure_only_values_QC_2026-09-12.md",
         "d1": "NR",
         "d2": "NR",
         "d3": "NR",
@@ -21002,7 +21004,8 @@ window.STUDIES_DATA = [
         "overall": "NR",
         "outcome_name": "",
         "timepoint": "",
-        "rationale": ""
+        "rationale": "",
+        "digitization_qc": "07_TIERED_V33/03_DIGITIZATION/figure_only_values_QC_2026-09-12.md"
       },
       "pain_movement_24h": null,
       "ponv_24h": {
@@ -21194,8 +21197,8 @@ window.STUDIES_DATA = [
       "opioid_48h": null,
       "opioid_72h": null,
       "pain_rest_24h": {
-        "status": "Graph-only, not pooled per workbook rule",
-        "note": "VAS pain reported lower with TEA on POD2 (-50.8%, P<0.01) and POD3 (-64.9%, P<0.001), but exact means/SEs are Figure-2 graph-only. Not digitized in this pass per the source workbook's explicit instruction.",
+        "status": "Digitised 2026-09-12 — panel validated, pair unanchored; awaiting review-team admission",
+        "note": "VAS pain reported lower with TEA on POD2 (-50.8%, P<0.01) and POD3 (-64.9%, P<0.001); exact values shown only in Figure 2c. Formally digitised from vector coordinates: at POD1 — the timepoint Target C needs — sham-TEA 3.77 ± 0.48 SE vs TEA 3.96 ± 0.48 SE, n=21 per arm (SD 2.18 both arms). Note the direction: at POD1 TEA is slightly WORSE than sham, consistent with the paper reporting reductions only from POD2. The panel validates at POD2 (0.10 pp) and POD3 (0.54 pp), but the POD1 pair has no reported percentage of its own to check against. NOT entered into Target C. QC: 07_TIERED_V33/03_DIGITIZATION/figure_only_values_QC_2026-09-12.md",
         "d1": "NR",
         "d2": "NR",
         "d3": "NR",
@@ -21204,15 +21207,17 @@ window.STUDIES_DATA = [
         "overall": "NR",
         "outcome_name": "",
         "timepoint": "",
-        "rationale": ""
+        "rationale": "",
+        "digitization_qc": "07_TIERED_V33/03_DIGITIZATION/figure_only_values_QC_2026-09-12.md"
       },
       "pain_movement_24h": null,
       "ponv_24h": null,
       "flatus_time": {
-        "status": "Graph-only, not pooled per workbook rule",
-        "note": "Time to first flatus reported 35.9% shorter with TEA (P<0.001), but exact means/SEs are Figure-2 graph-only. Not digitized in this pass.",
+        "status": "Digitised and validated 2026-09-12 — awaiting review-team admission",
+        "note": "Time to first flatus reported 35.9% shorter with TEA (P<0.001), exact values shown only in Figure 2a. Formally digitised from the PDF's VECTOR path coordinates (not visually inferred, which the workbook forbids): sham-TEA 80.05 ± 4.40 SE vs TEA 51.33 ± 2.78 SE hours, n=21 per arm, giving SD 20.15 vs 12.74. The extraction reproduces all seven percentage reductions the paper reports, this one to within 0.02 percentage points. NOT entered into Target E: admitting a digitised study to a locked synthesis is a review-team decision. QC: 07_TIERED_V33/03_DIGITIZATION/figure_only_values_QC_2026-09-12.md",
         "mean_diff": null,
-        "se": null
+        "se": null,
+        "digitization_qc": "07_TIERED_V33/03_DIGITIZATION/figure_only_values_QC_2026-09-12.md"
       },
       "hospital_stay": {
         "status": "Graph-only, not pooled per workbook rule",

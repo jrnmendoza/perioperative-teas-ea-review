@@ -2959,12 +2959,12 @@ const STATA_MASTER_RESULTS = {
     comparator: "Sham / Control",
     k: 2,
     n: 463,
-    mdText: "RR 0.56 [0.14, 2.26]",
-    pVal: "p = 0.1191",
+    mdText: "RR 0.56 [0.14, 2.32]",
+    pVal: "p = 0.1225",
     controlRisk: "286 per 1,000 patients (28.6%)",
     grade: "Low",
     badgeClass: "grade-badge-low",
-    downgrade: "Downgraded 2 levels for imprecision (k=2, small events, 95% KH CI crosses 1.0: 0.14 to 2.26; Zheng 2025, Lu 2021).",
+    downgrade: "Downgraded 2 levels for imprecision (k=2, small events, 95% KH CI crosses 1.0: 0.14 to 2.32; Zheng 2025, Lu 2021).",
     robStatus: "Some concerns"
   },
   "AN-06-TARGET-D-48": {
@@ -2976,8 +2976,8 @@ const STATA_MASTER_RESULTS = {
     comparator: "Sham / Control",
     k: 2,
     n: 120,
-    mdText: "RR 0.52 [0.22, 1.27]",
-    pVal: "p = 0.0682",
+    mdText: "RR 0.52 [0.26, 1.11]",
+    pVal: "p = 0.0581",
     controlRisk: "233 per 1,000 patients (23.3%)",
     grade: "Low",
     badgeClass: "grade-badge-low",
@@ -3027,12 +3027,12 @@ const STATA_MASTER_RESULTS = {
     comparator: "Sham / Control",
     k: 4,
     n: 312,
-    mdText: "RR 0.50 [0.34, 0.75]",
-    pVal: "p = 0.0119",
+    mdText: "RR 0.52 [0.37, 0.73]",
+    pVal: "p = 0.0087",
     controlRisk: "384 per 1,000 patients (38.4%)",
     grade: "Moderate",
     badgeClass: "grade-badge-mod",
-    downgrade: "Downgraded 1 level for potential risk of bias; consistency was high (I² = 0.0%, τ² = 0.00, p = 0.0119). Trials: Xie 2014, Yu 2020, Tu 2024, Zhou 2025.",
+    downgrade: "Downgraded 1 level for potential risk of bias; consistency was high (I² = 0.0%, τ² = 0.00, p = 0.0087). Trials: Xie 2014, Yu 2020, Tu 2024, Zhou 2025.",
     robStatus: "Some concerns / High RoB"
   }
 };

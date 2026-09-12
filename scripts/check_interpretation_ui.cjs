@@ -167,20 +167,48 @@ const SITE = PORT ? `http://localhost:${PORT}/index.html`
   checks += 2;
 
   // ── 8. stale records are shown behind a warning, never as current ───────
+  // Read textContent, not innerText, and match the row id by prefix.
+  //
+  // Two reasons, both found on 2026-09-12 when the first records actually went
+  // stale (the binary models re-run under the universal continuity correction).
+  // Until then the stale count was 0 and this block asserted 0 === 0, so neither
+  // problem could show:
+  //   * the overlay is opt-in and its rows start hidden, and innerText of a
+  //     hidden element is "" -- so every banner read as absent even though it
+  //     was rendered;
+  //   * the legacy Target A-F analyses render into `il-row-<id>-sof`, not
+  //     `il-row-<id>`, so an exact-id lookup found nothing for exactly the
+  //     records most likely to go stale.
+  // The legacy Target A-F records render inside the GRADE Summary-of-Findings
+  // table on the Evidence tab, so that tab has to be rendered before they exist
+  // in the DOM at all. With the lens already on, switching there is enough.
+  const tabBeforeStaleAudit = await page.evaluate(() => window.activeTab);
+  await page.evaluate(() => window.switchTab('evidence'));
+  await page.waitForTimeout(150);
+
   const staleAudit = await page.evaluate(() => {
     const recs = window.INTERPRETATION_LAYER.records || [];
     const stale = recs.filter(r => r.stale);
+    const WARN = /Interpretation may be outdated/;
+    const rowFor = id => document.getElementById(`il-row-${id}`)
+                      || document.getElementById(`il-row-${id}-sof`)
+                      || document.getElementById(`il-row-${id}-tiere`);
     return {
       count: stale.length,
       allWarned: stale.every(r => {
-        const row = document.getElementById(`il-row-${r.analysis_id}`);
-        return row && /Interpretation may be outdated/.test(row.innerText);
+        const row = rowFor(r.analysis_id);
+        return Boolean(row) && WARN.test(row.textContent);
       }),
-      bannerCount: document.querySelectorAll('.il-detail-row').length
-        && [...document.querySelectorAll('.il-detail-row')]
-             .filter(r => /Interpretation may be outdated/.test(r.innerText)).length,
+      missing: stale.filter(r => !rowFor(r.analysis_id)).map(r => r.analysis_id),
+      bannerCount: [...document.querySelectorAll('.il-detail-row')]
+        .filter(r => WARN.test(r.textContent)).length,
     };
   });
+  assert.deepStrictEqual(staleAudit.missing, [],
+    `stale records with no rendered row: ${staleAudit.missing.join(', ')}`);
+  // Leave the page as it was found: later checks assume their own tab.
+  await page.evaluate(t => window.switchTab(t), tabBeforeStaleAudit);
+  await page.waitForTimeout(150);
   assert.strictEqual(staleAudit.bannerCount, staleAudit.count,
     `${staleAudit.bannerCount} stale warnings rendered for ${staleAudit.count} stale records`);
   if (staleAudit.count) {

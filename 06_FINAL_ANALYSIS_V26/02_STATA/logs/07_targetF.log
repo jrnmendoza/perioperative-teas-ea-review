@@ -1,9 +1,9 @@
 ----------------------------------------------------------------------------------------------------
       name:  <unnamed>
-       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/02_STATA/
-> logs/07_targetF.log
+       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/.claude/worktrees/festive-jenni
+> ngs-0689c3/06_FINAL_ANALYSIS_V26/02_STATA/logs/07_targetF.log
   log type:  text
- opened on:   8 Sep 2026, 08:50:28
+ opened on:  12 Sep 2026, 11:42:55
 
 . 
 . di as txt "=================================================================="
@@ -227,8 +227,8 @@ Test of homogeneity: Q = chi2(6) = 22.90           Prob > Q = 0.0008
 . graph export "06_FINAL_ANALYSIS_V26/04_FIGURES/forest_targetF_intraop_remi.png", width(1800) repla
 > ce
 file
-    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/04_FIGURES/fores
-    > t_targetF_intraop_remi.png saved as PNG format
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/.claude/worktrees/festive-jennings-068
+    > 9c3/06_FINAL_ANALYSIS_V26/04_FIGURES/forest_targetF_intraop_remi.png saved as PNG format
 
 . 
 . restore
@@ -382,15 +382,33 @@ Test of homogeneity: Q = chi2(1) = 3.20             Prob > Q = 0.0737
 
 . 
 . * Calculate log RR and SE
-. gen p_i = events_i / n_i
+. * Haldane-Anscombe continuity correction, applied UNIVERSALLY to every binary
+. * contrast rather than only to zero-cell tables (review team decision 2026-09-11;
+. * implemented in Stata 2026-09-12). 0.5 is added to each of the four cells of the
+. * 2x2 table, so each arm's denominator gains 1 -- events + 0.5 and non-events + 0.5.
+. *
+. * Why universally: applying it selectively puts two studies in one forest plot on
+. * different scales, and a zero cell is not the only situation in which the
+. * uncorrected estimator is biased -- sparse cells are too (Xie 2014 is 1/20).
+. *
+. * SUPERSEDED: this file previously used the raw events with no correction at all.
+. gen events_i_cc = events_i + 0.5
 
-. gen p_c = events_c / n_c
+. gen events_c_cc = events_c + 0.5
+
+. gen n_i_cc = n_i + 1
+
+. gen n_c_cc = n_c + 1
+
+. gen p_i = events_i_cc / n_i_cc
+
+. gen p_c = events_c_cc / n_c_cc
 
 . gen rr = p_i / p_c
 
 . gen lnrr = ln(rr)
 
-. gen se_lnrr = sqrt((1/events_i - 1/n_i) + (1/events_c - 1/n_c))
+. gen se_lnrr = sqrt((1/events_i_cc - 1/n_i_cc) + (1/events_c_cc - 1/n_c_cc))
 
 . 
 . * Model 3A: Strict Rescue Opioid (k=4: Xie 2014, Yu 2020, Tu 2024, Zhou 2025)
@@ -435,15 +453,15 @@ SE adjustment: Knapp–Hartung                        I2 (%) =    0.00
 --------------------------------------------------------------------
             Study |        exp(ES)    [95% conf. interval]  % weight
 ------------------+-------------------------------------------------
-         Xie 2014 |          0.167       0.022       1.262      3.44
-          Yu 2020 |          0.542       0.347       0.847     70.58
-          Tu 2024 |          0.509       0.134       1.937      7.88
-        Zhou 2025 |          0.471       0.195       1.138     18.11
+         Xie 2014 |          0.231       0.043       1.225      4.75
+          Yu 2020 |          0.551       0.355       0.855     68.38
+          Tu 2024 |          0.548       0.157       1.908      8.50
+        Zhou 2025 |          0.491       0.210       1.148     18.37
 ------------------+-------------------------------------------------
-       exp(theta) |          0.505       0.340       0.750
+       exp(theta) |          0.517       0.368       0.728
 --------------------------------------------------------------------
-Test of theta = 0: t(3) = -5.49                  Prob > |t| = 0.0119
-Test of homogeneity: Q = chi2(3) = 1.27            Prob > Q = 0.7361
+Test of theta = 0: t(3) = -6.15                  Prob > |t| = 0.0087
+Test of homogeneity: Q = chi2(3) = 1.00            Prob > Q = 0.8013
 
 . matrix res_f_rescue_strict = (exp(r(theta)), exp(r(ci_lb)), exp(r(ci_ub)), r(p), r(N), r(tau2), r(
 > I2), r(Q), r(p_Q))
@@ -490,16 +508,16 @@ SE adjustment: Knapp–Hartung                        I2 (%) =    0.00
 --------------------------------------------------------------------
             Study |        exp(ES)    [95% conf. interval]  % weight
 ------------------+-------------------------------------------------
-         Xie 2014 |          0.167       0.022       1.262      3.15
-          Yu 2020 |          0.542       0.347       0.847     64.81
-          Tu 2024 |          0.509       0.134       1.937      7.23
-  Liu 2026 (burn) |          0.375       0.107       1.319      8.17
-        Zhou 2025 |          0.471       0.195       1.138     16.63
+         Xie 2014 |          0.231       0.043       1.225      4.33
+          Yu 2020 |          0.551       0.355       0.855     62.38
+          Tu 2024 |          0.548       0.157       1.908      7.75
+  Liu 2026 (burn) |          0.412       0.127       1.330      8.78
+        Zhou 2025 |          0.491       0.210       1.148     16.76
 ------------------+-------------------------------------------------
-       exp(theta) |          0.493       0.362       0.671
+       exp(theta) |          0.507       0.390       0.659
 --------------------------------------------------------------------
-Test of theta = 0: t(4) = -6.37                  Prob > |t| = 0.0031
-Test of homogeneity: Q = chi2(4) = 1.47            Prob > Q = 0.8324
+Test of theta = 0: t(4) = -7.20                  Prob > |t| = 0.0020
+Test of homogeneity: Q = chi2(4) = 1.13            Prob > Q = 0.8890
 
 . matrix res_f_rescue_all = (exp(r(theta)), exp(r(ci_lb)), exp(r(ci_ub)), r(p), r(N), r(tau2), r(I2)
 > , r(Q), r(p_Q))
@@ -519,8 +537,8 @@ Test of homogeneity: Q = chi2(4) = 1.47            Prob > Q = 0.8324
 . graph export "06_FINAL_ANALYSIS_V26/04_FIGURES/forest_targetF_rescue_opioid.png", width(1800) repl
 > ace
 file
-    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/04_FIGURES/fores
-    > t_targetF_rescue_opioid.png saved as PNG format
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/.claude/worktrees/festive-jennings-068
+    > 9c3/06_FINAL_ANALYSIS_V26/04_FIGURES/forest_targetF_rescue_opioid.png saved as PNG format
 
 . 
 . restore
@@ -964,12 +982,12 @@ file 06_FINAL_ANALYSIS_V26/03_RESULTS/results_targetF_exploratory.csv saved
 > 31.01883   68.73978   3.198953          MD mg, REML + Hartung-Knapp                Strict delivere
 > d morphine mass  
   3.     TF_RESCUE_OPIOID_STRICT              Rescue opioid requirement             Strict binary re
-> scue (Xie 2014, Yu 2020, Tu 2024, Zhou 2025)   4    .5047002    .3395038    .7502782   .0118979   
-> 3.65e-07   .0001532   1.270618             RR, REML + Hartung-Knapp              Strict binary res
+> scue (Xie 2014, Yu 2020, Tu 2024, Zhou 2025)   4    .5174206     .367923    .7276633   .0086508   
+> 2.38e-07   .0001127   .9997923             RR, REML + Hartung-Knapp              Strict binary res
 > cue requirement  
   4.        TF_RESCUE_OPIOID_ALL              Rescue opioid requirement                             
->  All binary rescue (including Liu 2026 burn)   5    .4925974    .3618429    .6706008   .0031096   
-> 6.37e-07   .0002552   1.467359             RR, REML + Hartung-Knapp                    All reporte
+>  All binary rescue (including Liu 2026 burn)   5     .507148    .3902915    .6589923   .0019748   
+> 5.73e-07   .0002586   1.132755             RR, REML + Hartung-Knapp                    All reporte
 > d binary rescue  
   5.          TF_PCA_DEMANDS_SMD           PCA demands / button presses                           PC
 > A button presses/demands across trials (SMD)   8    -1.26859   -2.774055    .2368741   .0865629   
@@ -983,8 +1001,8 @@ SUCCESS: Target F analyses completed and exported.
 
 . log close
       name:  <unnamed>
-       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/02_STATA/
-> logs/07_targetF.log
+       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/.claude/worktrees/festive-jenni
+> ngs-0689c3/06_FINAL_ANALYSIS_V26/02_STATA/logs/07_targetF.log
   log type:  text
- closed on:   8 Sep 2026, 08:50:29
+ closed on:  12 Sep 2026, 11:42:57
 ----------------------------------------------------------------------------------------------------

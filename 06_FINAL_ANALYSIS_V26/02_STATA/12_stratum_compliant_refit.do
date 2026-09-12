@@ -103,15 +103,15 @@ keep if endpoint_stratum == "D_PONV_0-48h"
 merge m:1 study using `assignD', keep(master match) nogen ///
     keepusing(modality comparator_class)
 
-* Same continuity handling as 05_ponv.do, with the arithmetic corrected:
-* adding 0.5 to all four cells of a 2x2 table raises each ARM TOTAL by 1.0,
-* not by 0.5. The original raised each total by 0.5, which leaves the risk
-* ratio unchanged when denominators are equal but perturbs its variance.
-gen zero_cell = (events_i == 0 | events_c == 0)
-gen ei_cc = events_i + 0.5 * zero_cell
-gen ec_cc = events_c + 0.5 * zero_cell
-gen ni_cc = n_i + 1.0 * zero_cell
-gen nc_cc = n_c + 1.0 * zero_cell
+* Haldane-Anscombe continuity correction, applied UNIVERSALLY (review team
+* decision 2026-09-11; implemented in Stata 2026-09-12), matching 05_ponv.do.
+* Adding 0.5 to all four cells of a 2x2 table raises each ARM TOTAL by 1.0, not
+* by 0.5 -- this file already had that arithmetic right; what changes here is
+* that the correction is no longer restricted to zero-cell rows.
+gen ei_cc = events_i + 0.5
+gen ec_cc = events_c + 0.5
+gen ni_cc = n_i + 1.0
+gen nc_cc = n_c + 1.0
 gen rr_  = (ei_cc / ni_cc) / (ec_cc / nc_cc)
 gen lnrr_ = ln(rr_)
 gen se_lnrr_ = sqrt((1/ei_cc - 1/ni_cc) + (1/ec_cc - 1/nc_cc))
