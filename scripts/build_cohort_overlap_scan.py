@@ -334,17 +334,30 @@ ADJUDICATED = {
 # describe. That is recorded as a property of the linked pair, not of either report.
 COHORT_SIZE_DISAGREEMENTS = [{
     "studies": ["Yeh 2010", "Yeh 2011"],
-    "summary": "The two reports of this trial state different cohort sizes.",
-    "detail": "Int J Nurs Stud 2011 shows 99 assessed for eligibility, 90 meeting inclusion "
-              "criteria, and randomisation to 30 / 30 / 30. Altern Ther Health Med 2010 "
-              "states \"Ninety-nine patients undergoing lumbar spinal surgery were randomly "
-              "assigned to one of three groups\" with group sizes 33 / 30 / 31. Whether 90 or "
-              "99 were randomised cannot be settled from the two papers, so neither figure is "
-              "used as the trial's randomised N. Stated by paper rather than by register key, "
-              "because which key names which paper is itself in question \u2014 see the "
-              "attribution conflict above.",
-    "affects": "Descriptive participant totals only. Neither report contributes arm-level "
-               "data to any synthesis, so no effect estimate depends on this.",
+    "status": "adjudicated",
+    "adjudicated_on": "2026-09-12",
+    "summary": "The two reports of this trial state different cohort sizes, and one of them "
+               "disagrees with itself.",
+    "detail": "Yeh 2011 (Int J Nurs Stud 2011) shows 99 assessed for eligibility, 90 meeting "
+              "inclusion criteria, and randomisation to 30 / 30 / 30. Yeh 2010 (Altern Ther "
+              "Health Med 2010) states \"Ninety-nine patients undergoing lumbar spinal surgery "
+              "were randomly assigned to one of three groups\" \u2014 but its own Table 2 gives "
+              "groups of 33 / 30 / 31, which sum to 94, not 99. So the 99 is contradicted "
+              "inside the paper that prints it, and 90 is contradicted by the companion.",
+    "verdict": "Unresolvable from the two publications, and deliberately left so. Whether 90, 94 "
+               "or 99 were randomised cannot be established without the trial's own records, and "
+               "choosing one would be inventing it.",
+    "why_nothing_depends_on_it": "No whole-trial randomised N is published for this trial in "
+                                 "either record, so nothing in the review rests on the figure. "
+                                 "Yeh 2011 carries a randomised denominator of 30 / 30 for the "
+                                 "pairwise contrast the review uses, which its flow diagram "
+                                 "states directly and which is not in dispute; Yeh 2010 carries "
+                                 "none. Both records are on DUPLICATE-OVERLAP HOLD in the lock "
+                                 "(include_strict = include_sensitivity = 0 on every row), so no "
+                                 "synthesis reads either.",
+    "affects": "Descriptive participant totals only, and not even those: the review's analysed "
+               "total counts this trial once, through Yeh 2010's 63.",
+    "record": "05_study_linkage/cohorts/yeh_lumbar_spinal_surgery.md",
 }]
 
 
@@ -522,13 +535,24 @@ def build() -> dict:
 
 def locked_sheet_disagreements() -> list[dict]:
     """
-    Where the two locked sheets describe the same study with different arm sizes.
+    Where Study_Master describes a study with arm sizes Outcome_Data_AF_LOCK does
+    not have.
 
-    Study_Master carries a prose result summary per study; Outcome_Data_AF_LOCK
-    carries the arm-level data the analyses actually read. When the "(n=NN)"
-    figures in the summary match no analysed pair in AF_LOCK, the two sheets are
-    describing different things under one key. That is how the Yeh identity split
-    became visible without opening a PDF, and it is cheap to keep watching.
+    Study_Master carries a prose result summary per study; AF_LOCK carries the
+    arm-level data the analyses read. Every "(n = ...)" in the summary should be an
+    arm size AF_LOCK also knows about. When one is not, the two sheets are
+    describing different things under one key.
+
+    MULTI-ARM AWARE. An earlier version took the FIRST TWO "(n = ...)" as an
+    intervention/comparator pair and required that exact pair in AF_LOCK. For a
+    multi-arm trial the summary lists the active arms consecutively, so the first
+    two are two interventions, and the check flagged four perfectly consistent
+    trials: Zhu 2022 (four groups), Lu 2021 and Jin 2023 (three each) and Wang 2024
+    (two risk strata, pooled in the summary). All four were verified against their
+    source publications on 2026-09-12 and are correct.
+
+    Pooled figures are allowed too: Wang 2024's summary reports 68 and 70 for
+    strata AF_LOCK holds as 33 + 35 and 35 + 35.
 
     Reported, never reconciled here: choosing which sheet is right is a decision
     about the locked master.
@@ -537,33 +561,57 @@ def locked_sheet_disagreements() -> list[dict]:
     sm_path, af_path = SHEETS / "Study_Master.csv", SHEETS / "Outcome_Data_AF_LOCK.csv"
     if not sm_path.exists() or not af_path.exists():
         return []
-    analysed: dict[str, set] = {}
+
+    arms: dict[str, set[int]] = {}
+    pairs: dict[str, set] = {}
     for r in csv.DictReader(af_path.open(encoding="utf-8-sig")):
+        key = r["Canonicalstudy"]
+        got = []
+        for field in ("Analyzednintervention", "Analyzedncomparator",
+                      "Randomizednintervention", "Randomizedncomparator"):
+            try:
+                got.append(int(float(r[field])))
+            except (ValueError, TypeError, KeyError):
+                pass
+        arms.setdefault(key, set()).update(got)
         try:
-            analysed.setdefault(r["Canonicalstudy"], set()).add(
+            pairs.setdefault(key, set()).add(
                 (int(float(r["Analyzednintervention"])), int(float(r["Analyzedncomparator"]))))
         except (ValueError, TypeError, KeyError):
             pass
 
-    out = []
-    summaries = {}
+    summaries: dict[str, list[int]] = {}
     for r in csv.DictReader(sm_path.open(encoding="utf-8-sig")):
         key = r.get("Canonicalstudy") or ""
-        ns = [int(x) for x in re.findall(r"\(n\s*=\s*(\d+)\)", r.get("Candidatesourceresultsummary") or "")][:2]
-        if len(ns) == 2:
-            summaries[key] = tuple(ns)
-    for key, pair in summaries.items():
-        if key not in analysed or pair in analysed[key]:
+        ns = [int(x) for x in
+              re.findall(r"\(n\s*=\s*(\d+)\)", r.get("Candidatesourceresultsummary") or "")]
+        if ns:
+            summaries[key] = ns
+
+    # An unaccounted figure is the signal; a matching exchange is the EXPLANATION
+    # for one. Exchange on its own is not evidence -- two trials with the same arm
+    # sizes match by coincidence, and testing for it alone flagged eleven unrelated
+    # pairs. The Yeh split was found by the conjunction, and one row naming both
+    # studies is enough to act on.
+    out = []
+    for key, ns in summaries.items():
+        known = arms.get(key)
+        if not known:
             continue
-        # Exchanged with another key, or merely different? The first is an identity
-        # split; the second is usually arm order or a multi-cohort aggregation.
-        swapped_with = [k for k, p in summaries.items()
-                        if k != key and pair in analysed.get(k, set())
-                        and summaries.get(k) in analysed.get(key, set())]
+        # A summary figure is accounted for if AF_LOCK has it as an arm, or if it is
+        # the sum of two arms it does have (a pooled stratum).
+        sums = {a + b for a in known for b in known}
+        unaccounted = sorted({n for n in ns if n not in known and n not in sums})
+        if not unaccounted:
+            continue
+        swapped_with = sorted(k for k, other in summaries.items()
+                              if k != key and tuple(ns[:2]) in pairs.get(k, set())
+                              and tuple(other[:2]) in pairs.get(key, set()))
         out.append({
             "study": key,
-            "study_master_summary_arms": list(pair),
-            "af_lock_analysed_arms": sorted(list(x) for x in analysed[key]),
+            "study_master_summary_arms": ns,
+            "af_lock_arm_sizes": sorted(known),
+            "unaccounted": unaccounted,
             "exchanged_with": swapped_with,
             "kind": "identity_split" if swapped_with else "arm_figures_differ",
         })
@@ -699,8 +747,8 @@ def main(check_only: bool) -> int:
     for d in payload["locked_sheet_disagreements"]:
         note = (f"exchanged with {', '.join(d['exchanged_with'])}" if d["exchanged_with"]
                 else "figures differ")
-        print(f"  LOCK {d['study']}: Study_Master says {d['study_master_summary_arms']}, "
-              f"AF_LOCK says {d['af_lock_analysed_arms']} ({note})")
+        print(f"  LOCK {d['study']}: Study_Master cites {d['unaccounted']}, which AF_LOCK "
+              f"does not have among {d['af_lock_arm_sizes']} ({note})")
     for s in payload["baseline_corrections"]:
         tag = "CORRECTED" if s.get("status") == "corrected" else s.get("kind", "?").upper()
         print(f"  {tag} {s['study']}: {s['summary']} "

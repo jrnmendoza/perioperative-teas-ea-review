@@ -334,93 +334,21 @@ window.COHORT_OVERLAP = {
       "explained_by_randomised": false
     }
   ],
-  "locked_sheet_disagreements": [
-    {
-      "study": "Jin 2023",
-      "study_master_summary_arms": [
-        53,
-        53
-      ],
-      "af_lock_analysed_arms": [
-        [
-          53,
-          52
-        ]
-      ],
-      "exchanged_with": [],
-      "kind": "arm_figures_differ"
-    },
-    {
-      "study": "Lu 2021",
-      "study_master_summary_arms": [
-        190,
-        198
-      ],
-      "af_lock_analysed_arms": [
-        [
-          190,
-          188
-        ],
-        [
-          198,
-          188
-        ]
-      ],
-      "exchanged_with": [],
-      "kind": "arm_figures_differ"
-    },
-    {
-      "study": "Wang 2024",
-      "study_master_summary_arms": [
-        68,
-        70
-      ],
-      "af_lock_analysed_arms": [
-        [
-          33,
-          35
-        ],
-        [
-          35,
-          35
-        ]
-      ],
-      "exchanged_with": [],
-      "kind": "arm_figures_differ"
-    },
-    {
-      "study": "Zhu 2022",
-      "study_master_summary_arms": [
-        101,
-        98
-      ],
-      "af_lock_analysed_arms": [
-        [
-          98,
-          101
-        ],
-        [
-          100,
-          101
-        ],
-        [
-          101,
-          101
-        ]
-      ],
-      "exchanged_with": [],
-      "kind": "arm_figures_differ"
-    }
-  ],
+  "locked_sheet_disagreements": [],
   "cohort_size_disagreements": [
     {
       "studies": [
         "Yeh 2010",
         "Yeh 2011"
       ],
-      "summary": "The two reports of this trial state different cohort sizes.",
-      "detail": "Int J Nurs Stud 2011 shows 99 assessed for eligibility, 90 meeting inclusion criteria, and randomisation to 30 / 30 / 30. Altern Ther Health Med 2010 states \"Ninety-nine patients undergoing lumbar spinal surgery were randomly assigned to one of three groups\" with group sizes 33 / 30 / 31. Whether 90 or 99 were randomised cannot be settled from the two papers, so neither figure is used as the trial's randomised N. Stated by paper rather than by register key, because which key names which paper is itself in question — see the attribution conflict above.",
-      "affects": "Descriptive participant totals only. Neither report contributes arm-level data to any synthesis, so no effect estimate depends on this."
+      "status": "adjudicated",
+      "adjudicated_on": "2026-09-12",
+      "summary": "The two reports of this trial state different cohort sizes, and one of them disagrees with itself.",
+      "detail": "Yeh 2011 (Int J Nurs Stud 2011) shows 99 assessed for eligibility, 90 meeting inclusion criteria, and randomisation to 30 / 30 / 30. Yeh 2010 (Altern Ther Health Med 2010) states \"Ninety-nine patients undergoing lumbar spinal surgery were randomly assigned to one of three groups\" — but its own Table 2 gives groups of 33 / 30 / 31, which sum to 94, not 99. So the 99 is contradicted inside the paper that prints it, and 90 is contradicted by the companion.",
+      "verdict": "Unresolvable from the two publications, and deliberately left so. Whether 90, 94 or 99 were randomised cannot be established without the trial's own records, and choosing one would be inventing it.",
+      "why_nothing_depends_on_it": "No whole-trial randomised N is published for this trial in either record, so nothing in the review rests on the figure. Yeh 2011 carries a randomised denominator of 30 / 30 for the pairwise contrast the review uses, which its flow diagram states directly and which is not in dispute; Yeh 2010 carries none. Both records are on DUPLICATE-OVERLAP HOLD in the lock (include_strict = include_sensitivity = 0 on every row), so no synthesis reads either.",
+      "affects": "Descriptive participant totals only, and not even those: the review's analysed total counts this trial once, through Yeh 2010's 63.",
+      "record": "05_study_linkage/cohorts/yeh_lumbar_spinal_surgery.md"
     }
   ],
   "participants": {
