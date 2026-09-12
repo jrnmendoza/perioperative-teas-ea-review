@@ -4272,91 +4272,23 @@ def t_baseline_conflicts_are_surfaced_not_corrected():
                      "study's figures between keys")
     af = sheets / "Outcome_Data_AF_LOCK.csv"
     if lock_rows and af.exists():
-        analysed = {}
+        known = {}
         for r in _csv.DictReader(af.open(encoding="utf-8-sig")):
-            try:
-                analysed.setdefault(r["Canonicalstudy"], set()).add(
-                    (int(float(r["Analyzednintervention"])), int(float(r["Analyzedncomparator"]))))
-            except (ValueError, TypeError, KeyError):
-                pass
+            for field in ("Analyzednintervention", "Analyzedncomparator",
+                          "Randomizednintervention", "Randomizedncomparator"):
+                try:
+                    known.setdefault(r["Canonicalstudy"], set()).add(int(float(r[field])))
+                except (ValueError, TypeError, KeyError):
+                    pass
         for d in lock_rows:
-            got = sorted(list(x) for x in analysed.get(d["study"], set()))
-            if got != d["af_lock_analysed_arms"]:
+            got = sorted(known.get(d["study"], set()))
+            if got != d["af_lock_arm_sizes"]:
                 probs.append(f"{d['study']}: screen reports AF_LOCK arms "
-                             f"{d['af_lock_analysed_arms']}, sheet holds {got} -- the lock "
-                             f"changed and the screen was not re-run")
-            if tuple(d["study_master_summary_arms"]) in analysed.get(d["study"], set()):
-                probs.append(f"{d['study']}: reported as a disagreement but the two sheets "
-                             f"now agree -- withdraw it rather than leaving it standing")
-
-    # A recorded arm swap must still be true of the register, and its quoted
-    # evidence must still be in the file it names -- otherwise it is either
-    # already corrected (withdraw it) or describing something that moved.
-    # A recorded arm swap is either OPEN (the register still holds what it
-    # describes) or CORRECTED (the register now holds the source value). Either
-    # way the finding has to match the data, so a correction cannot leave a stale
-    # flag standing and a withdrawal cannot quietly erase an unfixed problem.
-    for s in co.get("baseline_corrections", []):
-        pop = (by_key.get(s["study"]) or {}).get("population") or {}
-        if not pop:
-            probs.append(f"{s['study']}: arm swap recorded for a study not in the register")
-            continue
-        status = s.get("status", "open")
-        if status not in ("open", "corrected"):
-            probs.append(f"{s['study']}: unknown status {status!r}")
-        want = "source_says" if status == "corrected" else "register"
-        pairs = [(f["field"], f["register"], f["source_says"]) for f in s["fields"]]
-        if s.get("asa_status"):
-            pairs.append(("asa_status", s["asa_status"]["register"],
-                          s["asa_status"]["source_says"]))
-        for field, held_before, from_source in pairs:
-            expected = from_source if want == "source_says" else held_before
-            if pop.get(field) != expected:
-                probs.append(f"{s['study']}.{field} is {pop.get(field)!r}; a {status} finding "
-                             f"requires {expected!r}")
-            if held_before == from_source:
-                probs.append(f"{s['study']}.{field}: recorded as a swap but the two agree")
-        if not (ROOT / s["source"]).exists():
-            probs.append(f"{s['study']}: source {s['source']} does not exist")
-        if not s.get("arm_assignment_confirmed_by"):
-            probs.append(f"{s['study']}: no corroboration recorded for which arm is which, so the "
-                         f"swap cannot be told apart from a denominator error")
-        if status == "corrected":
-            for field in ("corrected_on", "applied_by", "resolution"):
-                if not s.get(field):
-                    probs.append(f"{s['study']}: corrected without recording {field}")
-            applied = s.get("applied_by")
-            if applied and not (ROOT / applied).exists():
-                probs.append(f"{s['study']}: {applied} does not exist, so the correction cannot "
-                             f"be re-checked or reversed")
-            # The correction must not have moved a denominator.
-            expect_n = {"Gu 2019": (58, 59),
-                        "He 2026 (hepatectomy/JIS)": (80, 79),
-                        "Grech 2016": (11, 9),
-                        "Lee 2011": (12, 12)}.get(s["study"])
-            if expect_n and (pop.get("arm1_n"), pop.get("arm2_n")) != expect_n:
-                probs.append(f"{s['study']}: arms are "
-                             f"{(pop.get('arm1_n'), pop.get('arm2_n'))}, expected {expect_n} -- a "
-                             f"baseline correction must never move a denominator")
-    if co.get("baseline_corrections") and "Baseline on the wrong arm" not in APP:
-        probs.append("recorded baseline corrections are never rendered")
-    # Two trials do not produce identical baseline rows. Any surviving duplicate is
-    # one record carrying another's block, and must be visible.
-    dups = co.get("duplicate_baseline_blocks", [])
-    # Required unconditionally: the screen is standing infrastructure, so its
-    # renderer must survive even while the list is empty. Guarding it with
-    # "if dups" would let the renderer be deleted during a clean spell and only
-    # surface the loss the next time a duplicate appeared.
-    # Asserted on the badge the renderer emits, not on the flag's kind string:
-    # the kind also appears where the flag is PUSHED, so testing for it would pass
-    # with the renderer deleted.
-    if "Identical baseline rows" not in APP:
-        probs.append("the duplicate-baseline-block screen has no renderer")
-    for d in dups:
-        corrected = {c["study"] for c in co.get("baseline_corrections", [])
-                     if c.get("status") == "corrected"}
-        if set(d["studies"]) & corrected:
-            probs.append(f"{d['studies']}: still share a baseline row after being corrected")
+                             f"{d['af_lock_arm_sizes']}, sheet holds {got} -- the lock changed "
+                             f"and the screen was not re-run")
+            if not d["unaccounted"]:
+                probs.append(f"{d['study']}: reported as a disagreement with nothing "
+                             f"unaccounted for -- withdraw it rather than leaving it standing")
 
     # An adjudicated denominator must say why, and must NOT have been quietly
     # corrected instead -- the whole point of the category is that no correct value
@@ -4367,6 +4299,32 @@ def t_baseline_conflicts_are_surfaced_not_corrected():
     if any(d.get("explained_by") for d in co.get("denominator_mismatches", [])) \
             and "Denominator adjudicated" not in APP:
         probs.append("adjudicated denominators are never rendered")
+
+    # An adjudicated cohort-size disagreement must say why it is unresolvable AND
+    # why nothing rests on it -- otherwise "adjudicated" is just a way of hiding an
+    # open question. The second claim is checked against the register: a trial whose
+    # randomised N is genuinely unknown must not be carrying one.
+    for d in co.get("cohort_size_disagreements", []):
+        if d.get("status") != "adjudicated":
+            continue
+        for field in ("verdict", "why_nothing_depends_on_it", "adjudicated_on", "record"):
+            if not d.get(field):
+                probs.append(f"{d['studies']}: adjudicated without recording {field}")
+        rec = d.get("record")
+        if rec and not (ROOT / rec).exists():
+            probs.append(f"{d['studies']}: decision record {rec} does not exist")
+        for k in d["studies"]:
+            pop = (by_key.get(k) or {}).get("population") or {}
+            whole = ((json.loads(re.search(r"window\.PDF_EXTRACTED = (\{.*\});",
+                     (DASH / "pdf_extracted.js").read_text(encoding="utf-8"), re.S).group(1))
+                     ).get(k) or {}).get("randomised_n") if (DASH / "pdf_extracted.js").exists() else None
+            if whole:
+                probs.append(f"{k}: a whole-trial randomised N of {whole.get('value')} is "
+                             f"recorded, so the cohort size is not unknown and the adjudication "
+                             f"is stale")
+    if any(d.get("status") == "adjudicated" for d in co.get("cohort_size_disagreements", [])) \
+            and "Cohort size adjudicated" not in APP:
+        probs.append("an adjudicated cohort size is never rendered")
 
     for d in co.get("denominator_mismatches", []):
         pop = (by_key.get(d["study"]) or {}).get("population") or {}

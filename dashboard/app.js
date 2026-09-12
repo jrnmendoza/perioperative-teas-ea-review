@@ -1308,7 +1308,9 @@ function summarisePopulation(reportsList) {
   const lockRows = (co.locked_sheet_disagreements || []).filter(d => inScope.has(d.study));
   if (lockRows.length) out.flags.push({ kind: 'locked-sheets-disagree', rows: lockRows });
   (co.cohort_size_disagreements || []).forEach(d => {
-    if (d.studies.some(k => inScope.has(k))) out.flags.push({ kind: 'cohort-size', ...d });
+    if (!d.studies.some(k => inScope.has(k))) return;
+    (d.status === 'adjudicated' ? out.resolved : out.flags)
+      .push({ ...d, kind: 'cohort-size' });
   });
   (co.candidates || []).forEach(cand => {
     if (!cand.studies.some(k => inScope.has(k))) return;
@@ -1378,6 +1380,15 @@ function renderPopulationSummary(reportsList) {
       <summary><strong>Resolved against the source publications (${p.resolved.length})</strong>
         <span class="sd-sub"> &mdash; questions this review raised, read against the papers, and settled</span></summary>
       ${p.resolved.map(c => {
+        if (c.kind === 'cohort-size') return `
+        <div class="pop-flag">
+          <span class="badge badge-emerald">Cohort size adjudicated</span>
+          <strong>${c.studies.map(pwEsc).join(' / ')}</strong> &mdash; ${pwEsc(c.summary)}
+          <div class="sd-sub">${pwEsc(c.detail)}</div>
+          <div class="sd-sub"><strong>Verdict:</strong> ${pwEsc(c.verdict)}</div>
+          <div class="sd-sub"><strong>Why nothing rests on it:</strong> ${pwEsc(c.why_nothing_depends_on_it)}</div>
+          <div class="sd-sub">Record: <code>${pwEsc(c.record)}</code>, adjudicated ${pwEsc(c.adjudicated_on)}.</div>
+        </div>`;
         if (c.kind === 'denominator-adjudicated') return `
         <div class="pop-flag">
           <span class="badge badge-emerald">Denominator adjudicated</span>
@@ -1435,7 +1446,15 @@ function renderPopulationSummary(reportsList) {
       }).join('')}
     </details>`;
 
-  const flagHtml = !p.flags.length ? '' : `
+  // Say "none open" rather than showing nothing. On a panel whose purpose is to be
+  // honest about data quality, an empty space is ambiguous: it reads the same as a
+  // screen that was never run.
+  const flagHtml = !p.flags.length ? (p.resolved.length ? `
+    <div class="pop-clear">
+      <strong>No open data-quality flags in this set.</strong>
+      <span class="sd-sub"> &mdash; every question the screens raised has been read against the
+      source publications and either corrected or adjudicated; see below.</span>
+    </div>` : '') : `
     <details class="pop-flags">
       <summary><strong>Data-quality flags in this set (${p.flags.length})</strong>
         <span class="sd-sub"> &mdash; surfaced for manual review, not corrected here</span></summary>
@@ -1491,8 +1510,9 @@ function renderPopulationSummary(reportsList) {
               disagree about which publication a key names; where they merely differ, it is
               usually arm order or a multi-cohort aggregation. Neither is corrected here.</div>
             <ul class="pop-evidence">${f.rows.map(d => `<li><strong>${pwEsc(d.study)}</strong>
-              &mdash; <code>Study_Master</code> summarises arms of ${d.study_master_summary_arms.join(' / ')},
-              <code>Outcome_Data_AF_LOCK</code> records ${d.af_lock_analysed_arms.map(a => a.join(' / ')).join(' and ')}.
+              &mdash; <code>Study_Master</code> cites ${d.unaccounted.join(', ')}, which
+              <code>Outcome_Data_AF_LOCK</code> does not have among its arm sizes
+              (${d.af_lock_arm_sizes.join(', ')}).
               ${d.exchanged_with.length
                   ? `<strong>Exchanged with ${d.exchanged_with.map(pwEsc).join(', ')}</strong> &mdash; an identity split.`
                   : 'Figures differ; not an exchange.'}</li>`).join('')}</ul>

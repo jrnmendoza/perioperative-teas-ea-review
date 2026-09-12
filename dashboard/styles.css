@@ -2575,6 +2575,14 @@ pre code { overflow-wrap: normal; word-break: normal; }
 .pop-flag:first-of-type { border-top: 0; }
 .pop-flag .sd-sub { display: block; margin-top: 0.25rem; }
 
+.pop-clear {
+  margin-top: 0.9rem; padding: 0.6rem 0.85rem;
+  background: rgba(52, 211, 153, 0.05);
+  border: 1px solid rgba(52, 211, 153, 0.22);
+  border-radius: var(--radius-md);
+  font-size: 0.78rem; line-height: 1.55;
+}
+
 /* A settled question reads as settled: neutral, not amber. */
 .pop-resolved {
   margin-top: 0.7rem; padding: 0.7rem 0.85rem;

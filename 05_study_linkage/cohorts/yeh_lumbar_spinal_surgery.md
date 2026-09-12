@@ -78,13 +78,32 @@ an inverted citation. Both looked at one sheet and inferred the other.
 - **Identical sham-arm figures** between the two papers, noted during the RoB 2
   source-linking work (`scripts/build_rob2_source_links.py`).
 
-The analysed denominators differ (63 in `Yeh 2010`, 60 in `Yeh 2011`) because the two papers report different subsets/timepoints of
-the same cohort — which is what companion reports do, and is not evidence of two
-trials. The papers also disagree about the cohort size: the *Int J Nurs Stud*
-flow diagram shows 99 assessed, 90 meeting inclusion criteria and 30/30/30
-randomised, while *Altern Ther Health Med* states "Ninety-nine patients … were
-randomly assigned to one of three groups" with groups of 33/30/31. Neither figure
-is used as the trial's randomised N.
+The analysed denominators differ (63 in `Yeh 2010`, 60 in `Yeh 2011`) because the two
+papers report different subsets/timepoints of the same cohort — which is what
+companion reports do, and is not evidence of two trials.
+
+## Cohort size — adjudicated 2026-09-12 as unresolvable
+
+The two papers disagree about how many were randomised, and one disagrees with
+itself:
+
+- `Yeh 2011` (*Int J Nurs Stud*) — flow diagram: 99 assessed for eligibility,
+  **90** meeting inclusion criteria, randomised 30 / 30 / 30.
+- `Yeh 2010` (*Altern Ther Health Med*) — text: "Ninety-nine patients undergoing
+  lumbar spinal surgery were randomly assigned to one of three groups", but its own
+  Table 2 gives groups of 33 / 30 / 31, which sum to **94**, not 99.
+
+So the 99 is contradicted inside the paper that prints it, and the 90 is
+contradicted by the companion. Whether 90, 94 or 99 were randomised cannot be
+established from the two publications, and picking one would be inventing it.
+
+**Nothing in the review rests on the figure.** No whole-trial randomised N is
+published for this trial in either record. `Yeh 2011` carries a randomised
+denominator of 30 / 30 for the pairwise contrast the review uses, stated directly
+in its flow diagram and not in dispute; `Yeh 2010` carries none. Both records are
+on DUPLICATE-OVERLAP HOLD in the lock (`include_strict` = `include_sensitivity` = 0
+on every row), so no synthesis reads either, and the review's analysed participant
+total counts this trial once, through `Yeh 2010`'s 63.
 
 ## What follows from this
 
