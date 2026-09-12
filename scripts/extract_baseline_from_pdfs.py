@@ -88,11 +88,103 @@ def sentence_around(text: str, start: int, end: int) -> str:
 # and "enrolled" must not be treated as randomised -- Jin 2023 enrolled 174 and
 # says 29 of them were never randomised. Thousands separators are required or
 # Gao 2022's 1,655 is silently read as 655.
+# Added 2026-09-12: the count is very often spelled out, and requiring digits
+# was losing clean totals that the paper states in its first line of Methods --
+# Sim 2002's "Ninety patients were randomly assigned", Yu 2020's "Sixty patients
+# ... were randomly assigned". CARDINAL_WORDS parses those; it deliberately
+# handles only 10-999, the range a surgical RCT's randomised total falls in.
 RE_RANDOMISED = re.compile(
-    r"(\d[\d,]{1,6})\s+(?:eligible\s+|adult\s+|consecutive\s+|female\s+|male\s+)?"
-    r"(?:patients|participants|women|men|subjects)\b"
+    r"(?P<count>\d[\d,]{1,6}|(?:one|two|three|four|five|six|seven|eight|nine)?\s*hundred(?:\s+and)?"
+    r"(?:\s+(?:twenty|thirty|forty|fifty|sixty|seventy|eighty|ninety))?(?:[\s-]"
+    r"(?:one|two|three|four|five|six|seven|eight|nine))?"
+    r"|(?:twenty|thirty|forty|fifty|sixty|seventy|eighty|ninety)(?:[\s-]"
+    r"(?:one|two|three|four|five|six|seven|eight|nine))?"
+    r"|(?:ten|eleven|twelve|thirteen|fourteen|fifteen|sixteen|seventeen|eighteen|nineteen))"
+    r"\s+(?:eligible\s+|adult\s+|consecutive\s+|female\s+|male\s+)?"
+    r"(?:patients|participants|women|men|subjects|cases)\b"
     r"(?P<gap>[^.]{0,40}?)"
     r"\b(?:were\s+|was\s+)?(?:randomi[sz]ed|randomly\s+(?:assigned|allocated|divided|distributed))", re.I)
+
+ONES = {"one":1,"two":2,"three":3,"four":4,"five":5,"six":6,"seven":7,"eight":8,"nine":9}
+TENS = {"twenty":20,"thirty":30,"forty":40,"fifty":50,"sixty":60,"seventy":70,
+        "eighty":80,"ninety":90}
+TEENS = {"ten":10,"eleven":11,"twelve":12,"thirteen":13,"fourteen":14,"fifteen":15,
+         "sixteen":16,"seventeen":17,"eighteen":18,"nineteen":19}
+
+
+def cardinal(text):
+    """'ninety-nine' -> 99; 'one hundred and twenty' -> 120; digits pass through.
+
+    Returns None rather than guessing on anything this grammar does not cover.
+    """
+    t = text.strip().lower().replace("-", " ")
+    t = re.sub(r"\band\b", " ", t)
+    if re.fullmatch(r"[\d,]+", t):
+        try:
+            return int(t.replace(",", ""))
+        except ValueError:
+            return None
+    words = t.split()
+    total = 0
+    if "hundred" in words:
+        i = words.index("hundred")
+        total = 100 * (ONES.get(words[i - 1], 1) if i else 1)
+        words = words[i + 1:]
+    rest = 0
+    for w in words:
+        if w in TENS:
+            rest += TENS[w]
+        elif w in TEENS:
+            rest += TEENS[w]
+        elif w in ONES:
+            rest += ONES[w]
+        elif w:
+            return None
+    return (total + rest) or None
+
+
+# A randomised total DERIVED by adding up group sizes the paper states in the
+# randomisation sentence itself. Kept in its own field, never merged with a
+# directly stated total: "four groups of 25 each" is arithmetic on reported
+# numbers, not a figure the paper prints.
+RE_PER_GROUP = re.compile(
+    r"randomi[sz]ed|randomly\s+(?:assigned|allocated|divided|distributed)", re.I)
+RE_GROUPS_OF = re.compile(
+    r"\b(?:in)?to\s+(?:one\s+of\s+)?(two|three|four|five|2|3|4|5)\s+"
+    r"(?:equal\s+)?(?:groups?|treatment\s+regimens?|regimens?|arms?)\b"
+    r"[^.]{0,60}?\b(?:of|with|each\s+with|containing)\s+"
+    r"\(?\s*n\s*[=\u00bc]?\s*(\d{1,4})|"
+    r"\b(?:in)?to\s+(?:one\s+of\s+)?(two|three|four|five|2|3|4|5)\s+"
+    r"(?:equal\s+)?(?:groups?|treatment\s+regimens?|regimens?|arms?)\b"
+    r"[^.]{0,60}?\bof\s+(\d{1,4})\s+(?:each|patients|participants|cases)", re.I)
+RE_N_EACH = re.compile(r"\(\s*n\s*[=\u00bc]\s*(\d{1,4})\s*(?:each|per\s+group)\s*\)", re.I)
+RE_N_PER_GROUP = re.compile(r"\bwith\s+(\d{1,4})\s+(?:patients|participants|cases)\s+per\s+group\b", re.I)
+RE_N_ARM = re.compile(r"\(\s*n\s*[=\u00bc]\s*(\d{1,4})\s*\)", re.I)
+GROUP_WORDS = {"two": 2, "three": 3, "four": 4, "five": 5,
+               "2": 2, "3": 3, "4": 4, "5": 5}
+
+# A SECOND-STAGE randomisation: the count belongs to a sub-randomisation within
+# already-formed groups, not to the trial's randomised total. Wang 2024 writes
+# "Seventy patients from each group were then randomly allocated into the ...
+# treatment subgroups" -- 70 PER GROUP, into subgroups, in a trial whose analysed
+# total is 138. Without this guard that reads as a randomised total of 70.
+RE_SUBRANDOMISED = re.compile(
+    r"\b(?:from|in|of)\s+each\s+group\b|\bsub\s?groups?\b|\bfurther\s+randomi[sz]|"
+    r"\bwithin\s+each\s+group\b|\beach\s+group\s+(?:was|were)\s+(?:then\s+)?randomi[sz]", re.I)
+
+# Reports whose whole-trial randomised N is under an adjudicated, UNRESOLVABLE
+# dispute. Quarantined here rather than extracted, because the papers themselves
+# disagree and picking one would be inventing it -- the record is
+# 05_study_linkage/cohorts/yeh_lumbar_spinal_surgery.md.
+RANDOMISED_N_QUARANTINE = {
+    "Yeh 2010": "Yeh 2010 prints 99 but its own Table 2 gives 33/30/31 = 94, and the "
+                "companion report Yeh 2011 gives 90. Three mutually contradictory figures "
+                "for one cohort; adjudicated 2026-09-12 as unresolvable from the "
+                "publications.",
+    "Yeh 2011": "Companion report of Yeh 2010. Its 30/30/30 is the pairwise contrast the "
+                "review uses and is not disputed, but the whole-trial randomised total is "
+                "part of the same unresolvable 90/94/99 dispute.",
+}
 
 # Words that mean the preceding count is NOT the randomised total.
 RE_NOT_RANDOMISED = re.compile(
@@ -222,6 +314,69 @@ def decide(found, label):
                     f"not resolved automatically"}
 
 
+def derive_randomised_from_groups(pages):
+    """A randomised total added up from group sizes stated in the randomisation
+    sentence. Separate from randomised_n on purpose: this is arithmetic on
+    reported numbers, and a reader must be able to see the sum.
+
+    Three shapes are accepted, all requiring the randomisation verb in the same
+    sentence:
+      "randomly assigned to one of four regimens (n = 25 each)"   -> 4 x 25
+      "randomized into 4 groups with 95 patients per group"       -> 4 x 95
+      "randomised to electroacupuncture (n = 56) or control (n = 46)" -> 56 + 46
+
+    The third shape is the loosest, so it is accepted only when the sentence
+    yields at least two per-arm counts and, where the paper also states an arm
+    count, exactly that many. Anything else returns None and the field stays NR.
+    """
+    cands = {}
+    for pno, text in body_pages(pages):
+        t = norm(text)
+        for m in RE_PER_GROUP.finditer(t):
+            q = sentence_around(t, m.start(), m.end())
+            if CITATION_NOISE.search(q) or RE_NOT_RANDOMISED.search(q):
+                continue
+            arms_m = re.search(r"\b(?:in)?to\s+(?:one\s+of\s+)?(two|three|four|five|2|3|4|5)\s+"
+                               r"(?:equal\s+)?(?:groups?|treatment\s+regimens?|regimens?|arms?)\b",
+                               q, re.I)
+            arms = GROUP_WORDS.get(arms_m.group(1).lower()) if arms_m else None
+
+            total, how = None, None
+            g = re.search(r"\b(?:groups?|regimens?|arms?)\s+of\s+(\d{1,4})\s+each\b", q, re.I)
+            per = RE_N_EACH.search(q) or RE_N_PER_GROUP.search(q) or g
+            if per and arms:
+                each = int(per.group(1))
+                total, how = arms * each, f"{arms} groups x {each} each"
+            elif not RE_SUBRANDOMISED.search(q):
+                # Only counts that come AFTER the randomisation verb can be arms.
+                # Li 2021 writes "gery (n = 105) and colorectal surgery (n = 201),
+                # and were randomly assigned to group T or group S" -- those are
+                # SURGERY-TYPE subgroups standing before the verb, and summing them
+                # gave 306 for a trial with 140/140. Position is what separates an
+                # arm from any other parenthesised n.
+                vpos = RE_PER_GROUP.search(q)
+                tail = q[vpos.end():] if vpos else ""
+                per_arm = [int(x) for x in RE_N_ARM.findall(tail)]
+                if len(per_arm) >= 2 and (arms is None or len(per_arm) == arms):
+                    total = sum(per_arm)
+                    how = " + ".join(str(x) for x in per_arm)
+            if total is None or not (10 <= total <= 5000):
+                continue
+            cands.setdefault((total, how), []).append((pno, re.sub(r"\s+", " ", q).strip()))
+
+    if not cands:
+        return None
+    totals = {t for (t, _) in cands}
+    if len(totals) > 1:
+        return {"conflict": sorted(str(t) for t in totals),
+                "note": "derived randomised N: the paper's group sizes gave more than one "
+                        "total; not resolved automatically"}
+    (total, how), hits = next(iter(cands.items()))
+    pno, quote = hits[0]
+    return {"value": total, "page": pno, "quote": quote, "derivation": how,
+            "hits": len(hits)}
+
+
 def extract_one(pages):
     rec = {}
 
@@ -238,14 +393,22 @@ def extract_one(pages):
         # ... or when the sentence explicitly removes people before randomisation.
         if re.search(r"\bnot\s+randomi[sz]ed\b", q, re.I):
             return None
-        try:
-            n = int(m.group(1).replace(",", ""))
-        except ValueError:
+        if RE_SUBRANDOMISED.search(q):
+            return None
+        n = cardinal(m.group("count"))
+        if n is None:
             return None
         return n if 10 <= n <= 5000 else None
 
     r = decide(collect(pages, RE_RANDOMISED, randomised), "randomised N")
     if r: rec["randomised_n"] = r
+
+    # Derived channel. Only runs when no total was stated directly, and only on a
+    # sentence whose own verb is randomisation -- so an (n = ...) that belongs to
+    # an ANALYSED subgroup elsewhere in the paper cannot reach it.
+    if "randomised_n" not in rec:
+        d = derive_randomised_from_groups(pages)
+        if d: rec["randomised_n_derived"] = d
 
     a = decide(collect(pages, RE_ARMS, lambda m, q, text="": WORD_NUM.get(m.group(1).lower())), "arm count")
     if a: rec["arms"] = a
@@ -404,6 +567,12 @@ def build(pdf_map):
         reader = pypdf.PdfReader(path)
         pages = [(i, p.extract_text() or "") for i, p in enumerate(reader.pages, 1)]
         rec = extract_one(pages)
+        if key in RANDOMISED_N_QUARANTINE:
+            for f in ("randomised_n", "randomised_n_derived"):
+                rec.pop(f, None)
+            rec["randomised_n_quarantined"] = {
+                "reason": RANDOMISED_N_QUARANTINE[key],
+                "record": "05_study_linkage/cohorts/yeh_lumbar_spinal_surgery.md"}
         rec["source_pdf"] = fname
         out[key] = rec
     return out
@@ -434,7 +603,8 @@ def main() -> int:
         "window.PDF_EXTRACTED = " + json.dumps(records, ensure_ascii=False, indent=2) + ";\n",
         encoding="utf-8")
 
-    fields = ("randomised_n", "arms", "pulse_width", "anaesthesia", "country")
+    fields = ("randomised_n", "randomised_n_derived", "arms", "pulse_width",
+              "anaesthesia", "country")
     total = len(records)
     print(f"PDFs read: {total}/70")
     for f in fields:

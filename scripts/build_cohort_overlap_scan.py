@@ -486,18 +486,29 @@ def build() -> dict:
     analysed_reports = sum(s["population"]["total_n"] for s in studies)
     analysed_studies = sum(s["population"]["total_n"] for s in studies
                            if s["key"] not in companions)
-    # Randomised denominators come from two channels that are NOT additive: the
+    # Randomised denominators come from three channels that are NOT additive: the
     # register records the randomised N of the pairwise contrast the review uses,
-    # while the PDF extractor records the whole trial's randomised N, which for a
-    # multi-arm trial is larger. Coverage is reported per channel and no
-    # review-wide randomised total is published, because most studies record
-    # neither and the two channels cannot be added together.
+    # the PDF extractor records the whole trial's randomised N where the paper
+    # prints one, and since 2026-09-12 a third channel DERIVES a whole-trial total
+    # by adding the group sizes the paper states in its own randomisation sentence.
+    # Coverage is reported per channel and no review-wide randomised total is
+    # published, because the channels cannot be added together and, even pooled,
+    # they do not cover the review.
+    def has(key, field):
+        rec = (pdf.get(key) or {}).get(field)
+        return isinstance(rec, dict) and rec.get("value") is not None
+
     contrast_randomised = [s["key"] for s in studies
                            if s["key"] not in companions and s["population"].get("randomized_total_n")]
     trial_randomised = [s["key"] for s in studies
-                        if s["key"] not in companions
-                        and (pdf.get(s["key"]) or {}).get("randomised_n")]
-    either = sorted(set(contrast_randomised) | set(trial_randomised))
+                        if s["key"] not in companions and has(s["key"], "randomised_n")]
+    trial_derived = [s["key"] for s in studies
+                     if s["key"] not in companions
+                     and not has(s["key"], "randomised_n")
+                     and has(s["key"], "randomised_n_derived")]
+    disputed = [s["key"] for s in studies
+                if (pdf.get(s["key"]) or {}).get("randomised_n_quarantined")]
+    either = sorted(set(contrast_randomised) | set(trial_randomised) | set(trial_derived))
 
     return {
         "generated_by": "scripts/build_cohort_overlap_scan.py",
@@ -520,15 +531,26 @@ def build() -> dict:
             "deduplicated_by": sorted(companions),
             "randomised_contrast_recorded": sorted(contrast_randomised),
             "randomised_whole_trial_recorded": sorted(trial_randomised),
+            "randomised_whole_trial_derived": sorted(trial_derived),
+            "randomised_disputed": sorted(disputed),
             "randomised_any_channel": either,
             "randomised_total_publishable": False,
             "randomised_total_reason":
-                "The register records a randomised denominator for the pairwise contrast in "
-                f"{len(contrast_randomised)} of the {len(studies) - len(companions)} studies, and "
-                f"the source-PDF extraction records a whole-trial randomised N in "
-                f"{len(trial_randomised)}. The two are different quantities and are not additive, "
-                "and neither covers the review. A review-wide randomised participant total is "
-                "therefore not reported; the analysed total is.",
+                f"Coverage rose from 17 to {len(either)} of the "
+                f"{len(studies) - len(companions)} studies on 2026-09-12 and a review-wide "
+                "randomised total is still not publishable. The register records a randomised "
+                f"denominator for the pairwise contrast in {len(contrast_randomised)} studies; the "
+                f"source-PDF extraction reads a whole-trial randomised N off the page in "
+                f"{len(trial_randomised)}; a further {len(trial_derived)} allow a whole-trial total "
+                "to be derived by adding the group sizes the paper gives in its own randomisation "
+                "sentence. Those are three different quantities, they are not additive, and even "
+                f"together they leave {len(studies) - len(companions) - len(either)} studies with "
+                "no randomised denominator at all -- typically because the figure appears only in "
+                "a CONSORT flow diagram, which is an image this extractor cannot read. A "
+                "review-wide randomised participant total is therefore still not reported; the "
+                "analysed total is."
+                + (f" {len(disputed)} report(s) are held as disputed rather than extracted: "
+                   "their own papers give contradictory totals." if disputed else ""),
         },
     }
 

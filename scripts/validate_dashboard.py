@@ -1998,6 +1998,186 @@ def t_haldane_anscombe_text_matches_the_do_files():
     check("t_haldane_anscombe_text_matches_the_do_files", not probs, "\n".join(probs))
 
 
+def t_randomised_n_channels_stay_separate_and_evidenced():
+    """
+    ADDED 2026-09-12, with the extraction pass that took whole-trial randomised-N
+    coverage from 17/69 to 33/69.
+
+    There are now three channels and they measure different things, so the danger
+    is no longer only "analysed N standing in for randomised N". It is also
+    silently merging a figure a paper PRINTS with one this project ADDED UP from
+    that paper's group sizes. Every accepted value must therefore carry the page
+    and the verbatim sentence it came from, a derived value must also carry its
+    arithmetic, and a derived value must never coexist with a stated one for the
+    same trial.
+
+    The check also pins the three rejections that the first run of the extended
+    extractor got wrong, because each is a distinct failure mode:
+      Wang 2024  a SECOND-STAGE randomisation into subgroups ("Seventy patients
+                 from each group were then randomly allocated") read as a trial
+                 total of 70, in a trial whose analysed total is 138.
+      Li 2021    surgery-type subgroups standing BEFORE the randomisation verb
+                 ("(n = 105) and colorectal surgery (n = 201), and were randomly
+                 assigned") summed to 306, in a trial with 140/140.
+      Yeh 2010/  an adjudicated, unresolvable dispute: 99 in one paper, 94 from
+      Yeh 2011   its own table, 90 in its companion. Held, not extracted.
+    """
+    import json
+    probs = []
+    pdf_js = (DASH / "pdf_extracted.js").read_text(encoding="utf-8")
+    PDF = json.loads(pdf_js.split("window.PDF_EXTRACTED = ", 1)[1].rstrip().rstrip(";"))
+
+    def val(rec, field):
+        f = rec.get(field)
+        return f if isinstance(f, dict) and f.get("value") is not None else None
+
+    for key, rec in sorted(PDF.items()):
+        stated, derived = val(rec, "randomised_n"), val(rec, "randomised_n_derived")
+        for field, f in (("randomised_n", stated), ("randomised_n_derived", derived)):
+            if not f:
+                continue
+            if not f.get("quote") or not f.get("page"):
+                probs.append(f"{key}: {field} = {f['value']} carries no page/quote; every "
+                             f"extracted value must be checkable against its source sentence")
+            elif not re.search(r"randomi[sz]|randomly", str(f["quote"]), re.I):
+                probs.append(f"{key}: {field} = {f['value']} was read from a sentence that does "
+                             f"not mention randomisation: {str(f['quote'])[:90]!r}")
+        if derived and not derived.get("derivation"):
+            probs.append(f"{key}: a derived randomised N ({derived['value']}) does not show its "
+                         f"arithmetic, so a reader cannot check the sum")
+        if stated and derived:
+            probs.append(f"{key}: carries BOTH a stated and a derived randomised N; the derived "
+                         f"channel must only fill a gap, never compete with the page")
+        # A derived total must actually equal its own stated arithmetic.
+        if derived:
+            d = str(derived["derivation"])
+            m = re.fullmatch(r"(\d+) groups x (\d+) each", d)
+            want = (int(m.group(1)) * int(m.group(2))) if m else (
+                sum(int(x) for x in re.findall(r"\d+", d)) if "+" in d else None)
+            if want is not None and want != derived["value"]:
+                probs.append(f"{key}: derived randomised N is {derived['value']} but its stated "
+                             f"arithmetic {d!r} comes to {want}")
+
+    REJECTED = {
+        "Wang 2024": "a second-stage randomisation into subgroups, 70 per group",
+        "Li 2021": "surgery-type subgroups summed to 306 for a 140/140 trial",
+    }
+    for key, why in REJECTED.items():
+        rec = PDF.get(key, {})
+        if val(rec, "randomised_n") or val(rec, "randomised_n_derived"):
+            probs.append(f"{key} has a randomised N again; it was rejected because {why}")
+    for key in ("Yeh 2010", "Yeh 2011"):
+        rec = PDF.get(key, {})
+        if val(rec, "randomised_n") or val(rec, "randomised_n_derived"):
+            probs.append(f"{key} has an extracted randomised N; its whole-trial total is an "
+                         f"adjudicated unresolvable dispute (90 / 94 / 99) and must stay held")
+        elif "randomised_n_quarantined" not in rec:
+            probs.append(f"{key} is neither extracted nor marked as disputed, so the reason it "
+                         f"is blank has been lost")
+
+    # The review-wide total still must not be published, whatever the coverage.
+    co = json.loads((DASH / "cohort_overlap.js").read_text(encoding="utf-8")
+                    .split("window.COHORT_OVERLAP = ", 1)[1].rstrip().rstrip(";"))
+    part = co["participants"]
+    if part.get("randomised_total_publishable"):
+        probs.append("cohort_overlap now claims a review-wide randomised total is publishable; "
+                     "the three channels are not additive and do not cover the review")
+    chans = (set(part["randomised_contrast_recorded"])
+             | set(part["randomised_whole_trial_recorded"])
+             | set(part.get("randomised_whole_trial_derived", [])))
+    if set(part["randomised_any_channel"]) != chans:
+        probs.append("randomised_any_channel is not the union of the three channels")
+    overlap = set(part["randomised_whole_trial_recorded"]) & set(
+        part.get("randomised_whole_trial_derived", []))
+    if overlap:
+        probs.append(f"these trials appear in both the stated and derived channels: {sorted(overlap)}")
+
+    check("t_randomised_n_channels_stay_separate_and_evidenced", not probs, "\n".join(probs[:8]))
+
+
+def t_target_e_post_hoc_change_is_recorded_as_an_amendment():
+    """
+    ADDED 2026-09-12. Target E's reported measure was changed after the
+    heterogeneity was seen. A post hoc choice of estimand scale is exactly the
+    kind of decision a reader must be able to discount, so it has to be
+    disclosed in the protocol record and not only in the results prose.
+
+    The amendment must also be honest about the two things that are easy to
+    elide: that it does not explain Zhang 2018 away, and that it is not
+    prospective, which the review's own protocol requires of an amendment.
+    """
+    probs = []
+    amend = ROOT / "00_protocol/amendments/2026-09-12_target_e_effect_measure.md"
+    if not amend.exists():
+        check("t_target_e_post_hoc_change_is_recorded_as_an_amendment", False,
+              "the Target E measure change has no amendment record under 00_protocol/amendments/")
+        return
+    # Normalise whitespace first. These are prose phrases in a hard-wrapped
+    # markdown file, so a required sentence is routinely split across a newline --
+    # searching the raw text made this check fail on its own correct document.
+    t = re.sub(r"\s+", " ", amend.read_text(encoding="utf-8"))
+    for need, what in (
+        ("Post hoc", "the amendment does not say the change is post hoc"),
+        # A heading saying "not prospective" is not the admission; the body has to
+        # say the amendment fails the protocol's own standard. Requiring only the
+        # phrase let a mutation that reversed the body sentence pass on the heading.
+        ("does not meet the protocol's own standard",
+         "the amendment does not state that it fails protocol_scope_locked.md's requirement "
+         "that an amendment be prospective"),
+        ("not prospective", "the amendment does not acknowledge that it is not prospective, "
+                            "which protocol_scope_locked.md requires of an amendment"),
+        ("does NOT claim", "the amendment has no section stating what it does not claim"),
+        ("reduced heterogeneity, not resolved",
+         "the amendment does not state that Zhang 2018's heterogeneity is reduced rather than "
+         "resolved"),
+        ("Very Low", "the amendment does not state the effect on the GRADE rating"),
+    ):
+        if need not in t:
+            probs.append(what)
+    # Its figures must be the locked ones.
+    for aid, label in (("TE_FLATUS_SMD_REML_KH", "standardised"), ("TE_FLATUS_MD_REML_KH", "MD")):
+        want = f"{abs(float(BY_ID[aid]['estimate'])):.2f}"
+        if want not in t:
+            probs.append(f"the amendment does not quote the locked {label} estimate ({want})")
+    # And the dashboard must point at it where it makes the claim.
+    if "2026-09-12_target_e_effect_measure.md" not in HTML:
+        probs.append("the dashboard announces the post hoc change but does not point to the "
+                     "amendment that records it")
+    check("t_target_e_post_hoc_change_is_recorded_as_an_amendment", not probs, "\n".join(probs))
+
+
+def t_target_e_grade_records_its_sensitivity_evidence():
+    """
+    ADDED 2026-09-12. Both of Target E's prespecified sensitivity analyses lost
+    statistical significance when Zhang 2018 was admitted. The rating was already
+    Very Low and does not move, which is precisely why this could have gone
+    unrecorded: nothing forced it. The rationale must state both results, with
+    the locked numbers.
+    """
+    probs = []
+    m = re.search(r'"AN-07-TARGET-E":\s*\{(.*?)\n  \}', APP, re.S)
+    if not m:
+        check("t_target_e_grade_records_its_sensitivity_evidence", False,
+              "the Target E GRADE row is gone")
+        return
+    row = m.group(1)
+    for aid, label in (("TE_FLATUS_EXCL_NG", "excluding Ng 2013"),
+                       ("TE_FLATUS_EXCL_HIGH_ROB", "excluding High RoB")):
+        r = BY_ID[aid]
+        p_want = f"{float(r['p_value']):.4f}"
+        if p_want not in row:
+            probs.append(f"the Target E GRADE rationale does not record the {label} sensitivity "
+                         f"result (p = {p_want}); it crossed zero on 2026-09-12 and bears on "
+                         f"robustness")
+        i2_want = f"{float(r['i2']):.1f}"
+        if i2_want not in row:
+            probs.append(f"the {label} sensitivity is recorded without its I2 ({i2_want}%)")
+    if "already Very Low" not in row and "already GRADE Very Low" not in row:
+        probs.append("the rationale does not say the rating was already at the floor, so a reader "
+                     "cannot tell whether the new evidence moved it")
+    check("t_target_e_grade_records_its_sensitivity_evidence", not probs, "\n".join(probs))
+
+
 def t_cdc_not_misattributed_to_perioperative_iv():
     """
     CDC 2022 is an outpatient acute/subacute/chronic-pain prescribing guideline;
@@ -3877,11 +4057,69 @@ def t_pdf_extractions_are_provable_from_their_quotes():
             # written as words ("randomly divided into four groups"), so a digit
             # is satisfied by its own spelling too.
             words = {"2": "two", "3": "three", "4": "four", "5": "five"}
+
+            # Two legitimate cases cannot show the value as a literal, and both
+            # were introduced on 2026-09-12. They are proved differently rather
+            # than waved through -- neither relaxes the rule that a reader must be
+            # able to check the number against the sentence.
+            #
+            #  1. A DERIVED value is arithmetic on group sizes: 88 never appears,
+            #     but "43" and "45" do, and 43 + 45 must come to 88. So prove the
+            #     COMPONENTS against the quote and the SUM against the value.
+            #  2. A count the paper SPELLS OUT ("Ninety patients were randomly
+            #     assigned") has no digits in its sentence at all, so the cardinal
+            #     has to resolve to the value.
+            if field.endswith("_derived"):
+                d = str(f.get("derivation", ""))
+                if not d:
+                    probs.append(f"{key}/{field}: derived value {f['value']!r} shows no arithmetic")
+                    continue
+                m = re.fullmatch(r"(\d+) groups x (\d+) each", d)
+                parts = [m.group(2)] if m else re.findall(r"\d+", d)
+                total = (int(m.group(1)) * int(m.group(2))) if m else sum(int(x) for x in parts)
+                missing = [x for x in parts if x not in quote.replace(",", "").replace(" ", "")
+                           and x not in quote.replace(",", "")]
+                if missing:
+                    probs.append(f"{key}/{field}: derivation {d!r} uses {missing} which are not in "
+                                 f"its own quote — {quote[:90]!r}")
+                elif total != f["value"]:
+                    probs.append(f"{key}/{field}: derivation {d!r} comes to {total}, not "
+                                 f"{f['value']!r}")
+                continue
+
+            spelled_ok = False
+            if field == "randomised_n":
+                CARD = {1:"one",2:"two",3:"three",4:"four",5:"five",6:"six",7:"seven",8:"eight",
+                        9:"nine",10:"ten",11:"eleven",12:"twelve",13:"thirteen",14:"fourteen",
+                        15:"fifteen",16:"sixteen",17:"seventeen",18:"eighteen",19:"nineteen",
+                        20:"twenty",30:"thirty",40:"forty",50:"fifty",60:"sixty",70:"seventy",
+                        80:"eighty",90:"ninety"}
+                n = int(f["value"])
+                forms = set()
+                if n in CARD:
+                    forms.add(CARD[n])
+                if 20 < n < 100 and n % 10:
+                    tens, ones = n - n % 10, n % 10
+                    forms |= {f"{CARD[tens]}-{CARD[ones]}", f"{CARD[tens]} {CARD[ones]}"}
+                if 100 <= n < 1000:
+                    h, rest = n // 100, n % 100
+                    head = ("one hundred" if h == 1 else f"{CARD.get(h, '')} hundred")
+                    if rest == 0:
+                        forms.add(head)
+                    elif rest in CARD:
+                        forms |= {f"{head} {CARD[rest]}", f"{head} and {CARD[rest]}"}
+                    elif 20 < rest < 100:
+                        t2, o2 = rest - rest % 10, rest % 10
+                        forms |= {f"{head} {CARD[t2]}-{CARD[o2]}", f"{head} and {CARD[t2]}-{CARD[o2]}"}
+                spelled_ok = any(form and form in quote for form in forms)
+
             for token in re.findall(r"\d+(?:\.\d+)?", str(f["value"])):
                 spelled = words.get(token)
                 if token in quote.replace(",", ""):
                     continue
                 if spelled and spelled in quote:
+                    continue
+                if spelled_ok:
                     continue
                 probs.append(f"{key}/{field}: value {f['value']!r} is not present in its "
                              f"own quote — {quote[:90]!r}")
@@ -5063,6 +5301,9 @@ def main() -> int:
                                        t_overview_kpi_grid_matches_the_lock,
                                        t_no_stale_pre_admission_figures_presented_as_current,
                                        t_haldane_anscombe_text_matches_the_do_files,
+                                       t_randomised_n_channels_stay_separate_and_evidenced,
+                                       t_target_e_post_hoc_change_is_recorded_as_an_amendment,
+                                       t_target_e_grade_records_its_sensitivity_evidence,
                                        t_cdc_not_misattributed_to_perioperative_iv,
                                        t_mcid_labelled_exploratory, t_version_tag_present,
                                        t_i18n_textcontent_no_html_entities, t_v26_logs_git_tracked,
