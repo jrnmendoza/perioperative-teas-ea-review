@@ -2457,3 +2457,211 @@ pre code { overflow-wrap: normal; word-break: normal; }
 }
 .v34-withdrawn { background: rgba(244,63,94,0.18); color: #fda4af; border: 1px solid rgba(244,63,94,0.4); }
 .v34-superseded { background: rgba(245,158,11,0.16); color: #fbbf24; border: 1px solid rgba(245,158,11,0.38); }
+
+/* ── Data-integrity quarantine notice (incident 2026-09-10) ──────────────────
+   An outcome in window.OUTCOME_QUARANTINE still has study records awaiting
+   source verification. Deliberately restrained: this is a scientific
+   transparency label, not an alarm banner. */
+.quarantine-notice {
+  display: flex;
+  gap: 0.85rem;
+  align-items: flex-start;
+  margin: 0.5rem 1.25rem 0.25rem 1.25rem;
+  padding: 0.7rem 0.9rem;
+  border: 1px solid rgba(217, 164, 87, 0.42);
+  border-left: 3px solid #d9a457;
+  border-radius: 6px;
+  background: rgba(217, 164, 87, 0.08);
+}
+.quarantine-notice-label {
+  flex: 0 0 auto;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: #d9a457;
+  padding-top: 0.12rem;
+  white-space: nowrap;
+}
+.quarantine-notice-body { min-width: 0; }
+.quarantine-notice-body p {
+  margin: 0;
+  font-size: 0.83rem;
+  line-height: 1.55;
+  color: var(--text-secondary);
+}
+.quarantine-notice-detail {
+  margin-top: 0.28rem !important;
+  color: var(--text-muted) !important;
+  font-size: 0.78rem !important;
+}
+
+/* ── Baseline / participant characteristics (Study Explorer) ─────────────────
+   Added 2026-09-10. Descriptive presentation only. */
+
+/* "Not reported" must never be mistaken for a zero or an empty cell. */
+.nr-tag {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px dashed rgba(255, 255, 255, 0.16);
+  border-radius: 3px;
+  padding: 0.05rem 0.32rem;
+  cursor: help;
+}
+
+/* Arm-level pairs stay visibly two values, never one merged figure. */
+.arm-pair { display: flex; flex-direction: column; gap: 0.1rem; line-height: 1.35; }
+.arm-pair > span:last-child { color: var(--text-secondary); }
+
+/* Population summary */
+.pop-grid {
+  display: grid;
+  /* 220px keeps six tiles as two rows of three at usual widths, rather than
+     five across with one stranded underneath. */
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.75rem;
+}
+.pop-grid > div {
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 0.7rem 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 0;
+}
+.pop-label {
+  font-size: 0.68rem; font-weight: 700; letter-spacing: 0.06em;
+  text-transform: uppercase; color: var(--text-muted);
+}
+.pop-value { font-size: 1.3rem; font-weight: 800; color: var(--text-primary); font-variant-numeric: tabular-nums; }
+.pop-sub { font-size: 0.72rem; color: var(--text-secondary); line-height: 1.45; }
+
+.pop-complete {
+  margin-top: 0.9rem; padding-top: 0.8rem;
+  border-top: 1px solid var(--border-subtle);
+  font-size: 0.78rem;
+}
+.pop-bars { display: flex; flex-direction: column; gap: 0.3rem; margin-top: 0.5rem; }
+/* Label track widened 2026-09-12: it now carries country names and
+   "Country of conduct", which a 2.6rem track clipped. */
+.pop-bar-row { display: grid; grid-template-columns: minmax(0, 9.5rem) minmax(2.5rem, 1fr) auto; gap: 0.6rem; align-items: center; }
+.pop-bar-label { font-size: 0.74rem; color: var(--text-secondary); min-width: 0; overflow-wrap: anywhere; }
+.pop-bar-track { height: 6px; border-radius: 3px; background: rgba(255, 255, 255, 0.07); overflow: hidden; }
+.pop-bar-track i { display: block; height: 100%; background: #818cf8; border-radius: 3px; }
+.pop-bar-num { font-size: 0.72rem; font-variant-numeric: tabular-nums; color: var(--text-primary); white-space: nowrap; }
+.pop-foot { margin-top: 0.6rem; font-size: 0.72rem; color: var(--text-muted); line-height: 1.5; }
+
+/* Data-quality flags: collapsed by default so current, reconciled figures are
+   what the reader sees first, and the unresolved items are one click away. */
+.pop-flags {
+  margin-top: 0.9rem; padding: 0.7rem 0.85rem;
+  background: rgba(245, 158, 11, 0.07);
+  border: 1px solid rgba(245, 158, 11, 0.28);
+  border-radius: var(--radius-md);
+  font-size: 0.78rem;
+}
+.pop-flags > summary { cursor: pointer; color: #fbbf24; }
+.pop-flag {
+  margin-top: 0.6rem; padding-top: 0.6rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  line-height: 1.55; min-width: 0; overflow-wrap: anywhere;
+}
+.pop-flag:first-of-type { border-top: 0; }
+.pop-flag .sd-sub { display: block; margin-top: 0.25rem; }
+
+@media (max-width: 640px) {
+  .pop-bar-row { grid-template-columns: minmax(0, 6.5rem) minmax(2rem, 1fr) auto; gap: 0.4rem; }
+}
+
+/* Study details panel — four sections */
+.sd-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.sd-card {
+  background: var(--bg-panel);
+  padding: 1rem 1.1rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+  min-width: 0;
+}
+.sd-card h4 {
+  font-size: 0.78rem; text-transform: uppercase; font-weight: 800;
+  color: var(--text-muted); margin: 0 0 0.6rem; letter-spacing: 0.05em;
+}
+.sd-table { width: 100%; border-collapse: collapse; font-size: 0.79rem; line-height: 1.5; }
+.sd-table th, .sd-table td {
+  text-align: left; vertical-align: top;
+  padding: 0.28rem 0.4rem 0.28rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+.sd-table tr:last-child th, .sd-table tr:last-child td { border-bottom: none; }
+.sd-table th { color: var(--text-muted); font-weight: 600; white-space: nowrap; width: 8.5rem; }
+.sd-table td { color: var(--text-primary); }
+.sd-arms thead th { color: var(--text-secondary); font-weight: 700; width: auto; white-space: normal; }
+.sd-arms th:first-child { width: 8rem; }
+.sd-sub { font-size: 0.72rem; color: var(--text-muted); }
+.sd-note { font-size: 0.72rem; color: var(--text-muted); line-height: 1.5; margin: 0.6rem 0 0; }
+.sd-chip {
+  display: inline-block; font-size: 0.68rem; padding: 0.1rem 0.4rem;
+  border-radius: 3px; background: rgba(99, 102, 241, 0.15); color: #a5b4fc; margin: 0.1rem 0.15rem 0.1rem 0;
+}
+
+@media (max-width: 640px) {
+  .sd-grid { grid-template-columns: 1fr; }
+  .sd-table th { width: 7rem; }
+}
+
+/* The Study Explorer carries 11 columns. Without a floor it collapses to the
+   viewport width on a phone and every cell becomes unreadable; with one, the
+   existing overflow-x wrapper scrolls it instead. */
+.explorer-table { min-width: 1040px; }
+
+/* A value read straight from a source PDF; hover shows the page and the
+   verbatim sentence it came from. */
+.pdf-src {
+  display: inline-block;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: #6ee7b7;
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.28);
+  border-radius: 3px;
+  padding: 0.02rem 0.28rem;
+  margin-left: 0.28rem;
+  cursor: help;
+  vertical-align: 1px;
+}
+
+/* Estimator-convention note on the exploratory forest plot (2026-09-11). */
+.estimator-note {
+  display: flex;
+  gap: 0.85rem;
+  align-items: flex-start;
+  margin: 0.5rem 1.25rem 0.25rem 1.25rem;
+  padding: 0.7rem 0.9rem;
+  border: 1px solid rgba(129, 140, 248, 0.32);
+  border-left: 3px solid #818cf8;
+  border-radius: 6px;
+  background: rgba(129, 140, 248, 0.07);
+}
+.estimator-note-label {
+  flex: 0 0 auto;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: #a5b4fc;
+  padding-top: 0.12rem;
+}
+.estimator-note p { margin: 0; font-size: 0.83rem; line-height: 1.55; color: var(--text-secondary); }
+.estimator-note-sub { margin-top: 0.3rem !important; color: var(--text-muted) !important; font-size: 0.78rem !important; }

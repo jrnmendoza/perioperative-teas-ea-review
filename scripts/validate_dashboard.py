@@ -504,8 +504,15 @@ def t_yeh_not_double_counted():
         if len({re.sub(r"\s+", " ", x) for x in labels}) > 1:
             probs.append(f"{path.relative_to(ROOT)} lists Yeh 2010 and Yeh 2011 as separate rows")
     # (c) not presented as two independent trials in live UI prose
+    # The guard list is the set of ways the page is allowed to mention both
+    # records in one breath. Extended 2026-09-12: since the unit-of-analysis
+    # amendment the page states the linkage in PRISMA 2020's own terms -- two
+    # reports of one study, counted once -- which is a stronger statement than
+    # the negations this list originally accepted, not a weaker one.
     guards = ("not ", "never", "forbid", "withdrawn", "hard hold", "excluding",
-              "overlap", "superseded", "must not", "one study unit", "cohort-overlap")
+              "overlap", "superseded", "must not", "one study unit", "cohort-overlap",
+              "two reports of one", "reports of one", "companion report", "count once",
+              "counted once", "one trial", "linked cohort")
     for m in re.finditer(r"Yeh\s*2010[^<]{0,60}Yeh\s*20(10 ATHM|11)", LIVE_UI):
         window = LIVE_UI[max(0, m.start() - 400):m.end() + 400].lower()
         if not any(g in window for g in guards):
@@ -1499,8 +1506,24 @@ def t_ea_comparator_not_mislabelled_sham():
         if "sham" in r["comparator"].lower():
             probs.append(f"{r['study_unit']} comparator {r['comparator']!r} looks sham-controlled; "
                          f"re-verify the EA-vs-usual-care premise")
-    for bad in re.finditer(r"EA vs (?:Control/Sham|Sham/Control|Sham)", LIVE_UI):
+    # The bare form "EA vs Sham" is NOT banned: it is the correct stratum label
+    # for the individual EA trials that really were sham-controlled (Wong 2006
+    # among them), and the register carries it. Only the composite forms, which
+    # can only be describing the strict primary stratum, are wrong.
+    #
+    # 2026-09-12: a stray control character in this pattern had been silently
+    # disabling the third alternative. Removing it made the check fire on Wong
+    # 2006's own correct label, which showed the alternative should never have
+    # been here; what it was reaching for is asserted directly below instead.
+    for bad in re.finditer(r"EA vs (?:Control/Sham|Sham/Control)", LIVE_UI):
         probs.append(f"live UI mislabels the EA stratum: {bad.group(0)!r}")
+    # What actually matters: none of the three strict-primary EA studies may be
+    # recorded as sham-controlled in the register the dashboard renders from.
+    for s in STUDIES:
+        if s["key"] in ("El-Rakshy 2009", "Seevaunnamtum 2016", "Yang 2024") \
+           and "sham" in (s.get("comparator_short", "") + s.get("stratum", "")).lower():
+            probs.append(f"{s['key']} is recorded as sham-controlled in data.js, contradicting "
+                         f"the EA-vs-usual-care premise of the strict primary stratum")
     if "EA vs Usual Care" not in HTML and "EA vs Usual Care" not in APP:
         probs.append("expected corrected label 'EA vs Usual Care' not found")
     check("EA strict stratum is labelled 'vs Usual Care', not 'vs Sham/Control'",
@@ -1865,10 +1888,16 @@ def t_xie2014_yang2020_secondary_outcomes_corrected():
                      f"(source PDF Table 3: time to first flatus)")
 
     tu = (by_key.get("Tu 2024", {}).get("outcomes") or {}).get("rescue_analgesia") or {}
-    if (tu.get("arm1_events"), tu.get("arm1_total"), tu.get("arm2_events"), tu.get("arm2_total")) != (3, 57, 6, 58):
+    # The analysed denominator is lock-owned and lives in arm1_n/arm2_n. arm1_total
+    # was the stale RANDOMISED n (77/76) and was removed in the 2026-09-10
+    # remediation, so read the analysed field first and fall back only for
+    # records the sync has not reached.
+    tu_n1 = tu.get("arm1_n", tu.get("arm1_total"))
+    tu_n2 = tu.get("arm2_n", tu.get("arm2_total"))
+    if (tu.get("arm1_events"), tu_n1, tu.get("arm2_events"), tu_n2) != (3, 57, 6, 58):
         probs.append(f"Tu 2024 outcomes.rescue_analgesia is "
-                     f"{tu.get('arm1_events')}/{tu.get('arm1_total')} vs "
-                     f"{tu.get('arm2_events')}/{tu.get('arm2_total')}, expected 3/57 vs 6/58 "
+                     f"{tu.get('arm1_events')}/{tu_n1} vs "
+                     f"{tu.get('arm2_events')}/{tu_n2}, expected 3/57 vs 6/58 "
                      f"(source PDF Table 4: tramadol rescue within 6-24h)")
 
     wu = (by_key.get("Wu 2022", {}).get("outcomes") or {}).get("intraop_opioid") or {}
@@ -3091,6 +3120,658 @@ def t_target_af_sof_rows_match_v26_source():
           not probs, "\n".join(probs))
 
 
+# Placeholder arm-level tuples that were live in dashboard/data.js before the
+# 2026-09-10 remediation and describe no published result. Banning them by exact
+# value is cheap and catches a revert that a lock comparison alone might miss if
+# the lock itself were ever edited to match. Keyed by (bucket, study).
+SUPERSEDED_OUTCOME_ARMS = {
+    ("intraop_opioid", "Guo 2023"):   (620.0, 140.0, 30, 710.0, 160.0, 30),
+    ("intraop_opioid", "Liang 2021"): (533.0, 125.0, 30, 582.0, 140.0, 30),
+    ("intraop_opioid", "Pan 2023"):   (890.0, 210.0, 32, 960.0, 230.0, 32),
+    ("intraop_opioid", "Wu 2022"):    (1100.0, 240.0, 30, 1380.0, 280.0, 30),
+    ("intraop_opioid", "Lu 2021"):    (1580.0, 390.0, 190, 1720.0, 410.0, 188),
+    ("intraop_opioid", "Xing 2022"):  (1330.0, 310.0, 29, 1620.0, 380.0, 29),
+    ("intraop_opioid", "Zheng 2025"): (750.0, 180.0, 42, 820.0, 190.0, 43),
+    ("flatus_time", "Yang 2024"):     (83.0, 12.0, 90, 85.0, 12.0, 90),
+    ("flatus_time", "Yang 2020"):     (67.45, 10.42, 29, 73.55, 12.18, 28),
+    ("flatus_time", "Xing 2022"):     (48.86, 11.45, 29, 51.07, 12.24, 29),
+    ("flatus_time", "Lu 2022"):       (38.8, 8.2, 47, 46.2, 8.9, 47),
+    ("flatus_time", "Ng 2013"):       (31.92, 8.64, 6, 32.16, 8.88, 6),
+}
+SUPERSEDED_OUTCOME_EVENTS = {
+    ("rescue_analgesia", "Xie 2014"): (4, 10),
+    ("rescue_analgesia", "Yu 2020"):  (5, 11),
+    ("rescue_analgesia", "Tu 2024"):  (9, 17),
+}
+
+# The unit every pooled bucket must be expressed in once the lock's own
+# conversions have been applied. A record carrying the raw statistic's unit
+# (Ng 2013's flatus is reported in days but pooled in hours) is a unit-mixing
+# bug, which is what this pins down.
+OUTCOME_UNITS = {
+    "opioid_24h": "mg IV MME",
+    "opioid_48h": "mg IV MME",
+    "opioid_72h": "mg IV MME",
+    "intraop_opioid": "µg remifentanil",
+    "flatus_time": "hours",
+    "ponv_24h": "participants",
+    "rescue_analgesia": "participants",
+}
+
+
+def _dashboard_outcome_records():
+    """Every arm-bearing outcome record in data.js, as (bucket, study, record)."""
+    for s in STUDIES:
+        for bucket, rec in (s.get("outcomes") or {}).items():
+            if isinstance(rec, dict):
+                yield bucket, s.get("key"), rec
+
+
+def t_dashboard_outcomes_are_generated_from_the_lock():
+    """
+    STRUCTURAL. The 2026-09-10 incident: dashboard/data.js was a hand-maintained
+    second copy of numbers the locked datasets already held, and 15 of its
+    arm-bearing cells had drifted into placeholder values matching no source and
+    no lock. dashboard/app.js overwrites s.outcomes[key] from the GENERATED
+    window.BROWSER_TARGETS at boot, so those numbers never reached a forest plot
+    -- but they sat in the committed register and would have gone live the
+    moment that overwrite was relaxed.
+
+    scripts/sync_dashboard_outcomes.py now derives those records from the same
+    lock browser_targets.js is built from. This asserts the sync is current, so
+    a hand edit to data.js fails the build instead of shipping. It is the check
+    that makes "data.js is generated, not authored" true rather than aspirational.
+    """
+    import io
+    import contextlib
+    sys.path.insert(0, str(ROOT / "scripts"))
+    import sync_dashboard_outcomes as sync_mod
+
+    buf = io.StringIO()
+    with contextlib.redirect_stdout(buf):
+        rc = sync_mod.sync(check_only=True)
+    check("dashboard/data.js outcome records are generated from the lock, not authored",
+          rc == 0, buf.getvalue().strip())
+
+
+def t_outcome_effects_recompute_from_their_arms():
+    """
+    DERIVED. meta_engine.js consumes the stored mean_diff/se (and rr/ci for
+    binary outcomes) verbatim -- it never recomputes them from the arms. A record
+    whose scalars disagree with its own arms therefore pools a number that
+    describes nothing. Recompute every one of them.
+
+    Direction is checked the same way: `favors` must follow the sign of the
+    observed effect. Liang 2021 shipped as favors="Intervention" on a mean_diff
+    of -49 when its true effect is +56.8 -- a false opioid-sparing signal that a
+    value-only comparison would not have caught.
+    """
+    import math
+    probs = []
+    checked = 0
+    for bucket, key, rec in _dashboard_outcome_records():
+        has_cont = all(k in rec for k in
+                       ("arm1_mean", "arm1_sd", "arm1_n", "arm2_mean", "arm2_sd", "arm2_n"))
+        has_bin = all(k in rec for k in ("arm1_events", "arm2_events", "arm1_n", "arm2_n"))
+
+        if has_cont:
+            checked += 1
+            m1, s1, n1 = float(rec["arm1_mean"]), float(rec["arm1_sd"]), float(rec["arm1_n"])
+            m2, s2, n2 = float(rec["arm2_mean"]), float(rec["arm2_sd"]), float(rec["arm2_n"])
+            if min(n1, n2) <= 0 or min(s1, s2) < 0:
+                probs.append(f"{key}/{bucket}: non-positive n or negative SD")
+                continue
+            md = m1 - m2
+            se = math.sqrt(s1 ** 2 / n1 + s2 ** 2 / n2)
+            if abs(float(rec.get("mean_diff", md)) - md) > 0.01:
+                probs.append(f"{key}/{bucket}: mean_diff {rec['mean_diff']} != {md:.4f} from arms")
+            if abs(float(rec.get("se", se)) - se) > 0.01:
+                probs.append(f"{key}/{bucket}: se {rec['se']} != {se:.4f} from arms")
+            for bound, want in (("ci_low", md - 1.96 * se), ("ci_upp", md + 1.96 * se)):
+                if bound in rec and abs(float(rec[bound]) - want) > 0.01:
+                    probs.append(f"{key}/{bucket}: {bound} {rec[bound]} != {want:.4f}")
+            expect = "Intervention" if md < 0 else "Control"
+            if "favors" in rec and rec["favors"] != expect:
+                probs.append(f"{key}/{bucket}: favors '{rec['favors']}' contradicts mean_diff "
+                             f"{md:.2f} (expected '{expect}')")
+
+        elif has_bin:
+            checked += 1
+            e1, n1 = float(rec["arm1_events"]), float(rec["arm1_n"])
+            e2, n2 = float(rec["arm2_events"]), float(rec["arm2_n"])
+            # A denominator smaller than its event count is impossible; this is
+            # what a randomised-vs-analysed n mix-up looks like numerically.
+            for label, e, n in (("arm1", e1, n1), ("arm2", e2, n2)):
+                if n <= 0:
+                    probs.append(f"{key}/{bucket}: {label} denominator is {n}")
+                elif e > n:
+                    probs.append(f"{key}/{bucket}: {label} events {e} exceed denominator {n}")
+            if min(n1, n2) <= 0:
+                continue
+            # Haldane-Anscombe, applied universally (review team decision
+            # 2026-09-11) -- must match scripts/build_reference_data.py exactly,
+            # or the register and the forest plot are on different scales.
+            e1c, e2c, n1c, n2c = e1 + 0.5, e2 + 0.5, n1 + 1, n2 + 1
+            rr = (e1c / n1c) / (e2c / n2c)
+            se = math.sqrt(1 / e1c - 1 / n1c + 1 / e2c - 1 / n2c)
+            if abs(float(rec.get("rr", rr)) - rr) > 0.001:
+                probs.append(f"{key}/{bucket}: rr {rec['rr']} != {rr:.4f} from events "
+                             f"(Haldane-Anscombe corrected)")
+            if abs(float(rec.get("se", se)) - se) > 0.001:
+                probs.append(f"{key}/{bucket}: se {rec['se']} != {se:.4f} from events")
+            expect = "Intervention" if rr < 1 else "Control"
+            if "favors" in rec and rec["favors"] != expect:
+                probs.append(f"{key}/{bucket}: favors '{rec['favors']}' contradicts rr {rr:.3f}")
+
+    check(f"Every dashboard outcome effect recomputes from its own arms ({checked} records)",
+          not probs, "\n".join(probs))
+
+
+def t_no_superseded_placeholder_outcomes():
+    """
+    ABSENCE. The 15 placeholder tuples the 2026-09-10 incident removed. Each is
+    a plausible-looking value that describes no published result, which is
+    exactly why they survived review for as long as they did. Ban them by value
+    so a revert cannot reintroduce one quietly.
+    """
+    probs = []
+    for bucket, key, rec in _dashboard_outcome_records():
+        banned = SUPERSEDED_OUTCOME_ARMS.get((bucket, key))
+        if banned and all(k in rec for k in ("arm1_mean", "arm1_sd", "arm1_n",
+                                             "arm2_mean", "arm2_sd", "arm2_n")):
+            got = tuple(float(rec[k]) for k in
+                        ("arm1_mean", "arm1_sd", "arm1_n", "arm2_mean", "arm2_sd", "arm2_n"))
+            if all(abs(a - b) <= 0.001 for a, b in zip(got, banned)):
+                probs.append(f"{key}/{bucket}: superseded placeholder arms are live again {got}")
+        banned_e = SUPERSEDED_OUTCOME_EVENTS.get((bucket, key))
+        if banned_e and all(k in rec for k in ("arm1_events", "arm2_events")):
+            got_e = (float(rec["arm1_events"]), float(rec["arm2_events"]))
+            if all(abs(a - b) <= 0.001 for a, b in zip(got_e, banned_e)):
+                probs.append(f"{key}/{bucket}: superseded placeholder events are live again {got_e}")
+    check(f"No superseded placeholder outcome values survive "
+          f"({len(SUPERSEDED_OUTCOME_ARMS) + len(SUPERSEDED_OUTCOME_EVENTS)} banned)",
+          not probs, "\n".join(probs))
+
+
+def t_outcome_units_are_not_mixed():
+    """
+    STRUCTURAL. Ng 2013 reports time to first flatus in DAYS and is pooled in
+    HOURS; the lock row keeps the raw unit, so the generated record used to be
+    labelled "days" while carrying hour values. Nothing would have caught a
+    genuine days/hours mix-up in the pooled mean. Pin each bucket to the one
+    unit its pooled estimate is expressed in, and require any record whose raw
+    statistic differs to say so in `converted_from`.
+    """
+    probs = []
+    for bucket, key, rec in _dashboard_outcome_records():
+        want = OUTCOME_UNITS.get(bucket)
+        if not want or "unit" not in rec:
+            continue
+        if not any(k in rec for k in ("arm1_mean", "arm1_events")):
+            continue  # narrative/status-only record
+        if rec["unit"] != want:
+            # A record that says in its own note that it is outside the pooled
+            # set may legitimately carry the raw published unit -- that is the
+            # honest label. What must never happen is a raw statistic wearing
+            # the pooled unit, which is the case this catches.
+            declared_out = ("not in the locked" in str(rec.get("note", "")).lower()
+                            or "not a 0" in str(rec.get("status", "")).lower()
+                            or "not pooled" in str(rec.get("status", "")).lower())
+            if not declared_out:
+                probs.append(f"{key}/{bucket}: unit '{rec['unit']}' is not the pooled unit "
+                             f"'{want}' and the record does not declare itself out of pool")
+        if "converted_from" in rec and want not in ("participants",):
+            if not re.search(r"[x×]\s*\d", str(rec["converted_from"])):
+                probs.append(f"{key}/{bucket}: converted_from does not state the conversion factor")
+    check("Pooled outcome records all carry their analysis unit, and declare any conversion",
+          not probs, "\n".join(probs))
+
+
+def t_legacy_compilers_carry_no_placeholders():
+    """
+    ABSENCE + STRUCTURAL. dashboard/compile_dashboard_data.py and its byte-identical
+    twin 06_FINAL_ANALYSIS_V26/build_v26_dataset.py still hold hardcoded outcome
+    dicts. They are not on the build path any more -- data.js is generated by
+    scripts/sync_dashboard_outcomes.py -- but they held all 12 placeholder values
+    after data.js had been corrected, so running either would have regenerated the
+    2026-09-10 contamination wholesale.
+
+    Ban the placeholder literals in both files, and assert the two stay identical
+    so a fix can never land in one and not the other.
+    """
+    probs = []
+    paths = [ROOT / "dashboard/compile_dashboard_data.py",
+             ROOT / "06_FINAL_ANALYSIS_V26/build_v26_dataset.py"]
+    texts = []
+    for path in paths:
+        if not path.exists():
+            probs.append(f"{path.name} is missing")
+            texts.append("")
+            continue
+        texts.append(path.read_text(encoding="utf-8"))
+
+    # One distinctive literal per superseded record, as it appeared in these files.
+    banned = {
+        '"arm1_mean": 31.92': "Ng 2013 flatus placeholder",
+        '"arm1_mean": 67.45': "Yang 2020 flatus placeholder",
+        '"arm1_mean": 83.0, "arm1_sd": 12.0': "Yang 2024 flatus placeholder",
+        '"arm1_mean": 48.86': "Xing 2022 flatus placeholder",
+        '"arm1_mean": 38.8, "arm1_sd": 8.2': "Lu 2022 flatus placeholder",
+        '"arm1_mean": 1100.0': "Wu 2022 intraop placeholder",
+        '"arm1_mean": 1580.0': "Lu 2021 intraop placeholder",
+        '"arm1_mean": 1330.0': "Xing 2022 intraop placeholder",
+        '"arm1_mean": 750.0, "arm1_sd": 180.0': "Zheng 2025 intraop placeholder",
+        '"arm1_mean": 620.0': "Guo 2023 intraop placeholder",
+        '"arm1_mean": 533.0': "Liang 2021 intraop placeholder",
+        '"arm1_mean": 890.0, "arm1_sd": 210.0': "Pan 2023 intraop placeholder",
+        '"arm1_events": 4, "arm1_total": 20': "Xie 2014 rescue placeholder",
+        '"arm1_events": 5, "arm1_total": 30': "Yu 2020 rescue placeholder",
+        '"arm1_events": 9, "arm1_total": 77': "Tu 2024 rescue placeholder",
+        "1.33 ± 0.36": "Ng 2013 fabricated day->hour provenance",
+    }
+    # The same fabricated narrative must not survive in the register either.
+    # sync_dashboard_outcomes.py preserves `note` fields verbatim, so a rebase or
+    # revert can carry it back in even when every number is correct.
+    fabricated = "Originally reported in days (1.33 ± 0.36 vs 1.34 ± 0.37 days)"
+    if fabricated in DATA_JS:
+        probs.append("dashboard/data.js: Ng 2013's fabricated day->hour provenance is asserted "
+                     "again (1.33/1.34 days, n=6/6 -- these appear nowhere in the source). The "
+                     "corrective note may QUOTE those figures as superseded; it may not state "
+                     "them as the source's own.")
+    for path, text in zip(paths, texts):
+        for literal, why in banned.items():
+            if literal in text:
+                probs.append(f"{path.name}: {why} is still hardcoded ({literal})")
+
+    if all(texts) and texts[0] != texts[1]:
+        probs.append("compile_dashboard_data.py and build_v26_dataset.py have diverged; "
+                     "they must stay byte-identical")
+
+    check(f"Legacy dataset compilers carry no superseded placeholder values "
+          f"({len(banned)} banned, 2 files)",
+          not probs, "\n".join(probs))
+
+
+# Workbooks that are kept as the review's audit trail but must NOT feed any live
+# analysis. Deleting them would destroy provenance for a registered review; the
+# risk they actually carry is that a script quietly starts reading one. That is
+# what this pins down. Keep in step with "TEAS EA Verification/README.md".
+ARCHIVAL_WORKBOOKS = {
+    "TEAS_EA_RECONCILED_MASTER_DATA_v20_PRIMARY_OPIOID_SET.xlsx": "v20",
+    "TEAS_EA_RECONCILED_MASTER_DATA_v32_FINAL_LOCK_READY.xlsx": "v32",
+    "TEAS_EA_v32_SUPPLEMENTARY_MISSED_OUTCOMES_FOR_CLAUDE_CODE.xlsx": "v32 supplement",
+}
+MASTER_WORKBOOK = "TEAS_EA_RECONCILED_MASTER_DATA_v34_FINAL_LOCK_READY.xlsx"
+
+
+def t_archival_workbooks_feed_no_live_code():
+    """
+    STRUCTURAL. Five superseded master workbooks sit beside the current one. The
+    review team's instinct is to delete them so nothing gets mixed up; the right
+    answer is the opposite -- they are the audit trail for PROSPERO
+    CRD420251090635, and two of them are still read by live code, so deleting is
+    both destructive and build-breaking.
+
+    What actually needs preventing is a script quietly reading a superseded
+    workbook. This asserts that the workbooks marked archival in
+    "TEAS EA Verification/README.md" are referenced by NO live analytical code,
+    that the master still is, and that the README's own table has not drifted
+    from what the code does.
+    """
+    verif = ROOT / "TEAS EA Verification"
+    readme = verif / "README.md"
+    probs = []
+
+    if not readme.exists():
+        check("Archival master workbooks feed no live analytical code", False,
+              "TEAS EA Verification/README.md is missing -- it is what names the master")
+        return
+
+    # Live analytical code: the build path and the dashboard's own scripts.
+    live = sorted(
+        list((ROOT / "scripts").glob("*.py"))
+        + list((ROOT / "dashboard").glob("*.py"))
+        + list((ROOT / ".github/workflows").glob("*.yml"))
+    )
+    for path in live:
+        if path.name in ("validate_dashboard.py",):
+            continue  # this file names them in order to ban them
+        text = path.read_text(encoding="utf-8", errors="ignore")
+        for wb, label in ARCHIVAL_WORKBOOKS.items():
+            if wb in text:
+                probs.append(f"{path.relative_to(ROOT)} reads the archival {label} workbook "
+                             f"({wb}); the master is {MASTER_WORKBOOK}")
+
+    if not (verif / MASTER_WORKBOOK).exists():
+        probs.append(f"the master workbook {MASTER_WORKBOOK} is missing")
+
+    build_site = (ROOT / "scripts/build_site.py").read_text(encoding="utf-8")
+    if MASTER_WORKBOOK not in build_site:
+        probs.append("scripts/build_site.py no longer names the master workbook")
+
+    # The README's table is the human-readable half of this contract; if a
+    # workbook exists on disk but the README does not mention it, the table has
+    # drifted and the next person cannot tell which file is authoritative.
+    readme_text = readme.read_text(encoding="utf-8")
+    for wb in verif.glob("*.xlsx"):
+        stem = wb.name.replace("TEAS_EA_RECONCILED_MASTER_DATA_", "").replace(".xlsx", "")
+        if wb.name not in readme_text and stem not in readme_text:
+            probs.append(f"{wb.name} is on disk but not listed in "
+                         f"TEAS EA Verification/README.md")
+
+    check(f"Archival master workbooks feed no live analytical code "
+          f"({len(ARCHIVAL_WORKBOOKS)} archival, master = v34)",
+          not probs, "\n".join(probs))
+
+
+def t_pdf_extractions_are_provable_from_their_quotes():
+    """
+    STRUCTURAL. dashboard/pdf_extracted.js holds values read straight out of the
+    source PDFs. After the placeholder incident, a number in this register is only
+    worth having if a reader can check it, so every accepted value must carry the
+    PDF, the page and the verbatim sentence -- and the value must actually appear
+    in that sentence.
+
+    This is what stops the extractor from drifting into the failure mode it exists
+    to avoid: a plausible figure with no traceable origin. It also holds the
+    "conflict" path honest, since an unresolved extraction must carry no value.
+    """
+    path = DASH / "pdf_extracted.js"
+    if not path.exists():
+        check("PDF-extracted values are provable from their own quotes", False,
+              "dashboard/pdf_extracted.js is missing; run scripts/extract_baseline_from_pdfs.py")
+        return
+    data = json.loads(path.read_text(encoding="utf-8")
+                      .split("window.PDF_EXTRACTED = ", 1)[1].rsplit(";", 1)[0])
+    pdf_dir = ROOT / "TEAS EA Verification" / "Source PDFs"
+    study_keys = {s["key"] for s in STUDIES}
+    probs = []
+    accepted = 0
+
+    for key, rec in data.items():
+        if key not in study_keys:
+            probs.append(f"{key}: not a study in STUDIES_DATA")
+        src = rec.get("source_pdf")
+        if not src or not (pdf_dir / src).exists():
+            probs.append(f"{key}: source_pdf {src!r} does not exist")
+        for field, f in rec.items():
+            if field == "source_pdf" or not isinstance(f, dict):
+                continue
+            if "conflict" in f:
+                if "value" in f:
+                    probs.append(f"{key}/{field}: carries both a conflict and a value")
+                continue
+            if "value" not in f:
+                continue
+            accepted += 1
+            for required in ("page", "quote"):
+                if not f.get(required):
+                    probs.append(f"{key}/{field}: accepted value has no {required}")
+            quote = str(f.get("quote", "")).lower()
+            # Every token of the value must be visible in its own quote. Pulse
+            # width legitimately carries several ("0.6 ms / 0.2 ms"), so check
+            # each number rather than the joined string. Arm counts are often
+            # written as words ("randomly divided into four groups"), so a digit
+            # is satisfied by its own spelling too.
+            words = {"2": "two", "3": "three", "4": "four", "5": "five"}
+            for token in re.findall(r"\d+(?:\.\d+)?", str(f["value"])):
+                spelled = words.get(token)
+                if token in quote.replace(",", ""):
+                    continue
+                if spelled and spelled in quote:
+                    continue
+                probs.append(f"{key}/{field}: value {f['value']!r} is not present in its "
+                             f"own quote — {quote[:90]!r}")
+                break
+            # A non-numeric value (anaesthesia technique) must still be grounded.
+            if not re.search(r"\d", str(f["value"])):
+                head = str(f["value"]).split()[0].lower()
+                if head and head not in quote:
+                    probs.append(f"{key}/{field}: value {f['value']!r} does not appear in its "
+                                 f"own quote — {quote[:90]!r}")
+
+    check(f"PDF-extracted values are provable from their own quotes "
+          f"({accepted} accepted across {len(data)} papers)",
+          not probs, "\n".join(probs))
+
+
+def t_unlinked_rob2_cells_explain_themselves():
+    """
+    STRUCTURAL. The RoB 2 matrix's default view is the study-level overview, and
+    every one of its 420 cells used to tell the reader that "a specific source
+    quote for this result is not yet linked". That reads as an unfinished
+    dashboard, but a study-level judgement is not a result-specific assessment --
+    there is no per-result quote that could ever be attached to it.
+
+    The remaining result-specific gaps are not unfinished either: each was checked
+    individually and left unlinked because linking it would mean guessing between
+    genuine register ties, legitimising a unit-of-analysis decision the review has
+    paused on (Yeh 2010/2011 are the same trial twice), or inventing a quote for
+    an outcome the source paper never reports (Yang 2024).
+
+    So: every assessed result that has no source-quote link must have a recorded
+    reason. A new gap appearing without one is what this catches.
+    """
+    links_path = DASH / "rob2_source_links.js"
+    if not links_path.exists():
+        check("Unlinked RoB 2 cells explain themselves", False, "rob2_source_links.js missing")
+        return
+    payload = json.loads(links_path.read_text(encoding="utf-8")
+                         .split("window.ROB2_SOURCE_LINKS = ", 1)[1].rsplit(";", 1)[0])
+    links = payload.get("links", {})
+    reasons = payload.get("unlinked_reasons", {})
+    by_id = {s["id"]: s["key"] for s in STUDIES}
+
+    # Assessed results come from two places: data.js's own rob2_outcomes, and the
+    # primary-outcome RoB 2 that build_reference_data.py injects into
+    # primary_browser.js (Szmit 2021 reaches the matrix only that way).
+    assessed = set()
+    for s in STUDIES:
+        for bucket, a in (s.get("rob2_outcomes") or {}).items():
+            if bucket != "assessed_list" and isinstance(a, dict) and a.get("status") == "Assessed":
+                assessed.add((s["id"], s["key"], bucket))
+    pb_path = DASH / "primary_browser.js"
+    if pb_path.exists():
+        pb = json.loads(pb_path.read_text(encoding="utf-8")
+                        .split("window.PRIMARY_BROWSER = ", 1)[1].rsplit(";", 1)[0])
+        key_to_id = {v: k for k, v in by_id.items()}
+        for key, rec in pb.items():
+            if isinstance(rec.get("rob2"), dict) and rec["rob2"].get("status") == "Assessed":
+                sid = key_to_id.get(key)
+                if sid:
+                    assessed.add((sid, key, "opioid_24h"))
+
+    probs = []
+    explained = 0
+    for sid, key, bucket in sorted(assessed):
+        if f"{sid}::{bucket}" in links:
+            continue
+        if f"{key}::{bucket}" in reasons:
+            explained += 1
+            continue
+        probs.append(f"{key}/{bucket}: assessed but neither linked to a source quote nor given a "
+                     f"recorded reason in UNLINKED_REASONS "
+                     f"(scripts/build_rob2_source_links.py)")
+
+    # The study-level view must keep its own branch. Without it, all 420 cells of
+    # the matrix's DEFAULT view fall through to the coverage-gap wording again.
+    app = (DASH / "app.js").read_text(encoding="utf-8")
+    if "study-level consensus overview, not a judgement about one specific result" not in app:
+        probs.append("app.js has lost the study-level explanation; the matrix's default view "
+                     "would again tell readers a source quote is 'not yet linked' for a "
+                     "judgement that is not result-specific")
+    if "unlinked_reasons" not in app:
+        probs.append("app.js no longer reads unlinked_reasons, so recorded explanations "
+                     "would not reach the reader")
+
+    check(f"Unlinked RoB 2 cells explain themselves "
+          f"({len(links)} linked, {explained} explained)",
+          not probs, "\n".join(probs))
+
+
+# Country of CONDUCT can legitimately differ from the lead author's affiliation.
+# Lee 2011 is the case: first affiliation Victoria University, Melbourne, but the
+# paper states the patients were recruited at China Medical University Hospital,
+# Taichung. The review team chose country of conduct, so the register holds
+# Taiwan while an affiliation-based reading says Australia. That is correct, not
+# a defect -- but it must be declared so it cannot be "fixed" back by mistake.
+CONDUCT_NOT_AFFILIATION = {
+    "Lee 2011": ("Taiwan", "Australia"),
+}
+
+
+def t_country_is_verified_country_of_conduct():
+    """
+    STRUCTURAL. The register used to record "China" for all 63 trials that had a
+    country, which was wrong for eight of them and left seven blank. Country is
+    now set from scripts/apply_country_of_conduct.py, where every value carries
+    the sentence in the source publication it was read from.
+
+    This asserts data.js still matches that table exactly, that each entry keeps
+    its evidence, and that the only place the register departs from an
+    affiliation-based reading is the declared conduct-vs-affiliation case.
+    Getting this wrong changes what the review can claim about generalisability,
+    so it should fail loudly rather than drift.
+    """
+    sys.path.insert(0, str(ROOT / "scripts"))
+    from apply_country_of_conduct import CONDUCT, META
+
+    by_key = {s["key"]: s for s in STUDIES}
+    probs = []
+    for key, (country, evidence) in CONDUCT.items():
+        s = by_key.get(key)
+        if s is None:
+            probs.append(f"{key}: declared in CONDUCT but not present in STUDIES_DATA")
+            continue
+        if s.get("country") != country:
+            probs.append(f"{key}: register says {s.get('country')!r}, verified conduct is "
+                         f"{country!r} -- run scripts/apply_country_of_conduct.py")
+        if s.get("country_meta") != META.get(country):
+            probs.append(f"{key}: country_meta does not match {country}")
+        if not s.get("country_evidence"):
+            probs.append(f"{key}: country set without the source sentence that supports it")
+        elif s["country_evidence"] != evidence:
+            probs.append(f"{key}: country_evidence has drifted from the verified quote")
+
+    # Every study must now carry a country; "not reported" was the old state.
+    missing = [s["key"] for s in STUDIES if not s.get("country")]
+    if missing:
+        probs.append(f"{len(missing)} study/studies still have no country: {missing[:5]}")
+
+    # Where the source PDF's lead affiliation differs from the recorded conduct,
+    # that difference must be a declared one.
+    pdf_path = DASH / "pdf_extracted.js"
+    if pdf_path.exists():
+        extracted = json.loads(pdf_path.read_text(encoding="utf-8")
+                               .split("window.PDF_EXTRACTED = ", 1)[1].rsplit(";", 1)[0])
+        for s in STUDIES:
+            rec = extracted.get(s["key"], {}).get("country")
+            if not (isinstance(rec, dict) and rec.get("value") and s.get("country")):
+                continue
+            if rec["value"] != s["country"]:
+                declared = CONDUCT_NOT_AFFILIATION.get(s["key"])
+                if not declared:
+                    probs.append(f"{s['key']}: conduct {s['country']!r} differs from the source's "
+                                 f"lead affiliation {rec['value']!r} and is not declared in "
+                                 f"CONDUCT_NOT_AFFILIATION")
+                elif declared != (s["country"], rec["value"]):
+                    probs.append(f"{s['key']}: declared conduct/affiliation pair {declared} no "
+                                 f"longer matches ({s['country']!r}, {rec['value']!r})")
+
+    countries = {s.get("country") for s in STUDIES}
+    check(f"Country is the verified country of conduct "
+          f"({len(CONDUCT)} verified from source, {len(countries)} countries represented)",
+          not probs, "\n".join(probs))
+
+
+def t_companion_publications_cannot_double_count():
+    """
+    STRUCTURAL. Yeh 2010 and Yeh 2011 are two reports of ONE three-arm trial of
+    lumbar spinal surgery -- same author team, same cohort, the sham arm's
+    figures identical between the papers. The review team decided on 2026-09-11
+    that they count once.
+
+    Formally reducing k from 70 to 69 is a change to the LOCKED v34 master and
+    the PRISMA flow, not something the dashboard may do on its own -- build_site
+    derives canonical_studies from the workbook and other checks here assert it
+    is 70. So this asserts the thing that actually protects the analysis: the
+    pair is declared as one unit, and neither report contributes independently
+    to any pooled estimate. If someone later adds one of them to a synthesis,
+    this fails.
+    """
+    by_key = {s["key"]: s for s in STUDIES}
+    pairs = [("Yeh 2010", "Yeh 2011")]
+    probs = []
+    for primary, companion in pairs:
+        p_rec, c_rec = by_key.get(primary), by_key.get(companion)
+        if not p_rec or not c_rec:
+            probs.append(f"{primary}/{companion}: one of the pair is missing from STUDIES_DATA")
+            continue
+        if c_rec.get("duplicate_report_of") != primary:
+            probs.append(f"{companion}: not marked as a duplicate report of {primary}")
+        if p_rec.get("companion_report") != companion:
+            probs.append(f"{primary}: does not name {companion} as its companion report")
+        for rec in (p_rec, c_rec):
+            if not rec.get("unit_of_analysis_note"):
+                probs.append(f"{rec['key']}: carries no unit-of-analysis note")
+        # Neither may appear in a pooled set.
+        for name, rec in ((primary, p_rec), (companion, c_rec)):
+            pooled = [b for b, v in (rec.get("outcomes") or {}).items()
+                      if isinstance(v, dict)
+                      and (isinstance(v.get("mean_diff"), (int, float))
+                           or isinstance(v.get("rr"), (int, float)))]
+            if pooled:
+                probs.append(f"{name}: contributes arm-level data to {pooled} -- a companion "
+                             f"publication pair must not both enter a synthesis; resolve the "
+                             f"unit of analysis before pooling either")
+    # The counts the review reports must follow from the linkage, not be typed in.
+    import json as _json
+    meta_path = ROOT / "_site" / "build-meta.json"
+    if meta_path.exists():
+        meta = _json.loads(meta_path.read_text(encoding="utf-8"))
+        reports = meta.get("canonical_reports")
+        studies = meta.get("included_studies")
+        companions = meta.get("companion_reports")
+        if (reports, studies, companions) != (len(STUDIES), len(STUDIES) - len(pairs), len(pairs)):
+            probs.append(f"build-meta reports/studies/companions = "
+                         f"{reports}/{studies}/{companions}, expected "
+                         f"{len(STUDIES)}/{len(STUDIES) - len(pairs)}/{len(pairs)}")
+    # The dashboard must state the study count, not the report count, as k.
+    html = (DASH / "index.html").read_text(encoding="utf-8")
+    if "69 studies / 70 reports" not in html:
+        probs.append("index.html no longer distinguishes studies from reports in the "
+                     "Study Explorer label")
+    app_js = (DASH / "app.js").read_text(encoding="utf-8")
+    if "duplicate_report_of" not in app_js:
+        probs.append("app.js no longer excludes companion reports from the study count")
+
+    check(f"Companion publications are declared and cannot double-count "
+          f"({len(pairs)} pair; {len(STUDIES)} reports = {len(STUDIES) - len(pairs)} studies)",
+          not probs, "\n".join(probs))
+
+
+def t_quarantine_registry_is_honest():
+    """
+    STRUCTURAL. dashboard/outcome_quarantine.js withholds an outcome from being
+    read as verified. It is only useful if it cannot drift in either direction:
+    an outcome must not stay quarantined once its records are verified (which
+    would understate the evidence), and must name only real, live outcomes.
+    """
+    src = (DASH / "outcome_quarantine.js").read_text(encoding="utf-8")
+    body = src.split("window.OUTCOME_QUARANTINE = ", 1)[1].rsplit(";", 1)[0]
+    entries = re.findall(r"^\s{2}(\w+):\s*\{", body, re.M)
+    live = set(json.loads((DASH / "meta_outcomes.js").read_text(encoding="utf-8")
+                          .split("window.META_OUTCOMES = ", 1)[1].rsplit(";", 1)[0]))
+    probs = [f"quarantined outcome '{e}' is not a live Meta Lab outcome"
+             for e in entries if e not in live]
+    for e in entries:
+        block = body[body.index(f"{e}: {{"):]
+        if "reason" not in block[:block.index("}")]:
+            probs.append(f"quarantined outcome '{e}' carries no reason")
+    check(f"Outcome quarantine registry is honest ({len(entries)} quarantined)",
+          not probs, "\n".join(probs))
+
+
 def t_rob2_source_links_match_registers():
     """
     Every RoB 2 matrix cell claiming a specific, source-quoted rationale must
@@ -3296,6 +3977,311 @@ def t_computed_not_reported_is_complete_and_unrated():
           "certainty rating", not probs, "\n".join(probs))
 
 
+
+# ═══════════════════════════════════════════════════════════════════════════
+# REPORTS vs STUDIES vs RESULTS — unit discipline (2026-09-12)
+# ═══════════════════════════════════════════════════════════════════════════
+# The register holds one row per included REPORT. Dashboard copy and dashboard
+# code both used to call that 70 studies, 70 trials and 70 RCTs interchangeably,
+# and summed its population field into a "randomized patient" total that
+# double-counted the one linked cohort. These checks hold the three units apart.
+
+COHORT_OVERLAP_JS = DASH / "cohort_overlap.js"
+
+
+def _cohort_overlap() -> dict:
+    raw = COHORT_OVERLAP_JS.read_text(encoding="utf-8")
+    return json.JSONDecoder().raw_decode(raw.split("window.COHORT_OVERLAP = ", 1)[1])[0]
+
+
+def t_cohort_overlap_scan_is_current():
+    """
+    GENERATED. dashboard/cohort_overlap.js is the output of
+    scripts/build_cohort_overlap_scan.py. If it is hand-edited, or the register
+    changes without the scan being re-run, the report-to-study reconciliation on
+    screen stops following from the data it claims to summarise.
+    """
+    import subprocess
+    r = subprocess.run([sys.executable, str(ROOT / "scripts" / "build_cohort_overlap_scan.py"),
+                        "--check"], capture_output=True, text=True, cwd=ROOT)
+    check("t_cohort_overlap_scan_is_current", r.returncode == 0,
+          (r.stdout + r.stderr).strip())
+
+
+def t_report_and_study_counts_follow_from_the_linkage():
+    """
+    DERIVED. 70 reports and 69 studies are not two typed-in numbers: the gap is
+    exactly the set of records carrying duplicate_report_of. Asserting that here
+    means a future second linked cohort cannot leave "69" stale on the page.
+    """
+    companions = [s["key"] for s in STUDIES if s.get("duplicate_report_of")]
+    reports, studies = len(STUDIES), len(STUDIES) - len(companions)
+    co = _cohort_overlap()
+    probs = []
+    if co["reports"] != reports or co["studies"] != studies:
+        probs.append(f"scan says {co['reports']}/{co['studies']}, register gives {reports}/{studies}")
+    if (reports, studies) != (70, 69):
+        probs.append(f"register now gives {reports} reports / {studies} studies; every "
+                     f"hardcoded 70/69 on the page needs re-deriving")
+    # The scan must re-find every declared link, so the detection rule cannot
+    # silently stop working while still reporting a clean result.
+    declared = {frozenset((d["study_record"], d["companion_report"])) for d in co["declared_links"]}
+    found = {frozenset(c["studies"]) for c in co["candidates"] if c["status"] == "confirmed"}
+    if declared != found:
+        probs.append(f"declared links {declared} not all re-found by the scan ({found})")
+    check("t_report_and_study_counts_follow_from_the_linkage", not probs, "; ".join(probs))
+
+
+def t_trial_level_tallies_exclude_companion_reports():
+    """
+    STRUCTURAL. Specialty, modality, comparator, country and every baseline
+    characteristic are properties of a TRIAL. The renderers that tally them must
+    go through uniqueTrials(), or a companion report adds a second tally mark for
+    a cohort already counted.
+    """
+    probs = []
+    if "function uniqueTrials(" not in APP:
+        probs.append("uniqueTrials() helper is gone")
+    # renderOverview, renderStudyExplorer and summarisePopulation each tally
+    # trial properties and must derive a trials list first.
+    for fn in ("function renderOverview(", "function renderStudyExplorer(",
+               "function summarisePopulation("):
+        if fn not in APP:
+            probs.append(f"{fn.strip('function (')} missing")
+            continue
+        body = APP[APP.index(fn): APP.index(fn) + 2600]
+        if "uniqueTrials(" not in body:
+            probs.append(f"{fn.strip('function (')} tallies trial properties without uniqueTrials()")
+    # prismaPopulationSummary must not tally modality/comparator over raw rows.
+    start = APP.index("function prismaPopulationSummary(")
+    body = APP[start: APP.index("\n}", start)]
+    if "uniqueTrials(" not in body:
+        probs.append("prismaPopulationSummary counts modality/comparator over reports")
+    check("t_trial_level_tallies_exclude_companion_reports", not probs, "; ".join(probs))
+
+
+def t_participant_totals_count_each_trial_once():
+    """
+    DERIVED. Participants belong to a trial. Summing population.total_n over all
+    70 rows counts the linked Yeh cohort twice; the published total must be the
+    69-trial sum, and the figure it replaced must not still appear as a live claim.
+    """
+    companions = {s["key"] for s in STUDIES if s.get("duplicate_report_of")}
+    over_reports = sum(s["population"]["total_n"] for s in STUDIES)
+    over_studies = sum(s["population"]["total_n"] for s in STUDIES if s["key"] not in companions)
+    co = _cohort_overlap()
+    probs = []
+    if co["participants"]["analysed_across_reports"] != over_reports:
+        probs.append("scan's report-level total disagrees with the register")
+    if co["participants"]["analysed_across_studies"] != over_studies:
+        probs.append("scan's trial-level total disagrees with the register")
+    # The live figure on the PRISMA card is the trial-level one.
+    if f"{over_studies:,}" not in HTML:
+        probs.append(f"the trial-level participant total {over_studies:,} appears nowhere in index.html")
+    # The report-level sum may only appear where it is explicitly described as
+    # the superseded 70-report figure.
+    live = strip_withdrawal_prose(HTML)
+    for m in re.finditer(re.escape(f"{over_reports:,}"), live):
+        window = live[max(0, m.start() - 320): m.end() + 320]
+        if not re.search(r"70-report|across reports|earlier figure|previously|superseded|double-count",
+                         window, re.I):
+            probs.append(f"the 70-report sum {over_reports:,} appears as a live claim without "
+                         f"saying it is the report-level figure")
+            break
+    check("t_participant_totals_count_each_trial_once", not probs, "; ".join(probs))
+
+
+def t_analysed_total_is_not_labelled_randomised():
+    """
+    ABSENCE. population.total_n is the ANALYSED denominator -- the one the
+    syntheses use. It was rendered as "randomized surgical patients" in the KPI
+    strip and as "total randomized patients" on the PRISMA card. A randomised
+    total is a quantity this review cannot produce, so the word randomized must
+    not be the label attached to one of these sums.
+
+    The test is positional, which is what makes it specific: the LABEL is the text
+    immediately following the interpolated number. "69 randomized trials" in the
+    same sentence is fine -- that is a trial count, correctly described; what is
+    banned is "<analysed sum> randomized ... patients".
+    """
+    SUM = re.compile(r"\$\{\s*(?:totalN|analysedPatients|analysedTotal|over_studies)\b"
+                     r"[^}]*\}")
+    probs = []
+    for fn in ("function renderKPIs(", "function prismaPopulationSummary(",
+               "function renderPopulationSummary("):
+        if fn not in APP:
+            probs.append(f"{fn.strip('function (')} is gone")
+            continue
+        start = APP.index(fn)
+        body = APP[start: start + 4000]
+        for m in SUM.finditer(body):
+            label = body[m.end(): m.end() + 90]
+            if re.search(r"randomi[sz]ed", label, re.I):
+                probs.append(f"{fn.strip('function (')} labels the sum {m.group(0)!r} as "
+                             f"{label.strip()[:50]!r}")
+    check("t_analysed_total_is_not_labelled_randomised", not probs, "; ".join(probs))
+
+
+def t_no_review_wide_randomised_total_is_published():
+    """
+    DERIVED. A randomised participant total would need a randomised denominator
+    from every trial. The register records one for a handful of contrasts and the
+    PDF extraction records whole-trial figures for a few more -- two different
+    quantities, neither covering the review. The scan must therefore refuse to
+    publish a total, and the page must say so rather than leaving the reader to
+    assume the analysed figure is a randomised one.
+    """
+    co = _cohort_overlap()["participants"]
+    probs = []
+    if co["randomised_total_publishable"] is not False:
+        probs.append("the scan claims a review-wide randomised total is publishable")
+    if not co["randomised_total_reason"]:
+        probs.append("no reason recorded for withholding a randomised total")
+    if "randomized participant total is not reported" not in HTML:
+        probs.append("index.html does not state that no review-wide randomized total is reported")
+    if "randomisedCell(" not in APP:
+        probs.append("the explorer has no per-trial randomised cell, so NR cannot be distinguished "
+                     "from an analysed denominator standing in for it")
+    check("t_no_review_wide_randomised_total_is_published", not probs, "; ".join(probs))
+
+
+def t_possible_shared_cohorts_are_flagged_not_merged():
+    """
+    STRUCTURAL. The scan flags report pairs that may describe one cohort. A flag
+    is for a human; the dashboard must not act on it. So every flagged pair still
+    counts as two studies, and the flag has to be visible rather than sitting in
+    a file nobody reads.
+    """
+    co = _cohort_overlap()
+    flagged = [c for c in co["candidates"] if c["status"] == "flagged_for_review"]
+    probs = []
+    declared = {s["key"] for s in STUDIES if s.get("duplicate_report_of")}
+    for c in flagged:
+        for k in c["studies"]:
+            if k in declared:
+                probs.append(f"{k} is flagged for review AND already merged away -- the scan and "
+                             f"the register disagree about whether this is settled")
+    if flagged and "possible-shared-cohort" not in APP:
+        probs.append("flagged candidates are never rendered, so a reader cannot see them")
+    if flagged and "pop-flags" not in (DASH / "styles.css").read_text(encoding="utf-8"):
+        probs.append("the flag panel has no styles")
+    check("t_possible_shared_cohorts_are_flagged_not_merged", not probs,
+          f"{len(flagged)} flagged: " + "; ".join(probs))
+
+
+def t_baseline_conflicts_are_surfaced_not_corrected():
+    """
+    STRUCTURAL. Where a register baseline value disagrees with the publication it
+    was read from, the brief is to document it, not to edit the locked dataset.
+    So each recorded conflict must still be present in the register exactly as
+    the scan describes it, and must be rendered where the value is shown.
+    """
+    co = _cohort_overlap()
+    by_key = {s["key"]: s for s in STUDIES}
+    probs = []
+    for key, f in co["arm_n_conflicts"].items():
+        rec = by_key.get(key)
+        if not rec:
+            probs.append(f"{key}: conflict recorded for a study not in the register")
+            continue
+        field = f["field"].split(".")[-1]
+        actual = (rec.get("population") or {}).get(field)
+        if actual != f["register"]:
+            probs.append(f"{key}.{field} is now {actual!r}, but the conflict record says "
+                         f"{f['register']!r} -- either the register was edited (it must not be) "
+                         f"or the flag is stale and must be withdrawn with its evidence")
+        if f["register"] == f["source_says"]:
+            probs.append(f"{key}: recorded as a conflict but the two values agree")
+        if not (ROOT / f["source"]).exists():
+            probs.append(f"{key}: source file {f['source']} does not exist")
+        elif f["quote"].split()[0] not in (ROOT / f["source"]).read_text(
+                encoding="utf-8", errors="replace"):
+            probs.append(f"{key}: quoted evidence is not in {f['source']}")
+    if co["arm_n_conflicts"] and "Open data-quality flag" not in APP:
+        probs.append("conflicts are never rendered in the study drawer")
+    check("t_baseline_conflicts_are_surfaced_not_corrected", not probs, "; ".join(probs))
+
+
+def t_baseline_denominators_are_unique_trials():
+    """
+    STRUCTURAL. "Age reported in 52/69" is a statement about trials. Rendering it
+    over 70 rows inflates the denominator and, for the linked cohort, counts one
+    trial's reporting twice. summarisePopulation must therefore reduce to trials
+    before it counts anything, and must expose the report count separately so the
+    display can explain the gap.
+    """
+    start = APP.index("function summarisePopulation(")
+    body = APP[start: APP.index("\n}\n", start)]
+    probs = []
+    if "const studies = uniqueTrials(" not in body:
+        probs.append("summarisePopulation does not reduce to unique trials")
+    if "reportStudyCounts(" not in body:
+        probs.append("summarisePopulation does not carry the report count alongside")
+    # Missing data must stay missing. A denominator check is worthless if the
+    # numerator was padded with zeros.
+    render = APP[APP.index("function renderPopulationSummary("):]
+    render = render[: render.index("\n}\n")]
+    if "|| 0" in render.replace("|| 0)", "XX"):
+        probs.append("renderPopulationSummary substitutes 0 for a missing value somewhere")
+    if "isNotReported" not in APP or "nr-tag" not in APP:
+        probs.append("the not-reported path is gone")
+    check("t_baseline_denominators_are_unique_trials", not probs, "; ".join(probs))
+
+
+def t_no_live_copy_calls_seventy_reports_seventy_trials():
+    """
+    ABSENCE. The phrases that started this pass: "70 RCTs", "70 trials",
+    "70 studies", "Study Explorer (k=70)". Each is a report count wearing a trial
+    label. They are permitted only inside prose that explicitly marks itself as
+    superseded, which strip_withdrawal_prose removes before this check runs.
+    """
+    UI_FILES = {
+        "index.html": HTML,
+        "app.js": APP,
+        "translations.js": TRANS,
+        "ui_translations.js": (DASH / "ui_translations.js").read_text(encoding="utf-8"),
+        "prisma_checklist.js": (DASH / "prisma_checklist.js").read_text(encoding="utf-8"),
+    }
+    bad = re.compile(r"\b70\s+(?:RCTs?|randomi[sz]ed\s+controlled\s+trials?|trials?|studies|"
+                     r"unique\s+(?:trials?|studies))\b|k\s*=\s*70", re.I)
+    probs = []
+    for name, text in UI_FILES.items():
+        live = strip_withdrawal_prose(text) if name == "index.html" else text
+        for m in bad.finditer(live):
+            window = live[max(0, m.start() - 420): m.end() + 220]
+            # Allowed only where the sentence itself is about the reports/studies
+            # distinction, or is labelled as the superseded wording.
+            if re.search(r"previously|superseded|no longer|describing 69|reports? describing|"
+                         r"rather than the 70|70 <em>reports</em>|quoted where the unit is reports",
+                         window, re.I):
+                continue
+            probs.append(f"{name}: {live[m.start():m.end()]!r} in {window[380:520]!r}")
+    check("t_no_live_copy_calls_seventy_reports_seventy_trials", not probs,
+          " || ".join(probs[:4]))
+
+
+def t_reconciliation_status_is_not_self_contradictory():
+    """
+    ABSENCE. The PRISMA panel said the modality, comparator and patient totals
+    "remain under reconciliation" in one paragraph and "(reconciled)" in the next,
+    about the same three quantities. Whichever is true, both cannot be live.
+    """
+    live = strip_withdrawal_prose(HTML)
+    probs = []
+    for m in re.finditer(r"under reconciliation", live, re.I):
+        # Look BACKWARD only, and not far: a withdrawal marker has to INTRODUCE
+        # the phrase it withdraws. Scanning forward as well let a live claim pass
+        # merely because a later sentence happened to contain "previously".
+        lead = live[max(0, m.start() - 240): m.start()]
+        if not re.search(r"previously|superseded|no longer|formerly|used to", lead, re.I):
+            probs.append(f"a live 'under reconciliation' claim remains, introduced by "
+                         f"{lead[-170:]!r}")
+    if "reconciled 2026-09-12" not in HTML.lower():
+        probs.append("the reconciled state carries no date, so a reader cannot tell which "
+                     "statement is current")
+    check("t_reconciliation_status_is_not_self_contradictory", not probs, "; ".join(probs[:2]))
+
+
 def main() -> int:
     print("=" * 78)
     print(f"{BOLD}  DASHBOARD <-> v26 LOCK CONSISTENCY VALIDATOR{RESET}")
@@ -3367,6 +4353,30 @@ def main() -> int:
                                         t_forest_context_matches_stata_log,
                                         t_target_af_sof_rows_match_v26_source,
                                         t_rob2_source_links_match_registers]),
+        ("outcome register integrity (incident 2026-09-10)",
+         [t_dashboard_outcomes_are_generated_from_the_lock,
+          t_outcome_effects_recompute_from_their_arms,
+          t_no_superseded_placeholder_outcomes,
+          t_outcome_units_are_not_mixed,
+          t_legacy_compilers_carry_no_placeholders,
+          t_archival_workbooks_feed_no_live_code,
+          t_pdf_extractions_are_provable_from_their_quotes,
+          t_unlinked_rob2_cells_explain_themselves,
+          t_country_is_verified_country_of_conduct,
+          t_companion_publications_cannot_double_count,
+          t_quarantine_registry_is_honest]),
+        ("reports vs studies vs results — unit discipline (2026-09-12)",
+         [t_cohort_overlap_scan_is_current,
+          t_report_and_study_counts_follow_from_the_linkage,
+          t_trial_level_tallies_exclude_companion_reports,
+          t_participant_totals_count_each_trial_once,
+          t_analysed_total_is_not_labelled_randomised,
+          t_no_review_wide_randomised_total_is_published,
+          t_possible_shared_cohorts_are_flagged_not_merged,
+          t_baseline_conflicts_are_surfaced_not_corrected,
+          t_baseline_denominators_are_unique_trials,
+          t_no_live_copy_calls_seventy_reports_seventy_trials,
+          t_reconciliation_status_is_not_self_contradictory]),
         ("interpretation layer (manuscript / reviewer overlay)",
          [t_interpretation_layer_cannot_carry_evidence,
           t_interpretation_bound_to_current_evidence,

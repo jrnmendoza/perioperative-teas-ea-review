@@ -119,10 +119,11 @@ window.BROWSER_TARGETS = {
       "result_rob": "Some concerns",
       "arm1_events": 18.0,
       "arm2_events": 29.0,
-      "rr": 0.6354679802955665,
-      "se": 0.2072992436388349,
-      "ci_low": 0.4232890109542161,
-      "ci_upp": 0.9540043410779793
+      "rr": 0.6417027985810012,
+      "se": 0.20486403407635692,
+      "ci_low": 0.42948712280866863,
+      "ci_upp": 0.9587772481135207,
+      "continuity_correction": "Haldane-Anscombe (+0.5 to every cell)"
     },
     "Lu 2021": {
       "arm1_n": 190.0,
@@ -134,10 +135,11 @@ window.BROWSER_TARGETS = {
       "result_rob": "High",
       "arm1_events": 35.0,
       "arm2_events": 68.0,
-      "rr": 0.5092879256965943,
-      "se": 0.18081759895945607,
-      "ci_low": 0.3573126011123709,
-      "ci_upp": 0.7259027262203087
+      "rr": 0.512821492719838,
+      "se": 0.1795576421243226,
+      "ci_low": 0.360681334523144,
+      "ci_upp": 0.729136382239175,
+      "continuity_correction": "Haldane-Anscombe (+0.5 to every cell)"
     }
   },
   "flatus_time": {
@@ -229,7 +231,7 @@ window.BROWSER_TARGETS = {
     "Ng 2013": {
       "arm1_n": 55.0,
       "arm2_n": 55.0,
-      "unit": "days",
+      "unit": "hours",
       "comparison_id": "NG13_EA_vs_SHAM_FLATUS",
       "source_dataset": "06_FINAL_ANALYSIS_V26/01_DATA/target_E_flatus.csv",
       "source_note": "No statistically significant EA-vs-sham difference",
@@ -241,7 +243,8 @@ window.BROWSER_TARGETS = {
       "mean_diff": -7.2000008,
       "se": 4.5994468,
       "ci_low": -16.214916528,
-      "ci_upp": 1.8149149280000003
+      "ci_upp": 1.8149149280000003,
+      "converted_from": "2 ± .9 vs 2.3 ± 1.1 days (×24)"
     }
   },
   "intraop_opioid": {
@@ -376,10 +379,11 @@ window.BROWSER_TARGETS = {
       "result_rob": "Some concerns",
       "arm1_events": 1.0,
       "arm2_events": 6.0,
-      "rr": 0.16666666666666669,
-      "se": 1.0327955589886444,
-      "ci_low": 0.022014834336176927,
-      "ci_upp": 1.2617754625630146
+      "rr": 0.23076923076923075,
+      "se": 0.8516306272526402,
+      "ci_low": 0.043476570368541474,
+      "ci_upp": 1.2248996969723263,
+      "continuity_correction": "Haldane-Anscombe (+0.5 to every cell)"
     },
     "Yu 2020": {
       "arm1_n": 30.0,
@@ -391,10 +395,11 @@ window.BROWSER_TARGETS = {
       "result_rob": "Some concerns",
       "arm1_events": 13.0,
       "arm2_events": 24.0,
-      "rr": 0.5416666666666666,
-      "se": 0.227866357593825,
-      "ci_low": 0.3465519534551237,
-      "ci_upp": 0.8466343209223074
+      "rr": 0.5510204081632654,
+      "se": 0.2244421341291074,
+      "ci_low": 0.3549103647681844,
+      "ci_upp": 0.8554934438466689,
+      "continuity_correction": "Haldane-Anscombe (+0.5 to every cell)"
     },
     "Tu 2024": {
       "arm1_n": 57.0,
@@ -406,10 +411,11 @@ window.BROWSER_TARGETS = {
       "result_rob": "Some concerns",
       "arm1_events": 3.0,
       "arm2_events": 6.0,
-      "rr": 0.5087719298245614,
-      "se": 0.6820665371065585,
-      "ci_low": 0.13363997473090355,
-      "ci_upp": 1.9369120437101592
+      "rr": 0.5477453580901858,
+      "se": 0.6366866636798055,
+      "ci_low": 0.1572606536618937,
+      "ci_upp": 1.90781972682367,
+      "continuity_correction": "Haldane-Anscombe (+0.5 to every cell)"
     },
     "#105119 - Zhou 2025": {
       "arm1_n": 48.0,
@@ -421,10 +427,11 @@ window.BROWSER_TARGETS = {
       "result_rob": "Some concerns",
       "arm1_events": 6.0,
       "arm2_events": 13.0,
-      "rr": 0.47115384615384615,
-      "se": 0.44983135394401325,
-      "ci_low": 0.19510058073397515,
-      "ci_upp": 1.137802593464578
+      "rr": 0.491307634164777,
+      "se": 0.43302663273166214,
+      "ci_low": 0.2102586159586691,
+      "ci_upp": 1.1480299643751077,
+      "continuity_correction": "Haldane-Anscombe (+0.5 to every cell)"
     }
   }
 };

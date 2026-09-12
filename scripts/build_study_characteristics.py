@@ -58,13 +58,43 @@ def build():
             'Burn & Reconstructive':r'burn injury|wound debridement',
         }
         if 'non-gastrointestinal' in text: category='Mixed or unspecified surgery'
-        elif name=='Wu 2016': category='Not documented';procedure='Surgical procedure not documented in the available characteristics record.'
+        elif name=='Wu 2016':
+            # No text-based characteristics record exists for this trial, and this
+            # generator's provenance model requires one (every record's excerpt is
+            # checked against a readable source file by scripts/check_tab_data.py).
+            # The procedure IS recoverable from the source PDF, so it is extracted
+            # through scripts/extract_baseline_from_pdfs.py instead, where the
+            # value is held with its page and verbatim quote and is checked by
+            # t_pdf_extractions_are_provable_from_their_quotes.
+            category='Not documented';procedure='Surgical procedure not documented in the available characteristics record.'
         else:
             categories=[c for c,p in patterns.items() if re.search(p,text)]
             # "Abdominal hysterectomy" is gynecologic, not a mixed cohort.
             if 'Gynecologic & Breast' in categories and 'Abdominal & Gastrointestinal' in categories and not re.search(r'cholecystectomy|gastrectomy|colorectal',text):categories.remove('Abdominal & Gastrointestinal')
             category=categories[0] if len(categories)==1 else 'Mixed specialties' if len(categories)>1 else 'Other General Surgery'
-        records[name]=dict(surgery_category=category,surgery_procedure=procedure,source_file=source,source_line=line,source_excerpt=excerpt)
+        record=dict(surgery_category=category,surgery_procedure=procedure,source_file=source,source_line=line,source_excerpt=excerpt)
+
+        # Anaesthesia technique, read from the same preserved extraction table the
+        # surgical population comes from. Descriptive only -- it is not a Stata
+        # covariate and is not used by any analysis. Taken ONLY from an explicitly
+        # labelled row; a study whose extraction record has no such row is reported
+        # as not recorded rather than inferred from the procedure or the citation.
+        if files:
+            for i,line_text in enumerate(path.read_text().splitlines(),1):
+                cells=[c.strip() for c in line_text.split('|')]
+                # Only unambiguous TYPE labels. Deliberately excludes
+                # "anesthesia duration/time" (a duration), "* blinding" (RoB 2),
+                # and bare "general anesthesia"/"regional anesthesia" rows, whose
+                # cell holds an eligibility yes/no rather than the technique used.
+                if len(cells)>3 and cells[1].lower() in (
+                        'anesthesia','anaesthesia','anesthesia type','anaesthesia type',
+                        'type of anesthesia','type of anaesthesia',
+                        'anesthesia protocol','anaesthesia protocol'):
+                    value=cells[2].replace('**','').replace('*','').strip()
+                    if value and value.upper() not in ('NR','N/A','NA','-'):
+                        record.update(anesthesia=value,anesthesia_source_file=source,anesthesia_source_line=i)
+                    break
+        records[name]=record
     return records
 
 if __name__=='__main__':

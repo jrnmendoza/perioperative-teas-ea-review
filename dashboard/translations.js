@@ -53,7 +53,7 @@ const TRANSLATIONS = {
       lowRobOnly: "Low Risk of Bias Only",
       someConcerns: "Some Concerns",
       presets: "Presets:",
-      allStudies: "All 70 Studies",
+      allStudies: "All 70 Reports",
       presetLowRob: "Low RoB Only",
       presetSham: "Sham Only",
       presetLarge: "Large (N ≥ 60)"
@@ -250,7 +250,7 @@ const TRANSLATIONS = {
       lowRobOnly: "Endast låg risk för bias",
       someConcerns: "Viss risk för bias",
       presets: "Förval:",
-      allStudies: "Alla 70 studier",
+      allStudies: "Alla 70 rapporter",
       presetLowRob: "Endast låg RoB",
       presetSham: "Endast sham",
       presetLarge: "Stora studier (N ≥ 60)"
@@ -437,14 +437,14 @@ const STAT_GLOSSARY = {
       term: "k (Number of Contributing Studies)",
       category: "Meta-Analytic Parameters",
       shortDef: "The count of independent randomized controlled trials contributing data to a specific meta-analytic synthesis.",
-      context: "In this review, k = 70 RCTs overall per the review team\u2019s updated 2026-09-07 PRISMA record (69 via the database search route, plus 1 via citation searching), but k for specific synthesized endpoints is smaller (e.g. k = 7 for strict primary 24h opioid sparing) because only trials with verified, non-imputed extractable data are included.",
+      context: "In this review, the search retrieved 70 reports per the review team\u2019s updated 2026-09-07 PRISMA record (69 via the database search route, plus 1 via citation searching). Those 70 reports describe k = 69 RCTs, because Yeh 2010 and Yeh 2011 are two reports of one trial (2026-09-11 unit-of-analysis amendment), but k for specific synthesized endpoints is smaller (e.g. k = 7 for strict primary 24h opioid sparing) because only trials with verified, non-imputed extractable data are included.",
       jumpTab: "primary"
     },
     nParticipants: {
       term: "N (Total Analyzed Participants)",
       category: "Meta-Analytic Parameters",
-      shortDef: "The cumulative sum of randomized surgical patients across all contributing trial arms in the specific analysis.",
-      context: "Across all 70 included RCTs, total enrolled N is under reconciliation following the addition of 7 post-lock studies (including one 1,655-patient trial) and is not yet re-verified in this pass. For the strict primary 24h opioid synthesis, N = 676 surgical patients.",
+      shortDef: "The cumulative sum of analysed surgical patients across all contributing trial arms in the specific analysis.",
+      context: "Across the 69 included trials (70 reports), 10,618 participants were analysed, summed once per trial so the one linked cohort is not double-counted. That is an ANALYSED total, not a randomized one: only 17 of the 69 trials record a randomized denominator, so no review-wide randomized total is reported. For the strict primary 24h opioid synthesis, N = 676 surgical patients.",
       jumpTab: "explorer"
     },
     randomEffects: {
@@ -663,7 +663,7 @@ const STAT_GLOSSARY = {
       term: "k (Antal ingående studier)",
       category: "Metaanalytiska parametrar",
       shortDef: "Antalet oberoende randomiserade kontrollerade studier som bidrar med data till en specifik metaanalytisk syntes.",
-      context: "I denna översikt ingår k = 70 RCT:er totalt enligt granskningsteamets uppdaterade PRISMA-underlag från 2026-09-07 (69 via databassökningen, plus 1 via citeringssökning), men k för specifika synteser är lägre (t.ex. k = 7 för strikt primär 24h opioidbesparing) eftersom endast studier med verifierade, icke-imputerade data inkluderas.",
+      context: "I denna översikt hämtade sökningen 70 rapporter enligt granskningsteamets uppdaterade PRISMA-underlag från 2026-09-07 (69 via databassökningen, plus 1 via citeringssökning). Dessa 70 rapporter beskriver k = 69 RCT:er, eftersom Yeh 2010 och Yeh 2011 är två rapporter av samma studie (tillägg om analysenhet, 2026-09-11). k för specifika synteser är lägre (t.ex. k = 7 för strikt primär 24h opioidbesparing) eftersom endast studier med verifierade, icke-imputerade data inkluderas.",
       jumpTab: "primary"
     },
     nParticipants: {

@@ -516,7 +516,7 @@
 
   // ── filter scope ──────────────────────────────────────────────────────────
   // Active filters are shown as removable chips so a reader can see at a glance
-  // why a study count differs from 70 -- and so a persistent search restriction
+  // why a report count differs from 70 -- and so a persistent search restriction
   // cannot silently narrow a later view.
   function renderFilterChips() {
     const host = document.getElementById('filter-chips');
@@ -526,6 +526,7 @@
     if (window.filterModality && window.filterModality !== 'all') add('modality', `Modality: ${window.filterModality}`, () => { window.filterModality = 'all'; });
     if (window.filterComparator && window.filterComparator !== 'all') add('comparator', `Comparator: ${window.filterComparator}`, () => { window.filterComparator = 'all'; });
     if (window.filterSurgery && window.filterSurgery !== 'all') add('surgery', `Surgery: ${window.filterSurgery}`, () => { window.filterSurgery = 'all'; });
+    if (window.filterCountry && window.filterCountry !== 'all') add('country', `Country: ${window.filterCountry === '__nr' ? 'not recorded' : window.filterCountry}`, () => { window.filterCountry = 'all'; });
     if (window.filterRob && window.filterRob !== 'all') add('rob', `Risk of bias: ${window.filterRob}`, () => { window.filterRob = 'all'; });
     if (window.filterSearch) add('search', `Search: “${window.filterSearch}”`, () => {
       window.filterSearch = '';
@@ -552,6 +553,7 @@
       window.filterModality = 'all';
       window.filterComparator = 'all';
       window.filterSurgery = 'all';
+      window.filterCountry = 'all';
       window.filterRob = 'all';
       window.filterSearch = '';
       const i = document.getElementById('study-search-input'); if (i) i.value = '';

@@ -36,9 +36,19 @@ def browser_targets(studies):
             if key in ('ponv_24h','rescue_analgesia'):
                 a,c=float(r['events_i']),float(r['events_c'])
                 o.update(arm1_events=a,arm2_events=c)
-                rr=(a/o['arm1_n'])/(c/o['arm2_n'])
-                se=math.sqrt(1/a-1/o['arm1_n']+1/c-1/o['arm2_n'])
-                o.update(rr=rr,se=se,ci_low=math.exp(math.log(rr)-1.96*se),ci_upp=math.exp(math.log(rr)+1.96*se))
+                # Haldane-Anscombe continuity correction, applied UNIVERSALLY to
+                # every binary contrast (review team decision, 2026-09-11) rather
+                # than only to zero-cell tables. Applying it selectively means two
+                # studies in one forest plot are computed on different scales, and
+                # a zero cell is not the only situation in which the uncorrected
+                # estimator is biased -- sparse cells are too (Xie 2014 is 1/20).
+                # 0.5 is added to every cell, so each denominator gains 1.
+                ai,ci_=a+0.5,c+0.5
+                n1,n2=o['arm1_n']+1,o['arm2_n']+1
+                rr=(ai/n1)/(ci_/n2)
+                se=math.sqrt(1/ai-1/n1+1/ci_-1/n2)
+                o.update(rr=rr,se=se,ci_low=math.exp(math.log(rr)-1.96*se),ci_upp=math.exp(math.log(rr)+1.96*se),
+                         continuity_correction='Haldane-Anscombe (+0.5 to every cell)')
             else:
                 suffix='_mme' if key=='opioid_48h' else '_hours' if key=='flatus_time' else ''
                 factor=1000 if key=='intraop_opioid' and r['unit']=='mg remifentanil' else 1
@@ -50,6 +60,13 @@ def browser_targets(studies):
                 o.update(mean_diff=md,se=se,ci_low=md-1.96*se,ci_upp=md+1.96*se)
                 if key in ('opioid_48h','opioid_72h'): o['unit']='mg IV MME'
                 if key=='intraop_opioid': o['unit']='µg remifentanil'
+                # The *_hours columns are already converted, so the row's own
+                # unit label ('days' for Ng 2013) describes the raw statistic,
+                # not the value emitted here. Label what we actually emit.
+                if key=='flatus_time':
+                    if r['unit']!='hours':
+                        o['converted_from']=f"{r['mean_i']} ± {r['sd_i']} vs {r['mean_c']} ± {r['sd_c']} {r['unit']} (×24)"
+                    o['unit']='hours'
             result[name]=o
         targets[key]=result
     assert {k:len(v) for k,v in targets.items()}==dict(opioid_48h=3,opioid_72h=1,pain_rest_24h=2,ponv_24h=2,flatus_time=6,intraop_opioid=7,rescue_analgesia=4)

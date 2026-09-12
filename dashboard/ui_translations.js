@@ -14,7 +14,7 @@ Object.assign(window.TRANSLATIONS.sv.kpi, {
 });
 window.UI_TRANSLATIONS_SV = {
   "📄 Executive Summary & Scope": "📄 Sammanfattning och omfattning",
-  "🔍 Study Explorer (k=70)": "🔍 Studieöversikt (k=70)",
+  "🔍 Study Explorer (69 studies / 70 reports)": "🔍 Studieöversikt (69 studier / 70 rapporter)",
   "📋 Study Selection & PRISMA Flow": "📋 Studieurval och PRISMA-flöde",
   "💊 Primary 24-h Opioid (k=7)": "💊 Primärt opioidutfall efter 24 timmar (k=7)",
   "⏱️ Secondary & Other Outcomes": "⏱️ Sekundära och övriga utfall",
@@ -455,8 +455,8 @@ Object.assign(window.UI_TRANSLATIONS_SV, {
   "Certainty is adjudicated separately for each synthesis. TEAS and EA differ, so no single rating describes the primary outcome.":
     "Tillförlitligheten bedöms separat för varje syntes. TEAS och EA skiljer sig åt, så ingen enskild gradering beskriver det primära utfallet.",
 
-  "How the included trials contribute — why 70 trials give 7 in the primary analysis":
-    "Hur de inkluderade studierna bidrar — varför 70 studier ger 7 i den primära analysen",
+  "How the included trials contribute — why 69 trials give 7 in the primary analysis":
+    "Hur de inkluderade studierna bidrar — varför 69 studier ger 7 i den primära analysen",
   "Primary outcome contribution pathway — which trials carry 24-hour data":
     "Bidragsväg för det primära utfallet — vilka studier som har 24-timmarsdata",
   "Which 0–24 hour evidence can actually be pooled — tier classification":

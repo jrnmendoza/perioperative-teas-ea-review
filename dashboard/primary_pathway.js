@@ -14,6 +14,8 @@ window.PRIMARY_PATHWAY = {
   "data_source": "TEAS_EA_RECONCILED_MASTER_DATA_v34_FINAL_LOCK_READY.xlsx",
   "statistical_source": "StataNow 19.5 BE — 06_FINAL_ANALYSIS_V26 + 07_TIERED_V33",
   "prospero": "CRD420251090635",
+  "review_included_reports": 70,
+  "review_included_studies": 69,
   "review_included_rcts": 70,
   "candidate_rows": 16,
   "publications_with_24h_info": 17,
@@ -946,6 +948,8 @@ window.PRIMARY_PATHWAY = {
   "reconciles": true,
   "counts": {
     "included_rcts": 70,
+    "included_reports": 70,
+    "included_studies": 69,
     "reporting_relevant_24h_info": 17,
     "candidate_rows": 16,
     "strict": 7,

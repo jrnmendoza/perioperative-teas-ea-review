@@ -51,6 +51,7 @@ MASTER_XLSX = (
 
 CACHE_BUSTED_ASSETS = (
     "styles.css", "primary_pathway.js", "tiered_v33.js", "v33_data.js", "v34_data.js",
+    "pdf_extracted.js", "outcome_quarantine.js",
     "interpretation_layer.js", "computed_not_reported.js", "prior_evidence.js", "limitations.js", "prisma_checklist.js", "stratum_purity.js", "forest_context.js", "rob2_source_links.js", "data.js",
     "translations.js", "ui_translations.js", "reader_assist.js", "meta_engine.js", "app.js", "findings.js",
     "author_inquiries.js", "search_strategies.js", "meta_outcomes.js",
@@ -83,6 +84,18 @@ def git_commit(explicit: str | None) -> str:
 def read_csv_rows(path: Path) -> list[dict]:
     with path.open(encoding="utf-8") as f:
         return list(csv.DictReader(f))
+
+
+def companion_report_count() -> int:
+    """Reports that are a second publication of a study already counted.
+
+    PRISMA 2020 separates reports from studies, and this review has one linked
+    cohort: Yeh 2010 and Yeh 2011 report the same three-arm lumbar spinal surgery
+    trial (see 05_study_linkage/cohorts/ and the 2026-09-11 amendment). Counting
+    them as two studies would overstate the evidence base.
+    """
+    text = (DASH / "data.js").read_text(encoding="utf-8")
+    return text.count('"duplicate_report_of"')
 
 
 def canonical_studies_count() -> int:
@@ -151,7 +164,12 @@ def build_metadata(commit: str) -> dict:
     return {
         "master_version": "v34",
         "master_file": MASTER_XLSX.name,
+        # Reports retrieved, and the number of distinct studies they describe.
+        # These differ whenever a trial is published more than once.
         "canonical_studies": canonical_studies_count(),
+        "canonical_reports": canonical_studies_count(),
+        "included_studies": canonical_studies_count() - companion_report_count(),
+        "companion_reports": companion_report_count(),
         "source_normalized_outcome_rows": source_normalized_outcome_rows(),
         "strict_primary_opioid_k": strict_primary_opioid_k(),
         "git_commit": commit,
@@ -269,6 +287,37 @@ def main() -> int:
     out = Path(args.out)
 
     run([sys.executable, "scripts/build_reference_data.py"])
+    # scripts/extract_baseline_from_pdfs.py is deliberately NOT run here. It reads
+    # all 70 source PDFs and needs pypdf, which the deploy workflow does not
+    # install; its output (dashboard/pdf_extracted.js) is committed, so the site
+    # builds from that. Re-run it by hand when a source PDF or the extraction
+    # rules change, and commit the regenerated file.
+    # scripts/validate_dashboard.py checks that file's integrity either way.
+    # The dashboard's outcome register is generated from the lock, not authored.
+    # Refuse to build a site whose data.js has been hand-edited away from it --
+    # that drift is what the 2026-09-10 placeholder incident was.
+    sync = subprocess.run([sys.executable, "scripts/sync_dashboard_outcomes.py", "--check"],
+                          cwd=ROOT, capture_output=True, text=True)
+    if sync.returncode != 0:
+        print(sync.stdout.strip() or sync.stderr.strip(), file=sys.stderr)
+        print("\nBUILD REFUSED: dashboard/data.js no longer matches the locked datasets.\n"
+              "Run  python3 scripts/sync_dashboard_outcomes.py  to regenerate it, or fix the\n"
+              "lock if the lock is what changed. Do not hand-edit the outcome records.",
+              file=sys.stderr)
+        return 1
+
+    # The report-to-study reconciliation, the duplicate-cohort scan and the
+    # arm-denominator flags are generated from the register too. Same reasoning:
+    # a stale scan would let the page report "69 studies from 70 reports" while
+    # the register said something else.
+    scan = subprocess.run([sys.executable, "scripts/build_cohort_overlap_scan.py", "--check"],
+                          cwd=ROOT, capture_output=True, text=True)
+    if scan.returncode != 0:
+        print(scan.stdout.strip() or scan.stderr.strip(), file=sys.stderr)
+        print("\nBUILD REFUSED: dashboard/cohort_overlap.js no longer matches the register.\n"
+              "Run  python3 scripts/build_cohort_overlap_scan.py  to regenerate it.",
+              file=sys.stderr)
+        return 1
 
     commit = git_commit(args.commit)
     meta = build_metadata(commit)

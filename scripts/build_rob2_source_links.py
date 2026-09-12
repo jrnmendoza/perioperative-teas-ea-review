@@ -844,8 +844,56 @@ def build() -> dict:
         "linked_count": len(links),
         "coverage": round(coverage, 4),
         "links": links,
+        # Per-cell explanations for the assessed results that remain unlinked,
+        # so the dashboard can say WHY rather than implying unfinished work.
+        "unlinked_reasons": UNLINKED_REASONS,
     }
 
+
+
+# Why each still-unlinked assessed result is unlinked. Every one of these was
+# checked individually (see this module's docstring) and is NOT an unfinished
+# cross-reference: linking it would require guessing between genuine ties, or
+# would legitimise a unit-of-analysis decision the review has deliberately
+# paused on. The dashboard renders these instead of a generic "not yet linked"
+# note, which reads as a defect in the dashboard and misdescribes the evidence.
+# Keyed "<study key>::<dashboard bucket>".
+UNLINKED_REASONS = {
+    "Yeh 2010::pca_behavior":
+        "This trial and Yeh 2011 are the same study published twice -- same authors, same "
+        "three-arm design, and the sham arm's figures are byte-for-byte identical between the "
+        "two papers. The review has paused on whether to count them independently, so no "
+        "separate result-specific RoB 2 quote is attached to either. This is a unit-of-analysis "
+        "decision for the review team, not a missing link.",
+    "Yeh 2011::pca_behavior":
+        "This trial and Yeh 2010 are the same study published twice -- same authors, same "
+        "three-arm design, and the sham arm's figures are byte-for-byte identical between the "
+        "two papers. The review has paused on whether to count them independently, so no "
+        "separate result-specific RoB 2 quote is attached to either. This is a unit-of-analysis "
+        "decision for the review team, not a missing link.",
+    "Lu 2022::pca_behavior":
+        "The RoB 2 register holds six candidate rows for this cell (two PCA metrics across three "
+        "timepoints), and this dashboard's own label for it -- \"PCA attempts/deliveries\" at "
+        "\"24/48/72 h\" -- names several of them at once. The dashboard has not selected a single "
+        "underlying result either, so picking one quote here would be a guess.",
+    "Zheng 2025::pca_behavior":
+        "The register distinguishes \"Effective PCIA button presses\" from \"Total PCIA button "
+        "presses\"; this dashboard's own label, \"Total/effective PCIA use\", names both. Quoting "
+        "one of the two would assert a choice the review has not made.",
+    "Yang 2024::intraop_remi":
+        "There is no gap in the register to fill: the source PDF was read directly and reports no "
+        "intraoperative opioid figure at all, only postoperative PCA morphine.",
+    "Szmit 2021::opioid_24h":
+        "This trial's primary-outcome RoB 2 is a de novo source-grounded assessment recorded in the "
+        "review's Corrected_RoB2 sheet (row 70), which the dashboard injects directly -- the "
+        "rationale shown above IS that source-grounded text. It is not held in the two "
+        "result-specific registers this cross-reference indexes, so there is no separate register "
+        "row to quote from.",
+    "Xie 2014::opioid_72h":
+        "This row is an eligibility/reclassification audit note, not a risk-of-bias judgement -- "
+        "its five domain judgements and overall rating are all recorded as \"--\". There is no "
+        "assessment here for a source quote to support.",
+}
 
 def main() -> int:
     payload = build()

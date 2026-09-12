@@ -749,7 +749,8 @@ def build_record(mid, m, roll, grade, studies, unit, label, comparator, sens_fli
         rq.append({"question": question, "trigger": trigger, "pathway": pathway})
 
     if k <= 4:
-        ask(f"Why did only {k} trials contribute, when the review includes 70 RCTs?",
+        ask(f"Why did only {k} trials contribute, when the review includes "
+            f"{audit_totals['included']} RCTs?",
             f"k = {k}",
             "Derivability audit and evidence flow (v33 tiered panel)")
     if i2 is not None and i2 >= 75:
@@ -988,8 +989,17 @@ def main() -> int:
     # this panel exists to clear up.
     outcome_rows = read(ROOT / "TEAS EA Verification" / "v34_reconciliation" / "data"
                         / "v34_outcome_data.csv")
+    # Reports vs studies. The outcome data holds one row per REPORT, and Yeh 2010
+    # / Yeh 2011 are two reports of one trial (2026-09-11 unit-of-analysis
+    # amendment), so the headline count must subtract companion reports or it
+    # overstates the evidence base. Read from the same marker the dashboard uses.
+    companion_reports = (ROOT / "dashboard" / "data.js").read_text(
+        encoding="utf-8").count('"duplicate_report_of"')
+    reports = len({r["Canonical study"] for r in outcome_rows if r.get("Canonical study")})
     audit_totals = {
-        "included": len({r["Canonical study"] for r in outcome_rows if r.get("Canonical study")}),
+        "reports": reports,
+        "companion_reports": companion_reports,
+        "included": reports - companion_reports,
         "studies": len({r["study"] for r in audit}),
         "rows": len(audit),
         "tier_a": sum(1 for r in audit if r["tier_mme"] == "A"),

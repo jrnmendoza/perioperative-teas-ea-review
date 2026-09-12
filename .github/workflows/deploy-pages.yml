@@ -6,10 +6,22 @@ name: Deploy dashboard to GitHub Pages
 # gh-pages branch) with no automated guarantee any two of them matched.
 #
 # claude-v26-dashboard-final is the actual long-running working branch for
-# this dashboard (see 06_FINAL_ANALYSIS_V26/06_AUDIT/deployment_pipeline.md);
-# main has not been merged into and is stale. Trigger on pushes to that
-# branch plus manual dispatch, rather than on main, until/unless the branches
-# are reconciled.
+# this dashboard (see 06_FINAL_ANALYSIS_V26/06_AUDIT/deployment_pipeline.md).
+# Trigger on pushes to that branch plus manual dispatch.
+#
+# TWO THINGS THAT MISLEAD READERS OF THIS FILE, both recorded 2026-09-10:
+#
+# 1. The branch name says v26; the data it carries is v34. The "v26" is
+#    historical -- it names when this dashboard line was started, not which
+#    master workbook is authoritative. The master is
+#    TEAS_EA_RECONCILED_MASTER_DATA_v34_FINAL_LOCK_READY.xlsx; see
+#    "TEAS EA Verification/README.md", which scripts/validate_dashboard.py
+#    enforces. Do not infer the data version from this branch name.
+#
+# 2. An earlier version of this comment said "main has not been merged into
+#    and is stale". That is no longer true -- main and this branch were at the
+#    same commit (8bcdf4e) as of 2026-09-10. The trigger stays on this branch
+#    because it is where work lands, not because main is behind.
 
 "on":
   push:

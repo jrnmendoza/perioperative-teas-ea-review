@@ -310,18 +310,19 @@ window.STUDIES_DATA = [
     },
     "outcomes": {
       "opioid_24h": {
+        "favors": "Intervention",
+        "arm1_n": 25.0,
+        "arm2_n": 25.0,
         "arm1_mean": 32.5,
         "arm1_sd": 17.5,
-        "arm1_n": 25,
         "arm2_mean": 53.5,
         "arm2_sd": 25.0,
-        "arm2_n": 25,
-        "unit": "mg IV MME",
         "mean_diff": -21.0,
-        "ci_low": -32.96,
-        "ci_upp": -9.04,
-        "se": 6.103,
-        "favors": "Intervention"
+        "se": 6.1033,
+        "ci_low": -32.9622,
+        "ci_upp": -9.0378,
+        "unit": "mg IV MME",
+        "comparison_id": "CHEN98_ACU_vs_SHAM"
       },
       "opioid_48h": {
         "status": "Unreported in Source Paper",
@@ -681,12 +682,12 @@ window.STUDIES_DATA = [
     "journal": "#952 - Sim 2002",
     "doi": "10.1136/aim.20.2-3.56",
     "pmid": "12216602",
-    "country": "China",
+    "country": "Singapore",
     "country_meta": {
-      "code": "CN",
-      "lat": 35.8617,
-      "lng": 104.1954,
-      "flag": "🇨🇳"
+      "code": "SG",
+      "lat": 1.3521,
+      "lng": 103.8198,
+      "flag": "🇸🇬"
     },
     "modality": "EA",
     "comparator_type": "Sham-Controlled (Placebo Double-Blind)",
@@ -973,12 +974,13 @@ window.STUDIES_DATA = [
         "arm2_mean": 0.68,
         "arm2_sd": 0.38,
         "arm2_n": 30,
-        "unit": "mg IV MME",
+        "unit": "mg/kg morphine",
         "mean_diff": -0.16,
         "ci_low": -0.31,
         "ci_upp": -0.01,
         "se": 0.078,
-        "favors": "Intervention"
+        "favors": "Intervention",
+        "note": "Not in the locked 0-24 h primary pool; value is the raw published statistic in the unit shown and has not been converted to morphine equivalents. Unit label corrected 2026-09-10."
       },
       "opioid_48h": {
         "status": "Unreported in Source Paper",
@@ -999,7 +1001,8 @@ window.STUDIES_DATA = [
       "hospital_stay": null,
       "rescue_analgesia": null,
       "intraop_opioid": null
-    }
+    },
+    "country_evidence": "Department of Anaesthesia, National University Hospital Singapore"
   },
   {
     "id": "1879897414",
@@ -1010,12 +1013,12 @@ window.STUDIES_DATA = [
     "journal": "#912 - Wong 2006",
     "doi": "10.1016/j.athoracsur.2005.12.064",
     "pmid": "17005509",
-    "country": "China",
+    "country": "Hong Kong",
     "country_meta": {
-      "code": "CN",
-      "lat": 35.8617,
-      "lng": 104.1954,
-      "flag": "🇨🇳"
+      "code": "HK",
+      "lat": 22.3193,
+      "lng": 114.1694,
+      "flag": "🇭🇰"
     },
     "modality": "EA",
     "comparator_type": "Sham-Controlled (Placebo Double-Blind)",
@@ -1304,23 +1307,8 @@ window.STUDIES_DATA = [
         "se": null
       },
       "opioid_72h": {
-        "status": "SENSITIVITY / approximate 72 h",
-        "role": "Sensitivity: First 3 Postoperative Days",
-        "metric_name": "Total PCA Morphine Over First 3 Days (~72 h)",
-        "timepoint": "first 3 postoperative days (~72 h)",
-        "arm1_n": 13,
-        "arm1_mean": 33.9,
-        "arm1_sd": 12.8,
-        "arm2_n": 12,
-        "arm2_mean": 42.3,
-        "arm2_sd": 21.3,
-        "mean_diff": -8.4,
-        "se": 7.099,
-        "ci_low": -22.31,
-        "ci_upp": 5.51,
-        "unit": "mg IV morphine",
-        "note": "Total PCA morphine over first 3 postoperative days: 33.9 ± 12.8 vs 42.3 ± 21.3 mg (MD -8.40 mg).",
-        "favors": "Intervention"
+        "status": "Not pooled — no locked arm-level record",
+        "note": "No row for this study/outcome in the locked dataset; any previous arm-level values here were unsourced."
       },
       "pain_rest_24h": null,
       "pain_movement_24h": null,
@@ -1329,7 +1317,8 @@ window.STUDIES_DATA = [
       "hospital_stay": null,
       "rescue_analgesia": null,
       "intraop_opioid": null
-    }
+    },
+    "country_evidence": "Surgical Unit of a tertiary referral university-teaching hospital in Hong Kong (Prince of Wales Hospital, Shatin)"
   },
   {
     "id": "1879897344",
@@ -1633,18 +1622,19 @@ window.STUDIES_DATA = [
     },
     "outcomes": {
       "opioid_24h": {
+        "favors": "Intervention",
+        "arm1_n": 42.0,
+        "arm2_n": 53.0,
         "arm1_mean": 35.3,
         "arm1_sd": 18.0,
-        "arm1_n": 42,
         "arm2_mean": 36.9,
         "arm2_sd": 18.0,
-        "arm2_n": 53,
-        "unit": "mg IV MME",
         "mean_diff": -1.6,
-        "ci_low": -8.89,
-        "ci_upp": 5.69,
-        "se": 3.719,
-        "favors": "Intervention"
+        "se": 3.7185,
+        "ci_low": -8.8882,
+        "ci_upp": 5.6882,
+        "unit": "mg IV MME",
+        "comparison_id": "ELR09_EA_vs_CTRL_MORPH24"
       },
       "opioid_48h": {
         "status": "Unreported in Source Paper",
@@ -1676,12 +1666,12 @@ window.STUDIES_DATA = [
     "journal": "#828 - Yeh 2010",
     "doi": "10.1016/j.ijnurstu.2010.10.009",
     "pmid": "21084087",
-    "country": "China",
+    "country": "Taiwan",
     "country_meta": {
-      "code": "CN",
-      "lat": 35.8617,
-      "lng": 104.1954,
-      "flag": "🇨🇳"
+      "code": "TW",
+      "lat": 23.6978,
+      "lng": 120.9605,
+      "flag": "🇹🇼"
     },
     "modality": "EA",
     "comparator_type": "Sham-Controlled (Placebo Double-Blind)",
@@ -1981,7 +1971,10 @@ window.STUDIES_DATA = [
       "hospital_stay": null,
       "rescue_analgesia": null,
       "intraop_opioid": null
-    }
+    },
+    "country_evidence": "Nursing Department, Veterans General Hospital, Taipei, Taiwan, ROC",
+    "companion_report": "Yeh 2011",
+    "unit_of_analysis_note": "Retained as the trial record for the study also reported as Yeh 2011 (Altern Ther Health Med 2010;16(6):10-18). Review team decision 2026-09-11: count once."
   },
   {
     "id": "1879897266",
@@ -1992,12 +1985,12 @@ window.STUDIES_DATA = [
     "journal": "#838 - Coura 2011",
     "doi": "10.1136/aim.2010.003251",
     "pmid": "",
-    "country": "China",
+    "country": "Brazil",
     "country_meta": {
-      "code": "CN",
-      "lat": 35.8617,
-      "lng": 104.1954,
-      "flag": "🇨🇳"
+      "code": "BR",
+      "lat": -14.235,
+      "lng": -51.9253,
+      "flag": "🇧🇷"
     },
     "modality": "EA",
     "comparator_type": "Sham-Controlled (Placebo Double-Blind)",
@@ -2284,12 +2277,13 @@ window.STUDIES_DATA = [
         "arm2_mean": 16.3,
         "arm2_sd": 1.6,
         "arm2_n": 9,
-        "unit": "mg IV MME",
+        "unit": "µg/kg fentanyl",
         "mean_diff": -3.2,
         "ci_low": -4.79,
         "ci_upp": -1.61,
         "se": 0.81,
-        "favors": "Intervention"
+        "favors": "Intervention",
+        "note": "Not in the locked 0-24 h primary pool; value is the raw published statistic in the unit shown and has not been converted to morphine equivalents. Unit label corrected 2026-09-10."
       },
       "opioid_48h": {
         "status": "Unreported in Source Paper",
@@ -2310,7 +2304,8 @@ window.STUDIES_DATA = [
       "hospital_stay": null,
       "rescue_analgesia": null,
       "intraop_opioid": null
-    }
+    },
+    "country_evidence": "conducted in the Unimed Hospital Centre, Joinville-SC, Brazil, from April 2009 to June 2010"
   },
   {
     "id": "1879897255",
@@ -2321,12 +2316,12 @@ window.STUDIES_DATA = [
     "journal": "#812 - Lee 2011",
     "doi": "10.1155/2011/696754",
     "pmid": "21716712",
-    "country": "China",
+    "country": "Taiwan",
     "country_meta": {
-      "code": "CN",
-      "lat": 35.8617,
-      "lng": 104.1954,
-      "flag": "🇨🇳"
+      "code": "TW",
+      "lat": 23.6978,
+      "lng": 120.9605,
+      "flag": "🇹🇼"
     },
     "modality": "TEAS",
     "comparator_type": "Sham-Controlled (Placebo Double-Blind)",
@@ -2629,7 +2624,8 @@ window.STUDIES_DATA = [
       "hospital_stay": null,
       "rescue_analgesia": null,
       "intraop_opioid": null
-    }
+    },
+    "country_evidence": "Hysterectomized patients at the China Medical University Hospital [Taichung] were invited to be subjects in the study. Lead affiliation is Victoria University, Melbourne; country of CONDUCT is Taiwan."
   },
   {
     "id": "1879897273",
@@ -2640,12 +2636,12 @@ window.STUDIES_DATA = [
     "journal": "#823 - Yeh 2010 (ATHM)",
     "doi": "",
     "pmid": "21280458",
-    "country": "China",
+    "country": "Taiwan",
     "country_meta": {
-      "code": "CN",
-      "lat": 35.8617,
-      "lng": 104.1954,
-      "flag": "🇨🇳"
+      "code": "TW",
+      "lat": 23.6978,
+      "lng": 120.9605,
+      "flag": "🇹🇼"
     },
     "modality": "EA",
     "comparator_type": "Sham-Controlled (Placebo Double-Blind)",
@@ -2948,7 +2944,10 @@ window.STUDIES_DATA = [
       "hospital_stay": null,
       "rescue_analgesia": null,
       "intraop_opioid": null
-    }
+    },
+    "country_evidence": "carried out by the orthopedic departments of a 4000-bed medical center in northern Taiwan",
+    "duplicate_report_of": "Yeh 2010",
+    "unit_of_analysis_note": "Same trial as Yeh 2010. Both papers report one three-arm randomised study of lumbar spinal surgery by the same author team (Yeh, Chung, Chen, Chen): Altern Ther Health Med 2010;16(6):10-18 states “Ninety-nine patients undergoing lumbar spinal surgery were randomly assigned to one of three groups”, and Int J Nurs Stud 2011;48(6):703-709 reports the same cohort, with the sham arm's figures identical between the two papers. Review team decision 2026-09-11: COUNT ONCE. Yeh 2010 (the later, larger report, n=63) is retained as the trial record; this record is its companion publication and must not contribute independently to any synthesis."
   },
   {
     "id": "1879897195",
@@ -2959,12 +2958,12 @@ window.STUDIES_DATA = [
     "journal": "#775 - Ng 2012 / 2013",
     "doi": "10.1053/j.gastro.2012.10.050",
     "pmid": "23142625",
-    "country": "China",
+    "country": "Hong Kong",
     "country_meta": {
-      "code": "CN",
-      "lat": 35.8617,
-      "lng": 104.1954,
-      "flag": "🇨🇳"
+      "code": "HK",
+      "lat": 22.3193,
+      "lng": 114.1694,
+      "flag": "🇭🇰"
     },
     "modality": "EA",
     "comparator_type": "Sham-Controlled (Placebo Double-Blind)",
@@ -3261,24 +3260,30 @@ window.STUDIES_DATA = [
       "pain_movement_24h": null,
       "ponv_24h": null,
       "flatus_time": {
-        "arm1_mean": 31.92,
-        "arm1_sd": 8.64,
-        "arm1_n": 6,
-        "arm2_mean": 32.16,
-        "arm2_sd": 8.88,
-        "arm2_n": 6,
-        "unit": "hours",
-        "mean_diff": -0.24,
-        "se": 5.058,
-        "ci_low": -10.15,
-        "ci_upp": 9.67,
         "favors": "Intervention",
-        "note": "Originally reported in days (1.33 ± 0.36 vs 1.34 ± 0.37 days); converted to hours (×24)."
+        "note": "Source reports mean ± SD in DAYS: EA 2.0 ± 0.9 vs sham acupuncture 2.3 ± 1.1 days (Table 4, P = .095, n = 55/55); converted to hours (×24). Provenance corrected 2026-09-10: the previous note cited 1.33 ± 0.36 vs 1.34 ± 0.37 days and n = 6/6, which appear nowhere in the source publication.",
+        "arm1_n": 55.0,
+        "arm2_n": 55.0,
+        "unit": "hours",
+        "comparison_id": "NG13_EA_vs_SHAM_FLATUS",
+        "source_dataset": "06_FINAL_ANALYSIS_V26/01_DATA/target_E_flatus.csv",
+        "source_note": "No statistically significant EA-vs-sham difference",
+        "result_rob": "Some concerns",
+        "arm1_mean": 48.0,
+        "arm1_sd": 21.6,
+        "arm2_mean": 55.2,
+        "arm2_sd": 26.4,
+        "mean_diff": -7.2,
+        "se": 4.5994,
+        "ci_low": -16.2149,
+        "ci_upp": 1.8149,
+        "converted_from": "2 ± .9 vs 2.3 ± 1.1 days (×24)"
       },
       "hospital_stay": null,
       "rescue_analgesia": null,
       "intraop_opioid": null
-    }
+    },
+    "country_evidence": "conducted the study from October 2008 through October 2010 at the Prince of Wales Hospital, a university teaching hospital in Hong Kong"
   },
   {
     "id": "1879897069",
@@ -3564,23 +3569,26 @@ window.STUDIES_DATA = [
     "outcomes": {
       "opioid_24h": null,
       "opioid_48h": {
-        "status": "PRIMARY strict",
         "role": "Strict Target A (Mandatory Sensitivity)",
         "metric_name": "Cumulative 0–48h Opioid Consumption",
         "timepoint": "0–48 h",
-        "arm1_n": 41,
+        "note": "Total PCIA fentanyl: 0.67 ± 0.09 vs 0.73 ± 0.12 mg fentanyl (converted: 67.0 vs 73.0 mg MME). P1 plausibility handled via mandatory sensitivity.",
+        "favors": "Intervention",
+        "arm1_n": 41.0,
+        "arm2_n": 40.0,
+        "unit": "mg IV MME",
+        "comparison_id": "AN14_EA_vs_CTRL_FENT48",
+        "source_dataset": "06_FINAL_ANALYSIS_V26/01_DATA/target_A_48h.csv",
+        "source_note": "Seven of 88 randomized patients were excluded from analysis; total fentanyl is not isolated to 0-24 h.",
+        "result_rob": "Some concerns",
         "arm1_mean": 67.0,
         "arm1_sd": 9.0,
-        "arm2_n": 40,
         "arm2_mean": 73.0,
         "arm2_sd": 12.0,
         "mean_diff": -6.0,
-        "se": 2.361,
-        "ci_low": -10.63,
-        "ci_upp": -1.37,
-        "unit": "mg IV MME",
-        "note": "Total PCIA fentanyl: 0.67 ± 0.09 vs 0.73 ± 0.12 mg fentanyl (converted: 67.0 vs 73.0 mg MME). P1 plausibility handled via mandatory sensitivity.",
-        "favors": "Intervention"
+        "se": 2.3613,
+        "ci_low": -10.6281,
+        "ci_upp": -1.3719
       },
       "opioid_72h": {
         "status": "Unreported in Source Paper",
@@ -4233,23 +4241,8 @@ window.STUDIES_DATA = [
     "outcomes": {
       "opioid_24h": null,
       "opioid_48h": {
-        "status": "SENSITIVITY / broader 48-h",
-        "role": "Sensitivity Only (Broader 48-h Window)",
-        "metric_name": "Total Sufentanil Through Postoperative 48 h",
-        "timepoint": "through postoperative 48 h",
-        "arm1_n": 20,
-        "arm1_mean": 115.0,
-        "arm1_sd": 6.0,
-        "arm2_n": 20,
-        "arm2_mean": 133.5,
-        "arm2_sd": 7.0,
-        "mean_diff": -18.5,
-        "se": 2.062,
-        "ci_low": -22.54,
-        "ci_upp": -14.46,
-        "unit": "mg IV MME",
-        "note": "Total sufentanil through postop 48h: 115.0 ± 6.0 vs 133.5 ± 7.0 µg (converted at 1000:1: 115.0 vs 133.5 mg MME). Infusion began ~30 min before surgery ended.",
-        "favors": "Intervention"
+        "status": "Not pooled — no locked arm-level record",
+        "note": "No row for this study/outcome in the locked dataset; any previous arm-level values here were unsourced."
       },
       "opioid_72h": {
         "status": "EXCLUDE from 72-h pool",
@@ -4264,15 +4257,22 @@ window.STUDIES_DATA = [
       "flatus_time": null,
       "hospital_stay": null,
       "rescue_analgesia": {
-        "arm1_events": 1,
-        "arm1_total": 20,
-        "arm2_events": 6,
-        "arm2_total": 20,
-        "rr": 0.23,
-        "ci_low": 0.04,
-        "ci_upp": 1.22,
         "note": "Rate of breakthrough pain rescue with IV dezocine (Table 2): EAS 1/20 (5%) vs Sham 6/20 (30%) vs Control 7/20 (35%), P<0.05. Corrected 2026-09-10: this cell previously stored 4/20 vs 10/20 (RR 0.40 [0.15,1.05]), which does not match the source PDF and directly contradicted this study's own audit.corrections note, which already documented the true 1/20 vs 6/20 figures. RR/CI recomputed with the review's standard Haldane-Anscombe continuity correction (verified against Szmit 2021's zero-event case).",
-        "favors": "Intervention"
+        "favors": "Intervention",
+        "arm1_n": 20.0,
+        "arm2_n": 20.0,
+        "unit": "participants",
+        "comparison_id": "XIE14_EAS_vs_SHAM_DEZOCINE48",
+        "source_dataset": "06_FINAL_ANALYSIS_V26/01_DATA/target_F_exploratory.csv",
+        "source_note": "Dezocine 5 mg IV at patient request; counts are derived from reported percentages.",
+        "result_rob": "Some concerns",
+        "arm1_events": 1.0,
+        "arm2_events": 6.0,
+        "rr": 0.230769,
+        "se": 0.851631,
+        "ci_low": 0.043477,
+        "ci_upp": 1.2249,
+        "continuity_correction": "Haldane-Anscombe (+0.5 to every cell)"
       },
       "intraop_opioid": null
     }
@@ -5856,12 +5856,12 @@ window.STUDIES_DATA = [
     "journal": "#596 - PraveenaSeevaunnamtum 2016",
     "doi": "10.5812/aapm.40106",
     "pmid": "28975075",
-    "country": "China",
+    "country": "Malaysia",
     "country_meta": {
-      "code": "CN",
-      "lat": 35.8617,
-      "lng": 104.1954,
-      "flag": "🇨🇳"
+      "code": "MY",
+      "lat": 4.2105,
+      "lng": 101.9758,
+      "flag": "🇲🇾"
     },
     "modality": "EA",
     "comparator_type": "Usual Care (Open-Label Control)",
@@ -6149,18 +6149,19 @@ window.STUDIES_DATA = [
     },
     "outcomes": {
       "opioid_24h": {
+        "favors": "Intervention",
+        "arm1_n": 32.0,
+        "arm2_n": 32.0,
         "arm1_mean": 21.38,
         "arm1_sd": 14.38,
-        "arm1_n": 32,
         "arm2_mean": 33.94,
         "arm2_sd": 20.24,
-        "arm2_n": 32,
-        "unit": "mg IV MME",
         "mean_diff": -12.56,
-        "ci_low": -21.16,
-        "ci_upp": -3.96,
-        "se": 4.389,
-        "favors": "Intervention"
+        "se": 4.3891,
+        "ci_low": -21.1624,
+        "ci_upp": -3.9576,
+        "unit": "mg IV MME",
+        "comparison_id": "SEEVA16_EA_vs_UC"
       },
       "opioid_48h": {
         "status": "Unreported in Source Paper",
@@ -6181,7 +6182,8 @@ window.STUDIES_DATA = [
       "hospital_stay": null,
       "rescue_analgesia": null,
       "intraop_opioid": null
-    }
+    },
+    "country_evidence": "conducted at a 990-bed multidisciplinary tertiary government hospital in Malaysia"
   },
   {
     "id": "1882881457",
@@ -7141,7 +7143,7 @@ window.STUDIES_DATA = [
       "reaches_5mg": true,
       "pain_non_inferior": true,
       "quadrant": 1,
-      "quadrant_name": "Optimal Benchmark (\u2265 10 mg MME) + Pain Stable/Reduced"
+      "quadrant_name": "Optimal Benchmark (≥ 10 mg MME) + Pain Stable/Reduced"
     },
     "audit": {
       "classification": "🟢 Reconciled Lock v26",
@@ -7424,37 +7426,41 @@ window.STUDIES_DATA = [
     },
     "outcomes": {
       "opioid_24h": {
+        "favors": "Intervention",
+        "arm1_n": 40.0,
+        "arm2_n": 40.0,
         "arm1_mean": 72.43,
         "arm1_sd": 4.78,
-        "arm1_n": 40,
         "arm2_mean": 100.62,
         "arm2_sd": 10.2,
-        "arm2_n": 40,
-        "unit": "mg IV MME",
         "mean_diff": -28.19,
-        "ci_low": -31.68,
-        "ci_upp": -24.7,
-        "se": 1.781,
-        "favors": "Intervention"
+        "se": 1.7811,
+        "ci_low": -31.6808,
+        "ci_upp": -24.6992,
+        "unit": "mg IV MME",
+        "comparison_id": "CHEN20_TEAS_vs_SHAM"
       },
       "opioid_48h": {
-        "status": "PRIMARY strict",
         "role": "Strict Target A",
         "metric_name": "Cumulative 0–48h Opioid Consumption",
         "timepoint": "0–48 h",
-        "arm1_n": 40,
+        "note": "48-h sufentanil: 118.52 ± 9.77 vs 140.15 ± 7.87 µg (converted at 1000:1: 118.52 vs 140.15 mg MME).",
+        "favors": "Intervention",
+        "arm1_n": 40.0,
+        "arm2_n": 40.0,
+        "unit": "mg IV MME",
+        "comparison_id": "CHEN20_TEAS_vs_SHAM_SUF48",
+        "source_dataset": "06_FINAL_ANALYSIS_V26/01_DATA/target_A_48h.csv",
+        "source_note": "48-h cumulative pump result; preserve native µg. Registration retrospective.",
+        "result_rob": "Some concerns",
         "arm1_mean": 118.52,
         "arm1_sd": 9.77,
-        "arm2_n": 40,
         "arm2_mean": 140.15,
         "arm2_sd": 7.87,
         "mean_diff": -21.63,
-        "se": 1.984,
-        "ci_low": -25.51,
-        "ci_upp": -17.75,
-        "unit": "mg IV MME",
-        "note": "48-h sufentanil: 118.52 ± 9.77 vs 140.15 ± 7.87 µg (converted at 1000:1: 118.52 vs 140.15 mg MME).",
-        "favors": "Intervention"
+        "se": 1.9836,
+        "ci_low": -25.5179,
+        "ci_upp": -17.7421
       },
       "opioid_72h": {
         "status": "Unreported in Source Paper",
@@ -7782,19 +7788,23 @@ window.STUDIES_DATA = [
       "pain_movement_24h": null,
       "ponv_24h": null,
       "flatus_time": {
+        "note": "Time to first flatus (Table 3): EA 20.8+/-4.6 vs Usual care 24.1+/-6.2 hours, P=0.026. Corrected 2026-09-10: this cell previously stored 67.45+/-10.42 vs 73.55+/-12.18 (roughly 3x too large), which does not match the source PDF and directly contradicted this study's own audit.corrections note, which already documented the true 20.8/24.1-hour figures.",
+        "favors": "Intervention",
+        "arm1_n": 29.0,
+        "arm2_n": 28.0,
+        "unit": "hours",
+        "comparison_id": "YANG20_EA_vs_UC",
+        "source_dataset": "06_FINAL_ANALYSIS_V26/01_DATA/target_E_flatus.csv",
+        "source_note": "Open-label; 2/59 excluded after randomization; participant-report contribution unclear",
+        "result_rob": "Some concerns",
         "arm1_mean": 20.8,
         "arm1_sd": 4.6,
-        "arm1_n": 29,
         "arm2_mean": 24.1,
         "arm2_sd": 6.2,
-        "arm2_n": 28,
-        "unit": "hours",
         "mean_diff": -3.3,
         "se": 1.45,
-        "ci_low": -6.14,
-        "ci_upp": -0.46,
-        "note": "Time to first flatus (Table 3): EA 20.8+/-4.6 vs Usual care 24.1+/-6.2 hours, P=0.026. Corrected 2026-09-10: this cell previously stored 67.45+/-10.42 vs 73.55+/-12.18 (roughly 3x too large), which does not match the source PDF and directly contradicted this study's own audit.corrections note, which already documented the true 20.8/24.1-hour figures.",
-        "favors": "Intervention"
+        "ci_low": -6.142,
+        "ci_upp": -0.457993
       },
       "hospital_stay": null,
       "rescue_analgesia": null,
@@ -8102,14 +8112,21 @@ window.STUDIES_DATA = [
       "flatus_time": null,
       "hospital_stay": null,
       "rescue_analgesia": {
-        "arm1_events": 5,
-        "arm1_total": 30,
-        "arm2_events": 11,
-        "arm2_total": 30,
-        "rr": 0.45,
-        "ci_low": 0.18,
-        "ci_upp": 1.15,
-        "favors": "Intervention"
+        "favors": "Intervention",
+        "arm1_n": 30.0,
+        "arm2_n": 30.0,
+        "unit": "participants",
+        "comparison_id": "YU20_TEAS_vs_CONTROL_RESCUE24",
+        "source_dataset": "06_FINAL_ANALYSIS_V26/01_DATA/target_F_exploratory.csv",
+        "source_note": "Rescue sufentanil dose and exact trigger not reported; registration retrospective.",
+        "result_rob": "Some concerns",
+        "arm1_events": 13.0,
+        "arm2_events": 24.0,
+        "rr": 0.55102,
+        "se": 0.224442,
+        "ci_low": 0.35491,
+        "ci_upp": 0.855493,
+        "continuity_correction": "Haldane-Anscombe (+0.5 to every cell)"
       },
       "intraop_opioid": null
     }
@@ -9605,16 +9622,22 @@ window.STUDIES_DATA = [
       "hospital_stay": null,
       "rescue_analgesia": null,
       "intraop_opioid": {
-        "arm1_mean": 533.0,
-        "arm1_sd": 125.0,
-        "arm1_n": 30,
-        "arm2_mean": 582.0,
-        "arm2_sd": 140.0,
-        "arm2_n": 30,
+        "favors": "Control",
+        "arm1_n": 35.0,
+        "arm2_n": 35.0,
         "unit": "µg remifentanil",
-        "mean_diff": -49.0,
-        "se": 34.3,
-        "favors": "Intervention"
+        "comparison_id": "LIANG21_TEAS_vs_CTRL_REMI",
+        "source_dataset": "06_FINAL_ANALYSIS_V26/01_DATA/target_F_exploratory.csv",
+        "source_note": "Five randomized participants excluded; printed intraoperative sufentanil unit is likely erroneous and must not be silently corrected.",
+        "result_rob": "Some concerns",
+        "arm1_mean": 521.5,
+        "arm1_sd": 206.8,
+        "arm2_mean": 464.7,
+        "arm2_sd": 156.0,
+        "mean_diff": 56.8,
+        "se": 43.7859,
+        "ci_low": -29.0204,
+        "ci_upp": 142.6204
       }
     }
   },
@@ -9926,19 +9949,23 @@ window.STUDIES_DATA = [
         "se": null
       },
       "pain_rest_24h": {
-        "arm1_mean": 2.52,
-        "arm1_sd": 0.51,
-        "arm1_n": 50,
-        "arm2_mean": 2.66,
-        "arm2_sd": 0.63,
-        "arm2_n": 50,
-        "unit": "VAS 0–10",
-        "mean_diff": -0.14,
-        "se": 0.114,
-        "ci_low": -0.36,
-        "ci_upp": 0.08,
         "favors": "Intervention",
-        "note": "Resting VAS at 24 h: 2.52 ± 0.505 vs 2.66 ± 0.626 (P=0.221). High RoB (D4)."
+        "note": "Resting VAS at 24 h: 2.52 ± 0.505 vs 2.66 ± 0.626 (P=0.221). High RoB (D4).",
+        "arm1_n": 50.0,
+        "arm2_n": 50.0,
+        "unit": "VAS",
+        "comparison_id": "LIU21_TEAS_vs_CTRL_VASREST24",
+        "source_dataset": "06_FINAL_ANALYSIS_V26/01_DATA/target_C_pain24h.csv",
+        "source_note": "Participant blinding is unclear because active stimulation was maximum tolerated and control received no current",
+        "result_rob": "High",
+        "arm1_mean": 2.52,
+        "arm1_sd": 0.505,
+        "arm2_mean": 2.66,
+        "arm2_sd": 0.626,
+        "mean_diff": -0.14,
+        "se": 0.113745,
+        "ci_low": -0.362941,
+        "ci_upp": 0.082941
       },
       "pain_movement_24h": null,
       "ponv_24h": null,
@@ -10270,32 +10297,45 @@ window.STUDIES_DATA = [
       "pain_rest_24h": null,
       "pain_movement_24h": null,
       "ponv_24h": {
-        "arm1_events": 35,
-        "arm1_total": 190,
         "arm1_pct": 18.4,
-        "arm2_events": 68,
-        "arm2_total": 188,
         "arm2_pct": 36.2,
-        "rr": 0.51,
-        "ci_low": 0.36,
-        "ci_upp": 0.72,
         "favors": "Intervention",
-        "stratum": "Composite PONV (0–24h)"
+        "stratum": "Composite PONV (0–24h)",
+        "arm1_n": 190.0,
+        "arm2_n": 188.0,
+        "unit": "participants",
+        "comparison_id": "LU21_COMB_vs_SHAM_PONV24",
+        "source_dataset": "06_FINAL_ANALYSIS_V26/01_DATA/target_D_ponv.csv",
+        "source_note": "Use raw event counts; three-arm shared sham comparator",
+        "result_rob": "High",
+        "arm1_events": 35.0,
+        "arm2_events": 68.0,
+        "rr": 0.512821,
+        "se": 0.179558,
+        "ci_low": 0.360681,
+        "ci_upp": 0.729136,
+        "continuity_correction": "Haldane-Anscombe (+0.5 to every cell)"
       },
       "flatus_time": null,
       "hospital_stay": null,
       "rescue_analgesia": null,
       "intraop_opioid": {
-        "arm1_mean": 1580.0,
-        "arm1_sd": 390.0,
-        "arm1_n": 190,
-        "arm2_mean": 1720.0,
-        "arm2_sd": 410.0,
-        "arm2_n": 188,
+        "favors": "Intervention",
+        "arm1_n": 190.0,
+        "arm2_n": 188.0,
         "unit": "µg remifentanil",
-        "mean_diff": -140.0,
-        "se": 41.13,
-        "favors": "Intervention"
+        "comparison_id": "LU21_COMB_vs_SHAM_REMI",
+        "source_dataset": "06_FINAL_ANALYSIS_V26/01_DATA/target_F_exploratory.csv",
+        "source_note": "Three-arm trial; sham is a shared comparator",
+        "result_rob": "Some concerns",
+        "arm1_mean": 1200.0,
+        "arm1_sd": 500.0,
+        "arm2_mean": 1400.0,
+        "arm2_sd": 700.0,
+        "mean_diff": -200.0,
+        "se": 62.6273,
+        "ci_low": -322.7494,
+        "ci_upp": -77.2506
       }
     }
   },
@@ -10597,17 +10637,8 @@ window.STUDIES_DATA = [
       "pain_rest_24h": null,
       "pain_movement_24h": null,
       "ponv_24h": {
-        "arm1_events": 13,
-        "arm1_total": 31,
-        "arm1_pct": 41.9,
-        "arm2_events": 24,
-        "arm2_total": 31,
-        "arm2_pct": 77.4,
-        "rr": 0.54,
-        "ci_low": 0.34,
-        "ci_upp": 0.86,
-        "favors": "Intervention",
-        "stratum": "Composite PONV (0–48h)"
+        "status": "Not pooled — no locked arm-level record",
+        "note": "No row for this study/outcome in the locked dataset; any previous arm-level values here were unsourced."
       },
       "flatus_time": null,
       "hospital_stay": null,
@@ -11570,18 +11601,22 @@ window.STUDIES_DATA = [
       "pain_movement_24h": null,
       "ponv_24h": null,
       "flatus_time": {
-        "arm1_mean": 38.8,
-        "arm1_sd": 8.2,
-        "arm1_n": 47,
-        "arm2_mean": 46.2,
-        "arm2_sd": 8.9,
-        "arm2_n": 47,
+        "favors": "Intervention",
+        "arm1_n": 47.0,
+        "arm2_n": 47.0,
         "unit": "hours",
-        "mean_diff": -7.4,
-        "se": 1.766,
-        "ci_low": -10.86,
-        "ci_upp": -3.94,
-        "favors": "Intervention"
+        "comparison_id": "LU22_TEAS_vs_CTRL_FLATUS",
+        "source_dataset": "06_FINAL_ANALYSIS_V26/01_DATA/target_E_flatus.csv",
+        "source_note": "Same 6 post-randomization exclusions apply",
+        "result_rob": "Some concerns",
+        "arm1_mean": 34.5,
+        "arm1_sd": 16.7,
+        "arm2_mean": 42.4,
+        "arm2_sd": 22.9,
+        "mean_diff": -7.9,
+        "se": 4.1342,
+        "ci_low": -16.003,
+        "ci_upp": 0.203002
       },
       "hospital_stay": null,
       "rescue_analgesia": null,
@@ -11902,19 +11937,23 @@ window.STUDIES_DATA = [
       "hospital_stay": null,
       "rescue_analgesia": null,
       "intraop_opioid": {
+        "note": "Intraoperative remifentanil consumption (Table 2): pTEAS 1383+/-494 vs Control 1637+/-630 ug, P=0.042. Corrected 2026-09-10: this cell previously stored 1100+/-240 vs 1380+/-280 (n=30/30), which matches neither this figure nor this trial's other reported intraoperative measure (the normalised 'Remifentanil index', 0.084+/-0.018 vs 0.114+/-0.090 ug/min/kg) and does not match the source PDF at all. It also directly contradicted this study's own audit.corrections note, which already documented the true 1383/1637 figures.",
+        "favors": "Intervention",
+        "arm1_n": 44.0,
+        "arm2_n": 40.0,
+        "unit": "µg remifentanil",
+        "comparison_id": "WU22_PTEAS_vs_CTRL_REMI",
+        "source_dataset": "06_FINAL_ANALYSIS_V26/01_DATA/target_F_exploratory.csv",
+        "source_note": "Complete-case analysis with asymmetric attrition",
+        "result_rob": "Some concerns",
         "arm1_mean": 1383.0,
         "arm1_sd": 494.0,
-        "arm1_n": 44,
         "arm2_mean": 1637.0,
         "arm2_sd": 630.0,
-        "arm2_n": 40,
-        "unit": "µg remifentanil",
         "mean_diff": -254.0,
-        "se": 124.37,
-        "ci_low": -497.77,
-        "ci_upp": -10.23,
-        "note": "Intraoperative remifentanil consumption (Table 2): pTEAS 1383+/-494 vs Control 1637+/-630 ug, P=0.042. Corrected 2026-09-10: this cell previously stored 1100+/-240 vs 1380+/-280 (n=30/30), which matches neither this figure nor this trial's other reported intraoperative measure (the normalised 'Remifentanil index', 0.084+/-0.018 vs 0.114+/-0.090 ug/min/kg) and does not match the source PDF at all. It also directly contradicted this study's own audit.corrections note, which already documented the true 1383/1637 figures.",
-        "favors": "Intervention"
+        "se": 124.3735,
+        "ci_low": -497.7721,
+        "ci_upp": -10.2279
       }
     }
   },
@@ -12250,61 +12289,66 @@ window.STUDIES_DATA = [
         "se": null
       },
       "pain_rest_24h": {
+        "favors": "Intervention",
+        "note": "Resting VAS at 24 h: 1.18 ± 0.42 vs 1.40 ± 0.52. High RoB (D4 sensory masking).",
+        "arm1_n": 29.0,
+        "arm2_n": 29.0,
+        "unit": "VAS 0-10",
+        "comparison_id": "XING22_NTG_vs_NG_RESTVAS24",
+        "source_dataset": "06_FINAL_ANALYSIS_V26/01_DATA/target_C_pain24h.csv",
+        "source_note": "At 24 h both TAPB groups improved versus G, but incremental NTG-vs-NG difference was not reported significant",
+        "result_rob": "High",
         "arm1_mean": 1.18,
         "arm1_sd": 0.42,
-        "arm1_n": 29,
         "arm2_mean": 1.4,
         "arm2_sd": 0.52,
-        "arm2_n": 29,
-        "unit": "VAS 0–10",
         "mean_diff": -0.22,
-        "se": 0.124,
-        "ci_low": -0.46,
-        "ci_upp": 0.02,
-        "favors": "Intervention",
-        "note": "Resting VAS at 24 h: 1.18 ± 0.42 vs 1.40 ± 0.52. High RoB (D4 sensory masking)."
+        "se": 0.124125,
+        "ci_low": -0.463284,
+        "ci_upp": 0.023284
       },
       "pain_movement_24h": null,
       "ponv_24h": {
-        "arm1_events": 5,
-        "arm1_total": 29,
-        "arm1_pct": 17.2,
-        "arm2_events": 11,
-        "arm2_total": 29,
-        "arm2_pct": 37.9,
-        "rr": 0.45,
-        "ci_low": 0.18,
-        "ci_upp": 1.15,
-        "favors": "Intervention",
-        "stratum": "Composite PONV (0–48h)"
+        "status": "Not pooled — no locked arm-level record",
+        "note": "No row for this study/outcome in the locked dataset; any previous arm-level values here were unsourced."
       },
       "flatus_time": {
-        "arm1_mean": 48.86,
-        "arm1_sd": 11.45,
-        "arm1_n": 29,
-        "arm2_mean": 51.07,
-        "arm2_sd": 12.24,
-        "arm2_n": 29,
+        "favors": "Intervention",
+        "arm1_n": 29.0,
+        "arm2_n": 29.0,
         "unit": "hours",
-        "mean_diff": -2.21,
-        "se": 3.111,
-        "ci_low": -8.31,
-        "ci_upp": 3.89,
-        "favors": "Intervention"
+        "comparison_id": "XING22_NTG_vs_NG_FLATUS",
+        "source_dataset": "06_FINAL_ANALYSIS_V26/01_DATA/target_E_flatus.csv",
+        "source_note": "Three-arm study; use NTG vs NG for incremental TEAS effect",
+        "result_rob": "Some concerns",
+        "arm1_mean": 32.57,
+        "arm1_sd": 6.94,
+        "arm2_mean": 36.83,
+        "arm2_sd": 6.19,
+        "mean_diff": -4.26,
+        "se": 1.7269,
+        "ci_low": -7.6447,
+        "ci_upp": -0.875349
       },
       "hospital_stay": null,
       "rescue_analgesia": null,
       "intraop_opioid": {
-        "arm1_mean": 1330.0,
-        "arm1_sd": 310.0,
-        "arm1_n": 29,
-        "arm2_mean": 1620.0,
-        "arm2_sd": 380.0,
-        "arm2_n": 29,
+        "favors": "Intervention",
+        "arm1_n": 29.0,
+        "arm2_n": 29.0,
         "unit": "µg remifentanil",
-        "mean_diff": -290.0,
-        "se": 91.07,
-        "favors": "Intervention"
+        "comparison_id": "XING22_NTG_vs_NG_REMI",
+        "source_dataset": "06_FINAL_ANALYSIS_V26/01_DATA/target_F_exploratory.csv",
+        "source_note": "Direct TEAS contrast is NTG vs NG; do not attribute NTG-vs-G combined package entirely to TEAS",
+        "result_rob": "Some concerns",
+        "arm1_mean": 1182.61,
+        "arm1_sd": 253.61,
+        "arm2_mean": 1415.41,
+        "arm2_sd": 295.67,
+        "mean_diff": -232.8,
+        "se": 72.3351,
+        "ci_low": -374.5769,
+        "ci_upp": -91.0231
       }
     }
   },
@@ -12914,16 +12958,22 @@ window.STUDIES_DATA = [
       "hospital_stay": null,
       "rescue_analgesia": null,
       "intraop_opioid": {
-        "arm1_mean": 620.0,
-        "arm1_sd": 140.0,
-        "arm1_n": 30,
-        "arm2_mean": 710.0,
-        "arm2_sd": 160.0,
-        "arm2_n": 30,
+        "favors": "Intervention",
+        "arm1_n": 55.0,
+        "arm2_n": 55.0,
         "unit": "µg remifentanil",
-        "mean_diff": -90.0,
-        "se": 38.87,
-        "favors": "Intervention"
+        "comparison_id": "GUO23_TEAS_vs_SHAM_REMI",
+        "source_dataset": "06_FINAL_ANALYSIS_V26/01_DATA/target_F_exploratory.csv",
+        "source_note": "Complete-case n=55/group",
+        "result_rob": "Some concerns",
+        "arm1_mean": 870.0,
+        "arm1_sd": 300.0,
+        "arm2_mean": 1010.0,
+        "arm2_sd": 390.0,
+        "mean_diff": -140.0,
+        "se": 66.3462,
+        "ci_low": -270.0386,
+        "ci_upp": -9.9614
       }
     }
   },
@@ -13556,12 +13606,13 @@ window.STUDIES_DATA = [
         "arm2_mean": 56.54,
         "arm2_sd": 12.5,
         "arm2_n": 52,
-        "unit": "mg IV MME",
+        "unit": "mL PCIA solution",
         "mean_diff": -17.23,
         "ci_low": -22.63,
         "ci_upp": -11.83,
         "se": 2.754,
-        "favors": "Intervention"
+        "favors": "Intervention",
+        "note": "Not in the locked 0-24 h primary pool; value is the raw published statistic in the unit shown and has not been converted to morphine equivalents. Unit label corrected 2026-09-10."
       },
       "opioid_48h": {
         "status": "Unreported in Source Paper",
@@ -13886,16 +13937,22 @@ window.STUDIES_DATA = [
       "hospital_stay": null,
       "rescue_analgesia": null,
       "intraop_opioid": {
-        "arm1_mean": 890.0,
-        "arm1_sd": 210.0,
-        "arm1_n": 32,
-        "arm2_mean": 960.0,
-        "arm2_sd": 230.0,
-        "arm2_n": 32,
+        "favors": "Intervention",
+        "arm1_n": 52.0,
+        "arm2_n": 53.0,
         "unit": "µg remifentanil",
-        "mean_diff": -70.0,
-        "se": 55.07,
-        "favors": "Intervention"
+        "comparison_id": "PAN23_TEAS_vs_CONTROL_REMI",
+        "source_dataset": "06_FINAL_ANALYSIS_V26/01_DATA/target_F_exploratory.csv",
+        "source_note": "15/120 excluded; titrating anesthesiologist blinding not established.",
+        "result_rob": "High",
+        "arm1_mean": 740.1,
+        "arm1_sd": 276.9,
+        "arm2_mean": 854.0,
+        "arm2_sd": 287.5,
+        "mean_diff": -113.9,
+        "se": 55.0822,
+        "ci_low": -221.861,
+        "ci_upp": -5.939
       }
     }
   },
@@ -14499,23 +14556,27 @@ window.STUDIES_DATA = [
     "outcomes": {
       "opioid_24h": null,
       "opioid_48h": {
-        "status": "PRIMARY strict",
         "role": "Strict Target A",
         "metric_name": "Cumulative 0–48h Opioid Consumption",
         "timepoint": "first 48 h",
-        "arm1_n": 922,
-        "arm1_mean": 100.0,
-        "arm1_sd": 22.24,
-        "arm2_n": 916,
-        "arm2_mean": 103.33,
-        "arm2_sd": 14.83,
-        "mean_diff": -3.33,
-        "se": 0.881,
-        "ci_low": -5.06,
-        "ci_upp": -1.6,
-        "unit": "mg IV MME",
         "note": "Derived via Wan et al. (2014) from reported 48h median (IQR): TEAS 110 (80–110) vs Sham 110 (90–110) mg MME.",
-        "favors": "Intervention"
+        "favors": "Intervention",
+        "arm1_n": 922.0,
+        "arm2_n": 916.0,
+        "unit": "mg IV MME",
+        "comparison_id": "ZHANG23_TEAS_vs_SHAM_MME48",
+        "source_dataset": "06_FINAL_ANALYSIS_V26/01_DATA/target_A_48h.csv",
+        "source_note": "Authors converted opioids using ClinCalc; exact 24-h postoperative dose is not reported",
+        "result_rob": "Some concerns",
+        "arm1_mean": 100.0,
+        "arm1_sd": 22.239,
+        "arm2_mean": 103.3333,
+        "arm2_sd": 14.826,
+        "mean_diff": -3.3333,
+        "se": 0.881126,
+        "ci_low": -5.0603,
+        "ci_upp": -1.6063,
+        "interpretation_caveat": "Derived from median [IQR] by the Wan et al. transformation. In both arms the median equals Q3 (110.0 [80–110] and 110.0 [90–110] mg MME), i.e. the distribution is at a ceiling, so the transformation's symmetry assumption is strained and the derived SD is likely understated. Verified 2026-09-11; values unchanged."
       },
       "opioid_72h": {
         "status": "Unreported in Source Paper",
@@ -15137,15 +15198,22 @@ window.STUDIES_DATA = [
       "flatus_time": null,
       "hospital_stay": null,
       "rescue_analgesia": {
-        "arm1_events": 3,
-        "arm1_total": 57,
-        "arm2_events": 6,
-        "arm2_total": 58,
-        "rr": 0.55,
-        "ci_low": 0.16,
-        "ci_upp": 1.91,
         "note": "Use of tramadol within 6-24 h (Table 4): TEAS 3/57 (5.3%) vs Sham TEAS 6/58 (10.3%), P=0.315. Corrected 2026-09-10: this cell previously stored 9/77 vs 17/76, which does not match the source PDF (Table 1's own analysed n is 57/58, not 77/76) and directly contradicted this study's own audit.corrections note, which already documented the true 3/57 vs 6/58 figures. RR/CI recomputed with the review's standard Haldane-Anscombe continuity correction.",
-        "favors": "Intervention"
+        "favors": "Intervention",
+        "arm1_n": 57.0,
+        "arm2_n": 58.0,
+        "unit": "participants",
+        "comparison_id": "TU24_TEAS_vs_SHAM_TRAMADOL",
+        "source_dataset": "06_FINAL_ANALYSIS_V26/01_DATA/target_F_exploratory.csv",
+        "source_note": "Tramadol was 10 mg IM for VAS >6; number of doses/cumulative tramadol per patient is not reported",
+        "result_rob": "Some concerns",
+        "arm1_events": 3.0,
+        "arm2_events": 6.0,
+        "rr": 0.547745,
+        "se": 0.636687,
+        "ci_low": 0.157261,
+        "ci_upp": 1.9078,
+        "continuity_correction": "Haldane-Anscombe (+0.5 to every cell)"
       },
       "intraop_opioid": null
     }
@@ -15816,18 +15884,19 @@ window.STUDIES_DATA = [
     },
     "outcomes": {
       "opioid_24h": {
+        "favors": "Intervention",
+        "arm1_n": 90.0,
+        "arm2_n": 90.0,
         "arm1_mean": 43.7,
         "arm1_sd": 4.7,
-        "arm1_n": 90,
         "arm2_mean": 44.0,
         "arm2_sd": 4.9,
-        "arm2_n": 90,
+        "mean_diff": -0.299999,
+        "se": 0.715697,
+        "ci_low": -1.7027,
+        "ci_upp": 1.1027,
         "unit": "mg IV MME",
-        "mean_diff": -0.3,
-        "ci_low": -1.7,
-        "ci_upp": 1.1,
-        "se": 0.716,
-        "favors": "Intervention"
+        "comparison_id": "YANG24_EA_vs_UC_MORPH24"
       },
       "opioid_48h": {
         "status": "Unreported in Source Paper",
@@ -15836,40 +15905,47 @@ window.STUDIES_DATA = [
         "se": null
       },
       "opioid_72h": {
-        "status": "PRIMARY strict",
         "role": "Strict Exact 72h (Single Study - Not Pooled)",
         "metric_name": "Cumulative Postoperative Morphine (0–72 h)",
         "timepoint": "0–72 h",
-        "arm1_n": 90,
+        "note": "Table 3 Cumulative IV PCA morphine: 127.0 ± 12.0 vs 127.5 ± 12.5 mg (MD -0.50 mg, P=0.785). Single strict trial; not meta-analyzed alone.",
+        "favors": "Intervention",
+        "arm1_n": 90.0,
+        "arm2_n": 90.0,
+        "unit": "mg IV MME",
+        "comparison_id": "YANG24_EA_vs_UC_MORPH72",
+        "source_dataset": "06_FINAL_ANALYSIS_V26/01_DATA/target_B_72h.csv",
+        "source_note": "Extracted from PCA device records; full ITT.",
+        "result_rob": "Some concerns",
         "arm1_mean": 127.0,
         "arm1_sd": 12.0,
-        "arm2_n": 90,
         "arm2_mean": 127.5,
         "arm2_sd": 12.5,
         "mean_diff": -0.5,
-        "se": 1.826,
-        "ci_low": -4.08,
-        "ci_upp": 3.08,
-        "unit": "mg IV morphine",
-        "note": "Table 3 Cumulative IV PCA morphine: 127.0 ± 12.0 vs 127.5 ± 12.5 mg (MD -0.50 mg, P=0.785). Single strict trial; not meta-analyzed alone.",
-        "favors": "Intervention"
+        "se": 1.8265,
+        "ci_low": -4.0799,
+        "ci_upp": 3.0799
       },
       "pain_rest_24h": null,
       "pain_movement_24h": null,
       "ponv_24h": null,
       "flatus_time": {
-        "arm1_mean": 83.0,
-        "arm1_sd": 12.0,
-        "arm1_n": 90,
-        "arm2_mean": 85.0,
-        "arm2_sd": 12.0,
-        "arm2_n": 90,
+        "favors": "Intervention",
+        "arm1_n": 90.0,
+        "arm2_n": 90.0,
         "unit": "hours",
-        "mean_diff": -2.0,
-        "se": 1.789,
-        "ci_low": -5.51,
-        "ci_upp": 1.51,
-        "favors": "Intervention"
+        "comparison_id": "YANG24_EA_vs_UC_FLATUS",
+        "source_dataset": "06_FINAL_ANALYSIS_V26/01_DATA/target_E_flatus.csv",
+        "source_note": "Open-label participants; outcome assessor blinded",
+        "result_rob": "High",
+        "arm1_mean": 15.4,
+        "arm1_sd": 3.2,
+        "arm2_mean": 17.0,
+        "arm2_sd": 3.7,
+        "mean_diff": -1.6,
+        "se": 0.515644,
+        "ci_low": -2.6107,
+        "ci_upp": -0.589338
       },
       "hospital_stay": null,
       "rescue_analgesia": null,
@@ -17439,12 +17515,13 @@ window.STUDIES_DATA = [
         "arm2_mean": 53.79,
         "arm2_sd": 5.14,
         "arm2_n": 48,
-        "unit": "mg IV MME",
+        "unit": "µg sufentanil",
         "mean_diff": -3.26,
         "ci_low": -5.21,
         "ci_upp": -1.31,
         "se": 0.996,
-        "favors": "Intervention"
+        "favors": "Intervention",
+        "note": "Not in the locked 0-24 h primary pool; value is the raw published statistic in the unit shown and has not been converted to morphine equivalents. Unit label corrected 2026-09-10."
       },
       "opioid_48h": {
         "status": "Unreported in Source Paper",
@@ -17790,32 +17867,45 @@ window.STUDIES_DATA = [
       "pain_rest_24h": null,
       "pain_movement_24h": null,
       "ponv_24h": {
-        "arm1_events": 18,
-        "arm1_total": 42,
         "arm1_pct": 42.9,
-        "arm2_events": 29,
-        "arm2_total": 43,
         "arm2_pct": 67.4,
-        "rr": 0.64,
-        "ci_low": 0.43,
-        "ci_upp": 0.95,
         "favors": "Intervention",
-        "stratum": "Composite PONV (0–24h)"
+        "stratum": "Composite PONV (0–24h)",
+        "arm1_n": 42.0,
+        "arm2_n": 43.0,
+        "unit": "participants",
+        "comparison_id": "ZHENG25_TEAS_vs_SHAM_PONV",
+        "source_dataset": "06_FINAL_ANALYSIS_V26/01_DATA/target_D_ponv.csv",
+        "source_note": "Counts 18/42 and 29/43 are reconstructed from reported 42.9% and 67.4%; use percentages as source truth",
+        "result_rob": "Some concerns",
+        "arm1_events": 18.0,
+        "arm2_events": 29.0,
+        "rr": 0.641703,
+        "se": 0.204864,
+        "ci_low": 0.429487,
+        "ci_upp": 0.958777,
+        "continuity_correction": "Haldane-Anscombe (+0.5 to every cell)"
       },
       "flatus_time": null,
       "hospital_stay": null,
       "rescue_analgesia": null,
       "intraop_opioid": {
-        "arm1_mean": 750.0,
-        "arm1_sd": 180.0,
-        "arm1_n": 42,
-        "arm2_mean": 820.0,
-        "arm2_sd": 190.0,
-        "arm2_n": 43,
+        "favors": "Intervention",
+        "arm1_n": 42.0,
+        "arm2_n": 43.0,
         "unit": "µg remifentanil",
-        "mean_diff": -70.0,
-        "se": 40.23,
-        "favors": "Intervention"
+        "comparison_id": "ZHENG25_TEAS_vs_SHAM_REMI",
+        "source_dataset": "06_FINAL_ANALYSIS_V26/01_DATA/target_F_exploratory.csv",
+        "source_note": "Not a postoperative endpoint",
+        "result_rob": "Some concerns",
+        "arm1_mean": 233.1,
+        "arm1_sd": 29.6,
+        "arm2_mean": 289.5,
+        "arm2_sd": 37.9,
+        "mean_diff": -56.4,
+        "se": 7.3665,
+        "ci_low": -70.8384,
+        "ci_upp": -41.9616
       }
     }
   },
@@ -18154,29 +18244,40 @@ window.STUDIES_DATA = [
       "pain_movement_24h": null,
       "ponv_24h": null,
       "flatus_time": {
+        "favors": "Intervention",
+        "arm1_n": 48.0,
+        "arm2_n": 49.0,
+        "unit": "hours",
+        "comparison_id": "ZHOU25_TEAS_vs_SHAM_FLATUS",
+        "source_dataset": "06_FINAL_ANALYSIS_V26/01_DATA/target_E_flatus.csv",
+        "source_note": "Ascertainment mechanism should be considered in RoB because participant sensory blinding may be imperfect",
+        "result_rob": "Some concerns",
         "arm1_mean": 14.1,
         "arm1_sd": 3.19,
-        "arm1_n": 48,
         "arm2_mean": 15.88,
         "arm2_sd": 3.78,
-        "arm2_n": 49,
-        "unit": "hours",
         "mean_diff": -1.78,
-        "se": 0.709,
-        "ci_low": -3.17,
-        "ci_upp": -0.39,
-        "favors": "Intervention"
+        "se": 0.709649,
+        "ci_low": -3.1709,
+        "ci_upp": -0.389087
       },
       "hospital_stay": null,
       "rescue_analgesia": {
-        "arm1_events": 6,
-        "arm1_total": 48,
-        "arm2_events": 13,
-        "arm2_total": 49,
-        "rr": 0.47,
-        "ci_low": 0.2,
-        "ci_upp": 1.13,
-        "favors": "Intervention"
+        "favors": "Intervention",
+        "arm1_n": 48.0,
+        "arm2_n": 49.0,
+        "unit": "participants",
+        "comparison_id": "ZHOU25_TEAS_vs_SHAM_RESCUE",
+        "source_dataset": "06_FINAL_ANALYSIS_V26/01_DATA/target_F_exploratory.csv",
+        "source_note": "Not a 24-h opioid dose; exact cumulative tramadol dose is not reported",
+        "result_rob": "Some concerns",
+        "arm1_events": 6.0,
+        "arm2_events": 13.0,
+        "rr": 0.491308,
+        "se": 0.433027,
+        "ci_low": 0.210259,
+        "ci_upp": 1.148,
+        "continuity_correction": "Haldane-Anscombe (+0.5 to every cell)"
       },
       "intraop_opioid": null
     }
@@ -18791,18 +18892,19 @@ window.STUDIES_DATA = [
     },
     "outcomes": {
       "opioid_24h": {
+        "favors": "Intervention",
+        "arm1_n": 80.0,
+        "arm2_n": 79.0,
         "arm1_mean": 20.0,
         "arm1_sd": 2.5,
-        "arm1_n": 80,
         "arm2_mean": 20.6,
         "arm2_sd": 4.5,
-        "arm2_n": 79,
-        "unit": "mg IV MME",
         "mean_diff": -0.6,
-        "ci_low": -1.73,
-        "ci_upp": 0.53,
-        "se": 0.578,
-        "favors": "Intervention"
+        "se": 0.57832,
+        "ci_low": -1.7335,
+        "ci_upp": 0.533486,
+        "unit": "mg IV MME",
+        "comparison_id": "HEJIS26_TEAS_vs_CTRL_MME24"
       },
       "opioid_48h": {
         "status": "Unreported in Source Paper",
@@ -20086,12 +20188,14 @@ window.STUDIES_DATA = [
         "arm2_mean": 15.18,
         "arm2_sd": 4.95,
         "arm2_n": 139,
-        "unit": "mg IV MME",
+        "unit": "published as mg; definition/unit unresolved",
         "mean_diff": 0.68,
         "ci_low": -0.5,
         "ci_upp": 1.86,
         "se": 0.605,
-        "favors": "Control"
+        "favors": "Control",
+        "note": "Source-verified 2026-09-11 (covidence_35_verified.pdf): 15.86 (5.11) vs 15.18 (4.95) 'Sufentanil equivalents (mg)' is reported in the BASELINE CHARACTERISTICS table, alongside sex, smoking status, Apfel score and duration of anaesthesia, with P = 0.27 — it is a baseline balance variable, not cumulative 0–24 h postoperative opioid consumption. Retained here labelled for what it is; it is outside the primary pool and enters no synthesis. Re-classification is a register decision.",
+        "status": "Not a 0–24 h postoperative outcome"
       },
       "opioid_48h": {
         "status": "Unreported in Source Paper",
@@ -20483,41 +20587,41 @@ window.STUDIES_DATA = [
     },
     "outcomes": {
       "opioid_24h": {
+        "favors": "Intervention",
+        "arm1_n": 24.0,
+        "arm2_n": 24.0,
         "arm1_mean": 7.5,
         "arm1_sd": 3.8,
-        "arm1_n": 24,
         "arm2_mean": 15.2,
         "arm2_sd": 6.24,
-        "arm2_n": 24,
-        "unit": "mg IV morphine",
         "mean_diff": -7.7,
+        "se": 1.4913,
         "ci_low": -10.623,
         "ci_upp": -4.777,
-        "se": 1.491,
-        "favors": "Intervention"
+        "unit": "mg IV MME",
+        "comparison_id": "SZMIT21_TEAS_vs_SHAM_MORPH24"
       },
       "opioid_48h": null,
       "opioid_72h": null,
       "pain_rest_24h": null,
       "pain_movement_24h": null,
       "ponv_24h": {
-        "arm1_events": 0,
-        "arm1_total": 24,
-        "arm1_pct": 0.0,
-        "arm2_events": 4,
-        "arm2_total": 24,
-        "arm2_pct": 16.7,
-        "rr": 0.111,
-        "ci_low": 0.006,
-        "ci_upp": 1.955,
-        "favors": "Intervention",
-        "stratum": "Nausea alone (0–24h); zero-cell, Stata-computed"
+        "status": "Not pooled — no locked arm-level record",
+        "note": "No row for this study/outcome in the locked dataset; any previous arm-level values here were unsourced."
       },
       "flatus_time": null,
       "hospital_stay": null,
       "rescue_analgesia": null,
       "intraop_opioid": null
-    }
+    },
+    "country": "Poland",
+    "country_meta": {
+      "code": "PL",
+      "lat": 51.9194,
+      "lng": 19.1451,
+      "flag": "🇵🇱"
+    },
+    "country_evidence": "Department and Clinic of General, Minimally Invasive and Endocrine Surgery, Wroclaw Medical University, 50-556 Wroclaw, Poland"
   },
   {
     "id": "NEW32_GAO2022",
@@ -20610,7 +20714,15 @@ window.STUDIES_DATA = [
       "hospital_stay": null,
       "rescue_analgesia": null,
       "intraop_opioid": null
-    }
+    },
+    "country": "China",
+    "country_meta": {
+      "code": "CN",
+      "lat": 35.8617,
+      "lng": 104.1954,
+      "flag": "🇨🇳"
+    },
+    "country_evidence": "Department of Anesthesiology, Center for Brain Science, The First Affiliated Hospital of Xi'an Jiaotong University, Xi'an, China"
   },
   {
     "id": "NEW32_SONG2020",
@@ -20703,7 +20815,15 @@ window.STUDIES_DATA = [
         "mean_diff": null,
         "se": null
       }
-    }
+    },
+    "country": "China",
+    "country_meta": {
+      "code": "CN",
+      "lat": 35.8617,
+      "lng": 104.1954,
+      "flag": "🇨🇳"
+    },
+    "country_evidence": "Department of Anesthesiology, Shengjing Hospital of China Medical University, Shenyang, China"
   },
   {
     "id": "NEW32_WU2016",
@@ -20801,7 +20921,15 @@ window.STUDIES_DATA = [
       },
       "rescue_analgesia": null,
       "intraop_opioid": null
-    }
+    },
+    "country": "China",
+    "country_meta": {
+      "code": "CN",
+      "lat": 35.8617,
+      "lng": 104.1954,
+      "flag": "🇨🇳"
+    },
+    "country_evidence": "the Cancer Hospital of Harbin Medical University (Harbin, China)"
   },
   {
     "id": "NEW32_LIU2015",
@@ -20899,7 +21027,15 @@ window.STUDIES_DATA = [
         "mean_diff": -22.1,
         "se": null
       }
-    }
+    },
+    "country": "China",
+    "country_meta": {
+      "code": "CN",
+      "lat": 35.8617,
+      "lng": 104.1954,
+      "flag": "🇨🇳"
+    },
+    "country_evidence": "Department of Anesthesiology, Beijing 100093 China"
   },
   {
     "id": "NEW32_OZTAS2019",
@@ -20992,7 +21128,15 @@ window.STUDIES_DATA = [
       "hospital_stay": null,
       "rescue_analgesia": null,
       "intraop_opioid": null
-    }
+    },
+    "country": "Turkey",
+    "country_meta": {
+      "code": "TR",
+      "lat": 38.9637,
+      "lng": 35.2433,
+      "flag": "🇹🇷"
+    },
+    "country_evidence": "School of Nursing, Yuksek Ihtisas University, Ankara, Turkey"
   },
   {
     "id": "NEW32_ZHANG2018",
@@ -21078,7 +21222,15 @@ window.STUDIES_DATA = [
       },
       "rescue_analgesia": null,
       "intraop_opioid": null
-    }
+    },
+    "country": "China",
+    "country_meta": {
+      "code": "CN",
+      "lat": 35.8617,
+      "lng": 104.1954,
+      "flag": "🇨🇳"
+    },
+    "country_evidence": "Department of Gastroenterology, Changzheng Hospital affiliated to Second Military Medical University, Shanghai, 200003, China"
   }
 ];
 

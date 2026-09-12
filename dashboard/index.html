@@ -40,7 +40,7 @@
       </div>
       <div class="subnav-group" id="subnav-studies" style="display: none; gap: 0.4rem; align-items: center; flex-wrap: wrap;">
         <span style="font-size: 0.72rem; font-weight: 700; color: #94a3b8; text-transform: uppercase; margin-right: 0.25rem;">Studies:</span>
-        <button class="subnav-pill" data-tab="explorer" onclick="switchTab('explorer')">🔍 Study Explorer (k=70)</button>
+        <button class="subnav-pill" data-tab="explorer" onclick="switchTab('explorer')">🔍 Study Explorer (69 studies / 70 reports)</button>
         <button class="subnav-pill" data-tab="prisma" onclick="switchTab('prisma')">📋 Study Selection &amp; PRISMA Flow</button>
       </div>
       <div class="subnav-group" id="subnav-results" style="display: none; gap: 0.4rem; align-items: center; flex-wrap: wrap;">
@@ -129,6 +129,20 @@
       </div>
 
       <div class="filter-group">
+        <span class="filter-label">Country:</span>
+        <select id="filter-country" class="filter-select">
+          <option value="all">All countries of conduct</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <span class="filter-label">Years:</span>
+        <input type="number" id="filter-year-min" class="filter-select" style="width:5.5rem;" min="1990" max="2030" step="1" aria-label="Earliest publication year">
+        <span style="color:var(--text-muted);">&ndash;</span>
+        <input type="number" id="filter-year-max" class="filter-select" style="width:5.5rem;" min="1990" max="2030" step="1" aria-label="Latest publication year">
+      </div>
+
+      <div class="filter-group">
         <span class="filter-label" data-i18n="controls.rob">RoB 2:</span>
         <select id="filter-rob" class="filter-select">
           <option value="all" data-i18n="controls.allRob">All Risk of Bias Judgments</option>
@@ -143,7 +157,7 @@
 
     <div style="display: flex; gap: 0.4rem; align-items: center;">
       <span class="filter-label" style="margin-right: 0.3rem;" data-i18n="controls.presets">Presets:</span>
-      <button class="btn-preset active" data-preset="all" data-i18n="controls.allStudies">All 70 Studies</button>
+      <button class="btn-preset active" data-preset="all" data-i18n="controls.allStudies">All 70 Reports</button>
       <button class="btn-preset" data-preset="low_rob" data-i18n="controls.presetLowRob">Low RoB Only</button>
       <button class="btn-preset" data-preset="sham_only" data-i18n="controls.presetSham">Sham Only</button>
       <button class="btn-preset" data-preset="large_studies" data-i18n="controls.presetLarge">Large (N ≥ 60)</button>
@@ -162,7 +176,7 @@
           <span data-i18n="kpi.includedRcts">Included RCTs</span>
           <button class="stat-info-btn" data-stat-term="kStudies" aria-label="Statistical explanation for study count k">ⓘ</button>
         </div>
-        <div class="kpi-value" id="kpi-study-count">70 RCTs</div>
+        <div class="kpi-value" id="kpi-study-count">69 RCTs</div>
         <div class="kpi-sub" id="kpi-patient-sub">See Study Explorer for current patient totals</div>
         <span class="kpi-badge badge-indigo" data-i18n="kpi.includedRctsBadge">See Study Explorer for modality breakdown</span>
       </div>
@@ -494,7 +508,7 @@
       <div class="dashboard-grid-2">
         <div class="dashboard-card">
           <div class="card-header">
-            <h2>Surgical Specialties Distribution (70 Trials)</h2>
+            <h2>Surgical Specialties Distribution (69 trials / 70 reports)</h2>
           </div>
           <div id="overview-surgery-bars"></div>
         </div>
@@ -552,14 +566,14 @@
               <span style="font-size: 0.72rem; color: var(--text-muted);">224 sought, 14 not retrieved; 141 excluded</span>
             </div>
             <div class="prisma-summary-card success">
-              <span class="search-meta-label">Included in Synthesis</span>
-              <span class="prisma-card-count">70</span>
-              <span style="font-size: 0.72rem; color: #34d399;">patient totals under reconciliation</span>
+              <span class="search-meta-label">Studies Included</span>
+              <span class="prisma-card-count">69</span>
+              <span style="font-size: 0.72rem; color: #34d399;">from 70 reports &mdash; Yeh 2010 and Yeh 2011 are two reports of one trial</span>
             </div>
           </div>
 
           <div style="background: rgba(16, 185, 129, 0.08); border-left: 3px solid #10b981; padding: 0.85rem 1rem; border-radius: var(--radius-sm); font-size: 0.78rem; color: var(--text-secondary); line-height: 1.6; margin-top: 1rem;">
-            <strong style="color: #6ee7b7;">Updated 2026-09-07:</strong> This flow diagram now reflects the review team's updated PRISMA 2020 record (source: "PRISMA - Protocol characteristics associated with clinic....docx"), which folds the 7 post-lock source-direct additions (Wu 2016, Gao 2022, Liu 2015, Oztas 2019, Song 2020, Szmit 2021, Zhang 2018) into the eligibility and inclusion counts below. Full-text eligibility screening was revisited: 224 reports were sought, 14 could not be retrieved, 210 were assessed, and 141 were excluded (revised reason breakdown below) &mdash; 210 &minus; 141 = 69 records from the database-search route, plus 1 identified via citation searching, gives the 70 studies now included. RoB 2 is complete for all 70 studies in the source workbook (verified 2026-09-07: <code>Corrected_RoB2</code> has a full 5-domain + overall judgement for every row in <code>Study_Master</code>, no gaps) and is reflected in the Study Explorer and RoB 2 tabs. Only Szmit 2021 contributes to a locked pooled result (the strict primary 24-h opioid analysis and the Target D nausea 0&ndash;24h stratum); the other 6 are not yet pooled into any target pending a dedicated eligibility reconciliation pass. The modality split, comparator split, and total randomized-patient count shown in the "Included" card below predate this update, were found to already be inconsistent with the Study Explorer's own per-study data even for the original 63 studies, and remain under reconciliation rather than being extrapolated further.
+            <strong style="color: #6ee7b7;">Updated 2026-09-07:</strong> This flow diagram now reflects the review team's updated PRISMA 2020 record (source: "PRISMA - Protocol characteristics associated with clinic....docx"), which folds the 7 post-lock source-direct additions (Wu 2016, Gao 2022, Liu 2015, Oztas 2019, Song 2020, Szmit 2021, Zhang 2018) into the eligibility and inclusion counts below. Full-text eligibility screening was revisited: 224 reports were sought, 14 could not be retrieved, 210 were assessed, and 141 were excluded (revised reason breakdown below) &mdash; 210 &minus; 141 = 69 records from the database-search route, plus 1 identified via citation searching, gives the 70 reports now included. Those 70 reports describe <strong>69 studies</strong>: Yeh 2010 and Yeh 2011 are two reports of one lumbar spinal surgery trial (see the 2026-09-11 unit-of-analysis amendment). PRISMA 2020 keeps reports and studies as separate counts and this review reports both. RoB 2 is complete for all 70 reports in the source workbook (verified 2026-09-07: <code>Corrected_RoB2</code> has a full 5-domain + overall judgement for every row in <code>Study_Master</code>, no gaps) and is reflected in the Study Explorer and RoB 2 tabs. Only Szmit 2021 contributes to a locked pooled result (the strict primary 24-h opioid analysis and the Target D nausea 0&ndash;24h stratum); the other 6 are not yet pooled into any target pending a dedicated eligibility reconciliation pass. <strong style="color: #6ee7b7;">Superseded 2026-09-12:</strong> this paragraph previously closed by stating that the modality split, comparator split and total randomized-patient count in the &ldquo;Included&rdquo; card remained <em>under reconciliation</em>. They no longer do. All three are computed live from the register the Study Explorer renders from, which is itself regenerated from the locked v34 master and checked against it on every build, so the card cannot disagree with the per-study data. Two things changed with that reconciliation: modality and comparator are counted over the 69 <em>trials</em> rather than the 70 <em>reports</em> (48 TEAS / 21 EA, 57 sham / 12 usual care), and the participant figure is the number <em>analysed</em>, summed once per trial (10,618), not the 70-report sum of 10,678. What is <em>not</em> available is a review-wide <em>randomized</em> participant total: only 17 of the 69 trials record a randomized denominator in either the register or their source PDF, and the two channels measure different quantities, so no such total is published.
           </div>
 
           <!-- PRISMA Flow Diagram Structure -->
@@ -717,20 +731,20 @@
                 <div class="prisma-card included">
                   <div class="prisma-card-title">
                     <span>Studies Included in Systematic Review &amp; Meta-Analysis</span>
-                    <span class="prisma-card-count">70 RCTs</span>
+                    <span class="prisma-card-count">69 RCTs</span>
                   </div>
                   <div class="prisma-card-body">
-                    <strong>70 randomized controlled trials</strong> per the review team's updated 2026-09-07 PRISMA record (69 via the database-search route above, plus 1 identified via citation searching). Full study-level detail, RoB 2, and extracted outcomes for all 70 are in the Study Explorer.
+                    <strong>70 included reports describing 69 randomized controlled trials</strong> per the review team's updated 2026-09-07 PRISMA record, as amended on 2026-09-11 (the 70 reports arrive as 69 via the database-search route above, plus 1 identified via citation searching; Yeh 2010 and Yeh 2011 are two reports of one lumbar-spine trial). Full report-level detail, RoB 2, and extracted outcomes for all 70 reports are in the Study Explorer.
                     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.85rem; margin-top: 0.85rem;">
                       <div style="background: rgba(0,0,0,0.2); padding: 0.75rem; border-radius: 6px;">
                         <strong style="color: #fbbf24;">Audit &amp; Consensus Status:</strong><br>
-                        • RoB 2 complete for all 70 studies (verified 2026-09-07)<br>
+                        • 70 reports describing 69 studies (1 linked cohort)<br>• RoB 2 complete for all 70 reports (verified 2026-09-07)<br>
                         • 19/19 P1 issues dispositioned (0 blockers)
                       </div>
                       <div style="background: rgba(16, 185, 129, 0.08); padding: 0.75rem; border-radius: 6px; border: 1px solid rgba(16, 185, 129, 0.25);" id="prisma-population-reconciliation">
-                        <strong style="color: #6ee7b7;">Modality, comparator and patient totals (reconciled):</strong><br>
-                        <span id="prisma-population-summary">70 studies &bull; 10,678 total randomized patients &bull; 48 TEAS / 22 EA &bull; 58 sham-controlled / 12 usual-care-controlled.</span>
-                        <div style="font-size: 0.7rem; color: var(--text-muted); margin-top: 0.35rem;">Computed live from the Study Explorer's own per-study modality, comparator and population fields (the same 70-study dataset everywhere else on this dashboard), not restated from the PRISMA docx, which does not itself give patient totals.</div>
+                        <strong style="color: #6ee7b7;">Modality, comparator and participant totals (reconciled 2026-09-12):</strong><br>
+                        <span id="prisma-population-summary">69 randomized trials from 70 included reports &bull; 10,618 participants analysed across the 69 trials, counting each trial once &bull; 48 TEAS / 21 EA &bull; 57 sham-controlled / 12 usual-care-controlled. A review-wide randomized participant total is not reported: most trials state only their analysed denominators (see Population Characteristics in the Study Explorer).</span>
+                        <div style="font-size: 0.7rem; color: var(--text-muted); margin-top: 0.35rem;">Computed live from the register the Study Explorer renders from (<code>dashboard/data.js</code>, regenerated from the locked v34 master and checked against it on every build), not restated from the PRISMA docx, which does not itself give participant totals. Modality and comparator are <em>trial</em> properties and are counted over the 69 trials, so they differ by one from the 70-report tallies (48 TEAS / 22 EA, 58 sham / 12 usual care) quoted where the unit is reports. Participants are summed once per trial, so the linked Yeh cohort is no longer double-counted; the earlier figure of 10,678 was the 70-report sum.</div>
                       </div>
                     </div>
                   </div>
@@ -836,6 +850,7 @@
     <!-- TAB 2: STUDY EXPLORER -->
     <div id="tab-explorer" class="tab-content">
       <div class="dashboard-card" id="explorer-surgery-summary" style="padding:1.25rem;margin-bottom:1rem;"></div>
+      <div class="dashboard-card" id="explorer-population-summary" style="padding:1.25rem;margin-bottom:1rem;"></div>
       <div class="dashboard-card">
         <div class="card-header">
           <h2>Study Characteristics & STRICTA Parameters Explorer</h2>
@@ -863,16 +878,19 @@
           </div>
         </div>
         <div style="overflow-x: auto;">
-          <table class="forest-table">
+          <table class="forest-table explorer-table">
             <thead>
               <tr>
                 <th>Study Key</th>
+                <th>Year</th>
+                <th>Country</th>
+                <th>Surgical Category <button class="stat-info-btn" data-stat-term="surgicalCategory" aria-label="Explanation for Surgical Specialty">ⓘ</button></th>
                 <th>Modality <button class="stat-info-btn" data-stat-term="modality" aria-label="Explanation for Modality">ⓘ</button></th>
                 <th>Comparator <button class="stat-info-btn" data-stat-term="comparator" aria-label="Explanation for Comparator">ⓘ</button></th>
-                <th>Surgical Category <button class="stat-info-btn" data-stat-term="surgicalCategory" aria-label="Explanation for Surgical Specialty">ⓘ</button></th>
-                <th>Acupoint Formula <button class="stat-info-btn" data-stat-term="acupoints" aria-label="Explanation for Acupoint Selection">ⓘ</button></th>
-                <th>Frequency <button class="stat-info-btn" data-stat-term="frequency" aria-label="Explanation for Stimulation Frequency">ⓘ</button></th>
+                <th>Randomized N<div style="font-weight: 400; font-size: 0.68rem; color: var(--text-muted); text-transform: none; letter-spacing: 0;">NR where the trial does not report one</div></th>
                 <th>Analysed N <button class="stat-info-btn" data-stat-term="nParticipants" aria-label="Explanation for Sample Size">ⓘ</button><div style="font-weight: 400; font-size: 0.68rem; color: var(--text-muted); text-transform: none; letter-spacing: 0;">denominators used in synthesis</div></th>
+                <th>Age, mean &plusmn; SD<div style="font-weight: 400; font-size: 0.68rem; color: var(--text-muted); text-transform: none; letter-spacing: 0;">intervention / comparator</div></th>
+                <th>Female<div style="font-weight: 400; font-size: 0.68rem; color: var(--text-muted); text-transform: none; letter-spacing: 0;">intervention / comparator</div></th>
                 <th>Result-Specific RoB 2 <button class="stat-info-btn" data-stat-term="rob2" aria-label="Explanation for RoB 2">ⓘ</button><div id="explorer-rob-context" style="font-weight: 400; font-size: 0.68rem; color: var(--text-muted); text-transform: none; letter-spacing: 0;"></div></th>
                 <th>Actions</th>
               </tr>
@@ -1029,6 +1047,27 @@
               </span>
             </div>
             <span class="badge badge-indigo" style="white-space: nowrap;">Exploratory browser calculation</span>
+          </div>
+        </div>
+
+        <!-- Data-integrity quarantine notice (incident 2026-09-10) -->
+        <div id="meta-quarantine-notice" hidden></div>
+
+        <!-- Estimator convention. The browser plot and the saved Stata analyses
+             above are different analyses (different k), and since 2026-09-11 they
+             also use different risk-ratio estimators. Saying so is the honest
+             alternative to letting a reader assume they should agree. -->
+        <div class="estimator-note" role="note">
+          <span class="estimator-note-label">Estimator</span>
+          <div>
+            <p>Binary outcomes in this interactive plot apply the <strong>Haldane&ndash;Anscombe
+            continuity correction</strong> (+0.5 to every cell) to all contrasts, not only
+            zero-cell tables &mdash; review team decision, 2026-09-11.</p>
+            <p class="estimator-note-sub">The source-verified Stata analyses above still use the
+            uncorrected estimator: their inputs carry precomputed log risk ratios and re-running
+            them requires Stata. Those are different analyses from this plot in any case (different
+            contributing trials), so their numbers are not expected to match. Continuous outcomes
+            are unaffected.</p>
           </div>
         </div>
 
@@ -1270,7 +1309,7 @@
 
       <!-- ============================================================== -->
       <details class="section-details" data-section="Study contribution">
-        <summary class="section-summary">How the included trials contribute — why 70 trials give 7 in the primary analysis</summary>
+        <summary class="section-summary">How the included trials contribute — why 69 trials give 7 in the primary analysis</summary>
       <!-- v33 STUDY CONTRIBUTION MAP + SECONDARY RESULTS                 -->
       <!-- Rendered at runtime by renderV33() from window.V33_DATA,       -->
       <!-- generated by scripts/build_v33_dashboard_data.py. No count or  -->
@@ -3799,9 +3838,12 @@
   <script src="author_inquiries.js"></script>
   <script src="search_strategies.js"></script>
   <script src="meta_outcomes.js"></script>
+  <script src="outcome_quarantine.js"></script>
   <script src="primary_browser.js"></script>
   <script src="browser_targets.js"></script>
   <script src="study_characteristics.js"></script>
+  <script src="pdf_extracted.js"></script>
+  <script src="cohort_overlap.js"></script>
   <script src="data.js?v=0c009811ebef"></script>
   <script src="translations.js?v=0c009811ebef"></script>
   <script src="ui_translations.js"></script>
