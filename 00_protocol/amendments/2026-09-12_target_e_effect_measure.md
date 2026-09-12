@@ -83,6 +83,58 @@ the evidence the existing rating rests on.
   fails the build if a superseded Target E figure is ever presented without being
   marked as past.
 
+## The model this measure applies to pools across protocol strata
+
+Added 2026-09-12, after this amendment was first written. The amendment above
+discusses scale and heterogeneity and says nothing about a more serious property
+of the same model, which `scripts/check_stratum_purity.py` has been flagging in
+the dashboard independently:
+
+**Target E pools across four protocol strata.** Its seven contributing trials span
+
+- TEAS vs Sham
+- TEAS vs Usual care
+- EA vs Sham
+- EA vs Usual care
+
+and the locked protocol keeps both distinctions separate: "TEAS and EA analyses
+are stratified by modality", and sham/placebo and usual-care comparators are not
+combined without stratification. `06_flatus.do` applies no modality or comparator
+condition at all, which is how this arose.
+
+A reader weighing the post hoc change of reported measure needs this, because the
+change does **not** address it. Moving from the mean difference to the
+standardised mean difference changes the scale on which a non-protocol-compliant
+pool is expressed; it does not make the pool protocol-compliant. The dashboard
+marks the analysis "Pools across protocol strata — under methodological review.
+Do not quote it as a protocol-compliant pooled result", and that warning stands
+regardless of which measure is reported.
+
+This is recorded, not resolved. Splitting Target E by modality and comparator
+would leave strata of one or two trials each and is a review-team decision about
+the analysis, which this amendment does not make.
+
+### A fifth stratum label is an unfilled placeholder, not a fifth stratum
+
+The screen currently reports a fifth label, `MODALITY_REVIEW_REQUIRED vs Sham`,
+for Zhang 2018. That is not a competing modality claim: all ten of Zhang 2018's
+rows in `TEAS EA Verification/v34_reconciliation/data/v34_outcome_data.csv` carry
+the placeholder unfilled, while the study register (`dashboard/data.js`) records
+**TEAS** and the source publication confirms it:
+
+> "Transcutaneous electrical acustimulation (TEA) is a newly developed method of
+> EA by replacing needles with surface electrodes."
+
+> "A pair of electrodes were placed at bilateral ST36 and another pair of
+> electrodes were placed at bilateral PC6"
+
+The paper is titled "Needleless Transcutaneous Electrical Acustimulation" and
+states its intervention is needleless throughout. So the evidence resolves the
+placeholder to TEAS. Filling it in the outcome register would take the screen from
+five labels to four strata — it would **not** make Target E protocol-compliant,
+and because modality feeds stratification it is an analysis input, so it is left
+for the review team rather than edited here.
+
 ## This amendment is not prospective, and that is a deviation
 
 `00_protocol/protocol_scope_locked.md` requires that "any later change must be

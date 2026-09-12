@@ -2171,10 +2171,46 @@ def t_target_e_post_hoc_change_is_recorded_as_an_amendment():
         ("reduced heterogeneity, not resolved",
          "the amendment does not state that Zhang 2018's heterogeneity is reduced rather than "
          "resolved"),
+        # Added 2026-09-12 after the amendment was found materially incomplete: it
+        # discussed scale and heterogeneity while saying nothing about the model
+        # pooling across four protocol strata, which check_stratum_purity.py had
+        # been flagging all along. A reader weighing a post hoc measure change
+        # needs to know the pool it applies to is already non-compliant.
+        ("pools across four protocol strata",
+         "the amendment does not disclose that Target E pools across protocol strata, which is a "
+         "more serious property of the same model than the scale question it does discuss"),
+        ("does not make the pool protocol-compliant",
+         "the amendment does not say that changing the reported measure leaves the stratum "
+         "mixing untouched"),
         ("Very Low", "the amendment does not state the effect on the GRADE rating"),
     ):
         if need not in t:
             probs.append(what)
+    # The fifth stratum label is an unfilled placeholder, not a competing claim, and
+    # the source settles it. Both facts must stay recorded: calling it a register
+    # "disagreement" overstates the uncertainty, and dropping the evidence would
+    # leave a reader thinking the modality is genuinely unknown.
+    # Scope to the STRATUM_LABEL entry itself. "ST36" occurs all over app.js as an
+    # ordinary acupoint name, so a file-wide substring test passed even after the
+    # evidence was stripped out of the label -- observed, and fixed here.
+    lbl = re.search(r"MODALITY_REVIEW_REQUIRED:\s*((?:'[^']*'\s*\+?\s*)+)", APP)
+    if "MODALITY_REVIEW_REQUIRED" in APP and not lbl:
+        probs.append("the MODALITY_REVIEW_REQUIRED placeholder is rendered with no readable "
+                     "label, so a reader sees a raw token")
+    elif lbl:
+        text = lbl.group(1)
+        for need, what in (
+            ("unfilled", "the placeholder's label does not say the modality is unfilled"),
+            ("ST36", "the placeholder's label does not carry the Zhang 2018 source evidence "
+                     "(surface electrodes at ST36 and PC6)"),
+            ("TEAS", "the placeholder's label does not say the study register records TEAS"),
+        ):
+            if need not in text:
+                probs.append(what)
+        if "disagree" in text:
+            probs.append("the placeholder's label still calls it a disagreement between "
+                         "registers; one register holds an evidenced value, the other a blank")
+
     # Its figures must be the locked ones.
     for aid, label in (("TE_FLATUS_SMD_REML_KH", "standardised"), ("TE_FLATUS_MD_REML_KH", "MD")):
         want = f"{abs(float(BY_ID[aid]['estimate'])):.2f}"

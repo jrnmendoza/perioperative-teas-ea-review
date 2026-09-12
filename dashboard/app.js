@@ -5444,14 +5444,23 @@ function stratumPurityFinding(analysisId) {
 
 // The screen reports strata as "<modality> vs <comparator>" using the V34 outcome
 // register's own modality token, and one of those tokens is a placeholder rather
-// than a modality: MODALITY_REVIEW_REQUIRED. Zhang 2018 carries it on all ten of
-// its rows there while the study register (data.js) records TEAS, and that
-// disagreement only became visible in a pooled stratum when the trial was
-// admitted to Targets C and E on 2026-09-12. Surfaced, not resolved: the two
-// registers disagree and choosing between them is a review-team decision.
+// than a modality: MODALITY_REVIEW_REQUIRED, carried unfilled on all ten of
+// Zhang 2018's rows there.
+//
+// Corrected 2026-09-12: an earlier version of this note called it a disagreement
+// between two registers. It is not. The study register (data.js) records TEAS and
+// the source publication settles it — "Needleless Transcutaneous Electrical
+// Acustimulation", whose methods state that TEA "is a newly developed method of
+// EA by replacing needles with surface electrodes" with electrodes at ST36 and
+// PC6. One register holds an evidenced value, the other holds a blank. Filling
+// the blank would take this finding from five labels to four strata and would NOT
+// make Target E protocol-compliant, since it pools TEAS with EA and sham with
+// usual care either way. Modality feeds stratification, so the register edit is
+// the review team's, not this renderer's.
 const STRATUM_LABEL = {
-  MODALITY_REVIEW_REQUIRED: 'modality not yet classified in the v34 outcome register '
-    + '(Zhang 2018 \u2014 recorded as TEAS in the study register; the two disagree)'
+  MODALITY_REVIEW_REQUIRED: 'modality left unfilled in the v34 outcome register '
+    + '(Zhang 2018 \u2014 the study register records TEAS and the source confirms it: '
+    + '\u201cneedleless\u201d acustimulation via surface electrodes at ST36 and PC6)'
 };
 
 function readableStratum(s) {
