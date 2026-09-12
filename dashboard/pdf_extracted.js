@@ -2,6 +2,12 @@
 // Every value carries the source PDF, page and verbatim quote it came from.
 window.PDF_EXTRACTED = {
   "#105119 - Zhou 2025": {
+    "randomised_n": {
+      "value": 100,
+      "page": 5,
+      "quote": "Consequently, 100 patients were successfully enrolled and subsequently randomized into two distinct groups: the TEAS group (n=50) and the Sham group (n=50).",
+      "hits": 1
+    },
     "anaesthesia": {
       "value": "General anaesthesia",
       "page": 2,
@@ -432,6 +438,14 @@ window.PDF_EXTRACTED = {
     "source_pdf": "covidence_131_verified.pdf"
   },
   "Jiang 2026": {
+    "randomised_n": {
+      "value": 614,
+      "page": 3,
+      "quote": "Ultimately, 614 eligible patients were allocated to the TEAS (n = 308) or sham-TEAS (n = 306) group.",
+      "hits": 1,
+      "randomisation_quote": "Patients were randomized into the TEAS or sham-TEAS groups at a 1:1 ratio using block randomization.",
+      "randomisation_page": 2
+    },
     "anaesthesia": {
       "value": "General anaesthesia",
       "page": 2,
@@ -458,7 +472,8 @@ window.PDF_EXTRACTED = {
       "value": 174,
       "page": 3,
       "quote": "The 174 patients were randomized to receive PCIA + 2-Hz EA (n=58), PCIA + 20/ 100−Hz EA (n=58), or PCIA + sham EA (n=58) treatment ( Figure 1 ).",
-      "hits": 1
+      "hits": 1,
+      "adjudication": "Adjudicated 2026-09-12 by re-reading the source. The paper says \"174 eligible patients were enrolled ... and 29 were not randomized\", which reads as though the randomised total should be 174 - 29 = 145. It cannot be: the three arms are stated as n = 58 each and sum to exactly 174. The paper's own figures reconcile the other way -- 453 planned, 250 excluded leaves 203 eligible, and 203 - 29 not randomised gives 174 randomised. So 174 is the randomised number and \"enrolled\" is the loose word in that sentence; the enrolled figure its arithmetic implies is 203. No value changed as a result of this check."
     },
     "country": {
       "value": "China",
@@ -891,6 +906,12 @@ window.PDF_EXTRACTED = {
     "source_pdf": "getfile.php-4.pdf"
   },
   "Seevaunnamtum 2016": {
+    "randomised_n": {
+      "value": 64,
+      "page": 5,
+      "quote": "Praveena Seevaunnamtum S et al. Randomisation n = 64 Allocated to Receive EA (n = 32) Allocated to Control (n =",
+      "hits": 1
+    },
     "anaesthesia": {
       "value": "General anaesthesia",
       "page": 1,
@@ -1154,6 +1175,13 @@ window.PDF_EXTRACTED = {
     "source_pdf": "103940.pdf"
   },
   "Xie 2014": {
+    "randomised_n_derived": {
+      "value": 60,
+      "page": 2,
+      "quote": "patients were randomly divided into 3 groups by com- puter generated randomization number ( n=20 for each group): group A (control) receiving a general anesthesia only; group B (sham) given EA needles at PC4 (Ximen) and PC6 (Neiguan) but no stimulation; group C (EAS) electrically given EAS of the ip",
+      "derivation": "3 groups x 20 each",
+      "hits": 1
+    },
     "arms": {
       "value": 3,
       "page": 2,
@@ -1411,11 +1439,10 @@ window.PDF_EXTRACTED = {
     "source_pdf": "Needleless Transcutaneous Electrical Acustimulation_ A Pilot Study Evaluating Improvement in Post-Operative Recovery-2.pdf"
   },
   "Zhang 2023": {
-    "randomised_n_derived": {
+    "randomised_n": {
       "value": 1948,
-      "page": 5,
-      "quote": "randomized to the TEAS ( n = 975) and sham ( n = 973) groups.",
-      "derivation": "975 + 973",
+      "page": 1,
+      "quote": "Results A total of 1,948 participants were recruited and randomized to TEAS ( n = 975) or sham ( n = 973) between August 2018 and June 2020.",
       "hits": 1
     },
     "country": {

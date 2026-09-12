@@ -85,8 +85,11 @@ def sentence_around(text: str, start: int, end: int) -> str:
 # Anchored on the randomisation verb, then looking BACK a short distance for the
 # nearest participant count. Scanning forwards instead picks up the wrong number
 # in "Of 140 patients screened, 71 patients were randomly assigned" (Szmit 2021),
-# and "enrolled" must not be treated as randomised -- Jin 2023 enrolled 174 and
-# says 29 of them were never randomised. Thousands separators are required or
+# and "enrolled" must not be treated as randomised. (The Jin 2023 example this
+# comment used to cite was wrong, and is corrected in RANDOMISED_N_NOTES below:
+# 174 IS that trial's randomised number. The guard is still right in general --
+# Szmit 2021's "Of 140 patients screened, 71 patients were randomly assigned" is
+# the case it exists for.) Thousands separators are required or
 # Gao 2022's 1,655 is silently read as 655.
 # Added 2026-09-12: the count is very often spelled out, and requiring digits
 # was losing clean totals that the paper states in its first line of Methods --
@@ -157,7 +160,8 @@ RE_GROUPS_OF = re.compile(
     r"\b(?:in)?to\s+(?:one\s+of\s+)?(two|three|four|five|2|3|4|5)\s+"
     r"(?:equal\s+)?(?:groups?|treatment\s+regimens?|regimens?|arms?)\b"
     r"[^.]{0,60}?\bof\s+(\d{1,4})\s+(?:each|patients|participants|cases)", re.I)
-RE_N_EACH = re.compile(r"\(\s*n\s*[=\u00bc]\s*(\d{1,4})\s*(?:each|per\s+group)\s*\)", re.I)
+RE_N_EACH = re.compile(
+    r"\(\s*n\s*[=\u00bc]\s*(\d{1,4})\s*(?:for\s+)?(?:each(?:\s+group)?|per\s+group)\s*\)", re.I)
 RE_N_PER_GROUP = re.compile(r"\bwith\s+(\d{1,4})\s+(?:patients|participants|cases)\s+per\s+group\b", re.I)
 RE_N_ARM = re.compile(r"\(\s*n\s*[=\u00bc]\s*(\d{1,4})\s*\)", re.I)
 GROUP_WORDS = {"two": 2, "three": 3, "four": 4, "five": 5,
@@ -171,6 +175,170 @@ GROUP_WORDS = {"two": 2, "three": 3, "four": 4, "five": 5,
 RE_SUBRANDOMISED = re.compile(
     r"\b(?:from|in|of)\s+each\s+group\b|\bsub\s?groups?\b|\bfurther\s+randomi[sz]|"
     r"\bwithin\s+each\s+group\b|\beach\s+group\s+(?:was|were)\s+(?:then\s+)?randomi[sz]", re.I)
+
+# ── Two further ways a paper states its randomised total, added 2026-09-12 ──
+#
+# A. A CONSORT FLOW-DIAGRAM LABEL. The count sits in a box as a label plus a
+#    number, never in a sentence, so the sentence-based pass cannot see it:
+#    Liang 2021's "Randomized (n = 75)", Seevaunnamtum 2016's "Randomisation
+#    n = 64". The trap is the box directly above it -- Liang 2021 also prints
+#    "Assessed for eligibility (n = 80)", and 80 is not the randomised number.
+#    So the label must be a randomisation label and must not be preceded by an
+#    eligibility/screening/enrolment word.
+RE_CONSORT_LABEL = re.compile(
+    r"\brandomi[sz](?:ed|ation|sed)\b[^\d\n]{0,18}?\(?\s*n\s*[=:\u00bc]\s*(\d{2,4})", re.I)
+
+# B. A TOTAL THE PAPER CORROBORATES WITH ITS OWN ARMS. Jiang 2026 writes "614
+#    eligible patients were allocated to the TEAS (n = 308) or sham-TEAS
+#    (n = 306) group" and Luo 2026 "277 patients who underwent randomization
+#    ... (TEAS group, n = 138; Sham-TEAS group, n = 139)". In both the stated
+#    total equals the sum of the stated arms, which is the strongest evidence
+#    available short of a flow diagram: the paper checks itself. Nothing is
+#    inferred -- the total is accepted only because the arms reproduce it
+#    exactly, so a sentence where they do not is rejected rather than summed.
+RE_TOTAL_CANDIDATE = re.compile(
+    r"(\d[\d,]{1,5})\s+(?:eligible\s+|adult\s+|consecutive\s+|female\s+|male\s+)?"
+    r"(?:patients|participants|women|men|subjects|cases)\b", re.I)
+RE_RANDOMISE_ANY = re.compile(
+    r"randomi[sz]ed|randomi[sz]ation|randomly\s+(?:assigned|allocated|divided|distributed)"
+    r"|were\s+allocated\s+to", re.I)
+
+
+def consort_label_randomised(pages):
+    """Rule A: a randomisation label in a flow diagram.
+
+    TIGHTENED 2026-09-12 after its first run produced three wrong values and one
+    unprovable one. Taking the first n= after a randomisation word is right in a
+    flow-diagram box and wrong in a prose sentence, where that number is an ARM:
+    Hou 2023's "randomized into either TEAS (n = 37) or control (n = 37)" gave 37
+    for a trial of 74, Zhang 2018's "randomized to TEA (n = 21) and sham-TEA
+    (n = 21)" gave 21 for 42, and Xie 2014's "(n=20 for each group)" across three
+    groups gave 20 for 60. Liu 2026 (ESD) produced a 120 that its own quote did
+    not contain at all.
+
+    So a candidate is rejected unless it behaves like a total: a total is never
+    equal to one of the arms printed beside it, and is never smaller than their
+    sum. Where arms are visible, they arbitrate.
+    """
+    cands = {}
+    for pno, text in body_pages(pages):
+        t = re.sub(r"\s+", " ", norm(text))
+        for m in RE_CONSORT_LABEL.finditer(t):
+            before = t[max(0, m.start() - 46):m.start()]
+            if RE_NOT_RANDOMISED.search(before) or RE_SUBRANDOMISED.search(before):
+                continue
+            n = int(m.group(1))
+            if not (10 <= n <= 5000):
+                continue
+            ctx = t[max(0, m.start() - 70):m.end() + 170]
+            # A per-group qualifier makes the number an arm by definition:
+            # Xie 2014's "3 groups ... ( n=20 for each group)" is 20 PER ARM.
+            if re.search(r"\b(?:for\s+)?each\s+group|per\s+group|each\s*\)", ctx, re.I):
+                continue
+            # Count EVERY parenthesised n in the context, including ones equal to
+            # the candidate. Filtering those out was the bug that let Hou 2023
+            # (37, 37) and Zhang 2018 (21, 21) through: when a trial's two arms
+            # are the same size, the sibling that proves the number is an arm is
+            # exactly the one a "different from n" filter discards.
+            siblings = [int(x) for x in RE_N_ARM.findall(ctx) if int(x) > 0]
+            if len(siblings) >= 2 and n in siblings and sum(siblings) != n:
+                # The candidate is one of several sibling counts, so it is an arm,
+                # not their total.
+                continue
+            others = [x for x in siblings if x != n]
+            if len(others) >= 2 and n < sum(sorted(others)[-2:]):
+                continue
+            # The number has to be visible in the evidence we are about to store.
+            quote = t[max(0, m.start() - 60):m.end() + 60].strip()
+            if str(n) not in quote.replace(",", ""):
+                continue
+            cands.setdefault(n, []).append((pno, quote))
+    return decide(cands, "randomised N (flow-diagram label)")
+
+
+# A sentence that establishes the allocation was RANDOM, for papers whose
+# total-bearing sentence uses CONSORT's "allocated to" instead. Jiang 2026 states
+# "Patients were randomized into the TEAS or sham-TEAS groups at a 1:1 ratio using
+# block randomization" on one page and prints its total on the next; the total is
+# only a RANDOMISED total because of the first sentence, so both are stored and a
+# value that cannot show either is refused.
+RE_RANDOM_ALLOCATION_PROOF = re.compile(
+    r"[^.]{0,200}\b(?:were\s+randomi[sz]ed|randomly\s+(?:assigned|allocated)|"
+    r"randomi[sz]ation\s+sequence|block\s+randomi[sz]ation)\b[^.]{0,160}\.", re.I)
+
+
+def randomisation_proof(pages):
+    """The paper's own statement that allocation was random, if it makes one."""
+    for pno, text in body_pages(pages):
+        t = norm(text)
+        for m in RE_RANDOM_ALLOCATION_PROOF.finditer(t):
+            q = re.sub(r"\s+", " ", m.group()).strip()
+            if CITATION_NOISE.search(q) or len(q) < 30:
+                continue
+            return {"page": pno, "quote": q[:300]}
+    return None
+
+
+def self_corroborated_randomised(pages):
+    """Rule B: a stated total that equals the sum of the arms stated beside it."""
+    cands = {}
+    for pno, text in body_pages(pages):
+        t = norm(text)
+        for m in RE_RANDOMISE_ANY.finditer(t):
+            q = sentence_around(t, m.start(), m.end())
+            if CITATION_NOISE.search(q) or RE_SUBRANDOMISED.search(q):
+                continue
+            # A CONSORT flow diagram has no sentence punctuation, so
+            # sentence_around() returns the whole blob and the "arms" it yields can
+            # be from any stage of the diagram. Liu 2026 (ESD) summed its two
+            # "Analyzed (n=58)" / "Analyzed (n=62)" boxes to 120 and offered it as a
+            # randomised total -- the analysed denominator standing in for a
+            # randomised one, which is the single substitution this field exists to
+            # prevent. Two guards: refuse an undelimited blob, and refuse any
+            # context carrying analysis-stage or attrition labels.
+            if len(q) > 400:
+                continue
+            if re.search(r"analy[sz]ed|excluded\s+from\s+analysis|lost\s+to\s+follow", q, re.I):
+                continue
+            arms = [int(x) for x in RE_N_ARM.findall(q)]
+            if len(arms) < 2:
+                continue
+            total = sum(arms)
+            if not (10 <= total <= 5000):
+                continue
+            # The paper must PRINT that same total in the same sentence.
+            printed = {int(x.replace(",", "")) for x, in
+                       ((g,) for g in RE_TOTAL_CANDIDATE.findall(q))}
+            if total not in printed:
+                continue
+            cands.setdefault(total, []).append((pno, re.sub(r"\s+", " ", q).strip()))
+    got = decide(cands, "randomised N (total corroborated by its own arms)")
+    if got and "value" in got and not re.search(r"randomi[sz]", got["quote"], re.I):
+        # The total-bearing sentence says "allocated" rather than "randomised", so
+        # it alone does not prove the number is a RANDOMISED total. Attach the
+        # paper's own randomisation statement, or refuse the value.
+        proof = randomisation_proof(pages)
+        if not proof:
+            return None
+        got["randomisation_quote"] = proof["quote"]
+        got["randomisation_page"] = proof["page"]
+    return got
+
+
+# Accepted values whose source sentence looks wrong until the paper's own
+# arithmetic is checked. The note travels with the value so a reader who spots the
+# same oddity finds it already adjudicated instead of re-opening it.
+RANDOMISED_N_NOTES = {
+    "Jin 2023":
+        "Adjudicated 2026-09-12 by re-reading the source. The paper says \"174 eligible "
+        "patients were enrolled ... and 29 were not randomized\", which reads as though the "
+        "randomised total should be 174 - 29 = 145. It cannot be: the three arms are stated "
+        "as n = 58 each and sum to exactly 174. The paper's own figures reconcile the other "
+        "way -- 453 planned, 250 excluded leaves 203 eligible, and 203 - 29 not randomised "
+        "gives 174 randomised. So 174 is the randomised number and \"enrolled\" is the loose "
+        "word in that sentence; the enrolled figure its arithmetic implies is 203. No value "
+        "changed as a result of this check.",
+}
 
 # Reports whose whole-trial randomised N is under an adjudicated, UNRESOLVABLE
 # dispute. Quarantined here rather than extracted, because the papers themselves
@@ -401,6 +569,13 @@ def extract_one(pages):
         return n if 10 <= n <= 5000 else None
 
     r = decide(collect(pages, RE_RANDOMISED, randomised), "randomised N")
+    # A total the paper corroborates with its own arms is at least as good as one
+    # read from a bare sentence, and a flow-diagram label is the paper's own
+    # CONSORT statement. Both count as STATED, not derived.
+    if not (r and "value" in r):
+        r = self_corroborated_randomised(pages) or r
+    if not (r and "value" in r):
+        r = consort_label_randomised(pages) or r
     if r: rec["randomised_n"] = r
 
     # Derived channel. Only runs when no total was stated directly, and only on a
@@ -567,6 +742,8 @@ def build(pdf_map):
         reader = pypdf.PdfReader(path)
         pages = [(i, p.extract_text() or "") for i, p in enumerate(reader.pages, 1)]
         rec = extract_one(pages)
+        if key in RANDOMISED_N_NOTES and isinstance(rec.get("randomised_n"), dict):
+            rec["randomised_n"]["adjudication"] = RANDOMISED_N_NOTES[key]
         if key in RANDOMISED_N_QUARANTINE:
             for f in ("randomised_n", "randomised_n_derived"):
                 rec.pop(f, None)

@@ -3545,7 +3545,23 @@ function openStudyDrawer(id) {
                     + `<code>${pwEsc(r.randomised_n_quarantined.record)}</code></span>`;
                 }
                 const direct = pdfValue(s.key, 'randomised_n');
-                if (direct) return direct;
+                if (direct) {
+                  const rn = r.randomised_n || {};
+                  // Where the sentence printing the total says "allocated" rather
+                  // than "randomised", the paper's own randomisation statement is
+                  // stored with it. Show both: the number is a randomised total
+                  // only because of the second quote.
+                  const proof = rn.randomisation_quote
+                    ? `<br><span class="sd-sub">That sentence says &ldquo;allocated&rdquo;, so the `
+                      + `paper's own randomisation statement is carried with it &mdash; p`
+                      + `${pwEsc(String(rn.randomisation_page))}: &ldquo;`
+                      + `${pwEsc(String(rn.randomisation_quote))}&rdquo;</span>`
+                    : '';
+                  const adj = rn.adjudication
+                    ? `<br><span class="sd-sub">${pwEsc(String(rn.adjudication))}</span>`
+                    : '';
+                  return direct + proof + adj;
+                }
                 if (pdfConflict(s.key, 'randomised_n')) {
                   return `${baselineValue(null)} <span class="sd-sub">source gave competing figures `
                     + `(${pwEsc(pdfConflict(s.key, 'randomised_n'))}); not resolved automatically</span>`;

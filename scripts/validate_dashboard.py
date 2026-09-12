@@ -2040,8 +2040,15 @@ def t_randomised_n_channels_stay_separate_and_evidenced():
                 probs.append(f"{key}: {field} = {f['value']} carries no page/quote; every "
                              f"extracted value must be checkable against its source sentence")
             elif not re.search(r"randomi[sz]|randomly", str(f["quote"]), re.I):
-                probs.append(f"{key}: {field} = {f['value']} was read from a sentence that does "
-                             f"not mention randomisation: {str(f['quote'])[:90]!r}")
+                # CONSORT's own wording is "allocated to", so a total-bearing
+                # sentence can be silent on randomisation. That is allowed ONLY
+                # when the record also carries the paper's separate statement that
+                # allocation was random -- two quotes, both checkable.
+                proof = f.get("randomisation_quote")
+                if not proof or not re.search(r"randomi[sz]|randomly", str(proof), re.I):
+                    probs.append(f"{key}: {field} = {f['value']} was read from a sentence that "
+                                 f"does not mention randomisation and carries no separate "
+                                 f"randomisation statement: {str(f['quote'])[:90]!r}")
         if derived and not derived.get("derivation"):
             probs.append(f"{key}: a derived randomised N ({derived['value']}) does not show its "
                          f"arithmetic, so a reader cannot check the sum")
@@ -2058,10 +2065,26 @@ def t_randomised_n_channels_stay_separate_and_evidenced():
                 probs.append(f"{key}: derived randomised N is {derived['value']} but its stated "
                              f"arithmetic {d!r} comes to {want}")
 
+    # Each of these was produced by a rule that looked reasonable and was wrong.
+    # They are pinned by name because the failure modes are distinct, and because
+    # a loosened pattern would bring them back silently.
     REJECTED = {
         "Wang 2024": "a second-stage randomisation into subgroups, 70 per group",
         "Li 2021": "surgery-type subgroups summed to 306 for a 140/140 trial",
+        "Liu 2026 (ESD)": "its two CONSORT \"Analyzed\" boxes summed to 120 and were offered "
+                          "as a randomised total -- the analysed denominator standing in for a "
+                          "randomised one",
     }
+    # Values a rule got wrong by taking an ARM for a TOTAL. The test is not that
+    # they are absent but that they are RIGHT: each of these trials has a
+    # randomised N, and it must be the total, never one arm of it.
+    ARM_NOT_TOTAL = {"Hou 2023": 74, "Zhang 2018": 42, "Xie 2014": 60, "Sun 2017": 380}
+    for key, want in ARM_NOT_TOTAL.items():
+        rec = PDF.get(key, {})
+        got = (val(rec, "randomised_n") or val(rec, "randomised_n_derived") or {}).get("value")
+        if got != want:
+            probs.append(f"{key}: randomised N is {got}, expected {want} -- a rule that reads the "
+                         f"first n= after a randomisation word takes an ARM here, not the total")
     for key, why in REJECTED.items():
         rec = PDF.get(key, {})
         if val(rec, "randomised_n") or val(rec, "randomised_n_derived"):
@@ -2074,6 +2097,20 @@ def t_randomised_n_channels_stay_separate_and_evidenced():
         elif "randomised_n_quarantined" not in rec:
             probs.append(f"{key} is neither extracted nor marked as disputed, so the reason it "
                          f"is blank has been lost")
+
+    # An accepted value whose source sentence looks wrong must carry its
+    # adjudication, or the next reader re-opens a question already answered.
+    jin = val(PDF.get("Jin 2023", {}), "randomised_n")
+    if not jin:
+        probs.append("Jin 2023 has lost its randomised N (174)")
+    elif jin["value"] != 174:
+        probs.append(f"Jin 2023's randomised N is {jin['value']}; the source re-read on 2026-09-12 "
+                     f"established 174 (three arms of 58, and 453 - 250 - 29 = 174)")
+    elif "adjudication" not in jin:
+        probs.append("Jin 2023's 174 carries no adjudication note. Its own paper says \"174 "
+                     "eligible patients were enrolled ... and 29 were not randomized\", which "
+                     "reads as 145; without the note recording why 174 is right, the question "
+                     "gets re-opened")
 
     # The review-wide total still must not be published, whatever the coverage.
     co = json.loads((DASH / "cohort_overlap.js").read_text(encoding="utf-8")

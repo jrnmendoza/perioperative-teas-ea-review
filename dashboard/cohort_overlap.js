@@ -364,21 +364,25 @@ window.COHORT_OVERLAP = {
       "Lee 2011"
     ],
     "randomised_whole_trial_recorded": [
+      "#105119 - Zhou 2025",
       "Chen 2020",
       "Coura 2011",
       "He 2026 (breast/WJCO)",
+      "Jiang 2026",
       "Jin 2023",
       "Lee 2011",
       "Liu 2021",
       "Lu 2021",
       "Ma 2026",
       "Ntritsou 2014",
+      "Seevaunnamtum 2016",
       "Sim 2002",
       "Wu 2025",
       "Xiong 2021",
       "Yang 2020",
       "Yao 2015",
       "Zhang 2014",
+      "Zhang 2023",
       "Zheng 2025",
       "Zhu 2022"
     ],
@@ -393,15 +397,16 @@ window.COHORT_OVERLAP = {
       "Sun 2017",
       "Szmit 2021",
       "Wu 2022",
+      "Xie 2014",
       "Yang 2024",
-      "Zhang 2018",
-      "Zhang 2023"
+      "Zhang 2018"
     ],
     "randomised_disputed": [
       "Yeh 2010",
       "Yeh 2011"
     ],
     "randomised_any_channel": [
+      "#105119 - Zhou 2025",
       "An 2014",
       "Chen 2020",
       "Coura 2011",
@@ -412,6 +417,7 @@ window.COHORT_OVERLAP = {
       "He 2026 (hepatectomy/JIS)",
       "Hou 2023",
       "Huang 2025",
+      "Jiang 2026",
       "Jin 2023",
       "Lee 2011",
       "Lin 2002",
@@ -421,11 +427,13 @@ window.COHORT_OVERLAP = {
       "Lu 2021",
       "Ma 2026",
       "Ntritsou 2014",
+      "Seevaunnamtum 2016",
       "Sim 2002",
       "Sun 2017",
       "Szmit 2021",
       "Wu 2022",
       "Wu 2025",
+      "Xie 2014",
       "Xiong 2021",
       "Yang 2020",
       "Yang 2024",
@@ -437,6 +445,6 @@ window.COHORT_OVERLAP = {
       "Zhu 2022"
     ],
     "randomised_total_publishable": false,
-    "randomised_total_reason": "Coverage rose from 17 to 33 of the 69 studies on 2026-09-12 and a review-wide randomised total is still not publishable. The register records a randomised denominator for the pairwise contrast in 4 studies; the source-PDF extraction reads a whole-trial randomised N off the page in 17; a further 13 allow a whole-trial total to be derived by adding the group sizes the paper gives in its own randomisation sentence. Those are three different quantities, they are not additive, and even together they leave 36 studies with no randomised denominator at all -- typically because the figure appears only in a CONSORT flow diagram, which is an image this extractor cannot read. A review-wide randomised participant total is therefore still not reported; the analysed total is. 2 report(s) are held as disputed rather than extracted: their own papers give contradictory totals."
+    "randomised_total_reason": "Coverage rose from 17 to 37 of the 69 studies on 2026-09-12 and a review-wide randomised total is still not publishable. The register records a randomised denominator for the pairwise contrast in 4 studies; the source-PDF extraction reads a whole-trial randomised N off the page in 21; a further 13 allow a whole-trial total to be derived by adding the group sizes the paper gives in its own randomisation sentence. Those are three different quantities, they are not additive, and even together they leave 32 studies with no randomised denominator at all -- typically because the figure appears only in a CONSORT flow diagram, which is an image this extractor cannot read. A review-wide randomised participant total is therefore still not reported; the analysed total is. 2 report(s) are held as disputed rather than extracted: their own papers give contradictory totals."
   }
 };
