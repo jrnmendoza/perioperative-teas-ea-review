@@ -89,6 +89,65 @@ RESOLVED_ATTRIBUTION = [{
 }]
 
 
+# Baseline rows whose values sit on the wrong ARM, verified against the source PDF.
+#
+# The denominator screen below flags any sex count whose denominator is not that
+# arm's analysed N. Most of its hits are explicable. These are the ones that were
+# read against the paper and turned out to be a genuine arm swap.
+#
+# Only descriptive baseline fields are affected -- age, BMI, sex. The analysed
+# denominators are NOT in question here and are not touched: for Gu 2019 they are
+# confirmed three ways over (the paper's Table 1, the arm labels in the register,
+# and Outcome_Data_AF_LOCK, which records Long-duration TEAS n = 58 against
+# Sham/no-current TEAS n = 59 on all eight of its outcome rows).
+BASELINE_ARM_SWAPS = [{
+    "study": "Gu 2019",
+    "status": "corrected",
+    "corrected_on": "2026-09-12",
+    "applied_by": "scripts/apply_baseline_arm_corrections.py",
+    "summary": "Age, BMI and sex are each recorded against the opposite arm.",
+    "source": "TEAS EA Verification/Source PDFs/covidence_1471_full_article.pdf",
+    "source_location": "Table 1, Characteristics of patients (p4)",
+    "quote": "Characteristics C-TEAS(n = 59) L-TEAS(n = 58) | Age (mean \u00b1 SD, year) "
+             "56.67 \u00b1 6.23  57.59 \u00b1 7.32 | Sex Male 29  31 | Female 30  27 | "
+             "BMI(mean \u00b1 SD, kg/m2) 21.84 \u00b1 2.78  22.71 \u00b1 2.54",
+    "arm_assignment_confirmed_by": [
+        "The paper: the intervention is the long-duration TEAS group (L-TEAS, n = 58); the "
+        "comparator is C-TEAS (n = 59), whose stimulator output wires were broken so no "
+        "current was delivered \u2014 a true sham, as the register's comparator_type says.",
+        "Outcome_Data_AF_LOCK: all eight Gu 2019 rows record Intervention arm "
+        "\u201cLong-duration TEAS\u201d with analysed n = 58 against Comparator arm "
+        "\u201cSham/no-current TEAS\u201d with analysed n = 59.",
+        "The register's own arm_n values (58 for the TEAS group, 59 for the Sham group) "
+        "already match both.",
+    ],
+    "fields": [
+        {"field": "arm1_age",    "register": "56.67 ± 6.23",  "source_says": "57.59 ± 7.32"},
+        {"field": "arm2_age",    "register": "57.59 ± 7.32",  "source_says": "56.67 ± 6.23"},
+        {"field": "arm1_bmi",    "register": "21.84 ± 2.78",  "source_says": "22.71 ± 2.54"},
+        {"field": "arm2_bmi",    "register": "22.71 ± 2.54",  "source_says": "21.84 ± 2.78"},
+        {"field": "arm1_female", "register": "30/59 (50.8%)", "source_says": "27/58 (46.6%)"},
+        {"field": "arm2_female", "register": "27/58 (46.6%)", "source_says": "30/59 (50.8%)"},
+    ],
+    "also": "asa_status read \u201cASA I: 20 (33.9%), ASA II: 39 (66.1%)\u201d, which sums to "
+            "59 and is the SHAM arm's distribution presented as if it were study-wide. The "
+            "paper gives ASA I 23 / II 35 for the 58 patients in the TEAS arm. Both arms are "
+            "now given.",
+    "asa_status": {
+        "register": "ASA I: 20 (33.9%), ASA II: 39 (66.1%)",
+        "source_says": "TEAS arm \u2014 ASA I: 23/58 (39.7%), ASA II: 35/58 (60.3%); "
+                       "Sham arm \u2014 ASA I: 20/59 (33.9%), ASA II: 39/59 (66.1%)",
+    },
+    "affects": "Descriptive baseline display only. No analysed denominator, effect estimate, "
+               "risk-of-bias judgement or GRADE rating reads these fields.",
+    "resolution": "Corrected 2026-09-12 on review-team sign-off: the six values were moved "
+                  "back to the arms the paper reports them for, and asa_status was rewritten to "
+                  "give both arms instead of the sham arm's distribution alone. The analysed "
+                  "denominators were not touched. The 'register' column above records what the "
+                  "register held BEFORE the correction; 'source_says' is what it holds now.",
+}]
+
+
 # Candidate pairs the review team has adjudicated against their source PDFs. An
 # adjudication does not remove the pair from the scan -- the detection rule still
 # has to find it, or the rule has quietly stopped working -- it records what the
@@ -291,6 +350,7 @@ def build() -> dict:
             {"flagged_for_review": 0, "adjudicated_separate": 1, "confirmed": 2}[c["status"]],
             c["studies"])),
         "attribution_conflicts": ATTRIBUTION_CONFLICTS,
+        "baseline_arm_swaps": BASELINE_ARM_SWAPS,
         "resolved_attribution": RESOLVED_ATTRIBUTION,
         "denominator_mismatches": denominator_mismatches(studies),
         "locked_sheet_disagreements": locked_sheet_disagreements(),
@@ -447,6 +507,10 @@ def main(check_only: bool) -> int:
                 else "figures differ")
         print(f"  LOCK {d['study']}: Study_Master says {d['study_master_summary_arms']}, "
               f"AF_LOCK says {d['af_lock_analysed_arms']} ({note})")
+    for s in payload["baseline_arm_swaps"]:
+        tag = "CORRECTED" if s.get("status") == "corrected" else "SWAP"
+        print(f"  {tag} {s['study']}: {s['summary']} "
+              f"({len(s['fields'])} field(s), source-verified)")
     dm = payload["denominator_mismatches"]
     unexplained = [d for d in dm if not d["explained_by_randomised"]]
     print(f"  {len(dm)} female-count denominator(s) differ from the arm's analysed N "
