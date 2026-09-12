@@ -4331,7 +4331,9 @@ def t_baseline_conflicts_are_surfaced_not_corrected():
                              f"be re-checked or reversed")
             # The correction must not have moved a denominator.
             expect_n = {"Gu 2019": (58, 59),
-                        "He 2026 (hepatectomy/JIS)": (80, 79)}.get(s["study"])
+                        "He 2026 (hepatectomy/JIS)": (80, 79),
+                        "Grech 2016": (11, 9),
+                        "Lee 2011": (12, 12)}.get(s["study"])
             if expect_n and (pop.get("arm1_n"), pop.get("arm2_n")) != expect_n:
                 probs.append(f"{s['study']}: arms are "
                              f"{(pop.get('arm1_n'), pop.get('arm2_n'))}, expected {expect_n} -- a "
@@ -4355,6 +4357,16 @@ def t_baseline_conflicts_are_surfaced_not_corrected():
                      if c.get("status") == "corrected"}
         if set(d["studies"]) & corrected:
             probs.append(f"{d['studies']}: still share a baseline row after being corrected")
+
+    # An adjudicated denominator must say why, and must NOT have been quietly
+    # corrected instead -- the whole point of the category is that no correct value
+    # exists to restore.
+    for d in co.get("denominator_mismatches", []):
+        if d.get("explained_by") and not d.get("explained_detail"):
+            probs.append(f"{d['study']} {d['arm']}: adjudicated with no reason recorded")
+    if any(d.get("explained_by") for d in co.get("denominator_mismatches", [])) \
+            and "Denominator adjudicated" not in APP:
+        probs.append("adjudicated denominators are never rendered")
 
     for d in co.get("denominator_mismatches", []):
         pop = (by_key.get(d["study"]) or {}).get("population") or {}

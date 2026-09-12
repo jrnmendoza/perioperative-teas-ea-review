@@ -208,6 +208,91 @@ BASELINE_CORRECTIONS.append({
 })
 
 
+BASELINE_CORRECTIONS.append({
+    "kind": "wrong_denominator",
+    "study": "Grech 2016",
+    "status": "corrected",
+    "corrected_on": "2026-09-12",
+    "applied_by": "scripts/apply_baseline_arm_corrections.py",
+    "summary": "The EA arm carried the whole trial's figures instead of its own.",
+    "source": "TEAS EA Verification/Source PDFs/030_grech_2016_lund.pdf",
+    "source_location": "Table 2, Distribution of the patients",
+    "quote": "n Age (y) Weight (kg) T P F | All 20 48.15 \u00b1 2.45 81.16 \u00b1 4.27 11 9 18 | "
+             "Control 9 52.33 \u00b1 4.08 85.00 \u00b1 6.22 5 4 9 | "
+             "EA 11 44.73 \u00b1 2.68 77.70 \u00b1 5.97 6 5 9",
+    "arm_assignment_confirmed_by": [
+        "Table 2 gives the EA arm (n = 11) a mean age of 44.73 and the whole trial (n = 20) "
+        "48.15. The register held 48.15 \u2014 the all-patients figure \u2014 on the EA arm. "
+        "The control arm's 52.33 was already right.",
+        "Table 2's dispersions are standard ERRORS, not SDs: 2.45 for n = 20 against ages "
+        "spanning 32-72 is a standard error, and 2.45 \u00d7 \u221a20 = 10.96, which is exactly "
+        "the figure the register carried. The control arm had already been converted the same "
+        "way (4.08 \u00d7 \u221a9 = 12.24), so the EA arm follows it: 2.68 \u00d7 \u221a11 = 8.89.",
+        "Sex: Table 2 records 9 female in each arm. With n = 11 that is 9/11 in the EA arm, not "
+        "the 9/20 the register held \u2014 9 is the EA arm's own numerator over the whole "
+        "trial's denominator. Table 1's per-patient listing shows the two men (patients 10 and "
+        "12) are both EA, and the text confirms it: \u201cthe heterogeneous group (with both "
+        "men and women) of EA was compared with the control group (with women only)\u201d.",
+        "The control arm's 9/9 (100%) was already right and is unchanged.",
+    ],
+    "fields": [
+        {"field": "arm1_age",    "register": "48.15 ± 10.96", "source_says": "44.73 ± 8.89"},
+        {"field": "arm1_female", "register": "9/20 (45.0%)",  "source_says": "9/11 (81.8%)"},
+    ],
+    "also": "The arm ± values are SDs converted from the paper's standard errors, following the "
+            "conversion already applied to the control arm. The source prints mean ± SEM.",
+    "affects": "Descriptive baseline display only. No analysed denominator, effect estimate, "
+               "risk-of-bias judgement or GRADE rating reads these fields.",
+    "resolution": "Corrected 2026-09-12 on review-team sign-off. The 'register' column records "
+                  "what the register held BEFORE the correction; 'source_says' is what it holds "
+                  "now.",
+})
+
+BASELINE_CORRECTIONS.append({
+    "kind": "wrong_denominator",
+    "study": "Lee 2011",
+    "status": "corrected",
+    "corrected_on": "2026-09-12",
+    "applied_by": "scripts/apply_baseline_arm_corrections.py",
+    "summary": "Sex was reported over a denominator the trial never had, and a whole-trial age "
+               "was shown as if it were each arm's.",
+    "source": "TEAS EA Verification/Source PDFs/049_lee_2011.pdf",
+    "source_location": "Abstract and Table 2, Description of subjects",
+    "quote": "47 women were randomly allocated to four different groups. Except for those in the "
+             "control group (Group 1, n = 13), a course of treatment was given of either sham "
+             "(Group 2, n = 12), high-frequency stimulation (Group 3, n = 12), or low-frequency "
+             "stimulation (Group 4, n = 10). [...] Table 2: Description of subjects. "
+             "N Minimum Maximum Mean SD | Age (years old) 47 14.00 59.00 42.02 8.31",
+    "arm_assignment_confirmed_by": [
+        "Every participant was a woman: \u201c47 women were randomly allocated to four "
+        "different groups\u201d, all undergoing hysterectomy. Each arm of the review's "
+        "12-vs-12 contrast is therefore 12/12 (100%). The 20 the register used as a denominator "
+        "is not a group size anywhere in this four-arm trial (13 / 12 / 12 / 10).",
+        "Age is reported once, for the whole trial: Table 2 gives N = 47, mean 42.02, SD 8.31. "
+        "The paper reports no per-arm age, so the register was showing a whole-trial mean on "
+        "both arms as though it were arm-specific. It now says so on its face rather than being "
+        "silently dropped, because the value itself is real and reported.",
+        "The contrast the review uses is Group 3 (high-frequency, n = 12) against Group 2 "
+        "(sham, n = 12); the register's arm denominators of 12 and 12 already matched.",
+        "The whole trial's randomised N of 47 is already carried separately, read from this "
+        "same paper, and is shown in the study drawer.",
+    ],
+    "fields": [
+        {"field": "arm1_female", "register": "20/20 (100%)", "source_says": "12/12 (100%)"},
+        {"field": "arm2_female", "register": "20/20 (100%)", "source_says": "12/12 (100%)"},
+        {"field": "arm1_age", "register": "42.02 ± 8.31",
+         "source_says": "42.02 ± 8.31 (whole trial, N = 47; per-arm age not reported)"},
+        {"field": "arm2_age", "register": "42.02 ± 8.31",
+         "source_says": "42.02 ± 8.31 (whole trial, N = 47; per-arm age not reported)"},
+    ],
+    "affects": "Descriptive baseline display only. No analysed denominator, effect estimate, "
+               "risk-of-bias judgement or GRADE rating reads these fields.",
+    "resolution": "Corrected 2026-09-12 on review-team sign-off. The age is kept rather than "
+                  "marked not-reported, because the trial does report it \u2014 just not per "
+                  "arm \u2014 and the value now carries that qualification with it.",
+})
+
+
 # Candidate pairs the review team has adjudicated against their source PDFs. An
 # adjudication does not remove the pair from the scan -- the detection rule still
 # has to find it, or the rule has quietly stopped working -- it records what the
@@ -485,6 +570,25 @@ def locked_sheet_disagreements() -> list[dict]:
     return sorted(out, key=lambda d: (d["kind"] != "identity_split", d["study"]))
 
 
+# Denominator mismatches that have already been adjudicated and are NOT going to be
+# corrected, with the reason. These stay in the screen's output, flagged as
+# explained, rather than being deleted: the screen should be able to show that it
+# has been worked through, not merely that it is quiet.
+EXPLAINED_DENOMINATORS = {
+    ("El-Rakshy 2009", "arm1"): "The source cannot be reconciled with itself.",
+    ("El-Rakshy 2009", "arm2"): "The source cannot be reconciled with itself.",
+}
+EXPLAINED_DETAIL = {
+    "El-Rakshy 2009":
+        "Confirmed 2026-09-09 by an independent re-read of the primary source: the "
+        "publication's intervention-group denominators are irreconcilable across its flow "
+        "diagram, Results text, Table 1, abstract and Table 3. There is no correct value to "
+        "restore, and choosing one would be inventing it. The finding is already carried where "
+        "it belongs \u2014 it is the basis of this trial's High RoB 2 Domain 3 judgement, which "
+        "in turn drives a GRADE downgrade, so the analysis already reflects it.",
+}
+
+
 def duplicate_baseline_blocks(studies: list[dict]) -> list[dict]:
     """
     Records sharing an identical baseline row with another record.
@@ -535,9 +639,12 @@ def denominator_mismatches(studies: list[dict]) -> list[dict]:
             if not m or int(m.group(2)) == n:
                 continue
             rand = pop.get(f"randomized_arm{arm}_n")
+            explained = EXPLAINED_DENOMINATORS.get((s["key"], f"arm{arm}"))
             out.append({
                 "study": s["key"],
                 "arm": f"arm{arm}",
+                "explained_by": explained,
+                "explained_detail": EXPLAINED_DETAIL.get(s["key"]) if explained else None,
                 "arm_name": pop.get(f"arm{arm}_name"),
                 "female": raw,
                 "female_denominator": int(m.group(2)),
@@ -601,9 +708,11 @@ def main(check_only: bool) -> int:
     for d in payload["duplicate_baseline_blocks"]:
         print(f"  DUPLICATE BASELINE {' == '.join(d['studies'])}")
     dm = payload["denominator_mismatches"]
-    unexplained = [d for d in dm if not d["explained_by_randomised"]]
+    unexplained = [d for d in dm
+                   if not d["explained_by_randomised"] and not d.get("explained_by")]
+    settled = [d for d in dm if d.get("explained_by")]
     print(f"  {len(dm)} female-count denominator(s) differ from the arm's analysed N "
-          f"({len(unexplained)} not explained by a randomised denominator)")
+          f"({len(settled)} adjudicated, {len(unexplained)} open)")
     for d in unexplained:
         print(f"    {d['study']} {d['arm']}: {d['female']} vs analysed n={d['analysed_n']}")
     return 0

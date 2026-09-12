@@ -212,6 +212,79 @@ window.COHORT_OVERLAP = {
       "also": "The comparator classification was checked at the same time and is right: the paper says “For control group participants, electrodes were similarly placed but remained inactive”, which is a sham, not usual care. The abstract's shorthand “control group (no stimulation)” describes the current, not the electrodes.",
       "affects": "Descriptive baseline display only. No analysed denominator, effect estimate, risk-of-bias judgement or GRADE rating reads these fields.",
       "resolution": "Corrected 2026-09-12 on review-team sign-off, from the paper's own Table 1. The 'register' column above records what the register held BEFORE the correction; 'source_says' is what it holds now."
+    },
+    {
+      "kind": "wrong_denominator",
+      "study": "Grech 2016",
+      "status": "corrected",
+      "corrected_on": "2026-09-12",
+      "applied_by": "scripts/apply_baseline_arm_corrections.py",
+      "summary": "The EA arm carried the whole trial's figures instead of its own.",
+      "source": "TEAS EA Verification/Source PDFs/030_grech_2016_lund.pdf",
+      "source_location": "Table 2, Distribution of the patients",
+      "quote": "n Age (y) Weight (kg) T P F | All 20 48.15 ± 2.45 81.16 ± 4.27 11 9 18 | Control 9 52.33 ± 4.08 85.00 ± 6.22 5 4 9 | EA 11 44.73 ± 2.68 77.70 ± 5.97 6 5 9",
+      "arm_assignment_confirmed_by": [
+        "Table 2 gives the EA arm (n = 11) a mean age of 44.73 and the whole trial (n = 20) 48.15. The register held 48.15 — the all-patients figure — on the EA arm. The control arm's 52.33 was already right.",
+        "Table 2's dispersions are standard ERRORS, not SDs: 2.45 for n = 20 against ages spanning 32-72 is a standard error, and 2.45 × √20 = 10.96, which is exactly the figure the register carried. The control arm had already been converted the same way (4.08 × √9 = 12.24), so the EA arm follows it: 2.68 × √11 = 8.89.",
+        "Sex: Table 2 records 9 female in each arm. With n = 11 that is 9/11 in the EA arm, not the 9/20 the register held — 9 is the EA arm's own numerator over the whole trial's denominator. Table 1's per-patient listing shows the two men (patients 10 and 12) are both EA, and the text confirms it: “the heterogeneous group (with both men and women) of EA was compared with the control group (with women only)”.",
+        "The control arm's 9/9 (100%) was already right and is unchanged."
+      ],
+      "fields": [
+        {
+          "field": "arm1_age",
+          "register": "48.15 ± 10.96",
+          "source_says": "44.73 ± 8.89"
+        },
+        {
+          "field": "arm1_female",
+          "register": "9/20 (45.0%)",
+          "source_says": "9/11 (81.8%)"
+        }
+      ],
+      "also": "The arm ± values are SDs converted from the paper's standard errors, following the conversion already applied to the control arm. The source prints mean ± SEM.",
+      "affects": "Descriptive baseline display only. No analysed denominator, effect estimate, risk-of-bias judgement or GRADE rating reads these fields.",
+      "resolution": "Corrected 2026-09-12 on review-team sign-off. The 'register' column records what the register held BEFORE the correction; 'source_says' is what it holds now."
+    },
+    {
+      "kind": "wrong_denominator",
+      "study": "Lee 2011",
+      "status": "corrected",
+      "corrected_on": "2026-09-12",
+      "applied_by": "scripts/apply_baseline_arm_corrections.py",
+      "summary": "Sex was reported over a denominator the trial never had, and a whole-trial age was shown as if it were each arm's.",
+      "source": "TEAS EA Verification/Source PDFs/049_lee_2011.pdf",
+      "source_location": "Abstract and Table 2, Description of subjects",
+      "quote": "47 women were randomly allocated to four different groups. Except for those in the control group (Group 1, n = 13), a course of treatment was given of either sham (Group 2, n = 12), high-frequency stimulation (Group 3, n = 12), or low-frequency stimulation (Group 4, n = 10). [...] Table 2: Description of subjects. N Minimum Maximum Mean SD | Age (years old) 47 14.00 59.00 42.02 8.31",
+      "arm_assignment_confirmed_by": [
+        "Every participant was a woman: “47 women were randomly allocated to four different groups”, all undergoing hysterectomy. Each arm of the review's 12-vs-12 contrast is therefore 12/12 (100%). The 20 the register used as a denominator is not a group size anywhere in this four-arm trial (13 / 12 / 12 / 10).",
+        "Age is reported once, for the whole trial: Table 2 gives N = 47, mean 42.02, SD 8.31. The paper reports no per-arm age, so the register was showing a whole-trial mean on both arms as though it were arm-specific. It now says so on its face rather than being silently dropped, because the value itself is real and reported.",
+        "The contrast the review uses is Group 3 (high-frequency, n = 12) against Group 2 (sham, n = 12); the register's arm denominators of 12 and 12 already matched.",
+        "The whole trial's randomised N of 47 is already carried separately, read from this same paper, and is shown in the study drawer."
+      ],
+      "fields": [
+        {
+          "field": "arm1_female",
+          "register": "20/20 (100%)",
+          "source_says": "12/12 (100%)"
+        },
+        {
+          "field": "arm2_female",
+          "register": "20/20 (100%)",
+          "source_says": "12/12 (100%)"
+        },
+        {
+          "field": "arm1_age",
+          "register": "42.02 ± 8.31",
+          "source_says": "42.02 ± 8.31 (whole trial, N = 47; per-arm age not reported)"
+        },
+        {
+          "field": "arm2_age",
+          "register": "42.02 ± 8.31",
+          "source_says": "42.02 ± 8.31 (whole trial, N = 47; per-arm age not reported)"
+        }
+      ],
+      "affects": "Descriptive baseline display only. No analysed denominator, effect estimate, risk-of-bias judgement or GRADE rating reads these fields.",
+      "resolution": "Corrected 2026-09-12 on review-team sign-off. The age is kept rather than marked not-reported, because the trial does report it — just not per arm — and the value now carries that qualification with it."
     }
   ],
   "duplicate_baseline_blocks": [],
@@ -239,6 +312,8 @@ window.COHORT_OVERLAP = {
     {
       "study": "El-Rakshy 2009",
       "arm": "arm1",
+      "explained_by": "The source cannot be reconciled with itself.",
+      "explained_detail": "Confirmed 2026-09-09 by an independent re-read of the primary source: the publication's intervention-group denominators are irreconcilable across its flow diagram, Results text, Table 1, abstract and Table 3. There is no correct value to restore, and choosing one would be inventing it. The finding is already carried where it belongs — it is the basis of this trial's High RoB 2 Domain 3 judgement, which in turn drives a GRADE downgrade, so the analysis already reflects it.",
       "arm_name": "EA Group",
       "female": "42/44 (95.5%)",
       "female_denominator": 44,
@@ -249,41 +324,13 @@ window.COHORT_OVERLAP = {
     {
       "study": "El-Rakshy 2009",
       "arm": "arm2",
+      "explained_by": "The source cannot be reconciled with itself.",
+      "explained_detail": "Confirmed 2026-09-09 by an independent re-read of the primary source: the publication's intervention-group denominators are irreconcilable across its flow diagram, Results text, Table 1, abstract and Table 3. There is no correct value to restore, and choosing one would be inventing it. The finding is already carried where it belongs — it is the basis of this trial's High RoB 2 Domain 3 judgement, which in turn drives a GRADE downgrade, so the analysis already reflects it.",
       "arm_name": "Usual Care Group",
       "female": "50/58 (86.2%)",
       "female_denominator": 58,
       "analysed_n": 53,
       "randomised_n": null,
-      "explained_by_randomised": false
-    },
-    {
-      "study": "Lee 2011",
-      "arm": "arm1",
-      "arm_name": "TEAS Group",
-      "female": "20/20 (100%)",
-      "female_denominator": 20,
-      "analysed_n": 12,
-      "randomised_n": 12,
-      "explained_by_randomised": false
-    },
-    {
-      "study": "Lee 2011",
-      "arm": "arm2",
-      "arm_name": "Sham Group",
-      "female": "20/20 (100%)",
-      "female_denominator": 20,
-      "analysed_n": 12,
-      "randomised_n": 12,
-      "explained_by_randomised": false
-    },
-    {
-      "study": "Grech 2016",
-      "arm": "arm1",
-      "arm_name": "EA Group",
-      "female": "9/20 (45.0%)",
-      "female_denominator": 20,
-      "analysed_n": 11,
-      "randomised_n": 11,
       "explained_by_randomised": false
     }
   ],

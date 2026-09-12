@@ -1284,9 +1284,14 @@ function summarisePopulation(reportsList) {
   (co.resolved_attribution || []).forEach(f => {
     if (f.studies.some(k => inScope.has(k))) out.resolved.push({ kind: 'attribution', ...f });
   });
-  const mism = (co.denominator_mismatches || []).filter(d => inScope.has(d.study)
-                                                            && !d.explained_by_randomised);
+  // Adjudicated rows leave the flag panel and join the resolved one. They are not
+  // dropped: a screen that has been worked through should be able to show it.
+  const mismAll = (co.denominator_mismatches || [])
+    .filter(d => inScope.has(d.study) && !d.explained_by_randomised);
+  const mism = mismAll.filter(d => !d.explained_by);
+  const settled = mismAll.filter(d => d.explained_by);
   if (mism.length) out.flags.push({ kind: 'denominator-mismatch', rows: mism });
+  if (settled.length) out.resolved.push({ kind: 'denominator-adjudicated', rows: settled });
   (co.baseline_corrections || []).forEach(s => {
     if (!inScope.has(s.study)) return;
     // A corrected swap moves to the resolved panel. It is not deleted: the record
@@ -1373,9 +1378,20 @@ function renderPopulationSummary(reportsList) {
       <summary><strong>Resolved against the source publications (${p.resolved.length})</strong>
         <span class="sd-sub"> &mdash; questions this review raised, read against the papers, and settled</span></summary>
       ${p.resolved.map(c => {
+        if (c.kind === 'denominator-adjudicated') return `
+        <div class="pop-flag">
+          <span class="badge badge-emerald">Denominator adjudicated</span>
+          ${c.rows.length} baseline sex count${c.rows.length === 1 ? '' : 's'} whose denominator
+          does not match its arm, read against the source and left uncorrected on purpose.
+          <ul class="pop-evidence">${c.rows.map(d => `<li><strong>${pwEsc(d.study)}</strong>
+            ${pwEsc(d.arm_name || d.arm)}: ${pwEsc(d.female)} against an analysed N of
+            ${d.analysed_n}. ${pwEsc(d.explained_by)}</li>`).join('')}</ul>
+          ${[...new Set(c.rows.map(d => d.explained_detail).filter(Boolean))]
+            .map(x => `<div class="sd-sub">${pwEsc(x)}</div>`).join('')}
+        </div>`;
         if (c.kind === 'baseline-correction') return `
         <div class="pop-flag">
-          <span class="badge badge-emerald">${c.subkind === 'foreign_block' ? "Baseline restored from the paper" : "Baseline corrected"}</span>
+          <span class="badge badge-emerald">${({foreign_block: "Baseline restored from the paper", wrong_denominator: "Denominator corrected"})[c.subkind] || "Baseline corrected"}</span>
           <strong>${pwEsc(c.study)}</strong> &mdash; ${pwEsc(c.summary)}
           <div class="sd-sub">Corrected ${pwEsc(c.corrected_on)} by <code>${pwEsc(c.applied_by)}</code>
             against <code>${pwEsc(c.source)}</code>, ${pwEsc(c.source_location)}
@@ -1442,7 +1458,7 @@ function renderPopulationSummary(reportsList) {
           </div>`;
         if (f.kind === 'baseline-correction') return `
           <div class="pop-flag">
-            <span class="badge badge-rose">${f.subkind === 'foreign_block' ? "Baseline from another trial" : "Baseline on the wrong arm"}</span>
+            <span class="badge badge-rose">${({foreign_block: "Baseline from another trial", wrong_denominator: "Baseline over the wrong denominator"})[f.subkind] || "Baseline on the wrong arm"}</span>
             <strong>${pwEsc(f.study)}</strong> &mdash; ${pwEsc(f.summary)}
             <div class="sd-sub">Source: <code>${pwEsc(f.source)}</code>, ${pwEsc(f.source_location)}
               &mdash; &ldquo;${pwEsc(f.quote)}&rdquo;</div>
