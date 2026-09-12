@@ -34,37 +34,86 @@ CHARS_JS = ROOT / "dashboard" / "study_characteristics.js"
 PDF_JS = ROOT / "dashboard" / "pdf_extracted.js"
 OUT_JS = ROOT / "dashboard" / "cohort_overlap.js"
 
-# Reports whose arm denominators disagree with the publication they were read
-# from. Each entry carries the source file and the verbatim line, so the
-# disagreement can be checked without reopening the PDF. Nothing is corrected
-# here: the register is the locked master and these fields feed no analysis.
-ARM_N_CONFLICTS = {
-    "Yeh 2010": {
-        "field": "population.arm1_n",
-        "register": 33,
-        "source_says": 30,
-        "source": "TEAS EA Verification/astra_audit/source_text/covidence_828_full_article.txt",
-        "quote": "n = 30 in each group; F-test for numerical data or chi-square test for "
-                 "categorical data.",
-        "note": "Register key Yeh 2010 is the Int J Nurs Stud 2011 report "
-                "(covidence_828_full_article.pdf), whose flow diagram randomises 30 / 30 / 30 "
-                "and whose baseline table footnote states n = 30 in each group. The register's "
-                "arm1_n of 33 is the EG1 denominator of the companion Altern Ther Health Med "
-                "report, not this one.",
-    },
-    "Yeh 2011": {
-        "field": "population.arm1_n",
-        "register": 30,
-        "source_says": 33,
-        "source": "TEAS EA Verification/astra_audit/source_text/015_PainATHM-2.txt",
-        "quote": "Variables EGl(n=33) EG2(n=30) CG(n=31)",
-        "note": "Register key Yeh 2011 is the Altern Ther Health Med 2010 report "
-                "(015_PainATHM-2.pdf), whose Table 2 gives EG1 n = 33. The register's arm1_n "
-                "of 30 is the companion Int J Nurs Stud figure. The same row's female count "
-                "(22/33) and ages do come from this paper, so the two reports' arm "
-                "denominators appear to have been transposed during extraction.",
-    },
-}
+# CORRECTED 2026-09-12 (second pass, both PDFs read in full).
+#
+# The first pass recorded this as a transposition of arm denominators between the
+# two Yeh rows. That was wrong, and the correction matters: the arm denominators
+# are each CORRECT for one of the two papers and trace to Outcome_Data_AF_LOCK.
+# What is attached to the wrong row is the CITATION.
+#
+# Each register row pairs one paper's arm-level data with the other paper's
+# bibliographic identity. Nothing here is corrected automatically: choosing which
+# half to move is a review-team decision that touches the locked workbook or the
+# audit log, not a value this script may pick.
+ATTRIBUTION_CONFLICTS = [{
+    "studies": ["Yeh 2010", "Yeh 2011"],
+    "summary": "Each row carries one paper's arm-level data and the other paper's citation.",
+    "papers": [
+        {"label": "Altern Ther Health Med 2010;16(6):10-18",
+         "pdf": "015_PainATHM-2.pdf",
+         "pmid": "21280458",
+         "authors": "Yeh, Chung, Chen K-M, Tsou M-Y, Chen H-H (five authors, includes Tsou)",
+         "setting": "orthopedic departments of a 4000-bed medical center in northern Taiwan",
+         "arms": "EG1 33 / EG2 30 / CG 31",
+         "female": "EG1 22/33 (66.7%), EG2 21/30 (70.0%), CG 15/31 (48.4%)",
+         "cohort_statement": "Ninety-nine patients undergoing lumbar spinal surgery were "
+                             "randomly assigned to one of three groups"},
+        {"label": "Int J Nurs Stud 2011;48(6):703-709",
+         "pdf": "covidence_828_full_article.pdf",
+         "pmid": "21084087",
+         "doi": "10.1016/j.ijnurstu.2010.10.009",
+         "authors": "Yeh, Chung, Chen K-M, Chen H-H (four authors, no Tsou)",
+         "setting": "3000-bed medical center in northern Taiwan",
+         "arms": "AES 30 / Sham 30 / Control 30",
+         "female": "AES 20/30 (66.7%), Sham 21/30 (70.0%), Control 15/30 (50.0%)",
+         "cohort_statement": "Assessed for eligibility (n=99) ... Meet inclusion criteria "
+                             "(n=90) ... Randomized 30 / 30 / 30"},
+    ],
+    "evidence": [
+        "Register row Yeh 2010 holds arm denominators 33 / 30 and cites Int J Nurs Stud "
+        "2011 (DOI 10.1016/j.ijnurstu.2010.10.009, PMID 21084087). 33 / 30 are the Altern "
+        "Ther Health Med figures; Int J Nurs Stud reports 30 in every arm.",
+        "Register row Yeh 2011 holds arm denominators 30 / 30 and cites Altern Ther Health "
+        "Med 2010 (PMID 21280458). 30 / 30 are the Int J Nurs Stud figures; Altern Ther "
+        "Health Med reports EG1 = 33.",
+        "The same inversion shows inside each row without opening either PDF: Yeh 2010 "
+        "records arm1_n = 33 beside a female count of 20/30, and Yeh 2011 records "
+        "arm1_n = 30 beside a female count of 22/33. Each female fraction is internally "
+        "consistent with the OTHER row's arm denominator.",
+        "The arm denominators, not the citations, are the values that trace to the lock: "
+        "Outcome_Data_AF_LOCK holds analysed 33/30 and 33/31 under Yeh 2010, and "
+        "randomised and analysed 30/30 under Yeh 2011.",
+        "The original extraction records agree with the lock and with the publication "
+        "years: yeh_2010_spinal_aes_full_data_extraction.md is headed \u201cYeh et al. "
+        "2010 ... Alternative Therapies in Health and Medicine 2010;16(6):10-18\u201d from "
+        "015_PainATHM-2.pdf, and yeh_2011_covidence_828_full_data_extraction.md is headed "
+        "\u201cYeh et al. 2011 (Study #828) ... International Journal of Nursing Studies "
+        "2011;48:703-709\u201d.",
+        "99_audit/consensus_audit_master_log.md line 127 labels Covidence #828 \u2014 the "
+        "Int J Nurs Stud paper \u2014 as \u201cYeh 2010\u201d, which is the likely origin "
+        "of the inverted citation and is why it propagated into dashboard/data.js.",
+    ],
+    "affects": "Bibliographic attribution, the source-PDF pointer, the country-of-conduct "
+               "evidence sentence, and one female count per row. No effect estimate, "
+               "risk-of-bias judgement or GRADE rating reads any of these, and neither "
+               "report contributes arm-level data to any synthesis.",
+    "not_affected": "The arm denominators themselves. They match the locked workbook and "
+                    "each matches a real paper; nothing here suggests the lock is wrong.",
+    "decision_needed": "Two ways to make the rows self-consistent, and they are not "
+                       "equivalent. (a) Move the citations, so each row keeps the arm data "
+                       "it has and gains the matching paper \u2014 the register keys then "
+                       "also match the publication years, and the locked workbook is "
+                       "untouched. (b) Move the arm data, which would mean re-cutting "
+                       "Outcome_Data_AF_LOCK. Option (a) leaves the lock alone and is the "
+                       "smaller change, but it contradicts the audit log, so the review "
+                       "team decides.",
+    "superseded_finding": "A first pass on 2026-09-12 recorded this as transposed arm "
+                          "denominators and named the arm Ns as the defective field. That "
+                          "reading was wrong: the arm Ns trace to the lock and to real "
+                          "papers. Recorded here so the earlier wording is not mistaken "
+                          "for a separate, still-open issue.",
+}]
+
 
 # Candidate pairs the review team has adjudicated against their source PDFs. An
 # adjudication does not remove the pair from the scan -- the detection rule still
@@ -102,17 +151,20 @@ ADJUDICATED = {
     },
 }
 
+
 # The two papers also disagree with each other about the size of the cohort they
 # describe. That is recorded as a property of the linked pair, not of either report.
 COHORT_SIZE_DISAGREEMENTS = [{
     "studies": ["Yeh 2010", "Yeh 2011"],
     "summary": "The two reports of this trial state different cohort sizes.",
-    "detail": "Int J Nurs Stud 2011 (key Yeh 2010) shows 99 assessed for eligibility, 90 "
-              "meeting inclusion criteria, and randomisation to 30 / 30 / 30. Altern Ther "
-              "Health Med 2010 (key Yeh 2011) states \"Ninety-nine patients undergoing lumbar "
-              "spinal surgery were randomly assigned to one of three groups\" with group sizes "
-              "33 / 30 / 31. Whether 90 or 99 were randomised cannot be settled from the two "
-              "papers, so neither figure is used as the trial's randomised N.",
+    "detail": "Int J Nurs Stud 2011 shows 99 assessed for eligibility, 90 meeting inclusion "
+              "criteria, and randomisation to 30 / 30 / 30. Altern Ther Health Med 2010 "
+              "states \"Ninety-nine patients undergoing lumbar spinal surgery were randomly "
+              "assigned to one of three groups\" with group sizes 33 / 30 / 31. Whether 90 or "
+              "99 were randomised cannot be settled from the two papers, so neither figure is "
+              "used as the trial's randomised N. Stated by paper rather than by register key, "
+              "because which key names which paper is itself in question \u2014 see the "
+              "attribution conflict above.",
     "affects": "Descriptive participant totals only. Neither report contributes arm-level "
                "data to any synthesis, so no effect estimate depends on this.",
 }]
@@ -264,7 +316,8 @@ def build() -> dict:
         "candidates": sorted(candidates, key=lambda c: (
             {"flagged_for_review": 0, "adjudicated_separate": 1, "confirmed": 2}[c["status"]],
             c["studies"])),
-        "arm_n_conflicts": ARM_N_CONFLICTS,
+        "attribution_conflicts": ATTRIBUTION_CONFLICTS,
+        "denominator_mismatches": denominator_mismatches(studies),
         "cohort_size_disagreements": COHORT_SIZE_DISAGREEMENTS,
         "participants": {
             "analysed_across_reports": analysed_reports,
@@ -283,6 +336,43 @@ def build() -> dict:
                 "therefore not reported; the analysed total is.",
         },
     }
+
+
+def denominator_mismatches(studies: list[dict]) -> list[dict]:
+    """
+    Every record whose reported female count is out of N people, where N is not
+    that arm's analysed denominator.
+
+    This is the rule that catches an inverted attribution WITHOUT reading a PDF:
+    the Yeh pair shows up here because each row's female fraction is consistent
+    with the other row's arm size. It is a screen, not a verdict -- a trial that
+    reported sex over its RANDOMISED set lands here legitimately, and so does one
+    whose analysed denominator was later corrected while the baseline row was not.
+    Each hit is emitted with both numbers and no judgement attached.
+    """
+    out = []
+    for s in studies:
+        pop = s.get("population") or {}
+        for arm in (1, 2):
+            raw = pop.get(f"arm{arm}_female")
+            n = pop.get(f"arm{arm}_n")
+            if not isinstance(raw, str) or not isinstance(n, int):
+                continue
+            m = re.match(r"\s*(\d+)\s*/\s*(\d+)", raw)
+            if not m or int(m.group(2)) == n:
+                continue
+            rand = pop.get(f"randomized_arm{arm}_n")
+            out.append({
+                "study": s["key"],
+                "arm": f"arm{arm}",
+                "arm_name": pop.get(f"arm{arm}_name"),
+                "female": raw,
+                "female_denominator": int(m.group(2)),
+                "analysed_n": n,
+                "randomised_n": rand,
+                "explained_by_randomised": rand == int(m.group(2)),
+            })
+    return out
 
 
 def _proc_words(ch: dict, s: dict) -> frozenset:
@@ -326,6 +416,12 @@ def main(check_only: bool) -> int:
               f"({c['adjudication']['date']})")
     for c in flagged:
         print(f"  FLAG {' / '.join(c['studies'])}: shared {', '.join(c['shared'])}")
+    dm = payload["denominator_mismatches"]
+    unexplained = [d for d in dm if not d["explained_by_randomised"]]
+    print(f"  {len(dm)} female-count denominator(s) differ from the arm's analysed N "
+          f"({len(unexplained)} not explained by a randomised denominator)")
+    for d in unexplained:
+        print(f"    {d['study']} {d['arm']}: {d['female']} vs analysed n={d['analysed_n']}")
     return 0
 
 
