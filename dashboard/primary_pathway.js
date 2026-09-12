@@ -16,7 +16,6 @@ window.PRIMARY_PATHWAY = {
   "prospero": "CRD420251090635",
   "review_included_reports": 70,
   "review_included_studies": 69,
-  "review_included_rcts": 70,
   "candidate_rows": 16,
   "publications_with_24h_info": 17,
   "primary_strict": [
@@ -826,6 +825,29 @@ window.PRIMARY_PATHWAY = {
       "also_contributes_to": [
         "Target D — PONV"
       ]
+    },
+    {
+      "study_unit": "Gao 2022",
+      "study_id": "NEW32_GAO2022",
+      "also_contributes_to": [
+        "Target C — pain at rest ~24 h",
+        "Target D — PONV"
+      ]
+    },
+    {
+      "study_unit": "Song 2020",
+      "study_id": "NEW32_SONG2020",
+      "also_contributes_to": [
+        "Target C — pain at rest ~24 h",
+        "Target D — PONV"
+      ]
+    },
+    {
+      "study_unit": "Zhang 2018",
+      "study_id": "NEW32_ZHANG2018",
+      "also_contributes_to": [
+        "Target E — time to first flatus"
+      ]
     }
   ],
   "no_pooled_model": [
@@ -915,16 +937,6 @@ window.PRIMARY_PATHWAY = {
       "also_contributes_to": []
     },
     {
-      "study_unit": "Gao 2022",
-      "study_id": "NEW32_GAO2022",
-      "also_contributes_to": []
-    },
-    {
-      "study_unit": "Song 2020",
-      "study_id": "NEW32_SONG2020",
-      "also_contributes_to": []
-    },
-    {
       "study_unit": "Wu 2016",
       "study_id": "NEW32_WU2016",
       "also_contributes_to": []
@@ -938,16 +950,10 @@ window.PRIMARY_PATHWAY = {
       "study_unit": "Oztas 2019",
       "study_id": "NEW32_OZTAS2019",
       "also_contributes_to": []
-    },
-    {
-      "study_unit": "Zhang 2018",
-      "study_id": "NEW32_ZHANG2018",
-      "also_contributes_to": []
     }
   ],
   "reconciles": true,
   "counts": {
-    "included_rcts": 70,
     "included_reports": 70,
     "included_studies": 69,
     "reporting_relevant_24h_info": 17,
@@ -959,8 +965,8 @@ window.PRIMARY_PATHWAY = {
     "candidate_pool": 12,
     "candidate_pool_n": 993,
     "author_contact_candidates": 4,
-    "other_outcome_contributors": 30,
-    "no_pooled_model": 23,
+    "other_outcome_contributors": 33,
+    "no_pooled_model": 20,
     "broader_smd_k": 9,
     "broader_smd_n": 758
   },

@@ -465,16 +465,16 @@
 
           <div style="background: rgba(255,255,255,0.03); padding: 1rem; border-radius: var(--radius-sm); border-top: 3px solid #06b6d4;">
             <div style="font-size: 0.72rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Time to First Flatus (Target E)</div>
-            <div style="font-size: 1.3rem; font-weight: 800; color: #38bdf8; margin-top: 0.25rem;">−2.00 hours</div>
-            <div style="font-size: 0.72rem; color: var(--text-secondary); margin-top: 0.2rem;">95% CI: [−3.14, −0.87] • <strong style="color:#38bdf8;">p = 0.0062</strong> (REML + KH)</div>
-            <div style="font-size: 0.7rem; color: #7dd3fc; margin-top: 0.35rem;">GI Recovery (k = 6, N = 596) • SMD: −0.46 (p = 0.0002) • I² = 0.0%</div>
+            <div style="font-size: 1.3rem; font-weight: 800; color: #38bdf8; margin-top: 0.25rem;">Hedges’ g = −0.55</div>
+            <div style="font-size: 0.72rem; color: var(--text-secondary); margin-top: 0.2rem;">95% CI: [−0.88, −0.22] • <strong style="color:#38bdf8;">p = 0.0065</strong> (REML + KH)</div>
+            <div style="font-size: 0.7rem; color: #7dd3fc; margin-top: 0.35rem;">GI Recovery (k = 7, N = 638) • standardised measure reported since 2026-09-12, I² = 39.2% • MD −6.79 h [−14.84, +1.27] at I² = 97.3% is not interpretable as one effect</div>
           </div>
 
           <div style="background: rgba(255,255,255,0.03); padding: 1rem; border-radius: var(--radius-sm); border-top: 3px solid #f59e0b;">
             <div style="font-size: 0.72rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Postoperative Nausea &amp; Vomiting (Target D)</div>
-            <div style="font-size: 1.3rem; font-weight: 800; color: #fbbf24; margin-top: 0.25rem;">RR 0.56 / 0.52</div>
-            <div style="font-size: 0.72rem; color: var(--text-secondary); margin-top: 0.2rem;">24h: [0.14, 2.26] (p=0.119) • 48h: [0.22, 1.27] (p=0.068)</div>
-            <div style="font-size: 0.7rem; color: #fde68a; margin-top: 0.35rem;">Composite PONV (k = 2 per window) • Stratified by follow-up</div>
+            <div style="font-size: 1.3rem; font-weight: 800; color: #fbbf24; margin-top: 0.25rem;">RR 0.65 / 0.54</div>
+            <div style="font-size: 0.72rem; color: var(--text-secondary); margin-top: 0.2rem;">0–24h: [0.39, 1.07] (p=0.071) • 0–48h: [0.26, 1.11] (p=0.058)</div>
+            <div style="font-size: 0.7rem; color: #fde68a; margin-top: 0.35rem;">Composite PONV (k = 4 at 0–24 h, k = 2 at 0–48 h) • Stratified by follow-up • I² = 66.9% at 0–24 h</div>
           </div>
 
           <div style="background: rgba(255,255,255,0.03); padding: 1rem; border-radius: var(--radius-sm); border-top: 3px solid #ec4899;">
@@ -1068,11 +1068,15 @@
             correction, so this plot and the source-verified models are on one scale. They
             remain different analyses with different contributing trials, so their numbers are
             still not expected to match each other. Continuous outcomes are unaffected.</p>
-            <p class="estimator-note-sub">The source-verified Stata analyses above still use the
-            uncorrected estimator: their inputs carry precomputed log risk ratios and re-running
-            them requires Stata. Those are different analyses from this plot in any case (different
-            contributing trials), so their numbers are not expected to match. Continuous outcomes
-            are unaffected.</p>
+            <p class="estimator-note-sub"><strong style="color:#fbbf24;">HISTORICAL (2026-09-11 to
+            2026-09-12):</strong> for one day this note also said the saved Stata analyses still
+            used the <em>uncorrected</em> estimator, because the universal correction reached the
+            browser plot first and the Stata re-run was pending. That is no longer true and the
+            paragraph above supersedes it: <code>05_ponv.do</code>, <code>07_targetF.do</code> and
+            <code>12_stratum_compliant_refit.do</code> each now build the corrected 2&times;2 cells
+            before <code>meta set</code>, and every published binary result comes from those runs.
+            Kept, labelled, because a reader who saw the earlier wording should be able to find out
+            what changed.</p>
           </div>
         </div>
 
@@ -1698,7 +1702,7 @@
         <!-- Supporting Overall Synthesis and Secondary Endpoints Grid (Placed Below Primary Cards) -->
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.25rem;">
 
-          <!-- Supporting Synthesis: Combined 6 Strict Direct Trials -->
+          <!-- Supporting Synthesis: Combined 7 Strict Direct Trials (k=7 since Szmit 2021 was added 2026-09-07) -->
           <div class="stratum-card primary-stratum" style="border-top: 3px solid #10b981;">
             <div style="display: flex; justify-content: space-between; align-items: flex-start;">
               <span class="badge badge-emerald" data-i18n="primarySection.combinedPool">Supporting Combined Synthesis (k=7, N=676)</span>
@@ -1713,7 +1717,7 @@
             </h3>
             
             <div style="font-size: 0.78rem; color: #a5b4fc; margin-bottom: 0.75rem; background: rgba(99, 102, 241, 0.12); padding: 0.5rem 0.75rem; border-radius: var(--radius-sm); border-left: 3px solid #6366f1;">
-              <strong>Methodological Clarification:</strong> TEAS and EA are analyzed separately for primary inference because they represent distinct stimulation modalities. The combined estimate is shown as an overall synthesis across all 6 strict direct trials.
+              <strong>Methodological Clarification:</strong> TEAS and EA are analyzed separately for primary inference because they represent distinct stimulation modalities. The combined estimate is shown as an overall synthesis across all 7 strict direct trials.
             </div>
 
             <!-- Standardized 4-Questions Grid (Sections 12 & 13) -->
@@ -2335,7 +2339,7 @@
               </a>
             </div>
             <div class="stata-plot-footer">
-              <p><strong>StataNow 19.5 Target D Stratified Synthesis:</strong> Stratum 1: Composite PONV 0–24h (k=4: Zheng 2025, Lu 2021, Song 2020, Gao 2022): RR = <strong>0.65</strong> [95% CI: 0.39 to 1.07], p = 0.0708 (<strong style="color:#fbbf24;">changed 2026-09-12</strong>: was k=2, RR 0.56 [0.14, 2.32], p = 0.1225, I² = 0.0%; heterogeneity is now I² = 66.9%, so this pooled RR is less interpretable than its predecessor). Stratum 2: Composite PONV 0–48h (k=2: Xiong 2021, Xing 2022): RR = <strong>0.52</strong> [95% CI: 0.26 to 1.11], p = 0.0581. Stratum 3: Nausea 0–24h (k=3: Yang 2024, Ma 2026, Szmit 2021): RR = <strong>0.60</strong> [95% CI: 0.31 to 1.22], p = 0.0922. Stratum 5: Vomiting 0–24h (k=2: Yang 2024, Ma 2026): RR = <strong>0.58</strong> [95% CI: 0.03 to 13.45], p = 0.2775. Single studies (Luo 2026 alone): Nausea 0–48h RR = 0.46 [0.30 to 0.70]; Vomiting 0–48h RR = 0.34 [0.17 to 0.70]. All pooled strata exhibited zero statistical heterogeneity (τ² = 0.00, I² = 0.00%).</p>
+              <p><strong>StataNow 19.5 Target D Stratified Synthesis:</strong> Stratum 1: Composite PONV 0–24h (k=4: Zheng 2025, Lu 2021, Song 2020, Gao 2022): RR = <strong>0.65</strong> [95% CI: 0.39 to 1.07], p = 0.0708 (<strong style="color:#fbbf24;">changed 2026-09-12</strong>: was k=2, RR 0.56 [0.14, 2.32], p = 0.1225, I² = 0.0%; heterogeneity is now I² = 66.9%, so this pooled RR is less interpretable than its predecessor). Stratum 2: Composite PONV 0–48h (k=2: Xiong 2021, Xing 2022): RR = <strong>0.52</strong> [95% CI: 0.26 to 1.11], p = 0.0581. Stratum 3: Nausea 0–24h (k=3: Yang 2024, Ma 2026, Szmit 2021): RR = <strong>0.60</strong> [95% CI: 0.31 to 1.22], p = 0.0922. Stratum 5: Vomiting 0–24h (k=2: Yang 2024, Ma 2026): RR = <strong>0.58</strong> [95% CI: 0.03 to 13.45], p = 0.2775. Single studies (Luo 2026 alone): Nausea 0–48h RR = 0.46 [0.30 to 0.70]; Vomiting 0–48h RR = 0.34 [0.17 to 0.70]. Every stratum except Composite PONV 0–24 h shows zero statistical heterogeneity (τ² = 0.00, I² = 0.00%); that one is I² = 66.9% since the 2026-09-12 admissions, as stated above. <strong style="color:#fbbf24;">Corrected 2026-09-12:</strong> this sentence previously claimed zero heterogeneity for every stratum, contradicting the 0–24 h figure in its own paragraph.</p>
             </div>
           </div>
 
@@ -2354,7 +2358,7 @@
               </a>
             </div>
             <div class="stata-plot-footer">
-              <p><strong>StataNow 19.5 Target E Synthesis:</strong> k = 7 RCTs (Zhou 2025, Yang 2020, Yang 2024, Xing 2022, Lu 2022, Ng 2013, Zhang 2018; N = 638). <strong style="color: #34d399;">Reported primary measure for this outcome: Hedges' g = −0.55 [95% CI: −0.88 to −0.22], p = 0.0065, I² = 39.2%.</strong> The mean difference is −6.79 hours [−14.84 to +1.27], p = 0.0848, with <strong>I² = 97.3%</strong> — reported, but not interpretable as a single effect at that heterogeneity. <strong style="color:#fbbf24;">Changed 2026-09-12, post hoc.</strong> Until Zhang 2018 was admitted this stratum was k = 6 with MD −2.00 h [−3.14, −0.87], p = 0.0062 and I² = 0.0%. The reason for preferring the standardised scale is a property of the data, not of the new p value: time to flatus varies about five-fold across these surgical contexts (control-arm means 15.9 h to 80.1 h) and the absolute effect scales with it — the correlation between a trial's control-arm mean and its absolute mean difference is <strong>r = 0.91</strong> across all seven trials, and the effect expressed as a percentage of control is about twice as consistent as the effect in hours (coefficient of variation 0.56 vs 1.22). A difference in hours is the wrong scale on which to pool this outcome. <strong>This does not fully explain Zhang 2018</strong>, which remains an outlier on the relative scale too (−35.9% against −9.4% to −18.6% for the other six) — which is why the standardised model's I² is 39.2% rather than near zero: reduced heterogeneity, not resolved. It is the only open-surgery trial in an otherwise laparoscopic or thoracoscopic set. Sensitivity excluding Ng 2013 (originally reported in days, k = 5): MD = −1.97 hours [−3.20 to −0.73], p = 0.0115. Sensitivity excluding High RoB (k = 5): MD = −3.08 hours [−5.35 to −0.80], p = 0.0199. <em>Excluded at full text:</em> Yu Wang et al. (JAMA Surg 2023) was excluded due to Wrong Outcomes (reported combined defecation/flatus time without separate first flatus extraction).</p>
+              <p><strong>StataNow 19.5 Target E Synthesis:</strong> k = 7 RCTs (Zhou 2025, Yang 2020, Yang 2024, Xing 2022, Lu 2022, Ng 2013, Zhang 2018; N = 638). <strong style="color: #34d399;">Reported primary measure for this outcome: Hedges' g = −0.55 [95% CI: −0.88 to −0.22], p = 0.0065, I² = 39.2%.</strong> The mean difference is −6.79 hours [−14.84 to +1.27], p = 0.0848, with <strong>I² = 97.3%</strong> — reported, but not interpretable as a single effect at that heterogeneity. <strong style="color:#fbbf24;">Changed 2026-09-12, post hoc.</strong> Until Zhang 2018 was admitted this stratum was k = 6 with MD −2.00 h [−3.14, −0.87], p = 0.0062 and I² = 0.0%. The reason for preferring the standardised scale is a property of the data, not of the new p value: time to flatus varies about five-fold across these surgical contexts (control-arm means 15.9 h to 80.1 h) and the absolute effect scales with it — the correlation between a trial's control-arm mean and its absolute mean difference is <strong>r = 0.91</strong> across all seven trials, and the effect expressed as a percentage of control is about twice as consistent as the effect in hours (coefficient of variation 0.56 vs 1.22). A difference in hours is the wrong scale on which to pool this outcome. <strong>This does not fully explain Zhang 2018</strong>, which remains an outlier on the relative scale too (−35.9% against −9.4% to −18.6% for the other six) — which is why the standardised model's I² is 39.2% rather than near zero: reduced heterogeneity, not resolved. It is the only open-surgery trial in an otherwise laparoscopic or thoracoscopic set. Sensitivity excluding Ng 2013 (originally reported in days, k = 6): MD = −6.94 hours [−17.03 to +3.14], p = 0.1369, I² = 98.2%. Sensitivity excluding High RoB (k = 6): MD = −7.96 hours [−17.79 to +1.88], p = 0.0921, I² = 95.2%. <strong style="color:#fbbf24;">Both re-run 2026-09-12 and both lost statistical significance</strong> (they were k = 5, p = 0.0115 and p = 0.0199 before Zhang 2018 was admitted); at I² above 95% neither is interpretable as a single effect in hours either — the same scale problem the standardised measure answers. <em>Excluded at full text:</em> Yu Wang et al. (JAMA Surg 2023) was excluded due to Wrong Outcomes (reported combined defecation/flatus time without separate first flatus extraction).</p>
             </div>
           </div>
 
@@ -2456,7 +2460,7 @@
             </div>
           </div>
           <p style="font-size: 0.8rem; color: var(--text-secondary);">
-            Full algebraic formulas, parametric conversions, and exact numerical matrix weights used by StataNow 19.5 BE to pool the six strict primary trials into the primary outcome synthesis.
+            Full algebraic formulas, parametric conversions, and exact numerical matrix weights used by StataNow 19.5 BE to pool the seven strict primary trials into the primary outcome synthesis.
           </p>
         </div>
 
@@ -3224,7 +3228,7 @@
               <strong>Current Status:</strong> All 19 Priority 1 (P1) methodological issues have been audited and fully dispositioned with 0 global blockers. Overlapping cohorts (Yeh 2010/2011, Lee 2011) and multi-arm splits (Chen 1998, Xie 2014) are strictly isolated. Primary synthesis is locked and complete.
             </div>
             <div style="font-size: 0.76rem; color: #cbd5e1; margin-top: 0.5rem; line-height: 1.5; background: rgba(0,0,0,0.25); padding: 0.6rem; border-radius: var(--radius-sm);">
-              <strong>Audit Disposition:</strong> Verified in <code>window.P1_DISPOSITIONS</code>. Primary 24-h opioid locked at k=7, N=676; Target A locked at k=3, N=1,999; Target E flatus locked at k=6, N=596.
+              <strong>Audit Disposition:</strong> Verified in <code>window.P1_DISPOSITIONS</code>. Primary 24-h opioid locked at k=7, N=676; Target A locked at k=3, N=1,999; Target E flatus locked at k=7, N=638 (k=6, N=596 before Zhang 2018 was admitted 2026-09-12).
             </div>
             <div style="font-size: 0.72rem; color: var(--text-muted); margin-top: 0.5rem;">
               <em>Audited Dispositions:</em> Yeh 2010/2011 (#828/#823), Luo 2026 (#35), Jin 2023 (#326), Zhou 2025 (#1879896105).

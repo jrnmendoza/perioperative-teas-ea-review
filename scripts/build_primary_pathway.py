@@ -319,7 +319,10 @@ payload = {
     # label each figure with its own unit instead of calling 70 reports 70 RCTs.
     "review_included_reports": len(STUDIES),
     "review_included_studies": len(STUDIES) - sum(1 for s in STUDIES if s.get("duplicate_report_of")),
-    "review_included_rcts": len(STUDIES),
+    # REMOVED 2026-09-12: "review_included_rcts" held len(STUDIES) -- the REPORT
+    # count -- under a key that names it RCTs, which is the exact conflation this
+    # dashboard's unit discipline exists to prevent. Consumers read
+    # review_included_reports or review_included_studies, whichever they mean.
     "candidate_rows": len(CAND),
     "publications_with_24h_info": len(covered_ids),
 
@@ -331,7 +334,10 @@ payload = {
     "reconciles": payload_reconciles,
 
     "counts": {
-        "included_rcts": len(STUDIES),
+        # "included_rcts" removed 2026-09-12 for the same reason: the buckets
+        # reconcile over REPORTS, so the total they must sum to is
+        # included_reports. Naming it RCTs made a report total look like a trial
+        # total to every reader and to the validator that checked against it.
         "included_reports": len(STUDIES),
         "included_studies": len(STUDIES) - sum(1 for s in STUDIES if s.get("duplicate_report_of")),
         "reporting_relevant_24h_info": len(covered_ids),
