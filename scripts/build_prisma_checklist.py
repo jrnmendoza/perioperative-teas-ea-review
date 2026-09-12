@@ -61,10 +61,23 @@ def read_csv(path: Path) -> list[dict]:
 def read_js(path: Path, var: str):
     src = path.read_text(encoding="utf-8")
     start = src.index(var + " = ") + len(var + " = ")
-    return json.loads(src[start:src.rindex(";")])
+    # raw_decode, not loads on the slice to the last ";": data.js carries more than
+    # one assignment, so that slice hands the decoder the following statements too
+    # and it fails with "Extra data". This helper is copied across several build
+    # scripts; all copies were fixed together on 2026-09-12.
+    return json.JSONDecoder().raw_decode(src[start:])[0]
 
 
 def build() -> dict:
+    # Reports vs trials, derived rather than written into a sentence. This file
+    # said "All 70 included trials" while the artifact in the repo had been
+    # hand-corrected to "70 included reports (69 trials)" -- so every regeneration
+    # silently reintroduced the error the terminology pass had fixed. Deriving it
+    # is the only version that cannot drift back.
+    _studies = read_js(DASH / "data.js", "window.STUDIES_DATA")
+    n_reports = len(_studies)
+    n_trials = sum(1 for s_ in _studies if not s_.get("duplicate_report_of"))
+
     strategies = read_js(DASH / "search_strategies.js", "window.SEARCH_STRATEGIES")
     if isinstance(strategies, dict):
         strategies = next(v for v in strategies.values() if isinstance(v, list))
@@ -197,13 +210,15 @@ def build() -> dict:
     item("16a", "Results", "Numbers screened, assessed and included, ideally with a flow diagram.",
          READY,
          "Full PRISMA flow: 5,100 references resolving to 5,088 studies, 2,160 removed, "
-         "2,928 screened, 224 sought, 210 assessed, 70 included.",
+         f"2,928 screened, 224 sought, 210 assessed, {n_reports} included reports "
+         f"describing {n_trials} studies.",
          "PRISMA flow panel")
     item("16b", "Results", "Studies excluded at full text, with reasons.",
          READY, "141 exclusions with reasons, itemised by category.",
          "PRISMA flow panel")
     item("17", "Results", "Cite and describe the characteristics of each included study.",
-         READY, "All 70 included trials carry extracted characteristics and a citation.",
+         READY, f"All {n_reports} included reports ({n_trials} trials) carry extracted "
+                f"characteristics and a citation.",
          "Study characteristics panel")
     item("18", "Results", "Risk-of-bias assessments for each included study.",
          READY, f"{len(rob2)} result-specific assessments with all five domains and an overall "

@@ -95,6 +95,15 @@ WHY_NOT_REPORTED = {
         "PCA button presses/demands as a standardized effect — a proxy for opioid "
         "demand rather than a delivered dose. Computed under Target F (exploratory) "
         "with no adopted GRADE certainty."),
+    "TE_FLATUS_MD_REML_KH": ("superseded as the reported measure",
+        "The prespecified mean difference in hours for time to first flatus. It is still "
+        "computed, published and displayed beside the measure that replaced it, but it is "
+        "no longer what the review reports for this outcome: admitting Zhang 2018 on "
+        "2026-09-12 took the model to k = 7 and I\u00b2 = 97.3%, at which a pooled mean "
+        "difference in hours is not interpretable as a single effect. The standardised "
+        "measure (Hedges' g = \u22120.55, I\u00b2 = 39.2%) carries the outcome instead. "
+        "That substitution is post hoc and is recorded as a protocol amendment in "
+        "00_protocol/amendments/2026-09-12_target_e_effect_measure.md."),
     "TF_RESCUE_OPIOID_ALL": ("inclusion variant",
         "The same endpoint as the reported rescue-opioid analysis (k = 4, RR 0.50, "
         "Moderate certainty) with Liu 2026 (burn) added. Shown because the difference "

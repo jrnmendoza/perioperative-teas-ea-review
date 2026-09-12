@@ -6,16 +6,16 @@
 // none was adopted.
 //
 // Source : 06_FINAL_ANALYSIS_V26/03_RESULTS/master_reconciled_results_v26.csv
-// Of 45 analyses: 14 reported, 3 duplicates, 21 sensitivity variants,
-// 7 computed-but-not-reported (shown here).
+// Of 45 analyses: 14 reported, 3 duplicates, 20 sensitivity variants,
+// 8 computed-but-not-reported (shown here).
 window.COMPUTED_NOT_REPORTED = {
   "generated_by": "scripts/build_computed_not_reported.py",
   "source": "06_FINAL_ANALYSIS_V26/03_RESULTS/master_reconciled_results_v26.csv",
   "total_analyses": 45,
   "reported": 14,
   "duplicate": 3,
-  "sensitivity": 21,
-  "not_reported": 7,
+  "sensitivity": 20,
+  "not_reported": 8,
   "note": "Analyses this review computed but does not report as findings. They are shown so that a question like \"you report composite PONV — what about nausea and vomiting separately?\" has an answer other than silence. None carries a GRADE certainty rating, because none was adopted for it; adding one here would be exactly the unplanned outcome addition this panel exists to make visible rather than commit. Each row states why it is not reported.",
   "rows": [
     {
@@ -25,7 +25,7 @@ window.COMPUTED_NOT_REPORTED = {
       "stratum": "Nausea 0-24h (Yang 2024, Ma 2026, Szmit 2021)",
       "k": 3,
       "measure": "Risk Ratio (RR)",
-      "estimate": 0.6035,
+      "estimate": 0.6118,
       "ci_low": 0.3066,
       "ci_high": 1.2208,
       "p_value": 0.0922,
@@ -42,7 +42,7 @@ window.COMPUTED_NOT_REPORTED = {
       "stratum": "Nausea 0-48h (Luo 2026 alone)",
       "k": 1,
       "measure": "Risk Ratio (RR)",
-      "estimate": 0.4561,
+      "estimate": 0.4612,
       "ci_low": 0.3041,
       "ci_high": 0.6996,
       "p_value": null,
@@ -59,7 +59,7 @@ window.COMPUTED_NOT_REPORTED = {
       "stratum": "Vomiting 0-24h (Yang 2024, Ma 2026)",
       "k": 2,
       "measure": "Risk Ratio (RR)",
-      "estimate": 0.5755,
+      "estimate": 0.5896,
       "ci_low": 0.0259,
       "ci_high": 13.4465,
       "p_value": 0.2775,
@@ -76,7 +76,7 @@ window.COMPUTED_NOT_REPORTED = {
       "stratum": "Vomiting 0-48h (Luo 2026 alone)",
       "k": 1,
       "measure": "Risk Ratio (RR)",
-      "estimate": 0.3357,
+      "estimate": 0.3479,
       "ci_low": 0.1729,
       "ci_high": 0.7002,
       "p_value": null,
@@ -85,6 +85,23 @@ window.COMPUTED_NOT_REPORTED = {
       "null_value": 1.0,
       "why": "single trial",
       "detail": "One trial (Luo 2026), 'Single study (Not pooled)'."
+    },
+    {
+      "analysis_id": "TE_FLATUS_MD_REML_KH",
+      "target": "Target E (Flatus)",
+      "outcome": "Time to first flatus",
+      "stratum": "MD Hours (REML + KH)",
+      "k": 7,
+      "measure": "MD (Hours)",
+      "estimate": -6.7864,
+      "ci_low": -14.8382,
+      "ci_high": 1.2654,
+      "p_value": 0.0848,
+      "i2": 97.33,
+      "model": "MD Hours (REML + KH)",
+      "null_value": 0.0,
+      "why": "superseded as the reported measure",
+      "detail": "The prespecified mean difference in hours for time to first flatus. It is still computed, published and displayed beside the measure that replaced it, but it is no longer what the review reports for this outcome: admitting Zhang 2018 on 2026-09-12 took the model to k = 7 and I² = 97.3%, at which a pooled mean difference in hours is not interpretable as a single effect. The standardised measure (Hedges' g = −0.55, I² = 39.2%) carries the outcome instead. That substitution is post hoc and is recorded as a protocol amendment in 00_protocol/amendments/2026-09-12_target_e_effect_measure.md."
     },
     {
       "analysis_id": "TF_POSTOP_DELIVERED_MORPH",
