@@ -4289,6 +4289,28 @@ def t_baseline_conflicts_are_surfaced_not_corrected():
                 probs.append(f"{d['study']}: reported as a disagreement but the two sheets "
                              f"now agree -- withdraw it rather than leaving it standing")
 
+    # A recorded arm swap must still be true of the register, and its quoted
+    # evidence must still be in the file it names -- otherwise it is either
+    # already corrected (withdraw it) or describing something that moved.
+    for s in co.get("baseline_arm_swaps", []):
+        pop = (by_key.get(s["study"]) or {}).get("population") or {}
+        if not pop:
+            probs.append(f"{s['study']}: arm swap recorded for a study not in the register")
+            continue
+        for f in s["fields"]:
+            if pop.get(f["field"]) != f["register"]:
+                probs.append(f"{s['study']}.{f['field']} is now {pop.get(f['field'])!r}, not the "
+                             f"{f['register']!r} this finding describes -- withdraw or re-verify it")
+            if f["register"] == f["source_says"]:
+                probs.append(f"{s['study']}.{f['field']}: recorded as a swap but the two agree")
+        if not (ROOT / s["source"]).exists():
+            probs.append(f"{s['study']}: source {s['source']} does not exist")
+        if not s.get("arm_assignment_confirmed_by"):
+            probs.append(f"{s['study']}: no corroboration recorded for which arm is which, so the "
+                         f"swap cannot be told apart from a denominator error")
+    if co.get("baseline_arm_swaps") and "Baseline on the wrong arm" not in APP:
+        probs.append("recorded arm swaps are never rendered")
+
     for d in co.get("denominator_mismatches", []):
         pop = (by_key.get(d["study"]) or {}).get("population") or {}
         held = pop.get(d["arm"] + "_female")

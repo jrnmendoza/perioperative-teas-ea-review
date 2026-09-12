@@ -1287,6 +1287,9 @@ function summarisePopulation(reportsList) {
   const mism = (co.denominator_mismatches || []).filter(d => inScope.has(d.study)
                                                             && !d.explained_by_randomised);
   if (mism.length) out.flags.push({ kind: 'denominator-mismatch', rows: mism });
+  (co.baseline_arm_swaps || []).forEach(s => {
+    if (inScope.has(s.study)) out.flags.push({ kind: 'baseline-arm-swap', ...s });
+  });
   const lockRows = (co.locked_sheet_disagreements || []).filter(d => inScope.has(d.study));
   if (lockRows.length) out.flags.push({ kind: 'locked-sheets-disagree', rows: lockRows });
   (co.cohort_size_disagreements || []).forEach(d => {
@@ -1411,6 +1414,21 @@ function renderPopulationSummary(reportsList) {
             <div class="sd-sub"><strong>Decision needed:</strong> ${pwEsc(f.decision_needed)}</div>
             ${f.superseded_finding
               ? `<div class="sd-sub"><em>Correction:</em> ${pwEsc(f.superseded_finding)}</div>` : ''}
+          </div>`;
+        if (f.kind === 'baseline-arm-swap') return `
+          <div class="pop-flag">
+            <span class="badge badge-rose">Baseline on the wrong arm</span>
+            <strong>${pwEsc(f.study)}</strong> &mdash; ${pwEsc(f.summary)}
+            <div class="sd-sub">Source: <code>${pwEsc(f.source)}</code>, ${pwEsc(f.source_location)}
+              &mdash; &ldquo;${pwEsc(f.quote)}&rdquo;</div>
+            <ul class="pop-evidence">${f.fields.map(x => `<li><code>${pwEsc(x.field)}</code>:
+              register ${pwEsc(x.register)}, source says ${pwEsc(x.source_says)}</li>`).join('')}</ul>
+            <div class="sd-sub">Which arm is which is confirmed three ways, so the denominators
+              are not in doubt:</div>
+            <ul class="pop-evidence">${(f.arm_assignment_confirmed_by || []).map(e => `<li>${pwEsc(e)}</li>`).join('')}</ul>
+            ${f.also ? `<div class="sd-sub">${pwEsc(f.also)}</div>` : ''}
+            <div class="sd-sub"><strong>Affects:</strong> ${pwEsc(f.affects)}</div>
+            <div class="sd-sub"><strong>Decision needed:</strong> ${pwEsc(f.decision_needed)}</div>
           </div>`;
         if (f.kind === 'locked-sheets-disagree') return `
           <div class="pop-flag">

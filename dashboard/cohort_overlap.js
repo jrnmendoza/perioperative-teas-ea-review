@@ -101,6 +101,55 @@ window.COHORT_OVERLAP = {
     }
   ],
   "attribution_conflicts": [],
+  "baseline_arm_swaps": [
+    {
+      "study": "Gu 2019",
+      "summary": "Age, BMI and sex are each recorded against the opposite arm.",
+      "source": "TEAS EA Verification/Source PDFs/covidence_1471_full_article.pdf",
+      "source_location": "Table 1, Characteristics of patients (p4)",
+      "quote": "Characteristics C-TEAS(n = 59) L-TEAS(n = 58) | Age (mean ± SD, year) 56.67 ± 6.23  57.59 ± 7.32 | Sex Male 29  31 | Female 30  27 | BMI(mean ± SD, kg/m2) 21.84 ± 2.78  22.71 ± 2.54",
+      "arm_assignment_confirmed_by": [
+        "The paper: the intervention is the long-duration TEAS group (L-TEAS, n = 58); the comparator is C-TEAS (n = 59), whose stimulator output wires were broken so no current was delivered — a true sham, as the register's comparator_type says.",
+        "Outcome_Data_AF_LOCK: all eight Gu 2019 rows record Intervention arm “Long-duration TEAS” with analysed n = 58 against Comparator arm “Sham/no-current TEAS” with analysed n = 59.",
+        "The register's own arm_n values (58 for the TEAS group, 59 for the Sham group) already match both."
+      ],
+      "fields": [
+        {
+          "field": "arm1_age",
+          "register": "56.67 ± 6.23",
+          "source_says": "57.59 ± 7.32"
+        },
+        {
+          "field": "arm2_age",
+          "register": "57.59 ± 7.32",
+          "source_says": "56.67 ± 6.23"
+        },
+        {
+          "field": "arm1_bmi",
+          "register": "21.84 ± 2.78",
+          "source_says": "22.71 ± 2.54"
+        },
+        {
+          "field": "arm2_bmi",
+          "register": "22.71 ± 2.54",
+          "source_says": "21.84 ± 2.78"
+        },
+        {
+          "field": "arm1_female",
+          "register": "30/59 (50.8%)",
+          "source_says": "27/58 (46.6%)"
+        },
+        {
+          "field": "arm2_female",
+          "register": "27/58 (46.6%)",
+          "source_says": "30/59 (50.8%)"
+        }
+      ],
+      "also": "asa_status reads “ASA I: 20 (33.9%), ASA II: 39 (66.1%)”, which sums to 59 and is the SHAM arm's distribution presented as if it were study-wide. The paper gives ASA I 23 / II 35 for the 58 patients in the TEAS arm.",
+      "affects": "Descriptive baseline display only. No analysed denominator, effect estimate, risk-of-bias judgement or GRADE rating reads these fields.",
+      "decision_needed": "Straightforward to correct — the paper, the lock and the register's own arm labels all agree on which arm is which, so the six values simply move back to their arms. Left uncorrected pending review-team sign-off, because it edits the register's baseline layer."
+    }
+  ],
   "resolved_attribution": [
     {
       "studies": [
