@@ -4147,26 +4147,47 @@ def t_no_review_wide_randomised_total_is_published():
 
 def t_possible_shared_cohorts_are_flagged_not_merged():
     """
-    STRUCTURAL. The scan flags report pairs that may describe one cohort. A flag
-    is for a human; the dashboard must not act on it. So every flagged pair still
-    counts as two studies, and the flag has to be visible rather than sitting in
-    a file nobody reads.
+    STRUCTURAL. The scan flags report pairs that may describe one cohort, and the
+    review team adjudicates them against the source PDFs. Neither state licenses
+    the dashboard to act: a flagged pair and an adjudicated-separate pair both
+    still count as two studies, and only a link DECLARED in the register (via
+    duplicate_report_of) ever reduces the study count.
+
+    An adjudication must also stay honest about its own basis: it names a decision
+    record that exists, carries the evidence it rested on, and does not quietly
+    become the reason the pair stopped being detected -- the scan itself fails the
+    build if it can no longer find a pair it has an adjudication for.
     """
     co = _cohort_overlap()
     flagged = [c for c in co["candidates"] if c["status"] == "flagged_for_review"]
-    probs = []
+    resolved = [c for c in co["candidates"] if c["status"] == "adjudicated_separate"]
     declared = {s["key"] for s in STUDIES if s.get("duplicate_report_of")}
-    for c in flagged:
+    probs = []
+    for c in flagged + resolved:
         for k in c["studies"]:
             if k in declared:
-                probs.append(f"{k} is flagged for review AND already merged away -- the scan and "
-                             f"the register disagree about whether this is settled")
+                probs.append(f"{k} is an unmerged candidate AND merged away in the register -- "
+                             f"the scan and the register disagree about whether this is settled")
+    for c in resolved:
+        a = c.get("adjudication") or {}
+        if a.get("verdict") != "separate":
+            probs.append(f"{c['studies']}: adjudicated_separate without a 'separate' verdict")
+        if not a.get("evidence"):
+            probs.append(f"{c['studies']}: adjudicated separate with no evidence recorded")
+        rec = a.get("record")
+        if not rec or not (ROOT / rec).exists():
+            probs.append(f"{c['studies']}: decision record {rec!r} does not exist")
     if flagged and "possible-shared-cohort" not in APP:
         probs.append("flagged candidates are never rendered, so a reader cannot see them")
-    if flagged and "pop-flags" not in (DASH / "styles.css").read_text(encoding="utf-8"):
-        probs.append("the flag panel has no styles")
+    if resolved and "pop-resolved" not in APP:
+        probs.append("adjudicated candidates are never rendered, so the question and its answer "
+                     "vanish from the page once settled")
+    css = (DASH / "styles.css").read_text(encoding="utf-8")
+    for cls in (("pop-flags",) if flagged else ()) + (("pop-resolved",) if resolved else ()):
+        if cls not in css:
+            probs.append(f"the .{cls} panel has no styles")
     check("t_possible_shared_cohorts_are_flagged_not_merged", not probs,
-          f"{len(flagged)} flagged: " + "; ".join(probs))
+          f"{len(flagged)} open, {len(resolved)} adjudicated: " + "; ".join(probs))
 
 
 def t_baseline_conflicts_are_surfaced_not_corrected():

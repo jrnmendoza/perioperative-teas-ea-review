@@ -66,6 +66,42 @@ ARM_N_CONFLICTS = {
     },
 }
 
+# Candidate pairs the review team has adjudicated against their source PDFs. An
+# adjudication does not remove the pair from the scan -- the detection rule still
+# has to find it, or the rule has quietly stopped working -- it records what the
+# reading concluded and the evidence it rested on. "separate" pairs keep counting
+# as two studies; a pair found to be one cohort would instead be declared in the
+# register via duplicate_report_of, the way the Yeh pair is.
+ADJUDICATED = {
+    frozenset(("Chen 2015", "Chen 2015 (Hyperalgesia)")): {
+        "verdict": "separate",
+        "date": "2026-09-12",
+        "record": "05_study_linkage/cohorts/chen_2015_thyroidectomy_pair.md",
+        "summary": "Two separate trials by one group at one centre, run back to back.",
+        "evidence": [
+            "Separate ethics approvals from the same board: Chen 2015 cites "
+            "\u201cethical approval from Fujian Provincial Hospital (Ref: K2014-12-003)\u201d; "
+            "Chen 2015 (Hyperalgesia) cites \u201cthe Institutional Review Board of Fujian "
+            "Provincial Hospital (Ref: K2014-07-003)\u201d.",
+            "Non-overlapping recruitment: \u201cfrom January 2015 to May 2015\u201d versus "
+            "\u201cfrom August 2014 to December 2014\u201d \u2014 the second trial had finished "
+            "recruiting before the first began.",
+            "Independent screening funnels: 91 assessed \u2192 3 ineligible, 4 declined "
+            "\u2192 84 enrolled \u2192 83 analysed; versus 73 assessed \u2192 7 ineligible, "
+            "6 declined \u2192 60 enrolled \u2192 59 analysed.",
+            "Chen 2015 is prospectively registered as ClinicalTrials.gov NCT02333747; "
+            "Chen 2015 (Hyperalgesia) states no registration.",
+            "Different primary outcomes (QoR-40 at 24 h versus mechanical pain threshold), "
+            "partly different author teams, and separate funding grants "
+            "(2015J01373 versus 2012Y0012).",
+        ],
+        "shared_but_not_probative":
+            "Same first author, centre, procedure, sex restriction, ASA and age eligibility, "
+            "device and stimulation parameters \u2014 one group running a consistent protocol "
+            "across consecutive trials, which is what made this a candidate worth reading.",
+    },
+}
+
 # The two papers also disagree with each other about the size of the cohort they
 # describe. That is recorded as a property of the linked pair, not of either report.
 COHORT_SIZE_DISAGREEMENTS = [{
@@ -163,9 +199,17 @@ def build() -> dict:
             overlap = "same surgical population" in shared or bool(shared_arm_n)
             if not (context and overlap) and not (same_total and shared_arm_n):
                 continue
+            adj = ADJUDICATED.get(pair)
+            if pair in declared_pairs:
+                status = "confirmed"
+            elif adj and adj["verdict"] == "separate":
+                status = "adjudicated_separate"
+            else:
+                status = "flagged_for_review"
             candidates.append({
                 "studies": sorted(pair),
-                "status": "confirmed" if pair in declared_pairs else "flagged_for_review",
+                "status": status,
+                "adjudication": adj,
                 "shared": shared,
                 "analysed_n": {a["key"]: a["population"]["total_n"],
                                b["key"]: b["population"]["total_n"]},
@@ -175,6 +219,16 @@ def build() -> dict:
                 "citations": {a["key"]: a["citation"], b["key"]: b["citation"]},
                 "procedure": pa.get("surgery_procedure") or a.get("surgery_procedure"),
             })
+
+    found_pairs = {frozenset(c["studies"]) for c in candidates}
+    for pair, adj in ADJUDICATED.items():
+        if pair not in found_pairs:
+            raise ValueError(
+                f"adjudication recorded for {sorted(pair)} but the scan no longer finds that "
+                "pair; either the register changed or the detection rule drifted -- re-read "
+                "the sources before deleting the adjudication")
+        if not (ROOT / adj["record"]).exists():
+            raise ValueError(f"{sorted(pair)}: adjudication record {adj['record']} is missing")
 
     for d in declared:
         if not any(set(c["studies"]) == {d["study_record"], d["companion_report"]}
@@ -207,8 +261,9 @@ def build() -> dict:
         "reports": len(studies),
         "studies": len(studies) - len(companions),
         "declared_links": declared,
-        "candidates": sorted(candidates, key=lambda c: (c["status"] != "flagged_for_review",
-                                                        c["studies"])),
+        "candidates": sorted(candidates, key=lambda c: (
+            {"flagged_for_review": 0, "adjudicated_separate": 1, "confirmed": 2}[c["status"]],
+            c["studies"])),
         "arm_n_conflicts": ARM_N_CONFLICTS,
         "cohort_size_disagreements": COHORT_SIZE_DISAGREEMENTS,
         "participants": {
@@ -261,9 +316,14 @@ def main(check_only: bool) -> int:
         return 0
     OUT_JS.write_text(text, encoding="utf-8")
     flagged = [c for c in payload["candidates"] if c["status"] == "flagged_for_review"]
+    adjudicated = [c for c in payload["candidates"] if c["status"] == "adjudicated_separate"]
     print(f"{payload['reports']} reports -> {payload['studies']} studies "
           f"({len(payload['declared_links'])} declared link(s), "
-          f"{len(flagged)} candidate(s) flagged for review)")
+          f"{len(adjudicated)} adjudicated separate, "
+          f"{len(flagged)} candidate(s) still flagged for review)")
+    for c in adjudicated:
+        print(f"  RESOLVED {' / '.join(c['studies'])}: separate cohorts "
+              f"({c['adjudication']['date']})")
     for c in flagged:
         print(f"  FLAG {' / '.join(c['studies'])}: shared {', '.join(c['shared'])}")
     return 0

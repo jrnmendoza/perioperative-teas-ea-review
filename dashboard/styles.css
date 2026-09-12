@@ -2575,6 +2575,21 @@ pre code { overflow-wrap: normal; word-break: normal; }
 .pop-flag:first-of-type { border-top: 0; }
 .pop-flag .sd-sub { display: block; margin-top: 0.25rem; }
 
+/* A settled question reads as settled: neutral, not amber. */
+.pop-resolved {
+  margin-top: 0.7rem; padding: 0.7rem 0.85rem;
+  background: rgba(52, 211, 153, 0.05);
+  border: 1px solid rgba(52, 211, 153, 0.22);
+  border-radius: var(--radius-md);
+  font-size: 0.78rem;
+}
+.pop-resolved > summary { cursor: pointer; color: #6ee7b7; }
+.pop-evidence {
+  margin: 0.4rem 0 0; padding-left: 1.1rem;
+  font-size: 0.72rem; color: var(--text-muted); line-height: 1.55;
+}
+.pop-evidence li { margin-bottom: 0.25rem; }
+
 @media (max-width: 640px) {
   .pop-bar-row { grid-template-columns: minmax(0, 6.5rem) minmax(2rem, 1fr) auto; gap: 0.4rem; }
 }

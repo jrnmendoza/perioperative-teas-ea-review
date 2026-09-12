@@ -19,7 +19,21 @@ window.COHORT_OVERLAP = {
         "Chen 2015",
         "Chen 2015 (Hyperalgesia)"
       ],
-      "status": "flagged_for_review",
+      "status": "adjudicated_separate",
+      "adjudication": {
+        "verdict": "separate",
+        "date": "2026-09-12",
+        "record": "05_study_linkage/cohorts/chen_2015_thyroidectomy_pair.md",
+        "summary": "Two separate trials by one group at one centre, run back to back.",
+        "evidence": [
+          "Separate ethics approvals from the same board: Chen 2015 cites “ethical approval from Fujian Provincial Hospital (Ref: K2014-12-003)”; Chen 2015 (Hyperalgesia) cites “the Institutional Review Board of Fujian Provincial Hospital (Ref: K2014-07-003)”.",
+          "Non-overlapping recruitment: “from January 2015 to May 2015” versus “from August 2014 to December 2014” — the second trial had finished recruiting before the first began.",
+          "Independent screening funnels: 91 assessed → 3 ineligible, 4 declined → 84 enrolled → 83 analysed; versus 73 assessed → 7 ineligible, 6 declined → 60 enrolled → 59 analysed.",
+          "Chen 2015 is prospectively registered as ClinicalTrials.gov NCT02333747; Chen 2015 (Hyperalgesia) states no registration.",
+          "Different primary outcomes (QoR-40 at 24 h versus mechanical pain threshold), partly different author teams, and separate funding grants (2015J01373 versus 2012Y0012)."
+        ],
+        "shared_but_not_probative": "Same first author, centre, procedure, sex restriction, ASA and age eligibility, device and stimulation parameters — one group running a consistent protocol across consecutive trials, which is what made this a candidate worth reading."
+      },
       "shared": [
         "country of conduct",
         "surgical specialty",
@@ -55,6 +69,7 @@ window.COHORT_OVERLAP = {
         "Yeh 2011"
       ],
       "status": "confirmed",
+      "adjudication": null,
       "shared": [
         "country of conduct",
         "surgical specialty",

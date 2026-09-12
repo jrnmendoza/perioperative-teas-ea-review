@@ -1211,7 +1211,7 @@ function summarisePopulation(reportsList) {
                 reported: {}, ranges: {}, female: null, countries: {},
                 anaesthesiaStated: 0, adjunctCount: 0,
                 analysedTotal: 0, randomisedContrast: 0, randomisedTrial: 0,
-                flags: [] };
+                flags: [], resolved: [] };
   out.analysedTotal = studies.reduce((a, s) => a + ((s.population && s.population.total_n) || 0), 0);
 
   const spans = {
@@ -1285,8 +1285,13 @@ function summarisePopulation(reportsList) {
     if (d.studies.some(k => inScope.has(k))) out.flags.push({ kind: 'cohort-size', ...d });
   });
   (co.candidates || []).forEach(cand => {
-    if (cand.status === 'flagged_for_review' && cand.studies.some(k => inScope.has(k))) {
+    if (!cand.studies.some(k => inScope.has(k))) return;
+    if (cand.status === 'flagged_for_review') {
       out.flags.push({ kind: 'possible-shared-cohort', ...cand });
+    } else if (cand.status === 'adjudicated_separate') {
+      // Resolved, but kept visible. Deleting a candidate once it is read would
+      // leave no record that the question was ever asked and answered.
+      out.resolved.push(cand);
     }
   });
   return out;
@@ -1338,6 +1343,30 @@ function renderPopulationSummary(reportsList) {
       <span class="pop-bar-track"><i style="width:${(100 * k / p.n).toFixed(1)}%"></i></span>
       <span class="pop-bar-num">${k} <span style="color:var(--text-muted);">(${pct(k)})</span></span>
     </div>`).join('');
+
+  // Adjudicated candidates read as settled, so they sit in their own neutral
+  // panel rather than under the amber "flags" heading. The question and the
+  // evidence that answered it both stay on the page.
+  const resolvedHtml = !p.resolved.length ? '' : `
+    <details class="pop-resolved">
+      <summary><strong>Duplicate-cohort questions resolved (${p.resolved.length})</strong>
+        <span class="sd-sub"> &mdash; read against the source publications and settled</span></summary>
+      ${p.resolved.map(c => {
+        const a = c.adjudication || {};
+        return `
+        <div class="pop-flag">
+          <span class="badge badge-emerald">Separate cohorts</span>
+          <strong>${c.studies.map(pwEsc).join(' / ')}</strong> &mdash; ${pwEsc(a.summary || '')}
+          <div class="sd-sub">Flagged because the two reports share
+            ${c.shared.map(pwEsc).join(', ')}. Read on ${pwEsc(a.date || '')} and found to be
+            two trials, so both continue to count as separate studies.</div>
+          <ul class="pop-evidence">${(a.evidence || []).map(e => `<li>${pwEsc(e)}</li>`).join('')}</ul>
+          ${a.shared_but_not_probative
+            ? `<div class="sd-sub">What they do share: ${pwEsc(a.shared_but_not_probative)}</div>` : ''}
+          ${a.record ? `<div class="sd-sub">Decision record: <code>${pwEsc(a.record)}</code></div>` : ''}
+        </div>`;
+      }).join('')}
+    </details>`;
 
   const flagHtml = !p.flags.length ? '' : `
     <details class="pop-flags">
@@ -1460,6 +1489,7 @@ function renderPopulationSummary(reportsList) {
       </div>
     </div>
     ${flagHtml}
+    ${resolvedHtml}
   `;
 }
 
