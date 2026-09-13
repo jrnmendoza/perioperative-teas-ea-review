@@ -1,0 +1,18 @@
+opioid,route,source_unit,factor_mg_IV_morphine,source,context,certainty,role,notes
+morphine,IV,mg,1,Identity conversion,Delivered systemic dose,High dimensional certainty,MAIN,No oral-to-IV assumption
+hydromorphone,IV,mg,5,https://www2.gov.bc.ca/assets/gov/health/practitioner-pro/bc-guidelines/palliative2_-_pain_equianalgesic.pdf,Parenteral equianalgesic table,Conventional approximation,SENSITIVITY,Chen1998 rescue construct unverified
+fentanyl,IV,µg,0.1,https://www2.gov.bc.ca/assets/gov/health/practitioner-pro/bc-guidelines/palliative2_-_pain_equianalgesic.pdf,Parenteral equianalgesic table,Conventional approximation,ADDITIONAL,Per mg factor100; normalized µg/kg not absolute µg
+sufentanil,IV,µg,0.5,https://www2.gov.bc.ca/assets/gov/health/practitioner-pro/bc-guidelines/palliative2_-_pain_equianalgesic.pdf,Chronic parenteral range geometric midpoint,Low for acute PCA,CENTRAL SENSITIVITY,Not required by strict principal body
+sufentanil,IV,µg,0.25,https://www2.gov.bc.ca/assets/gov/health/practitioner-pro/bc-guidelines/palliative2_-_pain_equianalgesic.pdf,Lower range bound,Low for acute PCA,SENSITIVITY,Scale both mean and SD
+sufentanil,IV,µg,1,https://www2.gov.bc.ca/assets/gov/health/practitioner-pro/bc-guidelines/palliative2_-_pain_equianalgesic.pdf,Upper range bound,Low for acute PCA,SENSITIVITY,Scale both mean and SD
+mixed sufentanil and oxycodone,IV pump,author MME,1,He2026 article supplements SAP registry,Author-equivalent denominator unknown,Unverified IV basis,SENSITIVITY,Assumption only; no component reconstruction
+tramadol,IV,mg,,Oztas2019 and Ntritsou2014 source articles,Native dose retained,No final conversion adopted,NATIVE ONLY,No universal factor imposed
+pethidine,IM,mg,,Oztas2019 and Lin2002 source articles,Rescue dose,No final conversion adopted,NATIVE ONLY,Cannot reconstruct total systemic SD
+remifentanil,IV,µg,,Source articles,Intraoperative cumulative dose,Native metric only,ADDITIONAL,mg multiplied1000 to µg; no IVMME conversion
+alfentanil,IV,µg/kg/min,,Sim2002,Intraoperative dose rate,Native metric only,NATIVE ONLY,Do not convert rate to absolute postoperative dose
+butorphanol,IV PCA,mg,,Song2020,Nominal bolus from presses,Delivered dose unverified,HOLD,Programmed bolus is not observed dose
+dezocine,IM,mg,,Liu2026 burn,Rescue5mg per treated patient,No final conversion adopted,NATIVE ONLY,Do not extrapolate potency
+oxycodone,IV,mg,,He2026 hepatectomy,Pre-end dose and mixed PCA,No standalone factor adopted,HOLD,Pre-end dose outside registered time origin
+oxycodone,oral,mg,,Chen1998,Oral rescue/transition,Amount unquantified,HOLD,Do not assume zero
+bucinnazine,IM,mg,,Yang2024,100mg rescue permitted,Amount unquantified,HOLD,GI rescue counts cannot be assigned to opioid rescue
+morphine,epidural,mg,,Yeh2010,Neuraxial PCA,Not systemic IV equivalent,HOLD,Route conflict with probable companion report
