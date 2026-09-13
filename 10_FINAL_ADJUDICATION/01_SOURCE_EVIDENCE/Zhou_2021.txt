@@ -1,0 +1,1206 @@
+
+=== PDF PAGE 1 ===
+C L I N I C A L T R I A L R E P O RT
+Effects of Transcutaneous Electrical Acupoint 
+Stimulation (TEAS) on Postoperative Recovery in 
+Patients with Gastric Cancer: A Randomized 
+Controlled Trial
+This article was published in the following Dove Press journal: 
+Cancer Management and Research
+Xin Zhou1 
+Shou-Gen Cao1 
+Xiao-Jie Tan1 
+Xiao-Dong Liu1 
+Ze-Qun Li1 
+Ling-Xin Kong2 
+Yu-Long Tian1 
+Dan Liu1 
+Shuai Shen1 
+Yu-Qi Sun1 
+Hai-Tao Jiang1 
+Yan-Bing Zhou1
+1Department of Gastrointestinal Surgery, 
+The Affiliated Hospital of Qingdao 
+University, Qingdao, Shandong Province, 
+People’s Republic of China; 2Department 
+of Rehabilitation, The Affiliated Hospital 
+of Qingdao University, Qingdao, 
+Shandong Province, People’s Republic of 
+China 
+Purpose: Transcutaneous electrical acupoint stimulation (TEAS) is an innovative choice for 
+postoperative pain management. However, the safety and effectiveness of this traditional 
+Chinese medicine (TCM) therapy for patients who underwent gastrectomy is largely 
+unknown. So, the purpose of this study is to evaluate the safety and effectiveness of TEAS 
+for patients who underwent gastrectomy.
+Patients and Methods: We recruited 96 patients with gastric cancer from May 2019 to 
+November 2019; 82 patients were enrolled, and 81 patients completed. Patients were 
+randomly assigned to TEAS group (TG) received TEAS on postoperative day (POD) 1–3 
+or control group (CG) at a 1:1 ratio. The primary outcomes were pain score and consumption 
+of analgesics. The secondary were the time of first postoperative flatus and defecation, 
+frequency of postoperative nausea, vomiting, distention, diarrhea, comfort of semi-fluid 
+diet, Clavien-Dindo grade (C-D grade) and length of postoperative day. We performed 
+hematological analysis to explore the possible mechanisms.
+Results: Overall, 81 patients were enrolled included in the analysis. Compared with CG, 
+pain scores in TG were lower on POD 1–5 (average: 2.55±0.21 vs 3.10±0.42, P<0.001), and 
+the use rate of opioids was lower (43.9 vs 75.0, P=0.004); time of first postoperative flatus 
+(55.63±16.74 vs 72.60±20.92, P<0.001) and defecation (72.20±16.24 vs 95.78±17.75, 
+P<0.001) were shorter; the frequency of nausea were fewer (1.88±1.09 vs 2.58±0.77, 
+P=0.029) and patients were more comfortable with semi-fluid diet (7.63±0.63 vs 6.93 
+±0.69, P<0.001); among the hematologic results, β-endorphin (β-End), interleukin-2 (IL-2), 
+motilin (MTL) on POD 3, POD 5 were lower, 5-hydroxytryptamine (5-HT), interleukin-6 
+(IL-6), tumor necrosis factor-α (TNF-α) were higher. And no adverse event was reported.
+Conclusion: TEAS can relieve postoperative pain and promote the recovery of gastroin­
+testinal function. Consequently, it can be an adjunctive therapy to enhance postoperative 
+recovery for patients after gastrectomy.
+Keywords: stomach neoplasms, acupuncture therapy, enhanced recovery after surgery, pain 
+management, gastrointestinal function
+Introduction
+In 2018, gastric cancer was the fifth most prevalent cancer and ranked third in 
+cancer-related mortality.1 Surgery is the only curative treatment for advanced 
+gastric cancer and D2 lymphadenectomy is recognized as the standard procedure 
+Correspondence: Yan-Bing Zhou 
+Department of Gastrointestinal Surgery, 
+The Affiliated Hospital of Qingdao 
+University, No. 16 Jiangsu Road, Shinan 
+District, Qingdao City, Shandong 
+Province, People’s Republic of China 
+Tel +86-13708971773 
+Email zhouyanbing999@aliyun.com
+submit your manuscript | www.dovepress.com
+Cancer Management and Research 2021:13 1449–1458 
+1449
+http://doi.org/10.2147/CMAR.S292325 
+DovePress
+© 2021 Zhou et al. This work is published and licensed by Dove Medical Press Limited. The full terms of this license are available at https://www.dovepress.com/terms.php 
+and incorporate the Creative Commons Attribution – Non Commercial (unported, v3.0) License (http://creativecommons.org/licenses/by-nc/3.0/). By accessing the work 
+you hereby accept the Terms. Non-commercial uses of the work are permitted without any further permission from Dove Medical Press Limited, provided the work is properly attributed. For 
+permission for commercial use of this work, please see paragraphs 4.2 and 5 of our Terms (https://www.dovepress.com/terms.php).
+Cancer Management and Research 
+Dovepress
+open access to scientific and medical research
+Open Access Full Text Article
+Cancer Management and Research downloaded from https://www.dovepress.com/ on 17-Jul-2022
+For personal use only.
+
+
+=== PDF PAGE 2 ===
+Asia-wide.2 Regardless of the approach of surgery, there 
+must be pain following surgical injury,3 which may be 
+mediated by afferent nervous stimulation together with 
+complex 
+inflammatory-immunological 
+responses.4,5 
+Enhanced 
+recovery 
+after 
+surgery 
+(ERAS), 
+a perioperative concept proposed by professor Kehlet in 
+1997,6 has been introduced worldwide ever since and its 
+ultimate purpose is to modify undesirable stress7 and pain 
+management is one essential evidence-based component 
+in this multimodal care program8 to establish a “fast 
+track” recovery pathway. Whether it is inflammatory 
+pain or neuropathic pain it will cause kinds of complex 
+problems not only in cardiopulmonary system.9 That’s 
+why we prioritize postoperative pain commonly aiming 
+at lessening suffering and shortening convalescence. 
+Opioid is a cornerstone in clinical analgesia though 
+adverse outcomes such as respiratory depression, misuse 
+have attracted out attentions in recent years. In pain 
+management, multimodal analgesia emphasizes the com­
+bination of analgesics with different mechanisms and 
+techniques to minimize the opioids use and side 
+effects.10 In fact, in addition to new drugs with lower 
+side effects, novel techniques are being explored in 
+many medical centers.
+Acupuncture is an ancient empirical medicine in tradi­
+tional Chinese medicine (TCM). Nowadays, it has been 
+demonstrated that acupuncture can be of benefit to pain 
+control.11 Ancient physicians believed that Yin and Yang 
+are interactive and interdependent opposing forces univer­
+sally, referring cold and warm, static and active, Qi and 
+blood (in body)12 (Appendix 1). And acupuncture corrects 
+the imbalance of Yin and Yang by readjusting the body’s 
+meridians which are energy-carrying pathways supporting 
+the circulation of Qi and blood. Nowadays, acupuncture 
+has derived new forms, such as electroacupuncture (EA), 
+transcutaneous electrical acupoint stimulation (TEAS), etc. 
+Among them, TEAS evolved on the basis of EA with 
+similar efficacy13 and some studies claimed that it can 
+enhance rehabilitation.14,15 Due to the non-invasive and 
+convenience of TEAS, it has been experimented to 
+improve recovery in various subjects.16,17 However, there 
+is still a need for more high-quality researches on the 
+perioperative application of TEAS. So, the objective of 
+this trial was to validate the efficacy of TEAS on post­
+operative recovery in patients after gastrectomy. In addi­
+tion, we also hope to explore molecular interpretations of 
+TEAS in this trial.
+Patients and Methods
+Trial Design
+This was an unblinded randomized controlled trial. The 
+protocol was approved by the ethics committee of the 
+Affiliated Hospital of Qingdao University, and its ethical 
+approval number is QYFYKYLL201812. It was carried 
+out at the Department of Gastrointestinal Surgery, the 
+Affiliated Hospital of Qingdao University, between 
+May 1, 2019 and October 31, 2019. A total of 96 patients 
+were recruited. Eighty-two patients who were eligible for 
+inclusion criteria were randomly assigned into TEAS 
+group (TG) receiving 3-consecutive-day TEAS and control 
+group (CG) at a 1:1 ratio. During the perioperative period, 
+the same ERAS protocol (See Appendix 2 for detail) was 
+performed on both groups of patients who underwent 
+standard laparoscopic/robot radical gastrectomy. We col­
+lected clinical data and blood samples for analysis. This 
+trial has been registered and reviewed at the Chinese 
+Clinical 
+Trial 
+Registry 
+with 
+registration 
+number 
+ChiCTR1900022692. The date of trial registration was 
+April 22, 2019. This study was conducted in accordance 
+with the Declaration of Helsinki.
+Please contact 215099754@qq.com to view the full 
+trial protocol.
+Participants
+The inclusion, exclusion and withdraw criteria were as 
+follows. Inclusion: 1. Any religion or gender; 2. 18–75 
+years old; 3. Proposed radical surgery for gastric cancer 
+(laparoscopy/robot); 4. Signed the informed consent. 
+Exclusion: 1. Received neoadjuvant therapy; 2. American 
+Society of Anesthesiologists (ASA) grade>3; 3. cTNM 
+stage IV (AJCC-American Joint Committee on Cancer, 
+8th Edition Cancer Staging); 4. Current or previous dia­
+betes; 5. Systemic infection or contagious disease; 6. 
+Chronic constipation or diarrhea; 7. Current or previous 
+cardiovascular/cerebrovascular accident or central nervous 
+system injury; 8. Mental incapacity or severe emotional or 
+mental illness; 9. Cardiac pacemaker; 10. Local infiltration 
+anesthesia for incision; 11. Anesthesia is not epidural 
+anesthesia–assisted general anesthesia; 12. Use of patient- 
+controlled analgesia (PCA) after surgery. Withdraw: 1. 
+Severe accident occurred during the operation such as 
+hemorrhagic shock, cardiogenic shock, ventricular fibrilla­
+tion; 2. Severe comorbidities after surgery such as pul­
+monary embolism, severe pneumonia; 3. Patients or family 
+members decide to withdraw. It should be noted that the 
+submit your manuscript | www.dovepress.com 
+DovePress 
+Cancer Management and Research 2021:13 
+1450
+Zhou et al 
+Dovepress
+Powered by TCPDF (www.tcpdf.org)
+
+
+=== PDF PAGE 3 ===
+Clavien-Dindo grade (C-D grade) was used for postopera­
+tive comorbidity grade and patients with a grade>2 met the 
+withdrawal criteria.
+Intervention
+We selected several acupoints with potential functions of 
+pain relief and promoting gastrointestinal recovery. 
+According to the WHO standard acupuncture point loca­
+tions (Appendix 3), the chosen acupoints are as follows: 1. 
+Hegu (LI4): On the dorsum of the hand, between the first 
+and second metacarpal bone, radial to the midpoint of 
+the second metacarpal bone. 2. Neiguan (PC6): On the 
+anterior aspect of the forearm, between the tendons of the 
+palmaris longus and the flexor carpi radialis, 2 cun prox­
+imal to the palmar wrist crease. 3. Weishu (BL21): In the 
+upper back region, at the same level as the inferior border 
+of the spinous process of the 12th thoracic vertebra (T12), 
+1.5 cun lateral to the posterior median line. 4. 
+Xiaochangshu (BL27): In the sacral region, at the same 
+level as the first posterior sacral foramen, and 1.5 cun 
+lateral to the median sacral crest. 5. Zusanli (ST36): On 
+the anterior aspect of the leg, on the line connecting ST35 
+(on the anterior aspect of the knee, in the depression lateral 
+to the patellar ligament) with ST41 (on the anterior aspect 
+of the ankle, in the depression at the center of the front 
+surface of the ankle joint, between the tendons of extensor 
+hallucis longus and extensor digitorum longus), 3 cun 
+inferior to ST35. 6. Shangjuxu (ST37): On the anterior 
+aspect of the leg, on the line connecting ST35 with ST41, 
+6 cun inferior to ST35.
+For patients in TG, they received TEAS therapy at 8:00 
+a.m. and 4:00 p.m. on postoperative day (POD) 1–3 lasting 
+30 minutes each time. After sterilizing the skin surround­
+ing the acupoints with 75% alcohol, we applied the elec­
+trode pads on the acupoints.
+Devices
+The device we used was Huatuo Electronic Acupuncture 
+Treatment Instrument SDZ-II (Suzhou Medical Supplies 
+Factory Co., Ltd., Registration number 20172270675), 
+and the frequency was set on 20/100Hz (20Hz 5s, 100Hz 
+10s). The other parameters such as intensity are set accord­
+ing to the actual experience of the patients, taking the 
+patient’s discomfort as the upper limit.
+Outcomes
+The primary outcomes of this trial were as follows: (1) 
+Pain score. We used numerical rating scale (NRS, in 10 
+levels and we have improved the basic unit by dividing the 
+10 levels into 20 levels, ie, 0.5 as a unit) combined with 
+the Wong-Baker faces pain rating scale. We recorded the 
+pain score at 6-time points (last night till 8:00, 8:00, 12:00, 
+16:00, 20:00, time before sleep) a day from POD 1 to POD 
+5. On POD 0, we recorded the pain scores at the awake 
+time postoperatively and other time points at the above. (2) 
+Consumption 
+of 
+analgesics. 
+Non-steroidal 
+anti- 
+inflammatory drugs (NSAIDs) were used for mild to mod­
+erate pain, and opioids were used for moderate to severe 
+pain. We used NSAIDs (flurbiprofen axetil) once on POD 
+1 regularly and then we made prescriptions according to 
+the conditions of patients. And we recorded consumption 
+of NSAIDs by doses and opioids by equivalent doses of 
+morphine (pethidine: pentazocine: dezocine: morphi­
+ne=100mg: 30–60mg: 10mg: 10mg). It should be noted 
+that all patients enrolled did not use PCA.
+The secondary outcomes were as follows: time of first 
+postoperative flatus and defecation, frequency of postopera­
+tive nausea, vomiting, distention, diarrhea, fever, comfort of 
+semi-fluid diet (patient subjective score, range 0–10), 
+Clavien-Dindo grade and length of postoperative day. For 
+definition of fever, we set 37.3°C. And we measured the 
+temperature 6 times a day and recorded it once if it appears.
+We collected patients’ peripheral venous blood on POD 1, 
+POD 3 and POD 5 for analysis. White blood cell count (WBC), 
+percentage of neutrophils (NEC%), C-reactive protein (CRP) 
+and procalcitonin (PCT) were measured with plasma; β- 
+endorphin (β-End), 5-hydroxytryptamine (5-HT), interleukin- 
+2 (IL-2), interleukin-6 (IL-6), tumor necrosis factor-α (TNF-α), 
+motilin (MTL) were measured with serum (serum samples 
+were centrifuged at 2000g for 10 min, and the serum was 
+stored at −80°C until analysis) by using enzyme-linked immu­
+nosorbent assay (ELISA). The kit was purchased from Jiangsu 
+Yutong Biological Technology Co., Ltd.
+All frequency-type outcomes (such as nausea, vomiting 
+frequency, etc.) were collected by querying patients at 8:00, 
+12:00, 18:00 daily and it was recorded once there was an 
+appearance. All data were recorded by Yulong Tian and 
+Zequn Li.
+Sample Size
+The sample size justification of this trial was based on the 
+preliminary data of pain scores which was from a pilot study 
+we previously performed in our center. The results of the pilot 
+study showed that the average pain score of POD 1–5 were 
+2.80±0.45 and 3.20±0.72 for TG and CG groups, respectively. 
+With an equal randomization and assuming the dropout rate 
+Cancer Management and Research 2021:13 
+submit your manuscript | www.dovepress.com 
+DovePress 
+1451
+Dovepress 
+Zhou et al
+Powered by TCPDF (www.tcpdf.org)
+
+
+=== PDF PAGE 4 ===
+was less than 10%, a sample size of 82 patients (41 in the TG 
+and 41 in the CG) will ensure the power was at least 80% to 
+detect the difference at a significant level of 0.05, using a two- 
+sided t-test. We estimated it would need at least 6 months to 
+enroll all cases.
+Randomization
+We randomized patients according to the order of the random 
+number table generated by SPSS 21.0 (SPSS, Inc., Chicago, 
+IL, USA). We determined the random allocation sequence 
+according to the time when patients signed the informed con­
+sent for anesthesia, and Yuqi Sun was responsible for allocat­
+ing the patients according to the random number table.
+Statistical Methods
+All statistical analysis was performed using SPSS 21.0 and 
+Graphpad Prism 8.0.2 (GraphPad Software, Inc., La Jolla, 
+CA, USA). The level of significance for all statistical tests 
+was set at 0.05 (α=0.05). Data are presented as means and 
+standard deviations (Mean±SD) for continuous variables 
+and as proportions for categorical variables. Median and 
+quartile were used in skewed distribution data. The con­
+tinuous variables were assessed using Student’s t-test 
+when Gaussian distribution is verified. Otherwise 
+Wilcoxon rank sum test will be used alternatively. The 
+association between categorical variables were assessed 
+using Chi-squared test (Χ2). The ordinal variables were 
+assessed using Wilcoxon rank sum test. Analysis of var­
+iance will be used if Gaussian distribution is verified in 
+repeated measurement data; if not, the generalized estimat­
+ing equation will be used. A two-tailed P value of <0.05 
+was regarded as statistically significant.
+Results
+Baseline Data
+The participant flow diagram is shown in Figure 1. The 
+clinicopathological characteristics and surgical outcomes 
+Figure 1 Participant flow diagram. 
+Abbreviation: ASA, American Society of Anesthesiologists.
+submit your manuscript | www.dovepress.com 
+DovePress 
+Cancer Management and Research 2021:13 
+1452
+Zhou et al 
+Dovepress
+Powered by TCPDF (www.tcpdf.org)
+
+
+=== PDF PAGE 5 ===
+of patients were shown in Tables 1 and 2, and there were 
+no significant differences between 2 groups (P>0.05). 
+Additionally, the anesthesiologists of all patients came 
+from the same anesthesia team, and the use of anesthetic 
+drugs during the operation should be as consistent as 
+possible. See Appendix 4 for details.
+Primary Outcomes
+Among the primary outcomes (Table 3), there was no differ­
+ence in pain scores of 2 groups on POD 0 (P=0.105). The 
+pain scores of TG were significantly lower than CG on POD 
+1–5 (P<0.001). As shown in Figure 2, the use rate of opioids 
+was significantly lower in TG (P=0.004).
+Secondary Outcomes
+Among the secondary outcomes (Table 4), the time of first 
+postoperative flatus was shorter in TG (P<0.001), so as the 
+time of first postoperative defecation (P<0.001). And the 
+comfort of semi-fluid diet of TG was higher than that of 
+CG (P<0.001). For the frequency of symptoms, postopera­
+tive nausea was significantly less in TG (P=0.029).
+Hematological Results
+As can be seen from Table 5, on POD 3 and POD 5, β- 
+End, IL-2, MTL were significantly higher and 5-HT, IL-6, 
+TNF-α were significantly lower in TG than those in CG 
+(P<0.001).
+Data Sharing Statement
+The original data of this study will not be shared publicly. 
+If necessary, please contact 215099754@qq.com to 
+obtain it.
+Table 1 Clinicopathological Characteristics of Patients (n=81)
+TG
+CG
+(n=41)
+(n=40) P
+Age (years)
+0.304 a
+Mean±SD
+58.71±9.274
+60.83±9.137
+Gender
+0.689 b
+Male, n (%)
+27 (65.9)
+28 (70.0)
+Female, n (%)
+14 (34.1)
+12 (30.0)
+BMI (kg/m2)
+0.988 a
+Mean±SD
+23.93±2.823
+23.93±2.696
+ASA grade, n (%)
+0.310 c
+1
+0 (0.00)
+0 (0.00)
+2
+35 (85.4)
+37 (92.5)
+3
+6 (14.6)
+3 (7.50)
+CCI
+0.342 c
+Mean±SD
+3.95±1.26
+4.20±1.20
+NRS 2002 score
+0.359 c
+Mean±SD
+1.65±1.85
+2.05±1.80
+Smoker, n (%)
+0.585 b
+24 (58.5)
+21 (52.5)
+Drinker, n (%)
+0.586 b
+15 (36.6)
+17 (42.5)
+Abdominal pain, n (%)
+0.882 b
+26 (63.4)
+26 (65.0)
+Abdominal distention, n (%)
+0.094 b
+13 (31.7)
+20 (50.0)
+Diarrhea, n (%)
+0.980 b
+2 (4.90)
+2 (5.00)
+Constipation, n (%)
+0.667 b
+3 (7.30)
+4 (10.0)
+Nausea, n (%)
+0.503 b
+13 (31.7)
+10 (25.0)
+Vomiting, n (%)
+0.753 b
+5 (12.2)
+4 (10.0)
+Appetite loss, n (%)
+0.558 b
+18 (43.9)
+15 (37.5)
+cTNM stage, n (%)
+0.807 c
+I
+18 (43.9)
+16 (40.0)
+II
+7 (17.1)
+8 (20.0)
+III
+16 (39.0)
+16 (40.0)
+Notes: at-test; bChi-squared test (Χ2); cWilcoxon rank sum test. 
+Abbreviations: 
+BMI, 
+body 
+mass 
+index; 
+ASA, 
+American 
+Society 
+of 
+Anesthesiologists; CCI, Charlson Comorbidity Index; NRS, nutrition risk screening.
+Table 2 Surgical Outcomes (n=81)
+TG
+CG
+(n=41)
+(n=40) P
+Time (min)
+0.292 a
+Mean±SD
+228.97±71.27
+207.90±48.84
+Blood loss (mL)
+0.188 c
+Mean±SD
+61.71±55.40
+93.25±156.1
+Surgical approach, n (%)
+0.439 b
+Laparoscopy
+27 (65.9)
+23 (57.5)
+Robot
+14 (34.1)
+17 (42.5)
+Gastrectomy, n (%)
+0.105 b
+Distal
+30 (73.2)
+35 (87.5)
+Total
+11 (26.8)
+5 (12.5)
+Type of reconstruction, n (%)
+0.238 b
+Roux-en-Y
+36 (87.8)
+30 (75.0)
+Billroth-II
+5 (12.2)
+10 (25.0)
+Notes: at-test; bChi-squared test (Χ2); cWilcoxon rank sum test.
+Cancer Management and Research 2021:13 
+submit your manuscript | www.dovepress.com 
+DovePress 
+1453
+Dovepress 
+Zhou et al
+Powered by TCPDF (www.tcpdf.org)
+
+
+=== PDF PAGE 6 ===
+Discussion
+Postoperative pain and gastrointestinal dysfunction are two 
+major stumbling blocks that affect the recovery of patients. 
+In addition, as far as pain is concerned, acute and chronic 
+pain that occur during hospitalization and after discharge 
+have caused huge medical and healthcare pressure in 
+European and American countries.18 This will also be 
+one of the important issues that China will encounter in 
+the future. In this trial, by comparing the data of POD 1–5, 
+we found that TEAS can relieve the degree of pain by at 
+least 20% overall, and the decline reached 24.6% on POD 
+5. This also caused a reduction in NSAID consumption by 
+17.8%, opioids consumption by 31.1%, and equivalent 
+dose of morphine by approximately 3.9 mg, which meant 
+that the average morphine consumption of patients in TG 
+reduced by nearly half dosage. In terms of gastrointestinal 
+function, it demonstrated a better recovery in TG. In 
+addition, the length of postoperative stay in TG was 0.3 
+days shorter than CG, though the difference was not sta­
+tistically significant. Combined with less consumption of 
+analgesics and more optimized perioperative management 
+in the future, it will be effective in reducing the economic 
+burden of patients and hospitals.
+Pain management plays a particularly important role in 
+the rehabilitation process. ERAS emphasizes the necessity 
+of effective pain relief targeting the trauma-induced 
+stress.19 What’s the basis of postoperative pain? Surgery is 
+a nociceptive trigger of tissue or nerve injury. These pro- 
+inflammatory factors will unbalance various cytokines in 
+microenvironment and then bring about changes in inflam­
+matory immune response which will mediate peripheral and 
+central sensitization, and hence that will affect the body’s 
+pain threshold, and cause neuropathic and inflammatory 
+pain, not just mechanical pain. So, there is a close correla­
+tion between pain, inflammation and immunomodulation.
+According to the theory of TCM, factors such as trauma 
+and anesthesia can lead to Qi and blood obstructed or insuffi­
+cient, which may cause kinds of pain or visceral dysfunction. 
+Dialectical treatment is the foundation of TCM, and the 
+principles are treating excess with purgation, treating insuffi­
+ciency with tonification. The acupoints with more similar 
+characteristic are chosen, the better therapeutic effects will 
+achieve. Theoretically, among the selected acupoints in this 
+trial, they are effective in harmonizing meridians and balan­
+cing Yin Yang. Hence TEAS with acupoints above took 
+function of enhancing the recovery of patients.
+Based on the available evidence, the mechanisms of 
+TEAS analgesia involves several systems such as endor­
+phin system and adrenergic system, in which endorphin 
+system plays a key role.20 Previous studies have shown 
+that the release of different endorphins was stimulated by 
+different frequencies and their molecular mechanisms 
+were mediated by different receptors such as μ and κ 
+receptors.21–24 
+β-End 
+is 
+an 
+endogenous 
+analgesic 
+Table 3 Primary Outcomes (n=81)
+TG
+CG
+(n=41)
+(n=40)
+PAIN SCORE
+Average of POD 1–5
+P<0.001 b
+Mean±SD
+2.55±0.21
+3.10±0.42
+POD 0
+P=0.105 b
+Mean±SD
+3.58±0.60
+3.83±0.84
+POD 1
+Median (Quartile)
+3.00 (0.42)
+3.33 (0.67)
+POD 2
+Median (Quartile)
+2.58 (0.29)
+3.17 (0.58)
+POD 3
+Median (Quartile)
+2.25 (0.33)
+3.08 (0.75)
+POD 4
+Median (Quartile)
+2.00 (0.17)
+2.83 (0.58)
+POD 5
+Median (Quartile)
+1.75 (0.21)
+2.29 (0.73)
+Analysis
+Group
+Wald Chi- 
+Square
+78.296
+P
+<0.001 
+c
+Time
+Wald Chi- 
+Square
+419.405
+P
+<0.001 
+c
+Group*Time
+Wald Chi- 
+Square
+9.155
+P
+0.057 c
+ANALGESICS DATA
+P
+Dose of Flurbiprofen 
+axetil, n (%)
+0.117 b
+Mean±SD
+120.0±12.82
+145.9±13.22
+Use rate of opioids, n (%)
+0.004 a
+18 (43.9)
+30 (75.0)
+Equivalent dose of 
+morphine (mg)•
+0.182 b
+Mean±SD
+8.935±3.660
+12.83±8.097
+Notes: aChi-squared test (Χ2); bWilcoxon rank sum test; cGeneralized estimating 
+equation; •We used an equivalent dose of morphine, pethidine: pentazocine: dezo­
+cine: morphine=100mg: 45mg: 10mg: 10mg. 
+Abbreviation: POD, postoperative day.
+submit your manuscript | www.dovepress.com 
+DovePress 
+Cancer Management and Research 2021:13 
+1454
+Zhou et al 
+Dovepress
+Powered by TCPDF (www.tcpdf.org)
+
+
+=== PDF PAGE 7 ===
+substance released by the pituitary chiefly, which alleviate 
+pain through the following aspects: (1) bind to μ receptor; 
+(2) inhibit the release of transmitters such as substance 
+P to block pathways about pain;22,24 (3) block proinflam­
+matory cytokine release and mitigate the extent of neuro­
+pathic inflammatory response which will alleviate 
+peripheral and central sensitization, hence it will relieve 
+inflammatory and neuropathic pain.25,26 Combined with 
+previous studies and our results, we speculate that the 
+higher endorphin concentration in TG is related to the 
+stimulation of TEAS.
+Not only inner analgesics, there were changes in noci­
+ception-related factors such as trauma-induced inflamma­
+tion. TNF-α and IL-6 both are important indicators to 
+reflect the extent of stress and inflammation. TNF-α is 
+the earliest inflammatory molecule under stress and it 
+participates in the immunomodulation and anti-infection. 
+IL-6 can integrate and cooperate other inflammatory sig­
+nals to promote inflammation. After the patients suffering 
+from surgical injury, the body will release a variety of 
+nociceptive medias attributing pain. On the one hand, 
+TNF-α and IL-6 which may overexpress under stress will 
+increase in the injured tissue and central nervous system 
+(CNS), then exacerbate inflammation. On the other hand, 
+these inflammatory molecules also promote the release of 
+phospholipids from tissue, then phospholipids break down 
+into prostaglandins,27 which can directly cause pain or 
+intensify the peripheral and central sensitization contribut­
+ing to pain.
+So, superficially it may be another explanation that the 
+anti-nociceptive effects of TEAS may through its regulation 
+of inflammation. Based on what we mentioned above, we 
+think that it may come down to the immunomodulation of 
+TEAS. As we all know, it’s extremely common that patients 
+with gastric cancer have immune dysfunction. Stress reac­
+tions of varying extent caused by operation, anesthesia and 
+pain will further lead to immunosuppression.28 Previous 
+studies have proved that EA has immunomodulatory effect 
+and it can enhance cellular immunity of patients with malig­
+nant tumors.29 IL-2 plays an important role in promoting 
+lymphocytes maturation and regulating immunity. The pro­
+duction of IL-2 may be inhibited by some negative regula­
+tory molecules which are generated under traumatic stress 
+and hence it results in the decline of immunity. Some 
+scholars have found that EA can promote the production 
+of IL-2, weaken inflammatory factors, and reduce the extent 
+of immunosuppression.29 Now it was verified that TEAS 
+has a similar efficacy on protecting the immunity. In 
+mechanisms, there may be a cholinergic anti-inflammatory 
+pathway and hypothalamic-pituitary-adrenal axis involved 
+Figure 2 (A) Pain Score. Comparing the pain scores of the two groups, no significant difference was found on POD 0 (P=0.105). Scores of TG were significantly lower on 
+POD 1–5 (P<0.001). (B) Consumption of analgesics. The use rate of opioid was significantly lower in TG (P=0.004). As for the consumption of NSAIDs and the equivalent 
+doses of morphine, no significant difference was found (P>0.05). 
+Abbreviations: POD, postoperative day; NSAIDs, non-steroidal anti-inflammatory drugs; TG, TEAS group; CG, control group.
+Cancer Management and Research 2021:13 
+submit your manuscript | www.dovepress.com 
+DovePress 
+1455
+Dovepress 
+Zhou et al
+Powered by TCPDF (www.tcpdf.org)
+
+
+=== PDF PAGE 8 ===
+in 
+the 
+inflammatory 
+reflex 
+to 
+achieve 
+immune 
+homeostasis.25 And some studies have found that EA may 
+regulate neuroimmune reflex and inhibit inflammation by 
+modulating dopamine in mouse models of sepsis.5 
+Moreover, immunity and endorphin system can interact on 
+each other.29,30 Overall, pain, inflammation, and immunity 
+are interrelated and mutually reinforcing.
+Postoperative gastrointestinal dysfunction may occur 
+because of surgical operation (damage of vagal nerve, 
+changes in physiological structure), CO2 pneumoperito­
+neum (ischemia caused by abdominal hypertension), etc. 
+MTL is an important hormone which can promote gastro­
+intestinal transmission and strengthen esophageal sphinc­
+ter contraction to prevent gastric reflux. Emetic molecule 
+such as 5-HT which will increase under trauma or anesthe­
+sia, can directly stimulate the vomiting center of medulla 
+oblongata or activate the peripheral receptors in the gastro­
+intestinal mucosa.31 From our results, we considered that 
+TEAS promote gastrointestinal motility and reduce the 
+incidence of nausea by regulating MTL and 5-HT. TEAS 
+may affect 5-HT transmission by activating 5-HT and 
+norepinephrine fibers, and TEAS may also regulate the 
+vagal reflex to decrease the release of 5-HT in the center. 
+Thus, the binding rate of 5-HT in gastrointestinal tract and 
+peripheral nerve reduced.32 However, there was no differ­
+ence in vomiting between 2 groups. We considered that it 
+was related to the implementation of ERAS for its early 
+enteral feeding and mobilization. In addition, postopera­
+tive pain and the use of opioids will further prolong the 
+recovery of gastrointestinal function.33 So, a better analge­
+sia will bring about a faster recovery. And these are the 
+reasons why the patients in TG had a higher comfort of 
+semi-fluid.
+There were some limitations in this trial: (1) We did not 
+collect and stratify the social class, personality characteristics 
+which may cause unknown bias. (2) About secretion of 
+transmitters such as endorphins, there is a circadian pattern 
+in the body which may lead to a biological rhythm of pain. 
+So, time deviation may exist in the process of collecting 
+clinical data. (3) In the analysis of consumption of opioids, 
+for pentazocine, the equivalent dose of morphine is 30 to 
+60 mg. Due to individual differences in pharmacodynamics, 
+we have not found a clear equivalent dose for the Chinese 
+constitution. (4) 2/100Hz mode is more common in other 
+trials, and the reasons why we choose 20/100Hz are as 
+follows. First, the frequency of 15–30Hz is more effective 
+in promoting the release of oxytocin than 2–3Hz, and oxyto­
+cin can also relieve pain and enhance the analgesic effect of 
+electroacupuncture. Second, 15Hz can both promote the 
+release of β-End and Enk. Although it is not as effective as 
+2Hz in releasing β-End,21 this mode still can be used.
+Table 4 Secondary Outcomes (n=81)
+TG
+CG
+(n=41)
+(n=40) P
+Time of first flatus (h)
+<0.001 b
+Mean±SD
+55.63±16.74
+72.60±20.92
+Time of first defecation (h)
+<0.001 b
+Mean±SD
+72.20±16.24
+95.78±17.75
+Nausea, n (%)
+0.441 a
+16 (39.0)
+19 (47.5)
+Vomiting, n (%)
+1.00 a
+0 (0.00)
+0 (0.00)
+Distension, n (%)
+0.051 a
+10 (24.4)
+18 (45.0)
+Diarrhea, n (%)
+0.054 a
+3 (7.30)
+9 (22.5)
+Fever, n (%)
+0.753 a
+36 (87.8)
+36 (90.0)
+Frequency of nausea
+0.029 b
+Mean±SD
+1.88±1.09
+2.58±0.77
+Frequency of vomiting
+1.00 b
+Mean±SD
+0
+0
+Frequency of distension
+0.213 b
+Mean±SD
+2.60±1.27
+3.50±2.01
+Frequency of diarrhea
+0.727 b
+Mean±SD
+2.00±1.00
+2.33±1.12
+Frequency of fever
+0.419 b
+Mean±SD
+6.35±4.03
+7.61±6.13
+Comfort of semi-fluid
+<0.001 b
+Mean±SD
+7.63±0.63
+6.93±0.69
+C-D grade, n (%)•
+0.292 a
+Grade 0
+1 (2.40)
+2 (5.00)
+Grade 1
+39 (95.1)
+34 (85.0)
+Grade 2
+1 (2.40)
+4 (10.0)
+Length of postoperative stay (d)
+0.478 b
+Mean±SD
+6.12±1.29
+6.45±1.68
+Notes: aChi-squared test (Χ2); bWilcoxon rank sum test; •The C-D grade was used 
+for postoperative complications grade; Patients with a grade>2 met the withdrawal 
+criteria and were not included in the analysis. 
+Abbreviation: C-D grade, Clavien-Dindo grade.
+submit your manuscript | www.dovepress.com 
+DovePress 
+Cancer Management and Research 2021:13 
+1456
+Zhou et al 
+Dovepress
+Powered by TCPDF (www.tcpdf.org)
+
+
+=== PDF PAGE 9 ===
+Conclusion
+In Summary, it was confirmed that TEAS played a role in 
+relieving postoperative pain and promoting the recovery of 
+gastrointestinal function, which may be related to the modula­
+tion of inflammation. And there was no adverse reaction during 
+the entire trial. Therefore, TEAS can be used as an adjuvant 
+therapy to enhance the postoperative recovery for patients with 
+gastric cancer.
+Disclosure
+We declare that we do not have any commercial or associa­
+tive interest that represents a conflict of interest in connection 
+with the work submitted. And informed consents have been 
+obtained from all patients included in this trial.
+References
+1. Bray F, Ferlay J, Soerjomataram I, Siegel RL, Torre LA, Jemal A. 
+Global cancer statistics 2018: GLOBOCAN estimates of incidence and 
+mortality worldwide for 36 cancers in 185 countries. CA Cancer 
+J Clin. 2018;68:394–424. doi:10.3322/caac.21492
+2. Kim HH, Han SU, Kim MC, et al. Long-term results of laparoscopic 
+gastrectomy for gastric cancer: a large-scale case-control and 
+case-matched 
+Korean 
+multicenter 
+study. 
+J 
+Clin 
+Oncol. 
+2014;32:627–633. doi:10.1200/JCO.2013.48.8551
+3. Gerbershagen HJ, Aduckathil S, van Wijck AJ, Peelen LM, Kalkman CJ, 
+Meissner W. Pain intensity on the first day after surgery: a prospective 
+cohort study comparing 179 surgical procedures. Anesthesiology. 
+2013;118:934–944. doi:10.1097/ALN.0b013e31828866b3
+4. Wu CL, Raja SN. Treatment of acute postoperative pain. Lancet. 
+2011;377:2215–2225. doi:10.1016/S0140-6736(11)60245-6
+5. Stein C, Schäfer M, Machelska H. Attacking pain at its source: new 
+perspectives on opioids. Nat Med. 2003;9:1003–1008. doi:10.1038/nm908
+6. Kehlet H. Multimodal approach to control postoperative pathophy­
+siology and rehabilitation. Br J Anaesth. 1997;78:606–617. 
+doi:10.1093/bja/78.5.606
+7. Aarts MA, Rotstein OD, Pearsall EA, et al. Postoperative eras inter­
+ventions have the greatest impact on optimal recovery: experience 
+with implementation of eras across multiple hospitals. Ann Surg. 
+2018;267:992–997. doi:10.1097/SLA.0000000000002632
+8. Ljungqvist O, Scott M, Fearon KC. Enhanced recovery after surgery: a 
+review. JAMA Surg. 2017;152:292–298. doi:10.1001/jamasurg.2016.4952
+9. Kehlet H. Postoperative pain, analgesia, and recovery-bedfellows that 
+cannot be ignored. Pain. 2018;159(Suppl 1):S11–S16. doi:10.1097/j. 
+pain.0000000000001243
+10. Wick EC, Grant MC, Wu CL. Postoperative multimodal analgesia 
+pain management with nonopioid analgesics and techniques: a 
+review. JAMA Surg. 2017;152:691–697. doi:10.1001/jamasurg.20 
+17.0898
+Table 5 Hematological Results (TG=41; CG=40)
+POD 1
+POD 3
+POD5
+Analysis Wald Chi-Square (Group)
+Median (Quartile)
+Median (Quartile)
+Median (Quartile)
+P
+WBC (109/L)
+TG
+10.64 (3.735)
+7.320 (2.625)
+6.480 (1.590)
+0.571
+CG
+12.15 (4.668)
+7.190 (3.678)
+6.425 (2.850)
+0.450 d
+NEC%
+TG
+83.10 (9.650)
+73.90 (10.45)
+69.80 (5.400)
+0.070
+CG
+83.95 (12.83)
+75.25 (9.275)
+67.60 (9.675)
+0.791 d
+CRP (mg/L)
+TG
+14.74 (12.86)
+61.71 (34.26)
+27.33 (23.71)
+2.909
+CG
+21.00 (13.57)
+67.57 (37.69)
+31.54 (24.40)
+0.088 d
+PCT (ng/mL)
+TG
+0.103 (0.111)
+0.255 (0.180)
+0.092 (0.052)
+2.853
+CG
+0.112 (0.104)
+0.275 (0.258)
+0.136 (0.117)
+0.091 d
+β-End (pg/mL)
+TG
+49.16 (8.08)
+73.92 (6.38)
+68.20 (2.450)
+467.661
+CG
+50.53 (6.11)
+59.48 (4.46)
+53.31 (4.070)
+<0.001 d
+5-HT (pg/mL)
+TG
+2137.82 (353.19)
+1607.72 (272.86) 1852.97 (295.24)
+1330.91 (459.38)
+28.013
+CG
+2049.37 (176.22)
+1556.23 (359.15)
+<0.001 d
+IL-2 (ng/mL)
+TG
+4.740 (1.210)
+7.810 (2.640)
+9.590 (3.190)
+52.534
+CG
+4.535 (1.420)
+6.295 (0.800)
+7.665 (1.050)
+<0.001 d
+IL-6 (pg/mL)
+TG
+45.41 (7.690)
+39.17 (12.57)
+31.83 (4.270)
+33.888
+CG
+46.08 (7.800)
+42.46 (3.520)
+35.60 (2.260)
+<0.001 d
+TNF-α (pg/mL)
+TG
+48.53 (5.700)
+36.89 (10.99)
+27.53 (5.700)
+20.734
+CG
+48.55 (6.770)
+41.38 (6.690)
+31.12 (4.620)
+<0.001 d
+MTL (pg/mL)
+TG
+392.44 (127.48)
+522.78 (127.71)
+647.68 (157.06)
+36.611
+CG
+397.45 (133.54)
+486.90 (68.840)
+556.70 (93.69)
+<0.001 d
+Note: dGeneralized estimating equation. 
+Abbreviations: WBC, white blood cell count; NEC%, percentage of neutrophils; CRP, C-reactive protein; PCT, procalcitonin; β-End, β-endorphin; 5-HT, 5-hydroxy­
+tryptamine; IL-2, interleukin-2; IL-6, interleukin-6; TNF-α, tumor necrosis factor-α; MTL, motilin.
+Cancer Management and Research 2021:13 
+submit your manuscript | www.dovepress.com 
+DovePress 
+1457
+Dovepress 
+Zhou et al
+Powered by TCPDF (www.tcpdf.org)
+
+
+=== PDF PAGE 10 ===
+11. Patil S, Sen S, Bral M, et al. The role of acupuncture in pain 
+management. Curr Pain Headache Rep. 2016;20:22. doi:10.1007/ 
+s11916-016-0552-1
+12. Tang J-L, Liu B-Y, Ma K-W. Traditional Chinese medicine. Lancet. 
+2008;372:1938–1940. doi:10.1016/S0140-6736(08)61354-9
+13. Ulett GA, Han S, Han JS. Electroacupuncture: mechanisms and 
+clinical application. Biol Psychiatry. 1998;44:129–138. doi:10.1016/ 
+S0006-3223(97)00394-6
+14. Wang H, Xie Y, Zhang Q, et al. Transcutaneous electric acupoint 
+stimulation reduces intra-operative remifentanil consumption and 
+alleviates postoperative side-effects in patients undergoing sinusot­
+omy: a prospective, randomized, placebo-controlled trial. Br 
+J Anaesth. 2014;112:1075–1082. doi:10.1093/bja/aeu001
+15. Zhang Q, Gao Z, Wang H, et al. The effect of pre-treatment with 
+transcutaneous electrical acupoint stimulation on the quality of recov­
+ery after ambulatory breast surgery: a prospective, randomised con­
+trolled trial. Anaesthesia. 2014;69:832–839. doi:10.1111/anae.12639
+16. Zhang B, Xu F, Hu P, et al. Needleless transcutaneous electrical 
+acustimulation: 
+a 
+pilot 
+study 
+evaluating 
+improvement 
+in 
+post-operative 
+recovery. 
+Am 
+J 
+Gastroenterol. 
+2018;113 
+(7):1026–1035. doi:10.1038/s41395-018-0156-y
+17. Yu X, Zhang F, Chen B. The effect of TEAS on the quality of early 
+recovery in patients undergoing gynecological laparoscopic surgery: 
+a prospective, randomized, placebo-controlled trial. Trials. 2020;21 
+(1):43. doi:10.1186/s13063-019-3892-4
+18. Johnson MI, Jones G, Paley CA, Wittkopf PG. The clinical efficacy 
+of transcutaneous electrical nerve stimulation (TENS) for acute and 
+chronic pain: a protocol for a meta-analysis of randomised controlled 
+trials (RCTs). BMJ Open. 2019;9(10):e029999. doi:10.1136/bmjo­
+pen-2019-029999
+19. Hughes MJ, Ventham NT, McNally S, Harrison E, Wigmore S. 
+Analgesia after open abdominal surgery in the setting of enhanced 
+recovery surgery: a systematic review and meta-analysis. JAMA Surg. 
+2014;149:1224–1230. doi:10.1001/jamasurg.2014.210
+20. Han 
+JS. 
+Acupuncture 
+and 
+endorphins. 
+Neurosci 
+Lett. 
+2004;361:258–261. doi:10.1016/j.neulet.2003.12.019
+21. Han JS. Acupuncture: neuropeptide release produced by electrical 
+stimulation of different frequencies. Trends Neurosci. 2003;26:17–22. 
+doi:10.1016/S0166-2236(02)00006-1
+22. Zhao ZQ. Neural mechanism underlying acupuncture analgesia. Prog 
+Neurobiol. 2008;85:355–375.
+23. Wang Y, Zhang Y, Wang W, Cao Y, Han JS. Effects of synchronous 
+or asynchronous electroacupuncture stimulation with low versus high 
+frequency on spinal opioid release and tail flick nociception. Exp 
+Neurol. 2005;192:156–162. doi:10.1016/j.expneurol.2004.11.003
+24. Groppetti D, Pecile AM, Sacerdote P, Bronzo V, Ravasio G. 
+Effectiveness of electroacupuncture analgesia compared with opioid 
+administration in a dog model: a pilot study. Br J Anaesth. 
+2011;107:612–618. doi:10.1093/bja/aer199
+25. Lin JG, Chen WL. Acupuncture analgesia: a review of its mechan­
+isms of actions. Am J Chin Med. 2008;36:635–645. doi:10.1142/ 
+S0192415X08006107
+26. Zhang 
+R, 
+Lao 
+L, 
+Ren 
+K, 
+et 
+al. 
+Mechanisms 
+of 
+acupuncture-electroacupuncture on persistent pain. Anesthesiology. 
+2014;120:482–503. doi:10.1097/ALN.0000000000000101
+27. Alazawi W, Pirmadjid N, Lahiri R, Bhattacharya S. Inflammatory and 
+immune responses to surgery and their clinical impact. Ann Surg. 
+2016;264:73–80. doi:10.1097/SLA.0000000000001691
+28. Carr DB, Goudas LC. Acute pain. Lancet. 1999;353:2051–2058. 
+doi:10.1016/S0140-6736(99)03313-9
+29. Cabioğlu MT, Cetin BE. Acupuncture and immunomodulation. Am 
+J Chin Med. 2008;36:25–36. doi:10.1142/S0192415X08005552
+30. Stein C. The control of pain in peripheral tissue by opioids. N Engl 
+J Med. 1995;332:1685–1690. doi:10.1056/NEJM199506223322506
+31. Janicki PK, Sugino S. Genetic factors associated with pharmacother­
+apy 
+and 
+background 
+sensitivity 
+to 
+postoperative 
+and 
+chemotherapy-induced nausea and vomiting. Exp Brain Res. 
+2014;232:2613–2625. doi:10.1007/s00221-014-3968-z
+32. Lee S, Lee MS, Choi DH, Lee SK. Electroacupuncture on pc6 
+prevents opioid-induced nausea and vomiting after laparoscopic 
+surgery. Chin J Integr Med. 2013;19:277–281. doi:10.1007/s11655- 
+013-1425-7
+33. Ng SS, Leung WW, Mak TW, et al. Electroacupuncture reduces 
+duration of postoperative ileus after laparoscopic surgery for color­
+ectal cancer. Gastroenterology. 2013;144:307–313 e1. doi:10.1053/j. 
+gastro.2012.10.050
+Cancer Management and Research 
+Dovepress 
+Publish your work in this journal 
+Cancer Management and Research is an international, peer-reviewed 
+open access journal focusing on cancer research and the optimal use of 
+preventative and integrated treatment interventions to achieve improved 
+outcomes, enhanced survival and quality of life for the cancer patient. 
+The manuscript management system is completely online and includes 
+a very quick and fair peer-review system, which is all easy to use. 
+Visit http://www.dovepress.com/testimonials.php to read real quotes 
+from published authors. 
+Submit your manuscript here: https://www.dovepress.com/cancer-management-and-research-journal
+submit your manuscript | www.dovepress.com 
+DovePress 
+Cancer Management and Research 2021:13 
+1458
+Zhou et al 
+Dovepress
+Powered by TCPDF (www.tcpdf.org)

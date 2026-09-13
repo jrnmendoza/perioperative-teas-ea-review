@@ -1,0 +1,1022 @@
+
+=== PDF PAGE 1 ===
+Transcutaneous electrical acupoint stimulation applied in lower limbs
+decreases the incidence of paralytic ileus after colorectal surgery: A
+multicenter randomized controlled trial
+Wei Gao, MDa, Wanpeng Li, MDb, Yuqiang Yan, MDc, Rui Yang, MDd, Yuqin Zhang, MDe,
+Meisheng Jin, MDf, Zhikai Luo, MDg, Li Xie, MDh, Yulin Ma, MDi, Xitong Xu, MDj,
+Ge Wang, MDa, Zhidong Kong, MDa, Yuan Gao, MDa, Yajuan Li, MDa, Zhen Ruan, MDa,
+Jie Zheng, MDk, Daqing Ma, MDl,**, Qiang Wang, MDa,*
+a Department of Anesthesiology and Center for Brain Science, the First Afﬁliated Hospital of Xi’an Jiaotong University, Xi’an, China
+b Department of Anesthesiology, Weinan Central Hospital, Weinan, China
+c Department of Anesthesiology, Xi’an Central Hospital, Xi’an, China
+d Department of Anesthesiology, Shaanxi Provincial People’s Hospital, Xi’an, China
+e Department of Anesthesiology, Afﬁliated Hospital of Shaanxi University of Chinese Medicine, China
+f Department of Anesthesiology, Xi’an Hospital of Traditional Chinese Medicine, Xi’an, China
+g Department of Anesthesiology, Afﬁliated Hospital of Yan’an University, Yan’an, China
+h Department of Anesthesiology, Ankang Hospital of Traditional Chinese Medicine, Ankang, China
+i Department of Anesthesiology, Ankang Central Hospital, Ankang, China
+j Department of Anesthesiology, Central Railway Group of Xi’an Central Hospital, Xi’an, Shaanxi, China
+k Clinical Research Center, First Afﬁliated Hospital of Xi’an Jiaotong University, Xi’an, China
+l Division of Anaesthetics, Pain Medicine, and Intensive Care, Department of Surgery and Cancer, Faculty of Medicine, Imperial College London, Chelsea and
+Westminster Hospital, London, UK
+a r t i c l e
+i n f o
+Article history:
+Accepted 4 August 2021
+Available online 6 September 2021
+a b s t r a c t
+Background: Postoperative paralytic ileus prolongs hospitalization duration, increases medical expenses,
+and is even associated with postoperative mortality; however, effective prevention of postoperative
+paralytic ileus is not yet available. This trial aimed to assess the preventative effectiveness of trans-
+cutaneous electrical acupoint stimulation applied in the lower limbs on postoperative paralytic ileus
+incidence after colorectal surgery.
+Methods: After ethics approval and written informed consent, 610 patients from 10 hospitals who were
+scheduled for colorectal surgery between May 2018 and September 2019 were enrolled. Patients were
+randomly allocated into the transcutaneous electrical acupoint stimulation (stimulated on bilateral
+Zusanli, Shangjuxu, and Sanyinjiao acupoints in lower limbs for 30 minutes each time, total 4 times) or
+sham (without currents delivered) group with 1:1 ratio. The primary outcome was postoperative
+paralytic ileus incidence, deﬁned as no ﬂatus for >72 hours after surgery.
+Results: Compared to the sham treatment, transcutaneous electrical acupoint stimulation lowered the
+postoperative paralytic ileus incidence by 8.7% (32.3% vs 41.0%, P ¼ .026) and decreased the risk of
+postoperative paralytic ileus by 32% (OR, 0.68; P ¼ .029). Transcutaneous electrical acupoint stimulation
+also shortened the recovery time to ﬂatus, defecation, normal diet, and bowel sounds. Transcutaneous
+electrical acupoint stimulation treatment signiﬁcantly increased median serum acetylcholine by 55%
+(P ¼ .007) and interleukin-10 by 88% (P < .001), but decreased interleukin-6 by 47% (P < .001) and
+inducible nitric oxide synthase by 42% (P ¼ .002) at 72 hours postoperatively.
+* Reprint requests: Qiang Wang, MD, Department of Anesthesiology and Center
+for Brain Science, the First Afﬁliated Hospital of Xi’an Jiaotong University, 277 Yanta
+West Road, Xi’an 710061, Shaanxi, China.
+** Daqing Ma, MD, Division of Anaesthetics, Pain Medicine & Intensive Care,
+Department of Surgery and Cancer, Faculty of Medicine, Imperial College London,
+Chelsea and Westminster Hospital, SW10 9NH, London, UK.
+E-mail addresses: d.ma@imperial.ac.uk (D. Ma), dr.wangqiang@mail.xjtu.edu.cn
+(Q. Wang).
+Contents lists available at ScienceDirect
+Surgery
+journal homepage: www.elsevier.com/locate/surg
+https://doi.org/10.1016/j.surg.2021.08.007
+0039-6060/© 2021 Elsevier Inc. All rights reserved.
+Surgery 170 (2021) 1618e1626
+
+
+=== PDF PAGE 2 ===
+Conclusion: Transcutaneous electrical acupoint stimulation attenuated the postoperative paralytic ileus
+incidence and enhanced gastrointestinal functional recovery, which may be associated with increasing
+parasympathetic nerve tone and its anti-inﬂammatory actions.
+© 2021 Elsevier Inc. All rights reserved.
+Introduction
+Colorectal cancer is one of the most common cancers in China,
+and the 5-year survival of patients with early operative treatment is
+more than 90%.1,2 Postoperative paralytic ileus (POI) is a common
+postoperative complication after colorectal surgery, which in-
+creases hospital stay length by 25%, hospital cost by 15%, and
+postoperative 30-day complication-associated mortality and also
+affects long-term quality of life.3 POI is characterized by nonme-
+chanical temporary gastrointestinal dysfunction with various
+symptoms, including delayed ﬂatus and defecation, abdominal
+pain, bloating, nausea, vomiting, and intolerance to an oral diet. The
+reported incidence of POI is varied, with some reports indicating a
+considerably high incidence.4,5 Lack of ﬂatus for >72 hours after
+surgery has been suggested to be POI, although other gastrointes-
+tinal symptoms including loss of appetite have also been consid-
+ered to be POI.6
+The noxious stimulation of intestinal manipulation during
+surgery activates prevertebral adrenergic neurons to release
+noradrenaline and suppresses parasympathetic nerve tone.7
+Surgical trauma also induces an inﬂammatory response via the
+activated resident macrophages release of inﬂammatory cyto-
+kines and chemokines.8 The latter attract leukocytes to invade
+the intestinal muscularis externa and induce time-dependent
+induction of cytokine release to impair the contractile activity
+of the smooth muscle cell,9 resulting in the development of POI.
+Symptomatic treatment is the main clinical management of POI;
+effective interventions are not yet available. For example, ﬁrst-
+line symptomatic medications (brain peptides, gastrograﬁn, and
+cholinergic drugs) and powerful defecation-inducing drugs (en-
+emas and laxatives) are not beneﬁcial for gastrointestinal func-
+tional recovery due to their side effects, such as cardiovascular
+adverse reactions, immunosuppression, gastrointestinal tract
+irritation, and even electrolyte disorders.10,11 However, activation
+or mimicry of the cholinergic anti-inﬂammatory pathway by
+stimulation of the vagal nerve was reported as a potential
+treatment to inhibit the activation of resident macrophages and
+restore intestinal function.8
+Acupuncture, a safe and effective nonpharmacotherapy, can
+directly or indirectly increase the efferent vagal nerve activity and
+even deactivate inﬂammatory macrophages.12 Acupuncture has
+been demonstrated to improve nonsurgical gastrointestinal disor-
+ders such as chronic severe functional constipation,13 functional
+dyspepsia,14 and inﬂammatory bowel disease,15 thereby showing a
+great potential to prevent or treat POI.16 Transcutaneous acupoint
+electrical stimulation (TEAS) is the combination of transcutaneous
+electrical nerve stimulation and acupoint therapy.17,18 TEAS pro-
+duces a perceptible sensation through electrodes placed on skin
+acupoints. Its electrode slice has a single conductive emboss and 2
+connecting wires, thereby enabling noninvasive, accurate, and
+convenient stimuli to be delivered. Compared to conventional
+acupuncture or electroacupuncture, TEAS has no risk of infection,
+contamination, patients’ psychological dread, or operator bias.18
+The effectiveness of TEAS in preventing POI reported in previous
+studies was largely inconclusive due to unclear POI deﬁnition, small
+sample size without proper power calculation (the largest trial to
+date included only 110 patients), inadequate bias control, and un-
+clear underlying mechanism.19,20 Therefore, we conducted this
+large-sample-size,
+multicenter,
+randomized
+sham-controlled
+study, which was in accordance with clinical research Con-
+sohdated Standards of Reporting Trials (CONSORT) and the STan-
+dards for Reporting Interventions in Clinical Trials of Acupuncture
+(STRICTA) acupuncture clinical trial. The primary outcome was the
+incidence of POI, deﬁned as no ﬂatus for >72 hours after surgery as
+reported by the European Association of Colorectal Surgeons.21 To
+date, our study is the largest sample size trial to explore the
+effectiveness of TEAS on preventing POI and the ﬁrst to investigate
+its underlying mechanisms.
+Methods
+Study design and participants
+This multicenter, parallel-group, and randomized controlled
+trial complied with the Declaration of Helsinki, was approved by
+the Ethics Committee of the First Afﬁliated Hospital of Xi’an
+Jiaotong University (XJTU1AF2016LSL-035), and was registered at
+ClinicalTrials.gov (NCT03086304). Patients scheduled for colo-
+rectal cancer surgery at 10 hospitals in China from May 2018 to
+September 2019 were screened for potential enrollment after
+written informed consent was obtained. Inclusion criteria were:
+(1) surgery under general anesthesia; (2) age 18 years and
+American Society of Anesthesiologists IeIII; (3) patients’ ability
+to understand and sign the written informed consent form; and
+(4) not involved in other clinical studies. Exclusion criteria were:
+(1) history of intestinal surgery; (2) skin damage or infection at
+any acupoints, allergic to adhesive tape; (3) intraoperative en-
+terostomy; (4) pregnant or breast-feeding; and (5) patients’
+refusal to participate in the study. All investigators were trained
+according to the standardized acupoints selection and TEAS
+manipulation by a senior acupuncturist with 20 years of prac-
+ticing experience. The detailed trial protocol is available online as
+Appendix 1. In an effort to improve trial compliance, the poten-
+tial beneﬁts of participating in the study, including noninvasive
+treatment,
+no
+additional
+costs,
+and
+POI
+prevention,
+were
+explained to the patients and their caregivers/family members.
+To obtain accurate ﬁrst gastrointestinal function recovery time,
+the patients and their caregivers/family members were required
+to agree to accurately record data.
+Anesthesia, surgery, and patients’ randomization
+Patients were premedicated before anesthesia induction with
+antiemetics (palonosetron 0.075 mg and dexamethasone 5 mg),
+salivary suppressor (penehyclidine hydrochloride 0.5 mg), and
+nonsteroidal anti-inﬂammatory drugs (ﬂurbiprofen axeril 50 mg).
+After the transverse abdominis plane block (0.375% ropivacaine 20
+mL) was carried out, patients were inducted with etomidate (0.2
+mg/kg), sufentanil (0.3 mg/kg), and rocuronium bromide (1 mg/kg)
+and intubated. Etomidate was used for induction instead of pro-
+pofol because of a putatively favorable hemodynamic proﬁle.22 The
+patients’ lungs were mechanically ventilated. Remifentanil (0.1 mg/
+kg/h), cisphenyl sulfatracurium (0.1 mg/kg/h), dexmedetomidine
+(initial dose 1 mg/kg for 10 min, maintenance dose 0.4 mg/kg/h), and
+sevoﬂurane and/or propofol, as necessary, were used for anesthesia
+maintenance to keep bispectral index 40e60 throughout the
+W. Gao et al. / Surgery 170 (2021) 1618e1626
+1619
+
+
+=== PDF PAGE 3 ===
+surgery. Surgical decisions such as colectomy or proctectomy, lap-
+aroscopy or laparotomy, postoperative diet, and treatment were
+made by the surgeons as routine clinical practice. Patients’ eligi-
+bility was assessed by 2-step screenings for ﬁnal enrollment and
+randomization. The initial screening and recruitment were under-
+taken 1 day before surgery, and the ﬁnal enrollment and random-
+ization were conducted at the completion of surgery and general
+anesthesia. SPSS software was used for block randomization in a
+1:1 ratio with block size of 4. This random method will ensure that
+the number of patients in the 2 groups will be essentially equal
+with highly efﬁcient enrollment. After rescreening for eligibility at
+the completion of surgery, the central randomization administrator
+opened the sealed envelope and made the group allocation to the
+intervention executor in the corresponding center. All participants
+and study personnel, including researchers who collected data and
+anesthesiologists and surgeons who cared for patients, were blin-
+ded to the patient’s group allocation.
+Interventions
+TEAS was administrated a total of 4 times in each patient: the
+ﬁrst time was in the postoperative recovery unit (PACU) when
+patients reached a Steward recovery score of 4 and were able to
+cooperate with the treatment, and the remaining 3 times were once
+each day between 9 AM and 11 AM on the ﬁrst to third postoperative
+days in the ward. The Steward score (assessing conscious level,
+airway health, and muscle strength) was used to assess the pa-
+tient’s recovery from anesthesia. The Zusanli (ST36), Shangjuxu
+(ST37), and Sanyinjiao (SP6) acupoints at both legs (Supplementary
+Fig S1 in Appendix 2) were identiﬁed to deliver TEAS. Electrode
+pads were then afﬁxed to these acupoints. Once the effective
+tingling sensation “de qi,” which indicates ample current at a fre-
+quency of 2 to 10 Hz stimulation (TEAS stimulator, SDZ-V; Hwato,
+China), was achieved at these acupoints, TEAS was adjusted to the
+maximum intensity tolerated by the patient. This was then main-
+tained for 30 minutes. To minimize bias, patients were blinded to
+study group allocation. Patients in the sham group received iden-
+tical settings and manipulation, as did those in the TEAS group,
+except that the wire between the electrode pads and TEAS stimu-
+lator was severed to prevent current delivery.
+Outcomes
+The primary outcome of the study was the incidence of POI. No
+ﬂatus for >72 hours after surgery was diagnosed as POI. The sec-
+ondary outcomes were various POI symptoms, including the time
+to ﬁrst postoperative ﬂatus, defecation, bowel sound recovery,
+normal diet recovery, and the incidence of abdominal pain,
+distention, nausea, and vomiting, all of which were recorded from
+the ﬁrst to third postoperative days and 30-day telephone follow-
+up. The interval time was from when the Steward recovery score
+reached 4 points immediately after surgery to the ﬁrst occurrence
+time indicated above on the ﬁrst postoperative day.
+Blood sample analysis
+After patients in both groups received 4 interventions, the blood
+samples were collected in serum tubes at the postoperative 72
+hours, immediately placed on ice, centrifuged at 4C, and stored
+at 80C. The blood samples were randomly selected from both
+groups with a rate of 10% of the study participants. This sampling
+rate based on power calculation was done from the preliminary
+data obtained from the feasibility study. Serum acetylcholine (Ach)
+and interleukin-10 (IL-10) were measured with enzyme-linked
+immunoassay kits (Shanghai Lianmai Bioengineering Co. Ltd,
+Shanghai, China), and serum interleukin-6 (IL-6) and inducible
+nitric oxide synthase (iNOS) were also determined with enzyme-
+linked
+immunoassay
+kits
+(Cusabio
+Biotech
+Co.
+Ltd,
+Wuhan,
+China). These concentrations were compared between the TEAS
+and sham groups, between the POI and non-POI groups, and be-
+tween laparoscopic (closed) and proctectomy (open) surgery.
+Statistical analysis
+Power calculation: The POI incidence in a recent study was
+reportedly approximately 48%,23 and yet the POI incidence under
+the intervention of acupuncture has been rarely reported.24
+Therefore, the pilot feasibility study was carried out and the POI
+incidence was reduced by 12% with the TEAS treatment calculated
+from the preliminary data. With a signiﬁcance set at .05 and power
+set at 80%, the sample size required to detect differences was 265
+patients in each group calculated with the pass 11 software (NCSS
+LLC, Kaysville, UT). Taking into account a loss-to-follow-up rate of
+about 15%, 610 patients in total were recruited to meet the mini-
+mum sample size requirement.
+Intention-to-treat analysis was used for all enrolled patients.
+Continuous variables were presented as mean ± SD if data are
+normally distributed; otherwise, data were presented as median
+(interquartile range, IQR) and data plot. Categorical values were
+presented as numbers (percentages). The differences between the 2
+groups were compared using the Mann-Whitney or c2 tests. The
+variables of comparison between POI and non-POI with signiﬁcant
+differences (P < .10) in univariate analysis were included in multi-
+variate analysis, which was used to identify the associated risk
+factors of POI occurrence. To further illustrate the effect of TEAS on
+POI, the variables that were signiﬁcantly different between the
+TEAS group and sham group were used as the adjusting factors in
+multivariate analysis. The effectiveness of TEAS on POI was then
+stratiﬁed by other independent factors. The Kaplan-Meier log-rank
+test was used to illustrate the cumulated no ﬂatus rate and the POI
+incidence. The center effect of POI incidence was analyzed by the
+Breslow-Day test. All statistical analyses were performed using the
+SPSS software (version 25.0, IBM Corporation, NY). All authors had
+access to the study data and reviewed and approved the ﬁnal
+manuscript.
+Results
+Characteristics of study population
+A total of 992 patients were scheduled for colorectal surgery at
+10 hospitals in China between May 2018 and August 2019.
+Recruitment was terminated on August 31, 2019. During the 2-step
+screenings, 238 patients were excluded at the initial screening
+(including 142 patients who did not meet the study criteria and 96
+patients who declined to participate), and 144 patients were
+excluded at the second screening (including 109 patients with
+intraoperative enterostomy, 18 patients whose surgeries were
+canceled, 4 patients who withdrew from the study, and 13 pa-
+tients with other reasons). A total of 610 patients were enrolled
+and randomly divided into 2 groups: 307 patients allocated to the
+sham group and 303 patients to the TEAS group. All 610 patients
+were included in the intention-to-treat analysis (Fig 1). No TEAS-
+related adverse events (eg, skin allergy) occurred in the study.
+Patients had good TEAS treatment compliance with stimulating
+intensity in the PACU ranging from 13.0 mA to 15.0 mA, which was
+2 to 5 mA stronger than that in the ward. Some patients in
+the
+TEAS
+group
+experienced
+muscle
+twitch
+(Supplementary
+Table S1 in Appendix 2).
+W. Gao et al. / Surgery 170 (2021) 1618e1626
+1620
+
+
+=== PDF PAGE 4 ===
+The demographics, comorbidities, surgical data, intraoperative
+loading volume, and perioperative anesthetic use between the
+TEAS and sham groups are presented in Tables I and II, and com-
+parison of these variables between the POI and non-POI groups are
+presented in Supplementary Tables S2 and S3 in Appendix 2. The
+incidence of intraoperative blood plasma use in the TEAS group was
+signiﬁcantly lower than that in the sham group, but there was no
+signiﬁcant difference between the POI and non-POI groups. There
+was no statistically signiﬁcant difference in the 30-day post-
+operative complications and the total length of hospital stay be-
+tween the TEAS and sham groups (Supplementary Table S4).
+Primary and secondary outcomes
+Compared to the sham group, patients in the TEAS group had a
+signiﬁcantly lower POI incidence (32.3% vs 41.0%, P ¼.026; OR, 0.68,
+95% CI 0.48e0.96; P ¼ .029) and earlier gastrointestinal function
+recovery (Fig 2). Patients in the TEAS group had a shorter time to
+ﬁrst ﬂatus by 12.8 hours (95% CI 7.5e18.2; P < .001), and the cu-
+mulative no ﬂatus rate of the TEAS group was more signiﬁcantly
+decreased compared to the sham group (P ¼.002). Compared to the
+sham group, patients in the TEAS group had ﬁrst defecation earlier
+by 14.9 hours (4.4, 25.3; P ¼ .005), ﬁrst resumed normal diet earlier
+by 51.6 hours (14.8, 88.4; P ¼ .006), and ﬁrst bowel sounds heard
+earlier by 4.6 hours (0.9, 8.3; P ¼.016) (Table III). Average abdominal
+pain scores, distention scores, nausea scores, and incidence of
+vomiting at the postoperative 72 hours were not signiﬁcantly
+different between the 2 groups. The P value of POI incidence was
+.873 in the Breslow-Day test, indicating the center homogeneity of
+POI incidence.
+Multivariate analysis for POI
+The univariate factors (Supplementary Tables S2 and S3 in
+Appendix 2) were analyzed to assess the POI risk. Only intra-
+operative blood plasma infusion was signiﬁcantly different be-
+tween the TEAS and sham groups (Tables I and II), and hence was
+used as an adjusting factor in multivariate analysis. Compared to
+the sham group, the TEAS group reduced the risk of POI occurrence
+(OR, 0.68, 95% CI 0.48e0.96; P ¼ .029) by multivariate-unadjusted
+analysis; this risk reduction (OR, 0.69, 95% CI 0.49e0.98; P ¼ .038)
+was still signiﬁcant after adjusting for intraoperative plasma infu-
+sion
+usage
+(Supplementary
+Table
+S5
+in
+Appendix
+2).
+In
+multivariate-unadjusted analysis, patients who underwent lapa-
+roscopic surgery showed a reduction in POI risk (OR, 0.62, 95% CI
+0.44e0.89; P ¼.009). Patients who underwent colectomy (OR, 2.01;
+95% CI, 1.39e2.90; P < .001) and had a history of hypertension (OR,
+1.54; 95% CI, 1.04e2.30; P ¼ .033) had an increased POI risk. The
+delay in out-of-bed activities (OR, 1.02; 95% CI 1.01e1.02; P ¼ .001)
+was associated with a higher risk of POI. Meanwhile, the TEAS
+group showed a statistically signiﬁcant reduction in POI-associated
+risks without interaction with other independent factors, after
+respectively stratiﬁed with a history of hypertension, laparoscopic
+surgery, colectomy, and the time of ﬁrst out-of-bed activities
+(all P > .05) (Supplementary Table S6 in Appendix 2).
+Fig 1. CONSORT diagram for patients enrolled in the study.
+TEAS, transcutaneous electrical acupoint stimulation; ITT, intention-to-treat.
+W. Gao et al. / Surgery 170 (2021) 1618e1626
+1621
+
+
+=== PDF PAGE 5 ===
+Serum biomarkers
+The TEAS group had higher concentrations of Ach (median
+[IQR]: 124.5 [80.4, 171.7] pg/mL vs 80.4 [64.7, 124.5] pg/mL,
+P ¼ .007) and IL-10 (157.0 [97.4, 241.3] pg/mL vs 83.6 [49.0, 127.3]
+pg/mL vs, P < .001) but had lower concentrations of IL-6 (15.8
+[11.6, 25.5] pg/mL vs 30.0 [19.8, 44.0] pg/mL, P < .001) and iNOS
+(7.2 [3.4, 12.1] IU/mL vs 12.3 [7.7, 17.4] IU/mL, P ¼ .002) than did
+Table I
+Baseline characteristics
+TEAS (n ¼ 303)
+Sham (n ¼ 307)
+Age, years
+62.0 (53.0e69.0)
+63.0 (54.0e70.0)
+Men
+176 (58.1)
+156 (50.8)
+Body mass index, kg/m2
+22.5 (20.4e24.7)
+22.7 (20.7e24.4)
+Education level
+Primary education
+74 (28.6)
+84 (35.4)
+Secondary education
+146 (56.4)
+122 (51.5)
+Tertiary education
+39 (15.1)
+31 (13.1)
+ASA score
+I
+24 (7.9)
+22 (7.2)
+II
+243 (80.2)
+240 (78.2)
+III
+36 (11.9)
+45 (14.7)
+Comorbidities
+Coronary heart disease
+17 (5.6)
+20 (6.5)
+Chronic obstructive pulmonary disease
+18 (5.9)
+18 (5.9)
+Diabetes
+31 (10.2)
+30 (9.8)
+Hypertension
+80 (26.4)
+63 (20.5)
+Preoperative hypokalemia
+252 (92.3)
+254 (90.1)
+Abdominal surgery history
+17 (5.6)
+21 (6.8)
+Depth of inﬁltration
+T0
+8 (2.8)
+11 (3.7)
+Tis
+9 (3.2)
+8 (2.7)
+T1
+12 (4.2)
+11 (3.7)
+T2
+43 (15.1)
+46 (15.5)
+T3
+107 (37.5)
+112 (37.7)
+T4
+106 (37.2)
+109 (36.7)
+Lymph node metastasis
+N0
+182 (64.8)
+185 (63.8)
+N1
+99 (35.2)
+105 (36.2)
+Distant metastasis
+13 (4.6)
+13 (4.5)
+Dukes’ staging
+A
+61 (22.1)
+61 (21.3)
+B
+112 (40.6)
+113 (39.5)
+C
+88 (31.9)
+98 (34.3)
+D
+15 (5.4)
+14 (4.9)
+Data are presented as median (IQR) or patient’s number (%).
+ASA, American Society of Anesthesiologists physical status classiﬁcation system; IQR,
+interquartile range; TEAS, transcutaneous electrical acupoint stimulation.
+Table II
+Surgery and perioperative anesthetics records
+TEAS (n ¼ 303)
+Sham (n ¼ 307)
+P value
+Tumour size, cm
+5.0 (3.0e6.0)
+5.0 (4.0e6.0)
+.873
+Operation time, h
+3.3 (2.6e4.1)
+3.2 (2.5e4.2)
+.687
+Colectomy
+190 (62.7)
+179 (58.3)
+.266
+Right hemicolectomy
+78 (25.7)
+77 (25.1)
+.851
+Transverse colectomy
+23 (7.6)
+15 (4.9)
+.167
+Left hemicolectomy
+22 (7.3)
+20 (6.5)
+.716
+Sigmoidectomy
+67 (22.1)
+67 (21.8)
+.932
+Proctectomy
+113(37.3)
+128 (41.7)
+.266
+Laparoscopic
+199 (65.7)
+187 (60.9)
+.222
+Intraoperative blood loss, ml
+100.0 (50.0e200.0)
+100.0 (70.0e200.0)
+.240
+Intraoperative crystalloid ﬂuid, L
+1.7 (1.5e2.0)
+1.5 (1.5e2.0)
+.153
+Intraoperative colloidal ﬂuid, L
+0.5 (0.5e1.0)
+0.5 (0.5e1.0)
+.178
+Intraoperative red blood cell
+30 (9.9)
+31 (10.1)
+.946
+Intraoperative plasma
+17 (5.6)
+34 (11.1)
+.015
+Propofol, mg
+800.0 (530.0e1050.0)
+790.0 (500.0e1000.0)
+.171
+Etomidate, mg
+14.0 (10.0e16.0)
+14.0 (10.0e16.0)
+.721
+Sevoﬂurane, ml
+30.0 (15.8e40.0)
+30.0 (19.0e40.0)
+.593
+Dexmedetomidine, mg
+90.0 (57.6e122.2)
+90.0 (59.4e127.2)
+.764
+Remifentanil, mg
+1500.0 (1071.0e2000.0)
+1500.0 (1140.0e2000.0)
+.744
+Sufentanil, mg
+30.0 (25.0e35.0)
+30.0 (25.0e30.0)
+.643
+Cisatracurium bromide, mg
+22.0 (15.0e30.0)
+23.0 (16.0e31.0)
+.558
+Rocuronium bromide, mg
+50.0 (0.0e60.0)
+53.0 (0.0e60.0)
+.871
+Postoperative analgesia
+297 (98.0)
+304 (99.0)
+.304
+Delayed out-of-bed activities, hr
+34.5 (20.9e43.8)
+38.2 (23.8e44.7)
+.018
+Data are presented as median (IQR) or number of patient (%).
+IQR, interquartile range; TEAS, transcutaneous electrical acupoint stimulation.
+W. Gao et al. / Surgery 170 (2021) 1618e1626
+1622
+
+
+=== PDF PAGE 6 ===
+the sham group (Fig 3; n ¼ 31/group). Similarly, the concentra-
+tions of Ach and IL-10 in the POI group were lower than those in
+the non-POI group, whereas the concentrations of IL-6 and iNOS
+in the POI group were higher than those in the non-POI group
+(Supplementary Table S7 in Appendix 2). All the biomarkers
+measured at the postoperative 72 hours between laparoscopic
+surgery and proctectomy surgery were not statistically signiﬁ-
+cant (Supplementary Table S8 in Appendix 2).
+Discussion
+POI is a transient cessation of coordinate bowel motility after
+surgical intervention. After nonalimentary surgery, the gastroin-
+testinal functional recovery usually occurs within 72 hours.25 The
+enhanced recovery of intestinal motility after colorectal surgery
+was one of the elements documented in several Enhanced Recovery
+After Surgery (ERAS) protocols.26 The comprehensive ERAS pro-
+tocols after surgery lowered the POI incidence by 4%,27 and Alvi-
+mopan reduced POI incidence by 3.8%.28 Although the positive
+effect of TEAS or electroacupuncture on POI has already been
+suggested,19,29 it still has not been adequately veriﬁed due to an
+unclear POI deﬁnition, underpowered small sample sizes, and un-
+clear underlying mechanism.20 Furthermore, most studies have
+only reported the gastrointestinal function recovery, such as ﬁrst
+ﬂatus, defecation, or other continuous variables.19,29 Only 3 trials
+reporting the POI incidence were included until January 2017 from
+6 databases, and the highest reduction rate was only 4.2%.24
+Therefore,
+we performed
+this
+large-sample-size,
+multicenter,
+evaluator-blinded, randomized controlled study to investigate the
+effects of TEAS on the incidence of POI after colorectal surgery21
+and the possible underlying mechanisms. We found that the POI
+incidence was signiﬁcantly reduced by 8.7% with TEAS treatment.
+TEAS also decreased the risk of POI occurrence by 32% (OR, 0.68,
+95% CI 0.48e0.96; P ¼.029) and shortened the time to ﬁrst ﬂatus by
+12.8 hours (P < .001). Furthermore, TEAS treatment signiﬁcantly
+shortened the defecation recovery, resumption of bowel sounds,
+and normal diet times. TEAS also signiﬁcantly increased plasma Ach
+and IL-10, but it decreased IL-6 and iNOS, indicating that this
+Fig 2. Postoperative paralytic ileus (POI) and overall gastrointestinal functional recovery. (A) POI incidence, (B) ﬁrst-time ﬂatus, (C) Kaplan-Meier curves for cumulative no ﬂatus
+rate, (D) ﬁrst-time defecation, (E) ﬁrst-time resume normal diet, and (F) the ﬁrst-time bowel sounds. The data are presented as number of patients (%), mean (SD), and cumulative
+curves (n ¼ 303 in the TEAS group; n ¼ 307 in the sham group); *P < .05 versus the sham group.
+Table III
+Primary and secondary outcomes
+Outcomes
+TEAS (n ¼ 303)
+Sham (n ¼ 307)
+Mean difference (95% CI)
+P value
+Primary outcome
+POI, n (%)
+98 (32.3)
+126 (41.0)
+.026
+Secondary outcomes (h)
+First-time ﬂatus
+63.4 ± 29.0
+76.3 ± 37.9
+e12.8 (e18.2 to e7.5)
+.001
+First-time defecation
+106.7 ± 65.6
+121.5 ± 65.6
+e14.9 (e25.3 to e4.4)
+.005
+First-time resume normal diet
+373.9 ± 224.9
+425.5 ± 235.6
+-51.6 (e88.4 to e14.8)
+.006
+First-time bowel sounds
+41.4 ± 22.6
+46.0 ± 24.1
+e4.6 (e8.3 to e0.9)
+.016
+Abdominal pain score
+1.4 ± 1.4
+1.3 ± 1.5
+0.1 (e0.2 to 0.3)
+.555
+Distention score
+1.6 ± 0.9
+1.6 ± 0.9
+e0.1 (e0.2 to 0.1)
+.389
+Nausea score
+1.0 ± 1.6
+1.1 ± 1.7
+e0.1 (e0.3 to 0.2)
+.624
+Number of vomiting episodes
+0.0 ± 0.5
+0.0 ± 0.1
+0.0 (e0.0 to 0.1)
+.155
+Data are presented as mean ± SD or number of patients (%).
+POI, postoperative paralytic ileus.
+W. Gao et al. / Surgery 170 (2021) 1618e1626
+1623
+
+
+=== PDF PAGE 7 ===
+intervention increased parasympathetic nerve tone and anti-
+inﬂammatory actions to prevent POI.
+The noxious stimuli of surgery activate the sympathetic but
+inhibit the parasympathetic system. Surgery also induces local and
+systemic inﬂammation30dspeciﬁcally, the resident and inﬁltrating
+macrophages release proinﬂammatory cytokines, which, in turn,
+recruit neutrophils to inﬁltrate the intestinal wall muscle.31 As a
+result, the autonomic nervous system imbalance, inﬂammation,
+and beyond result in POI after surgery. Our data showed that TEAS
+reduced the risk of POI by 32%. This was further demonstrated in
+the Kaplan-Meier curve, the log-rank test, and adjusted and strat-
+iﬁed analyses (Fig 2; Supplementary Tables S5 and S6 in Appendix
+2). The underlying mechanisms are yet to be explored, but previous
+studies have demonstrated that acupuncture can increase gastric
+acid secretion through “nerve reﬂex” of the somatic nerves of the
+afferent pathway and the vagal branch innervates the stomach as
+the efferent pathway.12 TEAS likely modulates the imbalance be-
+tween the sympathetic and parasympathetic system to reduce POI
+via the neurofunctional changes of nerves nuclei.32 Indeed, TEAS
+did increase Ach in the plasma measure at 72 hours after surgery in
+the patients in our study, indicating that, as an intestinal excitatory
+neurotransmitter, Ach was released due to the vagal nerve activa-
+tion induced by acupuncture. iNOS is the main source of NO in
+inﬂammatory response,33 which disrupts the pacemaker activity of
+interstitial Cajal cells and contributes to POI development.34 The
+decreases in IL-6 and iNOS reported in our study might have been
+induced by the cholinergic anti-inﬂammatory pathway through the
+TEAS triggered vagal nerve activation via alpha-7 nicotinic re-
+ceptors to downregulate the inﬂammatory cytokine production.35
+Unlike IL-6 and iNOS, IL-10 is an anti-inﬂammatory cytokine8 that
+was increased in our patients treated with TEAS. This suggests that
+the decreased incidence of POI seen with TEAS treatment might be
+due to increasing vagal nerve tone and its anti-inﬂammatory
+response (Fig 4).
+The POI incidence in our sham group was 41%, which was higher
+than previously reported by up to 15%.36,37 These differences may
+be due to the different diagnostic criteria being used. POI is char-
+acterized by various symptoms including delayed ﬂatus and defe-
+cation, abdominal pain, bloating, nausea, vomiting, and intolerance
+to an oral diet. The most commonly used criteria were the passage
+of ﬂatus (83%) in the 47 publications previously reported.6 Our trial
+was, therefore, set with no ﬂatus >72 hours as a criterion, whereas
+other studies only included the moderate-to-severe symptoms of
+POI.27 Based on the results from our trial, the following could be
+concluded: (1) The acupoints ST36, ST37, and SP6 (Supplementary
+Fig S1 in Appendix 2) rather than a single acupoint were used.
+ST36-SP6 was reported to signiﬁcantly shorten the postoperative
+ﬂatus and defecation time, whereas ST36-ST37 reduced inﬂam-
+matory reaction and improved intestinal function.38 (2) The ﬁrst
+TEAS intervention was performed in the PACU because early active
+intervention might effectively inhibit the inﬂammatory cascade
+within the postoperative 6 hours.8 (3) Given that morning time is
+the highest period of vitality for gastrointestinal motility in circa-
+dian rhythm,39 the TEAS treatment was carried out from 9 AM to 11
+Fig 3. The biomarkers measured at postoperative 72 hours. (A) Acetylcholine (Ach); (B) interleukin-10 (IL-10); (C) interleukin-6 (IL-6); (D) inducible nitric oxide synthase (iNOS);
+the data are presented as median (IQR) and dot plot (n ¼ 31/group). *P < .05 versus the sham group.
+W. Gao et al. / Surgery 170 (2021) 1618e1626
+1624
+
+
+=== PDF PAGE 8 ===
+AM on the ﬁrst day to third day after surgery. (4) The TEAS inter-
+vention was individually adjusted to the maximum tolerance in-
+tensity for half an hour at each treatment, which was consistent
+with the current standard of acupuncture treatment.24
+In our study, we found that 5 independent perioperative factors
+of TEAS (preoperative hypertension, laparoscopic surgical tech-
+nique, colectomy surgery, and postoperative out-of-bed activity)
+were related to POI (Supplementary Table S5 in Appendix 2). The
+POI incidence in patients with hypertension was 1.5 times higher
+than those without hypertension, because hypertension increases
+the permeability of the gut epithelial barrier and inﬂammatory
+response.40 Regarding surgical factors, our study demonstrated that
+laparoscopic surgery reduced the risk of POI by 38% compared to
+open surgery. Similar results have been reported that the ﬁrst
+bowel movement was 1 day earlier after laparoscopic colectomy
+than after open colectomy.41,42 This ﬁnding is likely due to the
+laparoscopic technique reducing the postoperative atony of the
+small bowel, attenuating stress responses, and improving active
+motility at the splenic ﬂexure of the colon. Furthermore, our data
+also showed that colectomy has a 2-fold higher risk of POI than
+rectal surgery, which is consistent with the incidence of bowel
+dysfunction in colectomy (18.7%) and proctectomy (8.3%) in
+another prospective trial.43 This might be because the colon plays a
+more important role in gastrointestinal motility than the rectum. In
+line with multicenter observational studies and meta-analyses on
+ERAS protocols of early mobilization,44 our data also demonstrated
+that delayed out-of-bed activities increased the risk of POI.
+The strengths of our trial are a relatively large sample size, with
+patients recruited from multiple centers, and the complementary
+biomarkers being measured in supporting the preventive effec-
+tiveness of TEAS on the development of POI. However, this trial is
+not without limitations. First, although patients were blinded to the
+group allocation, patients could not be blinded to the treatment due
+to the nature of the intervention, because they can sense the acu-
+point stimuli in the TEAS group compared to no treatment in the
+sham group. However, the psychotherapeutic effects of sham
+acupuncture can be effective.45 If that is the case in our study, then
+the reduced incidence of POI by TEAS therapy would be under-
+estimated, and hence, the efﬁcacy of TEAS in treating POI can be
+assured. Second, all our patients underwent colorectal surgery.
+Whether TEAS is also effective in decreasing the incidence of POI in
+other kinds of surgery, such as upper abdominal surgery, is un-
+known. Third, the study excluded patients with prophylactic
+ileostomy due to the difﬁculties in the evaluation of ﬂatus and the
+effects of TEAS for these patients were unknown. Fourth, block
+randomization in a 1:1 ratio with a block size of 4 could ensure that
+the number of patients in the 2 groups were essentially equal with
+highly efﬁcient enrollment; however, the small block size may not
+completely avoid the violation of allocation concealment. Finally,
+this study was not undertaken in combination with the compre-
+hensive ERAS program, which is worth pursuing in future studies.
+Nevertheless, the data derived from our multicenter clinical trial
+clearly demonstrated that TEAS decreased the incidence of POI and
+promoted postoperative gastrointestinal functional recovery after
+surgery; hence, the technique should be considered for use in
+clinical practice. In line with our data, nonpharmacological or
+physiotherapies such as electric nerve stimulation or TEAS used in
+our study have been well documented to provide enormous ther-
+apeutic beneﬁts for functional gastrointestinal disorders in other
+disease types.46,47
+In conclusion, this multicenter randomized controlled study
+demonstrated that TEAS signiﬁcantly lowered POI incidence (no
+ﬂatus for >72 hours) and earlier gastrointestinal function recovery
+(the ﬁrst-time indicator appeared in advance), which may be due to
+its increasing parasympathetic nerve tone and anti-inﬂammatory
+actions.
+The
+clinical
+signiﬁcance
+of
+TEAS
+in
+reducing
+the
+Fig 4. The illustration of underlying mechanisms of transcutaneous electrical acupoint stimulation (TEAS) applied in lower limbs in reducing the POI incidence. Surgical trauma and
+noxious stimuli induced POI through vagal nerve inhibition, sympathetic activation, and inﬂammation, whereas TEAS enhanced gastrointestinal functional recovery via vagal nerve
+activation and inﬂammation inhibition, showing as increased plasma Ach and IL-10 and decreased IL-6 and iNOS.
+W. Gao et al. / Surgery 170 (2021) 1618e1626
+1625
+
+
+=== PDF PAGE 9 ===
+incidence of POI is important because a rapid gut function recovery
+after colorectal surgery is beneﬁcial. However, whether TEAS
+treatment improved long-term surgical outcomes remains un-
+known and warrants further study.
+Funding/Support
+This study was supported by the Clinical Research Award of the
+First Afﬁliated Hospital of Xi’an Jiaotong University, China (No.
+XJTU1AF-CRF-2016e003, No. XJTU1AF-CRF-2017e012); the Na-
+tional Nature Science Foundation of China (No. 81971290, No.
+81771485); and the Young Scholar Research Grant of the Chinese
+Anesthesiologist Association (No. 21800008).
+Conﬂict of interest/Disclosure
+The authors have no competing interests.
+Supplementary materials
+Supplementary material associated with this article can be
+found, in the online version, at [https://doi.org/10.1016/j.surg.2021.
+08.007].
+References
+1. Dekker E, Tanis PJ, Vleugels J, et al. Colorectal cancer. Lancet. 2019;394:
+1467e1480.
+2. Courtney RJ, Paul CL, Carey ML, et al. A population-based cross-sectional study
+of colorectal cancer screening practices of ﬁrst-degree relatives of colorectal
+cancer patients. BMC Cancer. 2013;13:13.
+3. Asgeirsson T, El-Badawi KI, Mahmood A, et al. Postoperative ileus: it costs more
+than you expect. J Am Coll Surg. 2010;210:228e231.
+4. Boelens PG, Heesakkers FF, Luyer MD, et al. Reduction of postoperative ileus by
+early enteral nutrition in patients undergoing major rectal surgery: prospec-
+tive, randomized, controlled trial. Ann Surg. 2014;259:649e655.
+5. Peters EG, Smeets BJJ, Nors J, et al. Perioperative lipid-enriched enteral nutri-
+tion versus standard care in patients undergoing elective colorectal surgery
+(SANICS II): a multicentre, double-blind, randomised controlled trial. Lancet
+Gastroenterol Hepatol. 2018;3:242e251.
+6. Vather R, Trivedi S, Bissett I. Deﬁning postoperative ileus: results of a sys-
+tematic review and global survey. J Gastrointest Surg. 2013;17:962e972.
+7. Boeckxstaens GE, de Jonge WJ. Neuroimmune mechanisms in postoperative
+ileus. Gut. 2009;58:1300e1311.
+8. de Jonge WJ, van der Zanden EP, The FO, et al. Stimulation of the vagus nerve
+attenuates macrophage activation by activating the Jak2-STAT3 signaling
+pathway. Nat Immunol. 2005;6:844e851.
+9. Farro G, Gomez-Pinilla PJ, Di Giovangiulio M, et al. Smooth muscle and neural
+dysfunction contribute to different phases of murine postoperative ileus.
+Neurogastroenterol Motil. 2016;28:934e947.
+10. Traut U, Brügger L, Kunz R, et al. Systemic prokinetic pharmacologic treatment
+for postoperative adynamic ileus following abdominal surgery in adults.
+Cochrane Database Syst Rev. 2008:CD004930.
+11. Vather R, Josephson R, Jaung R, et al. Gastrograﬁn in prolonged postoperative
+ileus: a double-blinded randomized controlled trial. Ann Surg. 2015;262:
+23e30.
+12. Kavoussi B, Ross BE. The neuroimmune basis of anti-inﬂammatory acupunc-
+ture. Integrative Cancer Ther. 2007;6:251e257.
+13. Liu Z, Yan S, Wu J, et al. Acupuncture for chronic severe functional constipation.
+Ann Intern Med. 2016;165:761e769.
+14. Zeng F, Qin W, Ma T, et al. Inﬂuence of acupuncture treatment on cerebral
+activity in functional dyspepsia patients and its relationship with efﬁcacy. Am J
+Gastroenterol. 2012;107:1236e1247.
+15. Cheifetz AS, Gianotti R, Luber R, et al. Complementary and alternative medi-
+cines used by patients with inﬂammatory bowel diseases. Gastroenterology.
+2017;152:415e429.
+16. Collaborators GN. Global, regional, and national burden of neurological disor-
+ders, 1990e2016: a systematic analysis for the global burden of disease. Lancet
+Neurol. 2019;18:459e480.
+17. Zhang Q, Gao Z, Wang H, et al. The effect of pre-treatment with transcutaneous
+electrical acupoint stimulation on the quality of recovery after ambulatory
+breast
+surgery:
+a
+prospective,
+randomised
+controlled
+trial.
+Anaesthesia.
+2014;69:832e839.
+18. Wang H, Xie Y, Zhang Q, et al. Transcutaneous electric acupoint stimulation
+reduces intra-operative remifentanil consumption and alleviates postoperative
+side-effects in patients undergoing sinusotomy: a prospective, randomized,
+placebo-controlled trial. Br J Anaesth. 2014;112:1075e1082.
+19. Chen K, Huang Y, Jin X, et al. Electroacupuncture or transcutaneous electro-
+acupuncture for postoperative ileus after abdominal surgery: a systematic re-
+view and meta-analysis. Int J Surg. 2019;70:93e101.
+20. Iuamoto LR, Meyer A. A commentary on: “Electroacupuncture or trans-
+cutaneous electroacupuncture for postoperative ileus after abdominal sur-
+gery”: where is the evidence of who could beneﬁt? Int J Surg. 2019;71:80e81.
+21. Gero D, Gie O, Hubner M, et al. Postoperative ileus: in search of an international
+consensus on deﬁnition, diagnosis, and treatment. Langenbecks Arch Surg.
+2017;402:149e158.
+22. Hannam JA, Mitchell SJ, Cumin D, et al. Haemodynamic proﬁles of etomidate vs
+propofol for induction of anaesthesia: a randomised controlled trial in patients
+undergoing cardiac surgery. Br J Anaesth. 2019;122:198e205.
+23. van den Heijkant T, Costes L, van der Lee D, et al. Randomized clinical trial of
+the effect of gum chewing on postoperative ileus and inﬂammation in colo-
+rectal surgery. Br J Surg. 2015;102:202e211.
+24. Liu YH, Dong GT, Ye Y, et al. Effectiveness of acupuncture for early recovery of
+bowel function in cancer: a systematic review and meta-analysis. Evid Based
+Complement Alternat Med. 2017;2017:2504021.
+25. Bragg D, El-Sharkawy AM, Psaltis E, et al. Postoperative ileus: recent de-
+velopments
+in
+pathophysiology
+and
+management.
+Clin
+Nutr.
+2015;34:
+367e376.
+26. Ljungqvist O, Scott M, Fearon KC. Enhanced recovery after surgery: a review.
+JAMA Surg. 2017;152:292e298.
+27. Ripolles-Melchor J, Ramirez-Rodriguez JM, Casans-Frances R, et al. Association
+between use of enhanced recovery after surgery protocol and postoperative
+complications in colorectal surgery: the postoperative outcomes within
+enhanced recovery after surgery protocol (power) study. JAMA Surg. 2019;154:
+725e736.
+28. Al-Mazrou AM, Baser O, Kiran RP. Alvimopan, regardless of ileus risk, signiﬁ-
+cantly impacts ileus, length of stay, and readmission after intestinal surgery.
+J Gastrointest Surg. 2018;22:2104e2116.
+29. Liu Y, May BH, Zhang AL, et al. Acupuncture and related therapies for treatment
+of postoperative ileus in colorectal cancer: a systematic review and meta-
+analysis of randomized controlled trials. Evid Based Complement Alternat Med.
+2018;2018:3178472.
+30. Alam A, Hana Z, Jin Z, et al. Surgery, neuroinﬂammation and cognitive
+impairment. EBioMedicine. 2018;37:547e556.
+31. Farro G, Stakenborg M, Gomez-Pinilla PJ, et al. CCR2-dependent monocyte-
+derived macrophages resolve inﬂammation and restore gut motility in post-
+operative ileus. Gut. 2017;66:2098e2109.
+32. Takahashi T. Mechanism of acupuncture on neuromodulation in the gut: a
+review. Neuromodulation. 2011;14:8e12.
+33. Pohl JM, Gutweiler S, Thiebes S, et al. Irf4-dependent CD103(þ)CD11b(þ)
+dendritic cells and the intestinal microbiome regulate monocyte and macro-
+phage activation and intestinal peristalsis in postoperative ileus. Gut. 2017;66:
+2110e2120.
+34. Kaji N, Nakayama S, Horiguchi K, et al. Disruption of the pacemaker activity of
+interstitial cells of Cajal via nitric oxide contributes to postoperative ileus.
+Neurogastroenterol Motil. 2018:e13334.
+35. Conlin V, Wu X, Nguyen C, et al. Vasoactive intestinal peptide ameliorates in-
+testinal barrier disruption associated with citrobacter rodentium-induced co-
+litis. Am J Physiol Gastrointest Liver Physiol. 2009;297:G735eG750.
+36. Kronberg U, Kiran RP, Soliman MS, et al. A characterization of factors deter-
+mining postoperative ileus after laparoscopic colectomy enables the genera-
+tion of a novel predictive score. Ann Surg. 2011;253:78e81.
+37. Chapuis PH, Bokey L, Keshava A, et al. Risk factors for prolonged ileus after
+resection of colorectal cancer: an observational study of 2400 consecutive
+patients. Ann Surg. 2013;257:909e915.
+38. Lederer AK, Schmucker C, Kousoulas L, et al. Naturopathic treatment and
+complementary medicine in surgical practice. Dtsch Arztebl Int. 2018;115:
+815e821.
+39. Konturek C, Brzozowski T, J KS. Gut clock: implication of circadian rhythms in
+the gastointestinal tract. J Physiol Pharmacol. 2011;62:139e150.
+40. Santisteban M, Qi Y, Zubcevic J, et al. Hypertension-linked pathophysiological
+alterations in the gut. Circ Res. 2017;120:312e323.
+41. Braga M, Vignali A, Gianotti L, et al. Laparoscopic versus open colorectal sur-
+gery: a randomized trial on short-term outcome. Ann Surg. 2002;236:759e767.
+42. Veldkamp R, Kuhry E, Hop W, et al. Laparoscopic surgery versus open surgery
+for colon cancer: short-term outcomes of a randomised trial. Lancet Oncol.
+2005;6:477e484.
+43. van Heinsbergen M, Janssen-Heijnen ML, Leijtens JW, Slooter GD, Konsten JL.
+Bowel dysfunction after sigmoid resection underestimated: multicentre study
+on quality of life after surgery for carcinoma of the rectum and sigmoid. Eur J
+Surg Oncol. 2018;44:1261e1267.
+44. Group EC. The impact of enhanced recovery protocol compliance on elective
+colorectal cancer resection: results from an international registry. Ann Surg.
+2015;261:1153e1159.
+45. Briggs J, Shurtleff DJJ. Acupuncture and the complex connections between the
+mind and the body. JAMA. 2017;317:2489e2490.
+46. Kovacic K, Hainsworth K, Sood M, et al. Neurostimulation for abdominal
+pain-related functional gastrointestinal disorders in adolescents: a rand-
+omised, double-blind, sham-controlled trial. Lancet Gastroenterol Hepatol.
+2017;2:727e737.
+47. Ford AC, Mahadeva S, Carbone MF, Lacy BE, Talley NJ. Functional dyspepsia.
+Lancet. 2020;396:1689e1702.
+W. Gao et al. / Surgery 170 (2021) 1618e1626
+1626

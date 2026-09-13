@@ -1,0 +1,888 @@
+
+=== PDF PAGE 1 ===
+ORIGINAL SCIENTIFIC REPORT
+Transcutaneous Electrical Acupoints Stimulation Improves
+Spontaneous Voiding Recovery After Laparoscopic
+Cholecystectomy: A Randomized Clinical Trial
+Yan-Fang Zhang1 • Xiang-Yun Li1 • Xiu-Yun Liu2,3 • Yuan Zhang1 • Li-Rong Gong1 •
+Jia Shi1 • Shi-Han Du1 • Si-Meng He1 • Cui Li1 • Yu-Ting Li1 • Na Li1 • Sha-Sha Liu1 •
+Ya Wu1 • Zi-Lei Xie1 • Zheng-Cun Pei2,3 • Jian-Bo Yu1
+Accepted: 7 January 2023 / Published online: 6 February 2023
+ The Author(s) under exclusive licence to Socie´te´ Internationale de Chirurgie 2023, corrected publication 2023
+Abstract
+Background Facilitating the recurrence of spontaneous voiding is considered to be a way to prevent urinary retention
+after surgery, which is of great importance in cholecystectomy. This study aimed to assess the effect of transcuta-
+neous electrical acupoint stimulation (TEAS) on spontaneous voiding recovery after laparoscopic cholecystectom.
+Methods Participants who underwent elective laparoscopic cholecystectomy were randomly assigned to either the
+TEAS group or the sham group. Active TEAS or sham TEAS at speciﬁc acupuncture points was conducted intra-
+operatively and postoperatively. The primary outcome was the recovery speed of spontaneous voiding ability after
+surgery and secondary outcomes included postoperative urinary retention (POUR), voiding dysfunction, pain, anxiety
+and depression, and early recovery after surgery.
+Results A total of 1,948 participants were recruited and randomized to TEAS (n = 975) or sham (n = 973) between
+August 2018 and June 2020. TEAS shortens the time delay of the ﬁrst spontaneous voiding after laparoscopic
+cholecystectomy (5.6 h [IQR, 3.7–8.1 h] in the TEAS group vs 7.0 h [IQR, 4.7–9.7 h] in the sham group)
+(p \ 0.001). The TEAS group experienced less POUR (p = 0.020), less voiding difﬁculty (p \ 0.001), less anxiety
+and depression (p \ 0.001), reduced pain (p = 0.007), and earlier ambulation (p = 0.01) than the sham group.
+Conclusions Our results showed that TEAS is an effective approach to accelerate the recovery of spontaneous
+voiding and reduce POUR which facilitates recovery for patients after laparoscopic cholecystectomy.
+Introduction
+Gallstone disease is one of the most common and costly
+gastroenterological disorders. It is estimated that nearly
+700,000 cholecystectomy surgeries are performed annually
+in the USA [1] and the incidence is increasing in devel-
+oping countries [2, 3]. Urinary retention is one of the major
+complications after laparoscopic cholecystectomy, affect-
+ing 4.7–15.8% patients, and it is associated with prolonged
+hospital stay, increased costs, and patient anxiety and dis-
+comfort [4–6].
+Elective
+laparoscopic
+cholecystectomy
+without
+catheterization has become popular in recent years because
+of its minimal invasiveness [7]. However, it may impair
+spontaneous voiding ability due to diminished awareness of
+bladder sensation after surgical procedures [8]. Delayed
+Yan-Fang Zhang and Xiang-Yun Li have contributed equally to this
+work.
+& Jian-Bo Yu
+30717008@nankai.edu.cn
+1
+Department of Anesthesiology and Critical Care Medicine,
+Tianjin Nankai Hospital, Tianjin Medical University, 6
+Changjiang Road, Tianjin, People’s Republic of China
+2
+Department of Biomedical Engineering, College of Precision
+Instruments and Optoelectronics Engineering, Tianjin
+University, Tianjin, China
+3
+Academy of Medical Engineering and Translational
+Medicine, Tianjin University, Tianjin, People’s Republic of
+China
+123
+World J Surg (2023) 47:1153–1162
+https://doi.org/10.1007/s00268-023-06924-7
+
+
+=== PDF PAGE 2 ===
+spontaneous voiding can result in bladder distension, uri-
+nary retention, psychological stress, abdominal pain, con-
+fusion, and restlessness [9]. Various treatments have been
+attempted to improve voiding problems, such as alpha
+blockers, botulin toxin, and bladder catheterization; how-
+ever, their effects are still controversial [10, 11].
+Acupuncture has gained popularity as a non-pharma-
+ceutical treatment for recovering the voiding control
+function. Recent clinical trials have shown that acupunc-
+ture and related methods can reduce the incidence of
+postoperative urinary retention (POUR) after orthopedic,
+obstetric, gynecological, and gastrointestinal surgeries
+[12–14]. Transcutaneous electrical acupoint stimulation
+(TEAS) applies transcutaneous electrical stimulation to
+acupuncture points instead of needles and has demon-
+strated beneﬁts in regulating voiding in animal studies
+[15, 16]. However, these studies had limitations, including
+a small sample size, inadequate allocation concealment,
+etc.
+Therefore, we conducted a large-scale, single-center,
+double-blind randomized trial to assess the efﬁcacy of
+TEAS for spontaneous voiding recovery after laparoscopic
+cholecystectomy.
+Methods
+Study design
+This prospective, double-blind trial was conducted at
+Nankai Hospital, a tertiary hospital trusted by China
+National Natural Science Foundation between August 21,
+2018, and June 17, 2020. This study was approved by the
+local institutional review board, and written informed
+consent was obtained from all subjects participating in the
+trial. The trial was registered prior to patient enrollment at
+clinicaltrials.gov
+(NCT03631160)
+and
+conducted
+in
+accordance with the Declaration of Helsinki.
+Patients
+Patients were included if they were 40–75 years old, the
+age at which gallbladder stones are most likely to
+occur[17]. Exclusion criteria were preventive or intraop-
+erative indwelling catheter, urinary tract obstruction, or
+infections within 3 months (such as moderate or severe
+benign prostatic hyperplasia, stress urinary incontinence,
+urinary tract infections, etc.), critical condition (preopera-
+tive American Society of Anesthesiologists, [ASA] grade
+C IV), severe renal impairment (need to undergo renal
+replacement therapy), severe liver and kidney dysfunction
+(Child–Pugh grade C), contraindications to TEAS (such as
+skin allergy, infection, pruritus, or wearing a pacemaker),
+and participating in other clinical investigators within
+3 months prior to enrollment in this study. Besides,
+patients with previous acupuncture treatment experience
+were excluded for they had a higher probability of
+acupuncture insensitivity.
+Randomization and blinding
+Eligible participants were randomly assigned to the TEAS
+or sham group in a 1:1 ratio using block randomization.
+The randomized numbers were enclosed in sequentially
+numbered, sealed, opaque envelopes and revealed by the
+acupuncturist in charge prior to the start of surgery. The
+participants, outcome assessors, staff responsible for the
+postoperative care and statisticians were blinded to the
+treatment allocation.
+Interventions
+A full-time acupuncturist who is a registered TCM prac-
+titioner with eight years of clinical experience provided
+TEAS and sham treatments independently. In the inter-
+vention, she remained silent regarding the allocation and
+effects of TEAS. However, she informed every patient
+before performing the intervention that they may or may
+not feel a tingling sensation around the calf and lower back
+during TEAS treatment. The participants in the TEAS
+group received stimulation at four locations: Ciliao (BL32,
+located at the third sacral foramen), Sanyinjiao (SP6,
+located 3 cun proximal to the medial malleolus), Zhongji
+(CV3, located 4 cun below the belly button), and Guanyuan
+(CV4, located 3 cun below the belly button) (Fig. 1). In the
+TEAS group, a low-frequency pulse electroacupuncture
+stimulator (Hwato brand model no. SDZ—IV, Suzhou
+Medical Appliances Co., Ltd, Suzhou, China) was attached
+to four acupuncture points. TEAS was started 30 min
+before the induction of anesthesia and lasted until 45 min
+after the surgery. The stimulator applied a 2-Hz sparse
+wave, and the intensity was gradually increased until the
+strongest needle-like tingling sensation that patients could
+tolerate was reached [18]. Participants in the sham group
+received a sham stimulus at the acupoints by cutting off the
+output wires and no current output was delivered to the
+patient, even though it was turned on. This approach is
+based on a clinical study of acupuncture treatment and
+shown to be free of de qi reactions in patients [19]. In order
+to make the simulation as realistic as possible, when
+switched on, the apparatus with sham electrode lines had
+the same working power indicator and sound as those with
+normal electrode lines, suggesting to participants that the
+apparatus is functional even though it actually had no
+current output.
+1154
+World J Surg (2023) 47:1153–1162
+123
+
+
+=== PDF PAGE 3 ===
+All patients voided completely immediately before
+entering the operating room. Intraoperative monitoring
+included electrocardiography, noninvasive blood pressure,
+peripheral capillary oxygen saturation, end-breathing car-
+bon dioxide partial pressure, and bispectral index. Anes-
+thesia was induced with etomidate (0.2–0.6 mg/kg) and
+sufentanil (0.2–0.5 lg/kg) and maintained with remifen-
+tanil in combination with propofol infusion. Patient-con-
+trolled
+intravenous
+analgesia
+(PCIA)
+with
+sufentanil
+combined with ﬂurbiprofen was administered for 24–48 h
+postoperatively as necessary. Intra-abdominal pressure was
+maintained between 8 and 12 mmHg. Patients received
+Ringer’s lactate solution infusion in the pre- and intraop-
+erative periods at a rate of 10 mL/kg/h [20]. This was
+continued after surgery until oral ﬂuid intake was allowed.
+Outcomes
+The primary outcome was the recovery of spontaneous
+voiding ability after surgery, evaluated by the time between
+the surgery end point and the ﬁrst spontaneous voiding time
+point. The above was recorded in a perioperative bladder
+diary, a tool commonly recommended for investigating
+patients with lower LUTS, by the accompanying person [21].
+The secondary outcomes included POUR, voiding dif-
+ﬁculty, oliguria, nocturia, postoperative pain, sleep quality,
+anxiety and depression, vomiting, early ambulation, length
+of hospital stay, and hospital costs. POUR was diagnosed
+based on clinical symptoms, ultrasound assessment, and the
+requirement for bladder catheterization [22]. All treatment-
+related and treatment-unrelated adverse events were doc-
+umented throughout the trial.
+Statistical analysis
+Sample size calculation was based on data from our pilot
+trial done in 2016 (n = 50) in which the delay of recovery
+of
+spontaneous
+voiding
+ability
+after
+surgery
+was
+6.0 ± 3.0 h in the TEAS group and 6.5 ± 3.3 h in the
+sham group, respectively. The minimum sample size
+required was 823 patients for each group, at 80% power
+and one-sided test with a 2.5% signiﬁcance level. To
+account for dropout (assuming a dropout rate of approxi-
+mately 15%), we sought to enroll 970 patients in each
+group. Statistical analysis was done using PASS software,
+version 11.0 (NCSS, LLC, Kaysville, UT, USA).
+Categorical variables are summarized as frequencies or
+percentages. The normality of continuous data was tested
+using the Kolmogorov–Smirnov method (p \ 0.05: reject
+normality), and the data are presented as medians with
+interquartile ranges (IQR) for non-normally distributed data
+and mean with standard deviation for normally distributed
+data. Comparisons of the parameters between the TEAS
+group and the sham group were conducted using the t-test or
+Fig. 1 Location of Acupoints in the Trial of Transcutaneous Electrical Acupoint Stimulation for Postoperative Spontaneous Voiding Recovery.
+Set 1 and 2 were used during surgery and post anaesthesia care unit stay, respectively. Treatment in the operating room was from 30 min before
+induction of anaesthesia until the end of the surgery. Stimulation in the post anaesthesia care unit lasted for at least 45 min. BL32, Ciliao,
+localized in the third sacral foramen; SP6, Sanyinjiao, 3 cun proximal to the medial malleolus; CV3, Zhongji, 4 cun caudal to the umbilicus;
+CV4, Guanyuan, 3 cun below the belly button. 1 cun & 30 mm
+World J Surg (2023) 47:1153–1162
+1155
+123
+
+
+=== PDF PAGE 4 ===
+Mann–Whitney U test as appropriate. Other binary results
+were examined using the Chi-squared tests. Kaplan–Meier
+plots were used to show the time length from the end of
+surgery to the ﬁrst time of spontaneous voiding, and p-values
+were calculated using the log-rank test. The subgroup analy-
+ses included: sex, age, operative time, and PCIA. All analyses
+were conducted using IBM SPSS 22.0 (IBM Corp., Armonk,
+NY, USA). Statistical signiﬁcance was set at p \ 0.05.
+Results
+Patient characteristics
+In total, 3,977 patients were assessed for eligibility for
+inclusion between August 2018 and June 2020. We
+excluded 2029 patients for did not satisfy the inclusion
+criteria, declined to participate, and other reasons. Finally,
+Fig. 2 Patent ﬂow chart. The primary outcome was the ﬁrst spontaneous voiding time during the postoperative period which referred to the
+speciﬁed interval from the operation end to the ﬁrst post-operative urination
+1156
+World J Surg (2023) 47:1153–1162
+123
+
+
+=== PDF PAGE 5 ===
+1948 patients were eligible for inclusion, and they were
+randomized to the TEAS (n = 975) and sham (n = 973)
+groups. Of these, 53 and 57 patients in the TEAS and sham
+groups
+withdrew,
+respectively.
+The
+remaining
+1,838
+patients completed the study and were included in the
+analysis. A detailed patient ﬂowchart is shown in (Fig. 2).
+Patient demographics and baseline characteristics were
+similar between the groups (Table 1).
+Primary outcome
+The time length between the ending point of surgery and
+the ﬁrst spontaneous voiding time point was 1.3 h (IQR:
+0.8–1.8 h) shorter in the TEAS group compared with the
+sham group, 5.6 h [IQR: 3.7–8.1 h] and 7.1 h [IQR:
+4.7–9.7 h], respectively (p \ 0.001) (Table 2 and Fig. 3).
+More patients in the sham group underwent delayed uri-
+nary recovery (deﬁned as the inability to void urine
+for [ 12 h after induction of anesthesia) compared in the
+TEAS group (18.9% vs. 11.2%, p \ 0.001). There was no
+signiﬁcant difference in the ﬁrst spontaneous voided vol-
+ume between the two groups (p = 0.72).
+Secondary outcomes and adverse events
+A total of 179 patients developed POUR: 75 (8.1%, 95%
+conﬁdence interval [CI] 6.4–9.9%) and 104 (11.4%, 95%
+CI 9.3–13.4%) in the TEAS and sham groups, respectively,
+with
+statistical
+difference
+(p = 0.02).
+After
+catheter
+removal, patients in the TEAS group experienced faster
+spontaneous voiding recovery (p = 0.027) and greater
+volume of ﬁrst spontaneous voiding (p = 0.004) than did
+those in the sham group (Table 3).
+The TEAS group experienced less postoperative voiding
+difﬁculty (28.3% vs. 45.1%, p \ 0.001), less nocturia
+(23.0% vs. 30.0%, p \ 0.001), less pain (NRS pain score, 4
+[IQR:3–6] vs. 5 [IQR:3–6], p = 0.007), and less anxiety
+and depression (HADS score, 0 [IQR: 0–1] vs. 0[IQR:
+0–2], p \ 0.001) compared with the sham group. There
+were no signiﬁcant differences between the two groups in
+the incidence of postoperative vomiting (p = 0.38), length
+of
+hospital
+stay
+(p = 0.16),
+and
+hospitalization
+cost
+(p = 0.21). However, more patients recovered mobilization
+within 24 h after surgery in the TEAS group than in the
+sham group (62.1% vs. 56.4%, p = 0.013) (Table 4).
+No serious adverse events were reported in either group.
+Only seven cases (0.4%) were reported to have treatment-
+related or voiding-related adverse events, which were mild
+and temporary (Table 5).
+Table 1 Baseline participant characteristics
+Characteristic
+TEAS Group
+(n = 922)
+Sham Group
+(n = 916)
+Sex
+Male
+360 (39.0)
+383 (41.8)
+Female
+562 (61.0)
+533 (58.2)
+Age
+Mean age (y)
+58.9 ± 8.6
+59.1 ± 8.4
+Participants aged 40–59
+451(48.9)
+457(49.9)
+Participants aged 60–75
+471(51.1)
+459(50.1)
+Mean height (cm)
+165.2 ± 7.8
+165.5 ± 7.6
+Mean weight (kg)
+69.2 ± 11.8
+69.1 ± 11.3
+Mean body mass index (kg/m2)
+25.2 ± 3.3
+25.2 ± 3.4
+Coexisting medical conditions
+Hypertension
+359 (38.9)
+358 (39.1)
+Diabetes mellitus
+159 (17.2)
+150 (16.4)
+Current smoker
+159 (17.2)
+156 (17.0)
+Alcohol use
+71 (7.7)
+59 (6.4)
+Obesity*
+56(6.1)
+63(6.9)
+Preoperative preparation
+Enema
+421 (45.7)
+445 (48.6)
+Fasting
+64 (6.9)
+64 (7.0)
+Preoperative micturition
+Median [IQR] urine output
+(mL)
+222.2 (175.0 to
+266.7)
+216.7
+(175.0–266.7)
+Median [IQR] voiding interval
+(h)
+6.0 (4.5–7.2)
+5.9(4.4–7.2)
+Surgical characteristics
+Median [IQR] operative time
+(h)
+0.8 (0.6–1.1)
+0.8 (0.6–1.2)
+Median [IQR] intravenous ﬂuid
+(mL)
+750.0
+(700.0–800.0)
+750.0
+(700.0–850.0)
+Median [IQR] blood loss (mL)
+50.0
+(30.0–50.0)
+50.0
+(30.0–50.0)
+Median [IQR] intraoperative
+opioid dosage, intravenous
+morphine equivalents (mg)
+30.0
+(25.0–35.0)
+30.0
+(25.0–35.0)
+PCIA
+837 (90.8)
+838 (91.5)
+Median [IQR] post-surgery
+opioid dosage within 48 h,
+intravenous morphine
+sequivalents (mg)
+110.0
+(80.0–110.0)
+110.0
+(90.0–110.0)
+Values are expressed as numbers (percentages) unless otherwise
+indicated. *Deﬁned as body mass index greater than 30. Preoperative
+voiding recording started on the afternoon (about 4:00 p.m.) before
+the operation.  Opioid doses were converted to intravenous morphine
+equivalents using the ClinCalc.com ‘‘Equivalent Opioid Calculator’’
+tool. BMI body mass index, PCIA patient controlled intravenous
+analgesia, IQR interquartile range
+World J Surg (2023) 47:1153–1162
+1157
+123
+
+
+=== PDF PAGE 6 ===
+Exploratory analysis
+TEAS accelerated the recovery of spontaneous voiding
+function in both men and women, and TEAS is more
+effective in men than in women (Delong test, p = 0.036,
+Fig. 4a). Regardless of surgery duration or age, TEAS
+showed signiﬁcant improvement in recovering spontaneous
+voiding function compared to the sham group (Fig. 4b, c).
+The Delong test showed that TEAS was more effective in
+PCIA
+than
+in
+those
+without
+intravenous
+analgesia
+(p = 0.002, Fig. 4d).
+Discussion
+In this study, we found that TEAS was an effective treat-
+ment for accelerating the recovery of spontaneous voiding
+after
+laparoscopic
+cholecystectomy.
+It
+is
+effective
+regardless of sex, age, duration of surgery or PCIA.
+Moreover, TEAS is more effective in mem than in women,
+as well as in patients with PCIA than those without PCIA.
+The study also proved that TEAS is effective in relieving
+pain and anxiety and reducing POUR and voiding difﬁculty
+after laparoscopic cholecystectomy.
+Spontaneous urination is considered as one of the most
+important criteria to assess bladder voiding capacity
+[12, 23]. Moreover, restoring the ability to urinate after
+surgery is crucial to the prevention and treatment of
+POUR[24]. Coyle et al. also pointed out that delayed return
+of normal bladder function can lead to POUR [25]. In
+addition, the recovery of spontaneous urination within 6 h
+after surgery was used as a postoperative indicator to guide
+postoperative catheterization and discharge at the Univer-
+sity of Texas Southwestern Medical Center [26]. In our
+study, the recovery time of postoperative spontaneous
+urination in patients after TEAS was 5.6 h, which was 1.
+3 h faster than in the control group and shorter than the
+threshold of 6 h for catheter insertion mentioned above. A
+recent study exploring interventions for patients with uri-
+nary difﬁculties after anorectal surgery showed that the
+median time to spontaneous voiding was 8 h without
+intervention and 6 h after moxibustion treatment (an acu-
+point treatment that shares its theoretical background with
+acupuncture) which was consistent with our study [14].
+Several etiologies of postoperative urination disorders
+exist, including anesthetic disruption of bladder innerva-
+tion, bladder overdistention, and bladder outlet obstruction
+[27]. General anesthetics, including sedative-hypnotic and
+volatile agents, are thought to inhibit autonomic control of
+urinary function at the level of the pontine micturition
+center, and voluntary control of the cortex [22]. Urinary
+retention has adopted many deﬁnitions in the literature, and
+it can best be described as the inability to spontaneously
+and adequately empty the bladder [22]. However, the
+diagnosis of POUR is often arbitrary, and its reported
+incidence widely varies due to the lack of deﬁning criteria.
+Hakan et al. reported that 4.7% of patients developed
+Table 2 The recovery of postoperative spontaneous voiding function
+Outcome
+TEAS group
+(n = 922)
+Sham group
+(n = 916)
+p value
+Median [IQR] time length between the surgery ending point and the ﬁrst spontaneous
+voiding time point (h)
+5.6 (3.7–8.0)
+7.1 (4.7–9.7)
+\ 0.001
+Delayed urinary recovery*
+103 (11.2)
+173 (18.9)
+\ 0.001
+Median [IQR] volume of the ﬁrst spontaneous urination(mL)
+250
+250
+0.72
+(150.0–380.0)
+(150.0–400.0)
+Bladder inﬂation
+93(10.2)
+78(8.5)
+0.21
+Values are expressed as numbers (percentages) unless otherwise indicated. *Deﬁned as inability to void urine for [ 12 h after induction of
+anaesthesia. Deﬁned as urine volume [ 500 mL at ﬁrst post-operative spontaneous voiding. IQR, interquartile range
+Fig. 3 Kaplan–Meier estimates the cumulative incidence of spon-
+taneous voiding recovery after surgery in patients receiving
+Transcutaneous electrical acupoint stimulation or Sham treatment.
+Median observation time for TEAS was 5.5 h (interquartile range
+[IQ], 5.2–7.8), and for sham was 6.8 h (IQR, 6.5–7.1; hazard ratio,
+1.34 [95%CI 1.02–1.67]; p \ .001). TEAS: Transcutaneous Elec-
+trical Acupoint Stimulation
+1158
+World J Surg (2023) 47:1153–1162
+123
+
+
+=== PDF PAGE 7 ===
+POUR after elective cholecystectomy [6]. In another ret-
+rospective cohort conducted by Petros et al., 30% of the
+patients developed POUR after elective cholecystectomy
+[28]. In the present study, we refer to the review in the
+Journal of Anesthesiology for diagnostic POUR in terms of
+history and physical examination, need for bladder catheter
+Table 3 Postoperative catheterization
+Characteristic
+TEAS group (n = 75)
+Sham group (n = 104)
+p value
+Bladder volume (mL)
+600.0 (550.0–750.0)
+650.0 (612.5–840.0)
+0.004
+Duration of indwelling catheter (h)
+20.5 (15.5–34.0)
+21.3 (15.6–32.8)
+0.91
+Time to spontaneous voiding recovery after catheter removal (h)
+0.5 (0.3–1.0)
+0.7 (0.4–1.4)
+0.027
+Volume of ﬁrst spontaneous voiding after catheter removal (mL)
+230.0 (150.0–300.0)
+200.0 (150.0–300.0)
+0.004
+Values are median (interquartile range) unless otherwise stated. TEAS transcutaneous electrical acupoint stimulation
+Table 4 Symptoms of postoperative spontaneous voiding and early postoperative recovery indicators related to voiding
+Outcomes
+TEAS group (n = 922)
+Sham group (n = 916)
+p value
+POUR*
+75 (8.1)
+104 (11.4)
+0.02
+Voiding difﬁculty
+261 (28.3)
+413 (45.1)
+\ 0.001
+Oliguria
+20 (2.2)
+16 (1.7)
+0.51
+Nocturia§
+212 (23.0)
+278 (30.3)
+\ 0.001
+Median [IQR] NRS pain score
+4 (3–6)
+5 (3–6)
+0.007
+Median [IQR] NRS sleep disturbance score
+3 (2–5)
+3 (2–5)
+0.053
+Median [IQR] HADS score
+0 (0–1)
+0 (0–2)
+\ 0.001
+Suspected anxiety//
+25 (2.7)
+38 (4.1)
+0.09
+Suspected depression//
+12 (1.3)
+19 (2.1)
+0.20
+Vomiting
+231 (25.1)
+246 (26.9)
+0.38
+Mobilization within 24 h after surgery#
+573 (62.1)
+517 (56.4)
+0.013
+Median [IQR] hospitalization duration (d)
+7 (6–10)
+8 (6–10)
+0.16
+Median [IQR] hospitalization cost (yuan)
+22,714.9 (20,268.5–28,141.5)
+23,013.5 (20,395.6–28,916.4)
+0.21
+Values are expressed as numbers (percentages) unless otherwise indicated. *Diagnosed according to clinical symptoms, ultrasound assessment,
+and the need for bladder catheterization. Voiding difﬁculty referred to the sensation of pain and/or straining to urinate, especially at the
+beginning of urination. Deﬁned as a urine output \ 0.5 mL/kg/h. §Deﬁned as two or more voids per night. //Suspected anxiety and depression
+were deﬁned as the HADS score greater than 8 for anxiety and depression subscales (range for each subscale, 0–21). # Deﬁned as any partial or
+full weight-bearing activities conducted 2 to 3 times outside of the ward, with a total walking distance of 250–500 m
+NRS numerical rating scale, HADS Hospital Anxiety and Depression Scale-Depression, IQR interquartile range, POUR, postoperative urinary
+retention
+Table 5 Adverse events related to treatment
+Adverse events
+TEAS (n = 922)
+Sham TEAS (n = 916)
+Voiding-related adverse events
+Gross hematuria
+2 (0.1)
+1 (0.1)
+Lower urinary tract infections
+0
+0
+Treatment-related adverse events
+Redness
+2 (0.2)
+1 (0.1)
+Itching
+0
+1 (0.1)
+Values are expressed as numbers (percentages) unless otherwise indicated
+World J Surg (2023) 47:1153–1162
+1159
+123
+
+
+=== PDF PAGE 8 ===
+insertion, and ultrasound assessment to make the assess-
+ment more accurate and comprehensive [22]. We screened
+the patients in our study who fulﬁlled the diagnostic criteria
+and found the incidence of POUR was 11.4% in patients in
+the control group, a ﬁnding that is consistent with previous
+results and provides a reference for the incidence of urinary
+retention after laparoscopic cholecystectomy [4, 5]. The
+incidence of POUR was signiﬁcantly reduced to 8.1% after
+TEAS treatment with statistically signiﬁcant difference,
+indicating that TEAS may be an effective approach to
+reducing the incidence of POUR.
+TEAS has been widely used in clinical practice as a
+noninvasive, economical, and easy treatment for pain,
+gastrointestinal disorders, and reproductive medicine [29].
+In the present study, the BL32, CV3, and CV4 points were
+selected as the primary local acupoints and the SP6 points
+as the distal acupoints. BL-32 is located in the third sacral
+foramen and plays a role in bladder control by modulating
+the nervous system [30]. CV3 and CV4 are located near the
+bladder and have been shown to partially reduce inﬂam-
+mation and edema and regulate vesical pressure by
+inhibiting hyperpolarization-activated cyclic nucleotide-
+gated channel protein expression [13, 31]. SP6 is associated
+with pain management and improved voiding dysfunction
+when used with BL32, CV3, and CV4; however, the
+underlying mechanism remains unclear [12, 23, 32].
+Fig. 4 Distribution of times for
+gender (a), age (b), operative
+time (c) and PCIA (d) to recover
+the ability to void urine after
+surgery. The horizontal line in
+the box represents the median,
+upper and lower shaded
+boundaries show the 25 and 75
+quartiles. Any values greater
+than 1.5 times the interquartile
+range were considered as
+outliers for the boxplot, and the
+box plot excludes these outliers.
+*p \ 0.05, **p \ 0.001. PCIA:
+patient-controlled intravenous
+analgesia
+1160
+World J Surg (2023) 47:1153–1162
+123
+
+
+=== PDF PAGE 9 ===
+Strengths and limitations
+The strengths of this study include the large sample size.
+The study also used a sham stimulus to avoid subjective
+bias in the control group, which made the results more
+reliable. However, there are several important limitations
+to this study. First, it was a single-center study, which may
+have limited generalizability. However, the fact that this
+study involved 51 surgeons, 25 anesthesiologists, and a
+relatively large number of patients can mitigate these
+shortcomings to some extent. Second, despite performed
+meticulous blinding, there may be a potential placebo
+effect. Third, we only applied 2-Hz sparse wave signals to
+the stimulator; other frequencies may be tested and com-
+pared in the next step.
+In conclusion, this study suggests that perioperative
+TEAS
+signiﬁcantly
+improves
+spontaneous
+urination
+recovery in patients after laparoscopic cholecystectomy,
+which may be beneﬁcial for better recovery after surgery.
+Further studies, such as those conducted in the current trial,
+are needed to explore the underling mechanisms of TEAS.
+Acknowledgements The authors thank the medical and nursing staff
+and especially all patients participating in this trial. We also thank
+Prof Daqing Ma (Imperial College, London), for his critical com-
+ments during the manuscript preparation. Neither of these individuals
+received any compensation for their contributions.
+Funding This work was supported by the National Natural Science
+Foundation of China (No. 82074153) and the ‘‘131’’ talents funding
+from the Tianjin Health Bureau.
+Declarations
+Conﬂict of interest No authors have any conﬂicts of interest or
+funding to disclose at this time.
+Ethical approval The study was approved by the appropriate insti-
+tution and national research ethics committee.
+Informed consent Informed, written consent was obtained from all
+individual participants included in the study.
+References
+1. Lammert F, Gurusamy K, Ko CW et al (2016) Gallstones. Nat
+Rev Dis Primers 2:16024
+2. Tsai CJ, Leitzmann MF, Willett WC et al (2008) Long-chain
+saturated fatty acids consumption and risk of gallstone disease
+among men. Ann Surg 247:95–103
+3. Torgerson JS, Lindroos AK, Na¨slund I et al (2003) Gallstones,
+gallbladder disease, and pancreatitis: cross-sectional and 2-year
+data from the Swedish Obese Subjects (SOS) and SOS reference
+studies. Am J Gastroenterol 98:1032–1041
+4. Donmez T, Erdem VM, Uzman S et al (2017) Laparoscopic
+cholecystectomy under spinal-epidural anesthesia versus general
+anaesthesia: a prospective randomised study. Ann Surg Treat Res
+92:136–142
+5. Han J, Oh AY, Jeon YT et al (2021) Quality of recovery after
+laparoscopic cholecystectomy following neuromuscular blockade
+reversal with neostigmine or sugammadex: a prospective, ran-
+domized, controlled trial. J Clin Med 10(5):938
+6. Kulac¸og˘lu H, Dener C, Kama NA (2001) Urinary retention after
+elective cholecystectomy. Am J Surg 182:226–229
+7. Meddings J, Skolarus TA, Fowler KE et al (2019) Michigan
+Appropriate Perioperative (MAP) criteria for urinary catheter use
+in common general and orthopaedic surgeries: results obtained
+using the RAND/UCLA Appropriateness Method. BMJ Qual Saf
+28:56–66
+8. Stallard S, Prescott S (1988) Postoperative urinary retention in
+general surgical patients. Br J Surg 75:1141–1143
+9. Choi S, Awad I (2013) Maintaining micturition in the perioper-
+ative period: strategies to avoid urinary retention. Curr Opin
+Anaesthesiol 26:361–367
+10. Ellahi A, Stewart F, Kidd EA et al (2021) Strategies for the
+removal of short-term indwelling urethral catheters in adults.
+Cochrane Database Syst Rev 6:Cd004011
+11. Buckley BS, Lapitan MC (2010) Drugs for treatment of urinary
+retention after surgery in adults. Cochrane Database Syst Rev
+Cd008023
+12. Lauterbach R, Ferrer Sokolovski C, Rozenberg J et al (2018)
+Acupuncture for the treatment of post-partum urinary retention.
+Eur J Obstet Gynecol Reprod Biol 223:35–38
+13. Gao Y, Zhou X, Dong X et al (2014) Electroacupuncture for
+bladder function recovery in patients undergoing spinal anes-
+thesia. Evid Based Complement Alternat Med 2014:892619
+14. Bian XM, Lv L, Lin WB et al (2013) Moxibustion therapy at
+CV4 prevents postoperative dysuria after procedure for prolapse
+and
+hemorrhoids.
+Evid
+Based
+Complement
+Alternat
+Med
+2013:756095
+15. Zhang Y, Lao L, Chen H et al (2012) Acupuncture use among
+American adults: what acupuncture practitioners can learn from
+national health interview survey 2007? Evid Based Complement
+Alternat Med 2012:710750
+16. Liang D, Jin S, Huang L et al (2021) The effect of transcutaneous
+electrical acupoint stimulation on postoperative catheter-related
+bladder discomfort in patients undergoing transurethral resection
+of
+the
+prostate.
+Evid
+Based
+Complement
+Alternat
+Med
+2021:6691459
+17. Chen CH, Huang MH, Yang JC et al (2006) Prevalence and risk
+factors of gallstone disease in an adult population of Taiwan: an
+epidemiological survey. J Gastroenterol Hepatol 21:1737–1743
+18. Yang XY, Xiao J, Chen YH et al (2015) Dexamethasone alone vs
+in combination with transcutaneous electrical acupoint stimula-
+tion or tropisetron for prevention of postoperative nausea and
+vomiting in gynaecological patients undergoing laparoscopic
+surgery. Br J Anaesth 115:883–889
+19. Liu Z, Liu Y, Xu H et al (2017) Effect of electroacupuncture on
+urinary leakage among women with stress urinary incontinence: a
+randomized clinical trial. JAMA 317:2493–2501
+20. Salman N, Aykut A, Sabuncu U¨ et al (2020) Dextrose adminis-
+tration may reduce the incidence of postoperative nausea and
+vomiting after laparoscopic cholecystectomy: a double blind
+randomized controlled trial. Minerva Anestesiol 86:379–386
+21. Stav K, Dwyer PL, Rosamilia A (2009) Women overestimate
+daytime urinary frequency: the importance of the bladder diary.
+J Urol 181:2176–2180
+22. Baldini G, Bagry H, Aprikian A et al (2009) Postoperative uri-
+nary retention: anesthetic and perioperative considerations.
+Anesthesiology 110:1139–1157
+World J Surg (2023) 47:1153–1162
+1161
+123
+
+
+=== PDF PAGE 10 ===
+23. Chen S, Sun H, Xu H et al (2020) Effects of acupuncture on
+hospitalized patients with urinary retention. Evid Based Com-
+plement Alternat Med 2020:2520483
+24. Brouwer TA, Rosier PF, Moons KG et al (2015) Postoperative
+bladder catheterization based on individual bladder capacity: a
+randomized trial. Anesthesiology 122:46–54
+25. Coyle D, Joyce KM, Garvin JT et al (2015) Early post-operative
+removal of urethral catheter in patients undergoing colorectal
+surgery with epidural analgesia – a prospective pilot clinical
+study. Int J Surg 16:94–98
+26. Chao L, Mansuria S (2019) Postoperative bladder ﬁlling after
+outpatient laparoscopic hysterectomy and time to discharge: a
+randomized controlled trial. Obstet Gynecol 133:879–887
+27. Kowalik U, Plante MK (2016) Urinary retention in surgical
+patients. Surg Clin North Am 96:453–467
+28. Petros JG, Rimm EB, Robillard RJ (1992) Factors inﬂuencing
+urinary tract retention after elective open cholecystectomy. Surg
+Gynecol Obstet 174:497–500
+29. Acar HV (2016) Acupuncture and related techniques during
+perioperative period: A literature review. Complement Ther Med
+29:48–55
+30. Wu J, Cheng Y, Qin Z et al (2018) Effects of electroacupuncture
+on bladder and bowel function in patients with transverse
+myelitis: a prospective observational study. Acupunct Med
+36:261–266
+31. Lu JY, Ying XW, Chen XL et al (2020) Effects of elec-
+troacupuncture at different acupoints on the histomorphology of
+neurogenic bladder and the expression of hyperpolarization-ac-
+tivated cyclic nucleotide-gated channels in interstitial cells of
+Cajal in a rat model of suprasacral spinal cord injury. Ann Palliat
+Med 9:3830–3838
+32. Liu X, Liu K, Zhi M et al (2017) Effects of electroacupuncture at
+BL33 on detrusor smooth muscle activity in a rat model of uri-
+nary retention. Acupunct Med 35:437–444
+Publisher’s Note Springer Nature remains neutral with regard to
+jurisdictional claims in published maps and institutional afﬁliations.
+Springer Nature or its licensor (e.g. a society or other partner) holds
+exclusive rights to this article under a publishing agreement with the
+author(s) or other rightsholder(s); author self-archiving of the
+accepted manuscript version of this article is solely governed by the
+terms of such publishing agreement and applicable law.
+1162
+World J Surg (2023) 47:1153–1162
+123

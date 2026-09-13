@@ -1,0 +1,908 @@
+
+=== PDF PAGE 1 ===
+Intraoperative and postoperative
+anaesthetic and analgesic effect of
+multipoint transcutaneous electrical
+acupuncture stimulation combined
+with sufentanil anaesthesia in patients
+undergoing supratentorial craniotomy
+Xing Liu,1 Shuqin Li,1 Baoguo Wang,2 Lixin An,1 Xiujun Ren,3
+Haifeng Wu4
+▸Additional material is
+published online only. To view
+please visit the journal online
+(http://dx.doi.org/10.1136/
+acupmed-2014-010749).
+For numbered affiliations see
+end of article.
+Correspondence to
+Professor Baoguo Wang,
+Department of Anesthesiology,
+Beijing 100093 China;
+baoguowang766@163.com
+Accepted 10 April 2015
+Published Online First
+29 April 2015
+To cite: Liu X, Li S, Wang B,
+et al. Acupunct Med
+2015;33:270–276.
+ABSTRACT
+Objectives To investigate the anaesthetic and
+analgesic effect of multipoint transcutaneous
+electrical acupuncture stimulation (TEAS) during
+supratentorial tumour resection for postoperative
+recovery and side effects.
+Methods In a blinded clinical trial, 92 patients
+scheduled for supratentorial craniotomy under
+general anaesthesia were randomly allocated into
+either a multipoint TEAS (n=46) or a sham TEAS
+group (n=46). All patients received total
+intravenous anaesthesia (TIVA) with propofol and
+sufentanil. The target concentration of sufentanil
+was adjusted and recorded according to mean
+arterial pressure (MAP), heart rate (HR) and
+bispectral index (BIS). Patients in the TEAS group
+received TEAS 30 min before anaesthesia
+induction and this was maintained throughout
+the operation at four pairs of acupuncture
+points. Postoperative pain, recovery and side
+effects were evaluated.
+Results Eighty-eight patients completed the
+study. Continuous monitoring of MAP, HR and
+BIS showed stable values with no significant
+differences between the two groups (p>0.05).
+Sufentanil target plasma concentration in TEAS
+patients was significantly lower at some time
+points during supratentorial craniotomy, and
+total sufentanil consumption was significantly
+higher in the sham group (p<0.05).
+Postoperative recovery and pain were significantly
+improved by TEAS (p<0.001), without the
+postoperative side effects.
+Conclusions Multipoint TEAS at both proximal
+and distal points combined with TIVA can
+significantly decrease intraoperative sufentanil
+requirements, increase pain relief on
+postoperative day 1 and improve postoperative
+recovery of patients during supratentorial tumour
+resection, with no significant increase of side
+effects. These findings suggest that multipoint
+TEAS may be clinically effective as an adjunct to
+analgesia in intraoperative anaesthesia and
+postoperative pain treatment and may speed
+recovery.
+Trial registration number Chinese Clinical Trial
+Registry (registration number ChiCTR-TRC-
+10001078).
+INTRODUCTION
+Acupuncture
+is
+a
+traditional
+Chinese
+medicine and has been extensively used as
+a non-pharmacological analgesic therapy
+since being developed 2500 years ago.
+Although opioids are widely used as
+analgesics
+in
+general
+anaesthesia,
+the
+unpleasant side effects and delayed post-
+operative recovery have set some limita-
+tions on their clinical use.1 Several clinical
+studies have shown that acupuncture may
+be effective in improving postoperative
+analgesia, reducing intraoperative anaes-
+thetic requirement and immunosuppres-
+sion,
+and
+reducing
+the
+incidence
+of
+anaesthesia-related
+side
+effects.2–5
+Stimulation of specific points, by needles
+or electrodes, releases neurochemical sub-
+strates that may block the incoming pain
+information.6 However, several studies
+also found that acupuncture and related
+techniques did not significantly reduce
+pain during the operation,7 and not only
+Original paper
+270
+Liu X, et al. Acupunct Med 2015;33:270–276. doi:10.1136/acupmed-2014-010749
+
+
+=== PDF PAGE 2 ===
+failed to reduce, but actually increased, anaesthetic
+requirements.8 These conflicting results may be par-
+tially explained by the different acupuncture points
+and exogenous anaesthetic used, though other factors,
+such as the timing of the intervention and the patients’
+level of consciousness, may also be involved.
+Transcutaneous
+electric
+acupuncture
+stimulation
+(TEAS), or ‘needleless acupuncture’, is a low-skill
+alternative to needle-based electroacupuncture (EA)
+that combines the advantages of both acupuncture
+and transcutaneous electrical nerve stimulation by
+using electrode pads placed on the acupuncture points
+instead of piercing the skin with needles.9 Compared
+with acupuncture or EA, TEAS is a non-invasive tech-
+nique with very low risk of infection and it can poten-
+tially be applied by any anaesthetist or preoperative
+personnel with minimal training, increasing the repro-
+ducibility
+of
+acupuncture-like
+stimulation.
+Several
+lines of evidence indicate that TEAS can significantly
+improve the quality of recovery and decrease the inci-
+dence of anaesthesia-related side effects for patients
+undergoing surgery.10 However, most clinical studies
+have focused on the postoperative pain relief and side
+effects of TEAS and, to our knowledge, its intraopera-
+tive effects have not been well characterised.
+Our previous studies showed that EA at both prox-
+imal
+and
+distal
+(peripheral)
+acupuncture
+points
+showed beneficial intraoperative and postoperative
+effects on patients undergoing supratentorial tumour
+resection.11 EA combined with general anaesthesia sig-
+nificantly shortened the anaesthesia recovery time and
+decreased both the sevoflurane requirement and post-
+operative side effects during resection of a supratentor-
+ial tumour.12 TEAS, a therapeutic approach has some
+similarities to EA,13 and may also achieve the same
+effect
+as
+EA
+in
+intraoperative
+anaesthesia,
+post-
+operative analgesia and in the reduction of side effects.
+This study was designed to investigate the intrao-
+perative and postoperative anaesthetic effects of multi-
+point TEAS at both proximal and distal (peripheral)
+points during supratentorial craniotomy, when in
+combination with sufentanil anaesthesia, including its
+effects on intraoperative analgesic requirements, post-
+operative pain relief, recovery and improvement in
+side effects.
+PATIENTS AND METHODS
+Patients
+This randomised, blind, controlled trial was approved
+by the ethics review board of Beijing Tiantan Hospital
+and registered in the Chinese Clinical Trial Registry
+(registration number ChiCTR-TRC-10001078). All
+participants
+gave
+their
+written
+informed
+consent
+before being enrolled in this study. A total of 92
+patients aged 18–60 years, of American Society of
+Anesthesiologists physical status I/II, scheduled for
+supratentorial craniotomy, were eligible for this trial
+between January 2008 and December 2011. Exclusion
+criteria were as follows: women in pregnancy or lacta-
+tion; patients with the complication of severe respira-
+tory and circulatory system diseases; long-term heavy
+smokers; patients with body mass index >35 kg/m2;
+emergency patients. Patients with operation time >8 h
+and operative blood loss >2500 mL were withdrawn
+from the study. Ninety-two patients meeting the cri-
+teria were recruited and randomised, but four patients
+were withdrawn from the final analysis.
+Protocol
+Consecutive patients were enrolled and randomly allo-
+cated into the TEAS group or sham group according
+to a random number table generated by a computer.
+No premedication (analgesics and tranquiliser) was
+given to any of the patients. In the operation room,
+peripheral intravenous infusion was started and non-
+invasive arterial blood pressure, heart rate (HR), pulse
+oximetry saturation, bispectral index (BIS) and exhal-
+ation gas were monitored.
+Transcutaneous electrical acupuncture stimulation
+Patients in the TEAS group received preoperative
+TEAS starting 30 min before anaesthesia induction,
+maintained throughout the operation and terminated
+at the end of surgery (removal of headstock). Four
+pairs of electrodes (3×3 cm2) were applied at five pairs
+of acupuncture points: Hegu (LI4) and Waiguan (TE5),
+Jinmen (BL63) and Taichong (LR3), Zusanli (ST36)
+and Qiuxu (GB 40), and Fengchi (GB20) with Tianzhu
+(BL10) and Cuanzhu (BL2) with Yuyao (EX-HN4) on
+the craniotomy side. GB20 and BL10, BL2 and
+EX-HN4 were adjacent and covered by the same elec-
+trode, respectively. TEAS was performed using a Han’s
+acupoint nerve stimulator (LH202H, Beijing Huawei
+Co, Ltd, Beijing, China) with a dense-disperse fre-
+quency of 2/100 Hz (alternated once every 3 s; 0.6 ms
+at 2 Hz and 0.2 ms at 100 Hz). The intensity of stimu-
+lation was set at 4.89±2.15, 6.79±3.51, 7.04±3.35
+and 5.61±2.13, respectively, according to the maximal
+tolerance of patients and maintained throughout the
+operation. In the sham group, the gel electrodes were
+applied in the same therapeutic setting to ensure blind-
+ing of the patients, which has previously proved to be
+successful.14 The patients were connected to the instru-
+ment, but electronic stimulation was not applied. All
+the acupuncture-related operations were performed by
+the
+physicians
+of
+Beijing
+University
+of
+Chinese
+Medicine. Only the acupuncturist was informed of the
+randomisation allocation using opaque, sealed envel-
+opes, just before the onset of TEAS. Others, including
+the anaesthesiologists, surgeons, recovery staff, asses-
+sors and participants, were blinded to the group alloca-
+tion. Postoperative data were collected by researchers
+who were also blinded to the study design.
+Anaesthesia
+Anaesthesia was induced by intravenous infusion of
+propofol (1% Diprivan) and sufentanil (0.2 mg/mL)
+Original paper
+Liu X, et al. Acupunct Med 2015;33:270–276. doi:10.1136/acupmed-2014-010749
+271
+
+
+=== PDF PAGE 3 ===
+to maintain their target plasma concentrations at
+5 μg/mL and 0.5 ng/mL, respectively. Sufentanil was
+administered as target-controlled infusion using the
+pharmacokinetic model of Bovill et al.15 After loss of
+consciousness, target plasma concentrations of propo-
+fol and sufentanil were each subsequently reduced to
+3.2 μg/mL
+and
+0.3 ng/mL.
+Vecuronium
+bromide
+0.1 mg/kg was given intravenously to facilitate tracheal
+intubation and muscle relaxation. Mechanical ventila-
+tion with a 40% oxygen/air mixture was applied with
+the tidal volume of 10 mL/kg, respiratory frequency
+of 12 times/min and gas flow of 1 L/min set.
+The dose of propofol was stable during the oper-
+ation for anaesthetic maintenance and sufentanil con-
+centration was adjusted to maintain the mean arterial
+pressure (MAP), HR and BIS in the basic range of
++10% to −20%. Vecuronium bromide of 0.05 mg/kg
+was injected intravenously and intermittently to retain
+muscle relaxation (T4/T1<25%) according to the
+results of muscle relaxation (train of four stimulation).
+Local infiltration anaesthesia of the incision was
+obtained by 0.5% ropivacaine.
+Postoperative analgesia
+After the operation, analgesic compound liquid, con-
+sisting of 50 mL of normal saline and 100 μg of sufen-
+tanil, 1 mL/h was given through a sustaining pump
+with a single injecting volume of 0.5 mL and locking
+time of 10 min. Patients were asked to rate the degree
+of pain on a Visual Analogue Scale (VAS) consisting of
+a numerical scale from 0 to 10 points; with 0 being
+‘no pain’ and 10 being ‘maximum pain’.10
+Measurements
+The demographic characteristics of the patients were
+recorded, as well as the intensity and duration of
+TEAS. MAP, HR, BIS and sufentanil target plasma
+concentrations were recorded at different stages of the
+operation, including preoperation stage (from loss of
+consciousness to before scalp cutting), craniotomy
+stage (from scalp cutting to dura cutting), intracranial
+stage (from after dura opening to before dura stitch-
+ing) and cranial closure stage (from dura stitching to
+complete scalp stitching).
+End points
+The primary outcome of this study was the consump-
+tion of anaesthetics. The secondary end points were
+the time to spontaneous respiration, extubation time,
+eye-opening time, time to spontaneous movement,
+time to reorientation, and time to discharge from the
+operating room. After recovery room admission, the
+postoperative
+side
+effects,
+including
+incidence
+of
+respiratory depression, nausea, vomiting and pain,
+were also recorded at postoperative days 1, 2 and 3.
+Statistical analysis
+All data input and the statistical analysis were per-
+formed
+in
+the
+department
+of
+epidemiology and
+hygienic
+statistics
+of
+Capital
+Medical
+University,
+Beijing, China, using SAS V.9.0 software (SAS Institute
+Inc, Cary, North Carolina, USA). The measurement
+data with normal distribution are expressed as mean
+±SD and were analysed by a two sample t test.
+Discrete data were analysed by the χ2 test or Fisher’s
+exact probability test, as appropriate. A p value
+of <0.05 was considered statistically significant.
+RESULTS
+Patient characteristics and surgical details
+Ninety-two patients were enrolled in the study; four
+patients (4.3%), two in each group, were withdrawn
+because they met the withdrawal criteria. Two were
+excluded owing to an operation time of >8 h (TEAS
+group patient: 16 h; sham group patient: 10 h) and
+two were excluded owing to operative blood loss
+>2500 mL (TEAS group patient: 3800 mL; sham
+Table 1
+Characteristics and surgical details of patients receiving TEAS or sham treatment
+Sham group (n=44)
+TEAS group (n=44)
+p Value
+Age (years)
+43.8±11.47
+42.1±10.83
+0.486
+Weight (kg)
+65.2±10.02
+65.4±13.35
+0.90
+Gender (M/F)
+16/28
+15/29
+0.594
+ASAI/II
+26/18
+24/20
+0.487
+Operation time (min)
+255.8±73.02
+235.9±62.57
+0.19
+Anaesthesia time (min)
+304.9±84.48
+287.5±71.02
+0.29
+Type of operation (cases)
+0.184
+Meningioma
+18
+18
+Glioma
+18
+20
+Metastatic tumours or others
+8
+6
+Infusion amount (mL)
+3466.3±739.84
+3348.0±884.50
+0.693
+Estimated blood loss (mL)
+557.9±408.28
+446.0±518.32
+0.144
+Urine amount (mL)
+1507.5±752.36
+1414.0±703.86
+0.594
+Results are shown as mean±SD unless stated otherwise.
+ASAI/II, American Society of Anesthesiologists physical status I/II; TEAS, transcutaneous electrical acupuncture stimulation.
+Original paper
+272
+Liu X, et al. Acupunct Med 2015;33:270–276. doi:10.1136/acupmed-2014-010749
+
+
+=== PDF PAGE 4 ===
+group patient: 5000 mL). The data of 88 patients
+(31 male, 57 female) were analysed. The character-
+istics of patients, and the type and durations of proce-
+dures were not significantly different in the groups
+receiving TEAS or sham treatment (table 1).
+MAP, HR and BIS were continuously monitored
+during anaesthesia induction and maintenance of the
+patients undergoing supratentorial tumour resection.
+MAP and HR remained stable during anaesthesia
+induction and maintenance, and there were no statis-
+tical significant differences at each time point between
+the TEAS and sham groups (see online supplementary
+figures S1 and S2; p>0.05). Continuous monitoring
+of BIS showed values between 40 and 60 after anaes-
+thesia induction and maintenance of anaesthesia, and
+no significant difference was seen between patients
+receiving TEAS or sham treatment (see online supple-
+mentary figure S3; p>0.05).
+Sufentanil target plasma concentration in patients
+receiving TEAS or sham treatment
+There was no significant difference in sufentanil target
+plasma
+concentration
+at
+each
+time
+point
+before
+keyhole drilling and from 20 min intracranial oper-
+ation to dura stitching, while, during keyhole drilling
+to 10 min intracranial operation and from flap
+reduction to the end of operation, target plasma con-
+centration of sufentanil was significantly lower in
+TEAS patients than in sham-treated ones (figure 1,
+p<0.05).
+Intraoperative anaesthetics consumption and clinical
+recovery from anaesthesia
+There were significant differences between the two
+groups in the total dose of sufentanil consumption,
+the time to spontaneous respiration, extubation time
+and the time to discharge from the operating room,
+all favouring the TEAS group (table 2). The total dose
+of propofol given, eye-opening time, the time to spon-
+taneous movement and the time to reorientation were
+also found to be reduced or shortened, although dif-
+ferences did not reach statistical significance.
+Postoperative pain and side effects
+No respiratory depression was noted in either group
+and the incidences of nausea and vomiting did not
+differ significantly between the two groups (table 3).
+Pain scores were significantly lower at postoperative
+day 1 in the TEAS group than in the sham group,
+whereas the VAS score in the TEAS group was
+comparatively higher at postoperative days 2 and 3
+(figure 2).
+Figure 1
+Continuous monitoring of sufentanil target plasma concentration during anaesthetic induction and maintenance of
+supratentorial tumour resection in patients receiving TEAS or sham treatment. ICO, intracranial operation; TEAS, transcutaneous
+electrical acupuncture stimulation; *p<0.05 versus the sham group.
+Table 2
+Intraoperative anaesthetics consumption and clinical recovery from anaesthesia in patients receiving TEAS or sham treatment
+Sham group (n=44)
+TEAS group (n=44)
+p Value
+Sufentanil (μg)
+117.7±37.95
+95.6±21.76*
+0.02
+Propofol (mg)
+234.1±71.30
+216.3±67.72
+0.245
+Spontaneous respiration (min)
+23.4±14.13
+16.0±9.99**
+0.005
+Extubation (min)
+33.7±17.40
+26.6±14.17*
+0.036
+Eye-opening (min)
+28.2±17.74
+22.2±12.04
+0.066
+Spontaneous movement (min)
+34.3±22.59
+27.5±13.79
+0.092
+Reorientation (min)
+42.7±19.80
+35.3±16.11
+0.076
+Operating room discharge (min)
+48.7±16.70
+39.8±15.74*
+0.013
+Results are shown as mean±SD.
+*p<0.05, **p<0.01 versus the sham group.
+TEAS, transcutaneous electrical acupuncture stimulation.
+Original paper
+Liu X, et al. Acupunct Med 2015;33:270–276. doi:10.1136/acupmed-2014-010749
+273
+
+
+=== PDF PAGE 5 ===
+DISCUSSION
+As a widespread complementary therapy, acupuncture
+appears to be effective in the treatment of many symp-
+toms and/or disorders, partly by regulating the func-
+tions
+of
+the
+autonomic
+nervous
+system
+and
+neuroendocrine system,9 especially in improving post-
+operative pain relief and reducing postoperative side
+effects.16 Given the inherent side effects and limita-
+tions of conventional opioid analgesics, increasing
+interest has been focused on the use of acupuncture
+or acupuncture-related
+techniques
+in
+combination
+with general anaesthesia, as well as their effect on
+intraoperative anaesthetic and opioid requirements.17
+TEAS is an acupuncture-like technique that may
+produce effects similar to those elicited by acupunc-
+ture or EA treatment.14 In this study, TEAS was used
+in coordination with sufentanil to observe the intrao-
+perative and postoperative effects of TEAS on patients
+undergoing
+supratentorial
+tumour
+resection.
+The
+results showed that either sufentanil combined with
+TEAS or sufentanil alone produced surgical anaesthe-
+sia for supratentorial craniotomy. Sufentanil require-
+ment, postoperative recovery time and degree of pain
+on postoperative day 1 were significantly lower in
+patients treated by TEAS than in those without TEAS
+(p<0.05 or p<0.01), illustrating clear adjuvant anal-
+gesic effects. In contrast, the VAS pain score was
+higher in the TEAS group on postoperative days 2
+and 3. The explanation for this is unknown and may
+relate to the short-term anaesthetic effects of TEAS,
+so that the analgesic effect of TEAS may stop after the
+operation without further stimulation.18 However, the
+postoperative side effects, like vomiting, nausea and
+respiratory depression, were not significantly different
+between the two groups.
+A number of studies have provided evidence that
+acupuncture can induce neural responses in different
+brain areas.19 20 BL63, LR3, ST36 and GB40 are well-
+known analgesia acupuncture points generally used
+for pain relief during craniotomy,21 and stimulation at
+points LI4 and TE5 has also been used for post-
+operative pain relief during clinical surgery.10
+14
+Corroborating the results of these studies, our previ-
+ous studies showed evidence suggesting that EA at
+these acupuncture points combined with sevoflurane
+anaesthesia during supratentorial tumour resection
+significantly reduced the sevoflurane required and the
+postoperative side effects and improved the post-
+operative recovery from anaesthesia.12 22 EA at both
+the aforementioned distal acupuncture points and the
+proximal acupuncture points on the craniotomy side,
+including GB20, BL10, BL2 and EX-HN4, could
+reduce the anaesthetic requirement and improve the
+postoperative recovery of patients undergoing supra-
+tentorial craniotomy. Alternating stimulation with low
+and high frequency (2 and 100 Hz) can stimulate the
+release of the three intrinsic opioid peptides (endor-
+phin,
+enkephalin
+and
+dynorphin)
+in
+the
+central
+nervous
+system
+to
+produce
+a
+general
+analgesic
+action.13 Therefore, in this research, four pairs of acu-
+puncture points were selected for TEAS treatment.
+In our study, propofol was administered for anaes-
+thesia maintenance using a target-controlled infusion
+system and sufentanil administration was adjusted
+according to the arterial pressure, HR and BIS, a well-
+established method of monitoring anaesthetic depth
+and consequently a useful tool in assessing the risk of
+awareness
+during
+induction
+and
+maintenance
+of
+anaesthesia.23 Our results showed that the values of
+MAP, HR and BIS remained stable during induction
+and maintenance of anaesthesia, with an adequate
+level of anaesthesia obtained (BIS was maintained
+between 40 and 60 during all operations). There was
+no significant difference between the TEAS and sham
+groups, and surgical details of patients, like operation
+time, anaesthesia time, type of operation, infusion
+amount, urine amount, estimated blood loss, were not
+significantly
+different,
+indicating
+that
+either
+the
+TEAS-combined with sufentanil or sufentanil alone as
+administered
+in
+our
+study
+provided
+a
+clinically
+optimal condition for craniotomy. Although the MAP,
+HR and BIS values were not statistically significantly
+different, MAP in the TEAS group was slightly lower
+during
+surgery,
+while
+HR
+showed
+no
+consistent
+pattern, BIS was slightly higher during part of the sur-
+gical time, unlike the results reported by Si et al.24
+The potential mechanisms remain unknown. The pro-
+pofol
+concentration
+remained
+consistent
+during
+Table 3
+Postoperative side effects in patients receiving TEAS or
+sham treatment
+Sham group (n=44)
+TEAS group (n=44)
+Day 1
+Day 2
+Day 3
+Day 1
+Day 2
+Day 3
+Nausea
+9 (20.5)
+5 (11.4)
+2 (4.5)
+11 (25.0)
+2 (4.5)
+2 (4.5)
+Vomiting
+8 (18.2)
+4 (9.1)
+0 (0.0)
+9 (20.5)
+2 (4.5)
+1 (2.3)
+Results are shown as number (%).
+TEAS, transcutaneous electrical acupuncture stimulation.
+Figure 2
+Postoperative VAS scores of patients receiving TEAS
+or sham treatment. TEAS, transcutaneous electrical acupuncture
+stimulation; VAS, Visual Analogue Scale. ***p<0.001 versus the
+sham group.
+Original paper
+274
+Liu X, et al. Acupunct Med 2015;33:270–276. doi:10.1136/acupmed-2014-010749
+
+
+=== PDF PAGE 6 ===
+surgery and the consumption of propofol was similar
+in the two groups. Shafer and Varvel25 reported that
+the IC50 value of sufentanil for electroencephalog-
+raphy depression was 0.69 ng/mL, suggesting that the
+TEAS treatment might explain the lower MAP and
+HR and higher BIS seen in our study, although more
+evidence is needed.
+Our present study showed that the sufentanil target
+plasma concentration was significantly higher in the
+sham-treated group during supratentorial craniotomy
+surgery and TEAS treatment can help reduce the
+intraoperative sufentanil requirement. Meanwhile, the
+time to spontaneous respiration, extubation time and
+the time to discharge from the operating room were
+also found to favour the patient receiving TEAS treat-
+ment, in agreement with the results of previous
+studies.12 14 The VAS scores were also found to be
+reduced by TEAS treatment during postoperative day
+1. However, unlike previous studies, which indicated
+that TEAS is an effective method for prophylaxis of
+postoperative nausea and vomiting,14 we found no
+statistically significant difference in the incidence and
+severity
+of
+postoperative
+complications,
+such
+as
+respiratory depression, nausea and vomiting. Similar
+results were obtained in recent study by Wang et al,14
+who hypothesised that this lack of effect may be
+attributable to the low incidence of postoperative
+nausea and vomiting after intravenous anaesthesia, or
+the antiemetics they used. This may not be the case in
+our study, where no antiemetic was given, and instead
+the different acupuncture points and intensity of
+TEAS used may have a role.26 27
+In summary, the results of this blinded controlled
+study indicated that multipoint TEAS at both proximal
+and distal acupuncture points combined with sufenta-
+nil anaesthesia can significantly reduce the intraopera-
+tive analgesic requirements, strengthen pain relief on
+the first postoperative day, and improve the post-
+operative recovery of patients undergoing supratentor-
+ial tumour resection, although the postoperative side
+effects were not found to be significantly improved.
+These findings suggest that multipoint TEAS may be
+clinically effective as an adjunct to sufentanil in intrao-
+perative anaesthesia and postoperative analgesia and
+recovery.
+Author affiliations
+1Department of Anesthesiology, Beijing, Tian Tan
+Hospital, Capital Medical University, Beijing, China
+2Department of Anesthesiology, Sanbo Brain Hospital,
+Capital Medical University, Beijing, China
+3School of Acupuncture-moxibustion and Tuina,
+Beijing University of Chinese Medicine, Beijing, China
+4Teaching Affairs Department, China Rehabilitation
+Research Center, Beijing, China
+Contributors All authors contributed significantly to this work.
+Funding National key basic research development programme
+(973 programme, No 2013CB531901) of China.
+Competing interests None declared.
+Ethics approval Ethics review board of Beijing Tiantan
+Hospital.
+Provenance and peer review Not commissioned; externally
+peer reviewed.
+REFERENCES
+1
+Tsang HC, Lam CS, Chu PW, et al. A randomized controlled
+trial of auricular transcutaneous electrical nerve stimulation for
+managing posthysterectomy pain. Evid Based Complement
+Alternat Med 2011;2011;276769.
+2
+Ni X, Xie Y, Wang Q, et al. Cardioprotective effect of
+transcutaneous electric acupoint stimulation in the pediatric
+cardiac patients: a randomized controlled clinical trial. Pediatric
+Anesthesia 2012;22:805–11.
+3
+Larson JD, Gutowski KA, Marcus BC, et al. The effect of
+electroacustimulation on postoperative nausea, vomiting and
+pain in outpatient plastic surgery patients: a prospective,
+randomized, blinded, clinical trial. Plast Reconstr Surg
+2010;125:989–94.
+4
+Sahmeddini MA, Farbood A, Ghafaripuor S. Electro-
+acupuncture for pain relief after nasal septoplasty:
+a randomized controlled study. J Altern Complement Med
+2010;16:53–7.
+5
+Li G, Li S, An L, et al. Electroacupuncture alleviates
+intraoperative immunosuppression in patients undergoing
+supratentorial craniotomy. Acupunct Med 2013;31:51–6.
+6
+Pomeranz B. Scientific research into acupuncture for the relief
+of pain. J Altern Complement Med 1996;2:53–60.
+7
+Fanti L, Gemma M, Passaretti S, et al. Electroacupuncture
+analgesia for colonoscopy: a prospective, randomized,
+placebo-controlled study. Am J Gastroenterol 2003;98:312–16.
+8
+Kvorning N, Christiansson C, Beskow A, et al. Acupuncture
+fails to reduce but increases anaesthetic gas required to prevent
+movement in response to surgical incision. Acta Anaesthesiol
+Scand 2003;47:818–22.
+9
+Han J-S. Acupuncture: neuropeptide release produced by
+electrical stimulation of different frequencies. Trends Neurosci
+2003;26:17–22.
+10
+Zhang Q, Gao Z, Wang H, et al. The effect of pre-treatment with
+transcutaneous electrical acupoint stimulation on the quality of
+recovery after ambulatory breast surgery: a prospective,
+randomised controlled trial. Anaesthesia 2014;69:832–9.
+11
+An L-X, Chen X, Ren X-J, et al. Electro-acupuncture decreases
+postoperative pain and improves recovery in patients
+undergoing a supratentorial craniotomy. Am J Chin Med
+2014;42:1099–109.
+12
+An L, He Y, Ren X, et al. Effect of electroacupuncture on
+Sevoflurane anesthesia in patients undergoing resection of
+supratentorial tumor. Zhongguo zhen jiu 2010;30:669–73.
+13
+Ulett GA, Han S, Han J-s. Electroacupuncture: mechanisms
+and clinical application. Biol Psychiatry 1998;44:129–38.
+14
+Wang H, Xie Y, Zhang Q, et al. Transcutaneous electric
+acupoint stimulation reduces intra-operative remifentanil
+consumption and alleviates postoperative side-effects in
+patients undergoing sinusotomy: a prospective, randomized,
+placebo-controlled trial. Br J Anaesth 2014:112:1075–82.
+15
+Bovill JG, Sebel PS, Blackburn CL, et al. The pharmacokinetics
+of sufentanil in surgical patients. Anesthesiology
+1984;61:502–6.
+16
+Wang S-M, Kain ZN, White PF. Acupuncture analgesia: II.
+Clinical considerations. Anesth Analg 2008;106:611–21.
+Original paper
+Liu X, et al. Acupunct Med 2015;33:270–276. doi:10.1136/acupmed-2014-010749
+275
+
+
+=== PDF PAGE 7 ===
+17
+Lee A, Chan S. Acupuncture and anaesthesia. Best Pract Res
+Clin Anaesthesiol 2006;20:303–14.
+18
+Richardson P, Vincent C. Acupuncture for the treatment of
+pain: a review of evaluative research. Pain 1986;24:15–40.
+19
+Cheng H, Zhang X-T, Yan H, et al. Differential temporal
+neural responses of pain-related regions by acupuncture at
+acupoint ST36: a magnetoencephalography study. Chin Med J
+(Engl) 2011;124:1229–34.
+20
+Chiu J-H, Cheng H-C, Tai C-H, et al. Electroacupuncture-
+induced neural activation detected by use of manganese-
+enhanced functional magnetic resonance imaging in rabbits.
+Am J Vet Res 2001;62:178–84.
+21
+Xiujun R. Regional homogeneity analysis on acupoint
+specificity with resting-state functional magnetic resonance
+imaging. International Anesthesia Research Society, 2010:333.
+22
+Yang C, An L, Han R, et al. Effects of combining
+electroacupuncture with general anesthesia induced by
+sevoflurane in patients undergoing supratentorial craniotomy
+and improvements in their clinical recovery profile & blood
+enkephalin. Acupunct Electrother Res 2012;37:125–38.
+23
+Staikou C, Paraskeva A, Karmaniolou I, et al. Intravenous
+lidocaine does not affect the anesthetic depth during rapid
+sequence induction and intubation as assessed by Bispectral
+Index monitoring: a randomized double blind study. Arch Med
+Sci 2013;9:713–8.
+24
+Si J, Xu L, Li G, et al. Adjuvant effect of transcutaneous
+electrical acupoint stimulation in propofol-fentanyl anesthesia
+in partial mastectomy. Nan Fang Yi Ke Da Xue Xue Bao
+2009;29:2064–6.
+25
+Shafer SL, Varvel JR. Pharmacokinetics, pharmacodynamics
+and rational opioid selection. Anesthesiology 1991;74:53–63.
+26
+Wang X-Q, Yu J-L, Du Z-Y, et al. Electroacupoint stimulation
+for postoperative nausea and vomiting in patients undergoing
+supratentorial craniotomy. J Neurosurg Anesthesiol
+2010;22:128–31.
+27
+Habib AS, Itchon-Ramos N, Phillips-Bute BG, et al.
+Transcutaneous acupoint electrical stimulation with the
+ReliefBand® for the prevention of nausea and vomiting during
+and after cesarean delivery under spinal anesthesia. Anesth
+Analg 2006;102:581–4.
+Original paper
+276
+Liu X, et al. Acupunct Med 2015;33:270–276. doi:10.1136/acupmed-2014-010749
+
+
+=== PDF PAGE 8 ===
+Copyright of Acupuncture in Medicine is the property of BMJ Publishing Group and its
+content may not be copied or emailed to multiple sites or posted to a listserv without the
+copyright holder's express written permission. However, users may print, download, or email
+articles for individual use.

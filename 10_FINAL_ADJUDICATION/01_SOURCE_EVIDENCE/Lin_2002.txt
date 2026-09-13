@@ -1,0 +1,647 @@
+
+=== PDF PAGE 1 ===
+The effect of high and low frequency electroacupuncture in pain after
+lower abdominal surgery
+Jaung-Geng Lina,b, Ming-Wu Lob, Yeong-Ray Wenc, Ching-Liang Hsiehd,
+Shen-Kou Tsaie, Wei-Zen Sune,*
+aAcupuncture Research Center, China Medical College, Taichung, Taiwan, ROC
+bInstitute of Chinese Medical Sciences, China Medical College, Taichung, Taiwan, ROC
+cDepartment of Anesthesiology, Shin-Kong Wu Ho-Su Memorial Hospital, Taipei, Taiwan, ROC
+dInternal Medicine of Chinese Medicine Department, China Medical College Hospital, Taichung, Taiwan, ROC
+eDepartment of Anesthesiology, National Taiwan University Hospital College of Medicine, National Taiwan University, Taiwan, ROC
+Received 8 February 2002; accepted 26 June 2002
+Abstract
+In the present study, we examined the effects of preoperative electroacupuncture (EA) at classical bilateral acupuncture points (Zusanli,
+also known as ST-36) on postoperative pain and opioid-related side effects. One hundred healthy consenting women undergoing lower
+abdominal surgery were randomly assigned to four treatment regimens: Group I ðn ¼ 25Þ, control; Group II ðn ¼ 25Þ, sham-EA (needle
+insertion without electrical stimulation); Group III ðn ¼ 25Þ, low-EA (2 Hz of electrical stimulation); and Group IV ðn ¼ 25Þ, high-EA
+(100 Hz of electrical stimulation). EA groups received needle insertion with or without electrical stimulation 20 min prior to anesthesia. All
+patients received patient-controlled analgesia (PCA) of morphine postoperation. Postoperative pain was evaluated by recording (1) the time
+of the ﬁrst required analgesic, (2) the number of PCA demands, (3) the total amount of morphine required by PCA, and (4) patients’ VAS pain
+score. We found that the time of ﬁrst analgesic requested was 10, 18, 28, and 28 min in the control, sham-, low-, and high-EA groups,
+respectively. During the ﬁrst 24 h, the total amount of morphine required was decreased by 21, 43 and 61% in the sham-, low- and high-EA
+groups, respectively. The incidence of nausea and dizziness during the ﬁrst 24 h after surgery was signiﬁcantly reduced in both the low-EA
+and high-EA groups compared with the control and sham-EA groups. We also found that sham-EA exerts a beneﬁcial effect with respect to its
+pain relieving quality but not the side effect proﬁles. Our ﬁndings demonstrates that preoperative treatment with low-EA and high-EA can
+reduce postoperative analgesic requirements and associated side effects in patients undergoing lower abdominal surgery. q 2002 Interna-
+tional Association for the Study of Pain. Published by Elsevier Science B.V. All rights reserved.
+Keywords: Electroacupuncture; Postoperative pain; Patient-controlled analgesia; Visual analogue scale
+1. Introduction
+Acupuncture, the practice of inserting needles into the
+skin and deeper tissues along ‘meridians’ to balance ﬂow
+of bodily ‘energy’ or ‘Xi’, has been widely used in China
+since 2500 BC (Wu, 1996). Though its role in various medi-
+cal
+conditions
+remains
+largely
+controversial,
+recent
+evidence supports the worldwide use of acupuncture to
+relieve pain in clinical practice. Numerous studies have
+found that acupuncture activates multiple neurophysiologi-
+cal
+interactions,
+and
+thereby
+decreases
+nociceptive
+responses in animals receiving painful thermal, chemical,
+and electrical stimulations (reviewed by Mayer, 2000).
+Manual or electrical stimulation through needles induces a
+particular pattern of afferent activity in peripheral nerves,
+mainly Ab, Ad and possibly C-ﬁbers. This excitation leads
+to activation of the endogenous pain inhibition system
+through multiple neuronal pathways (Basbaum and Field,
+1984; Kaufman et al., 1984; Andersson and Lundeberg,
+1995). One of the main consequences of acupuncture is
+the release of endogenous opioids, including b-endorphins,
+enkephalins, dynorphins, and endomorphins-1 (Pomeranz
+and Chiu, 1976; Sjolund et al., 1977; He, 1987; Wang et
+al., 1990a,b; Han et al., 1999), as well as non-opioid
+substances such as serotonin, norepinephrine, and possibly
+GABA (Cheng and Pomeranz, 1981; Pomeranz, 1996;
+Sandkuehler et al., 1997). In addition, animal and human
+studies have shown that diffuse noxious inhibitory controls
+(DNIC) may also be involved in underlying acupuncture
+Pain 99 (2002) 509–514
+0304-3959/02/$20.00 q 2002 International Association for the Study of Pain. Published by Elsevier Science B.V. All rights reserved.
+PII: S0304-3959(02)00261-0
+www.elsevier.com/locate/pain
+* Corresponding author. 7, Chung-Shan South Road, Taipei, Taiwan,
+ROC. Tel.: 1886-2-2312-3456; fax: 1886-2-2341-5736.
+E-mail address: wzsun@ccms.ntu.edu.tw (W.-Z. Sun).
+
+
+=== PDF PAGE 2 ===
+mechanisms (Bing et al., 1990). DNICs are part of the biolo-
+gical pain control system whereby a spatially remote
+noxious conditioning stimulus can reduce the response to
+a subsequent noxious stimulus elsewhere (Le Bars et al.,
+1979, 1992).
+Although acupuncture is widely used in humans, its
+applicability in various painful disorders is challenged due
+to its weak and variable analgesic effect, as well as by its
+concomitant placebo or hypnotic effect (Moret et al., 1991;
+Amanzio and Benedetti, 1999), or by the patient’s psycho-
+logical expectation (Thomas and Lundeberg, 1996). Studies
+have demonstrated that acupuncture is especially, though
+not exclusively, effective in myofascial pain (Melzack et
+al., 1977; Lewit, 1979), renal colic (Lee et al., 1992), angina
+pectoris (Richter et al., 1991), osteoarthritis of the knees
+(Christensen et al., 1992), tension headache (Vincent,
+1990), and ﬁbromyalgia (Deluze et al., 1992).
+To date, few studies have investigated acupuncture’s
+effect on postoperative pain, and they have shown conﬂict-
+ing results (Galloway et al., 1984; Martelete and Fiori, 1985;
+Christensen et al., 1989, 1993). A critical difference among
+these studies was the stimulation modality and the lack of
+sham control. None of these studies examined the effect of
+prestimulus acupuncture on postoperative pain and conco-
+mitant side effect proﬁles. Since acupoint stimulation has
+been widely used and proven to be effective in relieving
+profound nausea and vomiting caused by motion sickness
+and chemotherapy, electroacupuncture (EA) per se could
+potentially serve as an adjuvant for relieving opioid-related
+side effects during the postoperative period (Lee and Done,
+1999). The present study was thus undertaken to evaluate
+whether preoperative application of different frequencies of
+EA stimulation can be effective in relieving postoperative
+pain, as well as postoperative opioid-related side effects.
+2. Methods
+2.1. Subjects
+The study protocol was approved by the Hospital
+Research Committee. A total of 100 female patients were
+enrolled. After providing written informed consent, patients
+of ASA physical status I–II (American Society of Anesthe-
+siology nomenclature) who were scheduled for abdominal
+hysterectomy were randomly divided into four groups of 25
+each by a computer-generated randomization sequence:
+Group I received neither needle insertion nor electric stimu-
+lation (control); Group II received needle insertion but with-
+out electrical stimulation (sham-EA); Group III received
+needle insertion with 2 Hz stimulation (low-EA); and
+Group IV received needle insertion with 100 Hz stimulation
+(high-EA). The use of the patient-controlled analgesia
+(PCA) device (Lifecare PCA Plus II Infusor, Abbott Labora-
+tories, IL, USA) and the administration of EA were
+explained to each patient at the time of their preoperative
+visits. Patients with a history of opioid abuse, or signiﬁcant
+cardiovascular, pulmonary, renal, hepatic or neurological
+disease were excluded.
+2.2. Acupuncture
+The acupuncture loci used were the bilateral Zusanli (also
+known as ST-36), which are located at one ﬁnger breadth
+below and anterior to the tibial tuberosity. We chose Zusanli
+because this point is traditionally considered to possess the
+most therapeutic effect on the lower abdomen. Two 30
+gauge stainless steel acupuncture needles were inserted at
+the Zusanli point on both legs, with a distance between the
+needles of approximately 3 cm, i.e. one needle serving as
+the positive pole, and the other as the negative pole to allow
+electrical stimulation of the selected point. After the patient
+reported the sensation of ‘De-Xi’, a term used in acupunc-
+ture to describe a feeling of ‘heaviness’ in the area surround-
+ing the insertion locus, an electric current was delivered by a
+Functions Electrical Stimulator (Trio 300, I. T. O., Japan).
+Subjects and electrical equipment were placed such that
+subjects were unable to see any speciﬁcs regarding the
+type of current administered, and technicians maintained a
+normal persona to ensure that patients remained unaware of
+their grouping category. Electricity was generated as an
+output of constant current of 0.5 mA, 1 ms square pulse,
+at a maximal tolerable intensity (a strong, but not painful
+sensation as reported by the patient), and at 2 or 100 Hz
+depending on the group assignment. Sham-EA included
+needle insertion with the indicator light on but with no
+actual current. All patients were subject to the respective
+treatment modality for 20 min before the induction of
+anesthesia.
+2.3. Anesthesia and postoperative care
+After removal of the needles, anesthesia was induced
+with i.v. thiopental 5 mg/kg and succinylcholine 2 mg/kg
+for tracheal intubation. Isoﬂurane in nitrous oxide 60%
+with oxygen 40% and an intermittent dose of atracurium
+were used for anesthesia maintenance without the use of
+opioids. Following surgery, all patients were transported
+to the recovery room. The time interval of the patient’s
+ﬁrst request for pain medication was recorded (either pethi-
+dine 1 mg/kg i.m. during the ﬁrst hour, which was restricted
+to a single dose, or as recorded by PCA when no request was
+made during the ﬁrst hour). At 1 h postoperation, the PCA
+system was connected to the patient. The PCA device was
+programmed to intravenously deliver 2 mg morphine as ‘on
+demand’ doses with a minimum lockout interval of 10 min
+during the following 23 h.
+2.4. Efﬁcacy measures
+As soon as the patient complained of initial pain, the ﬁrst
+PCA dose was provided. The average pain using the
+100 mm visual analog scale (VAS) was recorded at
+J.-G. Lin et al. / Pain 99 (2002) 509–514
+510
+
+
+=== PDF PAGE 3 ===
+30 min, and at 1, 1.5, 2, 4, 8, 16 and 24 h by an observer who
+had no knowledge of the patient’s group assignment. The
+number of PCA demands, including those made during
+lockout intervals, was recorded by a printout attachment
+for 24 h. No other analgesics were administered during the
+PCA control period. Heart rate, blood pressure, and SpO2
+were recorded by a pulse oximeter every 30 min for the
+ﬁrst 2 h and at 4 h intervals thereafter. At the end of 24 h
+test period, patients were asked if they had experienced any
+opioid-related adverse effects, including nausea, vomiting,
+dizziness, or pruritus, and their responses were recorded.
+2.5. Data analysis
+This sample size permitted the detection of an inter-group
+mean difference using a type I error of 0.05 and a type II
+error of 0.2 (i.e. power ¼ 0.8). Patient’s age, weight, dura-
+tion of anesthesia and duration of surgery, VAS score, PCA
+demands and doses delivered were analyzed with one-way
+ANOVA followed by Bonferroni post hoc test. Incidence of
+side effects was analyzed using the chi-square test. A P
+value of less than 0.05 was considered statistically signiﬁ-
+cant.
+3. Results
+The demographic data listed in Table 1 shows no signiﬁ-
+cant difference among the four groups. All enrolled patients
+completed the study period with no withdrawals. The time
+interval of the ﬁrst request for analgesic was 10.6, 18.0,
+27.9, and 28.1 min for the control, sham-EA, low-EA and
+high-EA, respectively. These intervals were all signiﬁcantly
+longer than the control group, and the time intervals of both
+low- and high-EA groups were longer than the sham-EA
+group (Table 2). The number of PCA demands during the
+24 h test period was signiﬁcantly less in the high-EA
+(7.9 ^ 5.9) and low-EA (11.7 ^ 7.1) groups compared to
+that
+of
+the
+control
+(20.5 ^ 9.2)
+and
+the
+sham-EA
+(16.1 ^ 7.4) groups, as shown in Table 2. There were also
+highly signiﬁcant differences in morphine delivered among
+the four groups, with the lowest dose used in the high-EA
+group (Table 2). Pain scores were not different among the
+four groups (Fig. 1); however, compared to the control
+group, the total amount of morphine required during the
+24 h test period was reduced by 21, 43 and 61% in the
+sham-EA, low-EA and high-EA groups, respectively. The
+incidence of nausea and dizziness was signiﬁcantly lower in
+both the low- and high-EA groups compared to the other
+two groups (Table 3). No patient demonstrated any respira-
+tory depression (respiratory rate ,10 min or SpO2 , 90%).
+4. Discussion
+We found that sham-, low-, and high-EA treatments prior
+to lower abdominal surgery signiﬁcantly reduced the post-
+operative PCA morphine requirement, and that low- and
+high-EA decreased opioid-induced nausea and dizziness
+throughout the ﬁrst postoperative day. We also found that
+J.-G. Lin et al. / Pain 99 (2002) 509–514
+511
+Table 1
+Demographic data for each of the four treatment groupsa
+Group I (control)
+Group II (sham-EA)
+Group III (low-EA)
+Group IV (high-EA)
+Age (year)
+39 ^ 8
+41 ^ 12
+38 ^ 7
+42 ^ 13
+Weight (kg)
+51 ^ 14
+55 ^ 10
+54 ^ 11
+51 ^ 17
+Duration of anesthesia (min)
+113 ^ 38
+110 ^ 19
+121 ^ 14
+115 ^ 21
+Duration of operation (min)
+101 ^ 13
+105 ^ 20
+110 ^ 21
+102 ^ 15
+a Values are mean ^ S.D. ðn ¼ 25Þ.
+Table 2
+Postoperative analgesic requirements in each treatment groupa
+Group I (control)
+Group II (sham-EA)
+Group III (low-EA)
+Group IV (high-EA)
+Time for the ﬁrst dose of
+pethidine after operation (min)
+10.6 ^ 5.9
+18.0 ^ 7.9*
+27.9 ^ 12.3**,§
+28.1 ^ 13.8**,§
+PCA demands in the ﬁrst 24 h
+1–8 h
+9.0 ^ 3.6
+7.0 ^ 3.6*
+5.1 ^ 4.0**,1
+3.3 ^ 3.2**,11,§
+8–16 h
+8.2 ^ 5.3
+5.8 ^ 3.8
+4.0 ^ 2.6**,1
+2.8 ^ 2.1**,11,§
+16–24 h
+3.2 ^ 2.4
+3.3 ^ 2.1
+2.6 ^ 2.1
+1.8 ^ 1.6**,11
+Total in 24 h
+20.5 ^ 9.2
+16.1 ^ 7.4*
+11.7 ^ 7.1**,1
+7.9 ^ 5.9**,11,§
+Morphine delivered (mg)
+1–8 h
+16.1 ^ 7.1
+12.8 ^ 6.6*
+9.2 ^ 7.1**,1
+6.1 ^ 5.9**,11,§
+8–16 h
+15.5 ^ 9.4
+10.8 ^ 7.7*
+7.6 ^ 5.4**,1
+5.4 ^ 3.8**,11,§
+16–24 h
+6.5 ^ 4.8
+6.6 ^ 4.1
+5.0 ^ 4.2
+3.5 ^ 3.2**,11
+Total in 24 h
+38.1 ^ 16.0
+30.2 ^ 14.4*
+21.8 ^ 14.7**,11
+15.0 ^ 10.7**,11,§
+a Values are mean ^ S.D. ðn ¼ 25Þ; *P , 0:05, **P , 0:01 versus Group I; 1P , 0:05, 11P , 0:01 versus Group II; §P , 0:05 versus Group III.
+
+
+=== PDF PAGE 4 ===
+high-frequency EA stimulation produced better effects than
+low-frequency stimulation. Our results were consistent with
+several other animal and clinical studies that have reported
+that EA stimulation improved analgesia during the acute
+phase of posttraumatic pain. EA has been widely used and
+well documented in tooth extraction (Ekblom et al., 1991;
+Ernst and Pittler, 1998) and in oocyte aspiration (Stener-
+Victorin et al., 1999). EA-induced analgesia after major
+surgery, however, remains controversial. Christensen et al.
+(1993) demonstrated that patients receiving EA before and
+during hysterectomy exhibited no reduction in their post-
+operative analgesic requirement or pain ratings. The possi-
+ble reasons for this discrepancy are multiple. Christensen et
+al. selected an array of acupoints; the needles were inserted
+after induction of anesthesia and remained in place through-
+out the surgical procedure; and in addition to EA, patients
+received a relatively high dose of pethidine for induction
+and maintenance of anesthesia. The high level of pethidine
+used likely masked any beneﬁt of EA that may have been
+present. This variation in methods versus those used in the
+present study may explain the vastly different results
+reported. Wang et al. (1997) found signiﬁcantly greater
+pain relief after lower abdominal surgery among patients
+receiving
+transcutaneous
+electrical
+nerve
+stimulation
+(TENS) applied at Hogu (LI-4) during the postoperative
+period. Wang’s study showed that both high- and low-
+frequency TENS reduced i.v. PCA hydromorphone require-
+ment by 65 and 34%, respectively. Similar results were
+obtained in our study whereby the total number of PCA
+demands and the opioid analgesic dose requirements were
+markedly decreased in both high- and low-frequency EA
+groups. These ﬁndings imply that both EA and TENS can
+produce adequate postoperative pain relief, even though
+their underlying mechanisms are likely dissimilar.
+In the present study, EA-induced analgesic effects
+between 2 and 100 Hz were compared on the basis that
+low frequency (2 Hz) and high frequency (100 Hz) presum-
+ably induce a differential release of enkephalins and dynor-
+phins in both animals and humans (Chen and Han, 1992;
+Ulett et al., 1998). It has also been shown that the analgesic
+effect produced by low-frequency stimulation is naloxone-
+reversible, while high-frequency stimulation is not (Lee and
+Beitz, 1992; Guo et al., 1996). These results strongly
+suggest a distinct neuronal sensitization and characteristic
+spatial process in the central nervous system between these
+two frequencies. The primary difference between 2 and
+100 Hz stimulations is the number of electric pulses
+provided during a given period of time. It is estimated that
+patients in the high-frequency group received a total of 20
+times the number of electrical pulses than the low-frequency
+group during the 20 min test period. Previous study suggests
+that the inhibitory magnitude and duration of neuronal
+response to painful C-ﬁber activation is a function of the
+number of preceding conditioning stimuli (Ness and
+Gebhart, 1991). This previous speculation is consistent
+with the results observed in our study.
+J.-G. Lin et al. / Pain 99 (2002) 509–514
+512
+Fig. 1. Postoperative 24-h visual analogue scale (VAS, 0–100 mm) comparison. Open bars indicate control group; dotted bars, sham-EA; hatched bars, low-
+EA; shaded bars, high-EA.
+Table 3
+Postoperative side effects in the four treatment groupsa
+Number of opioid-related side effects
+Group I (control)
+Group II (sham-EA)
+Group III (low-EA)
+Group IV (high-EA)
+Nausea
+11 (44)
+10 (40)
+4 (16)*,1
+6 (24)*,1
+Vomiting
+0 (0)
+1 (4)
+1 (4)
+0 (0)
+Dizziness
+14 (56)
+16 (64)
+7 (28)*,1
+10 (40)*,1
+Pruritis
+2 (8)
+0 (0)
+1 (4)
+1 (4)
+a Values are mean (%); *P , 0:05 versus Group I; 1P , 0:05 versus Group II.
+
+
+=== PDF PAGE 5 ===
+The results of the present study also demonstrated that the
+opioid-sparing effect of EA is dependent on the frequency of
+the electrical stimulation. The morphine requirement after
+high-frequency EA was decreased by 31% compared with
+the low-EA group during the ﬁrst 24 h postoperation. This
+opioid-sparing effect not only results in a decrease in the
+incidence of nausea and dizziness after surgery, but it may
+also increase the tolerability and availability of adequate
+analgesic effect among those who are susceptible to
+morphine overdose, e.g. debilitated or older patients.
+Furthermore, acupuncture per se has been shown to reduce
+the incidence of nausea through its direct antiemetic effect.
+Several studies have shown that acupuncture can decrease
+postoperative nausea and vomiting, in addition to reducing
+postoperative pain (Lee and Done, 1999).
+In the present study, we did not deliberately attempt to
+inﬂuence subjects’ expectation regarding the effectiveness
+of EA. However, it is important to keep in mind that neuro-
+physiological and humoral events are related to psycholo-
+gical
+factors.
+Undoubtedly,
+sensory
+stimulation
+and
+particularly acupuncture has the potential to produce strong
+placebo effects. For example, while sham needle insertion
+showed no effect on opioid-related side effects, it did exert a
+moderate pain relieving effect. Indeed, acupuncture works
+by releasing endogenous opioids and so, it appears, does the
+placebo effect (Amanzio and Benedetti, 1999). To achieve
+optimal acupuncture therapy, physiological and psychologi-
+cal factors must interact in synergy, utilizing their respective
+endogenous mechanisms efﬁciently (Thomas and Lunde-
+berg, 1996). By utilizing two control groups in our study
+design, including PCA and sham-EA groups only, we were
+able to very clearly distinguish between the purely placebo
+elements involved versus clear evidence of physiological
+effects.
+In the present study we also demonstrated that preopera-
+tive application of 20 min EA, whether high or low
+frequency, effectively reduced the 24 h postoperative
+morphine requirement. The concept of preemptive analgesia
+through the prevention of intense nociceptor activation and
+suppression of the subsequent hyperalgesic state has poten-
+tially dramatic implications for postoperative analgesia
+(Woolf and Chong, 1993; Sun et al., 1996). In animals,
+pretreatment with short-acting opioids or NMDA antago-
+nists has been shown to inhibit spinal dorsal horn sensitiza-
+tion and nocifensive behaviors (Yamamoto and Yaksh,
+1992). However, results reported from human studies invol-
+ving preemptive analgesia in surgical situations are rela-
+tively less impressive than results shown in animal studies
+utilizing the same treatment schemes (Cousins et al., 2000).
+EA-produced analgesia generally lasts for up to 2 h (Chris-
+tensen et al., 1989; Ulett et al., 1998). Therefore, high- or
+low-frequency stimulation before surgical incision can be
+regarded as an alternative to conventional methods as a
+prestimulus analgesic modality. Whether EA is indeed
+useful as a preemptive analgesia requires further study
+that will require two additional treatment groups: one
+receiving both pre- and postoperative EA, and another
+group receiving postoperative EA alone.
+In conclusion, we found that preoperative EA is an
+adequate adjunct to PCA. Both high- and low-frequency
+electrical stimulation reduced the postoperative analgesic
+requirement. We found that high-frequency electrical stimu-
+lation provided the best results. In addition, the use of EA
+also resulted in a decrease in the incidence of opioid-related
+side effects after lower abdominal surgery. Together, our
+ﬁndings demonstrate that further studies are warranted
+regarding the efﬁcacy of EA in both managing pain and in
+treating opioid-related symptoms.
+Acknowledgements
+This study was supported by grants from the National
+Science Council of the Republic of China (NSC90-2314-
+B002-302 and NSC 88-2314-B039-011).
+References
+Amanzio M, Benedetti F. Neuropharmacological dissection of placebo
+analgesia: expectation-activated opioid systems versus conditioning-
+activated speciﬁc subsystems. J Neurosci 1999;19:484–494.
+Andersson S, Lundeberg T. Acupuncture-from empiricism to science: func-
+tional background to acupuncture effects in pain and disease. Med
+Hypotheses 1995;45:271–281.
+Basbaum AI, Field HL. Endogenous pain control systems: brainstem spinal
+pathways and endogenous circuitry. Ann Rev Neurosci 1984;7:309–
+338.
+Bing Z, Villanueva L, Le Bars D. Acupuncture and diffuse noxious inhi-
+bitory controls: naloxone-reversible depression of activities of trigem-
+inal convergent neurons. Neuroscience 1990;37:809–818.
+Chen XH, Han JS. Analgesia induced by electroacupuncture of different
+frequencies is mediated by different types of opioid receptors: another
+cross-tolerance study. Behav Brain Res 1992;47:143–149.
+Cheng RS, Pomeranz B. Monoaminergic mechanism of electroacupuncture
+analgesia. Brain Res 1981;215:77–92.
+Christensen PA, Noreng M, Andersen PE, Nielsen JW. Electroacupuncture
+and postoperative pain. Br J Anaesth 1989;62:258–262.
+Christensen BV, Juhl IU, Vilbeck H, Bulow HH, Dreijer NC, Rasmunsen
+HF. Acupuncture treatment of severe knee osteoarthritis: a long-term
+study. Acta Anaesthesiol Scand 1992;36:519–525.
+Christensen PA, Rotne M, Vedelsdal R, Jensen RH, Jacobsen K, Husted C.
+Electroacupuncture in anaesthesia for hysterectomy. Br J Anaesth
+1993;71:835–838.
+Cousins MJ, Power I, Smith G. 1996 Labat lecture: pain – a persistent
+problem. Reg Anesth Pain Med 2000;25:6–21.
+Deluze CH, Bosia L, Zirbs A, Chantraine A, Vischer ThL. Electroacupunc-
+ture in ﬁbromyalgia: results of a controlled trial. BMJ 1992;305:1249–
+1252.
+Ekblom A, Hansson P, Thomsson M, Thomas M. Increased postoperative
+pain and consumption of analgesics following acupuncture. Pain
+1991;44:241–247.
+Ernst E, Pittler MH. The effectiveness of acupuncture in treating acute
+dental pain: a systemic review. Br Dent J 1998;184:443–447.
+Galloway DJ, Boyle P, Burns HJ, Davidson PM, George WD. A clinical
+assessment of electroanalgesia following abdominal operations. Surg
+Gynecol Obstet 1984;159:453–456.
+Guo HF, Tian J, Wang X, Fang Y, Hou Y, Han J. Brain substrates activated
+by electroacupuncture of different frequencies (I): comparative study on
+J.-G. Lin et al. / Pain 99 (2002) 509–514
+513
+
+
+=== PDF PAGE 6 ===
+the expression of oncogene c-fos and genes coding for three opioid
+peptides. Mol Brain Res 1996;43:157–166.
+Han Z, Jiang YH, Wan Y, Wanh Y, Chang JK, Han JS. Endomorphine-1
+mediates 2 Hz but not 100 Hz electroacupuncture analgesia in the rat.
+Neurosci Lett 1999;274:75–78.
+He LF. Involvement of endogenous opioid peptides in acupuncture analge-
+sia. Pain 1987;31:99–121.
+Kaufman MP, Waldrop TG, Rybycki KJ, Ordway GA, Mitchell JH. Effects
+of static and rhythmic twitch contractions on the discharge of group III
+and IV muscle afferents. Cardiovasc Rec 1984;19:663–668.
+Le Bars D, Dickensson AN, Besson JM. Diffuse noxious inhibitory controls
+(DNIC). II. Lack of effects on non-convergent neurons, supraspinal
+involvement and theoretical implications. Pain 1979;6:305–327.
+Le Bars D, Willer JC, De Broucker T. Morphine blocks descending pain
+inhibitory controls in humans. Pain 1992;48:13–20.
+Lee JH, Beitz AJ. Electroacupuncture modiﬁes the expression of c-fos in
+the
+spinal
+cord
+induced
+by
+noxious
+stimulation.
+Brain
+Res
+1992;577:80–91.
+Lee A, Done ML. The use of nonpharmacologic techniques to prevent
+postoperative nausea and vomiting: a meta-analysis. Anesth Analg
+1999;88:1362–1369.
+Lee YH, Lee WC, Chen MT, Huang JK, Chung C, Chang LS. Acupuncture
+in the treatment of renal colic. J Urol 1992;147:16–18.
+Lewit K. The needle effect in relief of myofascial pain. Pain 1979;6:83–90.
+Martelete M, Fiori AM. Comparative study of the analgesic effect of trans-
+cutaneous nerve stimulation (TNS); electroacupuncture (EA) and
+meperidine in the treatment of postoperative pain. Acupunct Electrother
+Res 1985;10:183–193.
+Mayer DJ. Biological mechanisms of acupuncture. Prog Brain Res
+2000;122:457–477.
+Melzack R, Stillwell DM, Fox EJ. Trigger points and acupuncture points for
+pain: correlations and implications. Pain 1977;3:3–23.
+Moret V, Forster A, Laverrie´re MC, Lambert H, Gaillard RC, Bourgeois P,
+Haynal A, Gemperle M, Buchser E. Mechanism of analgesia induced by
+hypnosis and acupuncture: is there a difference? Pain 1991;45:135–40.
+Ness TJ, Gebhart GF. Interactions between visceral and cutaneous nocicep-
+tion in the rat. II Noxious visceral stimuli inhibit cutaneous nociceptive
+neurons and reﬂexs. J Neurophysiol 1991;66:29–39.
+Pomeranz B. Scientiﬁc research into acupuncture for the relief of pain. J
+Altern Complement Med 1996;2:53–60.
+Pomeranz B, Chiu D. Naloxone blockade of acupuncture analgesia: endor-
+phin implicated. Life Sci 1976;19:1757–1762.
+Richter A, Herlitz J, Hjalmarson A. Effect of acupuncture in patients with
+angina pectoris. Eur Heart J 1991;12:175–178.
+Sandkuehler J, Chen JG, Cheng G, Randic M. Low frequency stimulation of
+afferent Ad ﬁbers induces long-term depression of primary afferent
+synapses with substantia gelatinosa neurons in the rat. J Neurosci
+1997;17:6483–6491.
+Sjolund B, Terenius L, Eriksson M. Increased cerebrospinal ﬂuid levels of
+endorphins
+after
+electro-acupuncture.
+Acta
+Physiol
+Scand
+1977;100:382–384.
+Stener-Victorin E, Waldenstrom U, Nilsson L, Wikland M, Janson PO. A
+prospective randomized study of electroacupuncture versus alfentanil
+as anaesthesia during oocyte aspiration in in-vitro fertilization. Hum
+Reprod 1999;14:2480–2484.
+Sun WZ, Shyu BC, Shieh JY. Nitrous oxide or halothane, or both, fail to
+suppress c-fos expression in the rat spinal cord dorsal horn neurons after
+subcutaneous formalin. Br J Anaesth 1996;76:99–105.
+Thomas M, Lundeberg T. Does acupuncture work? Pain clinic. Updates
+1996;4:1–4.
+Ulett GA, Han S, Han JS. Electroacupuncture: Mechanisms and clinical
+application. Biol Psychiatry 1998;44:129–138.
+Vincent CA. The treatment of tension headache by acupuncture: a
+controlled single case design with time series analysis. J Psychosom
+Res 1990;34:553–561.
+Wang Q, Mao L, Han J. The arcuate nucleus of hypothalamus mediates low
+but not high frequency electroacupuncture analgesia in rats. Brain Res
+1990a;513:60–66.
+Wang Q, Mao L, Han J. The role of periaqueductal gray in mediation of
+analgesia produced by different frequencies of electroacupuncture
+stimulation in rats. Int J Neurosci 1990b;53:167–172.
+Wang B, Tang J, White PF, Naruse R, Sloninsky A, Kariger R, Gold J,
+Wender RH. Effect of the intensity of transcutaneous acupoint electrical
+stimulation on the postoperative analgesic requirement. Anesth Analg
+1997;85:406–413.
+Woolf CJ, Chong MS. Preemptive analgesia-Treating postoperative pain by
+preventing the establishment of central sensitization. Anesth Analg
+1993;77:362–379.
+Wu JN. A short history of acupuncture. J Altern Complement Med
+1996;2:19–21.
+Yamamoto T, Yaksh TL. Comparison of the antinociceptive effects of pre-
+and posttreatment with intrathecal morphine and MK801, an NMDA
+antagonist, on the formalin test in the rat. Anesthesiology 1992;77:757–
+763.
+J.-G. Lin et al. / Pain 99 (2002) 509–514
+514

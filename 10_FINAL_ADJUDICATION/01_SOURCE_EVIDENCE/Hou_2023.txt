@@ -1,0 +1,712 @@
+
+=== PDF PAGE 1 ===
+Heliyon 9 (2023) e14423
+Available online 9 March 2023
+2405-8440/© 2023 The Authors.
+Published by Elsevier Ltd.
+This is an open access article under the CC BY-NC-ND license
+(http://creativecommons.org/licenses/by-nc-nd/4.0/).
+Research article 
+Perioperative transcutaneous electrical acupoint stimulations as 
+part of an enhanced recovery after surgery protocol for living 
+donors undergoing nephrectomy: A randomized, controlled 
+clinical trial 
+Yu Hou a,1, Fang Kang a,1, Hongtao Liu c, Chengwei Yang a, Mingming Han a, 
+Xiang Huang a, Xiaohong Guan c, Shu-Ming Wang b,*, Juan Li a,** 
+a Department of Anesthesiology, The First Affiliated Hospital of USTC, Division of Life Sciences and Medicine, University of Science and Technology 
+of China, China 
+b Department of Anesthesiology, University of Connecticut School of Medicine, Farmington, CT, USA 
+c Department of Kidney Transplantation, The First Affiliated Hospital of USTC, Division of Life Sciences and Medicine, University of Science and 
+Technology of China, China 
+A R T I C L E I N F O 
+Keywords: 
+Kidney donation 
+Living kidney donor 
+Perioperative anxiety 
+Postoperative recovery 
+transcutaneous Electrical acupoint stimulations 
+TEAS 
+A B S T R A C T 
+Objective: Living kidney donors (LKDs) experience perioperative anxiety. We designed the 
+following study to evaluate the anxiolytic effect of transcutaneous electrical acupoint stimulation 
+(TEAS) during the perioperative period in a group of LKDs undergoing laparotomy nephrectomy. 
+Methods: LKDs were randomly assigned to either the TEAS or control group. Participants in the 
+TEAS group received 30min of intervention (6–15 mA, 2–100 Hz), at Yintang (EX-HN-3), bilateral 
+Taichong (LR3) and Neiguan (PC6) one day before surgery (D0), before induction of anesthesia 
+(D1) and one day after surgery (D2). The participants in the control group received the same 
+placement of electrodes but without electrical stimulation. Venous blood was collected before 
+each intervention. Anxiety levels and recovery profiles were recorded. 
+Results: LKDs in the TEAS group had lower anxiety level than those in the control group at D1, D2 
+and three days after surgery (D3). The percentage differences were: 33.3%, 25.0%, and 22.2%; 
+[95% confidence interval (CI), (−55.1%, −11.6%), (−47.4%, −2.6%), and (−42.3%, −2.2%); P 
+= 0.005, P = 0.034, and P = 0.035; respectively]. LKDs who received TEAS had better sleep 
+quality and short-term recovery profiles than those in the control group. The plasma levels of 5- 
+hydroxytryptamine (5-HT) and melatonin (MT) in the TEAS group were significantly higher than 
+those in the control group at D1 and D2 (5-HT: P = 0.001, and P < 0.001; MT: P = 0.006, and P =
+0.001). At the 3-month follow up, fewer LKDs in the TEAS group had incisional pain when 
+compared to the control group (P = 0.032). 
+Conclusions: Perioperative TEAS decreased perioperative anxiety and facilitated postoperative 
+recovery in the LKDs, and potential decreased the development of chronic pain. Trial Registra­
+tion: Registered at ChiCTR2000029891, http://www.chictr.org.cn/listbycreater.aspx. 
+* Corresponding author. 
+** Corresponding author. 
+E-mail addresses: smwang800@gmail.com (S.-M. Wang), huamuzi1999@163.com (J. Li). 
+1 Yu Hou and Fang Kang are co-first author. 
+Contents lists available at ScienceDirect 
+Heliyon 
+journal homepage: www.cell.com/heliyon 
+https://doi.org/10.1016/j.heliyon.2023.e14423 
+Received 11 September 2022; Received in revised form 22 February 2023; Accepted 4 March 2023 
+
+
+=== PDF PAGE 2 ===
+Heliyon 9 (2023) e14423
+2
+1. Background 
+Kidney transplantation has significantly improved the life expectancy and quality of life in patients with end-stage renal disease. 
+Because of the scarcity of cadaver donors, living kidney donations have gradually increased worldwide. Current guidelines endorse 
+selection of donors in good health [1]. However, many living kidney donors (LKDs) confront perioperative psychological and physical 
+stresses similar to those experienced by general surgical patients [2,3]. Previous studies indicated that approximately 6%–67% of LKDs 
+suffered perioperative mental distress, but only 10% of them sought psychological consultation [4–6]. 
+Anxiety is known to lead to adverse consequences during the perioperative period [7,8]. Hence, it is important to decrease anxiety 
+in these LKDs. Recent anesthesia practice has focused on utilizing multi-modal analgesia, regional techniques and non-pharmacologic 
+interventions to facilitate the recovery of surgical patients [9,10]. Transcutaneous electrical acupoint stimulation (TEAS) is a 
+noninvasive form of acupuncture interventions which applies electrical stimulation onto acupuncture points using transcutaneous 
+electrodes. TEAS has been used successfully in reducing anxiety [11] and is well-received by patients without adverse effects [12]. 
+We designed this randomized-controlled clinical trial (RCT) to evaluate the anxiolytic effect of perioperative TEAS in a group of 
+LKDs undergoing laparotomy nephrectomy. 
+2. Material and methods 
+The Clinical Trial Ethics Committee of the First Affiliated Hospital of University of Sciences and Technology (USTC-Hefei, Anhui) of 
+China approved this study protocol. This protocol was registered in the Chinese Clinical Trial Registry (http://www.chictr.org.cn/ 
+listbycreater.aspx; ChiCTR2000029891; principal investigator: Juan Li; date of registration: February 16, 2020). Registration was 
+completed before initiating enrollment. Potential candidates were identified from the operating room schedule at Anhui Provincial 
+Hospital. Prior to the scheduled surgery, a research assistant met with these candidates and provided them with both a standard 
+verbal2 and a written description of this study. All participants signed informed consent forms prior to participating in this study. The 
+report of this study followed the Consolidated Standards of Reporting Trials (CONSORT) guidelines [13] and adhered to the Standards 
+for Reporting Interventions in Clinical Trials of Acupuncture (STRICTA) [14]. 
+All participants underwent nephrectomy, through laparotomy, performed by the same surgical team in the period from September 
+2020 to December 2020. The inclusion criteria were as follows: (1) age 18–65 years, (2) body mass index (BMI) 18–30 kg/m2, (3) 
+relatively healthy, American Society of Anesthesiologists physical status I-II (ASA I-II), (4) able to read and sign consent, and (5) no 
+prior acupuncture treatment. The exclusion criteria were as follows: (1) history of acupuncture treatment or current treatment with 
+acupuncture, (2) significant medical co-morbidity, ASA III-IV, (3) pacemaker placement, (4) infection or unhealed wound near the 
+chosen acupoints, (6) current use of sedatives, analgesics, or anti-anxiety drugs, (7) current psychological/psychiatric treatment, and 
+(8) inability to read and sign consent. 
+2.1. TEAS and control interventions 
+Based on Traditional Chinese Medicine (TCM) and available clinical trials, five acupoints [Yingtang (EX-HN3), bilateral Taichong 
+(LR3) [15,16] and Neiguan (PC6) [15,17] [please refer to Fig. S1]; and foot note3 were selected for TEAS intervention aimed at 
+reducing patient anxiety. TEAS was performed for 30 min at one day before surgery (D0), before the induction of anesthesia (D1), and 
+one day after surgery (D2) i.e., a total of three treatment over a three-day period. The first author YH, who has extensive acupuncture 
+training and who has been in practice for 2 years, performed the assigned TEAS intervention on every LKD based on this/her group 
+assignment. The group assignment was written in a piece of paper and placed in a sealed envelope. All participants were asked to 
+remain in a supine position for and during the intervention. The skin at the selected acupoints and area was cleaned and prepped with 
+75% isopropyl alcohol. The surface electrodes (3 × 3cm) (see supplement) were placed onto these acupoints. Yingtang point pairing 
+electrode patch was placed on the skin located at right mid-subclavicular area. All electrodes were then connected to a Hwato elec­
+tronic stimulator (model SDZ-V, Suzhou Medical Appliances Co. Ltd, Suzhou, China). The mode of electrical stimulation was 
+dense-disperse, alternated 2Hz/100 Hz frequencies; the intensity was adjusted according to individual tolerance, generally between 6 
+and 15 mA. Participants in TEAS could sense vibration following activation of the stimulator for a total of 30 min [18]. Participants 
+assigned to the control group had the same electrode placements, but the stimulator was disabled without any transmission of elec­
+tricity. This method had been used to blind the participants successfully in a previous study [19]. 
+2.2. Intraoperative and postoperative management 
+All participants received the same intraoperative and postoperative management. On the day of surgery, all LKDs received 
+intravenous (IV) pantoprazole (80 mg) and methylprednisolone (40 mg) preoperatively. Once ASA standard monitors and a bispectral 
+2 “We are going to test the effects of an acupuncture-like electrical stimulations being integrated into routine perioperative care and the intensity 
+of electrical stimulation is very low so you may or may not be able feel the stimulations.” 
+3 Yintang (EX-HN3, located in the root of the nose, and between the eyebrows.) and bilateral Neiguan (PC6, located 2 cun* up the transverse wrist, 
+between the palmaris longus tendon and the radial carpal flexor tendon.) and Taichong (LR3, located in the depression of the first two metatarsal 
+unions). * Unit of Chinese measurement. 
+Y. Hou et al. 
+
+
+=== PDF PAGE 3 ===
+Heliyon 9 (2023) e14423
+3
+index monitor (BIS) were placed, general anesthesia was induced with IV sufentanil 0.3–0.5 μg kg−1 and propofol 0.2–0.3 mg kg−1. 
+When the BIS number reached between 40 and 60, IV cisatracurium 0.2–0.3 mg kg −1 was administered and a laryngeal mask airway 
+(Male: I-gel® 4, Female: I-gel® 3, Berman, Germany) was placed. All participants received volume-controlled mechanical ventilation 
+with tidal volume of 8 ml kg−1 body weight. Bilateral transversus abdominis plane block (TAP block) was performed under ultrasound 
+guidance and a total of 30 ml of 0.375% ropivacaine was injected via 0.7 × 90 mm block needles (15 ml each side). All LKDs received 
+continuous target-controlled infusion (TCI) of propofol (modified Marsh model, Cp 2.0–3.0 μg ml−1) and remifentanil (modified Marsh 
+model, Cp 2.0–3.0 ng ml−1). In addition, 1% sevoflurane was used to maintain the BIS between 40 and 60. Based on the standard 
+protocol, IV phenylephrine and/or atropine were administered to ensure adequate blood perfusion to the kidney at the time of harvest. 
+Intravenous muscle relaxant (IV cisatracurium 0.05–1 mg kg −1) was administered when T1 twitch height reached 25% of baseline 
+detected by a Train of Four (TOF) monitor (Veryark-TOF, Guangxi, China). Sevoflurane and TCI (propofol and remifentanil mixture) 
+were discontinued 30 min before the end of surgery. Fifteen minutes before the end of surgery, IV droperidol (1 mg) and flurbiprofen 
+(100 mg) were administered to prevent postoperative nausea and vomiting (PONV) and pain. At the end of surgery, IV 50 μg kg−1 
+neostigmine and 20 μg kg−1 atropine were administered to reverse the effect of muscle relaxant. Participants were transferred to the 
+Post Anesthesia Care Unit (PACU), and I-gel® was removed when the participant met the clinical criteria [20]. A patient-controlled 
+intravenous analgesia pump [sufentanil (1 μg ml−1), azasetron (0.4 mg ml−1) and droperidol (0.01 mg ml−1); flow rate (2 ml h−1); 
+bolus (4 ml); lock time (30min)] was connected to the PACU for 48 h postoperatively. At D3, if a visual analogue scale–pain (VAS-P) 
+score ≧ 30 and 50 mg of IV flurbiprofen was used as rescue analgesic. 
+2.3. Outcomes measurements (please refer to Table 1) 
+(a) Hospital Anxiety and Depression Scale - Anxiety (HADS-A): HADS-A is a reliable and validated instrument for assessing the 
+psychological status of non-psychiatric inpatients. It consists of 7 items for anxiety. Items are classified using a 4-point Likert 
+scale with scores from 0 to 3 and the total scores for anxiety ranging from 0 to 21 [21]. For the Chinese version of HADS-A, 
+please refer to the Appendix in the supplemental document. 
+(b) The Insomnia Severity Index (ISI): The ISI is a 7-items self-reporting questionnaire assessing the nature, severity, and impact of 
+insomnia. The dimensions evaluated are severity of sleep onset, sleep maintenance, and early morning awakening problem, 
+sleep dissatisfaction, interference of sleep difficulties with daytime functioning, noticeability of sleep problem by others and 
+distress caused by the sleep difficulties. A 5-point Likert scale is used to rate each item, and a score higher than 14 has been 
+accepted as the optimal cut off for insomnia [22]. 
+(c) The Quality of Recovery-15(QoR-15): The QoR-15 scale is a validated measure to evaluate the quality of a patient’s recovery. The 
+scale consists of 15 items assessing patient-reported health status in five domains: pain intensity, physical independence, 
+physical satisfaction, psychological and emotional state. Each item is rated on a scale of 0–10; 150 is the maximum score and 0 is 
+the minimum score. The quality of recovery has been classified based on the scores assessed by QoR-15 into excellent, good, 
+moderate, and poor; they are 136–150, 122–135, 90–121, and 0–89, respectively [23]. 
+(d) Visual Analogue Scale for Pain (VAS-P): The VAS-P scale is a unidimensional measure of pain intensity. It consists of a line with 
+left side “0” representing “no pain” and right side “100” representing “extreme pain”. 
+(e) Leeds Assessment of Neuropathic Symptoms and Signs Pain Scale (LANSS): LANSS comprises of a 7 items pain scale including 5 
+items for the sensory descriptors and 2 items for sensory examination. The primary purpose of this test is to assess whether the 
+pain experienced is predominantly caused by nerve damage or not. The LANSS scale is the only scale with validity for 
+discriminating the origin of pain (neuropathic vs. nociceptive) [24]. 
+(f) Blood Samples for Biomarkers: Three milliliter of venous blood samples were collected in anticoagulant tubes before every TEAS 
+treatment. Blood samples were immediately centrifuged at 4000r min−1 for 10min, and the plasma was transferred to 
+Eppendorf tubes and stored in a −80 ◦C freezer until analyses. Concentrations of plasma 5-hydroxytryptamine (5-HT), mela­
+tonin (MT), interleukin-1β (IL-1β) and tumor necrosis factor-α (TNF-α) were measured using commercial ELISA kits (Hefei 
+Nuozhuo Biological Technology). These biomarkers were chosen because 5-HT and MT are neurotransmitters closely related to 
+anxiety and the sleep cycle [25,26]. IL-1β and TNF-α are pro-inflammatory cytokines closely related to the intensity of pain and 
+pathogenesis of chronic pain [27]. 
+2.4. Primary outcome and recovery profiles 
+The primary outcome was the difference of anxiety levels in LKDs who received or did not receive TEAS. We also collected recovery 
+profiles including sleep quality (ISI) and postoperative recovery (e.g., incidence of PONV, usage of rescue analgesics, severity of 
+postoperative pain, postoperative recovery index, etc.). In addition, blood samples were collected at D0, D1, and D2 to determine 
+plasma levels of biomarkers (5-HT, melatonin, IL-1β and TNF-α). 
+2.5. Sample size calculation 
+Using PASS 15.0 (NCC, Kaysville, Utah, United States), the required sample size was calculated based on existing data that indicates 
+approximately 65% of LKDs experienced anxiety [6] and nearly 32% of surgical patients had anxiety despite TEAS treatment [28]. 
+Assuming a two-sided type I error (α) of 0.05 and a power of 80%, a total of 66 LKDs were needed. To allow for a 10% drop out rate, the 
+sample size needed to be 74 LKDs. 
+Y. Hou et al. 
+
+
+=== PDF PAGE 4 ===
+Heliyon 9 (2023) e14423
+4
+2.6. Randomization and blinding 
+The participants were randomized into either TEAS (n = 37) or control (n = 37) group in a 1:1 ratio based on a randomization 
+number generated by an independent researcher using IBM®SPSS 25.0 (Armonk, New York USA). The randomization number was 
+placed in a sealed envelope and was not revealed until the first intervention. Only the acupuncturist performing the intervention knew 
+which intervention the assigned number represented. No participant, surgeon, anesthesiologist, data collector, or outcome assessor 
+knew the allocation of participants. 
+2.7. Statistical analysis 
+Categorical variables were expressed as n (%) and were analyzed using the χ2 test or Fisher’s exact test. Continuous variables were 
+presented as means ± standard deviations (SD) or median [interquartile range (IQR)] and the Shapiro-Wilk test was used to verify the 
+normality of the distribution. Continuous variables were compared using the independent sample t-test or Wilcoxon rank-sum test. 
+Rank variables were compared using Wilcoxon rank-sum test. The Hodges-Lehmann estimator was used to calculate the median and 
+95% CI differences. Two-way repeated-measurements ANOVA was used to determine the effect of factors at different time points. 
+Bonferroni correction was applied. A logistic regression model was used to assess whether anxiety was associated with any or all 
+plasma biomarkers tested (5-HT, MT, IL-1β and TNF-α levels). P values < 0.05 were considered statistically significant. All analyses 
+were performed using IBM®SPSS 25.0 (Armonk, New York USA). 
+3. Results 
+A total of 74 LKDs were recruited but two LKDs withdrew from the study for personal reasons (Fig. 1). Therefore, only 72 LKDs 
+completed the study and were included in the final data analyses. There were no differences in baseline characteristics between the 
+groups (Table 2). There were also no significant differences in the duration of surgery and anesthesia, time to removal of LMA, 
+intraoperative consumption of remifentanil and propofol, blood loss and urine output between the groups (Table 3). 
+3.1. Primary outcome 
+At D0 and D4 (at the time of discharge), there were no differences in anxiety levels between the TEAS and control groups. However, 
+Fig. 1. Study flow diagram. 
+Y. Hou et al. 
+
+
+=== PDF PAGE 5 ===
+Heliyon 9 (2023) e14423
+5
+anxiety levels of the LKDs were significantly lower in the TEAS groups than those of the control group at D1, D2, and three days after 
+surgery (D3), please refer to Table 4 and Table S1. 
+3.2. Recovery profiles 
+There were no differences in sleep quality between the two groups at D0 and D4 (Table 4). All LKDs regardless of groups had 
+worsening of sleep quality immediately following surgery as compared to before surgery (D0) but LKDs in the TEAS group had 
+significantly better quality of sleep than those in the control group at D2 and D3 (P = 0.025, and P = 0.030, respectively, Table 4). 
+Similarly, there were no differences in plasma levels of 5-HT and MT between the two groups at baseline. Interestingly, both 5-HT and 
+MT levels increase in the TEAS group and reaches statistically significance at D1 {5-HT:589.1 ± 92.6 vs 485.7 ± 95.6, differences in 
+means: 103.5 [95% confidence interval (CI): 59.2–147.7], P < 0.001; MT: 11.8 ± 2.0 vs 9.5 ± 2.0, differences in means: 2.4 [95%CI: 
+1.4–3.3], P < 0.001} and D2 {5-HT: 589.4 ± 94.0 vs 456.1 ± 71.0, differences in means: 133.4 [95% CI: 94.2, 172.5], P < 0.001; MT: 
+11.9 ± 2.3 vs 8.4 ± 1.3, differences in means: 3.5 [95%CI: 2.7, 4.4]; P < 0.001} as compared to those of the control group [Fig. 2(A- 
+B)]. A logistic regression analysis revealed that plasma level of MT and anxiety were closely related (OR = 0.771,95%CI 0.609–0.977, 
+P = 0.031, Table S2). 
+LKDs who received TEAS reported less postoperative pain than those in the control group at D2 and D3 but there were no significant 
+differences in VAS-P scores between the two groups at D4 (P = 0.001, P = 0.014, and P = 0.145; respectively, Table 4). Corre­
+spondingly, LKDs in the TEAS group received a lower amounts of rescue analgesics postoperatively (P = 0.002, Table 3). LKDs in the 
+TEAS group experienced fewer episodes of PONV (P = 0.023) and earlier recovery of bowel activities (P = 0.002) than those of the 
+control group (Table 3). The postoperative recovery index (QoR-15) between the TEAS and control groups indicated more LKDs in the 
+TEAS group reported moderate level of recovery at D2 and D3 (P = 0.009, and P = 0.001, Table 4). However, there were no differences 
+between the groups at D4 (P = 0.402). At M3 (3-month postoperative follow up) 16 (44.4%) LKDs in the TEAS group and 25 (69.4%) in 
+the control group still experienced pain (VAS-P ≧30) (P = 0.032, Table 3). Of the LKDs that reported still having pain at M3, 7 (19.4%) 
+in the TEAS group and 15 (41.7%) in the control group were found to have neuropathic pain, i.e., LANSS≧12 (P = 0.041, Table 3). 
+There were no differences of IL-1β and TNF-α levels at the baseline D0 between the two groups (P = 0.915, and P = 0.594, 
+respectively.). However, the plasma IL-1β level was significantly suppressed in LKDs who received TEAS as compared to those did not 
+receive TEAS at D1 [55.9 ± 12.3 vs 63.7 ± 13.0; differences in means:7.8 (95% CI:1.8–13.7; P = 0.011, and at D2 55.1 ± 15.6 vs 73.8 
+± 12.9; differences in means: 18.7 (95% CI: 12.0–25.5); P < 0.001][Fig. 2(C)]. Similar suppression of plasma levels of TNF-α at D1 and 
+D2 in LKDs who received TEAS were also detected. The differences in plasma levels of TNF-α between the two groups reached statistical 
+significance at D2 [54.1 ± 12.0 vs 72.1 ± 10.3; differences in means: 18.0 (95%CI: 12.8–23.3); P < 0.001] [Fig. 2(D)]. 
+4. Discussion 
+Perioperative anxiety is common among surgical patients. More than 70% of surgical patients experience preoperative anxiety 
+which peaks on the day of surgery [8]. It is well established that the level of anxiety correlates with postoperative complications [29]. 
+The result of this pilot study indicated that perioperative TEAS at Ying Tang (EX-HN3), bilateral Tai Chong (LR3) and Neiguan (PC6) 
+can reduce perioperative anxiety similar to the results seen in previous clinical studies [15,30,31]. 
+Although the mechanism of the anxiolytic effect of TEAS is unclear, a study has shown that acupuncture regulates the release of 
+neurotransmitters, e.g. 5-HT, enkephalin, endorphin, etc., leading to various psychological and physiological responses [32]. Indeed, a 
+study showed that acupuncture triggered the release of 5-HT and enkephalin in patients with psychological illness [33]. However, we 
+were not able to find a correlation between anxiety and plasma levels of 5-HT in this pilot study. Instead, we discovered there might be 
+an association between anxiety and plasma levels of MT (P < 0.05). Inhalation or intravenous anesthetics may cause interruption of 
+normal sleep-wake cycle and alter sleep quality [34]. Studies have shown that both anesthetic techniques cause a rapid decrease of MT 
+immediately post-surgery then a gradually return to baseline [35,36]. Song et al. found perioperative TEAS improved postoperative 
+sleep quality in a group of patients undergoing video-assisted thoracoscopic surgery [37]. Spence and colleagues found that 
+acupuncture increased nocturnal MT secretion and reduced the level of anxiety and severity of insomnia in a group of anxious patients 
+[38]. Huang and colleagues also demonstrated that preoperative TEAS increased plasma levels of MT in patients who received sev­
+oflurane general anesthesia [39]. We also found that LKDs who received perioperative TEAS had better postoperative sleep quality 
+than those in the control group. We speculated that these anti-insomnia effects of TEAS might occur through the regulation of MT 
+Table 1 
+The outcomes assessment schedule. 
+Assessment Schedule 
+D0 
+D1 
+D2 
+D3 
+D4 
+M3 
+Hospital Anxiety and Depression Scale-Anxiety 
+X 
+x 
+x 
+x 
+x 
+Insomnia Severity Index 
+X 
+x 
+x 
+x 
+The Quality of Recovery −15 
+X 
+x 
+x 
+Visual Analogue Scale for Pain 
+x 
+x 
+x 
+x 
+Blood Sample for Biomarker 
+X 
+x 
+x 
+LANSS 
+x 
+Abbreviations: D0, one day before surgery; D1, before the induction of general anesthesia; D2, one day after surgery; D3, three days after surgery; D4, 
+at the time of discharge; M3, at 3-month after surgery; LANSS, Leeds assessment of neuropathic symptoms and signs scale. 
+Y. Hou et al. 
+
+
+=== PDF PAGE 6 ===
+Heliyon 9 (2023) e14423
+6
+released from the central nervous system. Future studies are warranted to explore such coordination. 
+Continuous perioperative TEAS intervention was associated with decreased intraoperative opioid consumptions and improved 
+postoperative recovery in a group of patients undergoing video-assisted thoracoscopic lobectomy and patients received sinusotomy 
+[40,41]. In contrast to these studies, we did not observe any reduction in intraoperative remifentanil consumption. Because of our 
+hospital policy, all LKDs without major complications regardless of their recovery profile can only be discharged at 12 days post­
+operatively, thus there were no differences in the duration of hospitalization between the two groups. 
+Surgery itself could lead to a host of deleterious effects e.g., inflammatory, hormonal, and genomic responses [42]. 
+Neuroimmune-endocrine responses can adversely affect postoperative recovery [43]. We found that perioperative TEAS reduced 
+plasma levels of proinflammatory cytokines (TNF-α and IL-1β) as compared to those in the control groups. This might explain why 
+LKDs in the TEAS group had less postoperative pain, PONV, required a lower amounts of rescue analgesics, and had earlier recovery of 
+bowel activities. Our study results also showed that fewer LKDs in the TEAS group had continuing pain at the 3-month follow up than 
+those in the control group. As mentioned previously, pro-inflammatory cytokine (TNF-α and IL-1β) are found to be closely associated 
+with the intensity of chronic pain [43]. Unfortunately, our study was not designed to confirm or deny such a correlation. Lastly, the 
+results of this study indicated that LKDs who had received perioperative TEAS had better recovery profiles than those without peri­
+operative TEAS, which is similar to results from a previous study conducted in a group of women undergoing laparoscopic gyneco­
+logical surgery [18]. 
+There are several limitations to this pilot study: (1) we did include a no-intervention control (standard care) group because we were 
+concerned about the potential for causing disappointment that may result in a negative psychological impact in LKDs assigned in this 
+group; (2) we did not include a “believing assessment test” at the inception of this study, as belief in a treatment might affect the 
+outcomes of the treatment, (3) we did not perform the range of electrical stimulation frequencies and/or duration of TEAS that are 
+optimal for the maximum anxiolytic effect, and (4) our sample size was small and only a single population of surgical patients was 
+included in this study. However, the results of this study will serve as a model for future large multicenter clinical trials which may 
+include other surgical populations, e.g., breast cancer patients, etc. In summary, perioperative TEAS was able to reduce anxiety levels 
+Table 2 
+Patients characteristics. 
+Parameter 
+Control group (N = 36) 
+TEAS group (N = 36) 
+P-value 
+Age [yr; mean (SD)] 
+54.6 (8.0) 
+54.0 (5.8) 
+0.722 
+Body mass index [kg m−2; mean (SD) ] 
+24.0 (3.2) 
+24.1 (2.0) 
+0.943 
+Sex [n (%)] 
+0.306 
+Male 
+9 (25.0) 
+13 (36.1) 
+Female 
+27 (75.0) 
+23 (63.9) 
+ASA [n (%)] 
+0.471 
+ǀ 
+23 (63.9) 
+20 (55.6) 
+ǁ 
+13 (36.1) 
+16 (44.4) 
+Education levels [yr; n (%)] 
+0.617 
+≦6 
+23 (63.9) 
+25 (69.4) 
+≧6 
+13 (36.1) 
+11 (30.6) 
+Donation relationship [n (%)] 
+0.934 
+Mother 
+25 (69.4) 
+23 (63.9) 
+Father 
+7 (19.4) 
+9 (25.0) 
+Others 
+4 (11.1) 
+4 (11.1) 
+Notes: Values are presented as means (SD), or n (%). 
+Abbreviations: ASA, American society of anesthesiologists; SD, standard deviation. 
+Table 3 
+Intraoperative characteristics and postoperative complications. 
+Intraoperative and postoperative parameters 
+Contol group (N = 36) 
+TEAS Group (N = 36) 
+P-value 
+Intraoperative propofol [mg; median (IQR)] 
+550 (406, 645) 
+490 (430, 600) 
+0.417 
+Intraoperative remifentanil [μg; median (IQR)] 
+1000 (881, 1144) 
+950 (750, 1238) 
+0.572 
+Intraoperative bleeding [ml; median (IQR)] 
+175 (150, 200) 
+175 (150, 200) 
+0.087 
+Intraoperative urine volume [ml; median (IQR)] 
+1000 (600, 1200) 
+800 (525, 1075) 
+0.088 
+Time to safe removal of LMA [mins; median (IQR)] 
+35 (30, 45) 
+30 (20, 44) 
+0.421 
+Anesthesia time [mins; mean (SD)] 
+174 (31) 
+167 (26) 
+0.305 
+Surgical time [mins; mean (SD)] 
+146.6 (30.1) 
+139.4 (26.8) 
+0.284 
+PONV [n (%)] 
+12 (33.3） 
+4 (11.1) 
+0.023 
+Time to first bowel movement [days; mean (SD)] 
+2.2 (0.7) 
+1.7 (0.6) 
+0.002 
+Rescued Analgesics [n (%)] 
+28 (77.8) 
+15 (41.7) 
+0.002 
+Pain (VAS-P ≧30) at M3 [n (%)] 
+25 (69.4) 
+16 (44.4) 
+0.032 
+LANSS≧12 at M3 [n (%)] 
+15 (41.7) 
+7 (19.4) 
+0.041 
+Notes: Values are presented as means (SD), n (%), or median (IQR). 
+Abbreviations: ASA, American society of anesthesiologists; LMA, laryngeal mask anesthesia; PONV, postoperative nausea and vomit; IQR, inter­
+quartile range; SD, standard deviation. 
+Y. Hou et al. 
+
+
+=== PDF PAGE 7 ===
+Heliyon 9 (2023) e14423
+7
+and facilitate recovery of a group of kidney donors who underwent nephrectomy. 
+Data sharing statement 
+The data supporting this study are available from the corresponding author for a reasonable request. 
+Table 4 
+The Comparison of HADS-A, ISI, VAS-P and QoR-15 in the two study groups. 
+Measurements 
+Control group (n = 36) 
+TEAS Group (n = 36) 
+Difference (95% CI) 
+P-value 
+HADS-A [scores, median, (IQR)] 
+D0 
+6.0 (3.0,10.0) 
+7.0 (6.0,10.0) 
+0.0 (-2.0, 3.0) 
+0.251 
+D1 
+9.5 (6.3,13.0) 
+7.0 (6.0,8.0) 
+4.0 (2.0, 6.0) 
+<0.001 
+D2 
+9.0 (6.3,11.0) 
+7.0 (7.0,8.0) 
+2.0 (0.0, 3.0) 
+0.009 
+D3 
+7.0 (6.0,10.0) 
+5.0 (4.0,6.0) 
+4.0 (2.0, 5.0) 
+<0.001 
+D4 
+4.0 (3.0,6.0) 
+4.0 (3.0,6.0) 
+0.0 (-1.0, 1.0) 
+0.674 
+ISI [scores, median,(IQR)] 
+D0 
+6.5 (4.0, 10.0) 
+7.0 (4.0, 11.0) 
+−0.5 (−2.0, 2.0) 
+0.901 
+D2 
+16.5 (10.5, 20.5) 
+13.0 (7.0, 17.0) 
+3.5 (0.0, 6.0) 
+0.025 
+D3 
+12.5 (7.0, 19.0) 
+8.5 (7.0, 12.0) 
+4.0 (0.0, 6.0) 
+0.030 
+D4 
+6.5 (4.0, 8.8) 
+6.0 (4.0, 11.0) 
+0.5 (−2.0, 2.0) 
+0.856 
+VAS-P [scores, median,(IQR)] 
+D2 
+55.0 (40.0, 60.0) 
+30.0 (30.0, 47.5) 
+25.0 (10.0, 20.0) 
+0.001 
+D3 
+40.0 (30.0, 50.0) 
+30.0 (30.0, 30.0) 
+10.0 (0.0, 10.0) 
+0.014 
+D4 
+30.0 (20.0, 30.0) 
+30.0 (20.0, 30.0) 
+0.0 (0.0, 10.0) 
+0.145 
+M3 
+30.0 (20.0, 40.0) 
+20.0 (20.0, 30.0) 
+10.0 (0.0, 10.0) 
+0.010 
+QoR-15 [scores; mean (SD)] 
+D2 
+99.1 ± 10.0 
+104.5 ± 7.0 
+−5.4 (−9.5, −1.4) 
+0.009 
+D3 
+100.9 ± 10.7 
+108.5 ± 7.4 
+−7.6 (−11.9, −3.2) 
+0.001 
+D4 
+112.4 ± 11.6 
+114.3 ± 6.4 
+−1.9 (−6.3, 2.5) 
+0.402 
+Notes: Values are presented as means (SD), n (%), or median (IQR). 
+Abbreviations: D0, one day before surgery; D1, before the induction of general anesthesia; D2, one day after surgery; D3, three days after surgery; D4, 
+at the time of discharge; HADS-A, hospital anxiety depression scale-anxiety; ISI, insomnia severity index; QoR-15, quality of recovery-15; CI, con­
+fidence interval; SD, standard deviation. 
+Fig. 2. Serum 5-HT, MT, IL-β, and TNF-α levels (n = 36) A:5-hydroxytryptamine(5-HT); B: melatonin (MT); C: interleukin-1β (IL-1β); D: tumor 
+necrosis factor-α(TNF-α); D0, A day before surgery; D1, On the day of surgery prior to induction of general anesthesia; D2, One day after surgery. 
+Compare to D0, #P < 0.05, ##P < 0.001 Compare to Control, *P < 0.05, **P < 0.001. 
+Y. Hou et al. 
+
+
+=== PDF PAGE 8 ===
+Heliyon 9 (2023) e14423
+8
+Ethics approval 
+The current study was accordance with Declaration of Helsinki and approved by the Chinese Clinical Trial Registry (http://www. 
+chictr.org.cn/listbycreater.aspx; ChiCTR2000029891; principal investigator: Juan Li; date of registration: February 16, 2020). 
+Author contribution statement 
+Yu Hou: Performed the experiments; Wrote the paper. 
+Fang Kang; Hongtao Liu; Chengwei Yang; Xiang Huang; Xiaohong Guan: Conceived and designed the experiments; Analyzed and 
+interpreted the data. 
+Mingming Han: Contributed reagents, materials, analysis tools or data. 
+Shu-Ming Wang: Analyzed and interpreted the data; Wrote the paper. 
+Juan Li: Conceived and designed the experiments; Wrote the paper. 
+Funding statement 
+Perioperative Transcutaneous Electrical Acupoint S Juan Li was supported by Natural Science Foundation of Anhui Province of 
+China [1908085MH251], Fundamental Research Funds for the Central Universities [WK9110000059]. 
+Data availability statement 
+Request from the author Prof. Li juan (huamuzi1999@qq.com). 
+Declaration of interest’s statement 
+The authors declare no competing interests. 
+Acknowledgements 
+The authors thank Drs. Fuhong Ju and Qixing Wu for their advice regarding study design and data collection. In addition, we also 
+want to express our gratitude to Mrs. T. Haney for her time and expertise in proofreading this manuscript. 
+Appendix A. Supplementary data 
+Supplementary data to this article can be found online at https://doi.org/10.1016/j.heliyon.2023.e14423. 
+Abbreviations 
+TEAS 
+transcutaneous electrical acupoint stimulation 
+LKDs 
+living kidney donors 
+PONV 
+postoperative nausea and vomiting 
+Neiguan PC6 
+Taichong LR3 
+Yintang EX-HN3 
+HADS-A hospital anxiety and depression scale-anxiety 
+VAS-P 
+100-mm visual analogue scale for pain 
+ISI 
+insomnia severity index 
+QoR-15 
+quality of recovery-15 
+LANSS 
+Leeds assessment of neuropathic symptoms and signs scale 
+D0 
+one day before surgery 
+D1 
+before induction of anesthesia 
+D2 
+one day after surgery 
+D3 
+three day after surgery 
+D4 
+discharge from the hospital 
+M3 
+at 3-month after surgery 
+RCT 
+randomized controlled trail 
+BIS 
+bispectral index monitor 
+BMI 
+body mass index 
+TCI 
+target-controlled infusion 
+ASA 
+American Society of Anesthesiologists 
+LMA 
+laryngeal mask anesthesia 
+Y. Hou et al. 
+
+
+=== PDF PAGE 9 ===
+Heliyon 9 (2023) e14423
+9
+TCM 
+Traditional Chinese Medicine 
+5-HT 
+5-hydroxytryptamine 
+MT 
+melatonin 
+IL-1β 
+interleukin-1β 
+TNF-α 
+tumor necrosis factor-α 
+CONSORT Consolidated Standards of Reporting Trials 
+CI 
+confidence interval 
+References 
+[1] A.X. Garg, A.S. Levey, B.L. Kasiske, M. Cheung, K.L. Lentine, Application of the 2017 KDIGO guideline for the evaluation and care of living kidney donors to 
+clinical practice, Clin. J. Am. Soc. Nephrol. 15 (6) (2020) 896–905. 
+[2] O. Bozkurt, M. Uyar, U.F. Demir, Determination of health anxiety level in living organ donation, Transplant. Proc. 51 (4) (2019) 1139–1142. 
+[3] K.H. Chen, L.C. Yeh, H.L. Huang, Y.J. Chiang, M.H. Lin, C.Y. Hsieh, L.C. Weng, Factors determining physical and mental quality of life of living kidney donors in 
+taiwan, Transplant. Proc. 48 (3) (2016) 745–748. 
+[4] K. Clemens, N. Boudville, M.A. Dew, C. Geddes, J.S. Gill, V. Jassal, S. Klarenbach, G. Knoll, N. Muirhead, G.V. Prasad, et al., The long-term quality of life of 
+living kidney donors: a multicenter cohort study, Am. J. Transplant. 11 (3) (2011) 463–469. 
+[5] G.C. Smith, T. Trauer, P.G. Kerr, S.J. Chadban, Prospective psychosocial monitoring of living kidney donors using the Short Form-36 health survey: results at 12 
+months, Transplantation 78 (9) (2004) 1384–1389. 
+[6] A. Lopes, I.C. Frade, L. Teixeira, C. Oliveira, M. Almeida, L. Dias, A.C. Henriques, Depression and anxiety in living kidney donation: evaluation of donors and 
+recipients, Transplant. Proc. 43 (1) (2011) 131–136. 
+[7] A. Kumar, P.K. Dubey, A. Ranjan, Assessment of anxiety in surgical patients: an observational study, Anesth. Essays Res. 13 (3) (2019) 503–508. 
+[8] C.J. Wilson, A.J. Mitchelson, T.H. Tzeng, M.M. El-Othmani, J. Saleh, S. Vasdev, H.J. LaMontagne, K.J. Saleh, Caring for the surgically anxious patient: a review 
+of the interventions and a guide to optimizing surgical outcomes, Am. J. Surg. 212 (1) (2016) 151–159. 
+[9] Q.L. Zhang, N. Xu, S.T. Huang, Z.W. Lin, L.W. Chen, H. Cao, Q. Chen, Music therapy for early postoperative pain, anxiety, and sleep in patients after mitral valve 
+replacement, Thorac. Cardiovasc. Surg. 68 (6) (2020) 498–502. 
+[10] S.K. Abd-Elshafy, F. Abdallal, E.Z. Kamel, H. Edwar, E.A. Allah, H.H.M. Maghraby, J.A. Sayed, M.S. Ali, H. Elkhayat, G.S.K. Mahran, Paravertebral 
+dexmedetomidine in video-assisted thoracic surgeries for acute and chronic pain prevention, Pain Physician 22 (3) (2019) 271–280. 
+[11] M. Yeh, Y. Chung, L. Hsu, S. Hung, Effect of transcutaneous acupoint electrical stimulation on post-hemorrhoidectomy-associated pain, anxiety, and heart rate 
+variability: a randomized-controlled study, Clin. Nurs. Res. 27 (4) (2018) 450–466. 
+[12] F. Gao, Q. Zhang, Y. Li, Y. Tai, X. Xin, X. Wang, Q. Wang, Transcutaneous electrical acupoint stimulation for prevention of postoperative delirium in geriatric 
+patients with silent lacunar infarction: a preliminary study, Clin. Interv. Aging 13 (2018) 2127–2134. 
+[13] D. Moher, K.F. Schulz, D.G. Altman, The CONSORT statement: revised recommendations for improving the quality of reports of parallel-group randomised trials, 
+Lancet 357 (9263) (2001) 1191–1194. 
+[14] H. MacPherson, D.G. Altman, R. Hammerschlag, L. Youping, W. Taixiang, A. White, D. Moher, S.R. Group, Revised STandards for reporting interventions in 
+clinical trials of acupuncture (STRICTA): extending the CONSORT statement, J. Alternative Compl. Med. 16 (10) (2010) ST1–14. 
+[15] L.-F. Xing, Y. Wu, Y.-J. He, F.-F. Wang, Y.-H. Zhu, C.-M. Ma, Y.-Y. Yan, S.-J. Sun, J.-X. Pan, N. Robinson, et al., Transcutaneous electrical acupoint stimulation 
+alleviates the anxiety levels of IVF: a prospective, randomized and controlled study, European J. Integrat. Med. 20 (2018) 126–130. 
+[16] D. Amorim, J. Amado, I. Brito, S.M. Fiuza, N. Amorim, C. Costeira, J. Machado, Acupuncture and electroacupuncture for anxiety disorders: a systematic review 
+of the clinical research, Compl. Ther. Clin. Pract. 31 (2018) 31–37. 
+[17] S. Gu, H. Lang, J. Gan, Z. Zheng, F. Zhao, Q. Tu, Effect of transcutaneous electrical acupoint stimulation on gastrointestinal function recovery after laparoscopic 
+radical gastrectomy – a randomized controlled trial, European J. Integrat. Med. 26 (2019) 11–17. 
+[18] X. Yu, F. Zhang, B. Chen, The effect of TEAS on the quality of early recovery in patients undergoing gynecological laparoscopic surgery: a prospective, 
+randomized, placebo-controlled trial, Trials 21 (1) (2020) 43. 
+[19] X. Ni, Y. Xie, Q. Wang, H. Zhong, M. Chen, F. Wang, L. Xiong, Cardioprotective effect of transcutaneous electric acupoint stimulation in the pediatric cardiac 
+patients: a randomized controlled clinical trial, Paediatr. Anaesth. 22 (8) (2012) 805–811. 
+[20] L. Vimlati, F. Gilsanz, Z. Goldik, Quality and safety guidelines of postanaesthesia care: working Party on Post Anaesthesia Care (approved by the European Board 
+and Section of Anaesthesiology, Union Europ´eenne des M´edecins Sp´ecialistes), Eur. J. Anaesthesiol. 26 (9) (2009) 715–721. 
+[21] A. Zigmond, R. Snaith, The hospital anxiety and depression scale, Acta Psychiatr. Scand. 67 (6) (1983) 361–370. 
+[22] J.C. Ong, S. Suh, Diagnostic tools for insomnia, in: Encyclopedia of Sleep, Edn., 2013, pp. 268–273. 
+[23] J. Kleif, I. Gogenur, Severity classification of the quality of recovery-15 score-An observational study, J. Surg. Res. 225 (2018) 101–107. 
+[24] M. Bennett, The LANSS Pain Scale: the Leeds assessment of neuropathic symptoms and signs, Pain 92 (2001) 147–157. 
+[25] H.G. Ruh´e, N.S. Mason, A.H. Schene, Mood is indirectly related to serotonin, norepinephrine and dopamine levels in humans: a meta-analysis of monoamine 
+depletion studies, Mol. Psychiatr. 12 (4) (2007) 331–359. 
+[26] N. Zisapel, New perspectives on the role of melatonin in human sleep, circadian rhythms and their regulation, Br. J. Pharmacol. 175 (16) (2018) 3190–3199. 
+[27] Q.Y. Li, H.Y. Xu, H.J. Yang, [Effect of proinflammatory factors TNF-α,IL-1β, IL-6 on neuropathic pain], Zhongguo Zhongyao Zazhi 42 (19) (2017) 3709–3712. 
+[28] D. Isoyama, E. Cordts, A. de Souza van Niewegen, W. de Almeida Pereira de Carvalho, S. Matsumura, C. Barbosa, Effect of acupuncture on symptoms of anxiety 
+in women undergoing in vitro fertilisation: a prospective randomised controlled study, Acupuncture in medicine, J. British Med. Acupunct. Society 30 (2) (2012) 
+85–88. 
+[29] A. Ali, A. Lindstrand, M. Sundberg, G. Flivik, Preoperative anxiety and depression correlate with dissatisfaction after total knee arthroplasty: a prospective 
+longitudinal cohort study of 186 patients, with 4-year follow-up, J. Arthroplasty 32 (3) (2017) 767–770. 
+[30] Xiaoye Lu, Bing Su, Discussion on acupoint selection rule of acupuncture treatment for anxiety disorder, Shanghai J. Acupunct. 37 (4) (2018) 474–479. 
+[31] H. Bae, H. Bae, B. Min, S. Cho, Efficacy of acupuncture in reducing preoperative anxiety: a meta-analysis, Evidence-based complementary and alternative 
+medicine, eCAM (2014), 850367. 
+[32] J. Han, L. Terenius, Neurochemical basis of acupuncture analgesia, Annu. Rev. Pharmacol. Toxicol. 22 (1982) 193–220. 
+[33] M. Cabýoglu, N. Ergene, U. Tan, The mechanism of acupuncture and clinical applications, Int. J. Neurosci. 116 (2) (2006) 115–125. 
+[34] M. Luo, B. Song, J. Zhu, Sleep disturbances after general anesthesia: current perspectives, Front. Neurol. 11 (2020) 629. 
+[35] A.J. Cronin, J.C. Keifer, M.F. Davies, T.S. King, E.O. Bixler, Melatonin secretion after surgery, Lancet 356 (9237) (2000) 1244–1245. 
+[36] X.Y. Guo, A.L. Luo, H.Z. Ren, T.H. Yie, Y.G. Huang, [Perioperative melatonin secretion rhyme in patients undergoing coronary artery bypass grafting surgery], 
+Zhongguo Yi Xue Ke Xue Yuan Xue Bao 25 (5) (2003) 594–598. 
+[37] B. Song, Y. Chang, Y. Li, J. Zhu, Effects of transcutaneous electrical acupoint stimulation on the postoperative sleep quality and pain of patients after video- 
+assisted thoracoscopic surgery: a prospective, randomized controlled trial, Nat. Sci. Sleep 12 (2020) 809–819. 
+Y. Hou et al. 
+
+
+=== PDF PAGE 10 ===
+Heliyon 9 (2023) e14423
+10
+[38] D. Spence, L. Kayumov, A. Chen, A. Lowe, U. Jain, M. Katzman, J. Shen, B. Perelman, C. Shapiro, Acupuncture increases nocturnal melatonin secretion and 
+reduces insomnia and anxiety: a preliminary report, J. Neuropsychiatry Clin. Neurosci. 16 (1) (2004) 19–28. 
+[39] J. Huang, H. Gao, Y. Cao, J. Zhou, Y. Ren, T. Xi, H. Gao, A. Wang, W. Zhou, [Effect of transcutaneous electrical acupoint stimulation on postoperative olfactory 
+memory disorder and plasma melatonin in patients with general anesthesia of sevoflurane], Zhongguo zhen jiu = Chinese acupuncture & moxibustion 40 (3) 
+(2020) 243–246. 
+[40] S. Huang, W. Peng, X. Tian, H. Liang, Z. Jia, T. Lo, M. He, Y. Feng, Effects of transcutaneous electrical acupoint stimulation at different frequencies on 
+perioperative anesthetic dosage, recovery, complications, and prognosis in video-assisted thoracic surgical lobectomy: a randomized, double-blinded, placebo- 
+controlled trial, J. Anesth. 31 (1) (2017) 58–65. 
+[41] H. Wang, Y. Xie, Q. Zhang, N. Xu, H. Zhong, H. Dong, L. Liu, T. Jiang, Q. Wang, L. Xiong, Transcutaneous electric acupoint stimulation reduces intra-operative 
+remifentanil consumption and alleviates postoperative side-effects in patients undergoing sinusotomy: a prospective, randomized, placebo-controlled trial, Br. J. 
+Anaesth. 112 (6) (2014) 1075–1082. 
+[42] C. Finnerty, N. Mabvuure, A. Ali, R. Kozar, D. Herndon, The surgically induced stress response, JPEN - J. Parenter. Enter. Nutr. 37 (2013) 21S–29S. 
+[43] H.E. Høgevold, T. Lyberg, H. K¨ahler, E. Haug, O. Reikerås, Changes in plasma IL-1beta, TNF-alpha and IL-6 after total hip replacement surgery in general or 
+regional anaesthesia, Cytokine 12 (7) (2000) 1156–1159. 
+Y. Hou et al. 

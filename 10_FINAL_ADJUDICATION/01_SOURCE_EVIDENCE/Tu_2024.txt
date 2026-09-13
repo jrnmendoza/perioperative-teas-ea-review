@@ -1,0 +1,843 @@
+
+=== PDF PAGE 1 ===
+Complementary Therapies in Clinical Practice 54 (2024) 101824
+Available online 23 December 2023
+1744-3881/© 2023 Elsevier Ltd. All rights reserved.
+Transcutaneous electrical acupoint stimulation for postoperative nausea 
+and vomiting in patients undergoing craniotomy: A randomized 
+controlled trial 
+Liang-dan Tu a, Peng-cheng Li a, Yu Zhao b, Rui-zhi Feng b, Jian-qin Lv b,* 
+a Department of Neurosurgery, West China Hospital, Sichuan University, Chengdu, China 
+b Department of Integrated Traditional and Western Medicine, West China Hospital, Sichuan University, Chengdu, China 
+A R T I C L E I N F O 
+Keywords: 
+Craniotomy 
+Postoperative nausea and vomiting 
+Transcutaneous electrical acupoint stimulation 
+A B S T R A C T 
+Background: The incidence of nausea and vomiting following craniotomy is high, and pericardium 6 (P6; Nei­
+guan) acupoint stimulation is an important strategy for treating postoperative nausea and vomiting (PONV). 
+Here, we aimed to evaluate the efficacy of transcutaneous electrical acupoint stimulation (TEAS) at P6 as an 
+adjunct to antiemetic drugs to prevent PONV after craniotomy. 
+Materials and methods: This randomized placebo-controlled trial enrolled 120 patients scheduled for craniotomy. 
+The enrolled patients were randomly assigned to a TEAS or sham TEAS group. The incidence of PONV, pain 
+score, and postoperative remedial treatment with antiemetics and analgesics at 0–2, 2–6, and 6–24 h after 
+craniotomy were assessed. 
+Results: The patient characteristics did not significantly differ between the two groups (P > 0.05). During 0–2 and 
+6–24 h after craniotomy, the incidence of vomiting was not significantly different between the two groups (P >
+0.05). During 2–6 h, the incidence of vomiting was higher in the sham TEAS group than in the TEAS group (29.3 
+% vs. 14.0 %, P = 0.047). During 0–2 and 2–6 h, the pain scores did not differ significantly between the two 
+groups (P > 0.05). During 6–24 h after craniotomy, the pain score was significantly higher in the sham TEAS 
+group than in the TEAS group (P = 0.001). The degree of nausea and proportion of patients requiring antiemetic 
+drugs were not significantly different between the two groups in each period (P > 0.05). 
+Conclusion: TEAS at P6 may reduce vomiting incidence and pain scores following craniotomy. 
+1. Introduction 
+The incidence of postoperative nausea and vomiting (PONV) 
+following craniotomy can reach as high as 55%–70 % [1]. Severe 
+vomiting after craniotomy may result in intracranial hematoma and 
+hemorrhage, consequently prolonging the hospital stay of patients and 
+reducing their satisfaction with the surgical procedure [2]. The patho­
+physiology of PONV is complex and largely unknown. However, a recent 
+study has suggested that PONV occurs via multiple peripheral and 
+central mechanisms mediated by various neurotransmitters and re­
+ceptors [3]. Different antiemetics, including serotonin receptor antag­
+onists, 
+glucocorticoids, 
+anticholinergics, 
+butyrophenones, 
+antihistamines, phenothiazines, and neurokinin 1 receptor antagonists, 
+are widely used in clinical practice for the pharmacological prophylaxis 
+and treatment of PONV [4]. However, some drugs have been reported to 
+cause adverse events (AEs), including excessive sedation, extrapyra­
+midal signs, hallucinations, dysphoria, and hypotension [5,6], which are 
+undesirable in postoperative neurological assessment following 
+craniotomy. 
+In addition to drug therapy, nonpharmacological approaches can be 
+employed for PONV prophylaxis. A commonly cited example is peri­
+cardium 6 (P6; Neiguan) acupoint stimulation. The fourth Consensus 
+Guidelines for the Management of PONV states that P6 stimulation 
+considerably reduces the risk of nausea and vomiting as well as the need 
+for rescue antiemetics compared with sham treatment (evidence A1). 
+According to these guidelines, P6 stimulation is an essential multimodal 
+preventive treatment method for PONV [4,7]. P6 stimulation has been 
+reported to exert antiemetic effects by regulating the excitability of the 
+* Corresponding author. 
+E-mail addresses: 1733548976@qq.com (L.-d. Tu), 16699411@qq.com (P.-c. Li), 10875153@qq.com (Y. Zhao), 405082466@qq.com (R.-z. Feng), lvjianqin@ 
+wchscu.cn (J.-q. Lv). 
+Contents lists available at ScienceDirect 
+Complementary Therapies in Clinical Practice 
+journal homepage: www.elsevier.com/locate/ctcp 
+https://doi.org/10.1016/j.ctcp.2023.101824 
+Received 1 February 2023; Received in revised form 15 December 2023; Accepted 15 December 2023 
+
+
+=== PDF PAGE 2 ===
+Complementary Therapies in Clinical Practice 54 (2024) 101824
+2
+autonomic nervous system (sympathetic and parasympathetic) [8] and 
+the release of substance P and motilin [9]. 
+With the development of enhanced recovery after surgery, emphasis 
+on refining the management of PONV according to the surgical site has 
+increased. However, the effectiveness and safety of P6 stimulation in 
+managing postcraniotomy PONV remain unknown [10]. Furthermore, 
+we previously reported that acupuncture at P6 can reduce vomiting 
+incidence and pain scores following craniotomy [11]. However, patients 
+have reported discomfort and pain associated with acupuncture 
+needling and expressed a desire for a more comfortable and painless 
+form of P6 stimulation; these needs are fulfilled by TEAS, which is a 
+painless stimulation method. A previous study has confirmed the 
+effectiveness of TEAS in preventing postcraniotomy vomiting [12]; in 
+this study, multiple acupoints were used, including Hegu and Zusanli, in 
+addition to TEAS at P6; however, the selection of numerous acupoints 
+for TEAS led to a complex operational method. With the development of 
+wearable devices, we hope to clarify the effectiveness of single-acupoint 
+stimulation at P6 for treating postcraniotomy vomiting. This will lay the 
+foundation for the future development of wearable stimulation devices 
+targeting the P6 acupoint. Thus, to evaluate the efficacy of TEAS at P6 as 
+an adjunct to antiemetic drugs for preventing PONV after craniotomy, 
+we compared the effects of TEAS at P6 and sham TEAS at P6 through a 
+prospective randomized placebo-controlled trial. 
+2. Materials and methods 
+2.1. Study design 
+This randomized blinded controlled trial was registered in the Chi­
+nese Clinical Trial Registry in 2013 (registration number: ChiCTR-TRC- 
+13003026). The study protocols were published in trials [13] and were 
+approved by the Ethics Review Board of West China Hospital, Sichuan 
+University (approval number: 2012249). 
+2.2. Study population 
+In this prospective randomized controlled trial, patients were 
+screened according to the inclusion and exclusion criteria. Patients were 
+recruited from the Department of Neurosurgery at the West China 
+Hospital, Sichuan University between October 2014 and September 
+2018. In total, 120 patients were recruited. 
+2.2.1. Inclusion criteria 
+Patients who fulfilled the following criteria were included: scheduled 
+for neurosurgery requiring opening of the cranium and dura, aged be­
+tween 18 and 70 years, American Society of Anesthesiologists physical 
+status classification of I or II, undergoing general anesthesia, no history 
+of PONV or motion sickness, no use of antiemetics and analgesia 24 h 
+before surgery, willingness to participate, no prior experience with TEAS 
+and signed an informed consent form. 
+2.2.2. Exclusion criteria 
+Participants who met any of the following criteria were excluded: 
+vomiting 24 h before surgery; pregnant or lactating women; drug or 
+alcohol abusers; recipients of chemotherapy or radiation therapy during 
+the previous 7 days; having a cardiac pacemaker fitted; in the 
+menstruating phase of the menstrual cycle; refusal to accept acupunc­
+ture treatment; mental disorder; history of epilepsy and still on antiep­
+ileptic medicine; unconscious before the surgery; cannot communicate 
+normally; undergoing ventricle or brainstem surgery; poorly controlled 
+diabetes mellitus (fasting plasma glucose greater than 12 mmol/L); and 
+serious systemic disease (acquired immune deficiency syndrome or 
+sepsis). 
+2.2.3. Withdrawal criteria 
+The withdrawal criteria for the patients were as follows: death; 
+waking more than 2 h after surgery; tracheal intubation; persistent 
+coma; cognitive impairment; vomiting caused by intracranial hyper­
+tension; and further surgery or transfer to the intensive care unit due to 
+disease aggravation. 
+2.3. Anesthesia and postoperative analgesia 
+All patients were administered general anesthesia with endotracheal 
+intubation. Blood pressure, heart rate, pulse oximetry, and end-tidal CO2 
+levels were routinely monitored. Thirty minutes prior to the end of the 
+operation, the patients were treated with prophylactic antiemetic drugs 
+(ondansetron injection 8 mg), according to the doctor’s advice. After 
+surgery, the patients were continually monitored in the post-anesthesia 
+care unit with continued ventilator support. The tracheal tube was 
+removed after the patient gained consciousness. The time from anes­
+thesia induction to tube removal was recorded. 
+After the participants returned to the neurosurgery ward, the doctors 
+assessed their severity of PONV and pain to determine whether anti­
+emetic and analgesic medications were needed. The patients with dif­
+ficulty enduring nausea and vomiting received an intramuscular 
+injection of 10 mg metoclopramide. Patients with a visual analog scale 
+(VAS) pain score of >6 received an intramuscular injection of 10 mg 
+tramadol. The degree of PONV and postoperative pain was recorded at 
+the time of medication administration. 
+2.4. Randomization and blinding 
+Patients were randomized to either the TEAS or sham TEAS group 
+using a computer-generated random number list at a ratio of 1:1. Allo­
+cation concealment was achieved by enclosing the assignments in 
+sealed, opaque, sequentially numbered envelopes, which were opened 
+only after confirming eligibility and providing informed consent. Patient 
+allocation was performed by a clinical assistant who was trained with 
+the institutional review board policies. All patients were unaware of the 
+group to which they were assigned. Outcome assessors, data collectors, 
+and statisticians were also blinded to the group allocation. 
+2.5. Interventions 
+In the TEAS group, after transferring the patients from the operating 
+room to the anesthesia resuscitation room, the intervention was 
+administered as the patient gained consciousness. The patients’ fore­
+arms were cleaned with 75 % alcohol swabs, and self-adhesive elec­
+trodes were placed bilaterally over the P6 acupoints. The SDZ-V nerve 
+and muscle stimulators (Hwato, Jiangsu, China) were used for TEAS. 
+The stimulator lasted for 30 min with a dilatational wave of 2/100 Hz, 
+and the intensity varied until the patients continuously felt a de qi 
+sensation [14,15]. At the end of the experiment, all self-adhesive elec­
+trodes were removed. 
+In the sham TEAS group, the patients had self-adhesive electrodes 
+placed bilaterally over the P6 acupoints and connected to the SDZ-V 
+nerve and muscle stimulators (Hwato, Jiangsu, China) for 30 min. Un­
+like the TEAS group, special wires were used in the sham TEAS group; 
+the copper wires within the unique wire were deliberately severed to 
+prevent the generation of electrical stimulation when activating the 
+stimulators. However, the stimulators still exhibited the same opera­
+tional power indicator and emitted the same sound. To ensure that pa­
+tients were blinded to the interventions, each patient was told that a 
+special acupoint stimulation, which cannot be felt via human sensory 
+perception, was used for the treatment. After 30 min, all self-adhesive 
+electrodes were removed, similar to that in the TEAS group (Table 1). 
+2.6. Measures 
+The entire study period was 24 h after surgery. A separate research 
+nurse who was not involved in patient management recorded the 
+L.-d. Tu et al. 
+
+
+=== PDF PAGE 3 ===
+Complementary Therapies in Clinical Practice 54 (2024) 101824
+3
+anesthesia time, surgery time, endotracheal intubation time, de­
+mographic characteristics, and preoperative data for each patient. The 
+demographic characteristics and preoperative data included age, sex, 
+race, weight, and smoking history. Another blinded observer (nurse) 
+recorded the postoperative data, which included any episodes of vom­
+iting (based on vomiting action or vomiting in the mouth) at 0–2 h, 2–6 
+h, and 6–24 h postoperatively. The incidence of vomiting within 24 h 
+after craniotomy in the two groups was the main outcome to be 
+measured. The observers evaluated the patients’ degree of nausea using 
+the WHO’s PONV fourth-class rating scale: 0) no nausea at all; 1) mild 
+nausea or abdominal discomfort without vomiting; 2) evident nausea 
+without vomiting; and 3) extreme nausea and vomiting containing 
+gastric juice, which is uncontrolled by medicine. The pain score was 
+measured using a standard VAS at 0–2, 2–6, and 6–24 h after crani­
+otomy. The total rescue antiemetic and analgesic dosages 0–24 h after 
+craniotomy were recorded. The reasons for withdrawal and TEAS 
+adverse events, including malignant arrhythmia, abnormal blood pres­
+sure fluctuations, fainting, serious pain, and local infection, were 
+recorded. 
+2.7. Sample size calculation and statistical analyses 
+A previous study reported a PONV incidence of 47 % in patients who 
+had undergone craniotomy with general anesthesia [16]. We hypothe­
+sized that TEAS at P6 would reduce the incidence of PONV by 30 % 
+compared with that in the sham TEAS group. To obtain statistical sig­
+nificance and power of 0.05 and 90 %, respectively, 49 participants were 
+required per group (PASS 15.0). With an estimated dropout rate of 20 %, 
+we planned to include 60 participants per group. 
+All data inputs and statistical analyses were performed at the 
+Table 1 
+Details of interventions. 
+Items 
+TEAS group (n = 57) 
+Sham TEAS group (n = 58) 
+Acupoint 
+pericardium 6 
+pericardium 6 
+Stimulation device 
+SDZ-V nerve and muscle 
+stimulator 
+SDZ-V nerve and muscle 
+stimulator 
+Stimulation time 
+30 min 
+30 min 
+Stimulation frequency 
+display 
+2/100 Hz 
+2/100 Hz 
+Countdown alarm 
+sound 
+yes 
+yes 
+Actual current outuput 
+yes 
+no 
+De qi sensation 
+yes 
+no 
+TEAS, transcutaneous electrical acupoint stimulation. 
+Fig. 1. CONSORT flow diagram. 
+L.-d. Tu et al. 
+
+
+=== PDF PAGE 4 ===
+Complementary Therapies in Clinical Practice 54 (2024) 101824
+4
+Department of Epidemiology and Hygienic Statistics of the West China 
+Hospital of Sichuan University using SPSS 19.0. Data were checked for 
+normality using Kolmogorov–Smirnov test. Normally distributed vari­
+ables were presented as mean ± standard deviation and were analyzed 
+using two-sample t-test. Non-normally distributed variables were 
+described as median (interquartile range [IQR]) and were compared 
+using Mann–Whitney U test. A P-value of <0.05 indicated statistical 
+significance. 
+3. Results 
+3.1. Patient characteristics and surgical details 
+In total, 120 patients were enrolled in the present study, and 5 pa­
+tients (3 in the TEAS group and 2 in the sham TEAS group) were 
+excluded because they met the withdrawal criteria. Three of these five 
+patients had persistent coma, one exhibited cognitive impairment, and 
+one demonstrated intracranial hypertension-induced vomiting (Fig. 1). 
+Finally, data from 115 patients were analyzed. The patient character­
+istics did not differ significantly between the TEAS and sham TEAS 
+groups (P > 0.05; Table 2). 
+3.2. Comparison of PONV between the two groups 
+Within 0–2 h following craniotomy, 4 patients (7 %) in the TEAS 
+group and 10 patients (17.2 %) in the sham TEAS group experienced 
+vomiting. However, the difference in vomiting incidence between the 
+two groups was not statistically significant (P = 0.095). The vomiting 
+incidence at 2–6 h following craniotomy was significantly higher in the 
+sham TEAS group (17 patients [29.3 %]) than in the TEAS group (8 
+patients [14.0 %]) (P = 0.47). During 6–24 h following craniotomy, 11 
+patients (19.3 %) in the TEAS group and 15 patients (25.9 %) in the 
+sham TEAS group experienced vomiting; the incidence of vomiting was 
+not significantly different between the two groups (P = 0.405). During 
+the postoperative periods of 0–2, 2–6, and 6–24 h, both the groups 
+exhibited different degrees of nausea; however, the difference in each 
+period was not statistically significant (P > 0.05; Table 3). 
+3.3. Comparison of antiemetic and analgesic usage rates and pain scores 
+between the two groups 
+At 0–6 h following craniotomy, no patient required antiemetic drugs 
+in either group; however, the number of patients who required anti­
+emetic drugs increased between 6 and 24 h following craniotomy. One 
+patient in each group required antiemetic medication. No significant 
+difference was observed in the proportion of patients requiring anti­
+emetic drugs between the two groups (P > 0.05). At 6–24 h following 
+craniotomy, three patients in the TEAS group and six patients in the 
+sham TEAS group received tramadol; there was no significant difference 
+in the tramadol usage rate between the two groups (P = 0.315; Table 4). 
+Moreover, there was no significant difference in the VAS pain scores 
+between the two groups at 0–2 and 2–6 h following craniotomy. 
+Nonetheless, at 6–24 h following craniotomy, the pain score was 
+significantly higher in the sham TEAS group than in the TEAS group (P 
+= 0.001; Table 5). AEs were not observed in any patient during the 0–24- 
+h testing period. 
+4. Discussion 
+The main finding of the present study was that TEAS at P6 may 
+prevent vomiting and reduce pain scores but it may not reduce the de­
+gree of nausea or the dosage of antiemetic drugs following craniotomy. 
+We found that TEAS at P6 did not reduce vomiting incidence at 0–2 
+Table 2 
+Demographic data and surgical characteristics. 
+Characteristic 
+TEAS group 
+(n = 57) 
+Sham TEAS 
+group (n = 58) 
+Statistics 
+P- 
+value 
+Age (mean ± SD, 
+years) 
+44.77 ±
+15.74 
+49.24 ± 14.02 
+t =
+−1.609a 
+0.102 
+Height (mean ± SD, 
+cm) 
+162.75 ±
+7.49 
+162.64 ± 8.32 
+t = 0.079a 
+0.917 
+Weight (mean ± SD, 
+kg) 
+61.42 ±
+10.09 
+58.19 ± 8.93 
+t = 1.820a 
+0.069 
+Anesthesia time 
+(mean ± SD, min) 
+246.93 ±
+95.46 
+262.10 ±
+129.88 
+t =
+−0.713a 
+0.958 
+Operation time (mean 
+± SD, min) 
+166.49 ±
+88.77 
+176.64 ±
+103.85 
+t =
+−0.563a 
+0.801 
+Dose of sufentanil 
+(mean ± SD, ug) 
+28.99 ±
+10.78 
+28.16 ± 13.23 
+t = 0.368a 
+0.350 
+Infusion amount 
+(mean ± SD, ml) 
+2348.25 ±
+1283.72 
+2551.72 ±
+1227.61 
+t =
+−0.869a 
+0.378 
+Gender 
+χ2 =
+0.010 b 
+0.920 
+female 
+31 (54.4) 
+31 (53.4) 
+male 
+26 (45.6) 
+27 (46.6) 
+History of smoking 
+χ2 =
+0.270 b 
+0.603 
+no 
+45 (78.9) 
+48 (82.8) 
+yes 
+12 (21.1) 
+10 (17.2) 
+History of surgery 
+χ2 =
+2.312 b 
+0.128 
+no 
+42 (73.3) 
+35 (60.3) 
+yes 
+15 (26.3) 
+23 (39.7) 
+History of migraine 
+χ2 =
+0.708b 
+0.400 
+no 
+46 (80.7) 
+43 (74.1) 
+yes 
+11 (19.3) 
+15 (25.9) 
+History of opioid use 
+χ2 =
+2.582 b 
+0.108 
+no 
+45 (78.9) 
+38 (65.5) 
+yes 
+12 (21.1) 
+20 (34.5) 
+History of motion 
+sickness 
+χ2 =
+0.003 b 
+0.954 
+no 
+41 (71.9) 
+42 (72.4) 
+yes 
+16 (28.1) 
+16 (27.6) 
+Type of surgery 
+χ2 =
+1.769b 
+0.423 
+supratentorial 
+35 (61.4) 
+41 (70.7) 
+subtentorial 
+19 (33.3) 
+16 (27.6) 
+both 
+3 (5.7) 
+1 (1.7) 
+SD, standard deviation; TEAS, transcutaneous electrical acupoint stimulation. 
+a Two-sample t-test. 
+b Chi-squared test; n, number. 
+Table 3 
+Comparison of PONV between two groups. 
+Outcome 
+TEAS group 
+(n = 57) 
+Sham TEAS 
+group (n = 58) 
+Statistics 
+P- 
+value 
+Vomiting within 0–2 h 
+after operation 
+χ2 =
+2.81a 
+0.095 
+no 
+53 (93.0) 
+48 (82.8) 
+yes 
+4 (7.0) 
+10 (17.2) 
+Vomiting within 2–6 h 
+after operation 
+χ2 =
+3.94a 
+0.047 
+no 
+49 (86.0) 
+41 (70.7) 
+yes 
+8 (14.0) 
+17 (29.3) 
+Vomiting within 6–24 
+h after operation 
+χ2 =
+0.71a 
+0.405 
+no 
+46 (80.7) 
+43 (74.1) 
+yes 
+11 (19.3) 
+15 (25.9) 
+Score for nausea 0–2 h 
+after operation 
+0 (0–1) 
+0 (0–1) 
+z =
+0.671b 
+0.502 
+Score for nausea 2–6 h 
+after operation 
+0 (0–1) 
+0 (0–2) 
+z =
+1.453b 
+0.146 
+Score for nausea 6–24 
+h after operation 
+0 (0–1) 
+0 (0–1) 
+z =
+0.563b 
+0.574 
+PONV, postoperative nausea and vomiting; TEAS, transcutaneous electrical 
+acupoint stimulation. 
+a Chi-squared test. 
+b Mann–Whitney U test; h, hours; n, number. 
+L.-d. Tu et al. 
+
+
+=== PDF PAGE 5 ===
+Complementary Therapies in Clinical Practice 54 (2024) 101824
+5
+and 6–24 h following craniotomy; however, it reduced vomiting inci­
+dence at 2–6 h following craniotomy; this finding may be related to the 
+highest incidence of nausea and vomiting observed at 2–6 h following 
+craniotomy. In a previous study, the highest incidence of vomiting was 
+observed at 2–6 h following craniotomy [17], which is similar to that 
+observed in the present study. In addition, in the present study, the 
+vomiting incidence was 29.3 % in the sham TEAS group and 14.0 % in 
+the TEAS group at 2–6 h following craniotomy. However, the vomiting 
+incidence at 6–24 h following craniotomy was still lower in the TEAS 
+group than in the sham TEAS group, although the difference was not 
+statistically significant. These results are consistent with the findings of 
+previous studies [9,18,19]. Moreover, a previous meta-analysis [20] 
+reported that TEAS can be reasonably incorporated into a multimodal 
+management approach to prevent PONV. Our findings were inconsistent 
+with those of Liu et al. who found no difference in the incidence and 
+severity of PONV after using TEAS [12]. We hypothesized that this lack 
+of effect could be due to the different acupoints used in TEAS. They used 
+Hegu (LI4) and Waiguan (TE5), Jinmen (BL63) and Taichong (LR3), 
+Zusanli (ST36) and Qiuxu (GB 40), Fengchi (GB20) and Tianzhu (BL10), 
+and Cuanzhu (BL2) and Yuyao (EX-HN4) on the craniotomy side; 
+however, these acupoints are not usually used to treat nausea and 
+vomiting [12]. Many acupoints, including the P6 site, have been 
+considerably investigated for their postoperative antiemetic effects and 
+have demonstrated efficacy in other surgeries [21]. 
+The present study found that TEAS at P6 did not reduce the degree of 
+nausea in patients after craniotomy, which is consistent with the results 
+of a previous study [22]. However, some previous studies have reported 
+contrasting results, i.e., they have reported that the degree of nausea 
+decreased after TEAS [23,24]. This discrepancy in the results may be 
+attributed 
+to 
+the 
+inclusion 
+of 
+different 
+participants. 
+The 
+abovementioned studies included patients who underwent gynecologi­
+cal surgery, and all of them were female, whereas in the present study, 
+we included participants who underwent craniotomy, with both males 
+and females being included. As we know, sex is an independent risk 
+factor for the incidence and extent of PONV [4]. TEAS at P6 did not 
+reduce the dosage of antiemetic drugs administered to patients 
+following craniotomy; however, we found that the proportion of pa­
+tients reusing antiemetic drugs was low; in fact, only one patient in our 
+study required metoclopramide administration within 24 h after 
+craniotomy. 
+Intraoperative and postoperative analgesia drug use can affect the 
+incidence of PONV. In the present study, no significant difference in 
+intraoperative analgesic dosage was observed between the two groups. 
+At 6 h after craniotomy, if the VAS pain score of the patient was >6, 10 
+mg tramadol was administered as advised by a neurosurgeon. The pro­
+portion of patients who received tramadol was compared between the 
+two groups, and no difference was observed between the two groups at 
+6–24 h following craniotomy. 
+In the present study, no statistically significant difference in the pain 
+scores was observed between the two groups at 0–2 and 2–6 h following 
+craniotomy. We speculate that this result was related to the plasma half- 
+life of intraoperative analgesics. After 6 h, the analgesic effect of a drug 
+diminishes because of drug metabolism. In contrast, the pain scores were 
+lower in the TEAS group than in the sham TEAS group at 6–24 h after 
+craniotomy. These results indicated that TEAS at P6 reduced the post­
+operative pain at 6–24 h following craniotomy. This result was consis­
+tent with that of Liu et al. [12]. They found that TEAS may reduce pain 
+scores following craniotomy on postoperative day 1; nevertheless, they 
+did not focus on different time points in a 24-h period. In addition, 
+previous studies have demonstrated that TEAS can reduce postoperative 
+pain following gastric and colorectal surgeries [9,25]. 
+The antiemetic effect of acupuncture is the result of increased 
+endorphin and adrenocortical hormone production in the brain, which 
+inhibits the vomiting center through the chemoreceptor-triggering areas 
+[26]. Although research on PONV prevention and treatment based on P6 
+stimulation has progressed, the specific physiological and biochemical 
+mechanisms that occur following craniotomy need to be further 
+investigated. 
+Our study has two limitations. First, we did not investigate the 
+mechanism by which TEAS at P6 prevents vomiting following crani­
+otomy. Second, we conducted only one session of stimulation and did 
+not compare multiple stimulations following craniotomy. In the future, 
+we hope to conduct a multicenter study involving more ethnic groups to 
+validate the findings of the present study. 
+5. Conclusion 
+TEAS at P6 may reduce vomiting incidence and pain scores following 
+craniotomy; however, the underlying mechanism must be elucidated in 
+the future. 
+Funding information 
+This study was supported by the National Science Fund for Young 
+Scholars (No: 82304958) and the West China Nursing Discipline 
+Development Special Fund Project of Sichuan University (grant number: 
+HXHL19017). The funding bodies did not play a role in the study design, 
+data collection, analysis, interpretation of the results, or manuscript 
+preparation. 
+Data availability 
+The datasets used and/or analyzed are available from the corre­
+sponding author upon reasonable request. 
+Table 4 
+Comparison of antiemetic and analgetic use between two groups. 
+Antiemetic and analgetic use 
+in different periods after 
+operation 
+TEAS 
+group (n 
+= 57) 
+Sham TEAS 
+group (n =
+58) 
+Statistics 
+P- 
+value 
+Use of metoclopramide 
+within 0–2 h 
+NA 
+1.000 
+no 
+57 (100.0) 
+58 (100.0) 
+yes 
+0 (0.0) 
+0 (0.0) 
+Use of metoclopramide 
+within 2–6 h 
+NA 
+1.000 
+no 
+57 (100.0) 
+58 (100.0) 
+yes 
+0 (0.0) 
+0 (0.0) 
+Use of metoclopramide 
+within 6–24 h 
+χ2 =
+0.001a 
+0.990 
+no 
+56 (98.2) 
+57 (98.3) 
+yes 
+1 (1.8) 
+1 (1.7) 
+Use of tramadol within 6–24 
+h 
+χ2 =
+0.45a 
+0.315 
+no 
+54 (94.7) 
+52 (89.7) 
+yes 
+3 (5.3) 
+6 (10.3) 
+TEAS, transcutaneous electrical acupoint stimulation; NA, not applicable. 
+a Chi-squared test; h, hours; n, number. 
+Table 5 
+Comparison of VAS pain score between two groups. 
+Different periods 
+TEAS group (n 
+= 57) 
+Sham TEAS group 
+(n = 58) 
+Statistics 
+P- 
+value 
+0–2 h after 
+operation 
+2 (1–3) 
+3 (2–4) 
+z =
+1.692a 
+0.091 
+2–6 h after 
+operation 
+2 (1–3) 
+3 (2–3.25) 
+z =
+1.900a 
+0.057 
+6–24 h after 
+operation 
+2 (0.5–3) 
+4 (3–4) 
+z =
+4.007a 
+0.001 
+VAS, visual analog scale; TEAS, transcutaneous electrical acupoint stimulation. 
+a Mann–Whitney U test; h, hours; n, number. 
+L.-d. Tu et al. 
+
+
+=== PDF PAGE 6 ===
+Complementary Therapies in Clinical Practice 54 (2024) 101824
+6
+Declaration of competing interest 
+The authors declare no conflict of interest. 
+CRediT authorship contribution statement 
+Liang-dan Tu: Data curation, Conceptualization. Peng-cheng Li: 
+Investigation. Yu Zhao: Methodology. Rui-zhi Feng: Formal analysis, 
+Data curation. Jian-qin Lv: Writing – original draft, Project adminis­
+tration, Conceptualization. 
+Acknowledgements 
+We are thankful to all members of the Department of Neurosurgery, 
+West China Hospital, Sichuan University, for their support during this 
+study. 
+References 
+[1] K. Jangra, K. Kumari, N.B. Panda, N. Samagh, A. Luthra, Postoperative nausea and 
+vomiting in neurosurgical patients: current concepts and management, Neurol. 
+India 66 (4) (2018) 1117–1123, https://doi.org/10.4103/0028-3886.236970. 
+[2] A.A. Uribe, N. Stoicea, M. Echeverria-Villalobos, A.B. Todeschini, A. Esparza 
+Gutierrez, A.R. Folea, et al., Postoperative nausea and vomiting after craniotomy: 
+an evidence-based review of general considerations, risk factors, and management, 
+J. Neurosurg. Anesthesiol. 33 (3) (2021) 212–220, https://doi.org/10.1097/ 
+ANA.0000000000000667. 
+[3] C.C. Horn, W.J. Wallisch, G.E. Homanics, J.P. Williams, Pathophysiological and 
+neurochemical mechanisms of postoperative nausea and vomiting, Eur. J. 
+Pharmacol. 722 (2014) 55–66, https://doi.org/10.1016/j.ejphar.2013.10.037. 
+[4] T.J. Gan, K.G. Belani, S. Bergese, F. Chung, P. Diemunsch, A.S. Habib, et al., Fourth 
+consensus guidelines for the management of postoperative nausea and vomiting, 
+Anesth. Analg. 131 (2) (2020) 411–448, https://doi.org/10.1213/ 
+ANE.0000000000004833. 
+[5] Y. Chen, J. Chang, Anti-emetic drugs for prophylaxis of postoperative nausea and 
+vomiting after craniotomy: an updated systematic review and network meta- 
+analysis, Front. Med. 7 (2020) 40, https://doi.org/10.3389/fmed.2020.00040. 
+[6] J. Polderman, V. Farhang-Razi, S. van Dieren, P. Kranke, J.H. DeVries, M. 
+W. Hollmann, et al., Adverse side-effects of dexamethasone in surgical patients - an 
+abridged Cochrane systematic review, Anaesthesia 74 (7) (2019) 929–939, https:// 
+doi.org/10.1111/anae.14610. 
+[7] T.J. Gan, P. Diemunsch, A.S. Habib, A. Kovac, P. Kranke, T.A. Meyer, et al., 
+Consensus guidelines for the management of postoperative nausea and vomiting, 
+Anesth. Analg. 118 (1) (2014) 85–113, https://doi.org/10.1213/ 
+ANE.0000000000000002. 
+[8] S.T. Huang, G.Y. Chen, H.M. Lo, J.G. Lin, Y.S. Lee, C.D. Kuo, Increase in the vagal 
+modulation by acupuncture at neiguan point in the healthy subjects, Am. J. Chin. 
+Med. 33 (1) (2005) 157–164, https://doi.org/10.1142/S0192415X0500276X. 
+[9] W.J. Li, C. Gao, L.X. An, Y.W. Ji, F.S. Xue, Y. Du, Perioperative transcutaneous 
+electrical acupoint stimulation for improving postoperative gastrointestinal 
+function: a randomized controlled trial, J Integr Med 19 (3) (2021) 211–218, 
+https://doi.org/10.1016/j.joim.2021.01.005. 
+[10] D. Lu, Y. Wang, T. Zhao, B. Liu, L. Ye, L. Zhao, et al., Successful implementation of 
+an enhanced recovery after surgery (eras) protocol reduces nausea and vomiting 
+after infratentorial craniotomy for tumour resection: a randomized controlled trial, 
+BMC Neurol. 20 (1) (2020) 150, https://doi.org/10.1186/s12883-020-01699-z. 
+[11] J.Q. Lv, P.C. Li, L. Zhou, W.F. Tang, N. Li, Acupuncture at the P6 acupoint to 
+prevent postoperative pain after craniotomy: a randomized, placebo-controlled 
+study, Evid Based Complement Alternat Med 2021 (2021), 6619855, https://doi. 
+org/10.1155/2021/6619855. 
+[12] X. Liu, S. Li, B. Wang, L. An, X. Ren, H. Wu, Intraoperative and postoperative 
+anaesthetic and analgesic effect of multipoint transcutaneous electrical 
+acupuncture stimulation combined with sufentanil anaesthesia in patients 
+undergoing supratentorial craniotomy, Acupunct. Med. 33 (4) (2015) 270–276, 
+https://doi.org/10.1136/acupmed-2014-010749. 
+[13] J.Q. Lv, R.Z. Feng, N. Li, P6 acupoint stimulation for prevention of postoperative 
+nausea and vomiting in patients undergoing craniotomy: study protocol for a 
+randomized controlled trial, Trials 14 (2013) 153, https://doi.org/10.1186/1745- 
+6215-14-153. 
+[14] J.S. Han, Acupuncture analgesia: areas of consensus and controversy, Pain 152 (3 
+Suppl) (2011) S41–S48, https://doi.org/10.1016/j.pain.2010.10.012. 
+[15] Anesthesia Professional Committee of Chinese Association of Integrated 
+Traditional Chinese and Western Medicine, Expert guidance on the prevention and 
+treatment of postoperative nausea and vomiting by acupoint stimulation, J. Clin. 
+Anesth. 35 (6) (2019) 596–599, https://doi.org/10.12089/jca.2019.06.018 (in 
+Chinese). 
+[16] B. Latz, C. Mordhorst, T. Kerz, A. Schmidt, A. Schneider, G. Wisser, et al., 
+Postoperative nausea and vomiting in patients after craniotomy: incidence and risk 
+factors, J. Neurosurg. 114 (2) (2011) 491–496, https://doi.org/10.3171/2010.9. 
+JNS10151. 
+[17] J. Atsuta, S. Inoue, Y. Tanaka, K. Abe, H. Nakase, M. Kawaguchi, Fosaprepitant 
+versus droperidol for prevention of PONV in craniotomy: a randomized double- 
+blind study, J. Anesth. 31 (1) (2017) 82–88, https://doi.org/10.1007/s00540-016- 
+2267-1. 
+[18] A. Li-Xin, C. Xue, R. Xiu-Jun, W. Hai-Feng, Electro-acupuncture decreases 
+postoperative pain and improves recovery in patients undergoing a supratentorial 
+craniotomy, Am. J. Chin. Med. 42 (5) (2014) 1099–1109, https://doi.org/ 
+10.1142/S0192415X14500682. 
+[19] W. Gao, L. Zhang, X. Han, L. Wei, J. Fang, X. Zhang, et al., Transcutaneous 
+electrical acupoint stimulation decreases the incidence of postoperative nausea and 
+vomiting after laparoscopic non-gastrointestinal surgery: a multi-center 
+randomized controlled trial, Front. Med. 9 (2022), 766244, https://doi.org/ 
+10.3389/fmed.2022.766244. 
+[20] J. Chen, Q. Tu, S. Miao, Z. Zhou, S. Hu, Transcutaneous electrical acupoint 
+stimulation for preventing postoperative nausea and vomiting after general 
+anesthesia: a meta-analysis of randomized controlled trials, Int. J. Surg. 73 (2020) 
+57–64, https://doi.org/10.1016/j.ijsu.2019.10.036. 
+[21] T.I. Usichenko, T. Hesse, Appropriate timing and intensity of PC6 stimulation for 
+the prevention of postoperative nausea and vomiting, Acupunct. Med. 34 (1) 
+(2016) 70–71, https://doi.org/10.1136/acupmed-2015-010926. 
+[22] I. Nilsson, A. Karlsson, L. Lindgren, T. Bergenheim, L.O. Koskinen, U. Nilsson, The 
+efficacy of P6 acupressure with sea-band in reducing postoperative nausea and 
+vomiting in patients undergoing craniotomy: a randomized, double-blinded, 
+placebo-controlled study, J. Neurosurg. Anesthesiol. 27 (1) (2015) 42–50, https:// 
+doi.org/10.1097/ANA.0000000000000089. 
+[23] Y. Zhang, Y. Li, F. Ji, K. Zhang, Y. Lou, H. Xu, Transcutaneous electrical acupoint 
+stimulation versus dexamethasone for prophylaxis of postoperative nausea and 
+vomiting in breast surgery: a non-inferiority randomized controlled trial, Surgery 
+174 (4) (2023) 787–793, https://doi.org/10.1016/j.surg.2023.06.014. 
+[24] X.Y. Yang, J. Xiao, Y.H. Chen, Z.T. Wang, H.L. Wang, D.H. He, et al., 
+Dexamethasone alone vs in combination with transcutaneous electrical acupoint 
+stimulation or tropisetron for prevention of postoperative nausea and vomiting in 
+gynaecological patients undergoing laparoscopic surgery, Br. J. Anaesth. 115 (6) 
+(2015) 883–889, https://doi.org/10.1093/bja/aev352. 
+[25] D. Meng, Y. Mao, Q.M. Song, C.C. Yan, Q.Y. Zhao, M. Yang, et al., Efficacy and 
+safety of transcutaneous electrical acupoint stimulation (TEAS) for postoperative 
+pain in laparoscopy: a systematic review and meta-analysis of randomized 
+controlled trials, Evid Based Complement Alternat Med 2022 (2022), 9922879, 
+https://doi.org/10.1155/2022/9922879. 
+[26] L. Bai, X. Niu, Z. Liu, Z. Chen, X. Wang, C. Sun, et al., The role of insula-cerebellum 
+connection underlying aversive regulation with acupuncture, Mol. Pain 14 (2018), 
+1744806918783457, https://doi.org/10.1177/1744806918783457. 
+L.-d. Tu et al. 

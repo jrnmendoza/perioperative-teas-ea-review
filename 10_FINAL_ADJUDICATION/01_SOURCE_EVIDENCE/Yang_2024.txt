@@ -1,0 +1,724 @@
+
+=== PDF PAGE 1 ===
+Explore 20 (2024) 450–455
+Available online 14 November 2023
+1550-8307/© 2023 Elsevier Inc. All rights reserved.
+Effects of perioperative electroacupuncture on postoperative 
+gastrointestinal recovery after thoracoscopic lung surgery 
+Jie Yang a, Libing Huang a,*, Juan Zhu a, Siying Liu a, Fangbing Ji a, Weiqian Tian a, Zhen Zheng b, 
+Man Zheng a,* 
+a Department of Anesthesiology, Affiliated Hospital of Nanjing University of Traditional Chinese Medicine, Hanzhong Road 155, Nanjing 210029, China 
+b Discipline of Chinese Medicine, School of Health and Biomedical Sciences, RMIT University, PO BOX 71, Bundoora, VIC 3083, Australia 
+A R T I C L E I N F O 
+Keywords: 
+Electroacupuncture 
+Postoperative ileus 
+Enhanced recovery 
+Thoracic surgery 
+A B S T R A C T 
+Objective: To study whether perioperative electroacupuncture (EA) can improve postoperative gastrointestinal 
+recovery in patients receiving thoracoscopic lung surgery. 
+Methods: This study was a single-center, prospective, randomized open-label trial. 180 patients who underwent 
+video-assisted thoracoscopic segmentectomy or lobectomy were randomized to EA group (three sessions, 24 h 
+prior to surgery, postoperative 4 h and 24 h) or usual care group (UC group). The primary outcomes were time to 
+first flatus and defecation. Secondary outcomes included incidence and degree of abdominal distention, post­
+operative nausea and vomiting (PONV) and pain scores within 72 h after surgery, postoperative morphine use, 
+time to ambulation, and length of hospital stay. 
+Results: Time to first flatus (15.4 ± 3.2 h vs. 17.0 ± 3.7 h, P = 0.004) and time to first defecation (75.9 ± 7.9 vs. 
+79.7 ± 8.1 h, P = 0.002) in the EA group were significantly shorter than the UC group. The incidences of 
+abdominal distension and PONV postoperative 24 h were significantly reduced in the EA group (P < 0.05). There 
+was no difference in postoperative pain intensity, morphine use, time to ambulation, and length of hospital stay 
+between the two groups (P>0.05). 
+Conclusion: Electroacupuncture is a simple intervention for accelerating postoperative gastrointestinal recovery 
+and may be considered as an adjunct strategy in enhanced recovery protocols in thoracoscopic lung surgery. 
+Video-assisted thoracoscopic surgery (VATS) combined with the 
+Enhanced Recovery after Surgery (ERAS) has been shown to be associ­
+ated with short hospital stay and a quick and safe return to normal ac­
+tivity1. Opioid sparing multimodal analgesia, minimally invasive 
+surgery, fewer tubes and intravenous lines are important components of 
+enhanced recovery protocols. Despite these efforts, many patients still 
+suffer transient impairment of gastrointestinal motility after thoracic 
+surgery, which compromises postoperative recovery2. Nearly one third 
+of patients reported that their daily life was affected by constipation 
+after discharge, and constipation is often an overlooked aspect of patient 
+care3. In our previous follow-up, gastrointestinal dysfunction after 
+thoracic surgery was common, which was uncomfortable for patients, 
+and affected postoperative quality of life4. From this perspective, 
+reducing duration of gastrointestinal dysfunction is regarded as an 
+essential part of the ERAS protocols. 
+Postoperative ileus (POI), as a clinical manifestation of impairment 
+in gastrointestinal motility following surgery, is characterized by pain, 
+transient postoperative nausea and vomiting (PONV), inability to pass 
+flatus or stool and abdominal distension5–7. POI is highly inconvenient, 
+embarrassing and uncomfortable for patients, and is closely related to 
+poor quality of life and increased healthcare cost6,7. A retrospective 
+study conducted on participants undergoing thoracic surgery showed 
+that more than 25 % of participants suffered from varied levels of 
+postoperative constipation within 30 days after surgery2. Delayed 
+gastrointestinal motility was observed both on the 1st and 3rd post­
+operative days regardless of the postoperative analgesic technique 
+used2. The precise mechanism and cause of POI remains unclear. Factors 
+associated with the development of POI may include inflammation 
+response induced by surgery and anesthesia, long duration of surgery, 
+hemorrhage, activated sympathetic tone, systemic opioid analgesia, 
+mental status and bowel edema5,8. Furthermore, changes in normal diet, 
+less immobilization and unfamiliarity with surroundings can also lead to 
+changes in defecation patterns3. Due to the complex etiological factors 
+of POI, there remains room for improvement in the prevention and 
+* Corresponding authors. 
+E-mail addresses: huanglibingys@126.com (L. Huang), man_zheng@sina.com (M. Zheng). 
+Contents lists available at ScienceDirect 
+EXPLORE 
+journal homepage: www.elsevier.com/locate/jsch 
+https://doi.org/10.1016/j.explore.2023.11.004 
+Received 10 January 2023; Received in revised form 5 July 2023; Accepted 12 November 2023 
+
+
+=== PDF PAGE 2 ===
+EXPLORE 20 (2024) 450–455
+451
+treatment of POI. 
+Many strategies have been proposed to improve POI, such as pre­
+operative carbohydrate loading, early postoperative feeding, fluid re­
+striction and minimally invasive surgery, neostigmine, laxatives, 
+erythromycin, naloxone, metoclopramide, chewing gum and prokinetic 
+agents9,10. However, none offer a convincing benefit, nor are they free 
+from side effects. Acupuncture, a well-accepted potential alternative 
+therapy, can offer certain beneficial effects, such as alleviating preop­
+erative anxiety and reducing postoperative pain and postoperative 
+nausea and vomiting (PONV) 11–13. Electroacupuncture (EA), which is 
+adding electrical stimulation to the common manual needling, has 
+recently been used as a treatment option for accelerating the recovery of 
+gastrointestinal function after several types of abdominal surgery14–16. 
+Systemic review concluded that EA was a safe and effective treatment 
+for POI after abdominal surgery17. 
+Few well randomized trials have assessed the effectiveness of EA on 
+gastrointestinal function in patients undergoing thoracoscopic surgery. 
+This study aimed to evaluate the effect of EA on gastrointestinal re­
+covery in patients who underwent minimally invasive thoracic lung 
+surgery. 
+Patients and methods 
+This study was approved and audited by Ethics Committee of Jiangsu 
+Province Hospital of Chinese Medicine, and was registered in the Chi­
+nese Clinical Trial Registry (ChiCTR1900024840). A single-center, 
+prospective, randomized study was conducted on patients who under­
+went thoracoscopic lung surgery from September 1, 2019 to October 20, 
+2020. Patients were provided by the principal investigator with details 
+regarding the assessment procedure, and gave informed written consent 
+before their scheduled surgery. 
+Selection criteria 
+Inclusion criteria were patients scheduled for elective video-assisted 
+thoracoscopic lobectomy or segmental resection surgery, age older than 
+18 years, American Society of Anesthesiologists grade I–II, and will­
+ingness to sign the informed consent. Exclusion criteria were as follows: 
+patients with severe systemic disease, such as cardiovascular, hepatic, or 
+renal abnormalities before operation; patients with cognitive dysfunc­
+tion, psychological disorder; history of prior esophageal or gastric sur­
+gery; history of EA treatment or allergic to acupuncture needles, 
+pregnant or breastfeeding women; use of electrical stimulation devices 
+(pacemaker or implantable defibrillator) severe infection or surgery 
+around the local site of needling, chronic opioid use, conversion to open 
+surgery, failure for paravertebral block (PVB). 
+Randomization and blinding 
+Patients were randomly assigned to either usual care(UC) or EA 
+group by computer-generated codes and sequentially numbered, opaque 
+envelopes. Given the characteristic of EA, the acupuncturist and patients 
+were aware of the treatment allocation. Nevertheless, anesthetists, as­
+sessors, the data collector as well as statisticians were blinded to treat­
+ment allocation throughout the entire study. 
+Anesthetic proceedings 
+All surgeries were performed by senior surgeons using minimally 
+invasive techniques by VATS. Anesthetic and surgical techniques were 
+standardized. Anesthesia was induced with propofol 2 mg/kg and 
+sufentanil 0.4 μg/kg. Tracheal intubation was facilitated with 0.1 mg/kg 
+vecuronium. Anesthesia was maintained with target-controlled in­
+fusions of propofol and remifentanil according to the hemodynamics 
+and bispectral index. Ondansetron 4 mg and dexamethasone 5 mg were 
+given before skin closure for prevention of PONV. Intravenous parecoxib 
+40 mg was used as adjunctive pain management at the end of surgery. 
+The endotracheal tube was removed after adequate spontaneous venti­
+lation and movement resumed. 
+Under ultrasound guidance, paravertebral nerve block with 20 ml of 
+0.375 % ropivacaine were used for all patients. Both groups received 
+routine oral celecoxib 200 mg every 12 h and the same postoperative 
+intravenous patient-controlled analgesia (PCA). The PCA consisted of 
+morphine 1 mg/kg, ketamine 1 mg/kg and tropisetron 10 mg, set at a 
+basal rate of 2 ml/h, with a bolus dose of 0.5 ml and a lockout time of 15 
+min. When patients reported a pain VAS score ≥4 or they requested an 
+analgesic, additional bucinnazine 100 mg will be given intramuscularly. 
+Electroacupuncture(EA) interventions 
+EA was performed on patients laying supine by our team composed 
+of experienced acupuncturists with at least 10 years of practice. The 
+selection of acupoints were bilateral PC6 (Neiguan), ST36 (Zusanli), and 
+ST37 (Shangjuxu), based on expert consensus provided by qualified and 
+experienced acupuncturists and published literature14–18. Specific acu­
+points are associated with certain regional effects. The locations of these 
+acupuncture points are described in The National Standards for Acupoint 
+Location19. Patients in the EA group received acupuncture 24 h prior to 
+surgery, 4 h and 24 h after surgery, and each session lasted 30 min. After 
+disinfection, single-use, sterile acupuncture needles (size 0.30 × 40 mm, 
+Suzhou Medical Supplies Factory Co., Ltd., China) were inserted 
+perpendicular into skin with a depth of approximately 20 to 45 mm. The 
+needles were manipulated via lifting and rotation until the patient felt a 
+De-qi sensation, defined as a feeling of heaviness, swelling or numbness 
+around the acupoint20. The stimulator device we used was Huatuo 
+Electronic Acupuncture Treatment Instrument (EA stimulator, XS-998B, 
+Nanjing Xiaosong Medical Instrument Research Institute, Nanjing, 
+China). The ipsilateral PC6, ST36 and ST37 will be separately connected 
+to one electrode set, and therefore yielding three electrode sets. The 
+stimulation frequency was 15 Hz, with intensities adjusted to trigger 
+slight vibration of the needle handles according to individual tolerance. 
+The EA group also received usual care (UC). 
+Usual care 
+Usual care was the routine treatments after thoracic surgery, 
+including routine nursing care, analgesics, dietary instructions and 
+discharge planning21. Early ambulation was encouraged. Oral feeding 
+was resumed as early as possible. Participants who experienced absence 
+of flatus over last 72 h postoperatively were instructed to use laxatives. 
+PONV was treated with intravenous ondansetron 4 mg as needed. 
+No acupuncture treatment was performed in the UC group. 
+Outcome measures 
+Primary outcomes of this study were time to first flatus and first 
+defecation. 
+Times to first flatus and defecation measured in hours were recorded 
+by the patients and then reported to our research assistant. 
+Secondary outcomes included incidence and degree of abdominal 
+distension (AD), use of the rescue medication, incidence of PON and 
+POV, VAS pain scores, postoperative morphine use, time to ambulation 
+and length of hospital stay. Abdominal distension was measured by a 5- 
+point Likert-type scale ranging from “0 = I feel no abdominal distension 
+at all” to “4 = I feel horrible abdominal distension and need it 
+addressed” 8,16,21. Pain intensity was rated on a 0–10 visual analogue 
+scale (VAS, 0= no pain, 10= worst pain). Incidence of PON and POV 
+(defined as at least one episode of nausea or vomiting that occurred), 
+pain at rest and on movement were recorded at 0–24 h, 24–48 h and 
+48–72 h after surgery. Postoperative opioid use for the first 24 h and 72 
+h after surgery was extracted from the PCA device records. 
+J. Yang et al. 
+
+
+=== PDF PAGE 3 ===
+EXPLORE 20 (2024) 450–455
+452
+Statistical analysis 
+A sample size calculation was performed based on our feasibility 
+study4. In that study, the mean reduction of postoperative time to first 
+flatus was 3.3 h, favoring the EA group. To achieve a power of 0.9 and 
+two-sided α of 0.05, the sample size for this study was targeted as 73 in 
+each group. Considering a possible dropout rate of 20 %, a sample size of 
+184 patients in total was needed in the study. 
+We conducted our analyses using the intention-to-treat principles 
+regardless of whether patients had received the assigned intervention or 
+completed all EA sessions. Statistical analyses were performed using 
+SPSS22.0 for Windows (SPSS, Chicago, IL, United States). Continuous 
+data were expressed as mean(standard deviation) and median (inter­
+quartile range), and categorical variables were expressed as frequency 
+(percentage). T tests or Mann–Whitney U tests were used to compare the 
+group differences on continuous variables as appropriate. Fisher test and 
+the χ2 test were used to analyze categorical variables as appropriate. All 
+tests were two-sided, and P<0.05 was considered statistically 
+significant. 
+Results 
+A total of 184 patients were screened in the study, of whom, 180 
+were randomly assigned to EA group (n = 90) or UC group (n = 90). 
+After randomization, 3 patients withdrew from the trial because they 
+were declined to continue EA on postoperative day 2 (n = 1), didn’t 
+receive PVB (n = 1) or converted to open surgery (n = 1). These three 
+patients were retained in the final analysis. Finally, 90 patients per 
+group were included in the intention-to-treat analyses (Fig.1). The 
+baseline demographic data and clinical characteristics of the two groups 
+were comparable and did not differ significantly (Table1). 
+The time to first flatus was 2 h shorter in the EA group as compared 
+with that of the UC group (P = 0.004). The time to first defecation was 
+more than 4 h shorter, than UC group, P = 0.002)(Table 2). 
+The incidence of abdominal distension was significantly reduced in 
+the EA group (34.4% vs. 51.1 %, P = 0.024). There was a trend toward 
+decreased degree of abdominal distension, but did not reach a signifi­
+cant difference (P = 0.069). Patients who required rescue medication 
+were also significantly less in the EA group than UC group (53.3% vs. 
+71.1 %, P = 0.014) (Table 2). 
+26.7 % participants in the EA group, compared with 44.4 % in the UC 
+group experienced PON in the 0–24 h after surgery. Also, the incidence 
+of 0–24 h POV(13.3 %) in Group EA was significantly lower than that in 
+Group UC(27.8 %). There were no significant differences in the inci­
+dence of PONV at 24–48 h. 
+Post operative pain was minimal, about 2/10 in both groups. There 
+were no significant differences in the post-operative pain at rest or on 
+movement between groups. Cumulative morphine consumption during 
+the postoperative day 1 and 3 were similar between the two groups. 
+Fig. 1. Flowchartof participants through the study. 
+Table 1 
+Demographic data and surgical details. 
+Variables 
+EA group 
+UC group 
+P 
+Age(yr) a 
+52.7 ± 11.0 
+55.8 ± 11.6 
+0.07 
+Weight(kg) a 
+62.8 ± 10.0 
+61.8 ± 10.0 
+0.50 
+Sex (n[%]) b 
+0.11 
+Male 
+24(26.7) 
+34(37.8) 
+Female 
+66(73.3) 
+56(62.2) 
+Patients with comorbidities 
+21(23.3) 
+24(26.7) 
+0.61 
+Surgical procedures 
+lobectomy (n[%]) b 
+Segmentectomy (n[%]) b 
+29(32.2) 
+61(67.8) 
+40(44.4) 
+50(55.6) 
+0.09 
+Duration of operation (min) c 
+90(68.8–126.3) 
+90(70–140) 
+0.61 
+One lung ventilation time(min) c 
+60(40.0–95.0) 
+59(40–100) 
+0.90 
+I.V. fluid(ml) c 
+1000(800–1000) 
+1000(897–1000) 
+0.16 
+Blood loss(ml) c 
+50 (20–80) 
+50(20–100) 
+0.30 
+Intraoperative opioids 
+Sufentanil(ug)c 
+32.5(30–35) 
+32(30–35) 
+0.79 
+Remifentanil(mg)c 
+0.5(0.3–0.6) 
+0.5(0.4–0.7) 
+0.75 
+Duration of chest tube(d) c 
+3(3–4) 
+3(3–5) 
+0.39 
+EA: electroacupuncture; UC: usual care; I.V.: intravenous. 
+Data were expressed as mean±SDa, n(%)b or median (quartile range)c. 
+J. Yang et al. 
+
+
+=== PDF PAGE 4 ===
+EXPLORE 20 (2024) 450–455
+453
+Time to ambulation and length of hospital stay did not differ between 
+two groups. (Table 3). 
+Discussion 
+This trial examined the effect of perioperative EA on gastrointestinal 
+function after thoracoscopic lung surgery. Our results showed that 
+perioperative EA led to a significantly shorter time to first flatus and first 
+defecation, decreased incidence and a trend toward alleviated abdom­
+inal distension and reduced incidence of PONV during first 24 h, 
+reflecting a multi-facet effect of EA on the gastrointestinal functional 
+recovery. 
+Constipation and impaired defecation pattern following thoracic 
+surgery contributes to delayed recovery3,4 and costs to the healthcare 
+system22, and is often overlooked in patient care3. Systemic prokinetic 
+drugs are often used for POI, but the evidence is insufficient to recom­
+mend the use of cholecystokinin-like drugs, cisapride, dopamine an­
+tagonists, propranolol or vasopressin23. Effective non-pharmacological 
+effort that can reduce patient suffering and improve recovery should 
+be properly tested and encouraged. Our study showed that EA, in 
+addition to UC, was associated with shorter time to first flatus and first 
+defecation. Also, EA group showed decreased incidence and degree of 
+abdominal distension and rescue medication. This result was in consis­
+tent with previous randomized trials and meta-analyses demonstrating 
+positive effects of acupuncture in abdominal surgery14–17. Our results 
+suggested that EA offered additional clinical benefit to patients under­
+going thoracoscopic lung surgery, but placebo effects cannot be 
+excluded without a sham acupuncture control 24. 
+The selection of acupoints for our study were PC6, ST36, and ST37, 
+which was based on evidence from published studies and the theories of 
+Chinese medicine19,25,26. EA at PC6 not only has antiemetic effects, but 
+also increases gastric motility via promoting efferent vagus nerve ac­
+tivity27,28. ST36 and ST37 are located along the “Stomach Meridian” of 
+Foot-Yangming on the anterior-tibia region. ST36 is at the junction of the 
+Stomach Meridian and plays an important role in balancing Yin and 
+Yang in the abdomen to relieve distention and constipation. Stimulation 
+at ST36 can enhance the small intestinal motility, possibly by 
+down-regulating the concentration of vasoactive intestinal peptide and 
+up-regulating the concentrations of motilin, ghrelin and gastrin29. ST37 
+is an acupoint that mainly regulates colon motility to assist gas passage. 
+EA stimulation at ST37 increases defaecation frequency and gastroin­
+testinal transit markers of constipation, such as serotonin and trypto­
+phan hydroxylase concentrations26. In general, EA improved the 
+gastrointestinal tract transit function by activating the vagal nerve 
+directly and regulating peripheral inflammation27,28,30. A combination 
+of these three points are the preferred acupoints for treating POI, 
+contributing to the encouraging results of our study. 
+The optimal timing and duration of EA in thoracic surgery has not 
+been studied before. The majority of studies used EA postoperatively 
+until the first flatus or defecation14–17,31. In one study conducted by Li S 
+et al., one- session EA 24 h prior to the surgery also accelerated motility 
+of the gastrointestinal track32. Liu MY et al. 21. found that, when 
+compared with no acupuncture treatment, EA 24 h before surgery 
+reduced the incidence and degree of abdominal distension and short­
+ened the time to first defecation and duration of hospitalization after 
+vascular laparotomy. In our study, EA stimulation was applied both pre- 
+and post-operatively. Consistent with our feasibility study4, most pa­
+tients were satisfied with the frequency and duration of acupuncture, 
+and only one patient discontinued EA postoperatively due to discomfort. 
+Our protocol of three treatment sessions may seem to demand patients’ 
+time, it was well accepted4. From clinical point of view, it might be 
+easier to use single session before or after surgery. Future research is 
+needed to identify optimal timing and regimen of EA to enhance 
+gastrointestinal recovery, to assess potential patients’ satisfaction and 
+cost-effectiveness with this intervention. 
+Studies have used different endpoints to record POI. It is important to 
+define sensitive and objective measures that accurately captures the 
+spectrum of POI. Time to first flatus and defecation are easy and simple 
+components in the assessment of gastrointestinal dysfunction and 
+POI21,25,31,33. However, available evidence for these indicators is 
+limited. For example, time to first flatus is difficult to assess accurately 
+and time to first defecation might simply reflect rectal emptying and 
+provide no reliable information on the recovery of whole gut. Bowel 
+movements are the most reliable endpoint, real-time bowel sound 
+recognition using wearable health monitoring should be used in future 
+trials. In our institution, early oral feeding as part of ERAS is started 
+without the return of bowel sounds after thoracic surgery, so we didn’t 
+monitor intestinal sounds. 
+PONV is common in surgical patients and represents a frequent and 
+critical cause of delayed recovery. Acupuncture on P6 has been widely 
+used to reduce PONV after several types of surgery11,13. Despite PONV 
+prophylaxis with dexamethasone and ondansetron, PONV incidence was 
+still high in both groups. The 44.4 % and 27.8 % incidence of respective 
+PON and POV in the UC group were a bit higher, compared with 16.9 % 
+reported by the literature on this form of surgery34. Individual suscep­
+tibility and opioid use such as morphine PCA are strongly regarded as 
+the most likely causes of PONV in this study. It is pleasing to see in our 
+study, EA significantly reduced the incidence of nausea and vomiting on 
+the 1st postoperative day. Combination with EA and routine antiemetics 
+may offer additional benefit for those patients. 
+Opioid use was associated with PONV and may reduce the time 
+required to restore normal gastrointestinal function35. Sun Y, et al. 
+found that acupuncture treatment reduced opioid consumption, pain 
+intensity and opioid-related side-effects36. On the contrary, we didn’t 
+Table 2 
+Outcomes on gastrointestinal function. 
+Variables 
+EA group 
+UC group 
+P 
+Time to first flatus (h)a 
+15.4 ± 3.2 
+17.0 ± 3.7 
+0.004 
+Time to first defecation (h)a 
+75.9 ± 7.9 
+79.7 ± 8.1 
+0.002 
+Rescue medication (n [%])b 
+48(53.3) 
+64(71.1) 
+0.014 
+AD’s incidence (n [%])b 
+31(34.4) 
+46(51.1) 
+0.024 
+AD’s degree 
+0.069 
+0 
+59(65.6) 
+41(45.6) 
+1 
+16(17.8) 
+42(46.7) 
+2 
+13(14.4) 
+4(4.4) 
+3 
+2(2.2) 
+3(3.3) 
+4 
+0(0) 
+0(0) 
+EA: electroacupuncture; UC: usual care; AD: abdominal distension. 
+Data were presented as mean ±SDa or n[%]b. 
+Table 3 
+Other clinical outcomes. 
+Variables 
+EA group 
+UC group 
+P 
+0–24 h after surgery 
+Incidence of Nausea [n(%)] b 
+24(26.7) 
+40(44.4) 
+0.013 
+Incidence of Vomiting[n(%)] b 
+12(13.3) 
+25(27.8) 
+0.016 
+Pain VAS at rest a 
+2(2–3) 
+2(2–3) 
+0.844 
+Pain VAS at movementa 
+3(3–4) 
+3(2–3) 
+0.159 
+24–48 h after surgery 
+Incidence of Nausea [n(%)] b 
+6(6.7) 
+14 (15.6) 
+0.058 
+Incidence of Vomiting[n(%)] b 
+6(6.7) 
+10 (11.1) 
+0.295 
+Pain VAS at rest a 
+2(2–2.5) 
+2(2–2) 
+0.390 
+Pain VAS at movementa 
+3(2–3) 
+3(2–3) 
+0.652 
+48–72 h after surgery 
+Incidence of Nausea [n(%)] b 
+0(0) 
+0(0) 
+– 
+Incidence of Vomiting[n(%)] b 
+0(0) 
+0(0) 
+– 
+Pain VAS at rest a 
+2(2–3) 
+2(2–2) 
+0.353 
+Pain VAS at movementa 
+3(2–3) 
+3(2–3) 
+0.314 
+Morphine use on POD 1(mg)c 
+43.7 ± 4.7 
+44.0 ± 4.9 
+0.733 
+Morphine use on POD 1–3(mg)c 
+127.0 ± 12.0 
+127.5 ± 12.5 
+0.785 
+Time to ambulation (h) 
+6(5–7) 
+6(5–7) 
+0.208 
+Length of hospital stay (d) 
+6(5–7) 
+6(5–7) 
+0.202 
+EA: electroacupuncture; UC: usual care; VAS: Visual Analogue Scale. 
+Data were expressed as median (quartile range)a, n(%)b or mean±SDc. 
+J. Yang et al. 
+
+
+=== PDF PAGE 5 ===
+EXPLORE 20 (2024) 450–455
+454
+find any beneficial effect of EA on pain scores and opioid consumption 
+after surgery. A few reasons might explain this: 1) our study only focus 
+on thoracoscopic lung surgery, which is a less painful surgery, when 
+compared with open abdominal surgery. In Sun’s review, all forms of 
+surgeries were included; 2) we used multimodal analgesia to relieve pain 
+and minimize opioid use. Multimodal analgesia was achieved with 
+nonsteroidal anti-inflammatory drugs, PVB and morphine PCA, pro­
+ducing sufficient analgesia after VATS with pain score less than 4/1037. 
+In addition, the use of PVB might have underestimated the analgesic 
+effects of EA by blocking both somatic and sympathetic neural path­
+ways, which might be considered as a confounding factor on the effects 
+of EA38. 
+Postoperative gastrointestinal recovery is an crucial part in the 
+enhanced recovery of surgical patients. Ng SS, et al. demonstrated that 
+EA was associated with shorter hospital stay after surgery, when a fast- 
+track perioperative program was not available in their hospital16. Liu T, 
+et al. 39. reported that ambulation within 2 h of extubation was safe and 
+feasible and could lead to shorter length of hospital stay and time to first 
+flatus in patients with undergoing thoracoscopic lung surgery. In our 
+study, both groups had similar time to ambulation and hospital stay, 
+because we applied enhanced recovery program during our routine 
+clinical practice. 
+There were certain limitations to this study. First, a placebo effect 
+can’t be excluded without a sham EA group. Because sham EA was not 
+used in this study, the inadvertent interaction between assessors and 
+patient in the UC group may affect the results. However, according to a 
+Cochrane review, inclusion of a sham EA group would not have changed 
+the research conclusions40. Second, lack of standardized outcome mea­
+sures may limit the interpretation of the findings. Finally, this study only 
+investigated the effect of EA on bowel motility, PONV and postoperative 
+pain in a short period. The incidence of postoperative constipation and 
+chronic pain may last for a long time after surgery3,41, so the long term 
+effects of EA on gastrointestinal function and chronic pain in patients 
+undergoing thoracic surgery needs further study. 
+Conclusion 
+Despite certain limitations, we provide evidence that perioperative 
+EA, in combination with standard usual care, has multi-facet effect and 
+can lead to a faster recovery of gastrointestinal function following 
+thoracoscopic surgery. 
+Author contributions statement 
+Jie Yang, Fangbing Ji and Man Zheng: Study concept and design. 
+Jie Yang, Libing Huang, Juan Zhu and Siying Liu: Acquisition of 
+data. Jie Yang, Weiqian Tian and Libing Huang: Analysis and inter­
+pretation of data. Zhen Zheng: Study design, acupuncture design, 
+manuscript revision. Man Zheng: Supervisor of the study 
+Acknowledgments 
+The authors wish to thank Ms Jenny Layton for English language 
+editing. 
+Funding 
+This work was funded by Institutional Foundation of Jiangsu prov­
+ince hospital of Chinese Medicine (Y18021). 
+Ethics approval 
+This study was approved and monitored by the Institutional Review 
+Board of Jiangsu province hospital of Chinese Medicine (2017NL-123- 
+02). 
+Consent to participate 
+Informed consent was obtained from all individual participants 
+included in the study to participate. 
+Consent to publish 
+Informed consent was obtained from all individual participants 
+included in the study for findings to be published. 
+Availability of data and material 
+Will be made available upon request to the corresponding author. 
+References 
+1. Petersen RH, Holbek BL, Hansen HJ. Kehlet H. Video-assisted thoracoscopic surgery- 
+taking a step into the future. Eur J Cardiothorac Surg. 2017;51(4):694–695. 
+2. Zoumprouli A, Chatzimichali A, Papadimitriou S, Papaioannou A, Xynos E, 
+Askitopoulou H. Gastrointestinal motility following thoracic surgery: the effect of 
+thoracic epidural analgesia. A randomised controlled trial. BMC Anesthesiol. 2017;17 
+(1):139. 
+3. Rasmussen LS, Pedersen PU. Constipation and defecation pattern the first days after 
+thoracic surgery. Scand J Caring Sci. 2010;24(2):244–250. 
+4. Yang Jie, Huang Libing, Liu Siying, et al. Effect of electroacupuncture on 
+postoperative gastrointestinal recovery in patients undergoing thoracoscopic 
+surgery: a feasibility study. Med Sci Monit. 2020;26, e920648. 
+5. Stakenborg N, Gomez-Pinilla PJ, Boeckxstaens GE. Postoperative ileus: 
+pathophysiology, current therapeutic approaches. Handb Exp Pharmacol. 2017;239: 
+39–57. 
+6. Chapman SJ, Pericleous A, Downey C, Jayne DG. Postoperative ileus following 
+major colorectal surgery. Br J Surg. 2018;105(7):797–810. 
+7. Venere A, Neunlist M, Slim K, et al. Postoperative ileus: pathophysiology, incidence, 
+and prevention. J Visc Surg. 2016;153(6):439–446. 
+8. Bragg D, El-Sharkawy AM, Psaltis E, Maxwell-Armstrong CA, Lobo DN. 
+Postoperative ileus: recent developments in pathophysiology and management. Clin 
+Nutr. 2015;34(3):367–376. 
+9. Vergara-Fernandez O, Gonzalez-Vargas AP, Castellanos-Juarez JC, Salgado- 
+Nesme N, Sanchez-Garcia Ramos E. Usefulness of gum chewing to decrease 
+postoperative ileus in colorectal surgery with primary anastomosis: a randomized 
+controlled trial. Rev Invest Clin. 2016;68(6):314–318. 
+10. Stewart D, Waxman K. Management of postoperative ileus. Dis Mon. 2010;56(4): 
+204–214. 
+11. Rowbotham DJ. Recent advances in the non-pharmacological management of 
+postoperative nausea and vomiting. Br J Anaesth. 2005;95(1):77–81. 
+12. Chernyak GV, Sessler DI. Perioperative acupuncture and related techniques. 
+Anesthesiology. 2005;102(5):1031–1049. 
+13. Liodden I, Norheim AJ. Acupuncture and related techniques in ambulatory 
+anesthesia. Curr Opin Anaesthesiol. 2013;26(6):661–668. 
+14. Chen KB, Lu YQ, Chen JD, et al. Transcutaneous electroacupuncture alleviates 
+postoperative ileus after gastrectomy: a randomized clinical trial. World J 
+Gastrointest Surg. 2018;10(2):13–20. 
+15. Meng ZQ, Garcia MK, Chiang JS, et al. Electro-acupuncture to prevent prolonged 
+postoperative ileus: a randomized clinical trial. World J Gastroenterol. 2010;16(1): 
+104–111. 
+16. Ng S.S., Leung W.W., Mak T.W., et al. Electroacupuncture reduces duration of 
+postoperative ileus after laparoscopic surgery for colorectal cancer. 
+Gastroenterology. 2013; 144(2):307–313. 
+17. Liu YH, Dong GT, Ye Y, et al. Effectiveness of acupuncture for early recovery of 
+bowel function in cancer: a systematic review and meta-analysis. Evid Based 
+Complement Alternat Med. 2017;2017, 2504021. 
+18. Xu XH, Zhang MM, Wu X, et al. Efficacy of electro-acupuncture in treatment of 
+functional constipation: a randomized controlled trial. Curr Med Sci. 2020;40(2): 
+363–371. 
+19. General administration of quality supervision, inspection and quarantine of the 
+People’s Republic of China, standardization administration of the People’s Republic 
+of China. Nomenclature and location of acupuncture points. GB/T 12346-2006. 
+20. Zhou K., Fang J., Wang X., et al. Characterization of de qi with electroacu puncture 
+at acupoints with different properties. J Altern Complement Med. 2011;17(11): 
+1007–1013. 
+21. Liu MY, Wang CW, Wu ZP, Li N. Electroacupuncture for the prevention of 
+postoperative gastrointestinal dysfunction in participants undergoing vascular 
+laparotomy under general anesthesia: a randomized controlled trial. Chin Med. 
+2017;12:5. 
+22. Asgeirsson T, El-Badawi KI, Mahmood A, Barletta J, Luchtefeld M, Senagore AJ. 
+Postoperative ileus: it costs more than you expect. J Am Coll Surg. 2010;210(2): 
+228–231. 
+23. Traut U, Brügger L, Kunz R, et al. Systemic prokinetic pharmacologic treatment for 
+postoperative a dynamic ileus following abdominal surgery in adults. Cochrane 
+Database Syst Rev. 2008;23, CD004930. 
+J. Yang et al. 
+
+
+=== PDF PAGE 6 ===
+EXPLORE 20 (2024) 450–455
+455
+24. Manheimer E, Cheng K, Linde K, et al. Acupuncture for peripheral joint 
+osteoarthritis. Cochrane Database Syst Rev. 2010;20(1), CD001977. 
+25. Liu Y, May BH, Zhang AL, et al. Acupuncture and related therapies for treatment of 
+postoperative ileus in colorectal cancer: a systematic review and meta-analysis of 
+randomized controlled trials. Evid Based Complement Alternat Med. 2018;2018, 
+3178472. 
+26. Zhu X, Liu Z, Qu H, et al. The effect and mechanism of electroacupuncture at LI11 
+and ST37 on constipation in a rat model. Acupunct Med. 2016;34(3):194–200. 
+27. Takahashi T. Acupuncture for functional gastrointestinal disorders. J Gastroenterol. 
+2006;41(5):408–417. 
+28. Lu M, Chen C, Li W, Yu Z, Xu B. EA at PC6 promotes gastric motility: role of 
+brainstem vagovagal neurocircuits. Evid Based Complement Alternat Med. 2019;2019, 
+7457485. 
+29. Jang JH, Lee DJ, Bae CH, et al. Changes in small intestinal motility and related 
+hormones by acupuncture stimulation at Zusanli (ST 36) in mice. Chin J Integr Med. 
+2017;23(3):215–220. 
+30. Yang NN, Ye Y, Tian ZX, et al. Effects of electroacupuncture on the intestinal 
+motility and local inflammation are modulated by acupoint selection and 
+stimulation frequency in postoperative ileus mice. Neurogastroenterol Motil. 2020;32 
+(5):e13808. 
+31. Shao JK, Liu Q, Pei W, et al. Electroacupuncture for postoperative ileus after 
+laparoscopic surgery on colorectal cancer: study protocol for a randomized 
+controlled trial. Trials. 2021;22(1):610. 
+32. Li S, Zheng M, Wu W, et al. Effects of electroacupuncture administered 24hours 
+prior to surgery on postoperative nausea and vomiting and pain in patients 
+undergoing gynecologic laparoscopic surgery: a feasibility study. Explore (NY). 
+2017;13(5):313–318. 
+33. Seo SHB, Carson DA, Bhat S, et al. Prolonged postoperative ileus following right- 
+versus left-sided colectomy: a systematic review and meta-analysis. Colorectal Dis. 
+2021;23(12):3113–3122. 
+34. Nakai A, Nakada T, Okamoto S, et al. Risk factors for postoperative nausea and 
+vomiting after thoracoscopic pulmonary wedge resection: pitfalls of an increased 
+fentanyl dose. J Thorac Dis. 2021;13(6):3489–3496. 
+35. de Boer HD, Detriche O, Forget P. Opioid-related side effects: postoperative ileus, 
+urinary retention, nausea and vomiting, and shivering. A review of the literature. 
+Best Pract Res Clin Anaesthesiol. 2017;31(4):499–504. 
+36. Sun Y, Gan TJ, Dubose JW, Habib AS. Acupuncture and related techniques for 
+postoperative pain: a systematic review of randomized controlled trials. Br J 
+Anaesth. 2008;101(2):151–160. 
+37. Turhan ¨O, Sivrikoz N, Sungur Z, Duman S, ¨Ozkan B, S¸ entürk M. Thoracic 
+paravertebral block achieves better pain control than erector spinae plane block and 
+intercostal nerve block in thoracoscopic surgery: a randomized study. J Cardiothorac 
+Vasc Anesth. 2021;35(10):2920–2927. 
+38. Lu MJ, Yu Z, He Y, Yin Y, Xu B. Electroacupuncture at ST36 modulates gastric 
+motility via vagovagal and sympathetic reflexes in rats. World J Gastroenterol. 2019; 
+25(19):2315–2326. 
+39. Liu T, Feng J, Ge L, Jin F, Zhou C, Liu X. Feasibility, safety and outcomes of 
+ambulation within 2h postoperatively in patients with lung cancer undergoing 
+thoracoscopic surgery. Int J Nurs Pract. 2022;28(4):e12994. 
+40. Lee A, Chan SK, Fan LT. Stimulation of the wrist acupuncture point PC6 for 
+preventing postoperative nausea and vomiting. Cochrane Database Syst Rev. 2015;11, 
+CD003281. 
+41. Takenaka S, Saeki A, Sukenaga N, et al. Acute and chronic neuropathic pain profiles 
+after video-assisted thoracic surgery: a prospective study. Medicine (Baltimore). 
+2020;99(13):e19629. 
+J. Yang et al. 
