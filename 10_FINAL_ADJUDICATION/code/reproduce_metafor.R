@@ -1,4 +1,4 @@
-.libPaths(c('/tmp/astra-r-library',.libPaths()))
+.libPaths(c(Sys.getenv('ASTRA_R_LIBRARY','/tmp/astra-r-library'),.libPaths()))
 library(metafor)
 d<-read.csv('10_FINAL_ADJUDICATION/04_MODELS/model_inputs.csv',stringsAsFactors=FALSE)
 results<-list()

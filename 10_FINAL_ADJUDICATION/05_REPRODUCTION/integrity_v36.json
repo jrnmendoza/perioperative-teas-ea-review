@@ -1,0 +1,52 @@
+{
+  "date": "2026-09-16",
+  "git_head": "035ed976033944c5861ac3f471ac3852778b715f",
+  "branch": "astra-final-resolution",
+  "input_sha256": {
+    "TEAS EA Verification/v34_reconciliation/data/v34_outcome_data.csv": "8ff58904209b06519b084818660754d69cbbf1d0f968b1840ac718f8de3723a2",
+    "ASTRA_VERIFICATION_SUPPORT/data.js.json": "0bd951125a049e67b10189a4faae496d1eb5f81cd0353723217a3dd700fff5ec",
+    "ASTRA_VERIFICATION_SUPPORT/study_characteristics.js.json": "c9dd65e513fff94acb37b14db2f8f173062fe2d979a93d5fb8f04f8f985ac598",
+    "ASTRA_VERIFICATION_SUPPORT/workbook.json": "d40e3b17ec16e1051eead721b8b0d4ed8102b7ecf1224850b3885e5d4c84dd47",
+    "covidence_all_63_included.json": "a34973491fab434c3c53ef90070cf6680629e6d2851b6543bc41eb06ff1051e9",
+    "covidence_all_161_excluded.json": "df3bdaa8284313cd54e016cd2fc56be3217621100d0a7f855943a937afeb5ca0",
+    "10_FINAL_ADJUDICATION/01_SOURCE_EVIDENCE/source_manifest.json": "7a50b87d8c8f78a2d841006230880e152cd67c6d1b4b57cdd2fbfa7b6ea0b037",
+    "10_FINAL_ADJUDICATION/01_SOURCE_EVIDENCE/exclusions/manifest.json": "a286deebd3d9b2ac58e3d80b8e07f24062ca62457f92a5c74871c06e094a4c4d",
+    "06_FINAL_ANALYSIS_V26/01_DATA/target_A_48h.csv": "025acba73014994db8546c7637b32bd5875c688dfb42378c64be502ed835cca9",
+    "06_FINAL_ANALYSIS_V26/01_DATA/target_B_72h.csv": "a2eb5a8679cda290a590c1979359676ed76c17193f4fbccbab67f4b8959b086a",
+    "06_FINAL_ANALYSIS_V26/01_DATA/target_C_pain24h.csv": "575430b0bb95ed1f0ba219d6a15df05953125d191a2e698835605e8d73b466f1",
+    "06_FINAL_ANALYSIS_V26/01_DATA/target_D_ponv.csv": "0d10ad57893471ecf403fef49de6a61e3c25eaa818adb83fd3fd3a280822d38f",
+    "06_FINAL_ANALYSIS_V26/01_DATA/target_E_flatus.csv": "f83c405386a5d492a2f1c2d00b072645bf988c6200390c8a2d1e9564b899e487",
+    "06_FINAL_ANALYSIS_V26/01_DATA/target_F_exploratory.csv": "db1184dd378f4b6a571f741356cce33afb82af0af78f9d980db2536b30436b0e"
+  },
+  "pre_change_snapshot": {
+    "files": 392,
+    "source_files": 349,
+    "source_files_changed": [],
+    "changed": [
+      "10_FINAL_ADJUDICATION/02_DECISIONS/model_specifications.json",
+      "10_FINAL_ADJUDICATION/03_CANONICAL/grade.csv",
+      "10_FINAL_ADJUDICATION/03_CANONICAL/results.csv",
+      "10_FINAL_ADJUDICATION/03_CANONICAL/studies.json",
+      "10_FINAL_ADJUDICATION/04_MODELS/model_inputs.csv",
+      "10_FINAL_ADJUDICATION/04_MODELS/model_outputs.csv",
+      "10_FINAL_ADJUDICATION/04_MODELS/model_outputs.json",
+      "10_FINAL_ADJUDICATION/05_REPRODUCTION/R_session.txt",
+      "10_FINAL_ADJUDICATION/05_REPRODUCTION/metafor_outputs.csv",
+      "10_FINAL_ADJUDICATION/code/build_registry.py",
+      "10_FINAL_ADJUDICATION/code/build_results.py",
+      "10_FINAL_ADJUDICATION/code/grade_recommendations.py",
+      "10_FINAL_ADJUDICATION/code/link_rob2.py",
+      "10_FINAL_ADJUDICATION/code/reproduce_metafor.R",
+      "FINAL_GRADE_RECOMMENDATIONS.md",
+      "FINAL_MODEL_MEMBERSHIP_MATRIX.csv",
+      "FINAL_PRIMARY_OUTCOME_TRACEABILITY.csv",
+      "FINAL_RESULT_ROB2_LINKAGE.csv",
+      "FINAL_TRIAL_REPORT_MAPPING.csv"
+    ],
+    "moved_to_superseded": [
+      "10_FINAL_ADJUDICATION/05_REPRODUCTION/comparison.csv"
+    ]
+  },
+  "user_uncommitted_huang2017_edit_preserved": true,
+  "destructive_commands_used": "none (no reset/checkout/rm of project files; stale reproduction files moved into superseded_2026-09-13T1306_pre_final_membership/)"
+}
