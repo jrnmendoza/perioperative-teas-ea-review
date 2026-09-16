@@ -26,12 +26,20 @@ def equal(a,b):
     if abs(float(av)-float(bv))>1e-4:return False
    except:return False
  return True
+# v36 (16 Sep 2026): manually reviewed exact matches where only the v26/v34 comparison-ID scheme differs
+# (same study, outcome, window, denominators and all arm statistics). Yang2020 AUDIT-0078 vs F-mixed/undefined-005
+# was rejected: identical counts but a different outcome (vomiting vs rescue bucinnazine).
+manual={'V33-OD-0379':'AF26-F-intra-013','AUDIT-0364':'AF26-F-intra-012','V33-OD-0328':'AF26-SONG20-POSTLOCK-C'}
+byid={z['assessment_id']:z for z in reg}
 out=[]
 for r in rows:
  candidates=[z for a,z in af if a['study']==r['study'] and a['comparison_id']==r['comparison_id'] and equal(a,r)]
  selected=None;rule=''
  if r['result_id'] in exact:selected=by_study[r['study']];rule='Exact result applicability manually mapped to latest consolidated corrected record; supersedes legacy selector.'
  elif candidates:selected=candidates[-1];rule='Exact source contrast and outcome statistics/population match to existing AF result assessment.'
+ elif r['result_id'] in manual:
+  selected=byid[manual[r['result_id']]];a=next(a for a,z in af if z is selected);assert a['study']==r['study'] and equal(a,r)
+  rule='v36 reviewed exact match: same study/outcome/window/denominators/arm statistics; only comparison-ID scheme differs.'+(' v26 rest-pain label not source-supported; setting remains unspecified.' if r['result_id']=='V33-OD-0328' else '')
  alt=[z['assessment_id'] for z in candidates if not selected or z['assessment_id']!=selected['assessment_id']]
  z=dict(result_id=r['result_id'],outcome=r['outcome'],timepoint=r['window'],contrast=r['comparison_id'],population=r['population'],n_i=r['n_i'],n_c=r['n_c'],rob2_assessment_id=selected['assessment_id'] if selected else '',linkage_status='LINKED EXISTING RESULT ASSESSMENT' if selected else 'UNLINKED — no exact existing assessment established',overall=selected['overall'] if selected else 'UNLINKED',**{f'd{j}':selected[f'd{j}'] if selected else '' for j in range(1,6)},selection_rule=rule,alternative_assessments=';'.join(alt),provenance=selected['source'] if selected else 'Study-level record retained only as background; not an exact-result assessment.',human_final_signoff='NOT INDEPENDENTLY DOCUMENTED',models=r['models'])
  out.append(z)

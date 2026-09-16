@@ -46,5 +46,16 @@ for x,n in zip(m,ns):
 # Verified detailed primary-source baseline entries. Unverified fields are explicit blanks/status, never defaults.
 patch={'Yang 2024':dict(age_i_c='52.7 ±11.0 / 55.8 ±11.6 years',sex_i_c='Female66/90 /56/90',anesthesia='General anaesthesia + paravertebral block'),'Wang 2024':dict(sex_i_c='All female; two risk strata'),'Szmit 2021':dict(anesthesia='General anaesthesia'),'Chen 1998':dict(anesthesia='General anaesthesia'),'Chen 2020':dict(anesthesia='General anaesthesia'),'Seevaunnamtum 2016':dict(anesthesia='General anaesthesia'),'El-Rakshy 2009':dict(anesthesia='General anaesthesia'),'He 2026 (hepatectomy/JIS)':dict(anesthesia='General anaesthesia'),'Huang 2024':dict(anesthesia='General anaesthesia')}
 for r in rows:r.update(patch.get(r['report_id'],{}))
+# v36 (16 Sep 2026): study-level labels that contradicted source-verified result-level comparator classes.
+comparator_fix={'Pan 2023':('Usual care / no stimulation (no sham procedure described)','"Patients in Group C did not undergo TEAS."'),
+ 'Liang 2021':('Usual care / no stimulation (no sham procedure described)','"in control group, the patients received no stimulation."'),
+ 'Huang 2025':('Usual care / standard care','"randomly allocated to the EA arm (n = 51) or the Standard care group (n = 50)."'),
+ 'Liu 2021':('Sham-Controlled (electrodes placed, no current)','"In Group C, electrodes were placed in the same position as Group T, but no electric current stimulation was performed."'),
+ 'Xiong 2021':('Sham-Controlled (electrodes placed, no current)','"the patients in the control group had gel electrodes applied and connected to an acupuncture instrument without stimulation."'),
+ 'Zhou 2025':('Sham-Controlled (no current output)','"Sham TEAS was performed using the same protocol as real TEAS, but without electrical current output from the stimulator."'),
+ 'Song 2020':('Active non-acupoint electrical stimulation (separate active-control class)','"Patients in the control group received electrical stimulation at a nonacupoint."')}
+for r in rows:
+ if r['report_id'] in comparator_fix:r.update(comparator=comparator_fix[r['report_id']][0],comparator_source_status='SOURCE VERIFIED v36: '+comparator_fix[r['report_id']][1])
+ else:r['comparator_source_status']='LEGACY STUDY-LEVEL LABEL; result-level comparator_class in canonical results governs model membership'
 csvout('FINAL_TRIAL_REPORT_MAPPING.csv',rows);csvout('FINAL_PARTICIPANT_LEDGER.csv',ledger);csvout('10_FINAL_ADJUDICATION/02_DECISIONS/cohort_identity_recheck.csv',ident)
 (D/'03_CANONICAL/studies.json').write_text(json.dumps(rows,indent=2,ensure_ascii=False));print('Operational N lower bound',sum(r['randomized_n_counted'] for r in rows),'units',len(set(r['trial_id'] for r in rows)),collections.Counter(r['modality'] for r in rows))

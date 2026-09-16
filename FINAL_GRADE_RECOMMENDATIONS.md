@@ -102,15 +102,27 @@ RR 0.668 (95% CI 0.287 to 1.553) risk ratio.
 
 ## vomiting24_TEAS_sham
 
-**Very low**; k=5, N=2495.
+**Very low**; k=4, N=2390.
 
-RR 0.643 (95% CI 0.396 to 1.044) risk ratio.
+RR 0.680 (95% CI 0.345 to 1.342) risk ratio.
 
 - **Risk of bias:** Serious: incomplete exact outcome-specific assessments, subjective nausea ascertainment and variable masking.
 - **Inconsistency:** Serious: clinically heterogeneous surgeries and background prophylaxis; effect-size variation matters to absolute benefit.
 - **Indirectness:** No additional downgrade for specific symptom construct.
 - **Imprecision:** Serious: intervals cross no effect and permit materially different clinical effects; event evidence is less decisive than composite PONV.
 - **Publication bias:** No separate downgrade; missing-result bias cannot be excluded.
+
+## vomiting24_TEAS_usual
+
+**Very low**; k=1, N=105.
+
+RR 0.483 (95% CI 0.241 to 0.967) risk ratio.
+
+- **Risk of bias:** Serious: no sham procedure described; 15 of 120 enrolled excluded after randomization; exact vomiting-specific RoB assessment not established.
+- **Inconsistency:** Not assessable in one trial.
+- **Indirectness:** Not downgraded for supportive no-stimulation question after laparoscopic myomectomy; not evidence for sham-specific efficacy.
+- **Imprecision:** Very serious: 105 participants and 28 events in one trial; upper CI bound close to no effect.
+- **Publication bias:** No separate downgrade beyond floor.
 
 ## persistent_nausea24_TEAS_sham
 
@@ -130,7 +142,7 @@ RR 0.429 (95% CI 0.249 to 0.739) risk ratio.
 
 RR 0.456 (95% CI 0.299 to 0.695) risk ratio.
 
-- **Risk of bias:** Serious: single-blind study and exact nausea/vomiting result linkage incomplete; patient reporting/masking concerns.
+- **Risk of bias:** Serious: single-blind design with blinded patients/assessors; exact assessments High for nausea (outcome measurement) and Some concerns for vomiting. Reviewer to confirm whether High nausea RoB warrants very serious.
 - **Inconsistency:** Not assessable in one trial.
 - **Indirectness:** Not downgraded for48h tympanoplasty question; generalization beyond this setting limited.
 - **Imprecision:** Serious:277 participants, few vomiting events and material uncertainty in absolute reduction.
@@ -142,22 +154,22 @@ RR 0.456 (95% CI 0.299 to 0.695) risk ratio.
 
 RR 0.336 (95% CI 0.164 to 0.687) risk ratio.
 
-- **Risk of bias:** Serious: single-blind study and exact nausea/vomiting result linkage incomplete; patient reporting/masking concerns.
+- **Risk of bias:** Serious: single-blind design with blinded patients/assessors; exact assessments High for nausea (outcome measurement) and Some concerns for vomiting. Reviewer to confirm whether High nausea RoB warrants very serious.
 - **Inconsistency:** Not assessable in one trial.
 - **Indirectness:** Not downgraded for48h tympanoplasty question; generalization beyond this setting limited.
 - **Imprecision:** Serious:277 participants, few vomiting events and material uncertainty in absolute reduction.
 - **Publication bias:** No separate downgrade; absence of replication limits missing-results assessment.
 
-## ponv48_TEAS_usual
+## ponv48_TEAS_sham
 
 **Very low**; k=1, N=62.
 
 RR 0.542 (95% CI 0.343 to 0.854) risk ratio.
 
-- **Risk of bias:** Serious: comparator-specific masking/assessment concerns and incomplete exact linkage for active-current Song result.
+- **Risk of bias:** Serious: exact existing assessment Some concerns (outcome measurement and selection domains); anaesthetists unblinded and postoperative tingling could reveal allocation despite no-current electrode sham.
 - **Inconsistency:** Not assessable in one trial.
-- **Indirectness:** Not downgraded within exact comparator question; active current and usual care are not sham-equivalent questions.
-- **Imprecision:** Very serious: small single trial; uncertain clinically important magnitude, with Song CI also crossing null.
+- **Indirectness:** Not downgraded for 48h composite PONV after sleeve gastrectomy with dual antiemetic prophylaxis; transportability to other surgery limited.
+- **Imprecision:** Very serious: 62 participants and 37 events in one trial; CI excludes no effect but spans small to large reductions.
 - **Publication bias:** No separate downgrade beyond floor.
 
 ## nausea6to24_EA_usual
@@ -190,7 +202,7 @@ RR 0.338 (95% CI 0.196 to 0.583) risk ratio.
 
 MD -0.213 (95% CI -0.754 to 0.327) 0–10 points.
 
-- **Risk of bias:** Serious: Liu resting-pain exact assessment High; other masking and exact-linkage limitations.
+- **Risk of bias:** Serious: Liu and Xing resting-pain exact assessments High; Yu exact assessment not established.
 - **Inconsistency:** Not downgraded: observed study differences do not overturn the pain-worsening-margin conclusion; statistical homogeneity alone is not proof of consistency.
 - **Indirectness:** Not downgraded for24h rest pain; separate trials from the opioid contributor create indirect pairing.
 - **Imprecision:** Serious: only218 participants and limited surgery representation; CI excludes+1 average worsening but is not a formal noninferiority trial.
@@ -246,7 +258,7 @@ MD -0.338 (95% CI -0.728 to 0.052) 0–10 points.
 
 MD -5.335 (95% CI -9.092 to -1.578) hours.
 
-- **Risk of bias:** Serious: varying ascertainment of patient-reported flatus, sensory masking and incomplete exact-result RoB linkage.
+- **Risk of bias:** Serious: varying ascertainment of patient-reported flatus, sensory masking, incomplete exact-result RoB linkage and Zheng2025 SD/P inconsistency (leave-out diagnostic direction and CI unchanged).
 - **Inconsistency:** Very serious: large clinically disparate time effects including little/no effect; prediction interval crosses no benefit and delay.
 - **Indirectness:** Not downgraded for time-to-flatus itself. It does not establish overall GI or functional recovery.
 - **Imprecision:** Not separately downgraded: mean CI favors earlier flatus, while major uncertainty across settings is counted in inconsistency.
@@ -280,7 +292,7 @@ MD -7.200 (95% CI -16.215 to 1.815) hours.
 
 MD -2.888 (95% CI -5.387 to -0.388) hours.
 
-- **Risk of bias:** Serious: unblinded usual-care comparisons, Huang High, and incomplete exact assessment of combined Zhu arms.
+- **Risk of bias:** Serious: unblinded usual-care comparisons, Huang 2025 and Yang 2024 exact assessments High, and no exact assessment of combined Zhu arms.
 - **Inconsistency:** Serious: effects vary with surgical setting/protocol and baseline recovery time; same direction is insufficient to establish stable magnitude.
 - **Indirectness:** Not downgraded for flatus-hours question; no broad faster-recovery claim.
 - **Imprecision:** No extra downgrade: CI supports earlier mean flatus within this body; no registered flatus MCID to imply clinical importance.
@@ -288,14 +300,14 @@ MD -2.888 (95% CI -5.387 to -0.388) hours.
 
 ## bowelsounds_TEAS_sham
 
-**Low**; k=3, N=812.
+**Very low**; k=3, N=812.
 
 MD -7.191 (95% CI -11.618 to -2.763) hours.
 
-- **Risk of bias:** Serious: observer/time-origin ascertainment varies and exact bowel-sounds RoB records are not established for all trials.
+- **Risk of bias:** Serious: observer/time-origin ascertainment varies; no exact bowel-sounds RoB record is linked for any trial; Zheng2025 printed mean(SD) values are inconsistent with its printed P value.
 - **Inconsistency:** Serious: different measurement schedules and control recovery times make a stable magnitude uncertain.
 - **Indirectness:** Not downgraded for audible bowel sounds; indirectness would be serious if interpreted as global recovery, which is not claimed.
-- **Imprecision:** No extra downgrade: CI supports earlier observed sounds but no validated clinical threshold establishes patient importance.
+- **Imprecision:** Serious (v36): pooled CI excludes no effect only with Zheng2025; the leave-out diagnostic (k=2) CI includes no effect and delay. Reviewer to confirm.
 - **Publication bias:** No separate downgrade; evidence-selection limitation applies.
 
 ## defecation_TEAS_sham
@@ -360,11 +372,11 @@ MD -8.400 (95% CI -22.316 to 5.516) mg IV morphine.
 
 ## intraop_remifentanil_TEAS_sham
 
-**Very low**; k=8, N=1188.
+**Very low**; k=6, N=1013.
 
-MD -94.444 (95% CI -174.105 to -14.783) µg remifentanil.
+MD -114.812 (95% CI -199.686 to -29.937) µg remifentanil.
 
-- **Risk of bias:** Serious: clinician titration/masking varies and exact assessments are incomplete.
+- **Risk of bias:** Serious: clinician titration/masking varies, exact assessments are incomplete and Zheng2025 SD/P inconsistency (leave-out diagnostic CI still excludes no effect).
 - **Inconsistency:** Serious: highly different surgery durations, baseline requirements and effects; PI permits increased dose.
 - **Indirectness:** Serious: intraoperative dose reduction does not establish postoperative opioid sparing or improved patient outcomes.
 - **Imprecision:** Not separately downgraded: average CI excludes null but transportability uncertainty counted above.
@@ -372,13 +384,15 @@ MD -94.444 (95% CI -174.105 to -14.783) µg remifentanil.
 
 ## intraop_remifentanil_TEAS_usual
 
-**Not rated — insufficient evidence**; k=0, N=0.
+**Very low**; k=2, N=175.
 
-- **Risk of bias:** No eligible quantitative body.
-- **Inconsistency:** Not applicable.
-- **Indirectness:** Not applicable.
-- **Imprecision:** No estimate.
-- **Publication bias:** Cannot assess.
+MD -25.279 (95% CI -1108.956 to 1058.399) µg remifentanil.
+
+- **Risk of bias:** Serious: exact existing assessments High (Pan) and Some concerns (Liang); no sham procedure and anaesthetist-titrated dose.
+- **Inconsistency:** Serious: opposite effect directions in two trials (Pan reduction, Liang increase); two studies cannot characterize heterogeneity.
+- **Indirectness:** Serious: intraoperative dose reduction does not establish postoperative opioid sparing or patient benefit.
+- **Imprecision:** Very serious: safeguarded HK CI spans very large reductions and increases.
+- **Publication bias:** No separate downgrade beyond floor.
 
 ## intraop_remifentanil_EA_usual
 
@@ -434,8 +448,8 @@ MD -13.090 (95% CI -44.187 to 18.007) mg IM pethidine.
 
 RR 0.307 (95% CI 0.091 to 1.038) risk ratio.
 
-- **Risk of bias:** Serious: comparator-specific masking/assessment concerns and incomplete exact linkage for active-current Song result.
+- **Risk of bias:** Serious: exact existing assessment Some concerns; active non-acupoint stimulation preserves masking but is not an inert comparator.
 - **Inconsistency:** Not assessable in one trial.
-- **Indirectness:** Not downgraded within exact comparator question; active current and usual care are not sham-equivalent questions.
-- **Imprecision:** Very serious: small single trial; uncertain clinically important magnitude, with Song CI also crossing null.
+- **Indirectness:** Serious if read as sham efficacy; not downgraded for the separate active-control question.
+- **Imprecision:** Very serious: 85 participants in one trial; CI crosses no effect.
 - **Publication bias:** No separate downgrade beyond floor.

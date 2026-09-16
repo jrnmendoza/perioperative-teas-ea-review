@@ -6,7 +6,7 @@
     "country": "NOT VERIFIED",
     "surgery": "NOT VERIFIED",
     "modality": "TEAS",
-    "comparator": "See source-defined result contrast",
+    "comparator": "Sham-Controlled (no current output)",
     "randomized_n_report": 100,
     "randomized_n_counted": 100,
     "analyzed_n": "48 vs 49",
@@ -23,7 +23,8 @@
     "n_source_page": 5,
     "n_source_excerpt": "ly, 127 patients were assessed for study eligibility. Out of these, 18 patients did not meet the inclusion criteria and 9 declined participation. Consequently, 100 patients were successfully enrolled and subsequently randomized into two distinct groups: the TEAS group (n=50) and the Sham group (n=50). Each participant received the intervention assigned to their respective group. During the postoperative assessment period, two patients from the TEAS group and ",
     "decision": "RESOLVED — SOURCE DETERMINATIVE",
-    "notes": "Randomized trial total; analyzed populations remain outcome-specific."
+    "notes": "Randomized trial total; analyzed populations remain outcome-specific.",
+    "comparator_source_status": "SOURCE VERIFIED v36: \"Sham TEAS was performed using the same protocol as real TEAS, but without electrical current output from the stimulator.\""
   },
   {
     "trial_id": "An_2014",
@@ -49,7 +50,8 @@
     "n_source_page": 2,
     "n_source_excerpt": "hods Patients Following approval from the Human Research Committee of Beijing Tiantan Hospital, Capital Medical University and the receipt of informed consent, 88 ASA I–II adult patients aged 18–60 years who were undergoing supratentorial tumor resections under general 1100 L.-X. AN et al. Am. J. Chin. Med. 2014.42:1099-1109. Downloaded from www.worldscientific.com by LUND UNIVERSITY on 08/09/26. Re-use and distribution is strictly not permitted, except for ",
     "decision": "RESOLVED — SOURCE DETERMINATIVE",
-    "notes": "Randomized trial total; analyzed populations remain outcome-specific."
+    "notes": "Randomized trial total; analyzed populations remain outcome-specific.",
+    "comparator_source_status": "LEGACY STUDY-LEVEL LABEL; result-level comparator_class in canonical results governs model membership"
   },
   {
     "trial_id": "Ao_2021",
@@ -75,7 +77,8 @@
     "n_source_page": 2,
     "n_source_excerpt": "C‑reactive protein or leukocytosis (>10,000/ml) prior to surgery; and vi) puncture site infection or systemic infection. Randomization and blinding. A total of 70 patients were enrolled and randomly allocated to the TEAS group or the sham TEAS group using sequentially‑numbered sealed envelopes and a random number generator. The allocation ratio between the two groups was 1:1. The envelopes were prepared and distributed by an assistant who was not involved in",
     "decision": "RESOLVED — SOURCE DETERMINATIVE",
-    "notes": "Randomized trial total; analyzed populations remain outcome-specific."
+    "notes": "Randomized trial total; analyzed populations remain outcome-specific.",
+    "comparator_source_status": "LEGACY STUDY-LEVEL LABEL; result-level comparator_class in canonical results governs model membership"
   },
   {
     "trial_id": "Chen_1998",
@@ -101,7 +104,8 @@
     "n_source_page": 2,
     "n_source_excerpt": "and the recovery profiles in the early postoperative period were compared with a sham (control) treatment. Methods After we obtained written, informed consent, 100 ASA physical status I or II female patients scheduled for elective abdominal hysterectomy or myomectomy procedures were enrolled in this study. The study protocol was approved by the institutional review board at Cedars Sinai Medical Center. The patients were randomly assigned to one of four treatm",
     "decision": "RESOLVED — SOURCE DETERMINATIVE",
-    "notes": "Randomized trial total; analyzed populations remain outcome-specific."
+    "notes": "Randomized trial total; analyzed populations remain outcome-specific.",
+    "comparator_source_status": "LEGACY STUDY-LEVEL LABEL; result-level comparator_class in canonical results governs model membership"
   },
   {
     "trial_id": "Chen_2015",
@@ -127,7 +131,8 @@
     "n_source_page": 3,
     "n_source_excerpt": "1 patients for eligibility to participate in this study. Of these, 3 patients did not meet the inclusion criteria, 4 declined to participate, and the remaining 84 patients enrolled to the study. One patient from the TEAS group was later Figure 2. Consolidated Standards of Reporting Trials (CONSORT) flow diagram TEAS, transcutaneous electric acu- point stimulation. ",
     "decision": "RESOLVED — SOURCE DETERMINATIVE",
-    "notes": "Randomized trial total; analyzed populations remain outcome-specific."
+    "notes": "Randomized trial total; analyzed populations remain outcome-specific.",
+    "comparator_source_status": "LEGACY STUDY-LEVEL LABEL; result-level comparator_class in canonical results governs model membership"
   },
   {
     "trial_id": "Chen_2015_Hyperalgesia",
@@ -153,7 +158,8 @@
     "n_source_page": 4,
     "n_source_excerpt": "alyzed with the inde­ ticipate in this study (Figure 2). Of these, 7 patients did not meet the inclusion criteria, 6 declined to participate, and the remaining 60 patients enrolled to the study. One patient from the TEAS group was later excluded because of protocol breach. A total of 59 patients random­ ized to treatment allocation completed the study and their data were included in the analy­ sis. Patients demographic characteristics, durations of procedure",
     "decision": "RESOLVED — SOURCE DETERMINATIVE",
-    "notes": "Randomized trial total; analyzed populations remain outcome-specific."
+    "notes": "Randomized trial total; analyzed populations remain outcome-specific.",
+    "comparator_source_status": "LEGACY STUDY-LEVEL LABEL; result-level comparator_class in canonical results governs model membership"
   },
   {
     "trial_id": "Chen_2020",
@@ -179,7 +185,8 @@
     "n_source_page": 4,
     "n_source_excerpt": "ered to ana- lyze the primary endpoint (difference in the intensity of Figure 1 Study ﬂow chart. Table 1 Characteristics of patients enrolled in the study (n = 80) Characteristics TEAS group (n = 40) Sham-TEAS group (n = 40) P- value Age (years) 56.0 \u0001 3.7 55.8 \u0001 3.2 0.85 Gender (female/male) 17/23 18/22 0.82 BMI (kg/m2) 23.5 \u0001 0.9 23.4 \u0001 1.0 0.71 Histology type (ADC/SQCC) 23/17 25/15 0.65 Type of procedure (single/bilobectomy) 19/1 19/1 1.00 Duration of sur",
     "decision": "RESOLVED — SOURCE DETERMINATIVE",
-    "notes": "Randomized trial total; analyzed populations remain outcome-specific."
+    "notes": "Randomized trial total; analyzed populations remain outcome-specific.",
+    "comparator_source_status": "LEGACY STUDY-LEVEL LABEL; result-level comparator_class in canonical results governs model membership"
   },
   {
     "trial_id": "Coura_2011",
@@ -205,7 +212,8 @@
     "n_source_page": 3,
     "n_source_excerpt": " Original paper Randomised-32 Excluded-10 lnstability(4) Late extubation(3) Preoperative heat attack(i) Analgesia by epidural catheter(i) Mental confusion(i) Included - 22 Control-9 Treatment-13 Figure 1 Flow of participants through the study. Q. ñ e Extuti 2 6 8 10 12 14 16 18 20 22 Unw (hours altar extubation) Figure 2 Pain s",
     "decision": "RESOLVED — SOURCE DETERMINATIVE",
-    "notes": "Randomized trial total; analyzed populations remain outcome-specific."
+    "notes": "Randomized trial total; analyzed populations remain outcome-specific.",
+    "comparator_source_status": "LEGACY STUDY-LEVEL LABEL; result-level comparator_class in canonical results governs model membership"
   },
   {
     "trial_id": "El_Rakshy_2009",
@@ -231,7 +239,8 @@
     "n_source_page": 3,
     "n_source_excerpt": "into SPSS V.15.0 and Mann–Whitney U tests for non-parametric data were con- ducted to compare all outcomes. RESULTS The trial was conducted in 1999. A total of 107 patients were included (see fig 1). Five patients were withdrawn: two patients in the PCA + acupuncture group scheduled for laparoscopic cholecystectomy withdrew their consent because they did not want to have acupuncture. Three patients, all in the PCA alone group (one with abdominal hysterectomy,",
     "decision": "RESOLVED — SOURCE DETERMINATIVE",
-    "notes": "107 randomized in flow; allocation labels conflict across flow, baseline and abstract. Outcome Table 2: EA42/control53, not trial total."
+    "notes": "107 randomized in flow; allocation labels conflict across flow, baseline and abstract. Outcome Table 2: EA42/control53, not trial total.",
+    "comparator_source_status": "LEGACY STUDY-LEVEL LABEL; result-level comparator_class in canonical results governs model membership"
   },
   {
     "trial_id": "Gao_2021",
@@ -257,7 +266,8 @@
     "n_source_page": 3,
     "n_source_excerpt": "ntraoperative enterostomy, 18 patients whose surgeries were canceled, 4 patients who withdrew from the study, and 13 pa- tients with other reasons). A total of 610 patients were enrolled and randomly divided into 2 groups: 307 patients allocated to the sham group and 303 patients to the TEAS group. All 610 patients were included in the intention-to-treat analysis (Fig 1). No TEAS- related adverse events (eg, skin allergy) occurred in the study. Patients had g",
     "decision": "RESOLVED — SOURCE DETERMINATIVE",
-    "notes": "Randomized trial total; analyzed populations remain outcome-specific."
+    "notes": "Randomized trial total; analyzed populations remain outcome-specific.",
+    "comparator_source_status": "LEGACY STUDY-LEVEL LABEL; result-level comparator_class in canonical results governs model membership"
   },
   {
     "trial_id": "Gao_2022",
@@ -283,7 +293,8 @@
     "n_source_page": 4,
     "n_source_excerpt": "Results / CONSORT: 1,655 randomized, TEAS827 and sham828; separators in source preserved.",
     "decision": "RESOLVED — SOURCE DETERMINATIVE",
-    "notes": "Randomized trial total; analyzed populations remain outcome-specific."
+    "notes": "Randomized trial total; analyzed populations remain outcome-specific.",
+    "comparator_source_status": "LEGACY STUDY-LEVEL LABEL; result-level comparator_class in canonical results governs model membership"
   },
   {
     "trial_id": "Grech_2016",
@@ -309,7 +320,8 @@
     "n_source_page": 2,
     "n_source_excerpt": "ey Medical School, Rutgers University, Newark, NJ, USA and registered at clinicaltrials.gov (code NCT01937520). This wasa prospective double-blinded study with 20 patients undergoingthyroid and parathyroid surgery randomized in two groups: EA (n Z 11) group or sham (control, n Z 9) group. Participation was voluntary without economical compensation, and each participant signed a written consent. Exclusion criteria include pre-existing diabetes, cardiovascular",
     "decision": "RESOLVED — SOURCE DETERMINATIVE",
-    "notes": "Randomized trial total; analyzed populations remain outcome-specific."
+    "notes": "Randomized trial total; analyzed populations remain outcome-specific.",
+    "comparator_source_status": "LEGACY STUDY-LEVEL LABEL; result-level comparator_class in canonical results governs model membership"
   },
   {
     "trial_id": "Gu_2019",
@@ -335,7 +347,8 @@
     "n_source_page": 3,
     "n_source_excerpt": "ﬁcant. All analyses were performed with the Statistical Package for SPSS 24.0 (SPSS Inc., Chicago, IL, USA). 3. Results 3.1. Patients Of 139 screened patients, 120 patients met the inclusion criteria and were randomly allocated to one of the 2 study groups using random number tables. A total of 117 patients completed the trial (Fig. 2). No diﬀerences in the operation duration, TNM stage, operative method or anastomotic mode were observed among the groups. Bas",
     "decision": "RESOLVED — SOURCE DETERMINATIVE",
-    "notes": "Randomized trial total; analyzed populations remain outcome-specific."
+    "notes": "Randomized trial total; analyzed populations remain outcome-specific.",
+    "comparator_source_status": "LEGACY STUDY-LEVEL LABEL; result-level comparator_class in canonical results governs model membership"
   },
   {
     "trial_id": "Guo_2023",
@@ -361,7 +374,8 @@
     "n_source_page": 2,
     "n_source_excerpt": "n sequence was generated by Statistical Product and Service Solutions (SPSS 25.0) software, and the allocation code was performed by an independent technician, 128 patients were enrolled and randomly assigned to the TEAS group and the sham- F. Guo et al. ",
     "decision": "RESOLVED — SOURCE DETERMINATIVE",
-    "notes": "Randomized trial total; analyzed populations remain outcome-specific."
+    "notes": "Randomized trial total; analyzed populations remain outcome-specific.",
+    "comparator_source_status": "LEGACY STUDY-LEVEL LABEL; result-level comparator_class in canonical results governs model membership"
   },
   {
     "trial_id": "He_2026_breast_WJCO",
@@ -387,7 +401,8 @@
     "n_source_page": 4,
     "n_source_excerpt": " we collected and recorded all possible demographic and characteristic data as a baseline to describe the homogeneity of both groups of breast cancer patients. 130 patients were included in the statistics. No significant differences in baseline characteristics were found between the two groups (P > 0.05; Table 1). Primary outcome EA reduced the incidence of moderate to severe pain during exercise 24 hours after surgery. Specifically, 32 of 65 (49.2%) in the E",
     "decision": "RESOLVED — SOURCE DETERMINATIVE",
-    "notes": "Randomized trial total; analyzed populations remain outcome-specific."
+    "notes": "Randomized trial total; analyzed populations remain outcome-specific.",
+    "comparator_source_status": "LEGACY STUDY-LEVEL LABEL; result-level comparator_class in canonical results governs model membership"
   },
   {
     "trial_id": "He_2026_hepatectomy_JIS",
@@ -413,7 +428,8 @@
     "n_source_page": 2,
     "n_source_excerpt": "mary outcome was the incidence of PONV within 24 h postoperatively. Key secondary outcomes included the severity of PONV and pain after surgery. Results: Among 161 randomized patients, 159 completed the study. No significant difference was observed in the incidence of PONV within 24 h postoperatively between the TEAS and control groups (23.8% vs. 26.6%; OR, 95% CI: 0.86, 0.42–1.76). However, the TEAS group exhibited less patient controlled analgesia (PCA) att",
     "decision": "RESOLVED — SOURCE DETERMINATIVE",
-    "notes": "Randomized trial total; analyzed populations remain outcome-specific."
+    "notes": "Randomized trial total; analyzed populations remain outcome-specific.",
+    "comparator_source_status": "LEGACY STUDY-LEVEL LABEL; result-level comparator_class in canonical results governs model membership"
   },
   {
     "trial_id": "Hou_2023",
@@ -439,7 +455,8 @@
     "n_source_page": 4,
     "n_source_excerpt": "vels). P values < 0.05 were considered statistically significant. All analyses were performed using IBM®SPSS 25.0 (Armonk, New York USA). 3. Results A total of 74 LKDs were recruited but two LKDs withdrew from the study for personal reasons (Fig. 1). Therefore, only 72 LKDs completed the study and were included in the final data analyses. There were no differences in baseline characteristics between the groups (Table 2). There were also no significant differ",
     "decision": "RESOLVED — SOURCE DETERMINATIVE",
-    "notes": "Randomized trial total; analyzed populations remain outcome-specific."
+    "notes": "Randomized trial total; analyzed populations remain outcome-specific.",
+    "comparator_source_status": "LEGACY STUDY-LEVEL LABEL; result-level comparator_class in canonical results governs model membership"
   },
   {
     "trial_id": "Huang_2017",
@@ -465,7 +482,8 @@
     "n_source_page": 4,
     "n_source_excerpt": "ase with American Society of Anesthesiologists score Recent use of TEAS or acupuncture Neural damage or infection along the meridian on which the acupoints lie 80 patients who met the inclusion criteria Con group n = 20 2/100 Hz n = 20 2 Hz n = 20 100 Hz n = 20 Fig. 1 Flow chart of trial distribution ",
     "decision": "RESOLVED — SOURCE DETERMINATIVE",
-    "notes": "Randomized trial total; analyzed populations remain outcome-specific."
+    "notes": "Randomized trial total; analyzed populations remain outcome-specific.",
+    "comparator_source_status": "LEGACY STUDY-LEVEL LABEL; result-level comparator_class in canonical results governs model membership"
   },
   {
     "trial_id": "Huang_2024",
@@ -491,7 +509,8 @@
     "n_source_page": 1,
     "n_source_excerpt": "or sham EA in terms of relieving postoperative pain and promoting post-TKA rehabilitation. Methods: In this parallel, single-blind randomized controlled trial, 114 patients undergoing unilateral TKA were assigned to the contralateral EA (EA on the contralateral side + sham EA on the ipsilateral), ipsilateral EA (EA on the ipsilateral + sham EA on the contralateral side), or sham EA (sham EA on both sides) groups (n = 38 each). Treatment was performed once dai",
     "decision": "RESOLVED — SOURCE DETERMINATIVE",
-    "notes": "Randomized trial total; analyzed populations remain outcome-specific."
+    "notes": "Randomized trial total; analyzed populations remain outcome-specific.",
+    "comparator_source_status": "LEGACY STUDY-LEVEL LABEL; result-level comparator_class in canonical results governs model membership"
   },
   {
     "trial_id": "Huang_2025",
@@ -500,7 +519,7 @@
     "country": "China",
     "surgery": "Laparoscopic hysterectomy with or without salpingo-oophorectomy or salpingectomy",
     "modality": "EA",
-    "comparator": "Sham-Controlled (Placebo Double-Blind)",
+    "comparator": "Usual care / standard care",
     "randomized_n_report": 101,
     "randomized_n_counted": 101,
     "analyzed_n": "43 vs 45",
@@ -517,7 +536,8 @@
     "n_source_page": 4,
     "n_source_excerpt": "The remaining patients were randomly allocated to the EA arm (n = 51) or the Standard care group (n = 50). Total101 derived by addition.",
     "decision": "RESOLVED — SOURCE DETERMINATIVE",
-    "notes": "Randomized trial total; analyzed populations remain outcome-specific."
+    "notes": "Randomized trial total; analyzed populations remain outcome-specific.",
+    "comparator_source_status": "SOURCE VERIFIED v36: \"randomly allocated to the EA arm (n = 51) or the Standard care group (n = 50).\""
   },
   {
     "trial_id": "Jiang_2026",
@@ -543,7 +563,8 @@
     "n_source_page": 3,
     "n_source_excerpt": "eligibility. Of these, 612 were eliminated because of failure to meet the inclusion criteria, refusal to take part in this study, or other reasons. Ultimately, 614 eligible patients were allocated to the TEAS (n = 308) or sham-TEAS (n = 306) group. During this study, 12 and 9 patients in the TEAS and sham-TEAS groups, respectively, withdrew. Thus, 587 patients (TEAS: n = 294; sham-TEAS: n = 293) were included in this study and were thereby enrolled in the fin",
     "decision": "RESOLVED — SOURCE DETERMINATIVE",
-    "notes": "614 randomized 308/306; mITT593=296/297; PP587=294/293. Baseline sex/ASA denominators conflict; not repaired."
+    "notes": "614 randomized 308/306; mITT593=296/297; PP587=294/293. Baseline sex/ASA denominators conflict; not repaired.",
+    "comparator_source_status": "LEGACY STUDY-LEVEL LABEL; result-level comparator_class in canonical results governs model membership"
   },
   {
     "trial_id": "Jin_2023",
@@ -569,7 +590,8 @@
     "n_source_page": 3,
     "n_source_excerpt": "as set at P<.05/ k (k for number of comparisons). Results Patients and baseline characteristics A total of 453 patients were planned scheduled for CD, of which 174 eligible patients were enrolled; 250 patients were excluded for different reasons, and 29 were not randomized. The 174 patients were randomized to receive PCIA + 2-Hz EA (n=58), PCIA + 20/ 100−Hz EA (n=58), or PCIA + sham EA (n=58) treatment (Figure 1). Of note, 16 patients (9.2%) dropped out of th",
     "decision": "RESOLVED — SOURCE DETERMINATIVE",
-    "notes": "174 randomized58/58/58;158 completed53/53/52. General anaesthesia not established from supplied main report; HOLD inference pending source verification."
+    "notes": "174 randomized58/58/58;158 completed53/53/52. General anaesthesia not established from supplied main report; HOLD inference pending source verification.",
+    "comparator_source_status": "LEGACY STUDY-LEVEL LABEL; result-level comparator_class in canonical results governs model membership"
   },
   {
     "trial_id": "Lee_2011",
@@ -595,7 +617,8 @@
     "n_source_page": 3,
     "n_source_excerpt": "eceived allocated intervention (n = 12) Group 4 received allocated intervention (n = 12) Randomly assigned to group 1, 2, 3, or 4 Assessed for eligibility (n = 49) Analysed (n = 13) Analysed (n = 12) Analysed (n = 12) Analysed (n = 10) Completed allocated intervention (n = 13) Completed allocated intervention (n = 12) Completed allocated intervention (n = 12) Discontinued intervention (n = 2) due to the inability to carry out the VAS Follow up Enrolment Allo",
     "decision": "RESOLVED — SOURCE DETERMINATIVE",
-    "notes": "49 randomized13/12/12/12; two low-frequency participants excluded;47 analyzed. Abstract calls47 randomized; flow/body control."
+    "notes": "49 randomized13/12/12/12; two low-frequency participants excluded;47 analyzed. Abstract calls47 randomized; flow/body control.",
+    "comparator_source_status": "LEGACY STUDY-LEVEL LABEL; result-level comparator_class in canonical results governs model membership"
   },
   {
     "trial_id": "Li_2021",
@@ -621,7 +644,8 @@
     "n_source_page": 1,
     "n_source_excerpt": "patients with gastric and colorectal surgery for improving postoperative gastrointestinal function. Design, setting, participants and interventions: A total of 280 patients undergoing abdominal surgery were stratiﬁed by type of surgery (i.e., gastric or colorectal surgery) and randomly allocated into the TEAS group (group T) or the sham group (group S). Patients in group T received TEAS at LI4, PC6, ST36 and ST37. Patients in group S received pseudo-TEAS at s",
     "decision": "RESOLVED — SOURCE DETERMINATIVE",
-    "notes": "Randomized trial total; analyzed populations remain outcome-specific."
+    "notes": "Randomized trial total; analyzed populations remain outcome-specific.",
+    "comparator_source_status": "LEGACY STUDY-LEVEL LABEL; result-level comparator_class in canonical results governs model membership"
   },
   {
     "trial_id": "Li_2022",
@@ -647,7 +671,8 @@
     "n_source_page": 4,
     "n_source_excerpt": "of 80 patients, should be reasonable for our study. Results Patient Features, Surgery, and Anesthesia All 83 eligible subjects were included in the study, with 80 being hospitalized and randomly assigned to one of the two groups. One patient dropped out of the EA group after declining to undergo the procedure. The records of the remaining 79 patients were analyzed. Figure 2 depicts the study’s flow diagram. Figure 1 Electronic von Frey (EvF) device. https://",
     "decision": "RESOLVED — SOURCE DETERMINATIVE",
-    "notes": "Randomized trial total; analyzed populations remain outcome-specific."
+    "notes": "Randomized trial total; analyzed populations remain outcome-specific.",
+    "comparator_source_status": "LEGACY STUDY-LEVEL LABEL; result-level comparator_class in canonical results governs model membership"
   },
   {
     "trial_id": "Liang_2021",
@@ -656,7 +681,7 @@
     "country": "China",
     "surgery": "Transurethral resection of the prostate (TURP)",
     "modality": "TEAS",
-    "comparator": "Usual Care (Open-Label Control)",
+    "comparator": "Usual care / no stimulation (no sham procedure described)",
     "randomized_n_report": 75,
     "randomized_n_counted": 75,
     "analyzed_n": "35 vs 35",
@@ -673,7 +698,8 @@
     "n_source_page": 5,
     "n_source_excerpt": "ta is presented as mean standard deviations. TEAS: transcutaneous electrical acupoint stimulation. Enrollment Assessed for eligibility (n = 80) Randomized (n = 75) Allocation Lost to follow-up (surgical procedure change) (n = 3) Discontinued intervention (n = 0) Lost to follow-up (n = 0) Discontinued intervention (blood sample loss, failure to arterial puncture) (n = 2) Follow-up Analysis Excluded (n = 5) Not meeting inclusion criteria (n = 3) (i) Other reas",
     "decision": "RESOLVED — SOURCE DETERMINATIVE",
-    "notes": "Randomized trial total; analyzed populations remain outcome-specific."
+    "notes": "Randomized trial total; analyzed populations remain outcome-specific.",
+    "comparator_source_status": "SOURCE VERIFIED v36: \"in control group, the patients received no stimulation.\""
   },
   {
     "trial_id": "Lin_2002",
@@ -699,7 +725,8 @@
     "n_source_page": 2,
     "n_source_excerpt": ", as well as postoperative opioid-related side effects. 2. Methods 2.1. Subjects The study protocol was approved by the Hospital Research Committee. A total of 100 female patients were enrolled. After providing written informed consent, patients of ASA physical status I–II (American Society of Anesthe- siology nomenclature) who were scheduled for abdominal hysterectomy were randomly divided into four groups of 25 each by a computer-generated randomization seq",
     "decision": "RESOLVED — SOURCE DETERMINATIVE",
-    "notes": "Randomized trial total; analyzed populations remain outcome-specific."
+    "notes": "Randomized trial total; analyzed populations remain outcome-specific.",
+    "comparator_source_status": "LEGACY STUDY-LEVEL LABEL; result-level comparator_class in canonical results governs model membership"
   },
   {
     "trial_id": "Liu_2015",
@@ -725,7 +752,8 @@
     "n_source_page": 1,
     "n_source_excerpt": "ctrical acupuncture stimulation (TEAS) during supratentorial tumour resection for postoperative recovery and side effects. Methods In a blinded clinical trial, 92 patients scheduled for supratentorial craniotomy under general anaesthesia were randomly allocated into either a multipoint TEAS (n=46) or a sham TEAS group (n=46). All patients received total intravenous anaesthesia (TIVA) with propofol and sufentanil. The target concentration of sufentanil was ad",
     "decision": "RESOLVED — SOURCE DETERMINATIVE",
-    "notes": "Randomized trial total; analyzed populations remain outcome-specific."
+    "notes": "Randomized trial total; analyzed populations remain outcome-specific.",
+    "comparator_source_status": "LEGACY STUDY-LEVEL LABEL; result-level comparator_class in canonical results governs model membership"
   },
   {
     "trial_id": "Liu_2021",
@@ -734,7 +762,7 @@
     "country": "China",
     "surgery": "Elderly patients undergoing laparoscopic radical resection of colon cancer",
     "modality": "TEAS",
-    "comparator": "Usual Care (Open-Label Control)",
+    "comparator": "Sham-Controlled (electrodes placed, no current)",
     "randomized_n_report": 100,
     "randomized_n_counted": 100,
     "analyzed_n": "50 vs 50",
@@ -751,7 +779,8 @@
     "n_source_page": 4,
     "n_source_excerpt": "ry drugs (n = 1 [0.95%]), aural disorders inability to cooperate (n = 2 [1.9%]), skin damage located on the right ST36 acupoints (n = 1 [0.95%]). The remaining 100 patients were randomly divided into Group T and Group C (Figure 2). Patient Characteristics The patients included into this final cohort were all Han Chinese, the general characteristics of the entire patients included gender [female, 49 (49%)], age (70.24±5.143 years), BMI (24.78±3.04 kg/m2), Amer",
     "decision": "RESOLVED — SOURCE DETERMINATIVE",
-    "notes": "Randomized trial total; analyzed populations remain outcome-specific."
+    "notes": "Randomized trial total; analyzed populations remain outcome-specific.",
+    "comparator_source_status": "SOURCE VERIFIED v36: \"In Group C, electrodes were placed in the same position as Group T, but no electric current stimulation was performed.\""
   },
   {
     "trial_id": "Liu_2025",
@@ -777,7 +806,8 @@
     "n_source_page": 4,
     "n_source_excerpt": ".org 3 Results Between December 2023 and July 2024, 132 patients were screened for eligibility. 52 (39%) were excluded according to the exclusion criteria, and 80 patients were enrolled in this study. In the EA group, one patient had an additional incision during thoracoscopic procedure, and another patient had the ECG leads detached during ECG monitoring. Therefore, these two patients were withdrawn from the study. In the control group, there was also a pat",
     "decision": "RESOLVED — SOURCE DETERMINATIVE",
-    "notes": "Randomized trial total; analyzed populations remain outcome-specific."
+    "notes": "Randomized trial total; analyzed populations remain outcome-specific.",
+    "comparator_source_status": "LEGACY STUDY-LEVEL LABEL; result-level comparator_class in canonical results governs model membership"
   },
   {
     "trial_id": "Liu_2026_ESD",
@@ -803,7 +833,8 @@
     "n_source_page": 4,
     "n_source_excerpt": "ASA Physical Status Classiﬁ cation grades > Ċ, 125 had took part in earlier research, 2 with cardiac pacemakers, and 5 had opted out of the trial. As a result, 129 patients were enrolled and randomized assigned to the TEAS or the sham group. One patient from the TEAS group and 1 from the sham group were converted to laparotomy due to further pathological infiltration of lesions and were eliminated from the study. Two patients from the TEAS group and 1 from th",
     "decision": "RESOLVED — SOURCE DETERMINATIVE",
-    "notes": "Randomized trial total; analyzed populations remain outcome-specific."
+    "notes": "Randomized trial total; analyzed populations remain outcome-specific.",
+    "comparator_source_status": "LEGACY STUDY-LEVEL LABEL; result-level comparator_class in canonical results governs model membership"
   },
   {
     "trial_id": "Liu_2026_burn",
@@ -829,7 +860,8 @@
     "n_source_page": 5,
     "n_source_excerpt": "Visually verified CONSORT Figure 1: randomized88; allocated44/44; analyzed43/43. Abstract86 is analyzed, not randomized.",
     "decision": "RESOLVED — SOURCE DETERMINATIVE",
-    "notes": "Randomized trial total; analyzed populations remain outcome-specific."
+    "notes": "Randomized trial total; analyzed populations remain outcome-specific.",
+    "comparator_source_status": "LEGACY STUDY-LEVEL LABEL; result-level comparator_class in canonical results governs model membership"
   },
   {
     "trial_id": "Long_2025",
@@ -855,7 +887,8 @@
     "n_source_page": 3,
     "n_source_excerpt": "as assessed using the X2- test. P < 0.05 was considered statistically significant. Results Clinical characteristics of patients and surgical results A total of 60 patients who met the inclusion and exclusion criteria were initially enrolled. Two patients withdrew consent, one canceled surgery, and four were lost to follow-up. Ultimately, 53 patients were included in the trial. The patients were randomly assigned to Group C (n = 26) and Group A (n = 27) using",
     "decision": "RESOLVED — SOURCE DETERMINATIVE",
-    "notes": "Needle OR patch wording prevents physical modality determination. Retain registry; HOLD modality-specific inference."
+    "notes": "Needle OR patch wording prevents physical modality determination. Retain registry; HOLD modality-specific inference.",
+    "comparator_source_status": "LEGACY STUDY-LEVEL LABEL; result-level comparator_class in canonical results governs model membership"
   },
   {
     "trial_id": "Lu_2021",
@@ -881,7 +914,8 @@
     "n_source_page": 3,
     "n_source_excerpt": "oups (40%), using two degrees of freedom chi-square test with a significance alpha level of 0.05. Considering a dropout rate of 5%, we defined a sample size of 576 participants. We performed all the analyses in an intention-to-treat population, which included all patients who had undergone randomization and in­ terventions. Descriptive statistics were applied to present the charac­ teristics of each group with mean ± standard deviation, median (interquartile)",
     "decision": "RESOLVED — SOURCE DETERMINATIVE",
-    "notes": "Randomized trial total; analyzed populations remain outcome-specific."
+    "notes": "Randomized trial total; analyzed populations remain outcome-specific.",
+    "comparator_source_status": "LEGACY STUDY-LEVEL LABEL; result-level comparator_class in canonical results governs model membership"
   },
   {
     "trial_id": "Lu_2022",
@@ -907,7 +941,8 @@
     "n_source_page": 3,
     "n_source_excerpt": " P-value of 0.05 was considered as statistically significant with a 95% confidence interval (95% CI). Results From November 2016 through March 2018, a total of 100 patients were enrolled at 3 hospitals. We randomly assigned 50 patients to each group (Figure 1). After randomization, 5 patients were excluded due to procedure converting from laparoscopic to open surgery and 1 patient was excluded due to rejection to TEAS (Figure 1). There was no significant diff",
     "decision": "RESOLVED — SOURCE DETERMINATIVE",
-    "notes": "Randomized trial total; analyzed populations remain outcome-specific."
+    "notes": "Randomized trial total; analyzed populations remain outcome-specific.",
+    "comparator_source_status": "LEGACY STUDY-LEVEL LABEL; result-level comparator_class in canonical results governs model membership"
   },
   {
     "trial_id": "Luo_2026",
@@ -933,7 +968,8 @@
     "n_source_page": 3,
     "n_source_excerpt": " 286 patients were assessed for eligibility. Of these, nine were excluded (four did not meet the inclusion criteria; five declined participation), resulting in 277 patients who under­ went randomization. Ultimately, all randomized partici­ pants (TEAS group, n = 138; Sham-TEAS group, n = 139) were included in the final analysis (Fig. 1). Baseline ",
     "decision": "RESOLVED — SOURCE DETERMINATIVE",
-    "notes": "Randomized trial total; analyzed populations remain outcome-specific."
+    "notes": "Randomized trial total; analyzed populations remain outcome-specific.",
+    "comparator_source_status": "LEGACY STUDY-LEVEL LABEL; result-level comparator_class in canonical results governs model membership"
   },
   {
     "trial_id": "Ma_2026",
@@ -959,7 +995,8 @@
     "n_source_page": 5,
     "n_source_excerpt": "or not meeting inclusion criteria. Sixty-one patients were enrolled: 26 patients with PSQI < 6 were assigned to the non-randomized control group (Group C), and 35 patients with PSQI ≥ 6 were randomly allocated (1:1) to the sleep disturbance group (Group S, n = 17) or the TEAS intervention group (Group T, n = 18). During the follow-up period, one patient in Group S and one patient in Group T were lost to follow-up due to incomplete postoperative data. Consequ",
     "decision": "RESOLVED — SOURCE DETERMINATIVE",
-    "notes": "Only35 randomized18/17. Nonrandomized normal-sleep group26 excluded from randomized total."
+    "notes": "Only35 randomized18/17. Nonrandomized normal-sleep group26 excluded from randomized total.",
+    "comparator_source_status": "LEGACY STUDY-LEVEL LABEL; result-level comparator_class in canonical results governs model membership"
   },
   {
     "trial_id": "Ng_2013",
@@ -985,7 +1022,8 @@
     "n_source_page": 3,
     "n_source_excerpt": "tive laparoscopic resection of colonic and upper rectal cancer who were assessed for eligibility; of these, 43 patients were excluded after surgery. A total of 165 patients subse- quently were enrolled and randomized to receive either EA (55 patients), SA (55 patients), or NA (55 patients) (Sup- plementary Figure 1). There was no withdrawal or drop- out, and all recruited patients were available for analysis of primary and secondary outcomes. No adverse event",
     "decision": "RESOLVED — SOURCE DETERMINATIVE",
-    "notes": "Randomized trial total; analyzed populations remain outcome-specific."
+    "notes": "Randomized trial total; analyzed populations remain outcome-specific.",
+    "comparator_source_status": "LEGACY STUDY-LEVEL LABEL; result-level comparator_class in canonical results governs model membership"
   },
   {
     "trial_id": "Ntritsou_2014",
@@ -1011,7 +1049,8 @@
     "n_source_page": 3,
     "n_source_excerpt": "05 were considered statistically significant. IBM SPSS Statistics V.19.0.0 (SPSS, Chicago, Illinois, USA) was used for statistical analyses. RESULTS A total of 75 patients were included in the trial. Three patients from the control group and two patients from the EA group were excluded during the study, so a total of 70 patients completed the study with 35 in each group (figure 1). The study lasted from January to December 2012. The baseline demographic and ",
     "decision": "RESOLVED — SOURCE DETERMINATIVE",
-    "notes": "Randomized trial total; analyzed populations remain outcome-specific."
+    "notes": "Randomized trial total; analyzed populations remain outcome-specific.",
+    "comparator_source_status": "LEGACY STUDY-LEVEL LABEL; result-level comparator_class in canonical results governs model membership"
   },
   {
     "trial_id": "Oztas_2019",
@@ -1037,7 +1076,8 @@
     "n_source_page": 1,
     "n_source_excerpt": "Research sample consisted of 48 patients who underwent abdominal surgery with a midline incision; patients randomized into three groups.",
     "decision": "RESOLVED — SOURCE DETERMINATIVE",
-    "notes": "Randomized trial total; analyzed populations remain outcome-specific."
+    "notes": "Randomized trial total; analyzed populations remain outcome-specific.",
+    "comparator_source_status": "LEGACY STUDY-LEVEL LABEL; result-level comparator_class in canonical results governs model membership"
   },
   {
     "trial_id": "Pan_2023",
@@ -1046,7 +1086,7 @@
     "country": "China",
     "surgery": "Women undergoing laparoscopic myomectomy / hysteromyomectomy",
     "modality": "TEAS",
-    "comparator": "Sham-Controlled (Placebo Double-Blind)",
+    "comparator": "Usual care / no stimulation (no sham procedure described)",
     "randomized_n_report": 120,
     "randomized_n_counted": 120,
     "analyzed_n": "52 / 53",
@@ -1063,7 +1103,8 @@
     "n_source_page": 2,
     "n_source_excerpt": "er: ChiCTR2100045173; Registry URL: YJLCYJ-2020-148). The study was conducted in accordance with the Declaration of Helsinki. Included in the study cohort were 120 women (ASA I and II) aged 18 to 60 years and who received laparoscopic myomectomy at the First Affiliated Hospital, WMU, Zhejiang, China, from May 2021 to December 2021. Patients were assigned to TEAS group (Group T) and control group (Group C) using random number tables. All participants provided ",
     "decision": "RESOLVED — SOURCE DETERMINATIVE",
-    "notes": "120 randomized 60/60; outcome analysis52/53. Flow attrition arm labels conflict; trial total retained."
+    "notes": "120 randomized 60/60; outcome analysis52/53. Flow attrition arm labels conflict; trial total retained.",
+    "comparator_source_status": "SOURCE VERIFIED v36: \"Patients in Group C did not undergo TEAS.\""
   },
   {
     "trial_id": "Seevaunnamtum_2016",
@@ -1089,7 +1130,8 @@
     "n_source_page": 5,
     "n_source_excerpt": " Praveena Seevaunnamtum S et al. Randomisation n = 64 Allocated to Receive EA (n = 32) Allocated to Control (n = 32) Followed up at 30 minutes, 2 hours and 4 hours (n = 32) No drop out NRS, incidence of nausea and need of rescue antiemetics measured Followed up at 30 minutes, 2 hours and 4 hours (n = 32) No drop out NRS, incidence of nausea and need o",
     "decision": "RESOLVED — SOURCE DETERMINATIVE",
-    "notes": "Randomized trial total; analyzed populations remain outcome-specific."
+    "notes": "Randomized trial total; analyzed populations remain outcome-specific.",
+    "comparator_source_status": "LEGACY STUDY-LEVEL LABEL; result-level comparator_class in canonical results governs model membership"
   },
   {
     "trial_id": "Sim_2002",
@@ -1115,7 +1157,8 @@
     "n_source_page": 2,
     "n_source_excerpt": "thesia, whereas a value of more than 70 is frequently seen during awakening.3 Methods After obtaining Ethics Committee’s approval and written informed consent, 90 female patients were recruited, American Society of Anaesthesiologists physical status (ASA) I or II, who underwent the above-mentioned elective surgery under balanced general anaesthesia that lasted for more than one hour. Exclusion criteria included: previous history of acupuncture, ASA physical ",
     "decision": "RESOLVED — SOURCE DETERMINATIVE",
-    "notes": "Randomized trial total; analyzed populations remain outcome-specific."
+    "notes": "Randomized trial total; analyzed populations remain outcome-specific.",
+    "comparator_source_status": "LEGACY STUDY-LEVEL LABEL; result-level comparator_class in canonical results governs model membership"
   },
   {
     "trial_id": "Song_2020",
@@ -1124,7 +1167,7 @@
     "country": "China",
     "surgery": "Elective video-assisted thoracoscopic surgery (VATS)",
     "modality": "TEAS",
-    "comparator": "Sham-Controlled (Placebo Double-Blind)",
+    "comparator": "Active non-acupoint electrical stimulation (separate active-control class)",
     "randomized_n_report": 85,
     "randomized_n_counted": 85,
     "analyzed_n": "ITT TEAS 42 / Control 43 (PP 38 / 40 reported separately)",
@@ -1141,7 +1184,8 @@
     "n_source_page": 4,
     "n_source_excerpt": "partici­ pate in this study. Among them, 15 patients did not meet the inclusion criteria, and 9 patients refuse to participate (Figure 1). Finally, we included 85 patients in the ITT population and 78 in the PP population (three patients were allergic to TEAS, two patients were transferred to the intensive care unit after surgery, and two patients removal of the drainage tube was delayed). Demographic Characteristics of the Two Groups There were no statistic",
     "decision": "RESOLVED — SOURCE DETERMINATIVE",
-    "notes": "Randomized trial total; analyzed populations remain outcome-specific."
+    "notes": "Randomized trial total; analyzed populations remain outcome-specific.",
+    "comparator_source_status": "SOURCE VERIFIED v36: \"Patients in the control group received electrical stimulation at a nonacupoint.\""
   },
   {
     "trial_id": "Sun_2017",
@@ -1167,7 +1211,8 @@
     "n_source_page": 3,
     "n_source_excerpt": " P < 0.05 was considered statistically signiﬁcant. RESULTS During the study period, 435 patients were assessed for eligibility. After exclusion of 55 patients, 380 patients were randomized into 4 groups with 95 patients per group. A total of 19 patients were withdrawn by the end of the trial due to follow-up lost (n= 8), change of surgery (n= 6), prolonged surgery time (n= 2), and intraoperative complications (n= 3), leaving 361 patients for analysis (Fig. 1)",
     "decision": "RESOLVED — SOURCE DETERMINATIVE",
-    "notes": "Randomized trial total; analyzed populations remain outcome-specific."
+    "notes": "Randomized trial total; analyzed populations remain outcome-specific.",
+    "comparator_source_status": "LEGACY STUDY-LEVEL LABEL; result-level comparator_class in canonical results governs model membership"
   },
   {
     "trial_id": "Szmit_2021",
@@ -1193,7 +1238,8 @@
     "n_source_page": 7,
     "n_source_excerpt": "ults 3.1. Participants and Baseline Characteristic The recruitment and follow-up of the trial participants are presented in Figure 1. Of 140 patients screened, 71 patients were randomly assigned to the TEAS, Sham, or control group. The study included 60 men (84.5%) and 11 women (15.5%) aged 23 to 89 years (mean 57.6; standard deviation SD = 14.6 years). The baseline characteristic of the randomized groups is presented in Table 1. All three patient groups wer",
     "decision": "RESOLVED — SOURCE DETERMINATIVE",
-    "notes": "Randomized trial total; analyzed populations remain outcome-specific."
+    "notes": "Randomized trial total; analyzed populations remain outcome-specific.",
+    "comparator_source_status": "LEGACY STUDY-LEVEL LABEL; result-level comparator_class in canonical results governs model membership"
   },
   {
     "trial_id": "Tu_2024",
@@ -1219,7 +1265,8 @@
     "n_source_page": 1,
     "n_source_excerpt": "ation (TEAS) at P6 as an adjunct to antiemetic drugs to prevent PONV after craniotomy. Materials and methods: This randomized placebo-controlled trial enrolled 120 patients scheduled for craniotomy. The enrolled patients were randomly assigned to a TEAS or sham TEAS group. The incidence of PONV, pain score, and postoperative remedial treatment with antiemetics and analgesics at 0–2, 2–6, and 6–24 h after craniotomy were assessed. Results: The patient characte",
     "decision": "RESOLVED — SOURCE DETERMINATIVE",
-    "notes": "Randomized trial total; analyzed populations remain outcome-specific."
+    "notes": "Randomized trial total; analyzed populations remain outcome-specific.",
+    "comparator_source_status": "LEGACY STUDY-LEVEL LABEL; result-level comparator_class in canonical results governs model membership"
   },
   {
     "trial_id": "Wang_2023",
@@ -1245,7 +1292,8 @@
     "n_source_page": 5,
     "n_source_excerpt": "lity to partic- ipate in this study initially. Among them, seven patients did not meet the inclusion criteria, and three declined to participate. The remaining 88 patients were enrolled in the study. Later, three patients from the TEAS group and two from the Fig. 1 Location of Shenmen (HT7), Neiguan (PC6) and Zusanli (ST36) acupoints. a Lateral view, b front view Pain Ther (2023) 12:707–722 711 ",
     "decision": "RESOLVED — SOURCE DETERMINATIVE",
-    "notes": "Randomized trial total; analyzed populations remain outcome-specific."
+    "notes": "Randomized trial total; analyzed populations remain outcome-specific.",
+    "comparator_source_status": "LEGACY STUDY-LEVEL LABEL; result-level comparator_class in canonical results governs model membership"
   },
   {
     "trial_id": "Wang_2024",
@@ -1271,7 +1319,8 @@
     "n_source_page": 3,
     "n_source_excerpt": "n + Dex, OD) or Ondan + Dex + TEAS (ODT) treat- ment subgroups (SNVP-OD group vs. SNVP-ODT group, MNVP-OD group vs. MNVP-ODT group). Prior to study initiation, 140 sequentially numbered envelopes containing the allocations were prepared. A physician independent of the study randomly inserted 70 treatment strategies for each group into the envelope. A random allocation sequence was generated by using computer-generated random numbers. The researchers opened an",
     "decision": "RESOLVED — SOURCE DETERMINATIVE",
-    "notes": "140 randomized across two risk strata, each 35 OD/35 ODT. SNVP/MNVP totals are risk strata, not intervention arms."
+    "notes": "140 randomized across two risk strata, each 35 OD/35 ODT. SNVP/MNVP totals are risk strata, not intervention arms.",
+    "comparator_source_status": "LEGACY STUDY-LEVEL LABEL; result-level comparator_class in canonical results governs model membership"
   },
   {
     "trial_id": "Wong_2006",
@@ -1297,7 +1346,8 @@
     "n_source_page": 3,
     "n_source_excerpt": "an 0.05 were regarded as statistically signiﬁcant. Results Subjects were recruited from January 2002 to August 2004. A total of 153 patients were screened, and 27 (17.6%) were enrolled. Two patients were subsequently excluded from the study because of postoperative complications unrelated to acupuncture: one patient experienced respi- ratory failure requiring ventilatory support and the other Fig 1. Contrast between the needle used in electro-acupuncture (up",
     "decision": "RESOLVED — SOURCE DETERMINATIVE",
-    "notes": "Randomized trial total; analyzed populations remain outcome-specific."
+    "notes": "Randomized trial total; analyzed populations remain outcome-specific.",
+    "comparator_source_status": "LEGACY STUDY-LEVEL LABEL; result-level comparator_class in canonical results governs model membership"
   },
   {
     "trial_id": "Wu_2016",
@@ -1323,7 +1373,8 @@
     "n_source_page": 5,
     "n_source_excerpt": " EXPERIMENTAL AND THERAPEUTIC MEDICINE 11: 495-502, 2016 499 Results Demographic and surgical information. Of the 90 patients, nine were excluded: Three due to serious postoperative complications (two in group 2, and one in group 3), and six due to incomplete data collection (three in group 1, one in group 2 and two in group 3). Thus, a total of 81 patients were included in the data analysis. There were no signif",
     "decision": "RESOLVED — SOURCE DETERMINATIVE",
-    "notes": "Randomized trial total; analyzed populations remain outcome-specific."
+    "notes": "Randomized trial total; analyzed populations remain outcome-specific.",
+    "comparator_source_status": "LEGACY STUDY-LEVEL LABEL; result-level comparator_class in canonical results governs model membership"
   },
   {
     "trial_id": "Wu_2022",
@@ -1349,7 +1400,8 @@
     "n_source_page": 2,
     "n_source_excerpt": "ical complications such as the patient falling into a coma. Randomization and blinding The sample size was determined by previous literature. All patients (n = 90) were randomized using a computer- generated number. Numbers 1 to 45 were assigned to the pTEAS group, while numbers 46–90 were assigned to the Control group. All researchers involved in this study were blinded to these groupings. Only the stimulator was aware of the groupings; however, the stimula",
     "decision": "RESOLVED — SOURCE DETERMINATIVE",
-    "notes": "Randomized trial total; analyzed populations remain outcome-specific."
+    "notes": "Randomized trial total; analyzed populations remain outcome-specific.",
+    "comparator_source_status": "LEGACY STUDY-LEVEL LABEL; result-level comparator_class in canonical results governs model membership"
   },
   {
     "trial_id": "Wu_2025",
@@ -1375,7 +1427,8 @@
     "n_source_page": 4,
     "n_source_excerpt": "levels. To account for the potential loss to follow-up (estimated at approximately 20%), 50 patients per treatment group were included, resulting in a total of 100 participants. Results Participant Flow Between January 5, 2023, and May 28, 2023, 132 patients admitted to the day ward of the Chest Hospital Affiliated to Shanghai Jiao Tong University School of Medicine for minimally invasive lung cancer surgery were screened. Among them, 32 refused to sign an in",
     "decision": "RESOLVED — SOURCE DETERMINATIVE",
-    "notes": "Randomized trial total; analyzed populations remain outcome-specific."
+    "notes": "Randomized trial total; analyzed populations remain outcome-specific.",
+    "comparator_source_status": "LEGACY STUDY-LEVEL LABEL; result-level comparator_class in canonical results governs model membership"
   },
   {
     "trial_id": "Xie_2014",
@@ -1401,7 +1454,8 @@
     "n_source_page": 1,
     "n_source_excerpt": "Sixty patients (ASA III) scheduled for elective radical esophagectomy were randomized into three groups.",
     "decision": "RESOLVED — SOURCE DETERMINATIVE",
-    "notes": "Randomized trial total; analyzed populations remain outcome-specific."
+    "notes": "Randomized trial total; analyzed populations remain outcome-specific.",
+    "comparator_source_status": "LEGACY STUDY-LEVEL LABEL; result-level comparator_class in canonical results governs model membership"
   },
   {
     "trial_id": "Xing_2022",
@@ -1427,7 +1481,8 @@
     "n_source_page": 1,
     "n_source_excerpt": "Ninety patients undergoing laparoscopic gastric cancer surgery were randomly divided into general anesthesia, TAPB, and TEAS plus TAPB groups.",
     "decision": "RESOLVED — SOURCE DETERMINATIVE",
-    "notes": "Randomized trial total; analyzed populations remain outcome-specific."
+    "notes": "Randomized trial total; analyzed populations remain outcome-specific.",
+    "comparator_source_status": "LEGACY STUDY-LEVEL LABEL; result-level comparator_class in canonical results governs model membership"
   },
   {
     "trial_id": "Xiong_2021",
@@ -1436,7 +1491,7 @@
     "country": "China",
     "surgery": "Laparoscopic sleeve gastrectomy",
     "modality": "TEAS",
-    "comparator": "Sham-Controlled (Placebo Double-Blind)",
+    "comparator": "Sham-Controlled (electrodes placed, no current)",
     "randomized_n_report": 62,
     "randomized_n_counted": 62,
     "analyzed_n": "31 vs 31",
@@ -1453,7 +1508,8 @@
     "n_source_page": 5,
     "n_source_excerpt": "ty (n= 67) Excluded (n= 5) Not meeting inclusion criteria (n= 4) Declined to participate (n=1) Control group (n= 31) TEAS group (n= 31) Randomized patients (n= 62) Analysed (n= 31) Analysed (n= 31) Fig. 1 CONSORT flow chart for the selection of patients included in the study. TEAS, transcutaneous electrical acupoint stimulation Table 2 PONV intensity in the first 48 h after surgery and the need for rescue antiemetics. Data are shown as the numbers of patient",
     "decision": "RESOLVED — SOURCE DETERMINATIVE",
-    "notes": "Randomized trial total; analyzed populations remain outcome-specific."
+    "notes": "Randomized trial total; analyzed populations remain outcome-specific.",
+    "comparator_source_status": "SOURCE VERIFIED v36: \"the patients in the control group had gel electrodes applied and connected to an acupuncture instrument without stimulation.\""
   },
   {
     "trial_id": "Yang_2020",
@@ -1479,7 +1535,8 @@
     "n_source_page": 4,
     "n_source_excerpt": "EA group. Additionally, the frequency of use of rescue antiemetic medicine was comparable in both groups (P=0.473). Assessed for eligibility (n=60) Enrolled (n=59) Randomized UC group (n=29) EA group (n=30) Completed (n=29) Completed (n=28) Attition (n=1) Unknown causde Attition (n=1) No PVB Refusul of electroacupuncture (n=1) Figure 1. \u0007Flow chart of participants through the study period. EA – electroacupuncture; UC – usual care; PVB – paravertebral block. ",
     "decision": "RESOLVED — SOURCE DETERMINATIVE",
-    "notes": "Randomized trial total; analyzed populations remain outcome-specific."
+    "notes": "Randomized trial total; analyzed populations remain outcome-specific.",
+    "comparator_source_status": "LEGACY STUDY-LEVEL LABEL; result-level comparator_class in canonical results governs model membership"
   },
   {
     "trial_id": "Yang_2024",
@@ -1505,7 +1562,8 @@
     "n_source_page": 1,
     "n_source_excerpt": " gastrointestinal recovery in patients receiving thoracoscopic lung surgery. Methods: This study was a single-center, prospective, randomized open-label trial. 180 patients who underwent video-assisted thoracoscopic segmentectomy or lobectomy were randomized to EA group (three sessions, 24 h prior to surgery, postoperative 4 h and 24 h) or usual care group (UC group). The primary outcomes were time to first flatus and defecation. Secondary outcomes included i",
     "decision": "RESOLVED — SOURCE DETERMINATIVE",
-    "notes": "Randomized trial total; analyzed populations remain outcome-specific."
+    "notes": "Randomized trial total; analyzed populations remain outcome-specific.",
+    "comparator_source_status": "LEGACY STUDY-LEVEL LABEL; result-level comparator_class in canonical results governs model membership"
   },
   {
     "trial_id": "Yao_2015",
@@ -1531,7 +1589,8 @@
     "n_source_page": 3,
     "n_source_excerpt": "or eligibility to participate in this study (Figure 2). Of these, 21 patients did not meet the inclusion criteria, 8 declined to participate, and the remaining 74 patients enrolled to the study. Two patients from the TEAS group and one patient from the Control group were later excluded because of protocol breach. A total of 71 patients randomized to treatment allocation completed the study and their data were included in the analysis. Patient demographic cha",
     "decision": "RESOLVED — SOURCE DETERMINATIVE",
-    "notes": "74 randomized;71 completed35/36. Automated prior extraction71 was analyzed rather than randomized N."
+    "notes": "74 randomized;71 completed35/36. Automated prior extraction71 was analyzed rather than randomized N.",
+    "comparator_source_status": "LEGACY STUDY-LEVEL LABEL; result-level comparator_class in canonical results governs model membership"
   },
   {
     "trial_id": "Yeh_probable_family",
@@ -1557,7 +1616,8 @@
     "n_source_page": 6,
     "n_source_excerpt": "Results: Initially, 99 participants met the criteria and were included in the study. Five participants did not complete; remaining94=33/30/31.",
     "decision": "RESOLVED — CONSERVATIVE REVIEW RULE",
-    "notes": "Probable overlap family: use maximum reported randomized cohort (99) as operational lower bound; unique family union unknown. Do not sum 99+90."
+    "notes": "Probable overlap family: use maximum reported randomized cohort (99) as operational lower bound; unique family union unknown. Do not sum 99+90.",
+    "comparator_source_status": "LEGACY STUDY-LEVEL LABEL; result-level comparator_class in canonical results governs model membership"
   },
   {
     "trial_id": "Yeh_probable_family",
@@ -1583,7 +1643,8 @@
     "n_source_page": 2,
     "n_source_excerpt": "llow-up loss, 99 overall were thought to be necessary. Fig. 1 shows the ﬂow chart of participants of this study. Initially, 99 patients were eligible, and then 90 who signed the informed consent were included in the study and randomly assigned to one of the three groups: the AES group (n = 30) received AES at the true acupoints; the sham group (n = 30) received AES in the same manner but at sham acupoints; and the control group (n = 30) received no AES inter",
     "decision": "RESOLVED — CONSERVATIVE REVIEW RULE",
-    "notes": "Companion report in probable overlapping Yeh family, counted once under Yeh 2010. Cohort identity not proven."
+    "notes": "Companion report in probable overlapping Yeh family, counted once under Yeh 2010. Cohort identity not proven.",
+    "comparator_source_status": "LEGACY STUDY-LEVEL LABEL; result-level comparator_class in canonical results governs model membership"
   },
   {
     "trial_id": "Yu_2020",
@@ -1609,7 +1670,8 @@
     "n_source_page": 3,
     "n_source_excerpt": "eported as counts with percentages. Statistical significance was assessed at P < 0.05. Results Patient characteristics Complete datasets were collected for all 60 participants and all the data were analyzed (Fig. 3). The characteris- tics of patients such as age, height, BMI, ASA physical status, anesthesia duration, surgery duration, estimated Fig. 1 Consolidated standards of reporting trials (Consort) flowchart. TEAS, Transcutaneous electrical acupoint sti",
     "decision": "RESOLVED — SOURCE DETERMINATIVE",
-    "notes": "Randomized trial total; analyzed populations remain outcome-specific."
+    "notes": "Randomized trial total; analyzed populations remain outcome-specific.",
+    "comparator_source_status": "LEGACY STUDY-LEVEL LABEL; result-level comparator_class in canonical results governs model membership"
   },
   {
     "trial_id": "Zhan_2020",
@@ -1635,7 +1697,8 @@
     "n_source_page": 2,
     "n_source_excerpt": "wer software based on 95 % confidence level, 80 % power. A total of 51 participants were needed. However, based on a potential dropout rate of 20 %, a total of 90 patients were enrolled in study. The researcher screened the patients the day before the operations. Each enrolled patient was randomized according to a computer-generated random numbers table, and then an independent research assistant informed different treating anesthetists based on results. 2.3",
     "decision": "RESOLVED — SOURCE DETERMINATIVE",
-    "notes": "Randomized trial total; analyzed populations remain outcome-specific."
+    "notes": "Randomized trial total; analyzed populations remain outcome-specific.",
+    "comparator_source_status": "LEGACY STUDY-LEVEL LABEL; result-level comparator_class in canonical results governs model membership"
   },
   {
     "trial_id": "Zhang_2014",
@@ -1661,7 +1724,8 @@
     "n_source_page": 4,
     "n_source_excerpt": "re the values between the groups at each time point. The level of signiﬁcance for all statistical tests was set at 0.05. Results As shown in Fig. 2, a total of 72 patients were enrolled in the study; seven patients (9.7%) dropped out of this study because they declined to undergo TEAS (3) or met the exclusion criteria (4). Sixty-ﬁve patients’ records were analysed. The patients’ characteristics and type and dura- tions of procedures were similar between the ",
     "decision": "RESOLVED — SOURCE DETERMINATIVE",
-    "notes": "Randomized trial total; analyzed populations remain outcome-specific."
+    "notes": "Randomized trial total; analyzed populations remain outcome-specific.",
+    "comparator_source_status": "LEGACY STUDY-LEVEL LABEL; result-level comparator_class in canonical results governs model membership"
   },
   {
     "trial_id": "Zhang_2018",
@@ -1687,7 +1751,8 @@
     "n_source_page": 3,
     "n_source_excerpt": "luated by receiver operat- ing characteristic (ROC) curve. Data were analyzed by statistical software SPSS 19.0. Results Characteristics of patients A total of 42 patients were recruited and randomized into sham- TEA (21 patients) and TEA (21 patients) groups. Demographic data and surgical details are shown in Table 1. There were no significant differences in gender, age or body mass index (BMI) between the two groups (all P > 0.05). The two groups were simi",
     "decision": "RESOLVED — SOURCE DETERMINATIVE",
-    "notes": "Randomized trial total; analyzed populations remain outcome-specific."
+    "notes": "Randomized trial total; analyzed populations remain outcome-specific.",
+    "comparator_source_status": "LEGACY STUDY-LEVEL LABEL; result-level comparator_class in canonical results governs model membership"
   },
   {
     "trial_id": "Zhang_2023",
@@ -1713,7 +1778,8 @@
     "n_source_page": 5,
     "n_source_excerpt": " 1948 patients were eligible for inclusion, and they were randomized to the TEAS (n = 975) and sham (n = 973) groups. Of these, 53 and 57 patients in the TEAS and sham groups withdrew, respectively. The remaining 1,838 patients completed the study and were included in the analysis. A detailed patient ﬂow",
     "decision": "RESOLVED — SOURCE DETERMINATIVE",
-    "notes": "Randomized trial total; analyzed populations remain outcome-specific."
+    "notes": "Randomized trial total; analyzed populations remain outcome-specific.",
+    "comparator_source_status": "LEGACY STUDY-LEVEL LABEL; result-level comparator_class in canonical results governs model membership"
   },
   {
     "trial_id": "Zhang_2025",
@@ -1739,7 +1805,8 @@
     "n_source_page": 5,
     "n_source_excerpt": "d Patient Characteristics We assessed 120 eligible patients. Five patients declined participation and three failed to meet the inclusion criteria, resulting in 108 enrolled participants. We excluded nine TEAS group (five for surgical protocol modifications and four for consent withdrawals) and six control group patients (for surgical protocol modifications). Finally, 93 patients (TEAS, n = 45; controls, n = 48) were included in the statistical analyses (Figur",
     "decision": "RESOLVED — SOURCE DETERMINATIVE",
-    "notes": "Randomized trial total; analyzed populations remain outcome-specific."
+    "notes": "Randomized trial total; analyzed populations remain outcome-specific.",
+    "comparator_source_status": "LEGACY STUDY-LEVEL LABEL; result-level comparator_class in canonical results governs model membership"
   },
   {
     "trial_id": "Zheng_2025",
@@ -1765,7 +1832,8 @@
     "n_source_page": 5,
     "n_source_excerpt": "gery were screened for eligibility. Fourteen patients were excluded as they did not meet the inclusion criteria, and ten declined to participate. The remaining 88 patients were randomly assigned to either the TEAS or the control group. Three patients were subsequently excluded from the mITT analysis due to a change in procedure (n=2) or a procedure time exceeding 3 hours (n=1). Thus, a final total of 85 patients were included in the analysis, and therefore, ",
     "decision": "RESOLVED — SOURCE DETERMINATIVE",
-    "notes": "Randomized trial total; analyzed populations remain outcome-specific."
+    "notes": "Randomized trial total; analyzed populations remain outcome-specific.",
+    "comparator_source_status": "LEGACY STUDY-LEVEL LABEL; result-level comparator_class in canonical results governs model membership"
   },
   {
     "trial_id": "Zhou_2021",
@@ -1791,7 +1859,8 @@
     "n_source_page": 4,
     "n_source_excerpt": " was less than 10%, a sample size of 82 patients (41 in the TG and 41 in the CG) will ensure the power was at least 80% to detect the difference at a significant level of 0.05, using a two- sided t-test. We estimated it would need at least 6 months to enroll all cases. Randomization We randomized patients according to the order of the ra",
     "decision": "RESOLVED — SOURCE DETERMINATIVE",
-    "notes": "Randomized trial total; analyzed populations remain outcome-specific."
+    "notes": "Randomized trial total; analyzed populations remain outcome-specific.",
+    "comparator_source_status": "LEGACY STUDY-LEVEL LABEL; result-level comparator_class in canonical results governs model membership"
   },
   {
     "trial_id": "Zhu_2022",
@@ -1817,6 +1886,7 @@
     "n_source_page": 4,
     "n_source_excerpt": "he three primary outcome measures, for which the p value for statistical significance was adjusted to 0.017 to account for multiple testing. Results A total of 413 patients were enrolled and randomly allo- cated to the 4 groups, and 400 patients completed the study. Thirteen patients were excluded because they were lost to follow-up (n = 3), did not complete the acupuncture inter- vention (n = 2), or converted to open surgery (n = 8). The flow chart of the st",
     "decision": "RESOLVED — SOURCE DETERMINATIVE",
-    "notes": "413 randomized; arm identity103/104 differs between abstract and flow. mITT405, PP400; outcome denominators used."
+    "notes": "413 randomized; arm identity103/104 differs between abstract and flow. mITT405, PP400; outcome denominators used.",
+    "comparator_source_status": "LEGACY STUDY-LEVEL LABEL; result-level comparator_class in canonical results governs model membership"
   }
 ]

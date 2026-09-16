@@ -331,8 +331,7 @@
       "V33-OD-0261",
       "V33-OD-0276",
       "AUDIT-0359",
-      "AUDIT-0127",
-      "AUDIT-0369"
+      "AUDIT-0127"
     ],
     "construct": "PONV_24h_including_point_window_uncertain",
     "modality": "TEAS",
@@ -340,7 +339,7 @@
     "role": "SENSITIVITY",
     "measure": "RR",
     "unit": "risk ratio",
-    "note": "Adds Lu2022 and Liang2021 24h assessments; cumulative window not presumed in main body.",
+    "note": "Adds Lu2022 24h assessment; cumulative window not presumed in main body. v36: Liang2021 removed (no-stimulation control without sham procedure).",
     "combine": true,
     "factor": 1
   },
@@ -401,8 +400,7 @@
       "V33-OD-0296",
       "V33-OD-0277",
       "AUDIT-0294",
-      "AUDIT-0295",
-      "AUDIT-0100"
+      "AUDIT-0295"
     ],
     "construct": "vomiting_0_24h",
     "modality": "TEAS",
@@ -410,7 +408,22 @@
     "role": "ADDITIONAL",
     "measure": "RR",
     "unit": "risk ratio",
-    "note": "Source construct/window/contrast reviewed; direct data admitted.",
+    "note": "v36: Pan2023 moved to usual-care body (control did not undergo TEAS; no sham procedure).",
+    "combine": true,
+    "factor": 1
+  },
+  {
+    "model_id": "vomiting24_TEAS_usual",
+    "result_ids": [
+      "AUDIT-0100"
+    ],
+    "construct": "vomiting_0_24h",
+    "modality": "TEAS",
+    "comparator": "usual_care",
+    "role": "ADDITIONAL",
+    "measure": "RR",
+    "unit": "risk ratio",
+    "note": "v36: Pan2023 no-TEAS control; supportive comparison.",
     "combine": true,
     "factor": 1
   },
@@ -460,17 +473,17 @@
     "factor": 1
   },
   {
-    "model_id": "ponv48_TEAS_usual",
+    "model_id": "ponv48_TEAS_sham",
     "result_ids": [
       "V33-OD-0056"
     ],
     "construct": "composite_PONV_0_48h",
     "modality": "TEAS",
-    "comparator": "usual_care",
+    "comparator": "sham",
     "role": "ADDITIONAL",
     "measure": "RR",
     "unit": "risk ratio",
-    "note": "Source construct/window/contrast reviewed; direct data admitted.",
+    "note": "v36: Xiong2021 control had electrodes applied and connected without stimulation (sham); formerly ponv48_TEAS_usual.",
     "combine": true,
     "factor": 1
   },
@@ -935,9 +948,7 @@
       "V33-OD-0128",
       "V33-OD-0129",
       "V33-OD-0232",
-      "V33-OD-0379",
-      "V33-OD-0061",
-      "AUDIT-0364"
+      "V33-OD-0061"
     ],
     "construct": "intraop_remifentanil",
     "modality": "TEAS",
@@ -945,7 +956,7 @@
     "role": "ADDITIONAL",
     "measure": "MD",
     "unit": "\u00b5g remifentanil",
-    "note": "Source construct/window/contrast reviewed; direct data admitted.",
+    "note": "v36: Pan2023 and Liang2021 no-stimulation controls moved to usual-care body.",
     "combine": true,
     "factor": {
       "V33-OD-0128": 1000,
@@ -955,14 +966,17 @@
   },
   {
     "model_id": "intraop_remifentanil_TEAS_usual",
-    "result_ids": [],
+    "result_ids": [
+      "V33-OD-0379",
+      "AUDIT-0364"
+    ],
     "construct": "intraop_remifentanil",
     "modality": "TEAS",
     "comparator": "usual_care",
     "role": "ADDITIONAL",
     "measure": "MD",
     "unit": "\u00b5g remifentanil",
-    "note": "Source construct/window/contrast reviewed; direct data admitted.",
+    "note": "v36: Pan2023 and Liang2021 controls received no TEAS/no stimulation without a described sham procedure.",
     "combine": true,
     "factor": 1
   },
@@ -1189,5 +1203,68 @@
     "note": "Same construct and membership as hours MD; no selection by I\u00b2 or P.",
     "combine": true,
     "factor": 1
+  },
+  {
+    "model_id": "flatus_TEAS_sham_without_Zheng2025",
+    "result_ids": [
+      "V33-OD-0028",
+      "V33-OD-0082",
+      "V33-OD-0134",
+      "V33-OD-0223",
+      "V33-OD-0239",
+      "V33-OD-0062",
+      "AUDIT-0251",
+      "AUDIT-0252",
+      "AUDIT-0253"
+    ],
+    "construct": "time_first_flatus",
+    "modality": "TEAS",
+    "comparator": "sham",
+    "role": "SENSITIVITY",
+    "measure": "MD",
+    "unit": "hours",
+    "note": "Leave-out diagnostic: Zheng2025 printed SD/P internal inconsistency unresolved; not a replacement body.",
+    "combine": true,
+    "factor": 1
+  },
+  {
+    "model_id": "bowelsounds_TEAS_sham_without_Zheng2025",
+    "result_ids": [
+      "V33-OD-0222",
+      "AUDIT-0173"
+    ],
+    "construct": "time_first_bowel_sounds",
+    "modality": "TEAS",
+    "comparator": "sham",
+    "role": "SENSITIVITY",
+    "measure": "MD",
+    "unit": "hours",
+    "note": "Leave-out diagnostic: Zheng2025 printed SD/P internal inconsistency unresolved; not a replacement body.",
+    "combine": true,
+    "factor": 1
+  },
+  {
+    "model_id": "intraop_remifentanil_TEAS_sham_without_Zheng2025",
+    "result_ids": [
+      "V33-OD-0072",
+      "V33-OD-0078",
+      "V33-OD-0128",
+      "V33-OD-0129",
+      "V33-OD-0232",
+      "V33-OD-0061"
+    ],
+    "construct": "intraop_remifentanil",
+    "modality": "TEAS",
+    "comparator": "sham",
+    "role": "SENSITIVITY",
+    "measure": "MD",
+    "unit": "\u00b5g remifentanil",
+    "note": "Leave-out diagnostic: Zheng2025 printed SD/P internal inconsistency unresolved; not a replacement body.",
+    "combine": true,
+    "factor": {
+      "V33-OD-0128": 1000,
+      "V33-OD-0129": 1000,
+      "V33-OD-0232": 1000
+    }
   }
 ]

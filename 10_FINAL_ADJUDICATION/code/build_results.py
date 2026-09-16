@@ -22,6 +22,27 @@ for r in raw:
  if s.startswith('Yeh'):x.update(decision='HOLD',rationale='Probable overlapping family; conflicting epidural/IV route for opioids. No independent duplicated cohort admitted.')
  if s in ['Jin 2023','Long 2025']:x.update(decision='HOLD',rationale='General anaesthesia unverified from available main report.' if s=='Jin 2023' else 'Physical modality unresolved: needle OR patch in source.')
  rows[id]=x
+# v36 (16 Sep 2026) source-verified result-level comparator adjudication. Registered classes: credible sham;
+# usual care/no stimulation/attention (supportive); active electrical (separate). Quotes from 01_SOURCE_EVIDENCE text.
+COMPARATOR_ADJUDICATION={
+ 'V33-OD-0379':('Usual care','Pan 2023: "Patients in Group C did not undergo TEAS." No sham procedure described.'),
+ 'AUDIT-0100':('Usual care','Pan 2023: "Patients in Group C did not undergo TEAS." No sham procedure described.'),
+ 'AUDIT-0364':('Usual care','Liang 2021: "in control group, the patients received no stimulation." No electrode placement or sham procedure described.'),
+ 'AUDIT-0369':('Usual care','Liang 2021: "in control group, the patients received no stimulation." No electrode placement or sham procedure described.'),
+ 'V33-OD-0056':('Sham','Xiong 2021: "the patients in the control group had gel electrodes applied and connected to an acupuncture instrument without stimulation."'),
+ 'V33-OD-0351':('Usual care','Szmit 2021: third arm "PCA only" without TEAS or sham-TEAS.'),
+ 'V33-OD-0303':('Usual care','Oztas 2019: control received no electrical-stimulation intervention with standard PCA.'),
+ 'V33-OD-0304':('Active electrical','Oztas 2019: incision-periphery TENS (2-100 Hz) is an active electrical comparator.'),
+ 'V33-OD-0331':('Active electrical','Song 2020: "electrical stimulation at a nonacupoint" with matched timing/frequency; conservative active-control class.'),
+ 'V33-OD-0328':('Active electrical','Song 2020: "electrical stimulation at a nonacupoint" with matched timing/frequency; conservative active-control class.'),
+ 'V33-OD-0004':('Usual care','Lin 2002: "Group I received neither needle insertion nor electric stimulation (control)."'),
+ 'V33-OD-0005':('Usual care','Lin 2002: "Group I received neither needle insertion nor electric stimulation (control)."'),
+ 'V33-OD-0299':('Usual care','Oztas 2019: control received no electrical-stimulation intervention with standard PCA.'),
+ 'V33-OD-0300':('Active electrical','Oztas 2019: incision-periphery TENS (2-100 Hz) is an active electrical comparator.'),
+}
+for id,(cls,quote) in COMPARATOR_ADJUDICATION.items():
+ rows[id].update(comparator_class_v34=rows[id]['comparator_class'],comparator_class=cls,comparator_adjudication=quote)
+COMPARATOR_GATE={'sham':{'Sham'},'usual_care':{'Usual care'},'active_electrical':{'Active electrical'}}
 
 def ids(ns):return [f'V33-OD-{n:04}' for n in ns]
 def aids(ns):return [f'AUDIT-{n:04}' for n in ns]
@@ -47,15 +68,16 @@ add('opioid24_EA_sham_weight_normalized',ids([107,108]),'PCA_morphine_0_24h_weig
 add('opioid24_EA_sham_fentanyl_per_kg',ids([16]),'fentanyl_0_24h_weight_normalized','EA','sham','SENSITIVITY',unit='µg/kg fentanyl')
 # Explicit secondary membership; compatible active arms combined, shared control counted once.
 add('ponv24_TEAS_sham',ids([27,33,130,131,168,195,215,257,261,276])+aids([359]),'composite_PONV_0_24h','TEAS','sham',measure='RR',unit='risk ratio',note='0–24h or POD1 cumulative adverse-event reporting; Jiang PP population explicit. Lu two active protocols combined.')
-add('ponv24_TEAS_sham_point_window_sensitivity',ids([27,33,130,131,168,195,215,257,261,276])+aids([359,127,369]),'PONV_24h_including_point_window_uncertain','TEAS','sham','SENSITIVITY','RR','risk ratio',note='Adds Lu2022 and Liang2021 24h assessments; cumulative window not presumed in main body.')
+add('ponv24_TEAS_sham_point_window_sensitivity',ids([27,33,130,131,168,195,215,257,261,276])+aids([359,127]),'PONV_24h_including_point_window_uncertain','TEAS','sham','SENSITIVITY','RR','risk ratio',note='Adds Lu2022 24h assessment; cumulative window not presumed in main body. v36: Liang2021 removed (no-stimulation control without sham procedure).')
 add('nausea24_EA_usual',ids([])+aids([77])+['V34-OD-0759'],'nausea_0_24h','EA','usual_care',measure='RR',unit='risk ratio')
 add('vomiting24_EA_usual',ids([55])+aids([78]),'vomiting_0_24h','EA','usual_care',measure='RR',unit='risk ratio')
 add('nausea24_TEAS_sham',ids([371,293])+aids([292,293]),'nausea_0_24h','TEAS','sham',measure='RR',unit='risk ratio')
-add('vomiting24_TEAS_sham',ids([372,296,277])+aids([294,295,100]),'vomiting_0_24h','TEAS','sham',measure='RR',unit='risk ratio')
+add('vomiting24_TEAS_sham',ids([372,296,277])+aids([294,295]),'vomiting_0_24h','TEAS','sham',measure='RR',unit='risk ratio',note='v36: Pan2023 moved to usual-care body (control did not undergo TEAS; no sham procedure).')
+add('vomiting24_TEAS_usual',aids([100]),'vomiting_0_24h','TEAS','usual_care',measure='RR',unit='risk ratio',note='v36: Pan2023 no-TEAS control; supportive comparison.')
 add('persistent_nausea24_TEAS_sham',ids([278]),'persistent_nausea_over5min_0_24h','TEAS','sham',measure='RR',unit='risk ratio')
 add('nausea48_TEAS_sham',ids([139]),'nausea_0_48h','TEAS','sham',measure='RR',unit='risk ratio')
 add('vomiting48_TEAS_sham',ids([140]),'vomiting_0_48h','TEAS','sham',measure='RR',unit='risk ratio')
-add('ponv48_TEAS_usual',ids([56]),'composite_PONV_0_48h','TEAS','usual_care',measure='RR',unit='risk ratio')
+add('ponv48_TEAS_sham',ids([56]),'composite_PONV_0_48h','TEAS','sham',measure='RR',unit='risk ratio',note='v36: Xiong2021 control had electrodes applied and connected without stimulation (sham); formerly ponv48_TEAS_usual.')
 # Zhu disjoint6–24h counts are not cumulative0–24h.
 add('nausea6to24_EA_usual',ids([19,21,23]),'nausea_6_24h','EA','usual_care',measure='RR',unit='risk ratio')
 add('vomiting6to24_EA_usual',ids([20,22,24]),'vomiting_6_24h','EA','usual_care',measure='RR',unit='risk ratio')
@@ -88,15 +110,15 @@ for file,compid,newid in [('target_A_48h.csv','CHEN20_TEAS_vs_SHAM_SUF48','V35-C
  template=copy.deepcopy(rows['V33-OD-0014' if 'CHEN' in newid else 'V33-OD-0052']);template.update(result_id=newid,comparison_id=compid,outcome=r['outcome'],window=r['time_window'],source_location=r['source_qc'],source_quote=r['Sourceverifiedresult'],mean_i=num(r['mean_i']),sd_i=num(r['sd_i']),mean_c=num(r['mean_c']),sd_c=num(r['sd_c']),models='',decision='SENSITIVITY',rationale='Explicit historical source-normalized additional endpoint; source construct caveat retained.')
  rows[newid]=template
 # He48 author supplement, explicit fresh source value.
-x=copy.deepcopy(rows['V33-OD-0214']);x.update(result_id='V35-HE26-48',window='0–48 h',mean_i=39.5,sd_i=4,mean_c=40.4,sd_c=7.1,source_location='Supplemental Table1 sm8842; mITT80/79',models='');rows[x['result_id']]=x
+x=copy.deepcopy(rows['V33-OD-0214']);x.update(result_id='V35-HE26-48',window='0–48 h',mean_i=39.5,sd_i=4,mean_c=40.4,sd_c=7.1,source_location='Supplemental material 2 eTable 1 (he2026_sm8843.docx; v36 label corrected from sm8842, which is the SAP); mITT80/79',models='');rows[x['result_id']]=x
 spec=[s for s in spec if s['model_id']!='opioid72_EA_usual_PCA']
 add('opioid72_EA_usual_PCA',['V35-YANG24-72'],'PCA_morphine_0_72h','EA','usual_care','SENSITIVITY',unit='mg IV morphine',note='Yang unquantified IM rescue not included in device total.')
 add('opioid72_EA_sham_PCA',ids([250]),'PCA_morphine_0_72h','EA','sham','ADDITIONAL',unit='mg IV morphine',note='Published three-day PCA mean/SD; separate from strict systemic24h outcome.')
 for suf in [.25,.5,1.]:
  add(f'opioid48_TEAS_sham_uncertain_suf{suf:g}',['V35-CHEN20-48','V35-HE26-48'],'PCA_or_author_equivalent_0_48h','TEAS','sham','SENSITIVITY',unit='assumed mg IVMME',factor={'V35-CHEN20-48':suf},note='Chen unresolved basal contradiction and He unknown equivalence basis; no principal claim.')
 # Native remifentanil additional body; mg->µg only; modalities never mixed.
-add('intraop_remifentanil_TEAS_sham',ids([34,72,78,128,129,232,379,61])+aids([364]),'intraop_remifentanil','TEAS','sham','ADDITIONAL',unit='µg remifentanil',factor={'V33-OD-0128':1000,'V33-OD-0129':1000,'V33-OD-0232':1000})
-add('intraop_remifentanil_TEAS_usual',[],'intraop_remifentanil','TEAS','usual_care','ADDITIONAL',unit='µg remifentanil')
+add('intraop_remifentanil_TEAS_sham',ids([34,72,78,128,129,232,61]),'intraop_remifentanil','TEAS','sham','ADDITIONAL',unit='µg remifentanil',factor={'V33-OD-0128':1000,'V33-OD-0129':1000,'V33-OD-0232':1000},note='v36: Pan2023 and Liang2021 no-stimulation controls moved to usual-care body.')
+add('intraop_remifentanil_TEAS_usual',ids([379])+aids([364]),'intraop_remifentanil','TEAS','usual_care','ADDITIONAL',unit='µg remifentanil',note='v36: Pan2023 and Liang2021 controls received no TEAS/no stimulation without a described sham procedure.')
 add('intraop_remifentanil_EA_usual',ids([376,377,378]),'intraop_remifentanil','EA','usual_care','ADDITIONAL',unit='µg remifentanil',factor={'V33-OD-0376':1000,'V33-OD-0377':1000,'V33-OD-0378':1000})
 add('intraop_remifentanil_EA_sham',ids([112]),'intraop_remifentanil','EA','sham','ADDITIONAL',unit='µg remifentanil')
 # Native rescue components are not interchangeable with cumulative systemic exposure.
@@ -112,6 +134,14 @@ add('ponv24_TEAS_broad_sham_sensitivity',ids([27,33,130,131,168,195,215,257,261,
 for s in list(spec):
  if s['construct']=='time_first_flatus':
   d=copy.deepcopy(s);d.update(model_id=s['model_id']+'_SMD_sensitivity',measure='SMD',role='SENSITIVITY',unit='Hedges g',note='Same construct and membership as hours MD; no selection by I² or P.');spec.append(d)
+# v36: Zheng2025 printed mean(SD) values imply far smaller P values than printed (flatus P=0.003, borborygmus P=0.035,
+# remifentanil P=0.031); treating them as SE does not reproduce the P values either. Printed values retained unchanged;
+# mandatory leave-out diagnostics show consequence. Membership is not changed on the basis of P values.
+ZHENG={'AUDIT-0347','AUDIT-0346','V33-OD-0034'}
+for base in ['flatus_TEAS_sham','bowelsounds_TEAS_sham','intraop_remifentanil_TEAS_sham']:
+ s=next(z for z in spec if z['model_id']==base);d=copy.deepcopy(s)
+ d.update(model_id=base+'_without_Zheng2025',result_ids=[i for i in s['result_ids'] if i not in ZHENG],role='SENSITIVITY',note='Leave-out diagnostic: Zheng2025 printed SD/P internal inconsistency unresolved; not a replacement body.')
+ assert len(d['result_ids'])==len(s['result_ids'])-1;spec.append(d)
 
 def combine_arm(g):
  z=copy.deepcopy(g[0]);assert len(set((r['n_c'],r['mean_c'],r['sd_c'],r['events_c']) for r in g))==1,'Control mismatch '+str(g)
@@ -126,7 +156,7 @@ inputs=[];decisions=[]
 for s in spec:
  group=collections.defaultdict(list)
  for id in s['result_ids']:
-  r=rows[id];assert r['modality']==s['modality'],(id,r['modality'],s['modality']);x=copy.deepcopy(r)
+  r=rows[id];assert r['modality']==s['modality'],(id,r['modality'],s['modality']);assert r['comparator_class'] in COMPARATOR_GATE[s['comparator']] or s['model_id']=='ponv24_TEAS_broad_sham_sensitivity',(id,r['comparator_class'],s['model_id']);x=copy.deepcopy(r)
   f=s['factor'].get(id,1) if isinstance(s['factor'],dict) else s['factor'];x['factor']=f
   for a in ['mean_i','mean_c','sd_i','sd_c']:
    if x[a] is not None:x[a]*=f
