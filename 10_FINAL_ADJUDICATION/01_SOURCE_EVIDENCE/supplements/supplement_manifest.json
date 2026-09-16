@@ -1,0 +1,13 @@
+[
+  {
+    "study": "He 2026 (hepatectomy/JIS)",
+    "description": "Supplemental material 2: eTable 1 (morphine-equivalent opioid consumption 24/48 h, mITT 80/79) and eTable 2",
+    "original_path": "TEAS EA Verification/astra_audit/he2026_sm8843.docx",
+    "original_sha256": "6752d910a3b763b6c43297416a8891b27fe04dbfc0e4b1db5879be0af6371916",
+    "copy_path": "10_FINAL_ADJUDICATION/01_SOURCE_EVIDENCE/supplements/He_2026_hepatectomy_JIS_sm8843_eTables.docx",
+    "copy_sha256": "6752d910a3b763b6c43297416a8891b27fe04dbfc0e4b1db5879be0af6371916",
+    "text_file": "10_FINAL_ADJUDICATION/01_SOURCE_EVIDENCE/supplements/He_2026_hepatectomy_JIS_sm8843_eTables.txt",
+    "extraction": "python zipfile word/document.xml tag strip (v36, 16 Sep 2026)",
+    "note": "Byte-identical copy; original retained. Supplement 1 (SAP) is he2026_sm8842.docx and does not contain eTable 1."
+  }
+]
