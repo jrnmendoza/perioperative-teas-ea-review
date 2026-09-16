@@ -447,7 +447,7 @@
     "year": 2017,
     "country": "China",
     "surgery": "VATS lobectomy",
-    "modality": "EA",
+    "modality": "TEAS",
     "comparator": "Sham-Controlled (Placebo Double-Blind)",
     "randomized_n_report": 80,
     "randomized_n_counted": 80,
