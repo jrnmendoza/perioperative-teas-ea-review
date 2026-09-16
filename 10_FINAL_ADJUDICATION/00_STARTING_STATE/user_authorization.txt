@@ -1,0 +1,1668 @@
+# CODEX ASTRA HIGH
+# AUTONOMOUS SCIENTIFIC ADJUDICATION, PROTOCOL RECONCILIATION,
+# REMEDIATION & FINAL DATA-LOCK RESOLUTION
+
+## PROJECT
+
+**Perioperative Electrical Acupoint Stimulation for Postoperative Opioid Sparing: Systematic Review & Meta-Analysis of Randomized Controlled Trials**
+
+Review team:
+
+- John Ryan Nual Mendoza
+- Siv Katrin Peters
+- Carina Sjöberg
+- Pether Jildenstål
+
+Live dashboard:
+
+https://jrnmendoza.github.io/perioperative-teas-ea-review/
+
+This review has already undergone:
+
+1. an initial forensic Astra audit;
+2. an independent Astra verification audit;
+3. preparation of a human-adjudication pack;
+4. a remediation attempt that stopped because it required a separate human authorization file.
+
+That authorization requirement is now intentionally removed.
+
+This run is intended to RESOLVE the review.
+
+---
+
+# 1. AUTHORITATIVE REGISTERED PROTOCOL
+
+The valid submitted PROSPERO record is now supplied.
+
+Use the readable PDF corresponding to:
+
+**“Protocol characteristics associated with clinically meaningful 24-hour opioid sparing from perioperative transcutaneous electrical acupoint stimulation and electroacupuncture: a systematic review and meta-regression of randomized controlled trials.”**
+
+It records:
+
+- first submission: 19 August 2026;
+- registration: 20 August 2026;
+- PROSPERO version 1.0.
+
+This PDF is the authoritative registered protocol for this audit.
+
+## CRITICAL INSTRUCTION
+
+DISREGARD every previous Astra conclusion stating that PROSPERO was blank, missing or unavailable.
+
+Those conclusions resulted from Astra receiving the wrong 862-byte PDF.
+
+Do not use that blank file.
+
+Do not substitute:
+
+- old previews;
+- earlier draft protocols;
+- dashboard prose;
+- README files;
+- audit interpretations;
+- later amendments
+
+for the actual submitted PROSPERO record.
+
+Read the new valid PDF completely before adjudicating protocol questions.
+
+Create a hash and file-path record identifying exactly which PROSPERO PDF you used.
+
+---
+
+# 2. IMPORTANT REGISTRATION IDENTITY CHECK
+
+The supplied PROSPERO document itself must be treated as the authoritative content record for this review.
+
+However, inspect the document carefully for any registration-number ambiguity, including references to similar reviews.
+
+Do NOT accidentally assign the registration number of a “similar review” to this review.
+
+Extract and report:
+
+- exact registered title;
+- authors;
+- submission date;
+- registration date;
+- version;
+- any registration identifier explicitly belonging to THIS record;
+- any other PROSPERO IDs appearing only in the “similar reviews” section.
+
+If the identifier displayed elsewhere in the project conflicts with the supplied registered record:
+
+flag:
+
+**REGISTRATION IDENTIFIER DISCREPANCY**
+
+but continue using the supplied PDF's methodological content as the authoritative protocol.
+
+Do not let an identifier-display problem block scientific adjudication.
+
+---
+
+# 3. REGISTERED SCIENTIFIC FRAMEWORK
+
+Before touching current analyses, independently verify these directly from PROSPERO.
+
+The registered framework appears to specify:
+
+## Population
+
+Adults ≥18 years undergoing operative surgery under GENERAL ANAESTHESIA.
+
+General anaesthesia may be combined with regional or neuraxial techniques.
+
+## TEAS
+
+Non-invasive electrical stimulation delivered through surface electrodes over recognised or explicitly defined acupuncture points, without needle penetration.
+
+## EA
+
+Electrical stimulation delivered through acupuncture needles inserted at recognised or explicitly defined acupuncture points.
+
+## Primary clinical outcome
+
+Cumulative SYSTEMIC postoperative opioid consumption:
+
+**end of surgery → 24 postoperative hours**
+
+converted to:
+
+**mg IV morphine equivalents (IV MME)**.
+
+Programmed but undelivered PCA doses do NOT count.
+
+## Critical pain co-outcome
+
+Pain at approximately 24 h:
+
+- rest;
+- movement where available.
+
+## Clinical importance
+
+Primary opioid threshold:
+
+**≥10 mg IV MME reduction**
+
+Pain-worsening margin:
+
+**+1.0 point on a 0–10 pain scale**
+
+Sensitivity interpretations:
+
+- 8 mg IV MME;
+- 30% relative opioid reduction where calculable.
+
+## Additional opioid outcomes
+
+- 0–48 h;
+- 0–72 h;
+- longest acute postoperative interval.
+
+## Principal evidence
+
+TEAS versus credible sham TEAS.
+
+EA versus credible sham EA.
+
+## Supportive evidence
+
+TEAS or EA versus:
+
+- usual care;
+- no stimulation;
+- attention control.
+
+## Active electrical controls
+
+Analysed separately where clinically interpretable.
+
+## Synthesis restriction
+
+**TEAS AND EA WILL NOT BE COMBINED IN A POOLED ESTIMATE.**
+
+Verify all of this directly.
+
+Do not rely on this prompt when the PDF says otherwise.
+
+The PDF wins.
+
+---
+
+# 4. PURPOSE OF THIS RUN
+
+This is NOT another unrestricted audit.
+
+It is NOT another “human decision required” exercise.
+
+Your job is to:
+
+1. independently adjudicate the unresolved issues;
+2. use the registered protocol as the governing methodological framework;
+3. resolve source ambiguities wherever scientifically possible;
+4. choose defensible methodological policies;
+5. implement those resolutions;
+6. rerun affected analyses;
+7. reconsider GRADE;
+8. reconcile PRISMA;
+9. rebuild the scientific dashboard;
+10. determine whether the review has earned a DATA LOCK.
+
+Do not stop merely because judgment is required.
+
+Systematic reviews inherently require judgment.
+
+---
+
+# 5. AUTONOMOUS DECISION AUTHORITY
+
+You ARE authorized to make methodological adjudications.
+
+You may resolve an issue when supported by:
+
+1. direct source evidence;
+2. supplement/protocol/registry;
+3. registered PROSPERO methodology;
+4. documented amendment;
+5. established systematic-review methodology;
+6. conservative scientific interpretation;
+7. sensitivity analysis.
+
+Classify every decision as:
+
+**RESOLVED — SOURCE DETERMINATIVE**
+
+**RESOLVED — PROTOCOL DETERMINATIVE**
+
+**RESOLVED — METHODOLOGICAL JUDGMENT**
+
+**RESOLVED — CONSERVATIVE REVIEW RULE**
+
+**RESOLVED — SENSITIVITY FRAMEWORK**
+
+or
+
+**UNRESOLVED — EXTERNAL INFORMATION REQUIRED**
+
+Use the last category sparingly.
+
+Do NOT use:
+
+“HUMAN DECISION REQUIRED”
+
+as the default endpoint.
+
+---
+
+# 6. WHAT YOU MUST NOT DO
+
+Never choose an interpretation because it:
+
+- creates statistical significance;
+- increases treatment effect;
+- lowers heterogeneity;
+- improves GRADE;
+- produces a cleaner dashboard;
+- agrees with previous Astra;
+- agrees with the review team.
+
+Do not invent source data.
+
+Do not mathematically “repair” contradictory published values unless a defensible derivation is explicitly permitted.
+
+Do not overwrite source PDFs.
+
+Do not erase historical analyses.
+
+Preserve provenance.
+
+---
+
+# 7. RECONSTRUCT PROSPERO → CURRENT REVIEW
+
+Create:
+
+`FINAL_PROSPERO_CURRENT_REVIEW_MATRIX.md`
+
+For every important registered element record:
+
+| Protocol item | Registered specification | Current implementation | Classification | Timing | Impact | Required disclosure |
+
+Classifications:
+
+MATCH
+
+OPERATIONAL CLARIFICATION
+
+JUSTIFIED AMENDMENT
+
+MATERIAL AMENDMENT
+
+POTENTIAL DEVIATION
+
+NOT APPLICABLE
+
+UNRESOLVED
+
+---
+
+# 8. LANGUAGE RESTRICTION
+
+Pay particular attention to language.
+
+PROSPERO version 1.0 states that:
+
+- database searches have no language restriction;
+- systematic-review eligibility is restricted to FULL-TEXT REPORTS PUBLISHED IN ENGLISH;
+- non-English full-text reports identified by unrestricted searches are excluded during study selection.
+
+The current review later included Chinese-language reports.
+
+Therefore:
+
+do NOT describe unrestricted language inclusion as prospectively registered.
+
+Determine:
+
+- when the change occurred;
+- why;
+- whether it was made before or after relevant results were known;
+- which studies entered because of the amendment;
+- whether those studies affect primary or secondary analyses.
+
+Classify it transparently.
+
+A broadened language criterion is not automatically scientifically inappropriate, but it is a protocol amendment and must be reported as such.
+
+---
+
+# 9. PRIMARY OUTCOME DEFINITION
+
+The registered primary outcome is:
+
+**cumulative systemic postoperative opioid consumption from end of surgery through 24 h**
+
+not merely:
+
+“PCA device dose.”
+
+Use this registered construct to adjudicate primary contributors.
+
+For every primary trial determine whether the selected value captures:
+
+ALL SYSTEMIC OPIOID EXPOSURE
+
+PCA/DEVICE CONSUMPTION ONLY
+
+SYSTEMIC EXPOSURE WITH UNQUANTIFIED RESCUE
+
+UNCLEAR
+
+This distinction must drive sensitivity and interpretation.
+
+---
+
+# 10. PRIMARY CONTRIBUTORS
+
+Re-adjudicate all current contributors from source:
+
+### TEAS–sham
+
+- Chen 1998
+- Chen 2020
+- He 2026
+- Szmit 2021
+
+### EA–usual care/supportive
+
+- El-Rakshy 2009
+- Seevaunnamtum 2016
+- Yang 2024
+
+IMPORTANT:
+
+Under the registered protocol, EA versus usual care is SUPPORTIVE evidence.
+
+It is not the registered principal EA comparison.
+
+Search the included evidence base for eligible:
+
+**EA versus credible sham EA**
+
+0–24 h opioid-consumption results.
+
+If they exist, they belong to the registered principal EA evidence body.
+
+Do not substitute EA–usual care simply because those are the currently available pooled studies.
+
+---
+
+# 11. PRIMARY CONTRIBUTOR CLASSIFICATION
+
+For each result choose:
+
+INCLUDE — PRINCIPAL
+
+INCLUDE — SUPPORTIVE
+
+INCLUDE WITH CAVEAT
+
+SENSITIVITY ONLY
+
+HOLD/EXCLUDE
+
+and document:
+
+- source construct;
+- time window;
+- opioid;
+- route;
+- randomized N;
+- analyzed N;
+- selected N;
+- rescue exposure;
+- conversion;
+- comparator;
+- modality;
+- source contradiction;
+- rationale.
+
+---
+
+# 12. CHEN 2020
+
+Resolve Chen 2020 as far as scientifically possible.
+
+The previous audits found that:
+
+1.5 µg/mL × 2 mL/h
+
+implies basal sufentanil delivery inconsistent with the published cumulative values.
+
+Re-read the entire article.
+
+Determine whether the source supports:
+
+- interruption of basal infusion;
+- demand-only reporting;
+- different concentration;
+- different rate;
+- different duration;
+- different unit;
+- other explanation.
+
+If no explanation exists:
+
+classify:
+
+**UNRESOLVED SOURCE CONTRADICTION**
+
+But do NOT stop there.
+
+Decide the most defensible meta-analytic treatment:
+
+- principal analysis with caveat + leave-one-out;
+- sensitivity only;
+- hold/exclude.
+
+Do not fabricate corrected doses.
+
+Generate diagnostic analyses with and without Chen.
+
+---
+
+# 13. HE 2026
+
+The previous audits verified the numerical author-reported MME but could not establish the conversion formula.
+
+Reassess using:
+
+- article;
+- supplements;
+- SAP;
+- registry.
+
+Determine whether:
+
+AUTHOR-REPORTED MME
+
+is acceptable under the registered primary construct.
+
+Separate:
+
+NUMERICAL VALIDITY
+
+from:
+
+EQUIVALENCE-BASIS VALIDITY.
+
+Choose:
+
+INCLUDE
+
+INCLUDE WITH CONVERSION CAVEAT
+
+SENSITIVITY ONLY
+
+HOLD
+
+Do not automatically reject author-reported equivalents merely because the conversion formula is unpublished.
+
+---
+
+# 14. EL-RAKSHY 2009
+
+Resolve the conflicting arm descriptions.
+
+Evidence hierarchy:
+
+1. outcome-specific table;
+2. participant-flow diagram;
+3. baseline table;
+4. narrative.
+
+Determine whether Table 2 can defensibly support the selected quantitative result.
+
+Do not swap groups unless strongly supported.
+
+If source contradiction cannot be eliminated, decide whether retention with High RoB/caveat is preferable to exclusion.
+
+---
+
+# 15. CHEN 1998 AND YANG 2024 RESCUE OPIOIDS
+
+Because PROSPERO specifies cumulative SYSTEMIC opioid consumption:
+
+determine whether unquantified rescue opioid materially violates the target construct.
+
+For each:
+
+- identify rescue medication;
+- route;
+- eligibility;
+- reported frequency;
+- whether rescue consumption is included;
+- whether arm imbalance exists.
+
+If rescue amount cannot be quantified:
+
+decide between:
+
+INCLUDE WITH CAVEAT
+
+SENSITIVITY ONLY
+
+EXCLUDE
+
+using a consistent rule.
+
+Do not assume rescue use was zero.
+
+---
+
+# 16. MME CONVERSION POLICY
+
+Build:
+
+`FINAL_MME_CONVERSION_POLICY.md`
+
+and:
+
+`FINAL_MME_CONVERSIONS.csv`
+
+Audit every opioid conversion.
+
+Especially sufentanil.
+
+Evaluate defensible sufentanil factors such as:
+
+0.25  
+0.5  
+1.0 mg IV morphine per µg sufentanil
+
+using clinically relevant sources.
+
+Select the most defensible main factor.
+
+Use remaining plausible factors as sensitivity analyses.
+
+Never choose according to statistical significance.
+
+For every conversion record:
+
+opioid  
+route  
+factor  
+source  
+context  
+certainty  
+main/sensitivity  
+notes
+
+---
+
+# 17. PRIMARY ANALYSIS STRUCTURE
+
+The registered protocol explicitly prohibits pooling TEAS and EA together.
+
+Therefore final inferential primary results must remain separate.
+
+At minimum report:
+
+### PRINCIPAL
+
+TEAS vs sham
+
+EA vs sham, IF sufficient eligible studies exist.
+
+### SUPPORTIVE
+
+TEAS vs usual care
+
+EA vs usual care
+
+### ACTIVE COMPARATOR
+
+separately where appropriate.
+
+Do NOT retain a TEAS+EA pooled effect as an inferential synthesis.
+
+If the historical k=7 combined estimate remains useful for audit context:
+
+label:
+
+**POSTHOC DESCRIPTIVE CROSS-STRATUM CALCULATION — NOT A REGISTERED META-ANALYTIC ESTIMAND**
+
+and remove it from headline efficacy interpretation.
+
+---
+
+# 18. CLINICAL IMPORTANCE
+
+Use the registered interpretation.
+
+For each principal opioid estimate examine:
+
+point estimate versus:
+
+10 mg IV MME
+
+and sensitivity:
+
+8 mg IV MME.
+
+Where calculable examine:
+
+30% relative reduction.
+
+Then pair with 24-h pain evidence.
+
+Do NOT conclude clinically meaningful opioid sparing solely because the opioid point estimate crosses 10 mg.
+
+The pain criterion also matters.
+
+Assess whether the upper 95% confidence limit permits pain worsening ≥1.0/10.
+
+---
+
+# 19. PAIN CO-OUTCOME
+
+Rebuild the approximately 24-h pain evidence from source.
+
+Separate:
+
+REST
+
+MOVEMENT.
+
+Convert valid scales to 0–10.
+
+Do not use unsupported paired pain values.
+
+Do not automatically convert medians to means.
+
+For each principal modality/comparator body determine whether the pain evidence:
+
+EXCLUDES CLINICALLY IMPORTANT WORSENING
+
+DOES NOT EXCLUDE CLINICALLY IMPORTANT WORSENING
+
+INSUFFICIENT DATA.
+
+This is essential to the registered primary clinical interpretation.
+
+---
+
+# 20. 48 H AND 72 H
+
+PROSPERO registers these as ADDITIONAL outcomes.
+
+Therefore:
+
+0–48 h is NOT co-primary.
+
+0–72 h is NOT primary.
+
+Correct any current documentation implying otherwise.
+
+Retain them as secondary/additional outcomes.
+
+---
+
+# 21. TEAS / EA DEFINITIONS
+
+Apply the registered physical definitions exactly.
+
+### TEAS
+
+surface electrodes  
+no needle penetration
+
+### EA
+
+electrical current through inserted acupuncture needles
+
+Reclassify studies accordingly.
+
+Yeh must be reassessed directly from the source.
+
+If it uses surface electrodes without needle penetration:
+
+it is TEAS under the registered definition.
+
+Do not preserve an incorrect EA label for historical convenience.
+
+---
+
+# 22. YEH 2010 / 2011 LINKAGE
+
+Resolve report dependency conservatively.
+
+Current evidence indicates probable overlap.
+
+If independence cannot be demonstrated:
+
+treat as one probable trial family for counting and dependency prevention.
+
+Use wording such as:
+
+**70 reports representing 69 operational trial units, with Yeh 2010/2011 treated as a probable overlapping trial family to avoid double-counting.**
+
+Do not claim confirmed identity without evidence.
+
+Preserve both reports.
+
+---
+
+# 23. SEARCH FOR OTHER OVERLAP
+
+Repeat duplicate-cohort screening.
+
+Use:
+
+- author;
+- institution;
+- recruitment;
+- ethics;
+- registration;
+- sample;
+- surgery;
+- baseline fingerprints;
+- intervention;
+- outcome fingerprints.
+
+Do not automatically merge.
+
+Use conservative dependency handling.
+
+---
+
+# 24. RANDOMIZED PARTICIPANT TOTAL
+
+Continue source verification beyond the previous 16/69 coverage.
+
+For all trial units, retrieve:
+
+RANDOMIZED N
+
+from source wherever possible.
+
+Keep separate:
+
+randomized N  
+ITT N  
+mITT N  
+PP N  
+outcome-specific N.
+
+Do not use generic `population.total_n`.
+
+If complete:
+
+report exact randomized total.
+
+If incomplete:
+
+report:
+
+**At least X randomized participants across Y/69 operational trial units with source-verified randomized N.**
+
+State remaining coverage.
+
+---
+
+# 25. COMPARATOR TAXONOMY
+
+Apply the registered comparator framework.
+
+Principal sham can include:
+
+- inactive device;
+- credible sham;
+- sub-sensory/minimally active current;
+- non-acupoint sham electrical stimulation
+
+when intended to preserve blinding and clinically credible as sham.
+
+But distinguish:
+
+INACTIVE SHAM
+
+MINIMAL-ACTIVE SHAM
+
+NON-ACUPOINT SHAM
+
+ACTIVE ELECTRICAL COMPARATOR
+
+USUAL CARE / NO STIMULATION
+
+ATTENTION CONTROL.
+
+The protocol allows non-acupoint sham electrical stimulation in principal sham definitions, but also says active electrical comparators may be analysed separately.
+
+Therefore classify based on actual intervention intensity and design purpose, not merely location.
+
+Document ambiguous cases.
+
+---
+
+# 26. STRICTA / PROTOCOL MODERATOR DATA
+
+This is now especially important because the registered review is designed primarily to investigate protocol-level effect modification.
+
+Registered moderators include:
+
+- intervention timing;
+- single vs repeated treatment;
+- cumulative stimulation duration before 24 h;
+- electrical frequency;
+- stimulation intensity.
+
+Therefore the previously detected boilerplate STRICTA data are a major scientific problem.
+
+Re-extract these fields from source PDFs for EVERY trial potentially entering moderator analyses.
+
+Do NOT run meta-regression using unverified default metadata.
+
+For every field record:
+
+SOURCE VERIFIED
+
+NOT REPORTED
+
+UNCLEAR
+
+Do not infer.
+
+---
+
+# 27. META-REGRESSION ELIGIBILITY
+
+Apply the registered thresholds.
+
+Normally:
+
+≥10 independent estimates per predictor
+
+and:
+
+≥4 studies per categorical level.
+
+Multivariable:
+
+≥20 studies total
+
+and:
+
+≥10 studies per predictor.
+
+Therefore:
+
+do NOT perform inferential meta-regression when these thresholds are not met.
+
+A k=7 TEAS/EA meta-regression does NOT satisfy the registered rule.
+
+Additionally, because TEAS and EA are not to be pooled, modality itself must not be used as a predictor in a pooled TEAS+EA meta-regression intended to infer modality differences.
+
+If thresholds fail:
+
+use:
+
+- descriptive structured tables;
+- effect-direction plots;
+- clearly exploratory non-inferential summaries.
+
+Correct dashboard language accordingly.
+
+---
+
+# 28. SECONDARY OUTCOME MEMBERSHIP
+
+Reconcile v26/v33/v34.
+
+Do not allow exact text-string matching to determine eligibility.
+
+For each outcome define:
+
+CONSTRUCT  
+TIME WINDOW  
+MODALITY  
+COMPARATOR  
+POPULATION.
+
+Then inspect every candidate result.
+
+Build:
+
+`FINAL_MODEL_MEMBERSHIP_MATRIX.csv`
+
+with:
+
+INCLUDE  
+EXCLUDE  
+SENSITIVITY  
+HOLD
+
+plus rationale.
+
+---
+
+# 29. PONV
+
+Separate where appropriate:
+
+PONV composite  
+nausea  
+vomiting  
+antiemetic rescue.
+
+Resolve the disjoint current evidence sets.
+
+Admit eligible results even when labels differ syntactically.
+
+Do not automatically combine clinically different endpoints.
+
+---
+
+# 30. GI RECOVERY
+
+Keep distinct:
+
+first flatus  
+bowel sounds  
+defecation  
+other GI recovery.
+
+Verify:
+
+- time origin;
+- unit;
+- direction;
+- modality;
+- comparator;
+- population;
+- ascertainment.
+
+Avoid translating statistically earlier bowel sounds into broad “faster recovery” claims without clinical justification.
+
+---
+
+# 31. TARGET E — MD VS SMD
+
+Re-evaluate using PROSPERO.
+
+The registered synthesis permits MD or SMD as appropriate.
+
+Because time-to-flatus outcomes can generally be converted to hours, evaluate whether MD provides the more clinically interpretable estimand.
+
+SMD may remain supportive/sensitivity where heterogeneity of measurement justifies it.
+
+Do not choose SMD merely because:
+
+- I² decreases;
+- p becomes significant.
+
+Preserve the posthoc chronology.
+
+---
+
+# 32. BINARY OUTCOMES
+
+Adopt one coherent zero-event policy.
+
+Prefer established meta-analytic methodology.
+
+If using conventional 0.5 correction:
+
+apply only when required.
+
+If adding 0.5 to all four cells:
+
+denominators must increase appropriately.
+
+Define double-zero handling.
+
+Apply consistently to authoritative analyses.
+
+Do not let v26 and v34 silently implement different mathematical definitions.
+
+---
+
+# 33. SMALL-k INFERENCE
+
+The registration specifies:
+
+REML
+
+with:
+
+Hartung–Knapp where appropriate.
+
+Create one final policy.
+
+For example:
+
+k=1:
+no pooled random-effects inference
+
+k=2:
+explicit small-k rule with strong uncertainty warning
+
+k≥3:
+REML + Hartung–Knapp
+
+Document any exceptions.
+
+Do not allow separate pipelines to silently use different rules for the same inferential role.
+
+---
+
+# 34. RoB 2
+
+Do NOT redo RoB 2 from scratch.
+
+The review already has human assessments.
+
+Resolve linkage.
+
+Match:
+
+RESULT_ID  
+OUTCOME  
+TIMEPOINT  
+CONTRAST  
+POPULATION
+
+to:
+
+ROB2_ASSESSMENT_ID.
+
+Where multiple assessments exist:
+
+identify the latest/final human adjudicated record applicable to the exact result.
+
+Preserve older assessments historically.
+
+Create:
+
+`FINAL_RESULT_ROB2_LINKAGE.csv`
+
+---
+
+# 35. GRADE
+
+After final membership is established:
+
+reconsider GRADE for every critical/important final evidence body.
+
+Use actual GRADE reasoning:
+
+risk of bias  
+inconsistency  
+indirectness  
+imprecision  
+publication bias.
+
+Do not use crude automated rules as substitutes for judgment.
+
+Use registered clinical thresholds where relevant.
+
+Produce:
+
+`FINAL_GRADE_RECOMMENDATIONS.md`
+
+with explicit domain rationales.
+
+You may make a final Astra recommendation.
+
+Label:
+
+**ASTRA FINAL GRADE RECOMMENDATION**
+
+where a human reviewer may later confirm it.
+
+Do not leave the reasoning unresolved merely because GRADE involves judgment.
+
+---
+
+# 36. LANGUAGE-AMENDMENT IMPACT ANALYSIS
+
+Because Chinese full texts were later included contrary to registered English-only eligibility:
+
+identify every included non-English full-text report.
+
+For each record:
+
+study  
+language  
+date admitted  
+outcomes contributed  
+primary contribution?  
+secondary contribution?  
+effect on pooled estimate.
+
+Generate:
+
+`LANGUAGE_AMENDMENT_IMPACT.md`
+
+Run sensitivity analyses excluding studies admitted solely because of the language amendment where scientifically relevant.
+
+This allows transparent reporting of whether the amendment materially affected conclusions.
+
+---
+
+# 37. PRISMA
+
+Use the actual PRISMA source already found.
+
+Verify:
+
+5,100 references
+
+representing:
+
+5,088 studies
+
+then:
+
+2,160 removals
+
+→ 2,928 screened
+
+→ 224 reports sought
+
+→ 14 not retrieved
+
+→ 210 assessed
+
+→ 141 excluded
+
+→ 69 reports through databases
+
++ 1 citation-search report
+
+= 70 included reports.
+
+Do not confuse:
+
+RECORDS  
+REPORTS  
+STUDIES/TRIALS.
+
+Reconcile the 12 reference/study difference from record-level evidence if possible.
+
+---
+
+# 38. DASHBOARD SCIENTIFIC REMEDIATION
+
+After analyses are resolved, update the dashboard.
+
+Correct:
+
+- PROSPERO description;
+- registered primary outcome;
+- 48/72 h status;
+- language amendment;
+- TEAS/EA definitions;
+- principal/supportive comparator structure;
+- report/trial terminology;
+- participant KPI;
+- STRICTA;
+- primary contributors;
+- pain co-outcome;
+- secondary membership;
+- meta-regression claims;
+- RoB linkage;
+- GRADE;
+- statistical methods;
+- stale analyses.
+
+---
+
+# 39. REMOVE COMBINED TEAS+EA FROM HEADLINE INFERENCE
+
+Because the registered protocol explicitly states that TEAS and EA will not be combined in a pooled estimate:
+
+do not present the k=7 combined effect as a primary or inferential headline.
+
+If retained for historical/audit context:
+
+label prominently:
+
+**POSTHOC DESCRIPTIVE CROSS-STRATUM CALCULATION — NOT PART OF THE REGISTERED INFERENTIAL SYNTHESIS**
+
+Do not use it to claim efficacy.
+
+---
+
+# 40. STUDY EXPLORER
+
+Use Study Explorer as the main study-level evidence interface.
+
+Include:
+
+Trial ID  
+Report(s)  
+Year  
+Country  
+Surgery  
+TEAS/EA  
+Comparator  
+Randomized N  
+Analyzed N  
+Age I/C  
+Sex I/C  
+BMI where verified  
+ASA where verified  
+Anesthesia  
+RoB2  
+View Study.
+
+Detailed STRICTA belongs in the study detail view.
+
+---
+
+# 41. PARTICIPANT KPI
+
+Replace the unsupported 10,618 total.
+
+Use only source-backed unique-trial randomized N.
+
+If incomplete, display:
+
+**At least X randomized participants across Y/69 trial units with source-verified randomized N**
+
+and clearly state that randomized-N reconciliation remains incomplete.
+
+---
+
+# 42. CURRENT VS HISTORICAL ANALYSES
+
+Create:
+
+`FINAL_ANALYSIS_MANIFEST.md`
+
+For every outcome specify:
+
+canonical input  
+canonical membership  
+model  
+effect measure  
+output  
+GRADE body  
+dashboard consumer.
+
+Retain v26/v33/v34 historically where needed.
+
+Only one current authoritative analysis per defined estimand.
+
+---
+
+# 43. REPRODUCIBILITY
+
+Create a deterministic path:
+
+SOURCE
+
+→ EXTRACTION
+
+→ ADJUDICATION OVERLAY
+
+→ CANONICAL RESULT DATA
+
+→ MODEL INPUT
+
+→ MODEL OUTPUT
+
+→ GRADE
+
+→ DASHBOARD.
+
+Do not silently patch scientific values in `data.js`.
+
+Where legacy architecture prevents full regeneration, document it and minimize new manual mutation.
+
+---
+
+# 44. INDEPENDENT FINAL REPRODUCTION
+
+Independently reproduce every final major model.
+
+Verify:
+
+k  
+N  
+effect  
+SE  
+95% CI  
+p  
+tau²  
+I²  
+prediction interval where used.
+
+Any unexplained discrepancy is BLOCKING.
+
+---
+
+# 45. AUTONOMOUS REMEDIATION
+
+You ARE authorized to implement scientifically resolved corrections.
+
+You may modify:
+
+- canonical derived data;
+- report/trial mapping;
+- classifications;
+- analysis membership;
+- analysis code;
+- statistical-policy implementation;
+- dashboard;
+- current-facing documentation.
+
+Preserve:
+
+- original extraction;
+- PDFs;
+- historical outputs;
+- previous audit artifacts;
+- adjudication history.
+
+Never erase provenance.
+
+---
+
+# 46. VERSION CONTROL
+
+Create:
+
+`astra-final-resolution`
+
+branch.
+
+Use separate commits for:
+
+1. protocol reconciliation
+2. source adjudication
+3. trial/report/arm mapping
+4. conversion policy
+5. primary analyses
+6. secondary membership
+7. statistical-policy reconciliation
+8. RoB linkage
+9. GRADE
+10. PRISMA
+11. dashboard
+12. final-lock artifacts
+
+Do not deploy automatically.
+
+---
+
+# 47. FINAL DATA-LOCK STANDARD
+
+Not every uncertainty must disappear.
+
+Classify residual issues:
+
+RESOLVED
+
+RESOLVED WITH LIMITATION
+
+EXTERNAL INFORMATION UNAVAILABLE — NON-BLOCKING
+
+BLOCKING.
+
+A documented source ambiguity can be compatible with data lock if:
+
+- the extracted source value is known;
+- the uncertainty is disclosed;
+- sensitivity analysis demonstrates consequences;
+- it does not invalidate the review construct.
+
+Do not demand impossible certainty.
+
+---
+
+# 48. FINAL ARTIFACTS
+
+Create:
+
+`ASTRA_FINAL_PROTOCOL_RECONCILIATION.md`
+
+`FINAL_PROSPERO_CURRENT_REVIEW_MATRIX.md`
+
+`FINAL_PRIMARY_SOURCE_DECISIONS.md`
+
+`FINAL_PRIMARY_OUTCOME_TRACEABILITY.csv`
+
+`FINAL_MME_CONVERSION_POLICY.md`
+
+`FINAL_MME_CONVERSIONS.csv`
+
+`FINAL_TRIAL_REPORT_MAPPING.csv`
+
+`FINAL_PARTICIPANT_LEDGER.csv`
+
+`FINAL_MODEL_MEMBERSHIP_MATRIX.csv`
+
+`FINAL_RESULT_ROB2_LINKAGE.csv`
+
+`FINAL_GRADE_RECOMMENDATIONS.md`
+
+`LANGUAGE_AMENDMENT_IMPACT.md`
+
+`FINAL_PRISMA_RECONCILIATION.md`
+
+`FINAL_ANALYSIS_MANIFEST.md`
+
+`FINAL_DASHBOARD_CLAIM_MANIFEST.csv`
+
+`FINAL_DATA_LOCK_CHECKLIST.md`
+
+`ASTRA_AUTONOMOUS_ADJUDICATION_LOG.md`
+
+`ASTRA_FINAL_RESOLUTION_REPORT.md`
+
+---
+
+# 49. FINAL EXECUTIVE REPORT
+
+Answer explicitly:
+
+## Protocol
+
+1. Was the correct PROSPERO record successfully read?
+
+2. What exact registration identifier belongs to this record?
+
+3. What are the material differences between registered and current methods?
+
+4. Which are legitimate amendments?
+
+5. Which require manuscript disclosure?
+
+6. What was the effect of including non-English/Chinese full texts?
+
+---
+
+## Evidence base
+
+7. Final included reports?
+
+8. Final operational trial units?
+
+9. Yeh treatment?
+
+10. Verified randomized participants?
+
+11. Coverage?
+
+---
+
+## Primary outcome
+
+12. What exact primary construct was adopted?
+
+13. Which trials contribute to TEAS–sham?
+
+14. Which contribute to EA–sham?
+
+15. Which contribute only to supportive usual-care analyses?
+
+16. How was Chen 2020 resolved?
+
+17. How was He 2026 resolved?
+
+18. How was El-Rakshy resolved?
+
+19. How were rescue opioids handled?
+
+20. What MME conversion policy was adopted?
+
+---
+
+## Primary results
+
+21. Final TEAS–sham estimate?
+
+22. Final EA–sham estimate?
+
+23. Final supportive TEAS–usual-care estimate?
+
+24. Final supportive EA–usual-care estimate?
+
+25. Does any principal point estimate reach 10 mg IV MME?
+
+26. Does the paired pain evidence exclude ≥1-point worsening?
+
+27. Is clinically meaningful opioid sparing established?
+
+Use:
+
+ESTABLISHED
+
+SUGGESTED BUT UNCERTAIN
+
+NOT ESTABLISHED
+
+INSUFFICIENT EVIDENCE.
+
+---
+
+## Secondary outcomes
+
+28. Final PONV body/result?
+
+29. Final pain body/result?
+
+30. Final flatus result?
+
+31. Final bowel-sounds result?
+
+32. Final defecation result?
+
+33. Target E final interpretation?
+
+---
+
+## Methods
+
+34. Final TEAS/EA classification counts?
+
+35. Final comparator taxonomy?
+
+36. Were registered meta-regression thresholds met?
+
+37. Which moderator analyses remain valid?
+
+38. Final zero-event policy?
+
+39. Final small-k policy?
+
+40. Final RoB2 linkage status?
+
+41. Final GRADE recommendations?
+
+42. Final PRISMA status?
+
+---
+
+## Dashboard
+
+43. Is the dashboard now scientifically faithful?
+
+44. What participant KPI is displayed?
+
+45. Are all current headline values derived from canonical outputs?
+
+46. Are legacy analyses clearly separated?
+
+---
+
+## Lock
+
+47. Which issues remain unresolved?
+
+48. Which are non-blocking limitations?
+
+49. Which, if any, remain blocking?
+
+50. Is the review ready for data lock?
+
+Choose:
+
+**YES**
+
+**YES — WITH DOCUMENTED LIMITATIONS**
+
+**NO — SPECIFIC BLOCKERS REMAIN**
+
+51. Would you submit the review after manuscript preparation based on this scientific state?
+
+Explain.
+
+---
+
+# 50. FINAL SCIENTIFIC PRINCIPLE
+
+The goal is NOT to maximize statistical significance.
+
+The goal is NOT to preserve the current dashboard.
+
+The goal is NOT to agree with previous Astra audits.
+
+The goal is to construct the most scientifically defensible version of the review supported by:
+
+THE REGISTERED PROTOCOL
+
++
+
+THE SOURCE ARTICLES
+
++
+
+THE VERIFIED EXTRACTIONS
+
++
+
+TRANSPARENT METHODOLOGICAL JUDGMENT.
+
+Where evidence is imperfect:
+
+resolve what can reasonably be resolved;
+
+use sensitivity analysis where appropriate;
+
+disclose residual uncertainty;
+
+and reserve BLOCKING status only for uncertainty that genuinely prevents a defensible analysis.
+
+The final review must be able to answer:
+
+> **What was prospectively registered, what changed and why, what does the source evidence actually support, what analyses are scientifically justified under those rules, and are the remaining uncertainties sufficiently bounded and transparent for this systematic review to be data-locked and submitted?**
+
+Do the work.
+
+Do not stop at another list of questions.

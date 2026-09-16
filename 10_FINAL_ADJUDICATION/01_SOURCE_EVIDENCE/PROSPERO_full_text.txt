@@ -1,0 +1,370 @@
+PDF PAGE 1
+Print
+Close
+Print
+Close
+Protocol characteristics associated with clinically meaningful 24-
+hour opioid sparing from perioperative transcutaneous electrical
+acupoint stimulation and electroacupuncture: a systematic review
+and meta-regression of randomized controlled trials
+John Ryan Nual Mendoza, Siv Katrin Peters, Carina Sjöberg, Pether Jildenstål
+REVIEW TITLE AND BASIC DETAILS
+Review title
+Protocol characteristics associated with clinically meaningful 24-hour opioid sparing from perioperative
+transcutaneous electrical acupoint stimulation and electroacupuncture: a systematic review and meta-regression of
+randomized controlled trials
+Review type
+None
+Condition or domain being studied
+Postoperative Pain; Acute Pain; Postoperative Analgesia; Opioids; General Anesthesia; Acupuncture;
+Electroacupuncture; Acupuncture-like Transcutaneous Electrical Nerve Stimulation; Enhanced Recovery After
+Surgery
+Adults undergoing operative surgery under general anaesthesia. The review evaluates two electrically stimulated
+acupuncture modalities: (1) transcutaneous electrical acupoint stimulation (TEAS), delivered non-invasively through
+surface electrodes over recognised body acupuncture points; and (2) needle-based electroacupuncture (EA), in
+which electrical current is delivered between acupuncture needles inserted at recognised body acupuncture points.
+The primary clinical outcome is cumulative systemic opioid consumption during the ﬁrst 24 postoperative hours,
+converted to intravenous morphine milligram equivalents (IV MME). Pain at 24 hours is a critical co-outcome used
+to determine whether opioid reduction occurs without clinically important worsening of analgesia.
+Rationale for the review
+Postoperative pain is commonly treated with systemic opioids, which may cause nausea and vomiting, sedation,
+respiratory depression, ileus, delayed mobilisation, and persistent use. Electrical acupuncture techniques are
+attractive adjuncts because they can be incorporated into multimodal perioperative care and may reduce opioid
+exposure while maintaining analgesia.
+Recent systematic reviews have already addressed whether TEAS, electroacupuncture, or broader acupuncture-
+related interventions improve postoperative pain and opioid consumption. However, the literature remains highly
+heterogeneous in treatment timing, number of sessions, cumulative stimulation duration, frequency, intensity,
+comparator design, surgery type, and background analgesia. Conventional pooled efﬁcacy estimates do not tell
+clinicians which reproducible protocol characteristics are associated with a clinically meaningful opioid-sparing
+effect.
+TEAS and EA share electrical stimulation but differ in invasiveness, delivery, sensory experience, blinding, and
+implementation. Pooling them into one overall estimate may obscure clinically important differences. This review
+will therefore estimate effects separately for TEAS and EA and will use sham-controlled comparisons as the
+principal evidence base. Usual-care or no-stimulation comparisons will be synthesised separately as supportive
+evidence.
+The review is designed primarily to investigate protocol-level effect modiﬁcation. Prespeciﬁed moderators are
+intervention timing, single versus repeated treatment, cumulative stimulation duration before the 24-hour endpoint,
+electrical frequency, and stimulation intensity. Surgical category, regional or neuraxial analgesia, comparator
+design, and risk of bias will be treated mainly as adjustment or contextual variables rather than as the principal
+research focus.
+Review objectives
+The primary objective is to determine which protocol characteristics of perioperative TEAS or EA are associated
+with greater reduction in cumulative systemic opioid consumption during the ﬁrst 24 hours after surgery, without
+clinically important worsening of postoperative pain, in adults undergoing surgery under general anaesthesia.
+The review will:
+1. Estimate, separately, the sham-controlled effect of TEAS and the sham-controlled effect of EA on cumulative 0-
+24-hour postoperative opioid consumption expressed as IV MME.
+2. Estimate the corresponding effects on pain at rest and pain during movement, approximately 24 hours.
+3. Examine, separately within TEAS and EA where data permit, associations between treatment effect and
+intervention timing, number of treatment sessions, cumulative stimulation duration, electrical frequency, and
+stimulation intensity.
+4. Determine whether the magnitude of opioid reduction reaches a prespeciﬁed threshold for clinical importance
+without clinically important worsening of pain.
+5. Provide separate supportive syntheses for TEAS and EA compared with usual care, no stimulation, or other non-
+sham controls.
+6. Assess postoperative opioid consumption beyond 24 hours, intraoperative opioid requirements, pain at additional
+time points, postoperative nausea and vomiting, rescue analgesia, quality of recovery, functional and
+gastrointestinal recovery, length of stay, and treatment-related adverse events.
+7. Assess risk of bias using Cochrane RoB 2 and certainty of evidence using GRADE.
+Keywords
+Postoperative opioid consumption; Acute postoperative pain; Postoperative analgesia; Electroacupuncture;
+Transcutaneous electrical acupoint stimulation; Quality of recovery; Multimodal analgesia; Surgical recovery;
+Randomized controlled trials; Systematic review; Meta-analysis; Acupuncture; Meta-regression
+Country
+Sweden
+ELIGIBILITY CRITERIA
+Population
+Included
+• Adults aged 18 years or older undergoing an operative surgical procedure under general anaesthesia.
+• General anaesthesia alone or general anaesthesia combined with regional or neuraxial anaesthesia or analgesia.
+• Any surgical specialty and elective or urgent surgery, provided postoperative opioid consumption or another
+eligible outcome is reported.
+• Mixed-age studies when adult data can be extracted separately or when at least 90% of participants are aged 18
+years or older.
+Excluded
+• Studies involving only children or adolescents.
+• Procedures conducted exclusively under local, regional, or neuraxial anaesthesia without general anaesthesia.
+• Non-surgical procedures, dental procedures without general anaesthesia, chronic pain populations without an
+acute perioperative context, and interventions delivered only after recovery from the acute postoperative period.
+Intervention(s) or exposure(s)
+Included
+Acupuncture; Electroacupuncture; Acupuncture-like Transcutaneous Electrical Nerve Stimulation; Perioperative
+Care; Non-Pharmacological Interventions
+1. Transcutaneous electrical acupoint stimulation (TEAS): non-invasive electrical stimulation delivered through
+surface electrodes positioned over recognised or explicitly deﬁned body acupuncture points, without needle
+penetration.
+2. Electroacupuncture (EA): electrical stimulation delivered through one or more pairs of acupuncture needles
+inserted at recognised or explicitly deﬁned body acupuncture points.
+Eligible terminology may include transcutaneous electrical acupoint stimulation, transcutaneous electric acupoint
+stimulation, transcutaneous acupoint electrical stimulation, electrical acupoint stimulation, electroacupoint
+stimulation, acupuncture-like TENS delivered at acupuncture points, electroacupuncture, electric acupuncture, or
+electrically stimulated acupuncture when the intervention clearly meets the deﬁnitions above.
+At least one eligible stimulation session must occur before the end of the ﬁrst 24 postoperative hours. Interventions
+may be preoperative, intraoperative, postoperative, or delivered across more than one perioperative phase. TEAS
+or EA may be used alone or as an adjunct to balanced usual multimodal perioperative care.
+Trials remain eligible when one or more protocol characteristics are incompletely reported; however, they will
+contribute only to analyses for which the relevant intervention information is sufﬁciently available. Protocol
+characteristics will be extracted according to STRICTA-compatible domains, including modality, timing, number of
+sessions, session duration, cumulative stimulation duration before 24 hours, acupoints, frequency, waveform, pulse
+width, intensity strategy, current amplitude, laterality, device, practitioner, and treatment ﬁdelity.
+Excluded
+• Manual acupuncture without electrical stimulation.
+• Dry needling, trigger-point needling, acupuncture-point injection, laser acupuncture, moxibustion, cupping,
+massage, or herbal interventions.
+• Ordinary TENS or percutaneous electrical nerve stimulation delivered only at non-acupuncture locations.
+• Auricular acupuncture, battleﬁeld acupuncture, auricular acupressure, electroauriculotherapy, press-tack or
+intradermal needle interventions, wrist-ankle acupuncture, and buccal acupuncture.
+• Electrical stimulation used only for neuromuscular monitoring, nerve localisation, or physiological measurement.
+• Mixed interventions in which the independent effect of TEAS or EA cannot be separated.
+• Studies in which TEAS and EA are combined within the same intervention arm and their individual contribution
+cannot be separated.
+Comparator(s) or control(s)
+Included
+PICO tags selected: Sham Acupuncture; Placebo; Usual Care
+The principal analyses will use sham-controlled comparisons:
+1. TEAS versus inactive or credible sham TEAS, including identical electrode placement with no current, sub-
+sensory or minimally active current, or non-acupoint sham electrical stimulation.
+2. EA versus sham EA, including non-penetrating sham needles, superﬁcial or non-acupoint needling, needles
+connected to an inactive device, or another credible sham procedure designed to preserve participant blinding.
+Usual perioperative care, standard multimodal analgesia, no TEAS or EA, waiting-list control, or attention control
+will be eligible but analysed separately as supportive comparisons. Active electrical comparators, such as non-
+acupoint TENS, may be included and reported separately when the contrast is clinically interpretable.
+Anaesthetic techniques, regional or neuraxial analgesia, non-opioid analgesics, antiemetics, and postoperative
+care pathways must be balanced between groups or sufﬁciently described to assess their potential inﬂuence.
+Excluded
+• Comparators containing an active acupuncture-point intervention that prevents estimation of the independent
+effect of TEAS or EA.
+• Groups receiving substantially different perioperative or analgesic co-interventions without adequate adjustment.
+• Comparators that are insufﬁciently described to classify as sham, usual care, no treatment, or active comparator.
+Study design
+Only randomized study types will be included.
+Included
+• Individually randomized parallel-group controlled trials.
+• Cluster-randomized trials when appropriate design-adjusted results are available or can be calculated.
+• Crossover trials only when an eligible perioperative treatment period can be validly separated and carryover is
+implausible.
+Excluded
+• Quasi-randomized studies, non-randomized controlled studies, observational studies, case series, case reports,
+qualitative studies, reviews, and protocols without results.
+• Conference abstracts without sufﬁcient information for eligibility, risk-of-bias assessment, and outcome extraction.
+Such records may be listed as awaiting classiﬁcation and investigators may be contacted.
+Context
+Inpatient, day-surgery, ambulatory surgical, and other perioperative hospital settings in any country or healthcare
+system will be eligible. Surgical specialties may include orthopaedic, abdominal, gynaecological, urological,
+thoracic, cardiac, neurological, breast, head and neck, and other operative ﬁelds. No restrictions will be applied
+based on sex, ethnicity, socioeconomic status, or geographic region.
+Only studies for which the full-text report is published in English will be eligible for inclusion. No language restriction
+will be applied at the database-search stage; reports published in languages other than English that are identiﬁed
+by the unrestricted searches will be excluded during study selection on the basis of publication language.
+TIMELINE OF THE REVIEW
+Date of ﬁrst submission to PROSPERO
+19 August 2026
+Review timeline
+Review start date: 14 August 2026. Review end date: 31 October 2026.
+Date of registration in PROSPERO
+20 August 2026
+AVAILABILITY OF FULL PROTOCOL
+Availability of full protocol
+A full protocol has been written but is not available because:
+The protocol is a team-review draft and has not yet been frozen for public release.
+SEARCHING AND SCREENING
+Search for unpublished studies
+Only published studies will be sought.
+Main sources that will be searched
+The main sources to be searched are CENTRAL - Cochrane Central Register of Controlled Trials, CINAHL -
+Cumulative Index to Nursing and Allied Health Literature, Embase and PubMed.
+Search language restrictions
+There are no language restrictions.
+Search date restrictions
+There are no search date restrictions.
+Other methods of identifying studies
+Other studies will be identiﬁed by: contacting authors or experts, looking through all the articles that cite the papers
+included in the review ("snowballing" or forward citation searching), reference list checking (backward citation
+searching) and searching trial or study registers.
+Link to search strategy
+A full search strategy is available in the full protocol as described in the Availability of full protocol section
+Selection process
+Studies will be screened independently by at least two people (or person/machine combination) with a process to
+resolve differences.
+Other relevant information about searching and screening
+Database-speciﬁc TEAS search strategies will combine terminology for transcutaneous electrical stimulation at
+acupuncture points with surgical or peri-operative concepts and validated randomized-trial terms.
+General anaesthesia will be veriﬁed during study selection rather than required as a mandatory search concept
+because exploratory testing showed that a general-anaesthesia search block failed to retrieve known eligible TEAS
+reports whose anaesthetic technique was incompletely represented in titles, abstracts, or indexing.
+Search results will be exported in their original formats, retained unchanged, and deduplicated using documented
+automated and manual procedures.
+No publication-date or language restrictions will be applied to the electronic database searches. This is intended to
+maximise retrieval and avoid language-related loss of potentially relevant records at the search stage. However,
+eligibility for the systematic review will be restricted to studies with a full-text report published in English. Reports
+published only in languages other than English will therefore be excluded during study selection and the reason for
+exclusion will be recorded as publication language.
+Full-text exclusion reasons will be recorded using a prespeciﬁed hierarchy, including publication language when the
+full-text report is not published in English. Excluded full-text reports with reasons will be provided as supplementary
+material. Searches will be updated before manuscript submission when required.
+DATA COLLECTION PROCESS
+Data extraction from published articles and reports
+Data will be extracted independently by at least two people (or person/machine combination) with a process to
+resolve differences.
+Authors will be asked to provide any required data not available in published reports.
+Study risk of bias or quality assessment
+Risk of bias will be assessed using: Cochrane RoB-2
+Data will be assessed independently by at least two people (or person/machine combination) with a process to
+resolve differences.
+Additional information will be sought from study investigators if required information is unclear or unavailable in the
+study publications/reports.
+Reporting bias assessment
+Risk of bias due to missing results will be assessed by comparing trial registrations, protocols, and publications.
+Funnel plots and small-study-effect tests will be considered when at least 10 sufﬁciently similar studies are
+available. Selective non-reporting will inform sensitivity analyses and GRADE assessments.
+Certainty assessment
+Certainty of evidence will be assessed using GRADE for each critical and important outcome. Randomized
+evidence will start at high certainty and may be downgraded for risk of bias, inconsistency, indirectness,
+imprecision, or publication bias. Judgements will be explained in Summary-of-Findings tables.
+OUTCOMES TO BE ANALYSED
+Main outcomes
+1. Cumulative systemic postoperative opioid consumption from the end of surgery to 24 hours, converted to IV
+MME using prespeciﬁed conversion rules. Programmed but undelivered patient-controlled analgesia doses will not
+be counted as consumed opioid. The principal effect measure will be mean difference in IV MME.
+2. Postoperative pain at approximately 24 hours, assessed separately at rest and during movement where
+reported. Pain scores will be converted to a 0-10 scale when valid; otherwise standardised mean differences will be
+used in supportive analyses.
+Clinical interpretation: a pooled opioid-sparing effect will be considered clinically meaningful when the point
+estimate indicates a reduction of at least 10 mg IV MME during 0-24 hours and the corresponding pain evidence
+does not permit clinically important worsening. Clinically important pain worsening is prespeciﬁed as an increase of
+1.0 point or more on a 0-10 scale; the upper 95% conﬁdence limit will be examined against this margin. Sensitivity
+interpretations will use an 8 mg IV MME threshold and, when calculable, a 30% relative opioid reduction.
+Additional outcomes
+• Cumulative postoperative opioid consumption during 0-48 hours, 0-72 hours, and the longest reported acute
+postoperative interval.
+• Intraoperative opioid consumption, converted to an appropriate common opioid-equivalent metric when valid.
+• Pain at rest and during movement at approximately 6, 24, 48, and 72 hours and at the longest reported acute time
+point.
+• Postoperative nausea, vomiting, or composite PONV during 0-24 hours, 0-48 hours, and the longest reported
+interval.
+• Need for rescue analgesia and time to ﬁrst rescue analgesia.
+• Quality of recovery measured using validated instruments such as QoR-15, QoR-40, or QoR-9.
+• Patient satisfaction, gastrointestinal recovery, functional recovery, time to mobilisation, and length of hospital stay.
+• Persistent postoperative opioid use beyond 30 days, when reported.
+• Serious and non-serious adverse events plausibly related to TEAS or EA, including skin reactions, bleeding,
+infection, electrical discomfort, needle-related adverse effects, and device-related events.
+PLANNED DATA SYNTHESIS
+Strategy for data synthesis
+TEAS and electroacupuncture (EA) will not be combined in a pooled estimate. Analyses will be stratiﬁed by
+modality. Primary comparisons will be TEAS versus credible sham TEAS and EA versus sham EA. Supportive
+comparisons will evaluate TEAS and EA against usual care, no stimulation, or attention controls. Active
+comparators will be analysed separately.
+When at least two comparable studies are available within a modality–comparator stratum, random-effects meta-
+analysis will be performed. Continuous outcomes will be pooled using inverse-variance methods and expressed as
+mean differences or standardised mean differences, as appropriate. Dichotomous outcomes will be pooled as risk
+ratios. Between-study variance will be estimated using restricted maximum likelihood, with Hartung–Knapp
+conﬁdence intervals where appropriate.
+For multi-arm trials, compatible intervention groups may be combined when justiﬁed. Otherwise, shared control
+groups will be divided or correlations addressed using multivariate methods to avoid double counting. Missing
+standard deviations may be derived from standard errors, conﬁdence intervals, p values, or other statistics. Median
+and quantile data will be converted only when assumptions are reasonable and examined in sensitivity analyses.
+Statistical heterogeneity will be assessed using forest plots, Cochran's Q, tau-squared, I-squared, and prediction
+intervals. Clinical heterogeneity will be evaluated before pooling.
+Prespeciﬁed protocol moderators are intervention timing; single versus repeated treatment before the 24-hour
+outcome; cumulative active stimulation duration before 24 hours, analysed per 30-minute increment; electrical
+frequency; and stimulation intensity. Timing will be classiﬁed as preoperative only, intraoperative-inclusive,
+postoperative only, or spanning multiple perioperative phases. Frequency will be grouped as low, intermediate,
+high, or alternating/mixed. Intensity will be classiﬁed as sub-sensory or ﬁxed low current, sensory-level, motor-
+twitch threshold, maximum tolerated, or insufﬁciently reported. Actual current amplitude will be analysed only when
+reporting is comparable.
+Meta-regression will be conducted separately for TEAS and EA, without causal claims of superiority. Surgery type,
+regional or neuraxial analgesia, comparator design, background multimodal analgesia, geographic setting,
+publication year, and risk of bias will inform adjustment, sensitivity analysis, or interpretation.
+Meta-regression will require sufﬁcient study numbers and moderator variation. Normally, at least 10 independent
+estimates per predictor and four studies per categorical level will be required. Univariable models will be prioritised.
+Multivariable models will be considered only with at least 20 studies and 10 studies per predictor. Collinearity will be
+assessed. Results will report coefﬁcients, 95% conﬁdence intervals, residual heterogeneity, and variance
+explained, and will be interpreted as study-level associations vulnerable to confounding and ecological bias.
+If meta-regression is unjustiﬁed, protocol characteristics will be synthesised descriptively using structured tables
+and effect-direction plots. Subgroup analyses will examine sham design, surgical category, regional or neuraxial
+analgesia, background analgesia balance, and risk of bias.
+Sensitivity analyses will restrict or exclude studies based on sham credibility, high risk of bias, imputed or converted
+data, opioid-conversion uncertainty, unbalanced co-interventions, non-peer-reviewed reports, inﬂuential studies,
+and unresolved cohort overlap. Alternative variance estimators and conﬁdence-interval methods will be tested.
+Clinical thresholds of 8 mg IV MME and 30% relative opioid reduction will be examined. No network meta-analysis
+is planned because transitivity and head-to-head evidence are expected to be insufﬁcient.
+CURRENT REVIEW STAGE
+Stage of the review at this submission
+Review stage
+Started
+Completed
+Pilot work
+✓ 
+✓
+Formal searching/study identiﬁcation
+✓ 
+Screening search results against inclusion criteria
+ 
+Data extraction or receipt of IPD
+ 
+Risk of bias/quality assessment
+ 
+Data synthesis
+ 
+Review status
+The review is currently planned or ongoing.
+Publication of review results
+Results of the review will be published in English.
+REVIEW AFFILIATION, FUNDING AND PEER REVIEW
+Review team members
+Mr John Ryan Nual Mendoza (review guarantor and contact) ORCID: 0009-0005-4341-7345. Lund University.
+Sweden.
+No conﬂict of interest declared.
+Ms Siv Katrin Peters. ORCID: 0009-0001-7202-2095. Region Skåne. Sweden.
+No conﬂict of interest declared.
+Dr Carina Sjöberg. ORCID: 0000-0002-9877-7357. Lund University. Sweden.
+No conﬂict of interest declared.
+Dr Pether Jildenstål. ORCID: 0000-0001-7518-8915. Lund University. Sweden.
+No conﬂict of interest declared.
+Named contact
+Mr John Ryan Nual Mendoza (john_ryan.nual_mendoza@med.lu.se). ORCID: 0009-0005-4341-7345. Lund
+University. Sweden.
+Review afﬁliation
+Lund University
+Funding source
+Review has no speciﬁc/external funding but is supported by guarantor/review team (non-commercial) institutions.
+Peer review
+There has been no peer review of this planned review.
+ADDITIONAL INFORMATION
+Review conﬂict of interest
+Declared individual interests are recorded under team member details.. No additional interests are recorded for this
+review.
+Medical Subject Headings
+Acupuncture Therapy; Acupuncture Points; Electroacupuncture; Acupuncture Analgesia
+SIMILAR REVIEWS
+Check for similar records already in PROSPERO
+PROSPERO identiﬁed a number of existing PROSPERO records that were similar to this one (last check made on
+21 July 2026). These are shown below along with the reasons given by that the review team for the reviews being
+different and/or proceeding.
+Effectiveness of Medical Acupuncture on Postoperative Opioid Consumption and Pain: A Systematic Review
+and Meta-Analysis of Randomized Controlled Trials [published 4 September 2025] [CRD420251090635]. The
+review was judged not to be similar
+Efﬁcacy of acupuncture-related interventions for postoperative pain after surgery for perianal abscess in adults:
+a systematic review and meta-analysis of randomized controlled trials [published 25 April 2026]
+[CRD420261378143]. The review was judged not to be similar
+The opioid-sparing effect of acupuncture after abdominal surgery: a systematic review and meta-analysis
+protocol [published 26 March 2022] [CRD42022311155]. The review was judged not to be similar
+Comparative effectiveness of different acupoint stimulation for relieving acute pain after laparoscopic surgery:
+a network meta-analysis of randomized trials [published 7 June 2026] [CRD420261417428]. The review was
+judged not to be similar
+Effects of Acupuncture-Related Interventions on Postoperative Gastrointestinal Recovery: A Systematic
+Review, Network Meta-Analysis, and Pairwise Meta-Analysis [published 16 April 2026] [CRD420261370906].
+The review was judged not to be similar
+PROSPERO version history
+Version 1.0, published 20 Aug 2026
+Disclaimer
+The content of this record displays the information provided by the review team. PROSPERO does not peer review
+registration records or endorse their content.
+PROSPERO accepts and posts the information provided in good faith; responsibility for record content rests with
+the review team. The guarantor for this record has afﬁrmed that the information provided is truthful and that they
+understand that deliberate provision of inaccurate information may be construed as scientiﬁc misconduct.
+PROSPERO does not accept any liability for the content provided in this record or for its use. Readers use the
+information provided in this record at their own risk.
+Any enquiries about the record should be referred to the named review contact
+PROSPERO
+International prospective register of systematic reviews

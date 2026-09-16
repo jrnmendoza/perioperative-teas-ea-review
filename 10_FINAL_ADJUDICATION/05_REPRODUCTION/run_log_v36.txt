@@ -1,0 +1,101 @@
+$ <scratchpad>/venv/bin/python 10_FINAL_ADJUDICATION/code/build_registry.py
+Operational N lower bound 12103 units 69 Counter({'TEAS': 49, 'EA': 20, 'UNCLEAR': 1})
+exit=0
+$ <scratchpad>/venv/bin/python 10_FINAL_ADJUDICATION/code/build_results.py
+Canonical rows 761 models 73 model input contrasts 179 membership rows 845
+exit=0
+$ <scratchpad>/venv/bin/python 10_FINAL_ADJUDICATION/code/fit_models.py
+Fitted 73 defined estimands; 33 pooled models
+opioid24_TEAS_sham 1 48 -7.7 -10.623 -4.777
+opioid24_EA_sham 0 0 0 0 0
+opioid24_TEAS_usual 1 47 -8.0 -10.9199 -5.0801
+opioid24_EA_usual 2 159 -6.832 -76.3907 62.7267
+ponv24_TEAS_sham 10 3447 0.6402 0.5171 0.7926
+nausea24_EA_usual 2 237 0.6602 0.0586 7.4413
+vomiting24_EA_usual 2 237 0.5294 0.0168 16.6914
+nausea24_TEAS_sham 3 735 0.6681 0.2874 1.5533
+vomiting24_TEAS_sham 4 2390 0.6801 0.3446 1.3422
+vomiting24_TEAS_usual 1 105 0.4828 0.241 0.9671
+persistent_nausea24_TEAS_sham 1 1655 0.4291 0.2491 0.739
+nausea48_TEAS_sham 1 277 0.4561 0.2994 0.6947
+vomiting48_TEAS_sham 1 277 0.3357 0.164 0.6875
+ponv48_TEAS_sham 1 62 0.5417 0.3434 0.8544
+nausea6to24_EA_usual 1 400 0.5004 0.3246 0.7716
+vomiting6to24_EA_usual 1 400 0.3378 0.1956 0.5833
+pain24_rest_TEAS_sham 3 218 -0.2133 -0.7539 0.3273
+pain24_movement_TEAS_sham 1 100 0.04 -0.2063 0.2863
+pain24_rest_TEAS_usual 0 0 0 0 0
+pain24_movement_EA_sham 1 114 -0.338 -0.7276 0.0516
+pain24_rest_EA_sham 0 0 0 0 0
+flatus_TEAS_sham 8 1505 -5.3348 -9.0915 -1.5781
+flatus_TEAS_usual 0 0 0 0 0
+flatus_EA_sham 1 110 -7.2 -16.2147 1.8147
+flatus_EA_usual 4 725 -2.8876 -5.3868 -0.3884
+bowelsounds_TEAS_sham 3 812 -7.1908 -11.6181 -2.7635
+defecation_TEAS_sham 4 1182 -7.7692 -17.4685 1.9301
+defecation_EA_sham 1 110 -21.6 -37.0952 -6.1048
+defecation_EA_usual 4 435 -10.1059 -32.8903 12.6785
+opioid48_EA_usual_PCA 1 81 -6.0 -10.628 -1.372
+opioid72_EA_sham_PCA 1 25 -8.4 -22.3158 5.5158
+intraop_remifentanil_TEAS_sham 6 1013 -114.8117 -199.6865 -29.9369
+intraop_remifentanil_TEAS_usual 2 175 -25.2787 -1108.9563 1058.399
+intraop_remifentanil_EA_usual 1 400 -16.7559 -74.2496 40.7379
+intraop_remifentanil_EA_sham 1 70 -38.3 -309.9842 233.3842
+pethidine24_TEAS_usual_rescue 1 31 -12.46 -37.694 12.774
+pethidine24_TEAS_active_rescue 1 31 -13.09 -44.1865 18.0065
+ponv24_TEAS_active 1 85 0.3071 0.0908 1.0384
+exit=0
+$ <scratchpad>/venv/bin/python 10_FINAL_ADJUDICATION/code/link_rob2.py
+Exact linked 97 of 761 unique canonical results
+exit=0
+$ <scratchpad>/venv/bin/python 10_FINAL_ADJUDICATION/code/grade_recommendations.py
+Authored GRADE bodies 38
+exit=0
+$ env ASTRA_R_LIBRARY=<scratchpad>/rlib Rscript 10_FINAL_ADJUDICATION/code/reproduce_metafor.R
+Loading required package: Matrix
+Loading required package: metadat
+Loading required package: numDeriv
+
+Loading the 'metafor' package (version 5.2-1). For an
+introduction to the package please type: help(metafor)
+
+Warning message:
+One or more SMD values are unusually large (i.e., abs(yi) > 2).
+Maybe SEs were used in place of SDs to compute them? 
+exit=0
+$ <scratchpad>/venv/bin/python 10_FINAL_ADJUDICATION/code/compare_metafor.py
+metafor comparison: 68 models, 731 fields, 0 failures
+exit=0
+$ <scratchpad>/venv/bin/python 10_FINAL_ADJUDICATION/code/triage_exclusions.py
+161 Counter({'PRIORITY RE-SCREEN: registered outcome terms present': 84, 'NO MECHANICAL FLAG (reason retained pending human confirmation)': 48, 'RE-SCREEN: outcome terms present; intervention or language needs confirmation': 29})
+Counter({('Wrong outcomes', 'FULL TEXT (retrieved PDF)'): 77, ('Wrong outcomes', 'TITLE/ABSTRACT ONLY'): 45, ('Publication language', 'TITLE/ABSTRACT ONLY'): 11, ('Wrong intervention', 'TITLE/ABSTRACT ONLY'): 6, ('Wrong setting', 'TITLE/ABSTRACT ONLY'): 5, ('Wrong setting', 'FULL TEXT (retrieved PDF)'): 4, ('Wrong intervention', 'FULL TEXT (retrieved PDF)'): 3, ('Wrong comparator', 'FULL TEXT (retrieved PDF)'): 2, ('Wrong patient population', 'FULL TEXT (retrieved PDF)'): 2, ('Study not retrieved', 'TITLE/ABSTRACT ONLY'): 1, ('Wrong study design', 'TITLE/ABSTRACT ONLY'): 1, ('Publication language', 'FULL TEXT (retrieved PDF)'): 1, ('Study not retrieved', 'FULL TEXT (retrieved PDF)'): 1, ('Wrong comparator', 'TITLE/ABSTRACT ONLY'): 1, ('Abstract only', 'FULL TEXT (retrieved PDF)'): 1})
+exit=0
+$ python3 10_FINAL_ADJUDICATION/code/crosswalk_covidence.py
+{
+ "covidence_included": 63,
+ "covidence_excluded": 161,
+ "registry_reports": 70,
+ "paths": {
+  "COVIDENCE FULL-TEXT INCLUDED": 63,
+  "COVIDENCE EXCLUDED; IN REGISTRY (post-exclusion re-inclusion not recorded in Covidence export)": 6,
+  "NO COVIDENCE RECORD IN EITHER EXPORT (candidate citation-search addition; unconfirmed)": 1
+ }
+}
+Excluded in Covidence but in registry: ['Gao 2022', 'Liu 2015', 'Oztas 2019', 'Song 2020', 'Szmit 2021', 'Zhang 2018']
+Excluded-reason counts: Counter({'Wrong outcomes': 122, 'Publication language': 12, 'Wrong intervention': 9, 'Wrong setting': 9, 'Wrong comparator': 3, 'Study not retrieved': 2, 'Wrong patient population': 2, 'Wrong study design': 1, 'Abstract only': 1})
+exit=0
+$ <scratchpad>/venv/bin/python 10_FINAL_ADJUDICATION/code/build_reports.py
+reports written: ['GRADE_ROB2_RECONCILIATION.md', 'MODEL_MEMBERSHIP_ANALYSIS_MANIFEST.md', 'PRIMARY_EVIDENCE_TABLE.md', 'model_analysis_manifest.csv', 'primary_evidence_table.csv']
+primary literal checks: Counter({'ALL ARM MEANS/SDs FOUND IN SOURCE TEXT': 22})
+exit=0
+$ <scratchpad>/venv/bin/python 10_FINAL_ADJUDICATION/code/validate_adjudication.py
+PASS source_integrity: 73 checked, 0 failed
+PASS registry_consistency: 831 checked, 0 failed
+PASS membership_semantics: 212 checked, 0 failed
+PASS input_rederivation: 179 checked, 0 failed
+PASS independent_refit: 340 checked, 0 failed
+PASS rob2_linkage: 97 checked, 0 failed
+PASS grade_correspondence: 38 checked, 0 failed
+PASS participant_ledger: 70 checked, 0 failed
+OVERALL PASS {"reports": 70, "trial_units": 69, "canonical_results": 761, "models": 73, "fitted_models": 68, "model_input_contrasts": 179, "graded_bodies": 38, "rob_linked_results": 97, "randomized_counted_operational": 12103}
+exit=0

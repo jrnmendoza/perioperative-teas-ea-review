@@ -1,0 +1,861 @@
+
+=== PDF PAGE 1 ===
+J Anesth (2017) 31:58–65
+DOI 10.1007/s00540-015-2057-1
+1 3
+ORIGINAL ARTICLE
+Effects of transcutaneous electrical acupoint stimulation 
+at different frequencies on perioperative anesthetic dosage, 
+recovery, complications, and prognosis in video‑assisted 
+thoracic surgical lobectomy: a randomized, double‑blinded, 
+placebo‑controlled trial
+Shun Huang1,2 · WenPing Peng2 · Xue Tian1 · Hansheng Liang1 · Zhe Jia3 · 
+Theresa Lo4 · Miao He1 · Yi Feng1 
+Received: 18 April 2015 / Accepted: 19 July 2015 / Published online: 8 September 2015 
+© Japanese Society of Anesthesiologists 2015
+and for another 30 min 24 and 48 h after surgery. 2/100 Hz 
+is a type of alternating frequency which goes between 2 and 
+100  Hz every 3  s. TEAS was administered over acupoints 
+Neiguan, Hegu, Lieque, and Quchi on the sick lateral. Elec-
+trodes were applied to the patients in the control group, but 
+no TEAS was used. Anesthetic dosage, blood gas analysis 
+results, lung function indexes FEV1 and FVC, post-anesthesia 
+care unit (PACU) status, postoperative complications, and 
+quality of life scores were recorded and analyzed statistically.
+Results  Intraoperative opioid consumption was lowest 
+in the 2/100  Hz group, with statistical significance (con, 
+P ≤ 0.001; 2 Hz, P ≤ 0.001; 100 Hz, P = 0.026). Com-
+pared with preoperative FEV1 and FVC, postoperative 
+FEV1 and FVC were significantly lower in all groups; dur-
+ing one-lung ventilation, arterial oxygen partial pressure 
+(PaO2) decreased more slowly in the 2/100 Hz group than 
+in the con group (P = 0.042). Moreover, in the 2/100 Hz 
+group extubation time was shorter (P = 0.038), visual anal-
+gesia scale score lower (P = 0.047), and duration of PACU 
+stay shorter (P  =  0.043) than in the con group. In the 
+100 Hz group incidence of postoperative nausea and vomit-
+ing (PONV) was lower than the con group (P = 0.044). In 
+all groups mean postoperative physical component scores 
+were significantly lower than mean preoperative scores.
+Conclusions  TEAS is a safe noninvasive adjunctive inter-
+vention for anesthesia management among patients undergo-
+ing VATS lobectomy. TEAS at 2/100 Hz can reduce intraop-
+erative opioid dosage and slow the decrease of PaO2 during 
+one-lung ventilation. It can also effectively reduce pain score, 
+extubation time, and PACU stay immediately after surgery. 
+Further, 100 Hz TEAS can reduce PONV morbidity.
+Keywords  Transcutaneous electrical acupoint 
+stimulation · Opioid · Lung function · Video-assisted 
+thoracic surgery · Lobectomy
+Abstract 
+Background  Transcutaneous electrical acupoint stimu-
+lation (TEAS), a non-invasive and non-pharmacological 
+adjunctive intervention for perioperative analgesia, may 
+also reduce the incidence of postoperative pulmonary com-
+plications. The effect of TEAS on video-assisted thoracic 
+surgical (VATS) patients is still unknown, however. The 
+purpose of this study was to investigate the effects of TEAS 
+of different frequency on perioperative anesthetic dosage, 
+recovery, complications, and prognosis for patients under-
+going VATS lobectomy.
+Methods  Eighty VATS lobectomy patients with no previous 
+experience of TEAS or acupuncture were randomly assigned 
+to four groups: control (con), 2/100, 2, and 100 Hz. The last 
+three experimental groups received TEAS at the indicated 
+frequencies for 30 min before induction, during the operation, 
+Clinical trial registration: The trial was registered at www.chictr.
+org (ChiCTR-TRC-14004207).
+S. Huang and H. Liang have contributed equally to this work and 
+share the first authorship.
+ * Yi Feng 
+ 
+yifeng65@sina.com
+ 
+Shun Huang 
+ 
+huangshunsleet@126.com
+1 
+Department of Anesthesiology, Peking University People’s 
+Hospital, Beijing 100044, China
+2 
+Department of Anesthesiology, Ministry of Health Beijing 
+Hospital, Beijing 100730, China
+3 
+Department of Surgery, Beijing Oasis International Hospital, 
+Beijing 100015, China
+4 
+Department of Anesthesiology, Ronald Reagan UCLA 
+Medical Center, Los Angeles, CA 90095‑7403, USA
+
+
+=== PDF PAGE 2 ===
+59
+J Anesth (2017) 31:58–65 
+1 3
+Introduction
+Video-assisted thoracic surgical (VATS) lobectomy is a 
+newly developed surgical procedure comparable in efficacy 
+with traditional thoracotomy but less likely to cause further 
+trauma, pain, and perioperative morbidity [1]. Although 
+postoperative pulmonary complications after VATS are 
+associated with high morbidity and mortality, they can be 
+prevented by appropriate application of anesthesia, postop-
+erative analgesia, and physical therapy [2].
+Clinical studies in the early 1980s showed that acupunc-
+ture is an effective and safe alternative method of anes-
+thesia in lung resection [3], and a recent meta-analysis 
+provided clear evidence that acupuncture is of benefit for 
+chronic pain management [4]. Acupuncture has even been 
+reported as a safe and effective intervention for breathless-
+ness caused by respiratory diseases [5, 6], and several stud-
+ies have reported that combined application of acupuncture 
+and general anesthesia is beneficial in pneumonectomy [7, 
+8].
+Transcutaneous electrical acupoint stimulation (TEAS), 
+a noninvasive adjunctive intervention based on acupunc-
+ture, may reduce pulmonary inflammatory responses 
+induced by one-lung ventilation, and therefore reduce the 
+incidence of postoperative pulmonary complications [9]. 
+Different frequencies of TEAS are known to have differ-
+ent effects on immune function, stress reaction, and even 
+on levels of serum components among patients undergoing 
+pneumonectomy [10–12].
+As far as we are aware, the effects of different frequen-
+cies of TEAS on perioperative anesthetic dosage, recovery, 
+complications, and prognosis among patients undergoing 
+VATS lobectomy have not been investigated. Therefore, 
+in this study, we combined TEAS and general anesthesia 
+for VATS lobectomy patients and observed the effects of 
+different frequencies of TEAS on perioperative anesthetic 
+dosage, recovery, complications, and prognosis for this 
+cohort.
+Materials and methods
+Participants
+This study was approved by the Institutional Review Board 
+of Peking University People’s Hospital and performed in 
+accordance with the Declaration of Helsinki. The trial is 
+registered at www.chictr.org (ChiCTR-TRC-1400420). 
+Written informed consent was obtained from all par-
+ticipants. Patients undergoing selective VATS lobectomy 
+between January 2014 and April 2014 were recruited. 
+Exclusion criteria were: severe co-existing disease with 
+American Society of Anesthesiologists status IV, recent 
+use of TEAS or acupuncture, and neural damage or infec-
+tion along the meridian on which the acupoints lay. Demo-
+graphic data age, gender, weight, height, body mass index, 
+smoking history, and medication were recorded for all 
+patients.
+Design
+A randomized, placebo-controlled, double-blinded study 
+with a pre and post-test design was conducted in accord-
+ance with the STRICTA recommendations [13]. Patients 
+were screened by the investigators the day before they 
+underwent VATS lobectomy. Eligible participants were 
+randomly assigned to the 2/100, 2, or 100 Hz experimen-
+tal (TEAS) group or the control (placebo-TEAS) group 
+depending on enrollment sequence according to a series of 
+random numbers generated by Excel. We chose these fre-
+quencies because they are representative and in common 
+use, one is low frequency, one is high frequency, and one is 
+an alternating frequency.
+All participants were unaware of group allocation. A 
+single investigator was responsible for application of both 
+types of intervention. The data were collected by another 
+investigator unaware of the group allocation.
+Intervention
+The acupoints Neiguan (PC6), Hegu (LI4), Lieque (LU7), 
+and Quchi (LI11) on the surgery-lateral were identified in 
+accordance with traditional anatomic location, marked, and 
+cleaned with an alcohol swab to reduce resistance. Elec-
+trodes (50 × 50 mm2) were then placed over each acupoint, 
+with the pore directly over the marked acupoint. Tegaderms 
+were placed over the electrodes and the participant’s skin to 
+fix the electrodes during intervention.
+We used HANS-200A Acupoint Stimulator for TEAS. 
+The intensity was set at the highest tolerable level that 
+caused no discomfort to the participant. The frequency 
+was set as 2/100, 2, or 100 Hz for the experimental groups. 
+2/100 Hz stimuli were in the dense-and-disperse mode, in 
+which 2 and 100 Hz are alternated every 3 s. Before data 
+collection, the voltage output of the machine was con-
+firmed to be reliable by use of a laboratory oscilloscope. 
+In the control group (con), electrodes with no central pore 
+were placed on the skin over the marked acupoints. The 
+participants could see the output light flashing but no cur-
+rent was transmitted to the acupoints. We also told patients 
+in control group that this was a type of stimulus without 
+perception.
+All participants received 30  min of TEAS or placebo-
+TEAS before induction, during the entire intraoperative 
+
+
+=== PDF PAGE 3 ===
+60
+ 
+J Anesth (2017) 31:58–65
+1 3
+period, and 30 min of TEAS or placebo-TEAS 24 and 48 h 
+after surgery.
+Anesthesia procedures
+First, a 16-G intravenous catheter and 20-G intra-arterial 
+catheter were placed in the non-surgery-lateral forearm, 
+lactated Ringer’s solution or colloid was administered, and 
+devices to monitor echocardiograms, peripheral capillary 
+oxygen saturation (SpO2), arterial blood pressure, bi-spec-
+trum index (Philips IntelliVue MP70, Royal Dutch Philips 
+Electronics), and anesthesia nociception index (ANI; Met-
+rodoloris, Lille, France) were placed. ANI is an indica-
+tor for monitoring nociception during general anesthesia, 
+which is calculated on the basis of heart rate variability. 
+ANI provides an even faster response than fluctuation of 
+the cardiovascular system [14, 15]. As far as we are aware, 
+no study has shown that TEAS itself affects heart rate vari-
+ability and ANI, so we used ANI to determine the dosage of 
+the intraoperative opioid. After 30 min of TEAS or placebo-
+TEAS, intravenous induction was started with 1.5–2  mg/
+kg propofol, 0.2–0.4 µg/kg sufentanil, and 0.2 mg/kg cisa-
+tracurium. The patient was intubated with a double-lumen 
+tube at the appropriate depth. Mechanical ventilation was 
+started after the tube position was confirmed by ausculta-
+tion, and fiber optic bronchoscopy was performed to recon-
+firm the tube position. During the operation, peak airway 
+pressure, end tidal CO2, and SpO2 were maintained at 
+15–30, 30–35 mmHg, and >93 %, respectively.
+Anesthesia was maintained by continuous infusion of cisa-
+tracurium (0.06 mg kg−1 h−1) and target controlled infusion 
+(TCI) of propofol and remifentanil. The bi-spectrum index 
+was maintained within the range 40–60 by adjusting the 
+propofol concentration, and ANI was maintained within the 
+range 50–70 [14, 15] by adjusting the remifentanil concentra-
+tion, according to the Marsh and Minto models, respectively. 
+If the remifentanil target controlled infusion concentration 
+reached 6 ng/mL but the ANI was still below 50, sufentanil 
+(0.1 µg/kg) was administered. Body temperature (nasopharyn-
+geal) was maintained at over 36 °C by use of a warm blanket. 
+Heart rate and blood pressure were maintained with acceptable 
+ranges, and vasoactive drugs were administered when needed.
+Sufentanil (0.1 µg/kg), flurbiprofen (100 mg), and tropi-
+setron (5 mg) were administered 30 min before the end of 
+surgery for analgesia transition and prevention of postop-
+erative nausea and vomiting (PONV). A patient-controlled 
+intravenous analgesia pump was connected (1  µg/mL 
+sufentanil and 1.2 mg/mL flurbiprofen; flow rate, 2 mL/h; 
+bolus, 3  mL; lockout time, 15  min). On skin closure, 
+administration of all anesthetics was stopped, and the sur-
+geon administered intercostal nerve block with 0.5 % ropiv-
+acaine, 10 ml, after which the patient was transferred to the 
+post-anesthesia care unit (PACU). After spontaneous breath 
+recovery, the patient was given muscle relaxant reversal, 
+neostigmine 2 mg, and atropine 1 mg, extubated when the 
+required criteria were achieved [16], and discharged from 
+the PACU after the modified Aldrete discharge criteria were 
+achieved [17].
+Outcome measurements
+Surgery time and intraoperative dosages of sufentanil, 
+remifentanil, propofol, and cisatracurium were recorded. 
+Intraoperative sufentanil dosage was converted into 
+remifentanil dosage on the basis of their relative poten-
+cies (ratio 1:10), [18] and total opioid dosage (remifenta-
+nil dosage) was calculated for comparison among groups. 
+Blood gas analysis was conducted immediately after intu-
+bation and before the end of one-lung ventilation. FiO2 was 
+set as 50 % during ventilation. The PaO2 change rate was 
+calculated by use of the formula [(PaO2 immediately after 
+intubation − PaO2 before the end of one-lung ventilation)/
+surgery time]. In the PACU, the extubation time (from ces-
+sation of anesthetic use to achievement of extubation cri-
+teria), numerical rating scale (NRS; 0 = “no pain at all”; 
+10 = “the worst pain ever experienced”) immediately after 
+extubation, and duration of PACU stay (from admission 
+into the PACU to achievement of discharge criteria) were 
+recorded.
+The forced expiratory volume in 1 s (FEV1) and forced 
+vital capacity (FVC) were measured by use of a portable 
+spirometer (Micro Lab, UK) on the day before surgery and 
+the day after the drainage tube was removed, in accord-
+ance with American Thoracic Society recommendations 
+[19]. All measurements were performed with the patient 
+in the seated position, and the best value from 3 trials was 
+recorded. The rates of change of these variables [(preopera-
+tive volume − postoperative volume)/preoperative volume] 
+were calculated for comparison among groups.
+After surgery, the dosages of sufentanil and flurbiprofen 
+required after 6, 12, 24, and 48 h to maintain the NRS score 
+at <4 were recorded. Complications including intraopera-
+tive awareness, PONV, dizziness, pruritus, and respiratory 
+depression were recorded. Nausea and vomiting were eval-
+uated 6, 12, 24, and 48 h after surgery, where 0 indicated 
+“no nausea at all” and 10 indicated “the worst nausea ever 
+experienced”. The quality of life score was evaluated by 
+use of the Medical Outcomes Study 12-item Short-Form 
+Health Survey (SF-12) before surgery and 1  month after 
+surgery, and the score was divided into the physical compo-
+nent score and mental component score.
+Sample size
+In the pre-study, the intraoperative opioid dosage in the 
+control group was 0.1620 (0.035) µg kg−1 min−1. On the 
+
+
+=== PDF PAGE 4 ===
+61
+J Anesth (2017) 31:58–65 
+1 3
+basis of this value and assuming a two-tailed α of 0.05 and 
+a power of 0.8, 11 patients were required in each group for 
+a 30 % between-group difference to be detected. Consider-
+ing potential loss of records and loss to follow-up, the sam-
+ple size was increased to 20 cases per group.
+Data analysis
+Data are presented as means and standard deviations for 
+continuous variables and as proportions for categorical 
+variables. One-way ANOVA and the S–N–K post-hoc test 
+were used for multiple comparisons of continuous vari-
+ables, and the least-significant-difference test was used for 
+paired comparisons of means between groups. The Pearson 
+chi-squared test was used for categorical variables. A two-
+tailed P value of <0.05 was regarded as statistically signifi-
+cant. All analysis was performed with Statistical Package 
+for IBM SPSS 22.0 (SPSS, Chicago, IL, USA).
+Results
+Of 186 screened patients, 80 patients met the inclusion cri-
+teria and were randomized to the 4 study groups (Fig. 1). 
+All 80 patients completed the trial and reported no adverse 
+effects such as intraoperative awareness or dizziness. No 
+differences in anesthesia duration, operation duration, and 
+one-lung ventilation duration were observed among the 
+groups. Randomization resulted in equal distribution of 
+socio-demographic and clinical characteristics, and sur-
+gery time was not statistically difference among groups 
+(Table 1).
+Intraoperative propofol and cisatracurium dosages did 
+not differ significantly among groups. Intraoperative total 
+opioid dosage (sum of remifentanil and sufentanil dosages) 
+was significantly lower in the 2/100 Hz group than in the 
+other groups (P = 0.001 compared with the control group 
+and 2  Hz group; P  =  0.026 compared with the 100  Hz 
+group) (Table 2).
+Most of the drain tubes of our patients were removed 
+within 3 days of surgery; the mean time was no different 
+among groups. Compared with the preoperative FEV1 and 
+FVC, the postoperative FEV1 and FVC were significantly 
+lower in all groups, but the rate of change in these variables 
+was not significantly different among the groups. Blood 
+gas analysis indexes pH, HCO3
+−1, and SaO2 were not sig-
+nificantly different among the groups. In all groups, PaO2 
+was significantly lower after longer one-lung ventilation 
+than before; the rate of change of PaO2 in the 2/100  Hz 
+group decreased more slowly than in the control group 
+(P = 0.042; Table 3).
+With regard to the patients’ status in the PACU, 
+extubation time was shorter (P  =  0.028), VAS score 
+lower (P  =  0.047), and duration of PACU stay shorter 
+(P  =  0.043) for the 2/100  Hz group than for the con-
+trol group. No patient experienced PONV in the PACU 
+(Table 4).
+Neither the required dosages of sufentanil and flurbi-
+profen nor the scores for nausea and vomiting 6, 12, 24, 
+and 48 h after surgery differed significantly among groups. 
+However, PONV morbidity was lower for the 100 Hz group 
+than for the control group (P = 0.044) (Table 5).
+Six patients (3 who received interventions and 3 con-
+trols) had no SF-12 score because they were lost to fol-
+low-up. Analysis of SF-12 data from 74 patients 1 month 
+after surgery showed that the mean postoperative physical 
+component scores were significantly lower than the mean 
+preoperative scores in all groups (control group, P = 0.046; 
+2/100  Hz group, P  =  0.038; 2  Hz group, P  =  0.029; 
+100 Hz group, P = 0.041). In contrast, the mean postopera-
+tive mental component scores were similar to the mean pre-
+operative scores in all groups (Table 6). These values were 
+not significantly different among the groups.
+Discussion
+In this study, we found that 2/100 Hz TEAS reduced intra-
+operative opioid consumption and anesthetic recovery time, 
+and slowed the rate of change of PaO2 during one-lung 
+ventilation; 100 Hz TEAS reduced PONV morbidity.
+Minimally invasive surgery and non-invasive adjunc-
+tive anesthetic methods have become increasingly popular. 
+In this study, we examined the effects of TEAS at differ-
+ent frequencies with general anesthesia for VATS lobec-
+tomy patients to identify the overall effects of TEAS on 
+186 patients undergoing selective VATS lobectomy
+Exclusion criteria: 
+Co-existing severe disease with American Society of Anesthesiologists score 
+Recent use of TEAS or acupuncture 
+Neural damage or infection along the meridian on which the acupoints lie 
+80 patients who met the inclusion 
+criteria 
+Con group 
+n = 20 
+2/100 Hz 
+n = 20 
+2 Hz 
+n = 20 
+100 Hz 
+n = 20 
+Fig. 1   Flow chart of trial distribution
+
+
+=== PDF PAGE 5 ===
+62
+ 
+J Anesth (2017) 31:58–65
+1 3
+perioperative anesthetic dosage, lung function, recovery, 
+complications, and prognosis. We chose the four forearm 
+acupoints most widely accepted and commonly reported 
+in the Chinese literature for management of pain, dysp-
+nea, and nausea and vomiting; two of these are located on 
+the lung meridian. We also used ANI as an indicator for 
+monitoring nociception during general anesthesia, because 
+it responds even faster than fluctuation of cardiovascular 
+system [14, 15], making opioid administration more objec-
+tive and accurate.
+We demonstrated that 2/100 Hz TEAS reduced intraopera-
+tive opioid consumption by 33.5 %. This value however, can-
+not be compared with those observed in other similar studies 
+on opioids because these studies used different procedures [7, 
+20–22]. This study had a strict double-blinded design, with 
+ANI as a unique criterion for adjustment of opioid dosage.
+Table 1   Patient characteristics
+Con control
+Characteristic
+Con
+2/100 Hz
+2 Hz
+100 Hz
+Age (year), mean (SD)
+57.2 (15.7)
+57.3 (11.6)
+58.2 (10.6)
+56.5 (11.2)
+Gender (n), male/female
+9/11
+10/10
+9/11
+9/11
+Body mass index (kg/m2), mean (SD)
+22.8 (2.6)
+24.7 (2.2)
+25.0 (3.5)
+23.6 (2.2)
+Smoking status (n), smoker/nonsmoker
+3/17
+8/12
+6/14
+7/13
+American Society of Anesthesiologists status (n), I/II/III
+7/12/1
+6/14/0
+8/12/0
+10/7/3
+Lobectomy (n), single/two lobes
+19/1
+19/1
+20/0
+19/1
+Surgery time (min), mean (SD)
+144 (23.1)
+142 (22.7)
+138 (19.3)
+140 (20.2)
+Table 2   Intraoperative anesthetic dosage
+Con control
+ * 2/100 Hz vs. con, P ≤ 0.001; # 2/100 Hz vs. 2 Hz, P ≤ 0.001; ∆ 2/100 Hz vs. 100 Hz, P = 0.026
+Anesthetic
+Con
+2/100 Hz
+2 Hz
+100 Hz
+Propofol (mg kg−1 min−1) mean (SD)
+0.1355 (0.028)
+0.1365 (0.025)
+0.1242 (0.032)
+0.1308 (0.028)
+Cisatracurium (µg kg−1 min−1) mean (SD)
+2.89 (0.37)
+2.95 (0.65)
+2.70 (0.76)
+2.76 (0.40)
+Total opioid dose (remifentanil) (µg kg−1 min−1) mean (SD)
+0.1617 (0.037)
+0.1128 (0.034)*#∆
+0.1718 (0.066)
+0.1451 (0.036)
+Table 3   Pulmonary functions and arterial oxygen partial pressure changes
+Con control, PaO2 arterial oxygen partial pressure, FEV1 forced expiratory volume in 1 s, FVC forced vital capacity
+* 2/100 Hz vs con, P = 0.042
+Indicator
+Con
+2/100 Hz
+2 Hz
+100 Hz
+PaO2 change rate (mmHg/min), mean (SD)
+1.28 (0.78)
+0.76 (0.95)*
+0.88 (0.84)
+1.25 (0.52)
+FEV1 change (%), mean (SD)
+36 (10)
+38 (9)
+39 (10)
+37 (9)
+FVC change (%), mean (SD)
+41 (9)
+39 (10)
+42 (11)
+44 (13)
+Table 4   PACU status
+NRS numerical rating scale, PACU post-anesthesia care unit, PONV postoperative nausea and vomiting
+* 2/100 Hz vs. con, P = 0.028; # 2/100 Hz vs. con, P = 0.047; ∆ 2/100 Hz vs. con, P = 0.043
+Indicator
+Con
+2/100 Hz
+2 Hz
+100 Hz
+Extubation time (min), mean (SD)
+14.7 (4.0)
+9.9 (3.5)*
+12.4 (4.6)
+12.8 (6.2)
+NRS score right after extubation, mean (SD)
+2.4 (0.5)
+1.3 (0.7)#
+2.2 (1.9)
+2.4 (1.3)
+Duration of PACU stay (min), mean (SD)
+29.3 (8.0)
+19.8 (7.0)∆
+24.9 (9.2)
+25.6 (12.4)
+PONV in PACU (%)
+0
+0
+0
+0
+
+
+=== PDF PAGE 6 ===
+63
+J Anesth (2017) 31:58–65 
+1 3
+The mechanism of acupuncture analgesia is not well 
+understood, and most basic research has focused on the 
+production of endogenous opioid peptides and stimulation 
+of endogenous descending inhibitory pathways. Analysis of 
+cerebrospinal fluid of patients receiving acupuncture treat-
+ment has revealed elevated levels of serotonin, endorphins, 
+and enkephalins [23]. Previous animal and human studies 
+have found that low-frequency (2 Hz) and high-frequency 
+(100 Hz) electrical acupuncture induced different release of 
+a variety of opioid peptides. Studies have found that TEAS 
+at 2  Hz induced release of enkephalins and endorphins, 
+TEAS at 100  Hz induced release of dynorphins [24–26], 
+and only TEAS at 2/100 Hz induced release of all opioid 
+peptides, resulting in their synergistic interaction [27].This 
+may explain our observation of different analgesia effects 
+induced by different frequencies of TEAS.
+There is a dose–response relationship between opioid 
+dosage and associated side effects [28]. Hence, any non-
+pharmacological method that reduces use of opioid medi-
+cation is likely to be beneficial. Similar to previous stud-
+ies, we found that 2/100 Hz TEAS treatment significantly 
+reduced the time to extubation, time to achieving discharge 
+criteria, and the NRS score immediately after extubation 
+[22, 29].Moreover, no patient reported PONV in the PACU, 
+which was a result of several factors. It is well known that 
+stimulation to PC6 reduces the incidence of PONV, and 
+the reduced intraoperative opioid dose is related to the 
+low incidence of PONV. The reduced incidence of opioid-
+related side effects is probably related to reduced intraop-
+erative opioid consumption, indicating that 2/100 Hz TEAS 
+has potential benefits as an alternative to general anesthe-
+sia, especially among patients susceptible to side effects.
+We found that the decrease in PaO2 during one-lung 
+ventilation was slower in the 2/100 Hz TEAS group than 
+in the control group. In general, PaO2 gradually decreases 
+during one-lung ventilation because of reduced oxygen-
+exchange area, V/Q imbalance, and impaired hypoxygenic 
+pulmonary vascular constriction. It has been reported that 
+acupuncture and electro-acupuncture treatment improve 
+lung function and protect against hypoxia-induced pulmo-
+nary injury by stimulating Aα and Aβ nerve fibers [9, 30–
+33]. We believed 2/100 Hz TEAS as an adjuvant anesthetic 
+technique may actually improve oxygenation for patients 
+receiving one-lung ventilation by allowing use of a lower 
+anesthetic dosage, which may have negative effects on oxy-
+genation. However, further studies are needed to investigate 
+whether TEAS treatment is of real benefit to hypoxygenic 
+status during one-lung ventilation.
+We observed that, compared with the control group, 
+100 Hz TEAS treatment significantly reduced the incidence 
+of PONV 48 h after lobectomy. The anti-PONV effects of 
+acupuncture may be attributed to changes in the activity of 
+neurochemicals, including endorphins, serotonin, and nor-
+epinephrine, in the central nervous system, which desensi-
+tize the vomiting center in the brain, ultimately strengthen 
+the intrinsic anti-vomiting pathway; once the vomiting 
+center in the brain is sensitized, it is difficult to desensi-
+tize it [34]. We assumed that high-frequency TEAS initi-
+ates release of more neurochemicals at an early stage and 
+immediately desensitizes the vomiting center, because of 
+which 100 Hz had good anti-PONV effects.
+In our study, postoperative analgesic dosages were no 
+different among groups, in contrast with a previous study 
+[35]; the reasons may be the limited rounds of TEAS admin-
+istered after surgery, the relatively small sample size, and 
+the use of multiple medications. Further, the rates of FEV1 
+and FVC change were not significantly different among the 
+groups. We assume the lung-protective effect of TEAS does 
+not emerge during lung surgery. In addition, TEAS treat-
+ment had no significant effect on nausea and vomiting score 
+at any time, perhaps nausea and vomiting should be con-
+sidered together. To evaluate the effect of TEAS on patient 
+prognosis, we performed the SF-12 survey to determine 
+health-related quality of life [36, 37]. However, we found 
+Table 5   Postoperative medication and PONV
+PONV postoperative nausea and vomiting
+* 100 Hz vs. con, P = 0.044
+Indicator
+Con
+2/100 Hz
+2 Hz
+100 Hz
+Sufentanil (µg/kg), 
+mean (SD)
+1.32 (0.48) 1.67 (0.59) 1.41 (0.52) 1.69 (0.50)
+Flurbiprofen (mg/
+kg), mean (SD)
+3.05 (2.23) 3.45 (2.12) 3.24 (1.98) 3.46 (1.79)
+PONV 6 h score, 
+mean (SD)
+3.2 (0.7)
+3.0 (0.8)
+2.9 (0.4)
+2.5 (0.4)
+PONV 12 h score, 
+mean (SD)
+3.5 (0.5)
+3.1 (0.7)
+3.0 (0.6)
+2.2 (0.5)
+PONV 24 h score, 
+mean (SD)
+2.8 (0.6)
+3.3 (0.8)
+3.3 (0.7)
+2.3 (0.4)
+PONV 48 h score, 
+mean (SD)
+2.9 (0.7)
+3.5 (0.6)
+3.1 (0.5)
+2.8 (0.7)
+PONV morbidity 
+(%)
+35
+25
+26
+5*
+Table 6   SF-12 quality of life scores
+PCS physical component score, MCS mental component score
+*  Post vs. pre: con, P  =  0.046; 2/100  Hz, P  =  0.038; 2  Hz, 
+P = 0.029; 100 Hz, P = 0.041
+Indicator
+Con
+2/100 Hz 2 Hz
+100 Hz
+Preoperative PCS, mean (SD) 48 (7)
+47 (9)
+47 (11) 45 (8)
+Postoperative PCS, mean (SD) 37 (8)* 35 (9)*
+36 (8)* 36 (10)*
+Preoperative MCS, mean (SD) 55 (7)
+52 (8)
+49 (9)
+53 (6)
+Postoperative MCS, mean (SD)53 (9)
+54 (9)
+50 (8)
+51 (7)
+
+
+=== PDF PAGE 7 ===
+64
+ 
+J Anesth (2017) 31:58–65
+1 3
+no significant difference among the groups; the reasons may 
+be insufficient intervention, incorrect follow-up period, and 
+effect of postoperative chemotherapy for some patients.
+Limitations
+The sample size in this study was relatively small, and the 
+single-center design is another limitation. Selection bias 
+may have resulted in discrepancies in the measurement 
+indicators. Thus, further studies with several centers and 
+a larger sample size are needed to thoroughly evaluate the 
+efficacy of TEAS in perioperative pain relief, patient recov-
+ery, lung protection, and prognosis improvement.
+Conclusions
+TEAS is a noninvasive and non-pharmacological modal-
+ity for perioperative analgesia. Among patients undergoing 
+VATS lobectomy, different TEAS frequencies had differ-
+ent effects, including reduced opioid consumption, reduced 
+post-anesthesia recovery time, reduced rate of intraopera-
+tive PaO2 decline, and PONV prevention.
+Acknowledgments  The authors thank doctors of the thoracic surgery 
+department for cooperating with the clinical trial. This research was 
+supported by grant from the National Basic Research Program of Min-
+istry of Science and Technology of China (2013CB531900)&Peking 
+University People’s Hospital R&D fund(RDC2013-09).
+References
+ 1. Cheng D, Downey RJ, Kernstine K, Stanbridge R, Shennib H, 
+Wolf R, Ohtsuka T, Schmid R, Waller D, Fernando H, Yim A, 
+Martin J. Video-assisted thoracic surgery in lung cancer resec-
+tion: a meta-analysis and systematic review of controlled trials. 
+Innovations (Phila). 2007;2:261–92.
+ 2. Canet J, Mazo V. Postoperative pulmonary complications. Min-
+erva Anesthesiol. 2010;76:138–43.
+ 3. No authors listed. Clinical studies on acupuncture anesthesia in 
+lung resection. Chin Med J (Engl). 1980;93:287–92.
+ 4. Vickers AJ, Cronin AM, Maschino AC, Lewith G, MacPherson 
+H, Foster NE, Sherman KJ, Witt CM, Linde K. Acupuncture 
+Trialists C: acupuncture for chronic pain: individual patient data 
+meta-analysis. Arch Intern Med. 2012;172:1444–53.
+ 5. Cohen AJ, Menter A, Hale L. Acupuncture: role in comprehen-
+sive cancer care—a primer for the oncologist and review of the 
+literature. Integr Cancer Ther. 2005;4:131–43.
+ 6. Pan CX, Morrison RS, Ness J, Fugh-Berman A, Leipzig RM. 
+Complementary and alternative medicine in the management of 
+pain, dyspnea, and nausea and vomiting near the end of life. A 
+systematic review. J Pain Symptom Manag. 2000;20:374–87.
+ 7. Kuang X, Su Y, Guo H. [Study on combined acupunctural and 
+general anesthesia in pneumonectomy]. Zhongguo Zhong Xi Yi 
+Jie He Za Zhi. 1996;16:84–6.
+ 8. Fu GQ, Zhou J, Tong QY, Zhu YM, Ma W, Zhou H, Shen WD. 
+[Observation on the anti-stress effect of acupuncture-assisted 
+anesthesia for pulmonary lobectomy patients]. Zhen Ci Yan Jiu. 
+2011;36:361–5.
+ 9. Lau KS, Jones AY. A single session of Acu-TENS increases 
+FEV1 and reduces dyspnoea in patients with chronic obstructive 
+pulmonary disease: a randomised, placebo-controlled trial. Aust 
+J Physiother. 2008;54:179–84.
+ 10. Ma W, Zhu YM, Zhou H, Fu GQ, Pan H, Shen WD. [Protecting 
+action of acupuncture-drug compound anesthesia with different 
+frequency electroacupuncture on stress reaction in pneumonec-
+tomy]. Zhongguo Zhen Jiu. 2011;31:1020–4.
+ 11. Chen N, Ma W, Shen WD. [Influence of different frequency elec-
+troacupuncture on serum IL-1 and IL-6 in patients with pneumo-
+nectomy]. Zhongguo Zhen Jiu. 2012;32:523–6.
+ 12. Fan WC, Ma W, Zhao C, Tong QY, Shen WD. [Influence of 
+acupuncture-drug compound anesthesia with different frequency 
+electroacupuncture on immune function in patients undergoing 
+pneumonectomy]. Zhongguo Zhen Jiu. 2012;32:715–9.
+ 13. MacPherson H, White A, Cummings M, Jobst K, Rose K, 
+Niemtzow R. Acupuncture STfRIiCTo: standards for reporting 
+interventions in controlled trials of acupuncture: the STRICTA 
+recommendations. Standards for reporting interventions in con-
+trolled trails of acupuncture. Acupunct Med. 2002;20:22–5.
+ 14. Gruenewald M, Ilies C, Herz J, Schoenherr T, Fudickar A, 
+Hocker J, Bein B. Influence of nociceptive stimulation on anal-
+gesia nociception index (ANI) during propofol-remifentanil 
+anaesthesia. Br J Anaesth. 2013;110:1024–30.
+ 15. Brouse CJ, Karlen W, Dumont GA, Myers D, Cooke E, Stinson 
+J, Lim J, Ansermino JM. Monitoring nociception during general 
+anesthesia with cardiorespiratory coherence. J Clin Monit Com-
+put. 2013;27:551–60.
+ 16. Paarmann H, Hanke T, Heringlake M, Heinze H, Brandt S, Brauer 
+K, Karsten J, Schon J. Low preoperative cerebral oxygen saturation 
+is associated with longer time to extubation during fast-track car-
+diac anaesthesia. Interact Cardio Vasc Thorac Surg. 2012;15:400–5.
+ 17. White PF. Criteria for fast-tracking outpatients after ambulatory 
+surgery. J Clin Anesth. 1999;11:78–9.
+ 18. Glass PS, Gan TJ, Howell S, Ginsberg B. Drug interactions: vol-
+atile anesthetics and opioids. J Clin Anesth. 1997;9:18S–22S.
+ 19. American Thoracic Society. Standardization of spirometry, 1994 
+update. Am J Respir Crit Care Med. 1995;152:1107–36.
+ 20. He BM, Yang B. [Analgesic effect of transcutaneous electrical 
+acupoint stimulation combined with target-controlled infusion in 
+general anesthesia and effects on cardiovascular system]. Zhong-
+guo Zhen Jiu. 2008;28:219–21.
+ 21. Sjolund B, Terenius L, Eriksson M. Increased cerebrospinal fluid 
+levels of endorphins after electro-acupuncture. Acta Physiol 
+Scand. 1977;100:382–4.
+ 22. Wang H, Xie Y, Zhang Q, Xu N, Zhong H, Dong H, Liu L, Jiang 
+T, Wang Q, Xiong L. Transcutaneous electric acupoint stimula-
+tion reduces intra-operative remifentanil consumption and alle-
+viates postoperative side-effects in patients undergoing sinusot-
+omy: a prospective, randomized, placebo-controlled trial. Br J 
+Anaesth. 2014;112(6):1075–82.
+ 23. Ulett GA, Han S, Han JS. Electroacupuncture: mechanisms and 
+clinical application. Biol Psychiatry. 1998;44:129–38.
+ 24. Han JS. Acupuncture: neuropeptide release produced by elec-
+trical stimulation of different frequencies. Trends Neurosci. 
+2003;26:17–22.
+ 25. Han JS, Chen XH, Sun SL, Xu XJ, Yuan Y, Yan SC, Hao JX, 
+Terenius L. Effect of low- and high-frequency TENS on Met-
+enkephalin-Arg-Phe and dynorphin A immunoreactivity in 
+human lumbar CSF. Pain. 1991;47:295–8.
+ 26. Zhao SZ, Chung F, Hanna DB, Raymundo AL, Cheung RY, 
+Chen C. Dose-response relationship between opioid use and 
+adverse effects after ambulatory surgery. J Pain Symptom 
+Manag. 2004;28:35–46.
+
+
+=== PDF PAGE 8 ===
+65
+J Anesth (2017) 31:58–65 
+1 3
+ 27. Han 
+JS. Acupuncture 
+and 
+endorphins. 
+Neurosci 
+Lett. 
+2004;361:258–61.
+ 28. Lan F, Ma YH, Xue JX, Wang TL, Ma DQ. Transcutaneous elec-
+trical nerve stimulation on acupoints reduces fentanyl require-
+ment for postoperative pain relief after total hip arthroplasty in 
+elderly patients. Minerva Anestesiol. 2012;78:887–95.
+ 29. Yang C, An L, Han R, Kang X, Wang B. Effects of combining 
+electroacupuncture with general anesthesia induced by sevo-
+flurane in patients undergoing supratentorial craniotomy and 
+improvements in their clinical recovery profile & blood enkepha-
+lin. Acupunct Electrother Res. 2012;37:125–38.
+ 30. Maa SH, Sun MF, Hsu KH, Hung TJ, Chen HC, Yu CT, Wang 
+CH, Lin HC. Effect of acupuncture or acupressure on quality of 
+life of patients with chronic obstructive asthma: a pilot study. J 
+Altern Complement Med. 2003;9:659–70.
+ 31. Ngai SP, Jones AY, Hui-Chan CW. Acu-TENS and postexercise 
+expiratory flow volume in healthy subjects. Evid Based Comple-
+ment Alternat Med. 2011;2011:726510.
+ 32. Levin MF, Hui-Chan CW. Conventional and acupuncture-like 
+transcutaneous electrical nerve stimulation excite similar afferent 
+fibers. Arch Phys Med Rehabil. 1993;74:54–60.
+ 33. Pan P, Zhang X, Qian H, Shi W, Wang J, Bo Y, Li W. Effects 
+of electro-acupuncture on endothelium-derived endothelin-1 
+and endothelial nitric oxide synthase of rats with hypoxia-
+induced pulmonary hypertension. Exp Biol Med (Maywood). 
+2010;235:642–8.
+ 34. Wang XQ, Yu JL, Du ZY, Xu R, Jiang CC, Gao X. Electroa-
+cupoint stimulation for postoperative nausea and vomiting in 
+patients undergoing supratentorial craniotomy. J Neurosurg 
+Anesthesiol. 2010;22:128–31.
+ 35. Wang B, Tang J, White PF, Naruse R, Sloninsky A, Kariger R, 
+Gold J, Wender RH. Effect of the intensity of transcutaneous 
+acupoint electrical stimulation on the postoperative analgesic 
+requirement. Anesth Analg. 1997;85:406–13.
+ 36. Gandek B, Ware JE, Aaronson NK, Apolone G, Bjorner JB, 
+Brazier JE, Bullinger M, Kaasa S, Leplege A, Prieto L, Sullivan 
+M. Cross-validation of item selection and scoring for the SF-12 
+Health Survey in nine countries: results from the IQOLA Pro-
+ject. International quality of life assessment. J Clin Epidemiol. 
+1998;51:1171–8.
+ 37. Ware J Jr, Kosinski M, Keller SD. A 12-Item Short-Form Health 
+Survey: construction of scales and preliminary tests of reliability 
+and validity. Med Care. 1996;34:220–33.
+
+
+=== PDF PAGE 9 ===
+Journal of Anesthesia is a copyright of Springer, 2017. All Rights Reserved.

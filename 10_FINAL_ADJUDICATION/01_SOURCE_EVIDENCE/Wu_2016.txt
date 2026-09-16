@@ -1,0 +1,805 @@
+
+=== PDF PAGE 1 ===
+EXPERIMENTAL AND THERAPEUTIC MEDICINE 11: 495-502, 2016
+Abstract. An imbalance in the various T  lymphocytes, 
+including T-helper (Th)1, Th2 and Th17 cells, and regulatory T 
+(Treg) cells, has been associated with immune dysfunction, 
+and may occur following thoracotomy of patients with lung 
+cancer. The use of transcutaneous acupoint electrical stimu­
+lation (TAES) has previously been demonstrated to exert 
+immunoregulatory effects; therefore, the present study aimed 
+to evaluate whether TAES was able to attenuate postoperative 
+immune suppression in patients with lung cancer. Thoracic 
+surgical patients with lung cancer (n=27) underwent TAES 
+(frequency, 2/100 Hz; intensity, 4‑12 mA) at the bilateral large 
+intestine 4, pericardium 6, small intestine 3 and San Jiao 6 
+acupuncture points for 30 min, prior to incision, and at 20, 44, 
+68, 92 and 116 h following thoracotomy. The number of Th1, 
+Th2, Th17 and Treg cells, and the protein and mRNA expression 
+levels of related cytokines were measured by flow cytom­
+etry, ELISA and polymerase chain reaction, respectively. 
+The balance of Th1, Th2, Th17 and Treg cells in the peripheral 
+blood of patients with lung cancer was disrupted following 
+thoracotomy. TAES administration increased the percentage 
+of Th1 and Th17 cells, the protein expression levels of inter­
+leukin (IL)‑2 and interferon‑γ, the mRNA expression levels 
+of T‑bet and RAR‑related orphan receptor‑γt, and decreased 
+the percentage of Th2 cells, IL‑10 protein expression levels, 
+and GATA binding protein 3 mRNA expression levels. The 
+results of the present study demonstrated that TAES was able 
+to partially attenuate the postoperative immune depression of 
+patients with lung cancer, by regulating the balance of Th1, 
+Th2, Th17 and Treg cells, and the expression levels of related 
+cytokines and transcription factors; therefore, TAES may be 
+considered to be a promising strategy for treating postopera­
+tive immune dysfunction in patients with lung cancer.
+Introduction
+Lung cancer is associated with the highest mortality rate 
+(18.2%) of all types of cancer (1), and intervention typically 
+involves surgical removal of the tumor, with a concomitant 
+lymphadenectomy. Patients with lung cancer exhibit numerous 
+immune abnormalities, including cellular immune dysfunc­
+tion, cytokine alterations, microcirculatory disturbance and 
+antigen presentation defects (2,3), which are exacerbated as a 
+result of surgical trauma and postoperative pain. Furthermore, 
+the immune dysfunction associated with surgical trauma may 
+predispose patients to septic complications, multiple organ 
+dysfunction, tumor spread or metastases, and mortality (4,5); 
+therefore, it is important to develop strategies that are able to 
+attenuate perioperative immune dysfunction in patients with 
+lung cancer.
+The activation and differentiation of T  lymphocytes 
+is required for anti‑infection and anti‑tumor immune 
+responses (6). In addition, an imbalance in the relative levels 
+of the various T‑helper (Th) cells, including Th1, Th2 and Th17 
+cells, and regulatory T (Treg) cells, has been associated with 
+immunological disturbances (7). In a previous study, Th17 
+cells exhibited potent pro‑inflammatory properties via the 
+secretion of interleukin (IL)‑17, IL‑21 and IL‑23. Furthermore, 
+immunosuppressive effects of Treg cells were detected, and 
+were associated with an immunocompromised state (8). The 
+identification of Th17 and Treg cells progressed understanding 
+of the mechanisms underlying immune dysfunction. An 
+imbalance of Th17/Treg cells has been widely detected in human 
+cancer, inflammatory and autoimmune diseases (9); however, 
+Effects of transcutaneous acupoint electrical stimulation on
+the imbalance of Th1, Th2, Th17 and Treg cells following 
+thoracotomy of patients with lung cancer
+HUAXING WU1,2, KUN WANG3, GUIXIAN LI4, DEXIN MENG2,
+JIACHENG HAN2, GUONIAN WANG3 and YU LI1
+1School of Life Science and Technology, Harbin Institute of Technology, Harbin, Heilongjiang 150080; 
+Departments of 2Clinical Oncology and 3Anesthesiology, Cancer Hospital, Harbin Medical University, Harbin,
+Heilongjiang 150081; 4Department of Mechanical Design and Theory, School of Mechatronics Engineering,
+Harbin Institute of Technology, Harbin, Heilongjiang 150001, P.R. China
+Received December 22, 2014; Accepted September 1, 2015
+DOI: 10.3892/etm.2015.2913
+Correspondence to: Professor Yu Li, School of Life Science and 
+Technology, Harbin Institute of Technology, 2A Rectification Street, 
+Harbin, Heilongjiang 150080, P.R. China
+E‑mail: hydliyu@sina.com
+Abbreviations: 
+TAES, 
+transcutaneous 
+acupoint 
+electrical 
+stimulation; Th cells, T‑helper cells; Treg cells, regulatory T‑cells; 
+VAS, visual analogue scale 
+Key words: transcutaneous acupoint  electrical  stimulation, lung 
+cancer, immunity, T‑helper, regulatory T cells
+
+
+=== PDF PAGE 2 ===
+WU et al: TRANSCUTANEOUS ELECTRICAL STIMULATION REGULATES IMMUNE BALANCE
+496
+to the best of our knowledge, it has yet to be associated with 
+thoracotomy in patients with lung cancer.
+Transcutaneous acupoint electrical stimulation (TAES) is 
+a novel analgesic therapy used in the practice of physiotherapy 
+in order to relieve pain associated with acute and chronic 
+inflammatory conditions (10). Furthermore, TAES may serve 
+as a relatively safe and noninvasive alternative to acupuncture, 
+while providing comparable analgesic effects (11). According 
+to the theory of traditional Chinese medicine, surgical trauma 
+disrupts the balanced state of the human body, and disturbs 
+the movement of Qi (vital energy) and blood (12). It has previ­
+ously been suggested that the stimulation of acupoints may 
+restore the balance of Qi, and facilitate recovery from bodily 
+injury via effects on the central, autonomic nervous, immune, 
+metabolic and endocrine systems (13,14). A previous study 
+suggested that acupuncture may be used alongside existing 
+therapies for the treatment of cancer and associated symptoms, 
+due to its ̔ immune‑boosting effects̓  (15). However, to the best 
+of our knowledge, the effects of TAES on the immune state 
+of patients with lung cancer following thoracotomy, and the 
+underlying immunomodulatory mechanisms, are yet to be 
+evaluated.
+The present study aimed to evaluate the effects of TAES 
+on the balance of Th1, Th2, Th17 and Treg cells, and the expres­
+sion levels of associated cytokines and transcription factors, 
+following thoracotomy of patients with lung cancer.
+Materials and methods
+Participants and anesthesia. Between May  2012 and 
+May 2013, 311 patients were diagnosed with lung cancer at 
+the Cancer Hospital of Harbin Medical University (Harbin, 
+China). A total of 113 patients met the inclusion criteria of 
+the present study; however, 23 patients refused participation. 
+Thus, a total of 90 patients (age, 18‑65 years), who accepted 
+thoracotomy for the treatment of American Society of 
+Anesthesiology grade I‑III (16), TNM stage I (T1‑2N0M0) (17) 
+lung cancer, were evaluated in the current randomized, 
+controlled trial. Eligible patients had to meet the following 
+criteria: i) Histologically confirmed lung cancer; ii) pathologic 
+stage I; iii) no major organ (liver, kidney or heart) dysfunc­
+tion; iv) no preoperative anticancer treatment; and v) no other 
+cancer site besides the lungs. Diagnosis of patients with lung 
+cancer occurred using histocytological methods, biopsies were 
+obtained using a bronchofiberscope or thoracoscope. The 
+exclusion criteria were as follows: i) The detection of a local 
+or systemic infection; ii) a history of chronic pain or regular 
+opioid consumption; iii) a body mass index of >40 kg/m2; 
+iv) evidence of body temperature disturbances; or v) they 
+had previously experienced acupuncture/TAES therapies. 
+The present study was approved by the Ethics Committee of 
+Harbin Medical University, and written informed consent was 
+obtained from all patients. 
+Anesthetization and thoracotomy of patients. Patients 
+were anesthetized using midazolam (0.05 mg/kg; Jiangsu 
+Nhwa Pharmaceutical Co., Ltd., Jiangsu, China), fentanyl 
+(0.03 mg/kg; Yichang Humanwell Pharmaceutical Co., Ltd., 
+Hubei, China) and propofol (2.5‑3.0 mg/kg; AstraZeneca, 
+Macclesfield, UK). Injection of patients with vecuronium 
+bromide (0.08  mg/kg; Zhejiang Xianju Pharmaceutical 
+Co., Ltd., Zhejiang, China) facilitated tracheal intuba­
+tion using a double‑lumen tracheal tube (Portex; Smiths 
+Medical, Dublin, OH, USA). The lungs were ventilated 
+mechanically (tidal volume, 8 ml/kg; ventilator frequency, 
+12‑14 bpm; Aestiva 5 7100; 7GE Healthcare Life Support 
+Solutions, Madison, WI, USA). Anesthesia was maintained 
+using propofol (4‑6 mg/kg/h) and remifentanil (Yichang 
+Humanwell Pharmaceutical Co., Ltd.). The treatment 
+of patients with remifentanil was initiated at a rate of 
+0.1 µg/kg/min, followed by 0.05 µg/kg/min increments or 
+decrements, adjusted according to hemodynamic variables. 
+If a mean arterial pressure of <60 mmHg or a heart rate of 
+<45 beats/min were detected for >5 min, patients were treated 
+with 10 mg ephedrine or 0.5 mg atropine. Ringer's acetate 
+(Hunan Kelun Pharmaceutical Co., Ltd., Hunan, China) was 
+administered at a rate of 6‑8 ml/kg/h, in order to maintain 
+basal fluid requirements. All of the patients underwent 
+thoracotomy (18) with a rib spreader and wound retractor 
+(tumed‑Surgical Instrument & Hospital Supplies GmbH, 
+Tuttlingen, Germany), and without rib excision. None of the 
+patients required a perioperative blood transfusion, and all 
+of the patients were operated on by the same surgical team, 
+using a consistent operative procedure. 
+TAES procedure. An anesthesiologist performed TAES at 
+the bilateral large intestine (LI) 4, pericardium (PC) 6, small 
+intestine (SI) 3 and San Jiao (SJ) 6 acupuncture points. LI 4 is 
+located on the dorsum surface of the hand, between the first 
+and second metacarpal bones; PC 6 on the palmar aspect of 
+the forearm, two ̔ cuns̓ above the transverse crease of the 
+wrist, between the flexor carpi radialis and palmaris longus 
+tendons; SI 3 on the ulnar side of the fifth digit, behind the 
+head of the fifth metacarpal bone, the starting point of the 
+little finger abductor muscle outer edge; and SJ 6 on the dorsal 
+aspect of the forearm, two ̔ cuns̓ above wrist horizontal stripes 
+between the ulna and radius. One ̔ cun̓ corresponds to the 
+distance between the interphalangeal creases of the subject's 
+middle finger. These acupoints were selected on the basis of 
+the following findings from previous studies: Acupuncture at 
+LI 4 and PC 6 was able to relieve abdominal pain, whereas it 
+was associated with enhanced disease resistance and immu­
+nomodulation when performed at SI 3, and a reduction in 
+incision pain associated with a rib wound when performed at 
+SJ 6 (19‑21). 
+The patients arrived at the laboratory at 9:00 AM on the 
+assessment day, after which the study design and techniques 
+were explained. The acupoints of all of the patients were 
+swabbed with alcohol to reduce skin impedance, and were 
+then covered with cutaneous self‑adhesive electrode pads (size, 
+16 cm2) connected to a HANS‑200 device (Han's Acupoint 
+Nerve Stimulator; Neuroscience Research Institute, Peking 
+University, China). The acupoints were stimulated in the 
+standard dense‑and‑disperse mode for 30 min, involving alter­
+nate stimulation at 2 Hz and 100 Hz every 3 sec (frequency, 
+2/100 Hz). The intensity of stimulation was set at 4‑12 mA 
+to initiate minor muscle contractions. Patients were informed 
+that they may or may not feel the current.
+The subjects were randomized equally into i) thoracotomy; 
+ii) thoracotomy and sham TAES; and iii) thoracotomy and 
+
+
+=== PDF PAGE 3 ===
+EXPERIMENTAL AND THERAPEUTIC MEDICINE 11: 495-502, 2016
+497
+TAES groups, using a computer‑generated random list with 
+coded sealed envelopes. Group 3 received TAES at the bilateral 
+LI 4, PC 6, SI 3 and SJ 6 points for 30 min prior to incision, and 
+at 20, 44, 68, 92 and 116 h following surgery. Group 2 received 
+identical electrical stimulation to group 3; however, TAES was 
+performed at sham points, which are located 4.0 cm obliquely 
+superior and lateral to the LI 4, PC 6, SI 3 or SJ 6 acupoints, 
+and are not in the meridian. 
+Sample collection and measurements. Blood samples were 
+collected prior to surgery (basal), and at 24, 72 and 120 h post­
+operatively. Peripheral blood mononuclear cells (PBMCs) were 
+isolated from venous blood using density gradient centrifuga­
+tion at 400 x g for 10 min at 4˚C and were analyzed by flow 
+cytometry (FACSCalibur; BD Biosciences, San Jose, CA, 
+USA). Plasma was stored at ‑70˚C for subsequent measurement 
+of the expression levels of cytokines and transcription factors.
+Determination of T‑cell subsets. To determine the percentages 
+of the various T‑cell subsets, PBMCs were suspended at a 
+density of 2x106 cells/ml in phosphate‑buffered saline. Cells 
+were then incubated with mouse anti‑human CD4 (11‑0047‑42; 
+1:1,000 dilution), IFN‑γ (12‑7319‑42; 1:1,000 dilution), IL‑4 
+(12‑7049‑42; 1:1,000 dilution), IL‑17 (12‑7178‑42; 1:500 dilu­
+tion), and forkhead box P3 (FoxP3; 12‑4777‑42; 1:500 dilution) 
+monoclonal antibodies or isotype‑matched immunoglobulin G 
+controls (12‑4998‑82; 1:1,000 dilution) for 30 min at 37˚C. 
+All antibodies were purchased from eBioscience, Inc. (San 
+Diego, CA, USA). For intracellular IL‑17A staining, the cells 
+were treated with PMA (Sigma‑Aldrich, St. Louis, MO, USA) 
+at 50 ng/ml and ionomycin (Sigma‑Aldrich) at 1 µM in the 
+presence of GolgiStop (BD Pharmingen, San Diego, CA, USA) 
+for 4 h. For the FoxP3 analysis, the cells were not stimulated. 
+The stained cells were analyzed using a FACScan Cytometer 
+equipped with CellQuest 6.0 software (BD FACSAria; BD 
+Biosciences).
+ELISA. The protein expression levels of IL‑2, IFN‑γ, IL‑4, 
+IL‑10, IL‑17 and transforming growth factor (TGF)‑β, were 
+measured using an ELISA (eBioscience, Inc.). All of the 
+samples were analyzed in duplicate. The minimum detect­
+able cytokine concentration was 10 pg/ml for IL‑2, 20 pg/ml 
+for IL‑4, 2 pg/ml for IFN‑γ, IL‑10 and IL‑17, and 60 pg/ml 
+for TGF‑β. 
+Reverse transcription‑quantitative polymerase chain reac­
+tion. Total RNA was extracted from the PBMCs using 
+the TRIzol® extraction kit (Invitrogen Life Technologies, 
+Carlsbad, CA, USA). Total RNA (2 µg) from each sample 
+was reverse transcribed to cDNA in a 40 µl reaction mixture 
+which contained 8 µl 5X reverse transcriptase moloney murine 
+leukemia virus (M-MLV) buffer, 1 µl DTT, 2 µl dNTP mixture, 
+2 µl random primers, 1 µl reverse transcriptase M-MLV, 1 µl 
+RNAsafe all Takara Biotechnology Co., Ltd., Dalian, China) 
+and 23 µl RNase free ddH2O. TaqMan primers and probes 
+targeting human T‑bet, GATA binding protein 3 (GATA3), 
+RAR‑related orphan receptor (ROR)‑γt, and FoxP3 were used. 
+Samples (2 µl cDNA) were analyzed using PrimeScript™ 
+RT‑PCR kit (Takara Biotechnology Co., Ltd.) and the ABI 
+Prism 7900 Sequence Detection System (Applied Biosystems 
+Life Technologies, Foster City, CA, USA). The PCR cycling 
+conditions were as follows: 94˚C for 3 min, followed by 94˚C 
+for 15 sec, 55˚C for 30 sec and 72˚C for 40 sec for 40 cycles, 
+and final extension at 72˚C for 10 min. The primer pairs used 
+were as follows: Forward, 5'‑GCT​GGA​GAA​AAG​AAG​ACA​
+AGA​AAG‑3' and reverse, 5'‑AAG​AAA​AAA​CAC​ACA​CCC​
+ACA​CAC‑3' for T‑bet (496 bp); forward, 5'‑AGG​GAG​TGT​
+GTG​AAC​TGT​GGG‑3’ and reverse, 5'‑CTT​CGC​TTG​GGC​
+TTA​ATG​AGG‑3' for GATA3 (253 bp); forward, 5'‑GCA​
+ATG​GAA​GTG​GTG​CTG​GTT‑3' and reverse, 5'‑AGG​ATG​
+CTT​TGG​CGA​TGA​GTC‑3' for RORγt (192 bp); and forward, 
+5'‑CAC​GCA​TGT​TTG​CCT​CTT​CAG​A‑3' and reverse, 5'‑GTA​
+GGG​TTG​GAA​CAC​CTG​CTG​GG‑3' for FoxP3 (235 bp). The 
+mRNA expression levels of the target genes were normalized 
+against GAPDH, and relative mRNA expression levels for 
+each cytokine were calculated. Relative fold changes of gene 
+expression were calculated using the ∆∆Cq method using ABI 
+Prism® 7900HT software, and the values were expressed as 
+2-∆∆Cq (22), relative fold changes of target gene expression were 
+normalized against GAPDH.
+Pain measurement. Postoperative pain at rest and whilst 
+coughing were assessed using a visual analogue scale (VAS), 
+between 0 (pain free) and 10 (worst possible pain), prior to 
+surgery (basal), and at 2, 6, 12, 18, 24, 36, 48, 60, 72, 96 and 
+120 h postoperatively. Intravenous treatment with 100 mg 
+tramadol (Grünenthal GmbH, Aachen, Germany) was used 
+for postoperative pain rescue, as required. Analgesic require­
+ments, adverse events and durations of hospitalization, were 
+also recorded.
+Figure 1. Postoperative pain (A) at rest and (B) during coughing assessed 
+using a VAS prior to surgery (basal), and at 2, 6, 12, 18, 24, 36, 48, 60, 72, 
+96 and 120 h postoperatively. Data are presented as the mean ± standard 
+deviation (n=27/group). *P<0.05 vs. group 1. VAS, visual analogue scale. 
+ A
+ B
+
+
+=== PDF PAGE 4 ===
+WU et al: TRANSCUTANEOUS ELECTRICAL STIMULATION REGULATES IMMUNE BALANCE
+498
+Analysis
+Data analysis. Power analysis was based on the results of our 
+preliminary experiments comparing IL‑2 protein expression 
+levels 72 h after surgery among three groups, and yielded a 
+sample size of n=21 (α=0.05; 1‑β=0.9) for each group. Therefore, 
+a sample size of n=30/group was used in the present study.
+Statistical analysis. The normality of quantitative vari­
+ables was analyzed by the Kolmogorov‑Smirnov test. VAS 
+scales were analyzed by repeated‑measures analysis of 
+variance (ANOVA) for inter‑group comparison. Categorical 
+data were compared using the χ2 test or Fisher's exact test. 
+The remaining data were analyzed using ANOVA or the 
+Mann‑Whitney U test. Statistical analyses were performed 
+using the SPSS version 13.0 software (SPSS, Inc., Chicago, 
+IL, USA). P<0.05 was considered to indicate a statistically 
+significant difference.
+Table I. Demographic and surgical information (n=27).
+Characteristic 
+Group 1 
+Group 2 
+Group 3
+Age (year)a 
+ 52.5±24.5 
+ 57.5±28.3 
+ 55.5±22.6
+Gender (M/F)b 
+14/13 
+11/16 
+12/15
+Weight (kg)a 
+ 64.8±10.9 
+ 62.8±10.2 
+67.5±8.5
+Height (cm)a 
+172.5±6.8 
+176.5±8.2 
+171.5±5.5
+TNM stage (I/IIa/IIb)b 
+7/11/9 
+6/13/8 
+6/10/11
+Procedureb
+ Lobectomy 
+16 
+13 
+14
+ Pneumonectomy 
+ 6 
+ 5 
+ 4
+ Bi‑lobectomy 
+ 3 
+ 5 
+ 6
+ Wedge resection 
+ 2 
+ 4 
+ 3
+Side (R/L)b 
+14/13 
+16/11 
+12/15
+Thoracotomy length (cm)a 
+13.2±2.2 
+11.2±1.7 
+12.4±2.2
+Blood loss (ml)a 
+157±62 
+145±65 
+167±72
+Fluids (ml)a 
+1380±350 
+1220±430 
+1158±270
+Lymph nodes resecteda 
+13.5±2.5 
+14.5±3.5 
+16.0±4.5
+Duration of surgery (min)a 
+160.5±34.5 
+151.5±27.5 
+145.5±32.5
+Histologyb
+ Adenocarcinoma (n) 
+16 
+14 
+18
+ Squamous carcinoma (n) 
+ 9 
+ 9 
+ 6
+ Others (n) 
+ 2 
+ 4 
+ 3
+Values are presented as amean ± standard deviation or bn. M, male; F, female; TNM, TNM classification of malignant tumors; R, right; L, left.
+Table II. Postoperative complications.
+Complication 
+Group 1 
+Group 2 
+Group 3
+Nausea/vomiting 
+9 (33.3) 
+8 (29.6) 
+3 (11.1)a
+Pruritis 
+2 (7.4) 
+2 (7.4) 
+2 (7.4)
+Hypotension 
+5 (18.5) 
+4 (14.8) 
+4 (14.8)
+Respiratory depression 
+1 (3.7) 
+0 (0.0) 
+0 (0.0)
+Desaturation 
+0 (0.0) 
+1 (3.7) 
+1 (3.7) 
+Pneumonitis 
+3 (11.1) 
+1 (3.7) 
+1 (3.7) 
+Atelectasis 
+1 (3.7) 
+0 (0.0) 
+1 (3.7)
+Pulmonary embolism 
+0 (0.0) 
+1 (3.7) 
+0 (0.0)
+Empyema 
+1 (3.7) 
+0 (0.0) 
+0 (0.0)
+Infection 
+6 (22.2) 
+4 (14.8) 
+1 (3.7)a
+Mortality 
+0 (0.0) 
+0 (0.0) 
+0 (0.0)
+Values are presented as n (%). aP<0.05 vs. group 1. 
+ 
+
+
+=== PDF PAGE 5 ===
+EXPERIMENTAL AND THERAPEUTIC MEDICINE 11: 495-502, 2016
+499
+Results
+Demographic and surgical information. Of the 90 patients, 
+nine were excluded: Three due to serious postoperative 
+complications (two in group 2, and one in group 3), and six 
+due to incomplete data collection (three in group 1, one in 
+group 2 and two in group 3). Thus, a total of 81 patients 
+were included in the data analysis. There were no significant 
+differences in the demographics and surgical information 
+among the three groups (P>0.05; Table I). 
+Pain intensity. Compared with group 1, VAS scores at 
+rest and during coughing decreased in group 3 between 
+6 and 60 h following surgery (P<0.05. VAS scores between 
+groups 1 and 2 were not significantly different (P>0.05; 
+Fig. 1). Compared with group 2, VAS scores at rest and 
+during coughing decreased in group 3 between 6 and 60 h 
+following surgery (P<0.05). These results indicted that TAES 
+at sham acupoints did not have any effect on the human body.
+Percentage of Th cells. Representative binding patterns 
+of the various CD4+ T cell subsets are presented in Fig. 2. 
+The percentage of Th1 (intracellular antibodies against 
+IFN‑γ, 14.4%) and Th17 (intracellular antibodies against 
+IL‑17, 2.4%) cells in group 3 were significantly higher 72 h 
+post‑operation, as compared with groups 1 and 2 (9.2%; 
+P<0.05; Fig. 2A and B). The percentage of Th2 cells (intra­
+cellular antibodies against IL‑4, 3.8%) in group 3 were 
+significantly lower, as compared with in group 1 (8.3%) 72 h 
+post‑operation (P<0.05; Fig. 2A). There were no differences 
+in the percentage of Treg cells (intracellular antibodies against 
+FoxP3) among all three groups (P>0.05; Fig. 2C). 
+Protein expression levels of Th cell‑associated cyto­
+kines. Protein expression levels of IL‑2 and IFN‑γ were 
+significantly increased at 72 and 120 h postoperatively in 
+group 3, compared with group 1 (P<0.05; Fig. 3A and B). By 
+contrast, IL‑10 protein expression levels were significantly 
+decreased at 72 h postoperatively in group 3, compared with 
+group 1 (P<0.05; Fig. 3C). IL‑17 protein expression levels 
+were increased 120 h postoperatively in group 3, compared 
+with group 1 (P<0.05; Fig. 3D). There were no significant 
+differences in the protein expression levels of IL‑4 and TGF‑β 
+among the three groups (P>0.05; Fig. 3E and F, respectively).
+Figure 2. Percentages of (A) Th1 and Th2, (B) Th17 and (C) Treg detected using fluorescence‑activated cell sorting. Blood samples were collected at 72 h postop­
+eratively, and peripheral blood mononuclear cells were suspended at a density of 2x106 cells/ml. Representative binding patterns of intracellular monoclonal 
+antibodies against IFN‑γ, IL‑4, IL‑17 and FoxP3 in the various CD4+ T‑cell subsets.*P<0.05 vs. group 1. CD4, cluster of differentiation 4; IL, interleukin; 
+APC, allophycocyanin; Th, T‑helper cells; IFN, interferon, PE, phycoerythrin; FoxP3, forkhead box P3; Treg, regulatory T‑cells; FITC, fluorescein isothiocyanate.
+ A
+ B
+ C
+
+
+=== PDF PAGE 6 ===
+WU et al: TRANSCUTANEOUS ELECTRICAL STIMULATION REGULATES IMMUNE BALANCE
+500
+mRNA expression levels of Th cell‑associated transcription 
+factors. T‑bet mRNA expression levels were significantly 
+upregulated at 24, 72 and 120 h postoperatively in group 3, 
+compared with group 1 (P<0.05; Fig. 4A). RORγt mRNA 
+expression levels were significantly upregulated at 72  h 
+postoperatively in group 3, compared with group 1 (P<0.05; 
+Figure 3. Protein expression levels of (A) IL‑2, (B) IFN‑γ, (C) IL‑4, (D) IL‑10, (E) IL‑17 and (F) TGF‑β prior to surgery (basal), and at 24, 72 and 120 h postop­
+eratively, measured using ELISA. Data are presented as the mean ± standard deviation (n=27/group). *P<0.05 vs. group 1. IL, interleukin; IFN‑γ, interferon‑γ; 
+TGF‑β, transforming growth factor‑β.
+Figure 4. mRNA expression levels of (A) T‑bet, (B) GATA3, (C) ROR‑γt and (D) FoxP3 prior to surgery (basal), and at 24, 72 and 120 h postoperatively, mea­
+sured using reverse transcription‑quantitative polymerase chain reaction. GAPDH was used as an internal control and the relative mRNA expression levels for 
+each cytokine were calculated. All of the samples were run in triplicate for each experiment. Data are presented as the mean ± standard deviation (n=27/group). 
+*P<0.05 vs. group 1. GATA3, GATA‑binding protein 3; ROR‑γt, RAR‑related orphan receptor‑γt; FoxP3, forkhead box P3.
+ A
+ B
+ C
+ D
+ E
+ F
+ A
+ B
+ C
+ D
+
+
+=== PDF PAGE 7 ===
+EXPERIMENTAL AND THERAPEUTIC MEDICINE 11: 495-502, 2016
+501
+Fig. 4B). Conversely, GATA3 mRNA expression levels were 
+downregulated at 72 and 120 h postoperatively in group 3, 
+compared with group 1 (P<0.05; Fig. 4C). There were no 
+significant differences in FoxP3 mRNA expression levels 
+among the three groups (P>0.05; Fig. 4D). 
+Rescue analgesic, adverse events and hospital stays. Rescue 
+analgesic demands were significantly lower in group  3, 
+compared with group 1 (P<0.05). In addition, the incidence of 
+postoperative nausea/vomiting and infection was significantly 
+less in group 3, compared with group I (P<0.05; Table II). 
+Hospital stays in group 3 (8.7±1.9 days) were marginally shorter, 
+compared with groups 1 and 2 (10.3±1.5 and 11.5±1.6 days, 
+respectively); however, there were no significant differences 
+among the three groups (P>0.05). 
+Discussion
+The present study detected an imbalance in the percentages 
+of Th1, Th2, Th17 and Treg cells, which was associated with 
+downregulated expression levels of Th1/Th17‑associated cyto­
+kines and transcription factors (IL‑2, IFN‑γ, IL‑17, T‑bet and 
+RORγt), and upregulated expression levels of Th2‑associated 
+cytokines and transcription factors (IL‑10, GATA3), following 
+thoracotomy of patients with lung cancer. TAES treatment was 
+able to partially restore the imbalance in the various CD4+ 
+T‑cell subsets, which may have contributed to attenuation of 
+the postoperative immunosuppression in patients with lung 
+cancer. 
+Postoperative pain is the most important consideration 
+in the care of thoracic surgical patients. In previous studies, 
+increased expression levels of endogenous catecholamines, 
+as a result of surgical trauma, stress responses and pain, were 
+associated with suppression of cellular immune responses and 
+an increased probability of metastasis (23,24). It has previously 
+been suggested that TAES is able to inhibit pain signals via the 
+descending pathway and the dorsal horn cell and the spinotha­
+lamic tract, and by blocking the release of neurotransmitters, 
+including β‑endorphins, enkephalins and dynorphin (25). The 
+results of the present study indicated that TAES was able to alle­
+viate the postoperative pain of thoracic surgical patients with 
+lung cancer. Numerous studies have suggested that the use of 
+an effective analgesia may attenuate the occurrence of postop­
+erative immunosuppression, which may explain why TAES was 
+able to exert immunomodulatory effects. 
+Th17 and Treg cells are the most recently discovered CD4+ 
+T‑cell subsets. The percentage of Th17 cells and expression levels 
+of RORγt were previously demonstrated to be decreased in the 
+peripheral blood of patients with lung cancer (26); however, 
+little is known about the postoperative balance of Th17 and 
+Treg cells in patients with lung cancer. In the present study, the 
+balance of Th1, Th2, Th17 and Treg cells was disrupted following 
+thoracotomy of patients with lung cancer; thus suggesting that 
+this imbalance may contribute to the postoperative immunosup­
+pression commonly observed in these patients. Treatment with 
+TAES increased Th1 and Th17 cells, and decreased Th2 cells, 
+and this may have partially restored their balance. The results 
+of the present study suggested that an imbalance in the numbers 
+of the various CD4+ T‑cell subtypes in patients with lung cancer 
+following surgery, may lead to postoperative immune depression, 
+and that restoration of this imbalance may be the underlying 
+mechanism of the TAES immunomodulatory effects.
+Cytokines are important Th cell‑polarization factors; 
+therefore, the profiles of specific cytokines may be informative 
+in the role of T cell dynamics in immune dysfunction. In our 
+previous study, surgical trauma was associated with decreased 
+expression levels of IL‑2 and IFN‑γ, increased expression levels 
+of IL‑4 and IL‑10, and immunosuppression in a surgical trauma 
+rat model (27). In the present study, the expression levels of 
+Th17‑associated cytokines in patients with lung cancer were 
+decreased following thoracotomy, which may have promoted 
+an imbalance in numbers of Th1, Th2, Th17 and Treg cells, and 
+contributed to postoperative immunosuppression. Treatment 
+with TAES increased the expression levels of IL‑2, IFN‑γ 
+and IL‑17, and decreased IL‑10 secretion; thus suggesting that 
+TAES was able to attenuate the postoperative immune impair­
+ment of patients with lung cancer via altering the expression of 
+Th cell‑associated cytokines. The results of the present study 
+are in line with a previous study, in which electroacupuncture 
+was able to improve surgery‑suppressed immune function (28). 
+Furthermore, this study reported that acupuncture and TAES 
+were able to affect the immune system of patients undergoing 
+major abdominal surgery (28).
+Numerous studies have demonstrated that cytokine‑mediated 
+signals are predominantly transduced via specific transcription 
+factors; for example, T‑bet regulates the transcriptional initiation 
+of Th1 cytokines; GATA3 controls that of Th2 cytokines; RORγt 
+is an important transcription factor for the differentiation of Th17 
+cells; and Foxp3 is the master transcription factor in Treg cells. 
+In the present study, T‑bet and RORγt mRNA expression levels 
+were decreased and the mRNA expression levels of GATA3 
+were increased, following thoracotomy; thus suggesting that an 
+imbalance in the expression of Th cell‑associated transcription 
+factors may have a role in the pathogenesis of postoperative 
+immune suppression. Treatment with TAES increased T‑bet 
+and RORγt mRNA expression levels and decreased the mRNA 
+expression levels of GATA3 in patients with lung cancer; thus 
+suggesting that TAES is able to regulate the balance of Th 
+cell‑associated transcription factors. 
+In the present study, Treg cells, and their associated cyto­
+kines and transcription factors, were not significantly altered 
+following thoracotomy of patients with lung cancer. This may 
+be due to the predominant use of lung cancer patients with early 
+stage cancer: In previous studies, the percentages of Treg cells in 
+patients with early stage cancer increased marginally or did not 
+increase at all postoperatively [preoperative vs. postoperative: 
+Stage I (2.34 vs. 1.77%), stage II (2.72 vs. 1.94%)], whereas the 
+postoperative Treg percentage in patients with advanced stage 
+(III+IV) cancer remained high (preoperative vs. postoperative: 
+1.61 vs. 3.52%) (29).
+In the present study, acupoint stimulation occurred for 
+30 min, at a frequency setting of 2/100 Hz, and this model 
+was selected for numerous reasons. First, a long duration 
+of acupoint stimulation has been associated with enhanced 
+patient discomfort, whereas a stimulation time that was 
+too short had unclear therapeutic effects (30). In addition, 
+low frequency‑TAES triggered µ‑and δ‑opioid receptors, 
+and β‑endorphin production, whereas high frequency (100 
+Hz) stimulation was demonstrated to stimulate the κ‑opioid 
+receptor and resulted in the release of dynorphin (31,32). 
+
+
+=== PDF PAGE 8 ===
+WU et al: TRANSCUTANEOUS ELECTRICAL STIMULATION REGULATES IMMUNE BALANCE
+502
+Future studies should endeavor to optimize the TAES model 
+in order to maximize its effects.
+In the present study, patients treated with TAES required 
+less analgesic treatment, which was associated with fewer side 
+effects, including nausea/vomiting and infection. The reduced 
+incidence of postoperative complications may have facilitated 
+early recovery following thoracotomy of patients with lung 
+cancer. 
+In conclusion, TAES was able to partially restore the post­
+operative immunosuppression of patients with lung cancer by 
+altering the balance of Th1, Th2, Th17 and Treg cells, and their 
+associated cytokines and transcription factors. Therefore, TAES 
+may provide a novel therapeutic intervention strategy for clinical 
+immune dysfunction. Future studies should expand the applica­
+tion of acupuncture in clinical practice, in order to determine its 
+immunomodulatory effects.
+Acknowledgements 
+The present study was funded by grants from The Science 
+and Technology Innovation Talents of Harbin City (grant 
+no. 2013RFXYJ031), the research project of The Department of 
+Science and Technology, Heilongjiang (grant no. GB05C402‑14), 
+Harbin City Technology Bureau Outstanding Subject Leaders 
+(grant no. 2012RFXXS041), and The National Nature Science 
+Fund of China (grant no. 81401584). 
+References
+  1. Ferlay J, Shin HR, Bray F, Forman D, Mathers C and 
+Parkin DM: Estimates of worldwide burden of cancer in 2008: 
+GLOBOCAN 2008. Int J Cancer 127: 2893‑2917, 2010.
+  2. Dasanu CA, Sethi N and Ahmed N: Immune alterations and 
+emerging immunotherapeutic approaches in lung cancer. Expert 
+Opin Biol Ther 12: 923‑937, 2012.
+  3. Micheli DC, Fernandes PC Jr, Cruvinel JC, Nomelini ID, Murta EF 
+and Tavares‑Murta BM: Circulating cytokines and nitric oxide 
+are involved in the Inhibition of Neutrophil Migration in patients 
+with Uterine Cervical Neoplasia. Clin Med Insights Oncol 6: 
+233‑242, 2012.
+  4. Bobocea AC, Trandafir B, Bolca C and Cordoş I: Minimally invasive 
+surgery in cancer. Immunological response. Chirurgia (Bucur) 107: 
+154‑157, 2012.
+  5. Leaver HA, Craig SR, Yap PL and Walker WS: Lymphocyte 
+responses following open and minimally invasive thoracic surgery. 
+Eur J Clin Invest 30: 230‑238, 2000.
+  6. Ren XF, Li WZ, Meng FY and Lin CF: Differential effects of 
+propofol and isoflurane on the activation of T‑helper cells in lung 
+cancer patients. Anaesthesia 65: 478‑482, 2010. 
+  7. Dai H, Sun T, Liu Z, Zhang J and Zhou M: The imbalance between 
+regulatory and IL‑17‑secreting CD4+T cells in multiple‑trauma rat. 
+Injury 44: 1521‑1527, 2013.
+  8. Kong QF, Sun B, Bai SS, Zhai DX, Wang GY, Liu YM, Zhang SJ, Li 
+R, Zhao W, Sun YY et al: Administration of bone marrow stromal 
+cells ameliorates experimental autoimmune myasthenia gravis by 
+altering the balance of Th1/Th2/Th17/Treg cell subsets through the 
+secretion of TGF‑beta. J Neuroimmunol 207: 83‑91, 2009.
+  9. Ye J, Liu H, Zhang G, Li P, Wang Z, Huang S, Yang Q and Li Y: 
+The treg/th17 imbalance in patients with obstructive sleep apnoea 
+syndrome. Mediators Inflamm 2012: 815308, 2012.
+10. Yang L, Yang L and Gao X: Transcutaneous electrical nerve 
+stimulation on Yongquan acupoint reduces CFA‑induced thermal 
+hyperalgesia of rats via down‑regulation of ERK2 phosphorylation 
+and c‑Fos expression. Anat Rec (Hoboken) 293: 1207‑1213, 2010.
+11. Zheng CH, Zhang J, Wu J and Zhang MM: The effect of transcu­
+taneous electrical acupoint stimulation on pregnancy rates in women 
+undergoing in vitro fertilization: A study protocol for a randomized 
+controlled trial. Trials 15: 162, 2014.
+12. Chapman CR, Schimek F, Gehrig JD, Gerlach R and Colpitts YH: 
+Effects of nitrous oxide, transcutaneous electrical stimulation, and 
+their combination on brain potentials elicited by painful stimulation. 
+Anesthesiology 58: 250‑256, 1983.
+13. Hopwood V: Acupuncture in Physiotherapy: Key Concepts and 
+Evidence Based‑Practice. Allen H and Edwards R (eds). 1st edition. 
+Butterworth‑Heinemann, Oxford, UK, 2004.
+14. Kondo T and Kawamoto M: Acupuncture and moxibustion for 
+stress‑related disorders. Biopsychosoc Med 8: 7, 2014.
+15. McQuade JL, Meng Z, Chen Z, Wei Q, Zhang Y, Bei W, Palmer JL 
+and Cohen L: Utilization of and attitudes towards Traditional 
+Chinese Medicine therapies in a Chinese cancer hospital: A survey 
+of patients and physicians. Evid Based Complement Alternat Med 
+2012: 504507, 2012.
+16. Little JP: Consitency of ASA grading. Anaesthesia 50: 658‑659, 
+1995.
+17. Goldstraw P, Crowley J, Chansky K, Giroux DJ, Groome PA, 
+Rami‑Porta R, Postmus PE, Rusch V and Sobin L; International 
+Association for the Study of Lung Cancer International Staging 
+Committee; Participating Institutions: The IASLC Lung Cancer 
+Staging Project: Proposals for the revision of the TNM stage 
+groupings in the forthcoming (seventh) edition of the TNM 
+Classification of malignant tumours. J Thorac Oncol 2: 706‑714, 
+2007.
+18. Fibla Alfara JJ, Gómez Sebastián G, Farina Ríos C, Carvajal 
+Carrasco A, Estrada Saló G and León González C: Lobectomy 
+versus limited resection to treat non‑small cell lung cancer in stage I: 
+A study of 78 cases. Arch Bronconeumol 39: 217‑220, 2003.
+19. Chen LL, Hsu SF, Wang MH, Chen CL, Lin YD and Lai JS: Use 
+of acupressure to improve gastrointestinal motility in women after 
+trans‑abdominal hysterectomy. Am J Chin Med 31: 781‑790, 2003. 
+20. Xu HY, Yang F, Zhu J, He ZP and Yan C: Effect of electroacu­
+puncture at Hegu (LI 4) and Sanyinjiao (SP 6) on short‑term adverse 
+effects of drug‑induced abortion. Zhongguo Zhen Jiu 27: 103‑105, 
+2007 (In Chinese).
+21. Fu GQ, Zhou J, Tong QY, et al: Observation on the anti‑stress 
+effect of acupuncture‑assisted anesthesia for pulmonary lobectomy 
+patients. Zhen Ci Yan Jiu 36: 361‑365, 2011.
+22. Pfaffl MW: A new mathematical model for relative quantification in 
+real‑time RT‑PCR. Nucleic Acids Res 29: e45, 2001.
+23. Hunter JD: Effects of anaesthesia on the human immune system. 
+Hosp Med 60: 658‑663, 1999. 
+24. Engers R, Mueller M, Walter A, Collard JG, Willers R and Gabbert 
+HE: Prognostic relevance of Tiam1 protein expression in prostate 
+carcinomas. Br J Cancer 95: 1081‑1086, 2006.
+25. Chernyak GV and Sessler DI: Perioperative acupuncture and related 
+techniques. Anesthesiology 102: 1031‑1049, 2005.
+26. Zhao L, Yang J, Wang HP and Liu RY: Imbalance in the Th17/Treg 
+and cytokine environment in peripheral blood of patients with 
+adenocarcinoma and squamous cell carcinoma. Med Oncol 30: 
+461, 2013.
+27. Wang K, Wu H, Wang G, Li M, Zhang Z and Gu G: The effects 
+of electroacupuncture on TH1/TH2 cytokine mRNA expression 
+and mitogen‑activated protein kinase signaling pathways in the 
+splenic T cells of traumatized rats. Anesth Analg 109: 1666‑1673, 
+2009.
+28. Li G, Li S, Wang B and An L: The effect of electroacupuncture 
+on postoperative immunoinflammatory response in patients 
+undergoing supratentorial craniotomy. Exp Ther Med 6: 699‑702, 
+2013.
+29. Chen C, Chen D, Zhang Y, Chen Z, Zhu W, Zhang B, Wang Z and 
+Le H: Changes of CD4+CD25+FOXP3+ and CD8+CD28‑ regu­
+latory T cells in non‑small cell lung cancer patients undergoing 
+surgery. Int Immunopharmacol 18: 255‑261, 2014.
+30. Lv JQ, Feng RZ and Li N: P6 acupoint stimulation for 
+prevention of postoperative nausea and vomiting in patients 
+undergoing craniotomy: Study protocol for a randomized 
+controlled trial. Trials 14: 153, 2013. 
+31. Hughes GS Jr, Lichstein PR, Whitlock D and Harker C: 
+Response of plasma beta‑endorphins to transcutaneous elec­
+trical nerve stimulation in healthy subjects. Phys Ther 64: 
+1062‑1066, 1984.
+32. Ngai SP, Jones AY, Hui‑Chan CW, Ko FW and Hui DS: 
+Effect of 4 weeks of Acu‑TENS on functional capacity and 
+beta‑endorphin level in subjects with chronic obstructive 
+pulmonary disease: A randomized controlled trial. Respir 
+Physiol Neurobiol 173: 29‑36, 2010.

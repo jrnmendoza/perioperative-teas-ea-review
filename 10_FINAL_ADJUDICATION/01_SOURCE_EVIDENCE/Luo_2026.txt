@@ -1,0 +1,973 @@
+
+=== PDF PAGE 1 ===
+RESEARCH
+Open Access
+© The Author(s) 2026. Open Access This article is licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 
+International License, which permits any non-commercial use, sharing, distribution and reproduction in any medium or format, as long as you 
+give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons licence, and indicate if you modified the 
+licensed material. You do not have permission under this licence to share adapted material derived from this article or parts of it. The images or 
+other third party material in this article are included in the article’s Creative Commons licence, unless indicated otherwise in a credit line to the 
+material. If material is not included in the article’s Creative Commons licence and your intended use is not permitted by statutory regulation or 
+exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this licence, visit ​h​t​t​p​:​/​/​c​r​e​a​t​i​
+v​e​c​o​m​m​o​n​s​.​o​r​g​/​l​i​c​e​n​s​e​s​/​b​y​-​n​c​-​n​d​/​4​.​0​/.
+Luo et al. BMC Complementary Medicine and Therapies (2026) 26:167 
+https://doi.org/10.1186/s12906-026-05357-8
+BMC Complementary 
+Medicine and Therapies
+†Lu Luo and Yaojing Fu contributed equally to this work.
+*Correspondence:
+Shuangshuang Li
+lishuangshuang@eentanesthesia.com
+Jie Jia
+jiajie@eentanesthesia.com
+Full list of author information is available at the end of the article
+Abstract
+Background  Postoperative nausea and vomiting (PONV) remains a prevalent and distressing complication following 
+tympanoplasty. Stimulation of the Pericardium 6 (PC6) acupoint has emerged as a promising non-pharmacological 
+strategy for PONV management in various surgical procedures. Therefore, this study aimed to evaluate the efficacy 
+of transcutaneous electrical acupoint stimulation (TEAS) at PC6 as an adjunct to standard antiemetic prophylaxis in 
+patients undergoing tympanoplasty.
+Methods  In this prospective, single-blind, randomized, parallel-group trial, we enrolled 277 patients (aged 18–65 
+years; ASA physical status I–II) scheduled for tympanoplasty. Participants were randomized to receive either active 
+transcutaneous electrical acupoint stimulation (TEAS group, n = 138) or sham TEAS (Sham-TEAS group, n = 139). The 
+primary endpoint was the incidence of PONV within 48 h postoperatively. Secondary endpoints included the rate of 
+complete response (CR), the severity of PONV, the requirement for rescue antiemetics, postoperative pain scores, and 
+the incidence of other adverse events.
+Results  Compared with the Sham group, the TEAS group exhibited a significantly lower incidence of nausea (17.4% 
+vs. 39.1%, p < 0.01) and vomiting (6.5% vs. 19.4%, p < 0.01). Conversely, the rate of complete response (CR) was 
+significantly higher in the TEAS group than in the Sham group (81.6% vs. 59.7%, p < 0.01). No significant intergroup 
+differences were observed regarding recovery parameters or other adverse events.
+Perioperative transcutaneous electrical 
+acupoint stimulation at pericardium 6 
+reduces postoperative nausea and vomiting 
+after tympanoplasty patients: a randomized 
+controlled study
+Lu Luo1†, Yaojing Fu1†, Shuangshuang Li1* and Jie Jia1*
+
+
+=== PDF PAGE 2 ===
+Page 2 of 8
+Luo et al. BMC Complementary Medicine and Therapies (2026) 26:167 
+Introduction
+Postoperative nausea and vomiting (PONV) remains a 
+frequent and distressing complication following general 
+anesthesia, particularly in patients undergoing middle ear 
+surgery [1]. In the absence of prophylaxis, the incidence 
+of PONV can reach as high as 80% within the first 24 h, 
+a phenomenon primarily attributable to the stimulation 
+of the vestibular labyrinth by surgical instrumentation 
+and irrigation fluids [2]. Despite the widespread adoption 
+of multimodal antiemetic strategies, symptom control 
+remains suboptimal; even with dual antiemetic prophy­
+laxis, the residual incidence of PONV has been reported 
+to be as high as 26% [3].
+Transcutaneous 
+electrical 
+acupoint 
+stimulation 
+(TEAS) is a contemporary therapeutic approach that 
+integrates principles of transcutaneous electrical nerve 
+stimulation(TENS) with traditional Chinese acupunc­
+ture. It involves delivering electrical currents of varying 
+frequencies and intensities via electrode pads positioned 
+over specific acupoints. This non-invasive technique 
+shows potential in reducing the incidence of PONV, 
+accelerating gastrointestinal function recovery, allevi­
+ating pain and improving the quality of recovery [4, 5]. 
+Corroborating these findings, a recent meta-analysis of 
+14 randomized trials(RCTs) confirmed that TEAS can 
+also reduce the incidence of PONV and the need for 
+rescue antiemetics [6]. Although research on TEAS for 
+PONV prophylaxis is increasing, its underlying mecha­
+nisms have not been fully elucidated, the underlying 
+physiological mechanisms of TEAS have not yet been 
+fully elucidated. Mechanisms may involve modulation of 
+the autonomic nervous system, reduction of 5-hydroxy­
+tryptamine (5-HT) in plasma, inhibition of inflammatory 
+factor release and placebo effects [7, 8].
+The Pericardium 6 (PC6) acupoint is currently rec­
+ognized as a main acupoint of multimodal antiemetic 
+strategies [1]. Stimulation of PC6 via TEAS can reduce 
+the requirement for conventional antiemetic medica­
+tions while minimizing adverse effects, thereby offering 
+effective PONV prophylaxis. A randomized controlled 
+trial demonstrated that, compared with sham stimula­
+tion, PC6 stimulation significantly reduced the incidence 
+of PONV by 12–30% within 72 h following major lapa­
+roscopic surgery [9]. Furthermore, our previous study 
+found that PC6 TEAS combined with dexamethasone 
+possesses comparable efficacy to the 5-HT3 antago­
+nist granisetron combined with dexamethasone [10]. 
+However, the efficacy and safety of TEAS stimulation 
+of PC6 in patients for tympanoplasty patients remain 
+unexamined.
+This prospective, randomized, evaluator-blinded, par­
+allel-group study was designed to evaluate the efficacy of 
+transcutaneous electrical acupoint stimulation (TEAS) at 
+the Pericardium 6 (PC6) acupoint for the prophylaxis of 
+PONV in patients undergoing tympanoplasty.
+Materials and methods
+Participants
+This single-blind, randomized controlled trial was 
+approved by [Anonymized] and conducted in adher­
+ence to the Declaration of Helsinki. The study protocol 
+was prospectively registered at [Anonymized]. Written 
+informed consent was obtained from all participants 
+prior to enrollment.
+A total of 277 patients with ASA physical status I–II, 
+aged 18 to 64 years, were enrolled between May and July 
+2024. Exclusion criteria included: (1) presence of nausea 
+or vomiting, or use of antiemetic medication within 24 h 
+preoperatively; (2) hepatic or renal dysfunction; (3) dia­
+betes or peripheral neuropathy; (4) a history of substance 
+or alcohol abuse; and (5) uncontrolled cardiovascular 
+disease.
+Randomization and Blinding Eligible participants 
+were randomized in a 1:1 ratio into two groups using a 
+computer-generated randomization sequence. Alloca­
+tion was concealed in sequentially numbered, opaque, 
+sealed envelopes, which were opened prior to anesthe­
+sia induction. The study employed a single-blind design 
+with blinded outcome assessment: while the attending 
+anesthesiologists performing the intervention could not 
+be blinded, patients, postoperative outcome assessors, 
+ward nurses, and statisticians remained blinded to group 
+allocation throughout the study. To minimize variability, 
+all procedures were performed by a designated team of 
+experienced surgeons and anesthesiologists.
+Anesthetic management
+A standardized anesthetic protocol was implemented 
+for all participants. Upon arrival in the operating room, 
+standard monitoring was established, including electro­
+cardiography, non-invasive blood pressure, and pulse 
+oximetry. Following 3  min of pre-oxygenation with 
+100% oxygen, anesthesia was induced with intrave­
+nous sufentanil (0.2  µg/kg), propofol (2–4  mg/kg), and 
+rocuronium (0.6  mg/kg). Intravenous dexamethasone 
+(8  mg) was administered immediately post-induction. 
+Conclusions  Perioperative PC6 TEAS serves as a safe and efficacious adjunctive strategy for preventing PONV in 
+patients undergoing tympanoplasty. Our findings support the integration of TEAS into multimodal antiemetic 
+protocols to optimize perioperative care for this high-risk population.
+Keywords  Postoperative nausea and vomiting, Tympanoplasty, Transcutaneous electrical stimulation, PC6.
+
+
+=== PDF PAGE 3 ===
+Page 3 of 8
+Luo et al. BMC Complementary Medicine and Therapies (2026) 26:167 
+Airway management was achieved using an appropriate 
+sized supraglottic airway device. Mechanical ventilation 
+was maintained in pressure-controlled mode, target­
+ing a tidal volume of 6–8 mL/kg and an end-tidal CO₂ 
+(EtCO₂) of 35–45 mmHg. Anesthesia maintenance con­
+sisted of sevoflurane (0.8–1.0 MAC) and a continuous 
+remifentanil infusion, titrated to maintain mean arterial 
+pressure (MAP) within 20% of baseline values. Depth of 
+anesthesia was monitored via the Bispectral Index (BIS), 
+maintained between 40 and 60. Rocuronium was supple­
+mented as clinically indicated. At wound closure, palo­
+nosetron (0.075 mg IV) was administered for antiemetic 
+prophylaxis. To facilitate smooth emergence, a propofol 
+bolus (1 mg/kg IV) was administered immediately prior 
+to the discontinuation of sevoflurane and remifentanil.
+In the post-anesthesia care unit (PACU), residual neu­
+romuscular blockade was reversed with sugammadex 
+(2–4  mg/kg) if required. The supraglottic airway was 
+removed upon the return of spontaneous respiration and 
+protective airway reflexes. Recovery metrics, including 
+time to eye opening, command following, and achieving 
+an Aldrete score > 9, were recorded [11].
+Transcutaneous electrical acupoint stimulation (TEAS) 
+protocol
+In both groups, self-adhesive surface electrodes (Model 
+JNR2; Shanghai Energy Conservation and Environment 
+Protection Technology Co., Ltd., Shanghai, China) were 
+applied bilaterally by an experienced acupuncturist prior 
+to anesthetic induction. The PC6 was located between 
+the tendons of the palmaris longus and flexor carpi radi­
+alis muscles, approximately 3 cm proximal to the distal 
+wrist crease [11]. In the TEAS group, electrical stimula­
+tion was initiated at 1 mA (2 Hz) and gradually increased 
+(up to 2–20 mA) until the patient experienced a tolerable 
+tingling sensation in the hand. Stimulation was main­
+tained continuously from the induction of anesthesia 
+until the end of surgery. In the Sham-TEAS group, identi­
+cal electrode placement and procedures were followed to 
+ensure blinding; however, the stimulator was turned off, 
+and no electrical current was delivered.
+Outcome assessments
+The severity of PONV was assessed using the Simpli­
+fied PONV Impact Scale (Myles and Wengritzky), with a 
+score of ≥ 5 indicating clinically significant PONV [12]. 
+Rescue antiemetic therapy with droperidol was adminis­
+tered to patients with a scale score ≥ 5, or upon patient 
+request and informed consent for the management of 
+PONV.
+Postoperative pain was managed with intravenous oxy­
+codone (0.7 mg/kg) to maintain a numeric rating scale 
+(NRS) score of ≤ 3. Rescue acetaminophen (0.3 g IV) was 
+administered for NRS scores > 4. Complete response 
+(CR) was defined as the absence of nausea and vomiting 
+without the need for rescue antiemetic medication dur­
+ing the study period [13]. To assess the success of blind­
+ing, an exploratory survey was conducted during the 
+postoperative follow-up. Patients were asked to guess 
+their group allocation (“active TEAS”, “sham TEAS”, or 
+“unable to determine”).
+Data Collection and Outcome Measures—including 
+age, BMI, ASA physical status, Apfel simplified risk score 
+[14], duration of anesthesia and surgery, perioperative 
+opioid consumption, and length of hospital stay—were 
+recorded. The primary outcome was the incidence of 
+nausea and vomiting within the first 48 h postoperatively. 
+Secondary outcomes included the incidence of complete 
+response (CR) within 48 h after surgery, the severity of 
+PONV, use of rescue antiemetic medication, postopera­
+tive pain and the occurrence of other adverse events.
+Sample size estimation and statistical analysis
+The sample size calculation was based on the primary 
+endpoint: the incidence of PONV. Based on a preliminary 
+pilot study conducted with an identical protocol (n = 10 
+per group), the incidence of PONV within 48 h follow­
+ing combined prophylaxis with palonosetron and dexa­
+methasone was 30%. We hypothesized that TEAS would 
+reduce this incidence to 15%. To detect this difference 
+with a power of 80% and a two-sided significance level 
+(α) of 0.05, a minimum of 118 patients per group was 
+required. Assuming a potential dropout rate of 10%, we 
+planned to enroll 132 patients per group (Total N = 264).
+Data analyses were performed using SPSS software 
+(Version 25.0; IBM Corp., Armonk, NY, USA). The nor­
+mality of continuous data distribution was assessed using 
+the Kolmogorov-Smirnov test. Normally distributed vari­
+ables are expressed as mean mean (standard deviation 
+(SD)) and were compared using the Student’s t-test. Non-
+normally distributed variables are presented as median 
+[interquartile range (IQR)] and were analyzed using the 
+Mann-Whitney U test. Categorical data are described as 
+frequencies (percentages) and were compared using the 
+Chi-square test or Fisher’s exact test, as appropriate. All 
+statistical tests were two-sided, and a P-value < 0.05 was 
+considered statistically significant. 
+Results
+Patient clinical characteristics
+From May to July 2024, a total of 286 patients were 
+assessed for eligibility. Of these, nine were excluded 
+(four did not meet the inclusion criteria; five declined 
+participation), resulting in 277 patients who under­
+went randomization. Ultimately, all randomized partici­
+pants (TEAS group, n = 138; Sham-TEAS group, n = 139) 
+were included in the final analysis (Fig.  1). Baseline 
+
+
+=== PDF PAGE 4 ===
+Page 4 of 8
+Luo et al. BMC Complementary Medicine and Therapies (2026) 26:167 
+demographic and perioperative characteristics were well-
+balanced between the two groups (Table 1).
+ 
+Incidence of PONV within 48 h postoperatively
+As detailed in Table 2, the TEAS group exhibited a sig­
+nificantly lower incidence of vomiting within the 0–48 h 
+postoperative period compared with the Sham-TEAS 
+group (6.52% vs. 19.42%, P < 0.01). This protective effect 
+was most pronounced in the immediate postoperative 
+phase (0–2 h) (5.07% vs. 12.94%, P < 0.05). Similarly, the 
+cumulative incidence of nausea within 48 h was signifi­
+cantly reduced in the TEAS group (17.39% vs. 38.13%, 
+P < 0.01). Notably, the majority of PONV episodes in both 
+groups occurred within the first 24 h. Consequently, the 
+rate of complete response (CR) was significantly higher in 
+the TEAS group than in the Sham-TEAS group (81.16% 
+vs. 59.71%, P < 0.01).
+ 
+Severity of PONV
+The TEAS group exhibited significantly lower PONV 
+severity scores compared with the Sham-TEAS group 
+during the 0–2, 2–6, and 6–24 h postoperative intervals 
+(all P < 0.05). However, no statistically significant inter­
+group differences were observed during the 24–48  h 
+period (Table 3).
+Table 1  Patient characteristics and perioperative data
+Variable
+TEAS Group
+(n = 138)
+Sham-TEAS 
+Group
+(n = 139)
+P-
+val­
+ue
+Age (yr)
+45.18 (11.93)
+46.29(11.86)
+0.44
+Body mass index (kg.m− 2)
+22.71(3.34)
+23.24(3.72)
+0.21
+ASA physical status (I/II), n
+88/50
+80/59
+0.33
+Male/ Female, n
+47/91
+59/80
+0.17
+Non-smoker, n
+121
+111
+0.08
+History of motion sickness 
+or PONV, n
+59
+48
+0.16
+Apfel’ s score, n
+0/1/2/3/4
+15/21/60/42/0
+23/29/51/36/0
+0.25
+Sufentanil equivalents(mg)
+15.86(5.11)
+15.18(4.95)
+0.27
+Duration of anesthesia(min) 86.34(30.85)
+85.89(28.72)
+0.90
+Duration of surgery(min)
+75.17(29.85)
+74.74(28.17)
+0.90
+Extubation time (min)
+18.86(4.21)
+19.03(4.75)
+0.75
+Length of PACU stay (min)
+34.98(4.06)
+34.19(3.94)
+0.10
+The data are presented as mean (standard deviation), or number (percentage)
+ASA American Society of Anesthesiologists, PONV Postoperative nausea and 
+vomiting, PACU Post-anesthesia care unit
+Fig. 1  Flow Diagram
+ 
+
+
+=== PDF PAGE 5 ===
+Page 5 of 8
+Luo et al. BMC Complementary Medicine and Therapies (2026) 26:167 
+Rescue antiemetic use
+The requirement for rescue antiemetic medication was 
+comparable between the two groups (Table 4). Notably, 
+among patients who experienced PONV, only a subset 
+requested rescue therapy.
+Postoperative pain scores
+The TEAS group demonstrated significantly lower NRS 
+pain scores at 6  h (P = 0.01), 24  h (P < 0.01), and 48  h 
+(P < 0.01) postoperatively compared with the Sham-TEAS 
+group. In contrast, no significant intergroup difference 
+in pain intensity was observed at the 2-hour time point 
+(Table 5). Regarding rescue analgesia, five patients in each 
+group required acetaminophen for NRS scores > 4, with 
+no significant difference in total analgesic consumption.
+ 
+Postoperative adverse events
+No instances of severe headache, dizziness, or drowsi­
+ness—adverse effects commonly associated with palono­
+setron—were recorded in either group. Furthermore, no 
+adverse cutaneous reactions (e.g., pain or erythema) were 
+observed at the electrode application sites. Overall, no 
+other clinically significant adverse events were reported. 
+Discussion
+This study demonstrates that TEAS at the PC6 sig­
+nificantly reduced the incidence of PONV within the 
+first 48  h postoperatively in patients undergoing tym­
+panoplasty under general anesthesia, compared with 
+sham stimulation. These findings highlight TEAS as a 
+Table 2  The incidences of PONV within first postoperative 48 h
+Time course
+TEAS Group
+(n = 138)
+Sham-TEAS 
+Group
+(n = 139)
+P-
+value
+0–2 h
+  Nausea
+20(14.49)
+48(34.53)
+< 0.01
+  Vomiting
+7(5.07)
+18(12.95)
+0.02
+2–6 h
+  Nausea
+7(5.07)
+17(12.23)
+0.03
+  Vomiting
+4(2.90)
+13(9.35)
+0.03
+6–24 h
+  Nausea
+0(0.00)
+5(3.59)
+0.06
+  Vomiting
+0(0.00)
+3(2.16)
+0.25
+24–48 h
+  Nausea
+0(0)
+5(3.59)
+0.06
+  Vomiting
+0(0)
+2(1.44)
+0.25
+0–48 h
+  Nausea
+24(17.39)
+53(38.13)
+< 0.01
+  Vomiting
+9(6.52)
+27(19.42)
+< 0.01
+Complete response 
+within 48 h after 
+surgery
+112(81.16)
+83(59.71)
+< 0.01
+The data are presented as number (percentage)
+Table 3  The severity of postoperative vomiting
+Time course
+TEAS Group
+(n = 138)
+Sham-TEAS Group
+(n = 139)
+P-value
+0–2 h
+< 0.01
+  0
+116(84.06)
+91(65.47)
+  1
+11(8.00)
+22(15.83)
+  2
+7(5.07)
+17(12.23)
+  3
+3(2.17)
+7(5.04)
+  4
+1(0.72)
+1(0.72)
+  5
+0(0.00)
+1(0.72)
+  6
+0(0.00)
+0(0.00)
+2–6 h
+0.02
+  0
+130(94.20)
+119(85.61)
+  1
+4(2.90)
+12(8.63)
+  2
+3(2.20)
+4(2.88)
+  3
+1(0.72)
+2(1.44)
+  4
+0(0.00)
+1(0.72)
+  5
+0(0.00)
+1(0.72)
+  6
+0(0.00)
+0(0.00)
+6–24 h
+0.03
+  0
+138(100.00)
+134(96.40)
+  1
+0(0.00)
+2(1.44)
+  2
+0(0.00)
+1(0.72)
+  3
+0(0.00)
+1(0.72)
+  4
+0(0.00)
+0(0.00)
+  5
+0(0.00)
+1(0.72)
+  6
+0(0.00)
+0(0.00)
+24–48 h
+0.08
+  0
+138(100.00)
+136(97.84)
+  1
+0(0.00)
+1(0.72)
+  2
+0(0.00)
+1(0.72)
+  3
+0(0.00)
+0(0.00)
+  4
+0(0.00)
+1(0.72)
+  5
+0(0.00)
+0(0.00)
+  6
+0(0.00)
+0(0.00)
+The data are presented as number (percentage)
+Table 4  The consumption of rescue antiemetics during 
+postoperative 48 h
+Time course
+TEAS Group
+(n = 138)
+Sham-TEAS Group
+(n = 139)
+P-value
+0–2 h
+7 (5.07%)
+5(3.60%)
+0.55
+2–6 h
+1 (0.72%)
+1 (0.72%)
+1.00
+6–24 h
+0(0.00)
+1 (0.72%)
+1.00
+24–48 h
+0(0.00)
+0(0.00)
+1.00
+0–48 h
+0(0.00)
+0(0.00)
+1.00
+The data are presented as number (percentage)
+Table 5  Postoperative pain during postoperative 48 h
+Time course
+TEAS Group
+(n = 138)
+Sham-TEAS Group
+(n = 139)
+P-value
+Postoperative 2 h
+1.67 (0.82)
+1.66(0.93)
+0.91
+Postoperative 6 h
+1.55 (0.85)
+1.86 (0.97)
+0.01
+Postoperative 24 h
+1.30(0.92)
+1.65(0.95)
+< 0.01
+Postoperative 48 h
+0.82(0.75)
+1.09(0.75)
+< 0.01
+The data are presented as mean (standard deviation)
+
+
+=== PDF PAGE 6 ===
+Page 6 of 8
+Luo et al. BMC Complementary Medicine and Therapies (2026) 26:167 
+promising, non-pharmacological adjunct for the man­
+agement of PONV in this population, effectively comple­
+menting existing pharmacological strategies.
+Middle ear surgeries are associated with a high risk of 
+postoperative nausea and vomiting (PONV), with inci­
+dences reaching 80% in patients devoid of prophylac­
+tic antiemetic treatment [2]. This elevated susceptibility 
+is attributed to a multifactorial etiology. First, surgical 
+maneuvers such as drilling and suctioning generate low-
+frequency vibrations within the mastoid cavity; these 
+vibrations may disrupt the vestibular system and induce 
+postural instability, thereby triggering PONV. Second, 
+intraoperative irrigation fluids may directly stimulate the 
+vestibular labyrinth via the vestibular division of the ves­
+tibulocochlear nerve (CN VIII). This afferent stimulation 
+activates the chemoreceptor trigger zone (CTZ), thereby 
+precipitating nausea and vomiting. Furthermore, intraop­
+erative anesthetic agents and analgesics contribute to this 
+process by directly stimulating the CTZ. Similarly, circu­
+lating serotonin (5-HT) may bind to 5-HT₃ receptors in 
+this region, further triggering the emetic reflex [3, 15, 16].
+Current guidelines recommend multimodal antiemetic 
+prophylaxis for patients at moderate to high risk of 
+PONV. This strategy typically involves combining dexa­
+methasone with 5-HT₃ receptor antagonists, neuroki­
+nin-1 (NK-1) receptor antagonists, or dopamine receptor 
+antagonists [1]. Palonosetron, a second-generation 5-HT₃ 
+receptor antagonist, is distinguished by its unique alloste­
+ric inhibition mechanism, which confers greater potency 
+and a prolonged half-life compared to other agents in its 
+class. It exhibits a receptor binding affinity approximately 
+30-fold higher than that of ondansetron or ramosetron, 
+with an effective duration of action approaching 40 h 
+[17]. Previous studies have established 0.075 mg as the 
+minimum effective dose of palonosetron for reducing the 
+severity of nausea within the first 24 h postoperatively, 
+as well as for delaying the onset of emesis and treatment 
+failure [18].
+Despite palonosetron’s superior efficacy over other 
+antiemetics in middle ear surgery [19], the incidence of 
+PONV remains substantial, even when combined with 
+dexamethasone [3]. Consequently, concerns regard­
+ing treatment costs and potential adverse effects have 
+prompted growing interest in non-pharmacological 
+interventions, which are increasingly recommended as 
+adjunctive strategies in current clinical guidelines.
+TEAS is a non-invasive, non-pharmacological inter­
+vention that delivers electrical stimulation to specific 
+acupoints via skin electrodes. Unlike traditional acu­
+puncture, TEAS is particularly well-suited for the peri­
+operative setting due to its non-invasiveness, ease of 
+administration, and high acceptability among both 
+patients and surgeons [20]. Existing literature supports 
+the utility of TEAS as a multimodal antiemetic adjunct, 
+demonstrating its efficacy in reducing PONV incidence 
+in various surgical populations, including those under­
+going laparoscopic procedures [21]. Furthermore, TEAS 
+has been shown to decrease intraoperative analgesic 
+requirements and mitigate anesthesia-related complica­
+tions [22]. In our previous work, we found that PC6 stim­
+ulation combined with dexamethasone achieved efficacy 
+comparable to that of the 5-HT₃ antagonist-dexametha­
+sone combination in preventing PONV in breast cancer 
+patients [10]. This regimen suggests potential advantages 
+regarding cost-effectiveness and a favorable safety profile. 
+However, the efficacy and safety of TEAS specifically in 
+patients undergoing tympanoplasty remain investigating. 
+Moreover, the underlying mechanisms of TEAS are not 
+fully elucidated but may involve neuroendocrine modula­
+tion—specifically, the release of endogenous opioids and 
+the activation of adrenergic pathways, which in turn alter 
+5-HT transmission to inhibit the emetic reflex [23].
+In this study, PC6 was selected as the stimulation site 
+given its established status as a primary locus for PONV 
+prophylaxis [24]. Mechanistically, PC6 stimulation is 
+hypothesized to exert antiemetic effects by modulat­
+ing neuroendocrine pathways and inducing homeostatic 
+autoregulation. Furthermore, existing evidence indicates 
+that acupuncture at PC6 enhances vagal tone, which 
+plays a pivotal role in suppressing the emetic reflex [25]. 
+However, the extent to which these physiological mecha­
+nisms translate to TEAS intervention specifically within 
+the tympanoplasty population remains to be verified.
+Notably, previous research suggests that PC6 stimula­
+tion may not only prevent PONV but also attenuate post­
+operative pain. While the underlying mechanisms remain 
+to be fully elucidated, they likely involve the modulation 
+of the endogenous opioid system, including the release of 
+endorphins, the regulation of neurotransmitters such as 
+5-HT, norepinephrine, and substance P, and the modula­
+tion of the endogenous opioid system [26]. In the pres­
+ent study, no significant difference in pain scores was 
+observed between the two groups during the initial 0–2 
+h postoperatively, a finding potentially attributable to 
+the residual effects of intraoperative analgesics. How­
+ever, from 2 to 48 h postoperatively, the TEAS group 
+exhibited significantly lower pain scores, suggesting that 
+PC6 TEAS provides effective analgesia during the inter­
+mediate postoperative period. These findings align with 
+previous studies demonstrating the analgesic efficacy of 
+TEAS in gastric and colorectal surgeries [27, 28], as well 
+as in the management of chronic pain following mastec­
+tomy [29], Furthermore, TEAS has been associated with 
+broader benefits, such as reducing postoperative ileus 
+and enhancing gastrointestinal recovery [30].
+In contrast to previous studies demonstrating reduced 
+rescue antiemetic use with PC6 stimulation [31, 32], we 
+observed no significant difference in rescue medication 
+
+
+=== PDF PAGE 7 ===
+Page 7 of 8
+Luo et al. BMC Complementary Medicine and Therapies (2026) 26:167 
+consumption between groups. This discrepancy may 
+be attributed to two factors. first, First, our protocol 
+enforced strict administration criteria based on the Sim­
+plified PONV Impact Scale [12],, restricting rescue medi­
+cation to cases of clinically significant PONV (severity 
+score ≥ 5). A post-hoc analysis (Table 3) revealed that 
+severe PONV was extremely rare (0.72% in Sham-TEAS 
+vs. 0% in TEAS); instead, TEAS predominantly mitigated 
+mild-to-moderate episodes (score < 5) that remained 
+below the threshold for rescue intervention. Second, the 
+requirement for patient consent prior to administration 
+meant that some patients, concerned about potential side 
+effects, may have declined rescue therapy, potentially 
+masking intergroup differences. Collectively, while TEAS 
+significantly reduced overall PONV incidence and sever­
+ity (Tables 2 and 3), these findings suggest its clinical 
+value lies primarily in alleviating the patient’s subjective 
+burden of PONV rather than altering the consumption of 
+rescue antiemetics, a conclusion consistent with findings 
+in craniotomy patients [33].
+Our study has several limitations. First, although a sin­
+gle-blind design was employed, maintaining strict blind­
+ing was challenging due to the distinct somatosensory 
+sensations associated with active stimulation. The pro­
+portion of patients correctly guessing their allocation was 
+77.5% in the TEAS group and 66.2% in the sham group, 
+both significantly exceeding chance (50%). Consequently, 
+we cannot entirely rule out the contribution of non-
+specific psychological effects to the observed outcomes. 
+Second, follow-up was limited to 48  h postoperatively. 
+While this window captures the peak incidence of PONV, 
+it precludes the assessment of delayed recovery or long-
+term recurrence. Third, as a single-center trial restricted 
+to ASA I–II patients aged 18–64 undergoing tympano­
+plasty, the external validity of our findings is limited. The 
+generalizability of these results to high-risk populations 
+(ASA III–IV), other surgical procedures, or alternative 
+anesthetic protocols remains uncertain. Future multi­
+center studies with stratified sampling are warranted to 
+validate the broader clinical applicability of TEAS.
+Conclusion
+In conclusion, compared with conventional 5-HT recep­
+tor antagonists combined with dexamethasone, PC6 
+TEAS demonstrated a trend toward improved efficacy in 
+reducing both PONV incidence and perioperative anti­
+emetic consumption in patients undergoing tympano­
+plasty. These preliminary findings suggest that PC6 TEAS 
+may serve as a feasible, non-pharmacological adjunct 
+to multimodal antiemetic regimens for this population. 
+Integrating TEAS into standard care protocols could 
+potentially optimize antiemetic outcomes, minimize reli­
+ance on pharmacotherapy, and thereby reduce associated 
+medical costs and adverse events. 
+Abbreviations
+PONV 
+Postoperative nausea and vomiting
+PC6 
+Pericardium 6 acupuncture point
+TEAS 
+Transcutaneous electrical acupoint stimulation
+CR 
+Complete response
+ASA 
+American Society of Anesthesiologists physical status
+EtCO₂ 
+End-tidal CO₂
+MAC 
+Minimum alveolar concentration
+MAP 
+Mean arterial pressure
+BIS 
+Bispectral index
+PACU 
+Postanaesthesia care unit
+POV 
+Postoperative vomiting
+NRS 
+Numeric rating scale
+CTZ 
+Chemoreceptor trigger zone
+NK-1 
+Neurokinin-1
+Supplementary Information
+The online version contains supplementary material available at ​h​t​t​p​s​:​/​/​d​o​i​.​o​r​
+g​/​1​0​.​1​1​8​6​/​s​1​2​9​0​6​-​0​2​6​-​0​5​3​5​7​-​8.
+Supplementary Material 1.
+Acknowledgements
+Not applicable.
+Authors’ contributions
+Conception and design of the research: Jie Jia. Acquisition of data: 
+Shuangshuang Li, Yaojing Fu. Analysis and interpretation of the data: Lu Luo, 
+Jie Jia. Statistical analysis: Lu Luo, Yaojing Fu, Shuangshuang Li. Obtaining 
+financing: None. Writing of the manuscript: Lu Luo, Yaojing Fu. Critical revision 
+of the manuscript for intellectual content: Jie Jia.
+Funding
+Grant from National Natural Science Foundation of China (to Shuangshuang 
+Li, No. 82201375).
+Data availability
+No datasets were generated or analyzed during the current study. However, 
+the data and materials are available from Jie Jia upon reasonable request. 
+Please contact Jie Jia for further information regarding data availability.
+Declarations
+Ethics approval and consent to participate
+This study was conducted in accordance with the Declaration of Helsinki 
+and approved by the Ethics Committee of the Eye & ENT Hospital of Fudan 
+University (Approval number: 2024041) and informed consent was obtained 
+from all participants.
+Consent for publication
+The authors declare that the manuscript has not been published and is not 
+currently being considered for publication in another journal.
+Competing interests
+The authors declare no competing interests.
+Author details
+1Department of Anesthesiology, EYE & ENT Hospital of Fudan University, 
+2600 Jiangyue Road, Pujin Street, Shanghai, Minhang 200032, China
+Received: 19 July 2025 / Accepted: 19 March 2026
+References
+1. 
+Gan TJ, Belani KG, Bergese S, et al. Fourth Consensus Guidelines for the 
+Management of Postoperative Nausea and Vomiting[J]. Anesth Analg. 
+2020;131(2):411–48. ​h​t​t​p​s​:​/​/​d​o​i​.​o​r​g​/​1​0​.​1​2​1​3​/​A​N​E​.​0​0​0​0​0​0​0​0​0​0​0​0​4​8​3​3.
+
+
+=== PDF PAGE 8 ===
+Page 8 of 8
+Luo et al. BMC Complementary Medicine and Therapies (2026) 26:167 
+2. 
+Honkavaara P. Effect of ondansetron on nausea and vomiting after middle ear 
+surgery during general anaesthesia[J]. Br J Anaesth. 1996;76(2):316–8. ​h​t​t​p​s​:​/​/​
+d​o​i​.​o​r​g​/​1​0​.​1​0​9​3​/​b​j​a​/​7​6​.​2​.​3​1​6.
+3. 
+Kumar K, Kumar R, Hussain M, et al. Comparison of Palonosetron Versus 
+Palonosetron and Dexamethasone for Prevention of Postoperative Nausea 
+and Vomiting After Middle Ear Surgeries: A Randomized Controlled Study[J]. 
+Anesth Essays Res. 2022;16(1):17–21. ​h​t​t​p​s​:​/​/​d​o​i​.​o​r​g​/​1​0​.​4​1​0​3​/​a​e​r​.​a​e​r​_​1​3​1​_​2​1.
+4. 
+Szmit M, Krajewski R, Rudnicki J, et al. Application and efficacy of transcuta­
+neous electrical acupoint stimulation (TEAS) in clinical practice: A systematic 
+review[J]. Adv Clin Exp Med. 2023;32(9):1063–74. ​h​t​t​p​s​:​/​/​d​o​i​.​o​r​g​/​1​0​.​1​7​2​1​9​/​a​c​
+e​m​/​1​5​9​7​0​3.
+5. 
+Zhang M, Zhang H, Li P, et al. Effect of transcutaneous electrical acupoint 
+stimulation on the quality of postoperative recovery: a meta-analysis[J]. BMC 
+Anesthesiol. 2024;24(1):104. ​h​t​t​p​s​:​/​/​d​o​i​.​o​r​g​/​1​0​.​1​1​8​6​/​s​1​2​8​7​1​-​0​2​4​-​0​2​4​8​3​-​z.
+6. 
+Chen J, Tu Q, Miao S, et al. Transcutaneous electrical acupoint stimulation for 
+preventing postoperative nausea and vomiting after general anesthesia: A 
+meta-analysis of randomized controlled trials[J]. Int J Surg. 2020;73:57–64. ​h​t​t​
+p​s​:​/​/​d​o​i​.​o​r​g​/​1​0​.​1​0​1​6​/​j​.​i​j​s​u​.​2​0​1​9​.​1​0​.​0​3​6.
+7. 
+Lee A, Done ML. Stimulation of the wrist acupuncture point P6 for prevent­
+ing postoperative nausea and vomiting[J]. Cochrane Database Syst Rev. 
+2004(3):CD003281. ​h​t​t​p​s​:​/​/​d​o​i​.​o​r​g​/​1​0​.​1​0​0​2​/​1​4​6​5​1​8​5​8​.​C​D​0​0​3​2​8​1​.​p​u​b​2.
+8. 
+Zhou X, Cao S, Tan X, et al. Effects of Transcutaneous Electrical Acupoint 
+Stimulation (TEAS) on Postoperative Recovery in Patients with Gastric Cancer: 
+A Randomized Controlled Trial[J]. Cancer Manag Res. 2021;13:1449–58. ​h​t​t​p​s​:​
+/​/​d​o​i​.​o​r​g​/​1​0​.​2​1​4​7​/​C​M​A​R​.​S​2​9​2​3​2​5.
+9. 
+White PF, Zhao M, Tang J, et al. Use of a disposable acupressure device as part 
+of a multimodal antiemetic strategy for reducing postoperative nausea and 
+vomiting[J]. Anesth Analg. 2012;115(1):31–7. ​h​t​t​p​s​:​/​/​d​o​i​.​o​r​g​/​1​0​.​1​2​1​3​/​A​N​E​.​0​b​
+0​1​3​e​3​1​8​2​5​3​6​f​2​7.
+10. Luo L, Yang L, Lou F, et al. Transcutaneous Pericardium 6 Acupoint Electrical 
+Stimulation Provides Comparable Antiemetic Effect to Granisetron When 
+Combined With Dexamethasone in Patients Undergoing Breast Cancer 
+Surgery[J]. J Surg Res. 2024;303:81–8. ​h​t​t​p​s​:​/​/​d​o​i​.​o​r​g​/​1​0​.​1​0​1​6​/​j​.​j​s​s​.​2​0​2​4​.​0​8​.​0​1​
+6.
+11. Dundee JW, Ghaly RG, Bill KM, et al. Effect of stimulation of the P6 antiemetic 
+point on postoperative nausea and vomiting[J]. Br J Anaesth. 1989;63(5):612–
+8. ​h​t​t​p​s​:​/​/​d​o​i​.​o​r​g​/​1​0​.​1​0​9​3​/​b​j​a​/​6​3​.​5​.​6​1​2.
+12. Myles PS, Wengritzky R. Simplified postoperative nausea and vomit­
+ing impact scale for audit and post-discharge review[J]. Br J Anaesth. 
+2012;108(3):423–9. ​h​t​t​p​s​:​/​/​d​o​i​.​o​r​g​/​1​0​.​1​0​9​3​/​b​j​a​/​a​e​r​5​0​5.
+13. Singh PM, Borle A, Gouda D, et al. Efficacy of palonosetron in postoperative 
+nausea and vomiting (PONV)-a meta-analysis[J]. J Clin Anesth. 2016;34:459–
+82. ​h​t​t​p​s​:​/​/​d​o​i​.​o​r​g​/​1​0​.​1​0​1​6​/​j​.​j​c​l​i​n​a​n​e​.​2​0​1​6​.​0​5​.​0​1​8.
+14. Schlesinger T, Meybohm P, Kranke P. Postoperative nausea and vomiting: 
+risk factors, prediction tools, and algorithms[J]. Curr Opin Anaesthesiol. 
+2023;36(1):117–23. ​h​t​t​p​s​:​/​/​d​o​i​.​o​r​g​/​1​0​.​1​0​9​7​/​A​C​O​.​0​0​0​0​0​0​0​0​0​0​0​0​1​2​2​0.
+15. Bunce KT, Tyers MB. The role of 5-HT in postoperative nausea and vomiting[J]. 
+Br J Anaesth. 1992;69(7 Suppl 1):S60–62. ​h​t​t​p​s​:​/​/​d​o​i​.​o​r​g​/​1​0​.​1​0​9​3​/​b​j​a​/​6​9​.​s​u​p​p​l​
+e​m​e​n​t​_​1​.​6​0​s.
+16. Jang JS, Lee JH, Lee JJ, et al. Postoperative nausea and vomiting after 
+myringoplasty under continuous sedation using midazolam with or without 
+remifentanil[J]. Yonsei Med J. 2012;53(5):1010–3. ​h​t​t​p​s​:​/​/​d​o​i​.​o​r​g​/​1​0​.​3​3​4​9​/​y​m​j​.​
+2​0​1​2​.​5​3​.​5​.​1​0​1​0.
+17. Stoltz R, Cyong JC, Shah A, et al. Pharmacokinetic and safety evaluation of 
+palonosetron, a 5-hydroxytryptamine-3 receptor antagonist, in U.S. and 
+Japanese healthy subjects[J]. J Clin Pharmacol. 2004;44(5):520–31. ​h​t​t​p​s​:​/​/​d​o​i​.​
+o​r​g​/​1​0​.​1​1​7​7​/​0​0​9​1​2​7​0​0​0​4​2​6​4​6​4​1.
+18. Candiotti KA, Kovac AL, Melson TI, et al. A randomized, double-blind study 
+to evaluate the efficacy and safety of three different doses of palonosetron 
+versus placebo for preventing postoperative nausea and vomiting[J]. Anesth 
+Analg. 2008;107(2):445–51. ​h​t​t​p​s​:​/​/​d​o​i​.​o​r​g​/​1​0​.​1​2​1​3​/​a​n​e​.​0​b​0​1​3​e​3​1​8​1​7​b​5​e​b​b.
+19. Sharma S, Khanna S, Das J, et al. A randomized study to compare palo­
+nosetron with ondansetron for prevention of postoperative nausea and 
+vomiting following middle ear surgeries[J]. J Anaesthesiol Clin Pharmacol. 
+2019;35(2):182–7. ​h​t​t​p​s​:​/​/​d​o​i​.​o​r​g​/​1​0​.​4​1​0​3​/​j​o​a​c​p​.​J​O​A​C​P​_​1​9​6​_​1​7.
+20. Hou Y, Yan Q, An H, et al. The use and protective effects of transcutaneous 
+electrical acupoint stimulation during abdominal surgery: study protocol for 
+a multicenter randomized parallel controlled trial[J]. Trials. 2019;20(1):462. ​h​t​t​
+p​s​:​/​/​d​o​i​.​o​r​g​/​1​0​.​1​1​8​6​/​s​1​3​0​6​3​-​0​1​9​-​3​5​5​8​-​2.
+21. Zheng D, Ding P, Gong M, et al. Transcutaneous electrical acupoint stimula­
+tion vs metoclopramide for moderate to severe postoperative nausea and 
+vomiting: a randomized clinical trial[J]. JAMA Surg. 2026;e256394. ​h​t​t​p​s​:​/​/​d​o​i​.​
+o​r​g​/​1​0​.​1​0​0​1​/​j​a​m​a​s​u​r​g​.​2​0​2​5​.​6​3​9​4.
+22. Yuan L, Quan S, Li X, et al. Transcutaneous electrical acupoint stimulation for 
+preventing postoperative nausea and vomiting after laparoscopic surgery: A 
+meta-analysis[J]. J Nurs Scholarsh. 2025;57(3):371–9. ​h​t​t​p​s​:​/​/​d​o​i​.​o​r​g​/​1​0​.​1​1​1​1​/​j​
+n​u​.​1​3​0​3​3.
+23. Lee S, Lee MS, Choi DH, et al. Electroacupuncture on PC6 prevents opioid-
+induced nausea and vomiting after laparoscopic surgery[J]. Chin J Integr 
+Med. 2013;19(4):277–81. ​h​t​t​p​s​:​/​/​d​o​i​.​o​r​g​/​1​0​.​1​0​0​7​/​s​1​1​6​5​5​-​0​1​3​-​1​4​2​5​-​7.
+24. ASPAN’S evidence-based clinical practice guideline for the prevention and/or 
+management of PONV/PDNV[J]. J Perianesth Nurs. 2006;21(4):230–50. ​h​t​t​p​s​:​/​
+/​d​o​i​.​o​r​g​/​1​0​.​1​0​1​6​/​j​.​j​o​p​a​n​.​2​0​0​6​.​0​6​.​0​0​3.
+25. Huang ST, Chen GY, Lo HM, et al. Increase in the vagal modulation by 
+acupuncture at neiguan point in the healthy subjects[J]. Am J Chin Med. 
+2005;33(1):157–64. ​h​t​t​p​s​:​/​/​d​o​i​.​o​r​g​/​1​0​.​1​1​4​2​/​S​0​1​9​2​4​1​5​X​0​5​0​0​2​7​6​X.
+26. Stoicea N, Gan TJ, Joseph N, et al. Alternative Therapies for the Prevention of 
+Postoperative Nausea and Vomiting[J]. Front Med (Lausanne). 2015;2:87. ​h​t​t​p​
+s​:​/​/​d​o​i​.​o​r​g​/​1​0​.​3​3​8​9​/​f​m​e​d​.​2​0​1​5​.​0​0​0​8​7.
+27. Li WJ, Gao C, An LX, et al. Perioperative transcutaneous electrical acupoint 
+stimulation for improving postoperative gastrointestinal function: A random­
+ized controlled trial[J]. J Integr Med. 2021;19(3):211–8. ​h​t​t​p​s​:​/​/​d​o​i​.​o​r​g​/​1​0​.​1​0​1​
+6​/​j​.​j​o​i​m​.​2​0​2​1​.​0​1​.​0​0​5.
+28. Meng D, Mao Y, Song QM et al. Efficacy and safety of transcutaneous electri­
+cal acupoint stimulation (TEAS) for postoperative pain in laparoscopy: a 
+systematic review and meta-analysis of randomized controlled trials[J]. Evid 
+Based Complement Alternat Med, 2022,2022:9922879. ​h​t​t​p​s​:​/​/​d​o​i​.​o​r​g​/​1​0​.​1​1​5​
+5​/​2​0​2​2​/​9​9​2​2​8​7​9.
+29. Lu Z, Wang Q, Sun X, et al. Transcutaneous electrical acupoint stimulation 
+before surgery reduces chronic pain after mastectomy: A randomized clinical 
+trial[J]. J Clin Anesth. 2021;74:110453. ​h​t​t​p​s​:​/​/​d​o​i​.​o​r​g​/​1​0​.​1​0​1​6​/​j​.​j​c​l​i​n​a​n​e​.​2​0​2​1​.​
+1​1​0​4​5​3.
+30. Gao W, Li W, Yan Y, et al. Transcutaneous electrical acupoint stimulation 
+applied in lower limbs decreases the incidence of paralytic ileus after 
+colorectal surgery: A multicenter randomized controlled trial[J]. Surgery. 
+2021;170(6):1618–26. ​h​t​t​p​s​:​/​/​d​o​i​.​o​r​g​/​1​0​.​1​0​1​6​/​j​.​s​u​r​g​.​2​0​2​1​.​0​8​.​0​0​7.
+31. Ertas G, Bengi Sener E, Kaya C, et al. Effects of P6 acustimulation with the 
+ReliefBand on postoperative nausea and vomiting in patients undergoing 
+gynecological laparoscopy[J]. Holist Nurs Pract. 2015;29(1):6–12. ​h​t​t​p​s​:​/​/​d​o​i​.​o​
+r​g​/​1​0​.​1​0​9​7​/​H​N​P​.​0​0​0​0​0​0​0​0​0​0​0​0​0​0​6​1.
+32. Gan TJ, Jiao KR, Zenn M, et al. A randomized controlled comparison of elec­
+tro-acupoint stimulation or ondansetron versus placebo for the prevention 
+of postoperative nausea and vomiting[J]. Anesth Analg. 2004;99(4):1070–5. ​h​
+t​t​p​s​:​/​/​d​o​i​.​o​r​g​/​1​0​.​1​2​1​3​/​0​1​.​A​N​E​.​0​0​0​0​1​3​0​3​5​5​.​9​1​2​1​4​.​9​E.
+33. Tu L, Li P, Zhao Y, et al. Transcutaneous electrical acupoint stimulation 
+for postoperative nausea and vomiting in patients undergoing crani­
+otomy: A randomized controlled trial[J]. Complement Ther Clin Pract. 
+2024;54:101824DOI. ​h​t​t​p​s​:​/​/​d​o​i​.​o​r​g​/​1​0​.​1​0​1​6​/​j​.​c​t​c​p​.​2​0​2​3​.​1​0​1​8​2​4.
+Publisher’s note
+Springer Nature remains neutral with regard to jurisdictional claims in 
+published maps and institutional affiliations.

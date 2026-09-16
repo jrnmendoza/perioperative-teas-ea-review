@@ -1,0 +1,1485 @@
+
+=== PDF PAGE 1 ===
+ORIGINAL RESEARCH
+Effect of Transcutaneous Electrical Acupoint
+Stimulation Combined with Transversus Abdominis
+Plane Block on Postoperative Recovery in Elderly
+Patients Undergoing Laparoscopic Gastric Cancer
+Surgery: A Randomized Controlled Trial
+Ruyi Xing . Yang Yang . Min Zhang . Hanyu Wang . Mengyuan Tan .
+Chen Gao . Chao Yang . Mingyu Zhai . Yanhu Xie
+Received: July 17, 2022 / Accepted: August 25, 2022 / Published online: September 13, 2022
+ The Author(s) 2022
+ABSTRACT
+Introduction: This study assessed the inﬂuence
+of transcutaneous electrical acupoint stimula-
+tion (TEAS) combined with transversus abdo-
+minis plane block (TAPB) on the recovery of
+elderly patients undergoing laparoscopic gastric
+cancer surgery.
+Methods: Ninety
+patients
+(age C 60 years)
+undergoing laparoscopic gastric cancer surgery
+were randomly divided into general anesthesia
+group (group G), TAPB group (group NG), and
+TEAS combined with TAPB group (group NTG).
+Patients in the NTG group received TEAS at PC6,
+LI4, and ST36 acupoints and TAPB. Patients in
+the NG group received TAPB. The quality of
+recovery (QoR) was assessed using the QoR-15
+questionnaire. The percentages of T lymphocyte
+subsets
+were
+determined.
+Consumption
+of
+anesthetics, extubation time, visual analog scale
+(VAS)
+scores,
+time
+of
+ﬁrst
+postoperative
+ambulation
+and
+ﬂatus,
+and
+postoperative
+adverse events were also recorded.
+Results: QoR-15 scores on postoperative day
+(POD) 3 and POD 7 were higher in the NTG
+group than in the G and NG groups (P \ 0.05).
+On POD 1 and POD 3, the percentages of CD3?
+and CD4? T cells and the CD4?/CD8? ratio
+were higher and the percentage of CD8? T cells
+was lower in the NTG group than in the G and
+NG groups (P \ 0.05). Remifentanil consump-
+tion, and the incidence of postoperative nausea
+and vomiting (PONV) were lower and extuba-
+tion time and time of ﬁrst postoperative ﬂatus
+were shorter in the NTG group than in the G
+and NG groups (P \ 0.05). Compared with the
+G group, the VAS scores on POD 1 were lower in
+the NG group and those on POD 2 were lower in
+the NTG group (P \ 0.05).
+Conclusion: The
+combination
+of
+TEAS
+and
+TAPB ameliorated postoperative pain, improved
+immune and gastrointestinal function, reduced
+the incidence of PONV, and effectively pro-
+moted
+postoperative
+recovery
+in
+elderly
+patients undergoing laparoscopic gastric cancer
+surgery.
+Trial Registration: Chinese Clinical Trial Reg-
+istry (ChiCTR2100042119).
+Keywords: Transcutaneous electrical acupoint
+stimulation;
+Laparoscopic
+surgery;
+Postoperative
+pain;
+Transversus
+abdominis
+plane block; Recovery
+Ruyi Xing and Yang Yang are co-ﬁrst authors.
+R. Xing  Y. Yang  M. Zhang  H. Wang  M. Tan 
+C. Gao  C. Yang  M. Zhai (&)  Y. Xie (&)
+Department of Anaesthesiology, The First Afﬁliated
+Hospital of USTC, Division of Life Sciences and
+Medicine, University of Science and Technology of
+China, Hefei 230001, Anhui, China
+e-mail: zmynjl@126.com
+Y. Xie
+e-mail: xyh200701@sina.cn
+Pain Ther (2022) 11:1327–1339
+https://doi.org/10.1007/s40122-022-00429-2
+
+
+=== PDF PAGE 2 ===
+Key Summary Points
+Patients with gastric cancer are
+predominantly elderly patients often
+associated with poor tolerance and
+multiple comorbidities.
+Laparoscopic surgical resection is
+currently one of the leading clinical
+methods for treating gastric cancer.
+Preoperative anxiety and postoperative
+pain-induced stress reactions can suppress
+gastrointestinal and immune functions,
+seriously affecting postoperative recovery.
+Elderly patients face greater challenges
+during postoperative recovery.
+The aim of this study was to investigate
+the impact of transcutaneous electrical
+acupoint stimulation (TEAS) at the
+acupoints of Neiguan (PC6), Hegu (LI4),
+and Zusanli (ST36) combined with
+transversus abdominis plane block (TAPB)
+on the quality of early recovery after
+laparoscopic gastric cancer surgery in
+elderly patients.
+The combination of TEAS and TAPB
+ameliorated postoperative pain, improved
+immune and gastrointestinal function,
+reduced the incidence of postoperative
+nausea and vomiting (PONV), and
+effectively promoted postoperative
+recovery in elderly patients undergoing
+laparoscopic gastric cancer surgery.
+INTRODUCTION
+Laparoscopic surgical resection is currently one
+of the leading clinical methods for treating
+gastric cancer. Laparoscopic surgery has the
+advantages of lower postoperative infection
+rate, shorter hospital stay, and less associated
+trauma than traditional open surgery [1, 2].
+However, preoperative anxiety, intraoperative
+pneumoperitoneum, and postoperative pain-
+induced stress reactions can suppress gastroin-
+testinal
+and
+immune
+functions,
+seriously
+affecting postoperative recovery [3, 4]. Addi-
+tionally, patients with gastric cancer are pre-
+dominantly elderly patients often associated
+with poor tolerance and multiple comorbidities.
+Hence, elderly patients may face greater chal-
+lenges during postoperative recovery. Opioids
+are commonly used analgesics in the postoper-
+ative period, which can cause common com-
+plications
+such
+as
+constipation,
+respiratory
+depression, nausea-vomiting, and pruritus [5].
+Long-term heavy use of opioids can extensively
+suppress the immune system, leading to apop-
+tosis of T lymphocytes and inhibiting T lym-
+phocyte proliferation and activation [6, 7].
+There are several ways to reduce the use of
+opioids, such as regional nerve blocks and
+transcutaneous electrical acupoint stimulation
+(TEAS).
+Transversus abdominis plane block (TAPB) is
+an essential component of multimodal analge-
+sia to control postoperative pain in various
+abdominal procedures [8–10]. Subcostal TAPB is
+a technique currently used primarily for upper
+abdominal analgesia [11]. TEAS is an acupunc-
+ture-related technique that produces effects
+through
+non-invasive
+electrical
+stimulation
+through
+electrodes
+placed
+on
+acupuncture
+points. It is widely used because of its simplicity
+and effectiveness [12]. Considerable data have
+shown that TEAS reduces the incidence of
+adverse effects associated with general anesthe-
+sia and improves the quality of the patient’s
+postoperative recovery [13, 14]. Stimulation of
+the
+Zusanli
+(ST36)
+acupoint
+promotes
+the
+recovery of gastrointestinal function in patients
+with colorectal cancer after surgery [15]. The
+Neiguan (PC6) acupoint has long been targeted
+for treating vertigo and vomiting in China. In
+animal studies, electroacupuncture (EA) of the
+Hegu (LI4) acupoint signiﬁcantly enhanced
+immune function in rats with postsurgical gas-
+tric cancer [16].
+However, the effect of TAPB combined with
+TEAS
+for
+postoperative
+recovery
+of
+elderly
+patients undergoing laparoscopic gastric cancer
+surgery was not evaluated. The aim of this study
+was to investigate the impact of TEAS at the
+1328
+Pain Ther (2022) 11:1327–1339
+
+
+=== PDF PAGE 3 ===
+acupoints of Neiguan (PC6), Hegu (LI4), and
+Zusanli (ST36) combined with TAPB on the
+quality of early recovery after laparoscopic gas-
+tric cancer surgery in elderly patients.
+METHODS
+Study Design
+This double-blind randomized controlled trial
+was conducted in accordance with the Decla-
+ration of Helsinki and was approved by the local
+clinical research ethics committee. The trial
+protocol was approved by the ethics committee
+of the First Afﬁliated Hospital of USTC (approval
+no. KY2019-108). Each participant provided
+written informed consent before initiating any
+study-related procedures. This trial was regis-
+tered with the Chinese registry of clinical trials
+at
+http://www.chictr.org.cn
+(ChiCTR2100042119).
+Patient
+A total of 90 patients undergoing elective
+laparoscopic gastric cancer surgery at the First
+Afﬁliated Hospital of USTC from January 2021
+to December 2021 were randomly assigned in
+the ratio of 1:1:1 into the general anesthesia
+group (group G), TAPB group (group NG), and
+TEAS combined with TAPB group (group NTG).
+Patients that met the following inclusion crite-
+ria were selected for the study: (1) American
+Society of Anesthesiologists grades I–III; (2)
+age C 60 years; (3) undergoing elective laparo-
+scopic gastric cancer surgery. Patients that met
+the following exclusion criteria were not selec-
+ted: (1) central nervous system and mental dis-
+eases; (2) history of an allergic reaction to local
+anesthetics; (3) swelling, infection, or ulcera-
+tion at the site of TEAS.
+Randomization
+We randomized patients with an allocation
+ratio of 1:1:1:1 using computer-generated ran-
+dom numbers. Randomization codes were kept
+in
+a
+sealed
+envelope
+and
+relayed
+to
+an
+independent nurse. The TEAS stimulator was
+obscured by an opaque cloth throughout the
+experiment. In addition, the nurse prepared
+0.375% ropivacaine or saline (40 mL) for all
+patients during the study period. All TAPBs were
+performed by the same anesthesiologist who
+was not involved in anesthesia management.
+The allocation was blinded for all patients, sur-
+geons, the leading anesthesiologist, physician
+in the post-anesthesia care unit, and follow-up
+observers until the end of the study.
+TEAS Procedure
+For all patients, electrode pads were pasted at
+the acupoints of Hegu (LI4), Neiguan (PC6), and
+Zusanli (ST36) on both sides 30 min before
+anesthesia. The G group and NG group received
+TEAS without actual electric stimuli. The NTG
+group was provided with a 2/100 Hz density
+wave and actual electric stimuli. The optimal
+intensity was set to mild twitching of the sur-
+rounding muscle up to the maximum tolerated
+by the individual. Stopped stimulus and the
+electrodes were removed at the end of the
+operation in each group. The electrodes were
+connected to the TEAS instrument (SDZ-V,
+Suzhou Medical Technology Co. Ltd., Suzhou,
+China).
+The Hegu (LI4) acupoint is located radial to
+the midpoint of the second metacarpal in the
+dorsal hand. The Neiguan (PC6) acupoint is
+located on the forearm palm side, 2 cun (ap-
+prox. 40 mm) above the transverse wrist line,
+between the palmaris longus and the ﬂexor
+carpi radialis tendon. The Zusanli (ST36) acu-
+point is located on the lateral aspect of the
+patella of the lower leg, 3 cun (approx. 60 mm)
+below the hollow of the patellar ligament lateral
+(Fig. 1a).
+TAPB Procedure
+After
+induction
+of
+anesthesia,
+all
+patients
+received bilateral TAPB by the same experienced
+anesthesiologist. The middle of the axilla near
+the subcostal margin was scanned with a probe
+placed vertically between the rib margin and
+the iliac crest. The injection target was ﬁxed in
+Pain Ther (2022) 11:1327–1339
+1329
+
+
+=== PDF PAGE 4 ===
+the fascial plane between the internal oblique
+and transversus abdominis muscles using an in-
+plane puncture technique (Fig. 1b). Patients in
+the NTG and NG groups were injected with
+40 mL of 0.375% ropivacaine (20 mL per side)
+into the muscle plane after conﬁrming the
+correct side. An equal volume of saline was
+injected in the same way in the G group, and
+diffusion was assessed for all groups.
+Anesthesia and Surgical Procedures
+Once the patient entered the operating room,
+vitals such as electrocardiograph (ECG), arterial
+blood pressure (ABP), pulse oxygen saturation
+(SpO2), and bispectral index (BIS) were recorded
+and monitored. Patients were intravenously
+administered midazolam (0.04 mg/kg), etomi-
+date (0.3 mg/kg), sufentanil (0.3 lg/kg), and
+rocuronium (1 mg/kg). Anesthesia was main-
+tained
+with
+a
+target-controlled
+infusion
+of
+propofol and remifentanil. The propofol and
+remifentanil concentrations were adjusted to
+hemodynamic index and BIS 40–60. Remifen-
+tanil and propofol infusion was stopped in each
+group 5 min before the completion of the
+surgery.
+Prophylactic ﬂurbiprofen axetil (50 mg) and
+azasetron (10 mg) were administered for post-
+operative pain and PONV. The same surgeon
+performed all procedures. Patients were trans-
+ferred to the post-anesthesia care unit (PACU)
+after extubation in the operation room. All
+patients
+received
+patient-controlled
+intra-
+venous analgesia (PCIA) for 2 days and which
+contained 100 mL of 0.5 lg/mL sufentanil. The
+PCIA was set as follows: single-dose 2 mL, lock
+time 15 min, and no background infusion and
+continuous infusion. If the movement VAS
+score was greater than 4 points, ﬂurbiprofen
+axetil 50 mg was intravenously injected as sal-
+vage analgesia.
+Outcomes
+Primary Outcomes
+The primary outcome was the early postopera-
+tive quality of recovery, assessed via the Quality
+of Recovery (QoR-15) score. The QoR-15 scale is
+a self-rating scale widely used to evaluate the
+quality of early postoperative recovery and
+which is both effective and reliable [17–19].
+This score measures the quality of a patient’s
+postoperative recovery in terms of changes in
+physical
+comfort,
+mood,
+physical
+Fig. 1 Location of the acupoints for transcutaneous
+electrical acupoint stimulation and transversus abdominis
+plane block ultrasound images. a LI4 is located radial to
+the midpoint of the second metacarpal in the dorsal hand.
+PC6 is located on the forearm palm side, 2 cun (approx.
+40 mm) above the transverse wrist line, between the
+palmaris longus and the ﬂexor carpi radialis tendon. ST36
+is located on the lateral aspect of the patella of the lower
+leg, 3 cun (approx. 60 mm) below the hollow of the
+patellar ligament lateral. b White dashed line: needle
+trajectory. TA transversus abdominis, IO internal oblique,
+EO external oblique, RA rectus abdominis muscle
+1330
+Pain Ther (2022) 11:1327–1339
+
+
+=== PDF PAGE 5 ===
+independence, psychological support, and pain
+[20]. In the present study, QoR-15 evaluation
+was
+performed
+on
+preoperative
+day 1
+and
+POD 1, POD 3, and POD 7.
+Secondary Outcomes
+We collected patients’ peripheral venous blood
+on preoperative day 1, POD 1, and POD 3. The
+percentage
+of
+T lymphocyte
+subsets
+(CD3?,
+CD4?, CD8?, CD4?/CD8?) were enumerated by
+using a BD FACS Canto II ﬂow cytometer. The
+mean arterial pressure (MAP) and heart rate
+(HR) were recorded before the onset of TEAS
+(T1), at the establishment of the pneumoperi-
+toneum (T2), 1 h after the beginning of the
+operation (T3), at the end of the operation (T4),
+and
+immediately
+after
+extubation
+(T5).
+Remifentanil and propofol consumption, extu-
+bation time, and PCIA press numbers were
+recorded. VAS scores at rest and movement were
+recorded at 4, 12, 24, and 48 h after the opera-
+tion. The postoperative gastrointestinal func-
+tion was evaluated to ﬁrst ambulation and ﬁrst
+ﬂatus from postoperative time. The occurrence
+of postoperative adverse events was evaluated
+on the basis of the incidence of PONV, pruritis,
+and respiratory depression.
+Statistical Analysis
+The sample size calculation was based on the
+results of the primary outcome of QoR-15. A
+difference of at least 8.0 points in the score is
+considered clinically signiﬁcant [21]. Prelimi-
+nary experimental results indicated that the
+scores of QoR-15 in the G, NG, and NTG groups
+were
+111.60 ± 10.45,
+114.20 ± 8.23,
+and
+125.32 ± 13.11, respectively. The sample size
+was determined using PASS V.15 with a = 0.05
+(two-sided) and (1 - b) = 0.9 and was found to
+be 23 patients per group. Considering a dropout
+rate of 30%, the sample size was increased to 90
+patients (30 per group).
+All statistical analyses were conducted using
+SPSS 26.0. Continuous data are presented as the
+mean ± standard
+deviation
+or
+median ± in-
+terquartile range (IQR) according to normal
+distribution. Repeated measurements were used
+to analyze differences in the interaction effects
+between groups and time points. Categorical
+variables were compared using the chi-squared
+test and presented as number (proportion).
+Statistical signiﬁcance was assessed at P \ 0.05.
+RESULTS
+Patient Characteristics
+The method of operation was changed in one
+patient in the G group, and one patient each
+was withdrawn by the end of the trial because of
+loss of follow-up in both the NG and NTG
+groups. A total of 87 patients were available for
+the analysis (Fig. 2). Each group was similar in
+terms of sex, age, BMI, ASA, and operation time
+(Table 1).
+Primary Outcomes
+As shown in Fig. 3, the QoR-15 scores on POD 1
+(G
+group,
+77.10 ± 10.16;
+NG
+group,
+85.97 ± 11.07; NTG group, 90.86 ± 12.36) in
+the NG and NTG groups were signiﬁcantly
+higher than those in the G group (P \ 0.05).
+The
+QoR-15
+scores
+on
+POD 3
+(G
+group,
+96.55 ± 10.51; NG group, 100.55 ± 10.06; NTG
+group, 116.38 ± 10.82) and POD 7 (G group,
+112.62 ± 10.67;
+NG
+group,
+116.97 ± 11.01;
+NTG group, 130.66 ± 10.20) were signiﬁcantly
+higher in the NTG group than those in the G
+and NG groups (P \ 0.05).
+Secondary Outcomes
+Percentage of T Lymphocyte Subsets
+As shown in Table 2, the percentages of CD3?
+and CD4? T cells and the CD4?/CD8? ratio
+were signiﬁcantly lower and the percentage of
+CD8? T cells were signiﬁcantly higher on POD 1
+than the baseline values in all three groups
+(P \ 0.05). On POD 1 and POD 3, the percent-
+ages of CD3? and CD4? T cells and the CD4?/
+CD8? ratio were higher and the percentage of
+CD8? T cells was lower in the NTG group than
+in the G and NG groups (P \ 0.05).
+Pain Ther (2022) 11:1327–1339
+1331
+
+
+=== PDF PAGE 6 ===
+MAPs and HRs
+As shown in Fig. 4, the MAPs and HRs at T1 and
+T5 were signiﬁcantly lower in the NG and NTG
+groups (P \ 0.05) than in the G group. The
+MAPs and HRs at T5 were signiﬁcantly lower in
+the NTG group than in the NG group (P \ 0.05).
+There was no signiﬁcant difference in MAPs and
+HRs among the three groups at T1, T3, and T4.
+Consumption of Anesthetics, Extubation
+Time, Pain Assessment, Postoperative
+Recovery of Gastrointestinal Function,
+and Adverse Events
+Other
+secondary
+outcomes
+are
+shown
+in
+Table 3. Remifentanil consumption was lower
+in the NG and NTG groups than in the G group
+(P \ 0.05) and lower in the NTG group than in
+the NG group (P \ 0.05); however, there was no
+signiﬁcant difference in propofol consumption
+among the three groups. The extubation time
+was signiﬁcantly shorter in the NTG group than
+in the G and NG groups (P \ 0.05). There was
+Fig. 2 Flowchart of the study
+Table 1 Clinical characteristics of patients
+Variables
+Group G (n = 29)
+Group NG (n = 29)
+Group NTG (n = 29)
+P value
+Age, years
+70.41 ± 5.62
+69.45 ± 5.89
+68.48 ± 5.37
+0.43
+Sex (male/female), n
+20/9
+22/7
+22/7
+0.79
+BMI (kg/m2)
+22.71 ± 3.03
+23.05 ± 2.48
+22.99 ± 1.81
+0.86
+ASA (II / III), n
+7/22
+5/24
+6/23
+0.81
+Operation time (mins)
+208.72 ± 27.19
+217.66 ± 37.74
+222.97 ± 42.07
+0.32
+Data are presented as mean ± SD or number of patients
+BMI body mass index, ASA American Society of Anesthesiologists
+1332
+Pain Ther (2022) 11:1327–1339
+
+
+=== PDF PAGE 7 ===
+no signiﬁcant difference in extubation time
+between the G and the NG groups. The VAS
+scores at rest and movement were signiﬁcantly
+lower in the NG and NTG groups at 4, 12, and
+24 h
+after
+surgery
+than
+in
+the
+G
+group
+(P \ 0.05). The VAS scores at movement were
+signiﬁcantly lower in the NTG group at 48 h
+after surgery than in the NG group (P \ 0.05).
+PCIA press numbers were signiﬁcantly lower in
+the NG and NTG groups than in the G group
+(P \ 0.05). PCIA press numbers were signiﬁ-
+cantly lower in the NTG group than in the NG
+group (P \ 0.05). The time of ﬁrst postoperative
+ambulation was signiﬁcantly shorter in both the
+NG and the NTG groups as compared to the G
+group, and the time of the ﬁrst postoperative
+ﬂatus was signiﬁcantly shorter in the NTG
+group compared with the NG group (P \ 0.05).
+The frequency of PONV was reported by 5
+patients in the NTG group, 11 patients in the
+NG group, and 13 patients in the G group
+within 48 h after surgery. There was no signiﬁ-
+cant
+difference
+in
+pruritis
+or
+respiratory
+depression in all three groups.
+DISCUSSION
+Our study demonstrated that the use of TEAS at
+the acupoints of bilateral Hegu (LI4), Neiguan
+(PC6), and Zusanli (ST36) for 30 min before
+anesthesia to the end of surgery combined with
+TAPB in elderly patients undergoing laparo-
+scopic gastric cancer surgery improved QoR-15
+scores and the extubation quality and reduced
+VAS scores and the consumption of remifen-
+tanil. In addition, TEAS combined with TAPB
+improved immune and gastrointestinal func-
+tion and reduced the incidence of PONV. These
+results suggest that TEAS combined with TAPB
+could promote the recovery of elderly patients
+after laparoscopic surgery.
+Currently, opioids are the preferred choice
+for relieving postoperative pain in patients, but
+their use is associated with adverse effects such
+as PONV [22]. Ultrasound-guided TAPB as a
+supplement to abdominal surgical analgesia can
+reduce opioid use and facilitate patient recovery
+after surgery [11], but it has relatively limited
+efﬁcacy. TEAS is a combination of transcuta-
+neous
+electrical
+nerve
+stimulation
+and
+acupuncture treatment. The use of electrode
+pads instead of electric needles is less invasive
+and provides greater accessibility than tradi-
+tional acupuncture. Its physiological effects are
+similar to those of conventional acupuncture
+[23], with a wide range of applications in
+relieving nausea and vomiting and improving
+analgesia and immunity [24–26].
+Acupuncture
+and
+TEAS
+are
+reported
+to
+effectively reduce the need for perioperative
+analgesics and reduce postoperative pain. In a
+clinical trial, patients undergoing gynecologic
+laparoscopic surgery who received TEAS had
+lower VAS scores and higher quality of recovery
+than patients who did not receive TEAS [27].
+Remifentanil
+consumption
+was
+signiﬁcantly
+reduced in the TAP group and even more so in
+the TEAS group. The PCIA press numbers were
+also signiﬁcantly lower in the TEAS group than
+in the TAP group. In addition, compared to the
+TAPB analgesia up to 24 h postoperatively, TEAS
+combined with TAPB lasted for up to 48 h
+postoperatively. According to traditional Chi-
+nese medicine, Hegu (LI4), Neiguan (PC6), and
+Fig. 3 Comparison of QoR-15 score. All data are
+presented as mean ± SD. Pre- preoperative day, POD
+postoperative day. Compared with group G, *P \ 0.05;
+compared with group NG, #P \ 0.05. The QoR-15 scores
+on POD 1 in the NG group and on POD 1, POD 3, and
+POD 7 in the NTG group were signiﬁcantly higher than
+those in the G group (P \ 0.05). The QoR-15 scores on
+POD 3 and POD 7 were signiﬁcantly higher in the NTG
+group than in the NG group (P \ 0.05)
+Pain Ther (2022) 11:1327–1339
+1333
+
+
+=== PDF PAGE 8 ===
+Zusanli (ST36) are effective acupoints for anal-
+gesia. In a meta-analysis evaluating the efﬁcacy
+and safety of TEAS for relieving postoperative
+pain in laparoscopy, it was demonstrated that
+these
+three
+common
+acupoints
+used
+for
+laparoscopic analgesia synergistically and sig-
+niﬁcantly reduced postoperative pain [28]. TEAS
+at 2 Hz induces the release of enkephalins and
+endorphins, and TEAS at 100 Hz induces the
+release of dynorphins [29, 30]. Therefore, a
+2/100 Hz dilatational wave was used in the
+present study to induce the release of all the
+relevant endorphins [31].
+Immune function plays a crucial role in a
+patient’s recovery. Anesthesia, surgery, and pain
+are all risk factors for postoperative immuno-
+suppression [32]. Clinical studies have shown
+that the level of recovery of immune function
+affects the prognosis and survival of patients
+with cancer [33]. T lymphocyte subsets (CD3?,
+CD4?, and CD8?) are important indicators of
+the body’s cellular immunity. CD3? T cells are
+T lymphocytes with anti-tumor activity [34].
+CD4? T cells are helper T cells. CD8? T cells are
+cytotoxic T cells, and an elevation in their level
+indicates that the body is immunocompromised
+[35]. The CD4?/CD8? ratio reﬂects the normal
+immune status of the body. In the present
+study, the balance of T cell subsets on POD1 was
+disrupted in all three groups of patients (de-
+creased
+CD3?,
+CD4?,
+CD4?/CD8?
+and
+increased CD8?). This imbalance may con-
+tribute to the postoperative immune damage
+common in these patients. TEAS is known to
+have
+immunomodulatory
+effects
+and
+can
+enhance cellular immunity in patients with
+Table 2 Comparison of T lymphocytes subsets
+Group G (n = 29)
+Group NG (n = 29)
+Group NTG (n = 29)
+P value
+CD3? (%)
+Pre-
+68.90 ± 3.98
+69.05 ± 3.20
+69.50 ± 4.67
+0.83
+POD1
+61.97 ± 3.18^
+62.03 ± 4.41^
+64.84 ± 4.66^*#
+\ 0.05^*#
+POD3
+64.50 ± 6.43
+64.78 ± 5.73
+68.90 ± 6.87*#
+\ 0.05*#
+CD4? (%)
+Pre-
+37.16 ± 5.53
+38.23 ± 4.22
+37.21 ± 4.48
+0.63
+POD1
+26.92 ± 3.97^
+27.57 ± 4.57^
+32.87 ± 5.41^*#
+\ 0.05^*#
+POD3
+31.95 ± 4.64
+32.34 ± 3.50
+37.19 ± 4.53*#
+\ 0.05*#
+CD8? (%)
+Pre-
+27.66 ± 3.90
+27.21 ± 5.32
+27.58 ± 4.57
+0.93
+POD1
+32.23 ± 4.21^
+33.04 ± 4.26^
+30.05 ± 4.12^*#
+\ 0.05^*#
+POD3
+31.19 ± 4.81
+30.93 ± 4.12
+27.33 ± 4.49*#
+\ 0.05*#
+CD4?/CD8?
+Pre-
+1.38 ± 0.33
+1.48 ± 0.41
+1.40 ± 0.38
+0.60
+POD1
+0.83 ± 0.20^
+0.85 ± 0.17^
+1.12 ± 0.29^*#
+\ 0.05^*#
+POD3
+1.04 ± 0.20
+1.08 ± 0.23
+1.38 ± 0.21*#
+\ 0.05*#
+Data are presented as mean ± SD
+Pre- preoperative day, POD postoperative day
+Compared with the time of Pre-, ^P \ 0.05; compared with group G, *P \ 0.05; compared with group NG, #P \ 0.05
+1334
+Pain Ther (2022) 11:1327–1339
+
+
+=== PDF PAGE 9 ===
+malignant tumors [36]. Wu et al. suggested that
+TEAS modulates the balance of T lymphocytes
+and the expression of related cytokines to
+reduce
+postoperative
+immune
+damage
+in
+patients with lung cancer [37]. Our results
+showed that TEAS treatment increased the
+levels of CD3? and CD4? cells and CD4?/CD8?
+ratio and decreased the levels of CD8? cells.
+This suggests that TEAS may attenuate the
+immunosuppression
+of
+patients
+undergoing
+laparoscopic gastric cancer surgery by partially
+restoring the immune balance.
+Elderly patients have poor vascular elasticity
+and are prone to experiencing high hemody-
+namic ﬂuctuations in the perioperative period,
+leading to cerebrovascular accidents. The MAPs
+and HRs in the TEAS group were comparable at
+the time of pneumoperitoneum establishment
+and immediately after extubation. Our study
+showed that TEAS effectively suppressed the
+stress
+response
+during
+pneumoperitoneum
+establishment and extubation, keeping MAPs
+and HRs stable. It signiﬁcantly shortened the
+extubation time as well. Our ﬁndings are con-
+sistent
+with
+results
+from
+previous
+reports
+showing that TEAS signiﬁcantly affects sedation
+and maintenance of hemodynamic stability
+[38].
+Postoperative gastrointestinal dysfunction is
+common after surgical procedures, especially
+gastrointestinal surgery. Acupuncture protects
+the gastrointestinal tract by regulating gas-
+trointestinal dynamics to promote venting and
+allows the patient to quickly resume normal
+diet [39]. In addition, TEAS can inhibit the
+release of inﬂammatory factors [40], thereby
+reducing damage to the gastrointestinal barrier
+caused by the inﬂammatory response. From the
+results of this study, the time to ﬁrst ﬂatus was
+signiﬁcantly shorter in the TEAS group than in
+the other two groups. PONV is one of the most
+common gastrointestinal tract complications
+after anesthesia. Neiguan (PC6) stimulation can
+effectively
+prevent
+PONV
+[41].
+Our
+results
+demonstrated that the incidence of PONV in
+the TEAS group was the lowest among the three
+groups. The mechanism by which TEAS pre-
+vents PONV is complex. Clinical studies have
+shown that TEAS reduces plasma concentra-
+tions
+of
+the
+emetic
+molecule
+5-hydrox-
+ytryptamine (5-HT) [42]. We did not measure
+the concentration of 5-HT in plasma, and the
+exact mechanism needs further study.
+TEAS
+is
+a
+modiﬁcation
+of
+traditional
+acupuncture techniques. However, TEAS may
+also cause some adverse effects such as allergy
+and ulceration at the acupoint. We have strictly
+enforced the exclusion of patients with swel-
+ling, infection, or ulceration at the site of TEAS,
+and the stimulation intensity is also chosen to
+Fig. 4 Changes in hemodynamics. a MAP (mmHg);
+b HR (beats per minute); MAP mean arterial blood
+pressure; HR heart rate; T1 before the onset of TEAS, T2
+at the establishment of the pneumoperitoneum, T3 1 h
+after the beginning of the operation, T4 the end of the
+operation, T5 immediately after extubation. Compared
+with group G,
+*P \ 0.05; compared with group NG,
+#P \ 0.05. The MAPs and HRs at T1 and T5 were
+signiﬁcantly lower in the NG and NTG groups (P \ 0.05)
+than in the G group. The MAPs and HRs at T5 were
+signiﬁcantly lower in the NTG group than in the NG
+group (P \ 0.05)
+Pain Ther (2022) 11:1327–1339
+1335
+
+
+=== PDF PAGE 10 ===
+be the most suitable for the patients and to
+achieve the optimal therapeutic effect, mini-
+mizing the occurrence of complications. TAPB
+is a superﬁcial technique, with a small risk of
+complications. We all perform TAPB through a
+professional under ultrasound guidance, with-
+out adverse effects.
+There are some limitations in the current
+study. First, the sample size of 90 may be small.
+Second,
+our
+study
+only
+included
+elderly
+patients, making it difﬁcult to generalize the
+ﬁndings to patients of other age groups. Third,
+as we performed TEAS on the patients before
+induction of anesthesia, there may be a lack of
+blinding to some extent, leading to biased
+results of the test. However, the stimulator is
+covered by an opaque cloth so that the surgeons
+and
+anesthesiologists
+were
+blinded.
+The
+researchers who conducted data collection and
+performed the outcome assessment were blin-
+ded to group allocation. These procedures may
+minimize
+bias.
+Additionally,
+the
+long-term
+effects of TEAS on the quality of recovery and
+survival rate should be examined.
+Table 3 Consumption of anesthetics, extubation time, pain assessment, postoperative recovery of gastrointestinal function,
+and adverse events
+Variables
+Group G
+(n = 29)
+Group NG
+(n = 29)
+Group NTG
+(n = 29)
+P value
+Intraoperative remifentanil usage (lg)
+1619.13 ± 328.98
+1415.41 ± 295.67*
+1182.61 ± 253.61*#
+\ 0.05*#
+Intraoperative propofol usage (mg)
+948.95 ± 146.79
+915.88 ± 127.33
+887.49 ± 118.47
+0.21
+Extubation time (min)
+17.72 ± 4.67
+16.10 ± 3.39
+9.45 ± 3.98*#
+\ 0.05*#
+Postoperative time to ﬁrst ambulation (h)
+31.81 ± 7.38
+28.50 ± 5.38*
+27.64 ± 5.86*
+\ 0.05*
+Postoperative time to ﬁrst ﬂatus (h)
+43.03 ± 8.13
+36.83 ± 6.19
+32.57 ± 6.94*#
+\ 0.05*#
+PONV [n (%)]
+13 (44.82)
+11 (37.93)
+5 (17.24)*#
+\ 0.05*#
+Pruritis [n (%)]
+1 (3.45)
+1 (3.45)
+0 (0.00)
+1.00
+Respiratory depression [n (%)]
+1 (3.45)
+0 (0.00)
+0 (0.00)
+1.00
+PCIA pump press numbers
+12.45 ± 4.21
+9.97 ± 3.80*
+6.55 ± 3.19*#
+\ 0.05*#
+VAS scores at rest
+4 h
+3.44 ± 0.62
+2.90 ± 0.82*
+2.62 ± 0.73*
+\ 0.05*
+12 h
+2.68 ± 0.55
+1.92 ± 0.67*
+1.73 ± 0.60*
+\ 0.05*
+24 h
+1.83 ± 0.55
+1.40 ± 0.52*
+1.18 ± 0.42*
+\ 0.05*
+48 h
+1.24 ± 0.40
+1.10 ± 0.49
+0.72 ± 0.36*#
+\ 0.05*#
+VAS scores at movement
+4 h
+4.42 ± 0.67
+3.68 ± 0.73*
+3.50 ± 0.64*
+\ 0.05*
+12 h
+3.60 ± 0.57
+2.85 ± 0.53*
+2.67 ± 0.55*
+\ 0.05*
+24 h
+2.84 ± 0.56
+2.15 ± 0.50*
+1.89 ± 0.52*
+\ 0.05*
+48 h
+2.03 ± 0.52
+1.74 ± 0.56
+1.19 ± 0.42*#
+\ 0.05*#
+Data are presented as mean ± SD or n (%)
+PCIA patient-controlled intravenous analgesia, VAS visual analog scale, PONV postoperative nausea and vomiting
+Compared with group G, *P \ 0.05; compared with group NG, #P \ 0.05
+1336
+Pain Ther (2022) 11:1327–1339
+
+
+=== PDF PAGE 11 ===
+CONCLUSION
+Our study showed that TEAS combined with
+TAPB ameliorated postoperative pain, improved
+immune function, maintained hemodynamic
+stability, and achieved shorter extubation time.
+TEAS combined with TAPB also improved gas-
+trointestinal function and reduced the inci-
+dence of PONV. It signiﬁcantly promoted the
+quality of recovery after general anesthesia in
+elderly patients undergoing laparoscopic gastric
+cancer surgery.
+ACKNOWLEDGEMENTS
+We would like to thank all the patients who
+participated in this study.
+Funding. No funding or sponsorship was
+received for this study or publication of this
+article. The Rapid Service Fee was funded by the
+authors.
+Authorship. All named authors meet the
+International Committee of Medical Journal
+Editors (ICMJE) criteria for authorship for this
+article, take responsibility for the integrity of
+the work as a whole, and have given their
+approval for this version to be published.
+Author Contributions. Ruyi Xing and Yang
+Yang designed the study and wrote the ﬁrst
+draft of the manuscript. Min Zhang, Hanyu
+Wang and Mengyuan Tan performed data col-
+lection and analysis. Chen Gao and Chao Yang
+contributed to the material preparation and
+technical operation, Mingyu Zhai and Yanhu
+Xie designed the study and revised the manu-
+script. All authors read and approved the ﬁnal
+manuscript.
+Disclosures. Ruyi Xing, Yang Yang, Min
+Zhang, Hanyu Wang, Mengyuan Tan, Chen
+Gao, Chao Yang, Mingyu Zhai, Yanhu Xie
+declare that they have no conﬂict of interest.
+Compliance
+with
+Ethics
+Guidelines. The
+trial
+protocol
+was
+approved
+by
+the
+ethics
+committee of the First Afﬁliated Hospital of
+USTC (Approval no. KY2019-108) and registered
+in
+the
+Chinese
+clinical
+trial
+registry
+(ChiCTR2100042119).
+Each
+participant
+pro-
+vided written informed consent before initiat-
+ing any study-related procedures. This study
+was conducted in accordance with the Decla-
+ration of Helsinki.
+Data Availability. The datasets generated
+during and/or analyzed during the currentstudy
+are available from the corresponding author on
+reasonable request.
+Open Access. This article is licensed under a
+Creative Commons Attribution-NonCommer-
+cial 4.0 International License, which permits
+any non-commercial use, sharing, adaptation,
+distribution and reproduction in any medium
+or format, as long as you give appropriate credit
+to the original author(s) and the source, provide
+a link to the Creative Commons licence, and
+indicate if changes were made. The images or
+other third party material in this article are
+included in the article’s Creative Commons
+licence, unless indicated otherwise in a credit
+line to the material. If material is not included
+in the article’s Creative Commons licence and
+your intended use is not permitted by statutory
+regulation or exceeds the permitted use, you
+will need to obtain permission directly from the
+copyright holder. To view a copy of this licence,
+visit
+http://creativecommons.org/licenses/by-
+nc/4.0/.
+REFERENCES
+1.
+Tan S, Wu G, Zhuang Q, et al. Laparoscopic versus
+open repair for perforated peptic ulcer: a meta
+analysis of randomized controlled trials. Int J Surg.
+2016;33(Pt A):124–32.
+2.
+Aarts JW, Nieboer TE, Johnson N, et al. Surgical
+approach to hysterectomy for benign gynaecologi-
+cal disease. Cochrane Database Syst Rev. 2015;8:
+CD003677.
+3.
+Chen Y, Xie Y, Xue Y, Wang B, Jin X. Effects of
+ultrasound-guided stellate ganglion block on auto-
+nomicnervous
+function
+during
+CO2-
+Pain Ther (2022) 11:1327–1339
+1337
+
+
+=== PDF PAGE 12 ===
+pneumoperitoneum: a randomized double-blind
+control trial. J Clin Anesth. 2016;32:255–61.
+4.
+Francis NK, Mason J, Salib E, et al. Factors predict-
+ing 30-day readmission after laparoscopic colorectal
+cancer surgery within an enhanced recovery pro-
+gramme. Colorectal Dis. 2015;17(7):O148–54.
+5.
+Ghai B, Jafra A, Bhatia N, Chanana N, Bansal D,
+Mehta V. Opioid sparing strategies for perioperative
+pain management other than regional anaesthesia:
+a narrative review. J Anaesthesiol Clin Pharmacol.
+2022;38(1):3–10.
+6.
+Houghtling RA, Mellon RD, Tan RJ, Bayer BM.
+Acute effects of morphine on blood lymphocyte
+proliferation and plasma IL-6 levels. Ann N Y Acad
+Sci. 2000;917:771–7.
+7.
+Sacerdote P, Bianchi M, Gaspani L, et al. The effects
+of tramadol and morphine on immune responses
+and pain after surgery in cancer patients. Anesth
+Analg. 2000;90(6):1411–4.
+8.
+Jarrar A, Budiansky A, Eipe N, et al. Randomised,
+double-blinded, placebo-controlled trial to investi-
+gate the role of laparoscopic transversus abdominis
+plane block in gastric bypass surgery: a study pro-
+tocol. BMJ Open. 2020;10(6): e025818.
+9.
+Zhao Y, Zhang HY, Yuan ZY, et al. Analgesic efﬁcacy
+of postoperative bilateral, ultrasound-guided, pos-
+terior
+transversus
+abdominis
+plane
+block
+for
+laparoscopic colorectal cancer surgery: a random-
+ized, prospective, controlled study. BMC Anesthe-
+siol. 2021;21(1):107.
+10.
+Hamid
+HKS,
+Marc-Herna´ndez
+A,
+Saber
+AA.
+Transversus abdominis plane block versus thoracic
+epidural analgesia in colorectal surgery: a system-
+atic review and meta-analysis. Langenbecks Arch
+Surg. 2021;406(2):273–82.
+11.
+Tran DQ, Bravo D, Leurcharusmee P, Neal JM.
+Transversus abdominis plane block: a narrative
+review. Anesthesiology. 2019;131(5):1166–90.
+12.
+Wang H, Xie Y, Zhang Q, et al. Transcutaneous
+electric acupoint stimulation reduces intra-opera-
+tive remifentanil consumption and alleviates post-
+operative
+side-effects
+in
+patients
+undergoing
+sinusotomy: a prospective, randomized, placebo-
+controlled trial. Br J Anaesth. 2014;112(6):1075–82.
+13.
+Chen J, Zhang Y, Li X, et al. Efﬁcacy of transcuta-
+neous electrical acupoint stimulation combined
+with general anesthesia for sedation and postoper-
+ative analgesia in minimally invasive lung cancer
+surgery: a randomized, double-blind, placebo-con-
+trolled trial. Thorac Cancer. 2020;11(4):928–34.
+14.
+Lv Y, He H, Xie J, et al. Effects of transcutaneous
+acupoint electrical stimulation combined with low-
+dose sufentanil pretreatment on the incidence and
+severity of etomidate-induced myoclonus: a ran-
+domized controlled trial. Medicine (Baltimore).
+2018;97(23): e10969.
+15.
+Qu LZ, Zhao HC, Shen HX, Yan Y, Ma SJ, Wang KQ.
+Electroacupuncture of both single- and multi-acu-
+points promotes recovery of gastrointestinal func-
+tion
+in
+laparoscopic
+cholecystectomy
+patients.
+Zhen Ci Yan Jiu. 2020;45(2):136–40.
+16.
+Lai M, Wang SM, Wang Y, Tang CL, Kong LW, Xu
+XY. Effects of electroacupuncture of ‘‘Zusanli’’ (ST
+36), ‘‘Hegu’’ (LI 4) and/or ‘‘Sanyinjiao’’ (SP 9) on
+immunofunction in gastric carcinectomy rats. Zhen
+Ci Yan Jiu. 2008;33(4):245–9.
+17.
+Chazapis M, Walker EM, Rooms MA, Kamming D,
+Moonesinghe SR. Measuring quality of recovery-15
+after day case surgery. Br J Anaesth. 2016;116(2):
+241–8.
+18.
+Myles PS, Boney O, Botti M, et al. Systematic review
+and consensus deﬁnitions for the Standardised
+Endpoints in Perioperative Medicine (StEP) initia-
+tive: patient comfort. Br J Anaesth. 2018;120(4):
+705–11.
+19.
+Kleif J, Waage J, Christensen KB, Go¨genur I, et al.
+Systematic review of the QoR-15 score, a patient-
+reported outcome measure measuring quality of
+recovery after surgery and anaesthesia. Br J Anaesth.
+2018;120(1):28–36.
+20.
+Stark PA, Myles PS, Burke JA. Development and
+psychometric evaluation of a postoperative quality
+of recovery score: the QoR-15. Anesthesiology.
+2013;118(6):1332–40.
+21.
+Myles
+PS,
+Myles
+DB,
+Galagher
+W,
+Chew
+C,
+MacDonald
+N,
+Dennis
+A.
+Minimal
+clinically
+important difference for three quality of recovery
+scales. Anesthesiology. 2016;125(1):39–45.
+22.
+Benyamin R, Trescot AM, Datta S, et al. Opioid
+complications and side effects. Pain Physician.
+2008;11(Suppl 2):S105–20.
+23.
+Frey UH, Scharmann P, Lo¨hlein C, Peters J. P6
+acustimulation effectively decreases postoperative
+nausea and vomiting in high-risk patients. Br J
+Anaesth. 2009;102(5):620–5.
+24.
+Song B, Chang Y, Li Y, Zhu J. Effects of transcuta-
+neous electrical acupoint stimulation on the post-
+operative sleep quality and pain of patients after
+video-assisted thoracoscopic surgery: a prospective,
+randomized controlled trial. Nat Sci Sleep. 2020;12:
+809–19.
+1338
+Pain Ther (2022) 11:1327–1339
+
+
+=== PDF PAGE 13 ===
+25.
+Chen J, Tu Q, Miao S, Zhou Z, Hu S. Transcutaneous
+electrical
+acupoint
+stimulation
+for
+preventing
+postoperative nausea and vomiting after general
+anesthesia: a meta-analysis of randomized con-
+trolled trials. Int J Surg. 2020;73:57–64.
+26.
+Tu Q, Yang Z, Gan J, et al. Transcutaneous electrical
+acupoint
+stimulation
+improves
+immunological
+function during the perioperative period in patients
+with non-small cell lung cancer undergoing video-
+assisted thoracic surgical lobectomy. Technol Can-
+cer Res Treat. 2018;17:1533033818806477.
+27.
+Yu X, Zhang F, Chen B. The effect of TEAS on the
+quality of early recovery in patients undergoing
+gynecological laparoscopic surgery: a prospective,
+randomized,
+placebo-controlled
+trial.
+Trials.
+2020;21(1):43.
+28.
+Meng D, Mao Y, Song QM, et al. Efﬁcacy and safety
+of transcutaneous electrical acupoint stimulation
+(TEAS) for postoperative pain in laparoscopy: a
+systematic review and meta-analysis of randomized
+controlled trials. Evid Based Complement Alternat
+Med. 2022. https://doi.org/10.1155/2022/9922879.
+29.
+Han JS. Acupuncture: neuropeptide release pro-
+duced by electrical stimulation of different fre-
+quencies. Trends Neurosci. 2003;26(1):17–22.
+30.
+Han JS, Chen XH, Sun SL, et al. Effect of low- and
+high-frequency TENS on Met-enkephalin-Arg-Phe
+and dynorphin A immunoreactivity in human
+lumbar CSF. Pain. 1991;47(3):295–8.
+31.
+Han JS. Acupuncture and endorphins. Neurosci
+Lett. 2004;361(1–3):258–61.
+32.
+Carr
+DB,
+Goudas
+LC.
+Acute
+pain.
+Lancet.
+1999;353(9169):2051–8.
+33.
+Wang XB, Wu DJ, Chen WP, Liu J, Ju YJ. Impact of
+radiotherapy on immunological parameters, levels
+of inﬂammatory factors, and clinical prognosis in
+patients with esophageal cancer. J Radiat Res.
+2019;60(3):353–63.
+34.
+Tian C, Lu S, Fan Q, et al. Prognostic signiﬁcance of
+tumor-inﬁltrating CD8? or CD3? T lymphocytes
+and interleukin-2 expression in radically resected
+non-small cell lung cancer. Chin Med J (Engl).
+2015;128(1):105–10.
+35.
+Hu S, Rotschafer JH, Lokensgard JR, Cheeran MC.
+Activated CD8? T lymphocytes inhibit neural
+stem/progenitor cell proliferation: role of inter-
+feron-gamma. PLoS ONE. 2014;9(8): e105219.
+36.
+Cabiog˘lu
+MT,
+Cetin
+BE.
+Acupuncture
+and
+immunomodulation. Am J Chin Med. 2008;36(1):
+25–36.
+37.
+Wu H, Wang K, Li G, et al. Effects of transcutaneous
+acupoint electrical stimulation on the imbalance of
+Th1, Th2, Th17 and Treg cells following thoraco-
+tomy of patients with lung cancer. Exp Ther Med.
+2016;11(2):495–502.
+38.
+Zhang W, Yang YX, Yu W, Qi SH. Cough suppres-
+sion during ﬂexible bronchoscopy using transcuta-
+neous electric acupoint stimulation: a randomized
+controlled study. Evid Based Complement Alternat
+Med. 2019. https://doi.org/10.1155/2019/5650413.
+39.
+Li H, He T, Xu Q, et al. Acupuncture and regulation
+of gastrointestinal function. World J Gastroenterol.
+2015;21(27):8304–13.
+40.
+Chi YL, Zhang WL, Yang F, Su F, Zhou YK. Tran-
+scutaneous
+electrical
+acupoint
+stimulation
+for
+improving postoperative recovery, reducing stress
+and inﬂammatory responses in elderly patient
+undergoing
+knee
+surgery.
+Am
+J
+Chin
+Med.
+2019;47(7):1445–58.
+41.
+Lee A, Chan SK, Fan LT. Stimulation of the wrist
+acupuncture point PC6 for preventing postopera-
+tive nausea and vomiting. Cochrane Database Syst
+Rev. 2015;2015(11):CD003281.
+42.
+Zhou X, Cao SG, Tan XJ, et al. Effects of transcu-
+taneous electrical acupoint stimulation (TEAS) on
+postoperative recovery in patients with gastric
+cancer:
+a
+randomized
+controlled
+trial.
+Cancer
+Manag Res. 2021;13:1449–58.
+Pain Ther (2022) 11:1327–1339
+1339

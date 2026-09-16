@@ -1,0 +1,1903 @@
+
+=== PDF PAGE 1 ===
+ORIGINAL RESEARCH
+Transcutaneous Electrical Acupoint Stimulation
+Improves Postoperative Sleep Quality in Patients
+Undergoing Laparoscopic Gastrointestinal Tumor
+Surgery: A Prospective, Randomized Controlled Trial
+Jun Wang
+. Fei-Fei Lu
+. Miao-Miao Ge
+. Li-Wen Wang
+.
+Gang Wang
+. Guan-Wen Gong
+. Xin-Xin Liu
+.
+Wen-Zhuo Zhang
+. Fei-Long Ning
+. Bao-He Chen
+.
+Yang Liu
+. Hong-Guang Quan
+. Zhi-Wei Jiang
+Received: January 6, 2023 / Accepted: February 24, 2023 / Published online: March 14, 2023
+ The Author(s) 2023
+ABSTRACT
+Introduction: This
+study
+was
+conducted
+to
+observe the effect of transcutaneous electrical
+acupoint stimulation (TEAS) on the postopera-
+tive sleep quality of patients undergoing gas-
+trointestinal tumor surgery and to verify the
+possible mechanism.
+Methods: Eighty-three patients were allocated
+to the TEAS or Sham group. Patients in the TEAS
+group received TEAS treatment (disperse-dense
+waves; frequency, 2/100 Hz) on bilateral Shen-
+men (HT7), Neiguan (PC6) and Zusanli (ST36)
+points for 30 min each time, total three times in
+the perioperative period. In the Sham group,
+electrodes were placed; however, no current was
+given. Sleep quality was assessed on the day
+before surgery (P1) and the ﬁrst and third days
+after surgery (D1 and D3) using the Pittsburgh
+Sleep Quality Index (PSQI) and Athens Insom-
+nia Scale (AIS). Postoperative pain was assessed
+using visual analog scale (VAS) 72 h postopera-
+tively. The incidences of abdominal distension,
+dizziness, postoperative nausea and vomiting
+(PONV) and pulmonary complications were
+recorded. Serum levels of inﬂammatory cytoki-
+nes and the expression of key factors of oxida-
+tive stress and key molecules of the nuclear
+factor erythroid 2-related factor 2/antioxidant
+response element (Nrf2/ARE) signal pathway
+were measured.
+Results: TEAS ameliorated sleep quality at D1
+and
+D3
+(PSQI
+P \ 0.05,
+AIS
+P \ 0.05)
+and
+decreased postoperative pain as demonstrated
+by lower VAS scores compared to the Sham
+group (P \ 0.05). The incidences of abdominal
+distension and PONV were also lower in the
+TEAS group. Markers of oxidative stress were
+increased (P \ 0.05), and the serum concentra-
+tion of interleukin-6 (IL-6) was signiﬁcantly
+lower in the TEAS group. The key mediators of
+the Nrf2/ARE pathway were enhanced after
+TEAS.
+Conclusion: Perioperative
+TEAS
+improved
+postoperative sleep quality, reduced postopera-
+tive pain and alleviated postoperative adverse
+effects
+in
+patients
+undergoing
+laparoscopic
+Jun Wang and Fei-Fei Lu contributed equally to this
+work as co-ﬁrst authors.
+J. Wang  F.-F. Lu  L.-W. Wang  Z.-W. Jiang (&)
+Nanjing University of Chinese Medicine, Nanjing,
+China
+e-mail: surgery34@163.com
+J. Wang  F.-F. Lu  M.-M. Ge  L.-W. Wang 
+G. Wang  G.-W. Gong  X.-X. Liu  Z.-W. Jiang
+Department of General Surgery, Afﬁliated Hospital
+of Nanjing University of Chinese Medicine,
+Nanjing, China
+J. Wang  F.-F. Lu  W.-Z. Zhang  F.-L. Ning 
+B.-H. Chen  Y. Liu  H.-G. Quan
+Department of General Surgery, Xuzhou Traditional
+Chinese Medicine Hospital Afﬁliated to Nanjing
+University of Chinese Medicine, Xuzhou, China
+Pain Ther (2023) 12:707–722
+https://doi.org/10.1007/s40122-023-00493-2
+
+
+=== PDF PAGE 2 ===
+gastrointestinal tumor surgery resection. This
+may be associated with activating Nrf2/ARE
+signal pathway and decreasing its inﬂammatory
+actions.
+Trial registration: Chinese Clinical Trial Reg-
+istry
+(http://www.chictr.org.cn/index.aspx),
+ChiCTR2100054971.
+Keywords: Transcutaneous electrical acupoint
+stimulation;
+Sleep
+quality;
+Gastrointestinal
+tumor; NRF2; Inﬂammation
+Key Summary Points
+Postoperative sleep disturbance (PSD) has
+many potential adverse effects. Improving
+sleep perioperatively is likely to be
+associated with improved well-being,
+surgical outcomes and patient safety
+Transcutaneous electrical acupoint
+stimulation (TEAS) is a form of traditional
+Chinese medicine which replaces needles
+with electrical stimulation. TEAS has been
+studied in mastectomy and thoracic
+surgery
+The aim of this study was to investigate
+the impact of TEAS at the acupoints of
+bilateral Shenmen (HT7), Neiguan (PC6)
+and Zusanli (ST36) on postoperative sleep
+quality in patients undergoing
+gastrointestinal tumor surgery
+Perioperative TEAS improved
+postoperative sleep quality, reduced
+postoperative pain and alleviated
+postoperative adverse effects in patients
+undergoing laparoscopic gastrointestinal
+tumor surgery resection, which may be
+associated with activating the nuclear
+factor erythroid 2-related factor
+2/antioxidant response element (Nrf2/
+ARE) signal pathway and decreasing its
+inﬂammatory actions
+INTRODUCTION
+Sleep quality plays a crucial role in maintaining
+normal
+physiological
+activities.
+Surgical
+patients typically suffer from profound sleep
+disturbance early in the postoperative period.
+The magnitude and duration of the surgical
+procedure have been shown to determine the
+degree of postoperative sleep disturbance (PSD)
+[1, 2]. A reduction in rapid eye movement
+(REM) and slow-wave sleep and a lack of
+inherent rhythmicity are more pronounced
+after major abdominal surgery compared to
+minor
+surgery
+[2].
+Questionnaire
+studies
+showed that the greatest incidence of sleep
+disturbances was found after major surgical
+procedures [2–4]. PSD has many adverse effects
+including
+cognitive
+impairment
+(including
+delirium), altered pain perception, mood dis-
+turbances, metabolic derangements and proin-
+ﬂammatory
+changes
+[5–7].
+Improving
+perioperative sleep quality and duration is likely
+to improve well-being, surgical outcomes and
+patient safety.
+The surgical stress response is one of the
+main factors that inﬂuence postoperative sleep
+[8]. This response is secondary to both tissue
+trauma
+and
+anesthesia
+and
+activates
+the
+hypothalamic-pituitary-adrenal
+(HPA)
+axis.
+HPA activation has been recognized as a pri-
+mary mechanism of stress related to brain
+damage [9]. Moreover, oxidative stress plays a
+critical role in the pathophysiology of sleep
+disturbance as brain free radicals accumulate
+during wakefulness and are removed during
+sleep [10]. Clinical studies have found increased
+levels of oxidative stress markers following lab-
+oratory-induced
+sleep
+deprivation
+and
+in
+patients with primary insomnia compared to
+those
+without
+sleep
+disturbances
+[11,
+12].
+Additionally, it has been reported that sleep
+deprivation leads to the accumulation of reac-
+tive
+oxygen
+species
+(ROS)
+and
+consequent
+oxidative stress in animal models [13, 14].
+Anti-oxidative
+factors,
+including
+nuclear
+factor erythroid 2-related factor 2 (Nrf2), are
+also downregulated in the setting of sleep
+deprivation [15]. The transcription factor Nrf2 is
+best known as one of the main orchestrators of
+708
+Pain Ther (2023) 12:707–722
+
+
+=== PDF PAGE 3 ===
+the
+cellular
+aerobic
+and
+oxidative
+stress
+response.
+Nrf2
+induces
+the
+expression
+of
+antioxidant and cytoprotective genes under
+oxidative conditions including catalase (CAT),
+superoxide
+dismutase
+(SOD),
+glutathione
+S-transferases
+(GST),
+glutathione
+peroxidase
+(GSH-Px)
+and
+heme
+oxygenase-1
+(HO-1)
+[16–18]. Moreover, Nrf2 is tightly regulated by
+sleep-related genes, suggesting an antioxidant
+and anti-inﬂammatory role of sleep through the
+regulation of Nrf2 signaling [19, 20]. Wang et al.
+demonstrated that corilagin ameliorates sleep
+deprivation and induces memory impairment
+by activating Nrf2 [21]. Other studies have
+shown that the expression of Nrf2 was reduced
+following oxidative stress after chronic sleep
+deprivation [15]. Whether Nrf2 plays a key role
+in PSD after gastrointestinal (GI) surgery and
+the underlying mechanisms remain unclear.
+As traditional Chinese acupuncture therapy,
+transcutaneous electrical acupoint stimulation
+(TEAS) is a therapeutic technique that involves
+the application of low-frequency electrical cur-
+rents to acupoints on the surface of the skin. It
+is a non-invasive form of electrotherapy that is
+widely used in clinical practice. Previous reports
+had described the use of TEAS for chronic pain
+after mastectomy [22] and demonstrated its
+utility in the reduction of postoperative ileus
+and enhancement of the recovery of GI func-
+tion [23]. TEAS causes no adverse reactions such
+as those caused by acupuncture needles and has
+similar effects to electroacupuncture [24]. Sev-
+eral studies have shown that TEAS may adjust
+autonomic balance by enhancing vagal activity
+and suppressing sympathetic activity [25–27].
+However, the effect of TEAS on PSD after GI
+surgery
+and
+its
+mechanisms
+remain
+to
+be
+determined.
+In this study, we examined whether TEAS
+could ameliorate PSD. In addition, we analyzed
+the change in Nrf2 expression during GI surgery
+and evaluated its activity and downstream
+effects after TEAS intervention.
+METHODS
+Study Design and Participants
+This was a multi-center, prospective, double-
+blind, randomized controlled trial at the Afﬁli-
+ated Hospital of Nanjing University of Chinese
+Medicine
+and
+Xuzhou
+Traditional
+Chinese
+Medicine
+Hospital
+Afﬁliated
+to
+Nanjing
+University
+of
+Chinese
+Medicine
+between
+December 2021 and August 2022. The study was
+conducted in accordance with the Helsinki
+Declaration and was approved by the ethics
+committee of Afﬁliated Hospital of Nanjing
+University of Chinese Medicine (no. 2021NL-
+199-02) and Xuzhou Traditional Chinese Med-
+icine Hospital Afﬁliated to Nanjing University
+of Chinese Medicine (no. 09/2020). The study
+protocol was registered with the Chinese Clini-
+cal
+Trial
+Registry
+(http://www.chictr.org.cn/
+index.aspx,
+ChiCTR2100054971).
+Informed
+consent was obtained from all participants.
+The inclusion criteria were as follows: (1)
+patients undergoing elective laparoscopic GI
+tumor surgery, (2) age 18 to 75-years, (3)
+American Society of Anesthesiologists (ASA)
+grade I to III, (4) body mass index (BMI)
+18.5–28 kg/m2
+and
+(5)
+preoperative
+clinical
+tumor-node-metastasis (TNM) staging: cTis-3N0-
+1M0 as per the AJCC/UICC 8th edition. Exclu-
+sion criteria were as follows: (1) Pittsburgh Sleep
+Quality
+Index
+(PSQI) C 7 points or Athens
+Insomnia Scale (AIS) C 6 points before surgery,
+(2) sleep apnea or moderate or severe snoring,
+(3) a pacemaker in situ, preoperative sinus
+bradycardia (heart rate \ 50 beats/min) or sinus
+node disease, second-degree or third-degree
+atrioventricular block, (4) long-term use of
+anticonvulsants, antidepressants or other psy-
+chotropic drugs, (5) severe sensitivity or allergy
+to the drugs or equipment in this study, (6)
+severe heart, liver or kidney disease, (7) partici-
+pation
+in
+other
+clinical
+trials
+in
+the
+past
+3 months, (8) hearing and/or language com-
+munication barriers, (9) pregnancy or breast-
+feeding, (10) fever (temperature [ 38.5 C) or
+clinical
+(hematological,
+radiographic
+and/or
+microbiological) evidence of infection before
+surgery and (11) patients who live with critically
+Pain Ther (2023) 12:707–722
+709
+
+
+=== PDF PAGE 4 ===
+ill patients or are housed in a ward with [ 3
+patients. Patient demographic information was
+collected, including age, BMI and ASA grade. All
+investigators were trained according to the
+standardized
+acupoint
+technique
+and
+TEAS
+manipulation by a senior acupuncturist with
+20 years of practicing experience.
+Randomization, Blinding, Anesthesia
+and Surgery
+All
+enrolled
+patients
+underwent
+standard
+laparoscopic
+radical
+gastrectomy
+for
+gastric
+cancer or laparoscopic radical resection for col-
+orectal cancer. Patients’ eligibility was assessed
+through a two-step screening for ﬁnal enroll-
+ment and randomization. The initial screening,
+recruitment, ﬁnal enrollment and randomiza-
+tion were conducted 1 day prior to surgery.
+Patients were assigned to either the TEAS group
+or the Sham group by a table of computer-gen-
+erated random numbers. Group assignments
+were sealed in sequentially numbered opaque
+envelopes. Patients, attending surgeons, oper-
+ating room nurses, data collectors and individ-
+uals who performed the ﬁnal statistical analysis
+were blinded to group assignment.
+Upon admission to the operating room,
+patients had their blood pressure (BP), electro-
+cardiogram
+(ECG)
+and
+peripheral
+capillary
+oxygen saturation (SpO2) routinely monitored.
+Venous access was obtained, and intravenous-
+inhalation compound anesthesia was adminis-
+tered. For induction of anesthesia, an intra-
+venous bolus injection of midazolam 0.04 mg/
+kg, etomidate 0.3 mg/kg, sufentanil 0.4 lg/kg
+and vecuronium 0.08 mg/kg was used. Bispec-
+tral index (BIS) was monitored intraoperatively
+to maintain a range of 40–60. Continuous
+inhalation of 1%–2% sevoﬂurane and continu-
+ous infusions of propofol (5 mg/kg-1h-1) and
+remifentanil (0.2 lg kg-1min-1) were adminis-
+tered with guidance from muscle relaxation.
+Intermittent bolus injections of vecuronium
+bromide were provided to maintain muscle
+relaxation. Prior to closing the incision, 20 ml
+0.25%
+ropivacaine
+was
+injected.
+Postopera-
+tively,
+patients
+were
+transferred
+to
+the
+postanesthesia care unit (PACU) and then to the
+ward after extubation, ensuring full conscious-
+ness, and Aldrete score of C 9 points.
+Sample Size
+Based on prior research and preliminary results,
+it was estimated that the incidence of PSD
+would be 90%, and a 30% reduction in inci-
+dence would be clinically signiﬁcant. Using a
+two-sided test with a = 0.05, b = 0.10 and power
+(1 - b) = 0.90, the calculated sample size for
+each group was 39 cases.
+Study Protocol
+TEAS was administrated a total of three times at
+each acupoint: (1) the night before surgery, (2)
+the night of the surgery and (3) the ﬁrst night
+after surgery. TEAS was applied to three pairs of
+acupoints: bilateral Shenmen (HT7), Neiguan
+(PC6) and Zusanli (ST36) acupoints, which were
+identiﬁed according to the traditional anatom-
+ical localizations (Fig. 1). TEAS was performed
+using an electronic acupuncture apparatus (KD-
+2A, Beijing Yaoyang Kangda Medical Instru-
+ment Ltd. Co., Beijing, China) by trained and
+qualiﬁed nurses. A dense-disperse frequency of
+2/10 Hz and intensity of 6–15 mA were used for
+30 min. The optimal intensity was adjusted to
+maintain a slight twitching of the regional
+muscle according to the individual’s maximum
+tolerance. In the Sham group, the patients were
+connected to the apparatus, and sham TEAS was
+provided with the same lamplight as real TEAS,
+but no electronic stimulation was applied.
+Outcomes
+Primary Outcome
+The ﬁrst primary outcome of the study was
+postoperative sleep quality, which was evalu-
+ated using both the PSQI and AIS. Sleep quality
+was assessed on the following days: (1) the ﬁrst
+day before surgery (P1), (2) the ﬁrst day after
+surgery (D1) and (3) the third day after surgery
+(D3). The PSQI is a widely used and validated
+scoring system that consists of 19 self-evalua-
+tion items and 5 other evaluation items. The
+score indicates the level of sleep quality and
+710
+Pain Ther (2023) 12:707–722
+
+
+=== PDF PAGE 5 ===
+severity of the sleep disorder [28]. The AIS is a
+self-assessed
+psychometric
+instrument
+that
+quantiﬁes sleep difﬁculty based on the ICD-10
+criteria and includes eight evaluation items
+[29].
+Secondary Outcomes
+The secondary outcomes include visual analog
+scale (VAS) scores at 24 h, 48 h and 72 h after
+surgery, cumulative doses of additional rescue
+analgesia,
+abdominal
+distension,
+dizziness,
+postoperative nausea and vomiting (PONV),
+and
+postoperative
+pulmonary
+complications
+(POPC) within 72 h after surgery.
+Blood Sample Analysis
+The levels of Nrf2, glutathione peroxidase 3
+(GPX3), SOD and cortisol (COR) were measured
+on the ﬁrst day before surgery (P1), 0.5 h post-
+operatively on the day of surgery (D0), the ﬁrst
+day after surgery (D1) and the third day after
+surgery (D3). The levels of tumor necrosis fac-
+tor-a (TNF-a), interleukin-6 (IL-6) and inter-
+leukin-10 (IL-10) were measured on the ﬁrst day
+before surgery (P1) and the ﬁrst, third and ﬁfth
+days after surgery (D1, D3 and D5). The blood
+samples were measured with ELISA kits (Cloud-
+Clone Corp., Wuhan, China) in accordance
+with the manufacturer’s instructions.
+Statistical Analysis
+The data were analyzed using SPSS 23.0 and
+GraphPad Prism 8.0 software. Measurement
+data were expressed as mean ± standard devia-
+tion (SD). Comparisons between two groups
+were performed using Student’s t test. Contin-
+uous data were analyzed using one- or two-way
+analysis of variance, as appropriate. Categorical
+data were analyzed using the chi-square or
+Fisher’s exact test. P \ 0.05 was considered sta-
+tistically signiﬁcant.
+RESULTS
+We assessed 98 patients for eligibility to partic-
+ipate in this study initially. Among them, seven
+patients did not meet the inclusion criteria, and
+three declined to participate. The remaining 88
+patients were enrolled in the study. Later, three
+patients from the TEAS group and two from the
+Fig. 1 Location of Shenmen (HT7), Neiguan (PC6) and Zusanli (ST36) acupoints. a Lateral view, b front view
+Pain Ther (2023) 12:707–722
+711
+
+
+=== PDF PAGE 6 ===
+Sham group were excluded because of a proto-
+col breach. In total, 83 patients completed the
+study, and their data were included in the
+analysis. The recruitment and follow-up of the
+trial participants are presented in Fig. 2.
+Characteristics of Study Population
+There was no signiﬁcant difference in demo-
+graphics, ASA, TNM staging, duration of surgery
+and anesthesia, intraoperative high/low blood
+pressure times, intraoperative ﬂuid administra-
+tion, intraoperative blood loss, urine output
+and time to ﬁrst postoperative ﬂatus between
+the two groups (Table 1, P [ 0.05).
+Primary Outcomes
+Perioperative Sleep Quality
+There was no signiﬁcant difference in PSQI and
+AIS scores between the TEAS and Sham groups
+at P1 (P [ 0.05, respectively). However, the
+PSQI
+and
+AIS
+scores
+in
+the
+two
+groups
+signiﬁcantly increased at D1 and D3 (P \ 0.05,
+respectively). Patients in the TEAS group had
+signiﬁcantly lower PSQI and AIS scores than
+those
+in
+the
+Sham
+group
+at
+D1
+and
+D3
+(P \ 0.05, respectively, Fig. 3a, b).
+Secondary Outcomes
+The TEAS group had signiﬁcantly lower VAS
+scores during activity than the Sham group at
+24, 48 and 72 h after surgery (P \ 0.05, respec-
+tively, Fig. 4b). However, there was no signiﬁ-
+cant difference in VAS scores at rest between the
+two groups 72 h after surgery (P [ 0.05, Fig. 4a).
+These results indicated that TEAS may amelio-
+rate pain during activity but not at rest.
+Compared to the Sham group, the TEAS
+group had a signiﬁcantly lower cumulative
+number of additional doses of rescue analgesia
+(P = 0.011).
+Additionally,
+the
+incidences
+of
+abdominal distension and PONV were signiﬁ-
+cantly higher in the Sham group than in the
+TEAS group (P = 0.009 and P = 0.004, respec-
+tively).
+However,
+there
+was
+no
+signiﬁcant
+Fig. 2 CONSORT diagram for patients enrolled in the study. TEAS transcutaneous electrical acupoint stimulation
+712
+Pain Ther (2023) 12:707–722
+
+
+=== PDF PAGE 7 ===
+difference in the incidences of dizziness or
+POPC between the two groups (P = 0.231 and
+P = 0.175, respectively, Table 2).
+Blood Sample Biomarkers
+Compared to the Sham group, the TEAS group
+had signiﬁcantly lower levels of IL-6 at D1, D3
+and D5 (P \ 0.05), while serum levels of TNF-a
+and
+IL-10
+at
+D1,
+D3
+and
+D5
+were
+not
+signiﬁcantly
+different
+(P [ 0.05).
+The
+mean
+values of TNF-a and IL-10 in the TEAS group
+were lower than those in the Sham group at
+these points (Table 3).
+As presented in Table 4, the TEAS group had
+higher concentrations of Nrf2, GPX3, SOD and
+COR compared to the Sham group after D1
+(P \ 0.05). Moreover, the serum levels of Nrf2,
+SOD and COR in the TEAS group were higher at
+Table 1 Baseline patient characteristics and operative details
+Characteristic
+TEAS group (n = 40)
+Sham group (n = 43)
+P value
+Age (year, mean ± SD)
+58.20 ± 7.90
+60.44 ± 9.64
+0.252
+BMI (kg/m2, mean ± SD)
+23.87 ± 2.85
+23.73 ± 2.37
+0.809
+Education level (n (%))
+Primary education
+9 (22.5%)
+7 (16.3%)
+0.623
+Secondary education
+21 (52.5%)
+27 (62.8%)
+Tertiary education
+10(25.0%)
+9 (20.9%)
+Motion sickness (n (%))
+3 (7.5%)
+5 (11.6%)
+0.524
+ASA score (n (%))
+I
+0 (0.0%)
+0 (0.0%)
+0.062
+II
+34 (85.0%)
+29 (67.4%)
+III
+6 (15.0%)
+14 (32.6%)
+TNM staging (n (%))
+I
+16 (40.0%)
+12 (27.9%)
+0.412
+II
+8 (20.0%)
+13 (30.2%)
+III
+16 (40.0%)
+18 (41.9%)
+Duration of surgery (min, mean ± SD)
+254.63 ± 62.57
+239.53 ± 71.30
+0.310
+Duration of anesthesia (min, mean ± SD)
+272.63 ± 59.45
+254.21 ± 69.14
+0.198
+Intraoperative high/low blood pressure times (n (%))
+0.58 ± 1.06
+0.65 ± 1.11
+0.750
+Intraoperative ﬂuid input volume (ml)
+2307.75 ± 787.99
+2137.67 ± 799.17
+0.332
+Intraoperative blood loss (ml)
+61.00 ± 26.10
+72.79 ± 33.48
+0.079
+Urine output (ml)
+642.50 ± 305.62
+593.49 ± 330.89
+0.486
+Time to ﬁrst postoperative ﬂatus (h, mean ± SD)
+54.57 ± 16.62
+60.70 ± 19.10
+0.124
+Postoperative hospitalizations (days, mean ± SD)
+8.60 ± 3.86
+8.65 ± 3.47
+0.949
+Values are presented as mean ± SD or n (%)
+TEAS transcutaneous electrical acupoint stimulation, SD standard deviation, BMI body mass index, ASA American Society
+of Anesthesiologists, TNM tumor-node-metastasis
+Pain Ther (2023) 12:707–722
+713
+
+
+=== PDF PAGE 8 ===
+D0 than those in the Sham group (P \ 0.05)
+(Table 4).
+DISCUSSION
+In this study, we found that TEAS reduced PSD
+and improved sleep quality during the periop-
+erative period in patients undergoing laparo-
+scopic GI tumor resection. The underlying
+mechanism may be related to activation of the
+Nrf2 signal pathway.
+PSD is a common issue that is often observed
+in surgical patients because of tissue trauma,
+anesthesia and the hospital environment [30].
+Postoperative poor sleep quality worsens cog-
+nitive function and delays the recovery process
+[31]. Additionally, it can also trigger stress and
+immune inﬂammatory responses as well as
+postoperative
+pain.
+While
+pharmacological
+measures can improve sleep quality, they are
+not always satisfactory and may cause adverse
+effects, such as memory loss, disorientation,
+dizziness and falls [32]. Nonpharmacological
+therapy in Traditional Chinese Medicine (TCM)
+often uses acupuncture to treat insomnia [33],
+making it a popular research topic. TEAS is a
+new derivative of traditional acupuncture or
+Fig. 3 PSQI and AIS scores in the two groups. a PSQI,
+b AIS. TEAS transcutaneous electrical acupoint stimula-
+tion, PSQI Pittsburgh Sleep Quality Index, AIS Athens
+Insomnia Scale, P1 ﬁrst day before surgery, D1 ﬁrst day
+after surgery, D3 third day after surgery. Data are presented
+as mean ± standard deviation. #P \ 0.05 versus P1;
+*P \ 0.05 versus the Sham group
+Fig. 4 Rest VAS and activity VAS scores in the two
+groups. a Rest VAS, b activity VAS. TEAS transcutaneous
+electrical acupoint stimulation, VAS visual analog scale.
+Data
+are
+presented
+as
+mean ± standard
+deviation.
+#P \ 0.05 versus 0 h; *P \ 0.05 versus the Sham group
+714
+Pain Ther (2023) 12:707–722
+
+
+=== PDF PAGE 9 ===
+electroacupuncture (EA) that may be a viable
+way to improve the sleep quality after surgery
+because of its potential to reduce pain and
+injury, lower infection incidence and improve
+patient tolerance. Some studies have demon-
+strated that TEAS can improve sleep quality
+after video-assisted thoracoscopic surgery and
+enhance
+recovery
+after
+laparoscopic
+gastric
+cancer surgery [34, 35]. However, the impacts of
+TEAS on postoperative GI cancer patients and
+its underlying mechanism are still unclear. Our
+study found that administering TEAS during the
+perioperative period was associated with better
+subjective sleep quality and reduced postopera-
+tive pain. Moreover, we discovered that TEAS
+treatment improved sleep quality partly by
+regulating the Nrf2/antioxidant response ele-
+ment (ARE) signaling pathway.
+Postoperative factors, particularly pain, are
+associated with the development of sleep dis-
+turbances [36, 37]. Studies have shown that
+postoperative pain and sleep disturbance can
+have a reciprocal relationship. Pain can cause
+prolonged sleep latency and reduce total sleep
+time, while sleep disturbances can also increase
+pain
+sensitivity
+and
+lower
+pain
+thresholds
+[38, 39]. The most effective way to improve
+sleep quality and promote recovery after surgery
+is through adequate analgesia [8]. Multimodal
+Table 2 Rescue analgesia and adverse events 72 h after
+surgery between the TEAS and Sham groups
+Characteristic
+TEAS
+group
+(n = 40)
+Sham
+group
+(n = 43)
+P value
+Cumulative
+number of rescue
+analgesia
+(number,
+mean ± SD)
+0.53 ± 0.55
+0.98 ± 0.96
+0.011*
+Adverse events
+72 h after
+surgery
+Abdominal
+distension
+(n (%))
+11(27.5%)
+24 (55.8%)
+0.009*
+Dizziness (n (%))
+10(25.0%)
+16(37.2%)
+0.231
+PONV (n (%))
+6 (15.0%)
+19 (44.2%)
+0.004*
+POPC (n (%))
+7 (17.5%)
+13(30.2%)
+0.175
+Values are presented as mean ± SD or n (%)
+TEAS transcutaneous electrical acupoint stimulation, SD
+standard deviation, VAS visual analog scale, POPC post-
+operative pulmonary complications, PONV postoperative
+nausea and vomiting
+*P \ 0.05 versus the Sham group
+Table 3 Serum levels of inﬂammatory cytokines in the
+TEAS and Sham groups
+Characteristic
+TEAS group
+(n = 40)
+Sham group
+(n = 43)
+P value
+TNF-a (pg/ml,
+mean ± SD)
+P1
+4.32 ± 3.72
+3.93 ± 4.14
+0.670
+D1
+13.81 ± 8.80
+16.62 ± 9.84
+0.211
+D3
+12.66 ± 6.34
+13.99 ± 7.38
+0.435
+D5
+3.76 ± 2.55
+4.90 ± 4.55
+0.184
+IL-6 (pg/ml,
+mean ± SD)
+P1
+3.27 ± 2.54
+3.26 ± 2.06
+0.995
+D1
+10.65 ± 4.94
+15.59 ± 10.54
+0.022*
+D3
+8.83 ± 3.72
+14.19 ± 14.00
+0.037*
+D5
+5.58 ± 4.01
+11.16 ± 15.67
+0.042*
+IL-10 (pg/ml,
+mean ± SD)
+P1
+2.31 ± 1.39
+2.39 ± 1.90
+0.830
+D1
+10.11 ± 8.35
+11.81 ± 5.97
+0.325
+D3
+8.10 ± 6.41
+9.95 ± 5.47
+0.204
+D5
+2.63 ± 1.43
+3.21 ± 2.54
+0.219
+Values are presented as mean ± SD
+TEAS transcutaneous electrical acupoint stimulation, SD
+standard deviation, TNF-a tumor necrosis factor-a, IL-6
+interleukin-6, IL-10 interleukin-10, P1 ﬁrst day before
+surgery, D1 ﬁrst day after surgery, D3 third day after sur-
+gery, D5 ﬁfth day after surgery
+*P \ 0.05 versus the Sham group
+Pain Ther (2023) 12:707–722
+715
+
+
+=== PDF PAGE 10 ===
+analgesia, which includes both opioid and non-
+opioid treatments, has been used to prevent and
+treat
+pain
+after
+major
+abdominal
+surgery.
+However, it is important to acknowledge that
+this approach may also have side effects, risks
+and limitations that cannot be entirely avoided
+[40].
+In our study, the VAS scores and reduction in
+analgesic
+requirement
+72 h
+after
+surgery
+revealed
+that
+perioperative
+TEAS
+played
+a
+potential important role in reducing acute
+postoperative pain. We also found that the
+TEAS group had lower scores on the PSQI and
+AIS,
+indicating
+that
+TEAS
+treatment
+may
+improve sleep quality during the postoperative
+period. Interestingly, repeated TEAS lowered
+pain intensity during activity, but not at rest.
+Our results were consistent with a previous trail,
+which suggested that transcutaneous electrical
+nerve stimulation could reduce pain intensity
+during activities such as walking and deep
+breathing, but has no effect on pain at rest [41].
+Table 4 Comparison of peripheral blood biomarkers of oxidative stress between the TEAS and Sham groups
+Characteristic
+TEAS group (n = 40)
+Sham group (n = 43)
+P value
+Nrf2 (ng/ml, mean ± SD)
+P1
+0.29 ± 0.16
+0.29 ± 0.12
+0.890
+D0
+1.18 ± 2.85
+0.31 ± 0.15
+0.049*
+D1
+1.16 ± 2.80
+0.29 ± 0.12
+0.047*
+D3
+0.39 ± 0.26
+0.29 ± 0.12
+0.039*
+GPX3 (ng/ml, mean ± SD)
+P1
+10,056.28 ± 6000.47
+10,035.88 ± 5431.14
+0.998
+D0
+14,916.37 ± 11,914.03
+10,644.17 ± 6188.44
+0.054
+D1
+14,374.61 ± 6061.14
+10,846.83 ± 5865.99
+0.016*
+D3
+13,212.81 ± 5575.85
+9942.25 ± 5323.79
+0.021*
+SOD (ng/ml, mean ± SD)
+P1
+68.17 ± 23.92
+68.89 ± 15.25
+0.886
+D0
+85.36 ± 27.52
+73.51 ± 20.18
+0.044*
+D1
+81.29 ± 22.18
+69.21 ± 22.41
+0.034*
+D3
+77.73 ± 22.43
+67.99 ± 13.18
+0.040*
+COR (lg/dl, mean ± SD)
+P1
+30.62 ± 19.22
+30.22 ± 17.23
+0.921
+D0
+26.25 ± 10.22
+31.93 ± 12.94
+0.038*
+D1
+34.40 ± 15.74
+43.22 ± 16.15
+0.022*
+D3
+31.20 ± 13.28
+37.90 ± 13.94
+0.037*
+Values are presented as mean ± SD
+TEAS transcutaneous electrical acupoint stimulation, SD standard deviation, Nrf2 nuclear factor erythroid 2-related factor
+2, GPX3 glutathione peroxidase 3, SOD superoxide dismutase, COR cortisol, P1 ﬁrst day before surgery, D0 0.5 h post-
+operatively on the day of surgery, D1 ﬁrst day after surgery, D3 third day after surgery
+*P \ 0.05 versus the Sham group
+716
+Pain Ther (2023) 12:707–722
+
+
+=== PDF PAGE 11 ===
+We attributed this difference to the inﬂuence of
+different pain mechanisms during activity ver-
+sus rest [42, 43].
+Surgery can induce both local and systemic
+inﬂammation [44], and persistent sleep distur-
+bance can lead to prolonged activation of the
+inﬂammatory
+cytokines
+and
+chemokines,
+which may be harmful to the body. Inﬂamma-
+tory cytokines can communicate with the cen-
+tral nervous system (CNS) through neural and
+cellular mechanisms, resulting in altered CNS
+activity and disrupted sleep regulation [45–47].
+Preclinical
+studies
+have
+shown
+that
+sleep
+deprivation
+or
+disturbance
+can
+induce
+the
+release
+of
+inﬂammatory
+cytokines
+such
+as
+interleukin-1 (IL-1), IL-6 and TNF-a in periph-
+eral blood and various brain regions [48–50]. In
+animal models, interleukin-4 (IL-4) and IL-10,
+which are considered to be anti-inﬂammatory
+cytokines, have been found to reduce the
+amount of non-rapid eye movement (NREM)
+sleep [51]. This is consistent with evidence that
+the antagonism of inﬂammatory cytokines can
+also affect sleep in animals [52].
+Our study found that the TEAS group had
+signiﬁcantly
+lowered
+levels
+of
+IL-6
+in
+the
+peripheral blood on D1, D3 and D5 compared
+with the Sham group, suggesting that TEAS may
+regulate the inﬂammatory response of the body.
+Interestingly, there was no signiﬁcant difference
+in
+TNF-a
+levels
+between
+the
+two
+groups,
+although the mean levels of TNF-a in the TEAS
+group were lower than those of the Sham group
+at each time point after surgery, suggesting that
+TEAS may have some inhibitory effect on TNF-
+a. This might be because TNF-a reached its peak
+level in plasma 1.5 h after the onset of inﬂam-
+matory reaction [53], and the ﬁrst postoperative
+blood sample in our study was collected 24 h
+after surgery, which may have affected our
+ﬁndings. More clinical samples are needed to
+conﬁrm this. Our study also found that peri-
+operative TEAS did not affect peripheral blood
+IL-10 levels after surgery, and there was no
+consistent result on the effect of acupuncture
+on IL-10 in the literature. Previous studies have
+reported that electroacupuncture can increase
+the concentration of IL-10 in colonic tissue of
+mice with colitis and reduce the concentration
+of
+inducible
+nitric
+oxide
+synthase
+(iNOS),
+exerting
+an
+anti-inﬂammatory
+effect
+[54].
+However,
+other
+studies
+have
+reported
+the
+opposite effect [55]. Additionally, it was found
+that
+electroacupuncture
+had
+no
+signiﬁcant
+effect on peripheral blood IL-10 levels at all
+surgical time points in patients undergoing
+supratentorial craniotomy under general anes-
+thesia [56]. We speculated that the different
+effects of acupuncture on IL-10 in peripheral
+blood reported in the literature may be related
+to different experimental conditions and acu-
+points selected. Further research is needed to
+conﬁrm this.
+Numerous clinical and experimental studies
+have shown that stress is associated with poor
+sleep quality [57, 58]. Traumatic stress leads to
+the production of excess reactive oxygen species
+(ROS), causing oxidative stress that can lead to
+sleep disturbances [59]. Moreover, oxidative
+stress is the major pathological mechanism that
+causes secondary brain injury [60]. Our study
+found that levels of Nrf2, GPX3 and SOD were
+higher in the TEAS group on the ﬁrst and third
+day after surgery compared to the Sham group,
+while the COR level was lower. These ﬁndings
+suggested that TEAS treatment could activate
+Nrf2, followed by elevation of antioxidative
+factors such as SOD and GPX3 and downregu-
+lation of COR expression. Furthermore, our
+study found that sleep quality was improved in
+the TEAS group, which may be associated with
+the activation of the Nrf2/ARE signal pathway
+and reduction of stress response.
+In addition, studies have shown that oxida-
+tive stress-induced accumulation of ROS plays a
+crucial role in the inﬂammatory response by
+activating proinﬂammatory cytokines such as
+interleukin-1b (IL-1b), IL-6 and TNF-a [61, 62].
+Depletion of Nrf2 in human monocytes has
+been reported to enhance TNF-induced inﬂam-
+matory cytokines [63]. Activation of Nrf2 has
+been
+shown
+to
+prevent
+lipopolysaccharide
+(LPS)-induced transcriptional upregulation of
+pro-inﬂammatory cytokines, including IL-6 and
+IL-1b [64]. Furthermore, elimination of ROS
+suppresses inﬂammation in Nrf2-deﬁcient mice
+[65]. Our study also showed that TEAS down-
+regulated the expression of IL-6 in the early
+postoperative period, which may be related to
+the activation of Nrf2/ARE pathway.
+Pain Ther (2023) 12:707–722
+717
+
+
+=== PDF PAGE 12 ===
+We found that the TEAS group had signiﬁ-
+cantly lower incidence of abdominal distension
+and PONV, which is consistent with ﬁndings
+from several previous studies [34, 35]. One
+possible
+mechanism
+for
+this
+effect
+is
+that
+acupuncture may increase the release of b-en-
+dorphin and promote the secretion of corticos-
+teroids in the brain. Additionally, the release of
+endogenous
+glucocorticoid
+may
+reduce
+the
+incidence of PONV and mitigate the side effect
+of exogenous glucocorticoids [66]. However, we
+did not observe any beneﬁts of TEAS for dizzi-
+ness or POPC in our study.
+There were some limitations to this study.
+Although
+the
+Nrf2/ARE
+signaling
+pathway
+played a crucial role in physiological activity in
+humans, further studies are needed to conﬁrm
+the
+relationship
+between
+TEAS
+and
+other
+downstream target genes of this pathway. In
+addition,
+more
+large-scale
+and
+multicenter
+clinical research studies are warranted to con-
+ﬁrm the effect of TEAS in patients undergoing
+laparoscopic GI tumor resection in the future.
+CONCLUSION
+In conclusion, our study suggested that TEAS
+could be an effective method to improve sleep
+quality, alleviate postoperative pain, suppress
+inﬂammation and decrease postoperative com-
+plications in patients undergoing laparoscopic
+GI tumor resection. The activation of the Nrf2/
+ARE signaling pathway may play a role in
+mediating the therapeutic effect of TEAS. How-
+ever, further studies are necessary to fully elu-
+cidate the underlying mechanisms of TEAS on
+postoperative sleep quality in patients under-
+going laparoscopic GI tumor surgery and to
+conﬁrm our ﬁndings. These results provided
+new insights into the potential beneﬁts of TEAS
+for postoperative recovery and supported its use
+as an adjuvant therapy in clinical practice.
+ACKNOWLEDGEMENTS
+We thank all the patients who participated in
+this study.
+Funding. This study was supported by Pro-
+ject of National Clinical Research Base of Tra-
+ditional Chinese Medicine in Jiangsu Province,
+China
+(JD2022SZ18),
+Xuzhou
+Science
+and
+Technology
+Innovation
+Project
+(KC19023,
+KC22181) and Key Subject Project of Jiangsu
+Province: Surgery of Traditional Chinese Medi-
+cine (js2251). The Rapid Service Fee was funded
+by the authors.
+Authorship. All named authors meet the
+International Committee of Medical Journal
+Editors (ICMJE) criteria for authorship for this
+article, take responsibility for the integrity of
+the work as a whole and have given their
+approval for this version to be published.
+Author
+Contributions. Conceptualization:
+Jun Wang, Fei-Fei Lu, Hong-Guang Quan, Zhi-
+Wei Jiang; Methodology: Jun Wang, Fei-Fei Lu;
+Formal analysis and investigation: Jun Wang,
+Fei-Fei Lu, Miao-Miao Ge, Li-Wen Wang, Wen-
+Zhuo Zhang; Writing–original draft prepara-
+tion: Jun Wang, Fei-Fei Lu, Miao-Miao Ge;
+Writing–review and editing: Jun Wang, Fei-Fei
+Lu, Miao-Miao Ge, Fei-Long Ning, Zhi-Wei
+Jiang; Funding acquisition: Jun Wang, Fei-Fei
+Lu,
+Zhi-Wei
+Jiang;
+Resources:
+Gang
+Wang,
+Guan-Wen Gong, Xin-Xin Liu, Bao-He Chen,
+Yang Liu; Supervision: Hong-Guang Quan, Zhi-
+Wei Jiang. All authors reviewed the manuscript.
+Disclosures. Jun Wang, Fei-Fei Lu, Miao-
+Miao Ge, Li-Wen Wang, Gang Wang, Guan-
+Wen Gong, Xin-Xin Liu, Wen-Zhuo Zhang, Fei-
+Long Ning, Bao-He Chen, Yang Liu, Hong-
+Guang Quan and Zhi-Wei Jiang declare that
+they have no conﬂict of interest.
+Compliance with Ethics Guidelines. This
+study was approved by the ethics committee of
+Afﬁliated Hospital of Nanjing University of
+Chinese Medicine (no. 2021NL-199–02), Xuz-
+hou
+Traditional
+Chinese
+Medicine
+Hospital
+Afﬁliated to Nanjing University of Chinese
+Medicine (no. 09/2020) and registered in the
+Chinese
+clinical
+trial
+registry
+(ChiCTR2100054971).
+Each
+participant
+pro-
+vided written informed consent before initiat-
+ing any study-related procedures. This study
+718
+Pain Ther (2023) 12:707–722
+
+
+=== PDF PAGE 13 ===
+was conducted in accordance with the Decla-
+ration of Helsinki.
+Data Availability. The data that support the
+ﬁndings of this study are available from the
+corresponding author upon reasonable request.
+Open Access. This article is licensed under a
+Creative
+Commons
+Attribution-Non-
+Commercial 4.0 International License, which
+permits
+any
+non-commercial
+use,
+sharing,
+adaptation, distribution and reproduction in
+any medium or format, as long as you give
+appropriate credit to the original author(s) and
+the source, provide a link to the Creative
+Commons licence, and indicate if changes were
+made. The images or other third party material
+in this article are included in the article’s
+Creative Commons licence, unless indicated
+otherwise in a credit line to the material. If
+material is not included in the article’s Creative
+Commons licence and your intended use is not
+permitted by statutory regulation or exceeds the
+permitted use, you will need to obtain permis-
+sion directly from the copyright holder. To view
+a
+copy
+of
+this
+licence,
+visit
+http://
+creativecommons.org/licenses/by-nc/4.0/.
+REFERENCES
+1.
+Longo UG, Facchinetti G, Marchetti A, et al. Sleep
+disturbance and rotator cuff tears: a systematic
+review. Medicina (Kaunas). 2019;55(8):453.
+2.
+Su X, Wang DX. Improve postoperative sleep: what
+can we do? Curr Opin Anaesthesiol. 2018;31(1):
+83–8.
+3.
+Rosenberg-Adamsen S, Kehlet H, Dodds C, Rosen-
+berg J. Postoperative sleep disturbances: mecha-
+nisms and clinical implications. Br J Anaesth.
+1996;76(4):552–9.
+4.
+Ku¨nzel H, Schu¨ssler P, Yassouridis A, Uhr M, Kluge
+M, Steiger A. The renin secretion proﬁle under the
+inﬂuence of sleep deprivation and the neuropep-
+tides CRH and GHRH. Psychoneuroendocrinology.
+2020;120: 104799.
+5.
+Craner JR, Flegge LG. Insomnia symptoms and
+chronic pain: Outcomes of an interdisciplinary pain
+rehabilitation
+program.
+Pain
+Pract.
+2022;22(2):
+171–81.
+6.
+Saner NJ, Lee MJ, Kuang J, et al. Exercise mitigates
+sleep-loss-induced changes in glucose tolerance,
+mitochondrial function, sarcoplasmic protein syn-
+thesis, and diurnal rhythms. Mol Metab. 2021;43:
+101110.
+7.
+Pisani MA, D’Ambrosio C. Sleep and delirium in
+adults who are critically ill: a contemporary review.
+Chest. 2020;157(4):977–84.
+8.
+Chouchou F, Khoury S, Chauny JM, Denis R, Lavi-
+gne GJ. Postoperative sleep disruptions: a potential
+catalyst of acute pain? Sleep Med Rev. 2014;18(3):
+273–82.
+9.
+Miller MW, Lin AP, Wolf EJ, Miller DR. Oxidative
+stress,
+inﬂammation,
+and
+neuroprogression
+in
+chronic PTSD. Harv Rev Psychiatry. 2018;26(2):
+57–69.
+10.
+Palagini L, Geoffroy PA, Miniati M, et al. Insomnia,
+sleep loss, and circadian sleep disturbances in mood
+disorders: a pathway toward neurodegeneration
+and neuroprogression? a theoretical review. CNS
+Spectr. 2022;27(3):298–308.
+11.
+Gulec M, Ozkol H, Selvi Y, et al. Oxidative stress in
+patients with primary insomnia. Prog Neuropsy-
+chopharmacol Biol Psychiatry. 2012;37(2):247–51.
+12.
+Atrooz F, Salim S. Sleep deprivation, oxidative stress
+and inﬂammation. Adv Protein Chem Struct Biol.
+2020;119:309–36.
+13.
+Vaccaro A, Kaplan Dor Y, Nambara K, et al. Sleep
+loss can cause death through accumulation of
+reactive
+oxygen
+species
+in
+the
+gut.
+Cell.
+2020;181(6):1307-28 e1315.
+14.
+Villafuerte
+G,
+Miguel-Puga
+A,
+Rodriguez
+EM,
+Machado S, Manjarrez E, Arias-Carrion O. Sleep
+deprivation and oxidative stress in animal models:
+a
+systematic
+review.
+Oxid
+Med
+Cell
+Longev.
+2015;2015: 234952.
+15.
+Xue R, Wan Y, Sun X, Zhang X, Gao W, Wu W.
+Nicotinic mitigation of neuroinﬂammation and
+oxidative stress after chronic sleep deprivation.
+Front Immunol. 2019;10:2546.
+16.
+Salehabadi
+A,
+Farkhondeh
+T,
+Hariﬁ-Mood
+MS,
+Aschner M, Samarghandian S. Role of Nrf2 in
+bisphenol effects: a review study. Environ Sci Pollut
+Res Int. 2022;29(37):55457–72.
+17.
+Ren X, Xu Y, Yu Z, Mu C, Liu P, Li J. The role of Nrf2
+in mitigating cadmium-induced oxidative stress of
+Marsupenaeus japonicus. Environ Pollut. 2021;269:
+116112.
+Pain Ther (2023) 12:707–722
+719
+
+
+=== PDF PAGE 14 ===
+18.
+Tu W, Wang H, Li S, Liu Q, Sha H. The anti-in-
+ﬂammatory and anti-oxidant mechanisms of the
+Keap1/Nrf2/ARE signaling pathway in chronic dis-
+eases. Aging Dis. 2019;10(3):637–51.
+19.
+Spiers JG, Breda C, Robinson S, Giorgini F, Steinert
+JR. Drosophila Nrf2/Keap1 mediated redox signal-
+ing supports synaptic function and longevity and
+impacts on circadian activity. Front Mol Neurosci.
+2019;12:86.
+20.
+Wible RS, Ramanathan C, Sutter CH, et al. NRF2
+regulates core and stabilizing circadian clock loops,
+coupling redox and timekeeping in Mus musculus.
+Elife. 2018;7.
+21.
+Wang W, Yang L, Liu T, et al. Corilagin ameliorates
+sleep deprivation-induced memory impairments by
+inhibiting NOX2 and activating Nrf2. Brain Res
+Bull. 2020;160:141–9.
+22.
+Lu Z, Wang Q, Sun X, et al. Transcutaneous elec-
+trical acupoint stimulation before surgery reduces
+chronic pain after mastectomy: a randomized clin-
+ical trial. J Clin Anesth. 2021;74: 110453.
+23.
+Gao W, Li W, Yan Y, et al. Transcutaneous electrical
+acupoint
+stimulation
+applied
+in
+lower
+limbs
+decreases the incidence of paralytic ileus after col-
+orectal surgery: a multicenter randomized con-
+trolled trial. Surgery. 2021;170(6):1618–26.
+24.
+Gao J, Li Y. Multiple functions of transcutaneous
+electrical acupoint stimulation in peri-anesthesia
+period. Zhongguo Zhen Jiu. 2015;35(3):269–73.
+25.
+Chen X, Chen X, Chen B, et al. Electroacupuncture
+enhances gastric accommodation via the auto-
+nomic and cytokine mechanisms in functional
+dyspepsia. Dig Dis Sci. 2023;68(1):98–105.
+26.
+Zeng Y, Chen F. Efﬁcacy of electroacupuncture
+compared with transcutaneous electrical stimula-
+tion for severe chronic constipation: a randomized
+controlled
+pilot
+trial.
+J
+Clin
+Gastroenterol.
+2022;56(10):875–80.
+27.
+Xiao Y, Xu F, Lin L, Chen JDZ. Transcutaneous
+electrical acustimulation improves constipation by
+enhancing rectal sensation in patients with func-
+tional constipation and lack of rectal sensation.
+Clin Transl Gastroenterol. 2022;13(5): e00485.
+28.
+Mollayeva T, Thurairajah P, Burton K, Mollayeva S,
+Shapiro CM, Colantonio A. The Pittsburgh sleep
+quality index as a screening tool for sleep dysfunc-
+tion in clinical and non-clinical samples: a sys-
+tematic review and meta-analysis. Sleep Med Rev.
+2016;25:52–73.
+29.
+Soldatos CR, Dikeos DG, Paparrigopoulos TJ. The
+diagnostic validity of the Athens Insomnia Scale.
+J Psychosom Res. 2003;55(3):263–7.
+30.
+Jiang Z, Zhou G, Song Q, Bao C, Wang H, Chen Z.
+Effect of intravenous oxycodone in combination
+with different doses of dexmedetomdine on sleep
+quality and visceral pain in patients after abdomi-
+nal surgery: a randomized study. Clin J Pain.
+2018;34(12):1126–32.
+31.
+Huang BH, Duncan MJ, Cistulli PA, Nassar N,
+Hamer M, Stamatakis E. Sleep and physical activity
+in relation to all-cause, cardiovascular disease and
+cancer mortality risk. Br J Sports Med. 2022;56(13):
+718–24.
+32.
+Sutton EL. Insomnia. Ann Intern Med. 2021;174(3):
+ITC33-48.
+33.
+Zhang M, Zhao J, Li X, et al. Effectiveness and safety
+of acupuncture for insomnia: protocol for a sys-
+tematic review. Medicine (Baltimore). 2019;98(45):
+e17842.
+34.
+Song B, Chang Y, Li Y, Zhu J. Effects of transcuta-
+neous electrical acupoint stimulation on the post-
+operative sleep quality and pain of patients after
+video-assisted thoracoscopic surgery: a prospective,
+randomized controlled trial. Nat Sci Sleep. 2020;12:
+809–19.
+35.
+Xing R, Yang Y, Zhang M, et al. Effect of transcu-
+taneous electrical acupoint stimulation combined
+with transversus abdominis plane block on post-
+operative recovery in elderly patients undergoing
+laparoscopic gastric cancer surgery: a randomized
+controlled trial. Pain Ther. 2022;11(4):1327–39.
+36.
+Li Q, Zhu ZY, Lu J, et al. Sleep deprivation of rats
+increases postsurgical expression and activity of
+L-type calcium channel in the dorsal root ganglion
+and slows recovery from postsurgical pain. Acta
+Neuropathol Commun. 2019;7(1):217.
+37.
+Song B, Luo M, Zhu J. The efﬁcacy of acupuncture
+in postoperative sleep quality: a literature review.
+Sleep Breath. 2021;25(2):571–7.
+38.
+Haack M, Simpson N, Sethna N, Kaur S, Mullington
+J. Sleep deﬁciency and chronic pain: potential
+underlying mechanisms and clinical implications.
+Neuropsychopharmacology. 2020;45(1):205–16.
+39.
+Letzen JE, Remeniuk B, Smith MT, Irwin MR, Finan
+PH, Seminowicz DA. Individual differences in pain
+sensitivity are associated with cognitive network
+functional connectivity following one night of
+experimental sleep disruption. Hum Brain Mapp.
+2020;41(3):581–93.
+720
+Pain Ther (2023) 12:707–722
+
+
+=== PDF PAGE 15 ===
+40.
+Wick EC, Grant MC, Wu CL. Postoperative multi-
+modal analgesia pain management with nonopioid
+analgesics and techniques: a review. JAMA Surg.
+2017;152(7):691–7.
+41.
+Rakel B, Frantz R. Effectiveness of transcutaneous
+electrical nerve stimulation on postoperative pain
+with movement. J Pain. 2003;4(8):455–64.
+42.
+Lao L, Zhang G, Wei F, Berman BM, Ren K. Electro-
+acupuncture
+attenuates
+behavioral
+hyperalgesia
+and selectively reduces spinal Fos protein expres-
+sion in rats with persistent inﬂammation. J Pain.
+2001;2(2):111–7.
+43.
+Sun K, Xing T, Zhang F, et al. Perioperative tran-
+scutaneous
+electrical
+acupoint
+stimulation
+for
+postoperative pain relief following laparoscopic
+surgery: a randomized controlled trial. Clin J Pain.
+2017;33(4):340–7.
+44.
+Alam A, Hana Z, Jin Z, Suen KC, Ma D. Surgery,
+neuroinﬂammation
+and
+cognitive
+impairment.
+EBioMedicine. 2018;37:547–56.
+45.
+Bian H, Wang G, Huang J, et al. Dihydrolipoic acid
+protects
+against
+lipopolysaccharide-induced
+behavioral deﬁcits and neuroinﬂammation via reg-
+ulation
+of
+Nrf2/HO-1/NLRP3
+signaling
+in
+rat.
+J Neuroinﬂamm. 2020;17(1):166.
+46.
+Irwin MR. Sleep and inﬂammation: partners in
+sickness
+and
+in
+health.
+Nat
+Rev
+Immunol.
+2019;19(11):702–15.
+47.
+Besedovsky L, Lange T, Haack M. The sleep-immune
+crosstalk
+in
+health
+and
+disease.
+Physiol
+Rev.
+2019;99(3):1325–80.
+48.
+Atrooz F, Liu H, Kochi C, Salim S. Early life sleep
+deprivation: role of oxido-inﬂammatory processes.
+Neuroscience. 2019;406:22–37.
+49.
+Arjmandi-Rad S, Zarrindast MR, Shadfar S, Nasehi
+M. The role of sleep deprivation in streptozotocin-
+induced Alzheimer’s disease-like sporadic dementia
+in rats with respect to the serum level of oxidative
+and
+inﬂammatory
+markers.
+Exp
+Brain
+Res.
+2022;240(12):3259–70.
+50.
+Irwin MR, Olmstead R, Carroll JE. Sleep distur-
+bance, sleep duration, and inﬂammation: a sys-
+tematic review and meta-analysis of cohort studies
+and experimental sleep deprivation. Biol Psychia-
+try. 2016;80(1):40–52.
+51.
+Imeri L, Opp MR. How (and why) the immune
+system
+makes
+us
+sleep.
+Nat
+Rev
+Neurosci.
+2009;10(3):199–210.
+52.
+Zielinski
+MR,
+Gibbons
+AJ.
+Neuroinﬂammation,
+sleep, and circadian rhythms. Front Cell Infect
+Microbiol. 2022;12: 853096.
+53.
+da Silva TAM, Kaulbach HC, Chuidian FS, Lambert
+DR, Suffredini AF, Danner RL. Brief report: shock
+and multiple-organ dysfunction after self-adminis-
+tration of Salmonella endotoxin. N Engl J Med.
+1993;328(20):1457–60.
+54.
+Goes AC, Pinto FM, Fernandes GC, et al. Elec-
+troacupuncture
+ameliorates
+experimental
+colitis
+induced by TNBS through activation of interleukin-
+10 and inhibition of iNOS in mice. Acta Cir Bras.
+2014;29(12):787–93.
+55.
+Petti FB, Liguori A, Ippoliti F. Study on cytokines IL-
+2, IL-6, IL-10 in patients of chronic allergic rhinitis
+treated with acupuncture. J Tradit Chin Med.
+2002;22(2):104–11.
+56.
+Li G, Li S, Wang B, An L. The effect of elec-
+troacupuncture on postoperative immunoinﬂam-
+matory
+response
+in
+patients
+undergoing
+supratentorial
+craniotomy.
+Exp
+Ther
+Med.
+2013;6(3):699–702.
+57.
+Bishir M, Bhat A, Essa MM, et al. Sleep deprivation
+and
+neurological
+disorders.
+Biomed
+Res
+Int.
+2020;2020:5764017.
+58.
+Wang T, Wang HL, Liu R, et al. Early-life stress alters
+sleep structure and the excitatory-inhibitory bal-
+ance in the nucleus accumbens in aged mice. Chin
+Med J (Engl). 2019;132(13):1582–90.
+59.
+Kempf A, Song SM, Talbot CB, Miesenbock G. A
+potassium
+channel
+beta-subunit
+couples
+mito-
+chondrial
+electron
+transport
+to
+sleep.
+Nature.
+2019;568(7751):230–4.
+60.
+Bellezza I, Giambanco I, Minelli A, Donato R. Nrf2-
+Keap1 signaling in oxidative and reductive stress.
+Biochim Biophys Acta Mol Cell Res. 2018;1865(5):
+721–33.
+61.
+Sul OJ, Ra SW. Quercetin prevents LPS-induced
+oxidative stress and inﬂammation by modulating
+NOX2/ROS/NF-kB in Lung epithelial cells. Mole-
+cules. 2021;26(22):6949.
+62.
+Saha S, Buttari B, Panieri E, Profumo E, Saso L. An
+overview of Nrf2 signaling pathway and its role in
+inﬂammation. Molecules. 2020;25(22):5474.
+63.
+Rushworth SA, Shah S, MacEwan DJ. TNF mediates
+the sustained activation of Nrf2 in human mono-
+cytes. J Immunol. 2011;187(2):702–7.
+64.
+Kobayashi EH, Suzuki T, Funayama R, et al. Nrf2
+suppresses macrophage inﬂammatory response by
+Pain Ther (2023) 12:707–722
+721
+
+
+=== PDF PAGE 16 ===
+blocking proinﬂammatory cytokine transcription.
+Nat Commun. 2016;7:11624.
+65.
+Kong X, Thimmulappa R, Kombairaju P, Biswal S.
+NADPH oxidase-dependent reactive oxygen species
+mediate ampliﬁed TLR4 signaling and sepsis-in-
+duced mortality in Nrf2-deﬁcient mice. J Immunol.
+2010;185(1):569–77.
+66.
+Chen J, Tu Q, Miao S, Zhou Z, Hu S. Transcutaneous
+electrical
+acupoint
+stimulation
+for
+preventing
+postoperative nausea and vomiting after general
+anesthesia: a meta-analysis of randomized con-
+trolled trials. Int J Surg. 2020;73:57–64.
+722
+Pain Ther (2023) 12:707–722

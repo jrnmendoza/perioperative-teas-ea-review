@@ -1,0 +1,1039 @@
+
+=== PDF PAGE 1 ===
+https://doi.org/10.1177/09645284221076517
+Acupuncture in Medicine
+2022, Vol. 40(5) 415­–424
+DOI: 10.1177/09645284221076517
+© The Author(s) 2022 
+Article reuse guidelines:
+sagepub.com/journals-permissions
+journals.sagepub.com/home/aim
+Acupuncture in Medicine, 40(5)
+acupuncture
+IN MEDICINE
+Preoperative electroacupuncture for 
+postoperative nausea and vomiting in 
+laparoscopic gynecological surgery: a 
+randomized controlled trial
+Juan Zhu1*, Sha Li1*, Wenzhong Wu2, Jie Guo1, Xiaoqiu Wang2, 
+Guang Yang1, Zhigang Lu3, Fangbing Ji1, Rong Zou1, 
+Zhen Zheng4
+ and Man Zheng1
+Abstract
+Objective: We aimed to evaluate the effectiveness and safety of preoperative electroacupuncture (EA) on the inci-
+dence of postoperative nausea and vomiting (PONV), and severity of postoperative pain, in gynecological patients 
+undergoing laparoscopic surgery. The effects of EA administered at different preoperative time points were compared.
+Methods: A total of 413 patients undergoing elective laparoscopic gynecological surgery were randomly allocated into 
+4 groups receiving EA the day before surgery (Group Pre, n = 103), 30 min before (Group 30, n = 104) or both (Group 
+Comb, n = 103), or usual care alone (Group Usual, n = 103). All acupuncture groups had usual care. The incidence of 
+PONV and pain at 24 h were primary outcomes. Secondary outcomes included the severity of postoperative nausea, 
+vomiting and pain, requirement for antiemetic medication and quality of recovery (QoR)-15 scores after surgery.
+Results: There were significant differences between the four groups in nausea and vomiting incidence (0–24 h), postop-
+erative antiemetic use (0–48 h), and postoperative pain (0–6 h), with the EA groups recording the lowest levels. Regard-
+ing primary outcomes, incidence of nausea and vomiting at 6-24 h was 28/11/18/11% (p = 0.003) 23/5/8/9% (p < 0.001), 
+respectively, for Groups Usual/Pre/30/Comb. Accordingly, EA reduced the incidence of nausea and vomiting at 6-24 h by 
+61/34/60% and 79/65/61% for Groups Pre/30/Comb, respectively. Regarding secondary outcomes, incidence of nausea and 
+vomiting at 0-6 h was 20/9/11/7% (p = 0.013) and 17/7/9/6% (p = 0.021), respectively, for Groups Usual/Pre/30/Comb. Res-
+cue antiemetics at 0–6 h were required by 18/4/11/4% (p = 0.001) in Groups Usual/Pre/30/Comb. The mean numerical rating 
+scale (NRS) pain score (0–10) at 0–6 h was significantly different between groups (2.45/1.89/2.01/1.97 for Groups Usual/
+Pre/30/Comb, p = 0.024). There were no significant differences between the three EA-treated groups.
+Conclusion: In gynecological patients undergoing laparoscopic surgery and treated with multimodal antiemetic meth-
+ods, one session of preoperative EA may be a safe adjunctive treatment for PONV prophylaxis. Optimal timing of EA 
+requires further verification.
+Trial registration number: ChiCTR-INR-16010035 (Chinese Clinical Trial Registry).
+1Department of Anesthesiology, The Affiliated Hospital of Nanjing 
+University of Chinese Medicine, Nanjing, China
+2Department of Acupuncture, The Affiliated Hospital of Nanjing 
+University of Chinese Medicine, Nanjing, China
+3Key Laboratory of Acupuncture and Medicine Research of Ministry 
+of Education, College of Pharmacy, Nanjing University of Chinese 
+Medicine, Nanjing, China
+4Discipline of Chinese Medicine, School of Health and Biomedical 
+Sciences, World Health Organization Collaborating Centre for 
+Traditional Medicine, RMIT University, Melbourne, VIC, Australia
+*Juan Zhu and Sha Li are joint first authors.
+Corresponding authors:
+Zhen Zheng, Discipline of Chinese Medicine, School of Health and 
+Biomedical Sciences, World Health Organization Collaborating Centre 
+for Traditional Medicine, RMIT University, PO BOX 71, Bundoora, 
+Melbourne, VIC 3083, Australia. 
+Email: zhen.zheng@rmit.edu.au
+Man Zheng, Department of Anesthesiology, The Affiliated Hospital of 
+Nanjing University of Chinese Medicine, 155 Hanzhong Road, Nanjing 
+210029, China. 
+Email: man_zheng@sina.com
+1076517 AIM
+Acupuncture in MedicineZhu et al.
+Original paper
+
+
+=== PDF PAGE 2 ===
+416 
+Acupuncture in Medicine 
+Acupuncture in Medicine, 40(5)
+Keywords
+acupuncture, anesthetics, clinical trials, electroacupuncture, general anesthesia, gynecology, therapeutics
+Accepted: 5 January 2022
+Introduction
+Postoperative nausea and vomiting (PONV) is a frequent 
+and unpleasant complaint after anesthesia, affecting 20%–
+30% of patients,1 and up to 80% of high-risk patients.2 
+PONV and postoperative pain are undesirable for both 
+patients and clinicians,3 and are the leading causes of 
+unplanned admission following laparoscopic gynecological 
+day surgery, leading to higher costs.4 Female sex of patients, 
+laparoscopic surgery, gynecological procedures and opioid 
+analgesia are all independent risk factors for PONV.5,6
+Drug therapies cannot fully relieve PONV and may 
+cause side effects such as sedation and headache.7–9 
+Additional effective non-drug therapies for PONV and 
+postoperative pain enable minimization of pharmacological 
+antiemetics and analgesics, and associated side effects.
+Traditional Chinese medicine holds that acupuncture sup-
+ports homoeostasis and minimizes the disturbances to normal 
+function caused by surgery.10–12 Studies in human populations 
+have shown that perioperative acupuncture minimized the 
+elevation of serum serotonin,13 disrupted sympathoadrenal 
+responses14 resulting from surgery, and reduced postoperative 
+pain intensity and opioid analgesic consumption.15–17
+Acupuncture has been included in international man-
+agement guidelines for PONV management as the only 
+non-pharmacological intervention.9,18 A 2015 Cochrane 
+systematic review of 59 trials found that stimulation at the 
+traditional acupuncture point location PC6 (Neiguan) was 
+significantly better than sham acupuncture and reduced 
+both PONV incidence and the requirement for “rescue” 
+antiemetic treatment by one third.19,20 Despite low-quality 
+evidence, the review stated that further sham acupuncture 
+trials would not change the conclusion that acupuncture 
+effectively reduces PONV. It recommended that further tri-
+als should compare the effects of acupuncture plus multi-
+ple antiemetic interventions with the latter alone.
+Our pilot study in 40 patients at moderate to high risk of 
+PONV found that, under best anesthesia practice, one in five 
+patients at high risk still experienced PONV and that addi-
+tional acupuncture could provide significant relief for this 
+cohort.21 Acupuncture provided 24 h before surgery resulted 
+in 25% and 75% reductions in postoperative nausea (PON) 
+and postoperative vomiting (POV), respectively.
+Few studies have evaluated the optimal timing or dosage 
+of acupuncture on post-surgical recovery, and results have 
+been inconsistent.12,22,23 Acupuncture was delivered 30 min 
+prior to surgery in many trials,24–26 but may be stressful to 
+patients as it is close to the time of surgery. Acupuncture 
+one day before surgery produced better pain reduction than 
+30 min prior in a previous study27 and was well accepted by 
+both clinicians and patients in our feasibility study. It is not 
+known whether effectiveness would be increased when 
+combined with a second session 30 min prior to surgery; 
+however, two sessions were found to be necessary to allevi-
+ate chronic insomnia.28
+Herein, we conducted a single-center, four-arm rand-
+omized, controlled study in patients undergoing elective 
+laparoscopic gynecological surgery with multimodal 
+antiemetic prophylaxis. We aimed to: (1) evaluate the addi-
+tional effects of preoperative electroacupuncture (EA) on 
+PON and POV, and postoperative pain, compared with 
+multimodal antiemetics alone; and (2) compare the effects 
+of EA administered 24 h or 30 min before surgery, or a com-
+bination of both, on PONV and pain.
+Methods
+This study was reviewed and approved by the Human 
+Research Ethics Committee of the Affiliated Hospital of 
+Nanjing University of Traditional Chinese Medicine 
+(2016NL-019-02), and registered with the Chinese Clinical 
+Trial Registry at http://www.chictr.org.cn/listbycreater.
+aspx (ref. ChiCTR-INR-16010035) on 29 November 2016. 
+All participants in the study were voluntary, understood the 
+procedures, and provided written consent. The study hospi-
+tal is a 2500-bed teaching hospital in Nanjing. More 
+detailed methods are available in the published protocol.29
+Sample size calculation was based on the primary aim of 
+this study, which was to evaluate the additional effects of 
+preoperative EA on PONV, compared with modern multi-
+modal antiemetics alone. According to our pilot study,21 we 
+estimated that 75 participants per group would be needed to 
+detect a 15% reduction in vomiting with 80% power using 
+the following formula:
+n
+pq
+p q
+p q
+p
+p
+=
++
++
+(
+)
+−
+(
+)
+1 96 2
+0 8416
+0
+0
+1 1
+2
+1
+0
+2
+.
+.
+q
+p
+q
+p
+p
+p
+p
+q
+p
+0
+0
+1
+1
+0
+1
+1
+1
+2
+1
+= −
+= −
+=
++
+= −
+
+
+
+
+,
+,
+,
+where n represents the sample size of usual care and EA 
+groups, and p0 and p1 represent the incidence of vomiting in 
+the two groups. Anticipating a 35% potential loss due to 
+conversion to open surgery, we estimated that a total of 103 
+participants per group would be needed.
+Participants and study design
+Between December 2016 and February 2018, 420 patients 
+scheduled for elective laparoscopic gynecological surgery 
+
+
+=== PDF PAGE 3 ===
+Zhu et al. 
+417
+Acupuncture in Medicine, 40(5)
+were screened for eligibility. The inclusion criteria were: 
+American Society of Anesthesiologists (ASA) class I or II; 
+general anesthesia; female sex; age 18–60 years; non-
+smoking; body mass index 20–30 kg/m2; undergoing lapa-
+roscopic hysterectomy, myomectomy, oophorectomy, 
+salpingoopherectomy or ovarian cystectomy. Exclusion 
+criteria were pregnancy or breastfeeding; psychiatric disor-
+ders; substance abuse; chronic pain syndromes; use of 
+antiemetic, opioid or glucocorticoid medications within 
+3 days of surgery; nausea or vomiting within 24 h of sur-
+gery; cardiac pacemaker; infection near the planned nee-
+dling sites; surgery lasting over 3 h; conversion to an open 
+procedure; or intraoperative bowel damage. The number of 
+PONV risk factors was calculated using the simplified 
+Apfel score.30 The four risk factors are: female gender; 
+non-smoking status; history of PONV or motion sickness; 
+and postoperative opioids (with a score of 0 representing no 
+risk and 4 the highest risk). For every additional risk factor, 
+the likelihood of PONV increases by 20%.
+Eligible participants were randomly assigned to one of 
+the following four groups using a computer-generated ran-
+domization sequence and secure code: (1) Group Pre, who 
+received EA the day before surgery; (2) Group 30, who 
+received EA 30 min before surgery; (3) Group Comb, who 
+received EA both the day before and 30 min before surgery; 
+and (4) Group Usual, who received usual care. EA was 
+given on the ward the day prior to surgery, and in the Pre-
+anesthesia Care Unit 30 min before surgery, since surgical 
+patients in China are routinely admitted to hospital 1–2 days 
+prior to surgery. Each number was printed and stored in 
+sequentially numbered, opaque, sealed envelopes. Eligible 
+participants chose one envelope, which was opened by the 
+acupuncturist who recorded the treatment allocation and 
+provided the relevant procedure. Participants were 
+instructed not to disclose their treatment.
+Neither the anesthetists/surgeons nor the assessors were 
+aware of the group allocation. Patients undergoing surgery on 
+the same day were allocated to different rooms on the ward 
+before surgery. All clinical outcome measures were conducted 
+by a research nurse who was blinded to group allocation.
+Acupuncture was administered at bilateral PC6, 2 cun or 
+three finger breadths proximal to the wrist crease on the 
+medial forearm, and ST36 (Zusanli), 3 cun or four finger 
+breaths distal to the base of patella and one finger breadth 
+lateral to the anterior border of the tibia.31 Point locations 
+were selected based on Chinese medicine theory, previous 
+trials and our feasibility study.21,32,33 After skin disinfection, 
+stainless steel acupuncture needles (Suzhou Medical 
+Supplies Factory Co. Ltd, 0.30x40 mm, China) were 
+inserted by a doctor qualified in acupuncture and both 
+Chinese and Western medicine, and manipulated until the 
+patient reported de qi sensation (a radiating feeling of 
+swelling or heaviness). The electrodes were connected 
+from PC6 to ST36. An electric current was delivered for 
+30 min in dense-disperse mode (20–100 Hz) using a 
+stimulator 
+(XS-998B, 
+Nanjing 
+Xiaosong 
+Medical 
+Instrument Research Institute, Nanjing, China) at a level 
+where participants reported a strong but not painful sensa-
+tion. Participants in the usual care group received no EA. 
+All EA groups also received usual care.
+Before induction of anesthesia and during surgery, elec-
+trocardiography, heart rate, pulse oximetry, non-invasive 
+arterial pressure, bispectral index (BIS) and end tidal carbon 
+dioxide (CO2) were monitored continuously. General anes-
+thesia was induced with intravenous midazolam 0.05 mg/kg, 
+propofol 2–3 mg/kg, sufentanil 0.2–0.4 µg/kg, vecuronium 
+0.1 mg/kg, and lidocaine 1 mg/kg. Total intravenous anesthe-
+sia with continuous propofol and remifentanil was used for 
+anesthesia maintenance. Intermittent sufentanil and vecuro-
+nium were given as required. BIS ranged from 40 to 65. 
+Volume-controlled ventilation was used and regulated to 
+maintain end-tidal CO2 between 4.3 and 5.1 kPa. 
+Dexamethasone 5 mg and tropisetron 5 mg were adminis-
+tered at induction and immediately after skin closure, respec-
+tively, to prevent PONV in all groups. Intravenous parecoxib 
+40 mg was used for adjunctive pain management at the end 
+of surgery. Patients were extubated when adequate spontane-
+ous ventilation was established. Flurbiprofen 100 mg was 
+administered when the numerical rating scale (NRS) pain 
+score was >3, and metoclopramide 10 mg was infused as an 
+antiemetic “rescue” therapy to any patient who experienced 
+nausea, vomiting or both, and requested medication.
+Outcome assessments
+Patients were followed up while remaining in hospital 6, 
+24, 48 and 72 h after surgery. The primary outcome meas-
+ures were the incidence of PON and POV at 6–24 h after 
+surgery, and pain on movement at 24 h. All patients were 
+asked “did you feel nauseous/did you vomit in the time 
+period since the last consultation?” The rate of reduction in 
+PON and POV was calculated as: (incidence in Group 
+Usual − incidence in EA groups)/incidence in Group Usual. 
+A NRS (0–10) was used to rate pain, with 0 indicating no 
+pain, and 10 the worst possible pain.
+The secondary outcomes included severity of PON and 
+POV; number of patients requiring postoperative rescue 
+antiemetics and analgesics at 0–6 h, 6–24 h, 24–48 h and 48–
+72 h after surgery; and incidence of PON and POV at 0–6 h, 
+24–48 h and 48–72 h. Severity of nausea and vomiting were 
+separately assessed using a 4-point Likert-type severity 
+scale, where 0 = no nausea or vomiting, and 3 = the worst 
+imaginable nausea or vomiting, as in a previous study.34
+Other secondary outcome measures were the time inter-
+val between the end of surgery and first flatus, and the vali-
+dated Quality of Recovery-15 (QoR-15) questionnaire.35
+Any adverse events of acupuncture such as pain, infec-
+tion, bleeding and fainting during the procedure15 were 
+recorded by the acupuncturist at the end of the treatment 
+and on the following two days.
+
+
+=== PDF PAGE 4 ===
+418 
+Acupuncture in Medicine 
+Acupuncture in Medicine, 40(5)
+Missing data and statistical analysis
+An expectation-maximization procedure was used to deal 
+with missing data, as a method to “best guess the missing 
+value based on the specific model and the existing data 
+points.”36
+The Statistical Package for the Social Sciences (SPSS) 
+for Windows version 19.0 (SPSS Inc., Chicago, IL, USA) 
+was used to analyze the data. Normality of the data was 
+tested by Kolmogorov–Smirnov analysis. Continuous vari-
+ables with complete or approximately normal distribution 
+are presented as mean ± standard deviation (SD). Chi-
+square test or Fisher’s exact tests were used to examine the 
+differences between groups in categorical variables, and 
+analysis of variance (ANOVA) or the Kruskal–Wallis test 
+was used to compare descriptive continuous data among 
+groups. A Bonferroni correction was performed when mul-
+tiple paired comparisons were conducted. All reported p 
+values were two-sided and p < 0.05 was considered statisti-
+cally significant, except for the three primary outcome 
+measures, for which the p value for statistical significance 
+was adjusted to 0.017 to account for multiple testing.
+Results
+A total of 413 patients were enrolled and randomly allo-
+cated to the 4 groups, and 400 patients completed the study. 
+Thirteen patients were excluded because they were lost to 
+follow-up (n = 3), did not complete the acupuncture inter-
+vention (n = 2), or converted to open surgery (n = 8). The 
+flow chart of the study is shown in Figure 1.
+There were no differences between groups in preopera-
+tive status, Apfel scores, or surgery and anesthesia-related 
+parameters (Table 1).
+Primary outcomes: incidence of PON and 
+POV, and pain at 24 h
+The primary outcomes are shown in Table 2. Incidence of 
+both nausea and vomiting peaked in all four groups between 
+6 h and 24 h postoperatively.
+Between 6 and 24 h, Group Usual reported a nausea rate 
+of 28% and vomiting rate of 23%, while nausea and vomit-
+ing rates in the EA groups Pre/30/Comb were 11/18/11% 
+and 5/8/9%, respectively. Accordingly, EA reduced the 
+incidence of nausea from 6 to 24 h by 61/34/60%, and the 
+incidence of vomiting by 79/65/61%, for Groups Pre/30/
+Comb, respectively. The group differences were statisti-
+cally significant (nausea: p = 0.003, vomiting: p < 0.001).
+Post hoc analyses showed that at 6–24 h the incidence of 
+PON in Groups Pre and Comb were less than half that 
+recorded in Group Usual (Pre vs Usual: p = 0.024; Comb vs 
+Usual: p = 0.024, Bonferroni corrected). Incidence of POV 
+in Group Pre and Group 30 was less than one third of that 
+reported in Group Usual (Pre vs Usual: p = 0.002, 30 vs 
+Usual: p = 0.034, Bonferroni corrected). There were no 
+Figure 1.  CONSORT (Consolidated Standards of Reporting Trials) flow diagram.
+
+
+=== PDF PAGE 5 ===
+Zhu et al. 
+419
+Acupuncture in Medicine, 40(5)
+Table 1.  Baseline characteristics of patients.
+Variables
+Group Pre 
+(n = 101)
+Group 30 
+(n = 98)
+Group Comb 
+(n = 100)
+Group Usual 
+(n = 101)
+p value
+Preoperative factors
+ 
+  Age (years; mean ± SD)
+35.6 ± 8.1
+34.7 ± 7.6
+35.3 ± 8.2
+35.7 ± 8.0
+0.526
+  BMI (kg/m2; mean ± SD)
+22.9 ± 3.13
+22.7 ± 3.32
+22.7 ± 2.96
+22.97 ± 3.43
+0.529
+  ASA physical status
+0.966
+    I
+21
+22
+22
+24
+–
+    II
+80
+76
+78
+77
+–
+  Apfel score (mean ± SD)
+2.5 ± 0.50
+2.4 ± 0.53
+2.3 ± 0.48
+2.28 ± 0.45
+0.089
+Surgical and anesthesia-related information
+Type of surgery
+0.981
+  Hysterectomy or myomectomy (n)
+45
+41
+46
+45
+–
+  Salpingoopherectomy, oophorectomy or ovarian cystectomy (n)
+56
+57
+54
+56
+–
+Duration of surgery (min; mean ± SD)
+63 ± 26.4
+6.7 ± 26.4
+6.9 ± 32.2
+69 ± 32.8
+0.275
+Intraoperative sufentanil (µg; mean ± SD)
+38.1 ± 4.97
+39.1 ± 4.83
+39.0 ± 5.12
+37.8 ± 4.87
+0.892
+Intraoperative remifentanil (mg; mean ± SD)
+0.58 ± 0.23
+0.58 ± 0.23
+0.50 ± 0.25
+0.57 ± 0.26
+0.948
+Intravenous fluid (mL; mean ± SD)
+1090 ± 253.5
+1096 ± 230.9
+1104 ± 282.4
+1121 ± 256.1
+0.874
+SD: standard deviation; BMI: body mass index; ASA: American Society of Anesthesiologists.
+
+
+=== PDF PAGE 6 ===
+420 
+Acupuncture in Medicine 
+Acupuncture in Medicine, 40(5)
+Table 2.  Incidence and severity of postoperative nausea and vomiting, and incidence of requiring antiemetics after surgery.
+Variables
+Group Pre 
+(n = 101)
+Group 30 
+(n = 98)
+Group Comb 
+(n = 100)
+Group Usual 
+(n = 101)
+F
+DF
+p value
+Primary outcomes (6–24 h after surgery)
+  Nausea (n)
+11#
+18
+11#
+27
+0.003**
+  Vomiting (n)
+5##
+8#
+9
+22
+<0.001**
+Secondary outcomes
+  0–6 h after surgery
+    Nausea (n)
+9
+11
+7#
+20
+0.013*
+    Vomiting (n)
+7
+9
+6
+17
+0.021*
+    Nausea (mean ± SD)
+0.20 ± 0.68
+0.22 ± 0.67
+0.14 ± 0.53#
+0.46 ± 0.95
+3.677
+400
+0.012*
+    Vomiting (mean ± SD)
+0.16 ± 0.61
+0.18 ± 0.63
+0.11 ± 0.47#
+0.36 ± 0.79
+2.851
+400
+0.037*
+    Antiemetic requirement (n)
+4#
+11
+4#
+18
+0.001**
+  6–24 h after surgery
+    Nausea (mean ± SD)
+0.22 ± 0.66#
+0.34 ± 0.76
+0.20 ± 0.60#
+0.50 ± 0.88
+3.735
+400
+0.011
+    Vomiting (mean ± SD)
+0.12 ± 0.53#
+0.15 ± 0.54#
+0.20 ± 0.67
+0.41 ± 0.80
+3.989
+400
+0.008
+    Antiemetic requirement (n)
+8##
+16
+9##
+28
+<0.001**
+  24–48 h after surgery
+    Nausea (n)
+2
+2
+2
+7
+0.164
+    Vomiting (n)
+1
+2
+1
+5
+0.307
+    Nausea (mean ± SD)
+0.04 ± 0.28
+0.03 ± 0.22
+0.04 ± 0.28
+0.12 ± 0.45
+1.647
+400
+0.178
+    Vomiting (mean ± SD)
+0.02 ± 0.20
+0.02 ± 0.14
+0.02 ± 0.20
+0.08 ± 0.37
+1.500
+400
+0.214
+    Antiemetic requirement (n)
+1
+2
+1
+7
+0.045*
+SD: standard deviation; PON: postoperative nausea; POV: postoperative vomiting.
+*p < 0.05, **p < 0.01 between groups (*p < 0.025, **p < 0.005 for primary outcomes after correction); #p < 0.05, ##p < 0.01 when compared with Group Usual. At 48–72 h after surgery, the incidence 
+of PON and POV was zero in all groups.
+
+
+=== PDF PAGE 7 ===
+Zhu et al. 
+421
+Acupuncture in Medicine, 40(5)
+significant differences among the EA groups. Moreover, at 
+48–72 h after surgery, the incidence of PON and POV was 
+zero in all groups (data not shown).
+Severity of pain (Table 3) was mild over 72 h with high-
+est levels at 0–6 h. Only a couple of patients in each group 
+required analgesics. There was no difference between the 
+three EA groups in intensity of pain on movement at 24 h.
+Secondary outcome measures
+Tables 2 and 3 list the results of secondary outcome meas-
+ures. Incidence of nausea in Group Usual at 0–6 h was 21%, 
+with 18% experiencing vomiting. EA groups Pre/30/Comb 
+reported rates of nausea and vomiting of 9/11/7% and 
+7/9/6%, respectively. Accordingly, EA reduced the inci-
+dence of nausea and vomiting from 0 to 6 h by 57/46/66% 
+and 61/48/66%, respectively, for Groups Pre/30/Comb 
+when compared with Group Usual. The four groups were 
+significantly different in incidence of nausea (p = 0.013) 
+and vomiting (p = 0.021).
+An intention-to-treat analysis was performed on PON and 
+POV incidence at 0–6 h and 6–24 h including all 405 patients 
+who were randomized and did not convert to open surgery 
+(Supplemental Table 1). The results were similar to the per-
+protocol analysis as reported above (Supplemental Table 2).
+Significant differences in the number of patients requir-
+ing rescue antiemetics were shown between the four groups 
+at 0–6 h (p = 0.001) and 6–24 h (p < 0.001) with Group 
+Usual having the highest rate.
+Post hoc analyses showed that antiemetic requirements 
+in Groups Pre and Comb were significantly lower than in 
+Group Usual at 0–6 h (Pre vs Usual: p = 0.012, Comb vs 
+Usual: p = 0.013), and 6–24 h (Pre vs Usual: p = 0.003, 
+Comb vs Usual: p = 0.007).
+There were statistically significant differences between 
+the groups at 0–6 h (p = 0.024) with those receiving usual 
+care recording the highest pain levels. Scores in Group Pre 
+were significantly lower than those in Group Usual 
+(p < 0.05; Table 3). No between-group differences were 
+observed in pain at 48 or 72 h. There were no statistically 
+significant differences between the three EA groups for any 
+other secondary outcomes.
+The time until passage of first flatus exhibited a signifi-
+cant inter-group difference (p = 0.003) with Group Usual 
+having the longest duration (Table 3).
+No significant differences were seen between the four 
+groups in severity of PON or POV, incidence of postopera-
+tive analgesic use, or QoR-15 scores.
+Adverse events
+Three patients in Group Comb experienced pain and itch-
+ing at the needling sites, and two declined the second EA 
+treatment. These minor and tolerable symptoms lasted 
+<2 h, did not cause persistent visible signs, and did not 
+require medical attention. During the 3-day follow-up, no 
+further adverse events were reported.
+Discussion
+In the present single-center, randomized, assessor-blinded 
+clinical study among patients undergoing elective laparo-
+scopic gynecological surgery, preoperative EA stimulation 
+at ST36 and PC6 reduced the incidence of PON and POV at 
+6–24 h by 34%–61% and 61%–79%, respectively, and 
+decreased rescue antiemetic use within 24 h. Early postop-
+erative pain was reduced in the EA groups, as was the time 
+to passage of first flatus. Postoperative pain was mild over-
+all, therefore the differences in pain reduction between 
+groups, while statistically significant for early pain, were 
+not clinically relevant. The discussion hereafter therefore 
+focuses on PONV.
+No significant differences were detected between the 
+three EA groups employing different timings of EA. 
+However, when compared with Group Usual, Group Pre had 
+a consistently lower incidence or severity of PON and POV 
+and a lesser requirement for antiemetics at 6–24 h when 
+PONV peaked.
+Interpretation of findings: the combined 
+intervention of EA and antiemetics
+In our study, the incidence of PON and POV was 28% and 
+23%, respectively, at 6–24 h in the usual care group without 
+EA, which is consistent with the rate of 25%–30% in high-
+risk patients receiving two intraoperative antiemetic drugs 
+as prophylaxis reported in previous studies.37 It is not ideal 
+that more than one quarter of patients still experienced 
+PONV despite a multimodal strategy.
+Combined therapy with acupuncture and modern 
+antiemetics may offer additional reduction for those patients. 
+Indeed, the 2015 Cochrane review concluded that the effect 
+of acupuncture was equivalent to antiemetics.20 However, 
+evidence is lacking as to whether a combination of acupunc-
+ture and antiemetics is better than standard antiemetics 
+alone. Previous studies have provided conflicting evi-
+dence,20,38 and the Cochrane review called for comparative 
+effectiveness studies to examine the additional effect of acu-
+puncture. Our study aimed to address this specific concern.
+The current study found that additional EA further 
+reduced PONV and the requirement for rescue antiemetics. 
+The relative reductions in Group Pre were 67%, 78% and 
+80% for PON, POV and medication use, respectively, com-
+pared to Group Usual. As the usual care group did not receive 
+sham acupuncture, the reduction could be considered to be 
+due to the placebo effect. The effect size seen in our study is 
+arguably, however, too large to be explained simply by pla-
+cebo. Very few studies have examined the difference between 
+sham acupuncture and non-acupuncture.39 One study40 
+found, at 24 h, that PON, POV and requirements for rescue 
+
+
+=== PDF PAGE 8 ===
+422 
+Acupuncture in Medicine 
+Acupuncture in Medicine, 40(5)
+Table 3.  Severity of postoperative pain on movement (NRS), analgesic requirements, time to passage of first flatus after surgery and QoR score.
+Variable
+Group Pre 
+(n = 101)
+Group 30 
+(n = 98)
+Group Comb 
+(n = 100)
+Group Usual 
+(n = 101)
+F
+DF
+p value
+Primary outcomes (6–24 h after surgery)
+  Pain at 6–24 h (mean ± SD)
+1.15 ± 1.02
+1.12 ± 1.03
+1.17 ± 1.17
+1.44 ± 1.30
+1.642
+400
+0.179
+Secondary outcomes
+  Pain at 0–6 h (mean ± SD)
+1.89 ± 1.47#
+2.01 ± 1.25
+1.97 ± 1.25
+2.45 ± 1.6
+3.186
+400
+0.024*
+  Pain at 24–48 h (mean ± SD)
+0.4 ± 0.76#
+0.54 ± 0.86
+0.5 ± 0.96
+0.73 ± 0.97
+2.512
+400
+0.058
+  Pain at 48–72 h (mean ± SD)
+0.19 ± 0.56
+0.23 ± 0.59
+0.19 ± 0.56
+0.31 ± 0.70
+0.847
+400
+0.469
+  Analgesics 0–48 h after surgery (n)
+2
+3
+1
+3
+–
+  Time to passage of first flatus (h; mean ± SD)
+18.38 ± 6.11##
+18.47 ± 6.47#
+18.82 ± 7.50#
+21.56 ± 8.07
+4.615
+400
+0.003**
+  Overall QoR-15 (mean ± SD)
+142.94 ± 6.82
+144.74 ± 5.21
+144.61 ± 5.35
+144.23 ± 4.95
+2.138
+400
+0.095
+SD: standard deviation; QoR: quality of recovery; NRS: numeric rating scale.
+*p < 0.05, **p < 0.01 between groups; #p < 0.05, ##p < 0.01 when compared with Group Usual.
+medications were 35%, 10% and 25%, respectively, in the 
+sham group and 30%, 25% and 20%, respectively, in the 
+non-acupuncture group. The relative reductions following 
+the sham intervention were −14%, 60% and −25%, respec-
+tively, which are much smaller than those seen in the current 
+study.
+Interpretation of findings: timing of EA
+To our knowledge, no study to date has investigated the 
+effects of two different timing schedules of preoperative 
+EA, or compared one versus two sessions. Although we 
+were not powered to examine equivalence, we found no 
+suggestion that two sessions of EA were superior to one 
+session of EA at any time point, and results were not sig-
+nificantly influenced by the timing of EA. Therefore, a sin-
+gle preoperative EA treatment is recommended. Based on 
+our data, 350 patients would have been required in each 
+group to provide definitive answers regarding the effect of 
+EA timing. Optimal timing is also likely to be influenced by 
+local factors including cost, availability of clinicians, time 
+constraints and cultural acceptance. These considerations 
+should be explored in future studies.
+Gastrointestinal function is an important parameter for 
+postoperative recovery and may promote the prevention of 
+PONV, while PONV reduction may accelerate the recovery 
+of intestinal ileus. EA has been shown to reduce the dura-
+tion of postoperative ileus compared with sham after lapa-
+roscopic surgery for colorectal cancer.41 Therefore, EA may 
+reduce PONV directly, or indirectly by regulating gastroin-
+testinal function. Our study also supported the analgesic 
+effects of preoperative EA, which was similar to our previ-
+ous feasibility study and the conclusions of several system-
+atic reviews.42
+The side effects attributable to EA in our study were 
+minimal and resolved spontaneously. This is an important 
+consideration, since the combination of different analge-
+sics may lead to an increase in adverse effects. Therefore, 
+preoperative EA may be a safe adjunctive antiemetic 
+method.
+Limitations
+This study was limited to one hospital and patients under-
+going a short duration surgery, and our findings may not 
+extend to other procedures or longer durations. However, 
+the adoption of standard anesthesia and EA procedures to 
+patients undergoing a common surgery enhances the repli-
+cability of this study. In addition, since this study focused 
+on patients who were at high risk of PONV, the results are 
+clinically relevant.
+We recorded the incidence of rescue analgesic drug use 
+but not the dosage, which might potentially have shown 
+differences between groups. The sample size was sufficient 
+to observe the effectiveness of preoperative EA in PONV, 
+
+
+=== PDF PAGE 9 ===
+Zhu et al. 
+423
+Acupuncture in Medicine, 40(5)
+but not large enough to detect any differences between EA 
+timing schedules.
+Conclusion
+Preoperative EA significantly decreases the incidence of 
+PONV in patients undergoing laparoscopic gynecologi-
+cal surgery. One session of EA at ST36 and PC6 appears 
+to be a safe adjunctive antiemetic method for PONV 
+prophylaxis. The optimal timing of EA requires further 
+investigation.
+Acknowledgements
+The authors wish to thank Dr Jenny Layton and Dr Ian Weeks for 
+English language editing. We would also like to thank Dr Fei Yu 
+for her assistance with statistics.
+Declaration of conflicting interests
+The authors declared no potential conflicts of interest with respect 
+to the research, authorship, and/or publication of this article.
+Funding
+The authors disclosed receipt of the following financial support 
+for the research, authorship, and/or publication of this article: The 
+present study was supported by the funding of Jiangsu Province 
+hospital of TCM (grant no. H2018107, Y16053), China. Associate 
+Professor Zhen Zheng is funded by an NHMRC (National Health 
+& Medical Research Council) TRIP fellowship (APP1110446), 
+Australia.
+ORCID iD
+Zhen Zheng 
+ https://orcid.org/0000-0001-6777-1166
+Supplemental material
+Supplemental material for this article is available online.
+References
+ 1. Rüsch D, Eberhart LH, Wallenborn J, et al. Nausea and vomiting after 
+surgery under general anesthesia: an evidence-based review concern-
+ing risk assessment, prevention, and treatment. Dtsch Arztebl Int 
+2010; 107(42): 733–741.
+ 2. Apfel CC, Korttila K, Abdalla M, et al. A factorial trial of six interven-
+tions for the prevention of postoperative nausea and vomiting. N Engl 
+J Med 2004; 350: 2441–2451.
+ 3. Macario A, Weinger M, Carney S, et al. Which clinical anesthesia 
+outcomes are important to avoid? The perspective of patients. Anesth 
+Analg 1999; 89(3): 652–658.
+ 4. Hedayati B and Fear S. Hospital admission after day-case gynaeco-
+logical laparoscopy. Br J Anaesth 1999; 83: 776–779.
+ 5. Gan TJ. Risk factors for postoperative nausea and vomiting. Anesth 
+Analg 2006; 102(6): 1884–1898.
+ 6. Yuksek MS, Alici HA, Erdem AF, et al. Comparison of prophylac-
+tic anti-emetic effects of ondansetron and dexamethasone in women 
+undergoing day-case gynecological laparoscopic surgery. J Int Med 
+Res 2003; 31: 481–488.
+ 7. Watcha MF. The cost-effective management of postoperative nausea 
+and vomiting. Anesthesiology 2000; 92: 931–933.
+ 8. Kooij FO, Klok T, Hollmann MW, et al. Decision support increases 
+guideline adherence for prescribing postoperative nausea and vomiting 
+prophylaxis. Anesth Analg 2008; 106(3): 893–898, table of contents.
+ 9. Kovac AL. Update on the management of postoperative nausea and 
+vomiting. Drugs 2013; 73: 1525–1547.
+ 10. Lu Z, Dong H, Wang Q, et al. Perioperative acupuncture modulation: 
+more than anaesthesia. Br J Anaesth 2015; 115(2): 183–193.
+ 11. Gliedt JA, Daniels CJ and Wuollet A. Narrative review of periopera-
+tive acupuncture for clinicians. J Acupunct Meridian Stud 2015; 8(5): 
+264–269.
+ 12. Cheong KB, Zhang JP, Huang Y, et  al. The Effectiveness of acu-
+puncture in prevention and treatment of postoperative nausea and 
+vomiting—a systematic review and meta-analysis. PLoS One 2013; 
+8: e82474.
+ 13. Liu Y, Wang M, Li Q, et al. Impacts of transcutaneous acupoint elec-
+tric stimulation on the postoperative nausea and vomiting and plasma 
+5-HT concentration after cesarean section. Zhongguo Zhen Jiu 2015; 
+35(10): 1039–1043.
+ 14. Kotani N, Hashimoto H, Sato Y, et al. Preoperative intradermal acu-
+puncture reduces postoperative pain, nausea and vomiting, analgesic 
+requirement, and sympathoadrenal responses. Anesthesiology 2001; 
+95(2): 349–356.
+ 15. Sun Y, Gan TJ, Dubose JW, et al. Acupuncture and related techniques 
+for postoperative pain: a systematic review of randomized controlled 
+trials. Br J Anaesth 2008; 101(2): 151–160.
+ 16. Wu MS, Chen KH, Chen IF, et al. The efficacy of acupuncture in post-
+operative pain management: a systematic review and meta-analysis. 
+PLoS One 2016; 11(3): e0150367.
+ 17. Zhu J, Xu Q, Zou R, et al. Distal acupoint stimulation versus peri-
+incisional stimulation for postoperative pain in open abdominal sur-
+gery: a systematic review and implications for clinical practice. BMC 
+Complement Altern Med 2019; 19: 192.
+ 18. Gan TJ, Diemunsch P, Habib AS, et al. Consensus guidelines for the 
+management of postoperative nausea and vomiting. Anesth Analg 
+2014; 118: 85–113.
+ 19. Apfel CC and Kinjo S. Acustimulation of P6: an antiemetic alterna-
+tive with no risk of drug-induced side-effects. Br J Anaesth 2009; 
+102(5): 585–587.
+ 20. Lee A, Chan SK and Fan LT. Stimulation of the wrist acupunc-
+ture point PC6 for preventing postoperative nausea and vomiting. 
+Cochrane Database Syst Rev 2015; 2015(11): CD003281.
+ 21. Li S, Zheng M, Wu W, et al. Effects of electroacupuncture adminis-
+tered 24 hours prior to surgery on postoperative nausea and vomiting 
+and pain in patients undergoing gynecologic laparoscopic surgery: a 
+feasibility study. Explore 2017; 13(5): 313–318.
+ 22. Streitberger K, Diefenbacher M, Bauer A, et al. Acupuncture com-
+pared to placebo-acupuncture for postoperative nausea and vomiting 
+prophylaxis: a randomised placebo-controlled patient and observer 
+blind trial. Anaesthesia 2004; 59(2): 142–149.
+ 23. Frey UH, Scharmann P, Löhlein C, et al. P6 acustimulation effectively 
+decreases postoperative nausea and vomiting in high-risk patients. Br 
+J Anaesth 2009; 102(5): 620–625.
+ 24. Holmér Pettersson P and Wengström Y. Acupuncture prior to surgery 
+to minimise postoperative nausea and vomiting: a systematic review. 
+J Clin Nurs 2012; 21(13–14): 1799–1805.
+ 25. Liu YY, Duan SE, Cai MX, et al. Evaluation of transcutaneous elec-
+troacupoint stimulation with the train-of-four mode for preventing 
+nausea and vomiting after laparoscopic cholecystectomy. Chin J 
+Integr Med 2008; 14(2): 94–97.
+ 26. Wang XQ, Yu JL, Du ZY, et al. Electroacupoint stimulation for post-
+operative nausea and vomiting in patients undergoing supratentorial 
+craniotomy. J Neurosurg Anesthesiol 2010; 22(2): 128–131.
+ 27. Coura LE, Manoel CH, Poffo R, et al. Randomised, controlled study 
+of preoperative electroacupuncture for postoperative pain control 
+after cardiac surgery. Acupunct Med 2011; 29(1): 16–20.
+
+
+=== PDF PAGE 10 ===
+424 
+Acupuncture in Medicine 
+Acupuncture in Medicine, 40(5)
+ 28. Ruan JW, Liao XX, Yan YS, et al. Clinical analysis on coronary and 
+quantitative efficacy of acupuncture in treating chronic insomnia. J 
+Sun Yat-Sen Univ 2008; 29: 448–452.
+ 29. Li S, Yang G, Zheng M, et al. Identifying the optimal timing of preop-
+erative electroacupuncture for postoperative nausea and vomiting and 
+pain in patients undergoing laparoscopic gynecologic surgery: Study 
+protocol for a randomized controlled trial. Eur J Integr Med 2019; 30: 
+100951.
+ 30. Apfel CC, Laara E, Koivuranta M, et al. A simplified risk score for 
+predicting postoperative nausea and vomiting: conclusions from 
+cross-validations between two centers. Anesthesiology 1999; 91(3): 
+693–700.
+ 31. World Health Organization (WHO). WHO standard acupuncture 
+point locations in the Western Pacific Region. Manila, Philippines: 
+WHO, 2008.
+ 32. Lv JQ, Feng RZ and Li N. P6 acupoint stimulation for prevention 
+of postoperative nausea and vomiting in patients undergoing crani-
+otomy: study protocol for a randomized controlled trial. Trials 2013; 
+14: 153.
+ 33. Alizadeh R, Esmaeili S, Shoar S, et  al. Acupuncture in prevent-
+ing postoperative nausea and vomiting: efficacy of two acupunc-
+ture points versus a single one. J Acupunct Meridian Stud 2014; 7: 
+71–75.
+ 34. Lee S, Lee MS, Choi DH, et al. Electroacupuncture on PC6 prevents 
+opioid-induced nausea and vomiting after laparoscopic surgery. Chin 
+J Inteqr Med 2013; 19: 277–281.
+ 35. Stark PA, Myles PS and Burke JA. Development and psychometric 
+evaluation of a postoperative quality of recovery score the QoR-15. 
+Anesthesiology 2013; 118(6): 1332–1340.
+ 36. Al-Sadi M, Newman B and Julious SA. Acupuncture in the preven-
+tion of postoperative nausea and vomiting. Anaesthesia 1997; 52: 
+658–661.
+ 37. Lerman J. Surgical and patient factors involved in postoperative nau-
+sea and vomiting. Br J Anaesth 1992; 69(7 Suppl. 1): 24S–32S.
+ 38. De Oliveira GS Jr, Castro-Alves LJ, Ahmad S, et al. Dexamethasone 
+to prevent postoperative nausea and vomiting: an updated meta-
+analysis of randomized controlled trials. Anesth Analg 2013; 116(1): 
+58–74.
+ 39. Kong JT, Puetz C, Tian L, et al. Effect of Electroacupuncture vs sham 
+treatment on change in pain severity among adults with chronic low 
+back pain: a randomized clinical trial. JAMA Netw Open 2020; 3: 
+e2022787.
+ 40. Alkaissi A, Stålnert M and Kalman S. Effect and placebo effect of 
+acupressure (P6) on nausea and vomiting after outpatient gynaeco-
+logical surgery. Acta Anaesthesiol Scand 1999; 43(3): 270–274.
+ 41. Ziemann-Gimmel P, Goldfarb AA, Koppman J, et al. Opioid-free total 
+intravenous anaesthesia reduces postoperative nausea and vomiting 
+in bariatric surgery beyond triple prophylaxis. Br J Anaesth 2014; 
+112(5): 906–911.
+ 42. Coura LE, Manoel CH, Poffo R, et al. Randomized, controlled study 
+of preoperative electroacupuncture for postoperative pain control 
+after cardiac surgery. Acupunc Med 2011; 29: 16–20.
+
+
+=== PDF PAGE 11 ===
+Copyright of Acupuncture in Medicine is the property of Sage Publications Inc. and its
+content may not be copied or emailed to multiple sites or posted to a listserv without the
+copyright holder's express written permission. However, users may print, download, or email
+articles for individual use.

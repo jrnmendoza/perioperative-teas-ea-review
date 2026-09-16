@@ -1,0 +1,1154 @@
+
+=== PDF PAGE 1 ===
+see related editorial on page x
+Functional GI Disorders
+1026
+The American Journal of Gastroenterology
+ www.nature.com/ajg
+Article
+Volume 113 | July 2018
+Introduction
+The postoperative disturbance is a frequent complication after 
+abdominal surgery which is clinically characterized by delayed 
+passage of gas and stool, resumption of oral feeding, postopera-
+tive ambulation and postoperative pain, and results in prolonged 
+postoperative hospital stay and increased healthcare costs [1–3]. 
+According to the Health Care Financing Administration (HCFA) 
+data, Medicare patients who underwent surgical procedures 
+stayed in the hospital for a total of 1.82 million days (a mean of 
+11.3 days per patient), and cost healthcare industries approxi-
+mately US $1.75 billion during the year of 2000 [4]. It is estimated 
+that the annual healthcare system costs will be reduced by 155 
+million dollars if the hospital stay for each patient is reduced by 1 
+day with the major abdominal colorectal surgeries in the United 
+States [4].
+Pharmacological treatments available for patients after major 
+abdominal surgeries have showed limited effects [5]. Investigations 
+Needleless Transcutaneous Electrical Acustimulation: 
+A Pilot Study Evaluating Improvement in Post-Operative 
+Recovery
+Bo Zhang, MD1,2, Feng Xu, MD3, Pingping Hu, MD3, Mingyuan Zhang, MD4, Kehui Tong, MD4, Gang Ma, MD2,5, Yuemei Xu, MD3, 
+Liang Zhu, MD1 and Jiande D. Z. Chen, PhD2,6
+Background: Functional gastrointestinal disturbance occurs after abdominal surgeries and could last for an 
+extended period of time in some cases. This study was designed (1) to evaluate the effects of 
+needleless transcutaneous electrical acustimulation (TEA) on postoperative recovery, and (2) to 
+investigate the mechanisms involving autonomic function in postoperative patients after removal of 
+gastrointestinal cancers.
+Methods: 
+Forty-two patients (33 male, age: 69.5 ± 1.5 years) scheduled for abdominal surgical removal 
+of gastrointestinal cancers were randomized to TEA (n = 21) and sham-TEA (n = 21). TEA was 
+performed via acupoints ST36 and PC6 1 h twice daily from the postoperative day (POD) 1 to day 3. 
+Sham-TEA was performed at non-acupoints.
+Results: 
+(1) TEA improved major postoperative symptoms by about 30%, including a reduction in time to 
+defecation by 31.7% (P < 0.01 vs. sham-TEA), time to first flatus by 35.9% (P < 0.001), time to 
+ambulation by 42.8% (P < 0.01), time to resuming diet by 26.5% (P < 0.01) and hospital stay 
+by 30% (P < 0.05) as well as pain score by 50% (P < 0.01). (2) TEA significantly increased vagal 
+activity (P < 0.001) and decreased sympathetic activity on POD 4 (P < 0.001) compared with POD 
+1 as well as the serum level of NE (P < 0.05). (3) The vagal activity, high frequency assessed from 
+the spectral analysis of heart rate variability, was negatively correlated with time to resuming diet, 
+whereas the sympathetic measurement, serum norepinephrine was positively correlated with time to 
+resuming diet and time to flatus. (4) TEA but not sham-TEA decreased TNF-α by 17.4% from POD 1 
+to POD 4. (5) TEA was an independent predictor of a shorter hospital stay.
+Conclusions: Needleless TEA improves major postoperative symptoms by enhancing vagal and suppressing 
+sympathetic activities.
+Am J Gastroenterol (2018) 113:1026–1035. https://doi.org/10.1038/s41395-018-0156-y
+1Department of Gastroenterology, Changzheng Hospital affiliated to Second Military Medical University, Shanghai, 200003, China. 2Ningbo Pace Translational 
+Medical Research Center, Ningbo, Zhejiang, China. 3Division of Gastroenterology, Yinzhou Hospital Affiliated to Medical School of Ningbo University, Ningbo, 
+Zhejiang, China. 4Gastroenterology Surgical Department, Yinzhou Hospital Affiliated to Medical School of Ningbo University, Ningbo, Zhejiang, China. 5Department 
+of Gastroenterology, Huai’an First People’s Hospital, Nanjing Medical University, Huai’an, Jiangsu, China. 6Division of Gastroenterology and Hepatology, Johns 
+Hopkins Center for Neurogastroenterology, Baltimore, MD 21224, USA. These authors contributed equally: Bo Zhang, Feng Xu. Correspondence: L.Z. 
+(email: czzhuliang@smmu.edu.cn) or J.D.Z.C. (email: jchen184@jhmi.edu)
+Received 20 November 2017; accepted 30 April 2018; Published online 21 June 2018
+
+
+=== PDF PAGE 2 ===
+Functional GI Disorders
+1027
+Needleless Transcutaneous electrical Acustimulation
+© 2018 The American College of Gastroenterology
+The American Journal of Gastroenterology
+as to whether prokinetics could be used to ameliorate postoperative 
+ileus (POI) have come up with a negative conclusion. In 2008, a 
+Cochrane review included 39 randomized controlled trials (RCTs) 
+and investigated 15 systematic prokinetic drugs but could not 
+identify any beneficial effects on time of first defecation and time 
+of resuming diet after surgeries [6]. In the review, Alvimopan was 
+shown to have a beneficial effect in several studies but the authors 
+found there were many methodological biases. In a recent review, 
+prucalopride was reported to shorten duration of POI and reduce 
+the inflammatory response [7], but multi-center RCTs are needed 
+to investigate which kind of patient would gain the most from this 
+medicine [8].
+It was well known that autonomic neurological dysfunction 
+plays an important role in the progression of impaired gastro-
+intestinal motility [9]. Early studies [10, 11] have shown that 
+abdominal surgery increases sympathetic activity and decreases 
+vagal activity. During the surgery, afferent signals are transmit-
+ted to the brainstem where they trigger an increased autonomic 
+output to the neurons of the intermediolateral column of the 
+thoracic cord, where sympathetic preganglionic neurons (releas-
+ing noradrenaline (NA)) are located [12–14]. In addition to this 
+sympathetic overactivity, intestinal manipulation also activates 
+resident macrophages in the intestinal muscularis externa which 
+release proinflammatory cytokines and result in a long-lasting 
+phase of POI [15].
+Acupuncture is a traditional Chinese medicine that has been 
+practiced for several thousands of years in China [16]. It has 
+been used to treat functional disorders, including chemotherapy-
+induced nausea [17], postoperative nausea and vomiting [18, 19], 
+irritable bowel syndrome, diarrhea [20] and constipation [21]. 
+Electroacupuncture (EA) uses electrical pulses instead of manual 
+manipulations to stimulate acupoints and appears to show more 
+consistent and reproducible results [16]. In human studies, EA 
+at ST36 has been shown to accelerate postoperative gastrointes-
+tinal function recovery [22]. In animal studies, EA is generally 
+considered to enhance gastrointestinal motility by activating the 
+vagus nerve and inhibiting sympathetic activity [23–26]. However, 
+acupuncture and EA both use needles and this limits widespread 
+applications since they have to be administrated by healthcare pro-
+fessionals.
+Transcutaneous electrical acustimulation (TEA) is a newly 
+developed method of EA by replacing needles with surface elec-
+trodes. It has been shown to improve chemotherapy-induced 
+gastric symptoms, cold meal-induced impaired gastric accommo-
+dation [27, 28] and chronic constipation [29]. TEA has been con-
+sistently shown to enhance gastrointestinal motility by improving 
+vagal activity [9, 30]. However, it is unknown whether TEA might 
+have a therapeutic effect on postoperative recovery. We hypoth-
+esized that major abdominal surgeries activate sympathetic nerve 
+thus impair gastrointestinal (GI) motility and that TEA antago-
+nizes surgery-induced sympathetic overactivity and therefore 
+improves postoperative GI motility.
+The aims of our study were to investigate the effects of TEA on 
+postoperative recovery and to study the mechanisms involving 
+autonomic function in patients with gastrointestinal cancers after 
+major abdominal surgeries.
+Methods
+Study participants
+The study was performed from June 2016 through December 
+2016 at the Yinzhou People’s Hospital. Forty-two patients with 
+gastrointestinal cancers after open abdominal surgeries aged 
+over 18 years were enrolled in this study. The sample size was 
+estimated using previous data and power analysis. Forty subjects 
+were required to detect a difference of at least 15% in time to first 
+defecation after surgery between the TEA and sham-TEA groups 
+with a conventional power of 80% and an α value of 0.05. The 
+study protocol was approved by the ethical committee of Yinzhou 
+People’s Hospital. Inclusion criteria were as follows: (1) >18 years 
+of age, (2) underwent an open abdominal surgery for cancers and 
+(3) willing to sign a written informed consent. Exclusion criteria 
+were: (1) diabetes, (2) multiple surgeries or single surgery with 
+complications, (3) allergic to skin preparation and (4) familiar 
+with acupoints and their functions.
+Study design
+Patients were recruited in the study immediately after surgery if all 
+inclusion and exclusion criteria were fulfilled. Patients were rand-
+omized into two groups: TEA and sham-TEA. The postoperative 
+management was the same between the two groups. Demographic 
+data and surgical details were recorded. A blood sample was taken 
+at 7:00 a.m. and placed on ice, and an electrocardiogram (ECG) 
+was made from 8:30 a.m. to 9:00 a.m. on postoperative day (POD) 
+1 and POD 4. Each patient underwent two sessions of TEA or 
+sham-TEA daily from POD 1 to POD 3. The visual analog scale 
+(VAS) pain score, time of the first defecation, time of the first flat-
+ulence, time to resume diet and the length of the postoperative 
+hospital stay were noted.
+TEA and sham-TEA
+Acupoints ST36 and PC6 were used for TEA [29–31]. ST36 is 
+located at the place of four-finger-breadth measuring down from 
+the outer eye of the knee between the fibula and the tibia, one-
+finger-breadth measurement beside the tibia. PC6 is located at the 
+place of one-sixth of remote end and five-sixths of the proximal 
+end of the connection stripe between the transverse wrist crease 
+and cubical crease. A pair of electrodes were placed at bilateral 
+ST36 and another pair of electrodes were placed at bilateral PC6 
+(Fig. 1). Each pair of electrodes were connected to a watch-size 
+digital stimulator (SNM-FDC01, Ningbo Maida Medical Device 
+Inc., Ningbo, China). The stimulation parameters for both stimu-
+lators were set at 2 s on and 3 s off, pulse width of 0.5 ms, pulse 
+frequency of 25 Hz and amplitude of 2–10 mA (at the maximum 
+level tolerated by the subject) based on previous studies [29–31]. 
+The TEA treatment was given for 1 h, twice daily (9–10 a.m. and 
+4–5 p.m.), lasting for 3 days.
+Sham-TEA was the same except that non-acupoints were used 
+to replace ST36 and PC6. The sham-acupoint for PC6 was located 
+at about 15–20 cm away from PC6 (up to the elbow and outside of 
+the coastal margin of the forearm not on any meridian) and the 
+sham-point for ST36 was located at 10–15 cm down from and to 
+the lateral side of ST36 not on any meridian [29–31].
+
+
+=== PDF PAGE 3 ===
+Functional GI Disorders
+Volume 113 | July 2018
+Zhang et al. 
+1028
+The American Journal of Gastroenterology
+ www.nature.com/ajg
+Outcome measurements
+Main outcome measurements included time to the first defecation 
+[22] and time to resume diet [32] after surgery. Other measure-
+ments included time to ambulation, length of postoperative hos-
+pital stay and the VAS pain score on the first 3 postoperative days. 
+The VAS digital score was from 0 to 10; 0: painless; 1–3: mild and 
+endurable pain; 4–6: moderate pain affecting sleep but still endur-
+able; 7–10: severe pain, unbearable, affecting appetite and sleep. It 
+was recorded by a caring physician who did not know the study 
+design.
+Assessment of autonomic function
+The autonomic function was assessed by the specatral analysis of 
+heart rate variability (HRV) derived from the ECG, described as 
+follows: three locations in the chest/abdomen where ECG elec-
+trodes were to be placed (apical, the second intercostal of sternal 
+right edge, and the intersection of right rib arch and clavicle mid-
+line) were marked, gently rubbed with sandy gel and wiped clean 
+with a gauze [33]. Electrodes were placed over the treated skin, 
+and the patient was asked to lie down and stay quiet. The ECG 
+was recorded using a special amplifier with a recording frequency 
+of 100 Hz (ECG-201, Ningbo Maida Medical Device Inc., Ningbo, 
+China). The HRV signal was obtained by identifying the R peak 
+and calculating the RR interval from the ECG using a custom-
+made software. The HRV signal was subjected to power spec-
+trum analysis and the power in different bands was calculated. 
+The power in the low-frequency (LF) band (0.04–0.15 Hz) reflects 
+mainly sympathetic activity, whereas the power in the high-fre-
+quency (HF) band (0.15–0.50 Hz) represents purely parasym-
+pathetic or vagal activity. In this study, normalized values were 
+utilized: that is, LF was calculated as LF/(HF + LF) and HF was 
+calculated as HF/(HF + LF) [33, 34].
+Blood draw and assay
+A blood sample was taken at 7 a.m. on POD 1 and POD 4. About 
+5 ml of blood was drawn into a procoagulant tube placed on ice 
+and centrifuged at 3000 rpm for 5 min at 8 a.m. (1 h later). The 
+serum was divided into 3 portions, each about 0.5 ml and placed at 
+−80 °C for assay within 6 months. Human enzyme-linked immu-
+nosorbent assay (ELISA) kits (Roche Company, American, Cat. 
+No. 0734-2014, Shanghai Shiyan Biological Technology Co., Ltd, 
+China, Lot. No. 201704) were used for the analysis of interleu-
+kin-6 (IL-6) and noradrenaline (NE), respectively. Tumor necro-
+sis factor-α (TNF-α) and interleukin-1β (IL-1β) were analyzed 
+by human ELISA kits (Siemens Healthcare Diagnostics Products 
+Limited Co., UK, Cat. No. LKNF1 and Cat. No. LKL11, respec-
+tively). All blood assays were performed blindly by a professional 
+company (Shanghai Dian Medical Testing Laboratory).
+Statistical analysis
+The Shapiro–Wilk test was used to assess the distribution of major 
+data, including time to defecation, flatus and diet, and the dis-
+tributions were found normal and therefore parametric analyses 
+were used. Data are expressed as mean ± standard error (SE). 
+P < 0.05 was considered statistical significance. Student’s t-test 
+was performed to assess the difference in the measurement (time 
+to defecation, time to flatulence, time to resume diet, length of 
+postoperative hospital stay or VAS pain score) between sham-TEA 
+and TEA group. Paired Student’s t-test was used to compare the 
+difference in serum NE, TNF-α, and IL-6, and HF (vagal activity) 
+and LF/HF (sympathovagal ratio) on POD 1 and POD 4 in each 
+group. Pearson's correlation analysis was performed to assess the 
+correlation between the endpoint measures and other parameters. 
+Multivariate analysis with multiple linear regression was used to 
+identify independent predictors of outcome measures.
+Time to defecation higher than 96 h was defined as the end-
+point event. Comparison between endpoint and non-endpoint 
+groups was performed using Chi-square Analysis, and P values of 
+<0.05 were considered statistically significant. Clinic pathological 
+parameters (P < 0.15) were tested by stepwise multivariate logistic 
+regression analysis, and P values of <0.05 were considered statis-
+tically significant. The HF on POD 4 in patients with suspected 
+delayed recovery was assessed and evaluated by receiver operat-
+ing characteristic (ROC) curve. Data were analyzed by statistical 
+software SPSS 19.0.
+Results
+Characteristics of patients
+A total of 42 patients were recruited and randomized into sham-
+TEA (21 patients) and TEA (21 patients) groups. Demographic 
+data and surgical details are shown in Table  1. There were no 
+significant differences in gender, age or body mass index (BMI) 
+between the two groups (all P > 0.05). The two groups were simi-
+lar in terms of surgical details and no significant difference was 
+noted in the number of patients who underwent any particular 
+type of surgery between the TEA and sham-TEA groups.
+Fig. 1  Method of transcutaneous electrical acustimulation. One electrode 
+was placed on acupoint PC6 and another at the same place but the 
+other hand, as well as the ST36 acupoint. A watch-size stimulator was 
+connected to the electrodes for stimulation
+
+
+=== PDF PAGE 4 ===
+Functional GI Disorders
+1029
+Needleless Transcutaneous electrical Acustimulation
+© 2018 The American College of Gastroenterology
+The American Journal of Gastroenterology
+TEA improved postoperative recovery
+TEA shortened the recovery time of clinic symptoms. Com-
+pared to sham-TEA, TEA shortened time to defecation by 
+31.7% (P < 0.01) and time to first flatus by 35.9% (P < 0.001) 
+(Fig. 2a). Prolonged postoperative ileus as defined in a previ-
+ous study [35] was noted in 5 patients in the Sham-TEA group 
+but none in the TEA group (Chi-square analysis, P < 0.05). 
+TEA reduced time to ambulation by 42.8% (P < 0.01), time to 
+resuming diet by 26.5% (P < 0.01) and length of postoperative 
+hospital stay by 30.2% (P < 0.05) in comparison of sham-TEA 
+(Fig. 2b).
+TEA reduced the VAS pain score on the postoperative Day 2 by 
+50.8% (P < 0.01) and Day 3 by 64.9% (P < 0.001) in comparison 
+with sham-TEA (Fig. 2c).
+Effects of surgeries and TEA on inflammatory cytokines
+TEA but not sham-TEA decreased the serum level of TNF-α by 
+17.4% from POD 1 to POD 4 (P < 0.05) (Fig. 3a). The TNF-α on 
+POD 4 was positively correlated with VAS pain scores on POD 2 
+(r = 0.410, P < 0.01) and POD 3 (r = 0.402, P < 0.05).
+No significant difference was noted in the serum level of IL-6 
+between the TEA and sham-TEA groups (Fig. 3b); nor was there a 
+difference between POD 1 and POD 4. The level of IL-6 on POD 1 
+was actually comparable to that in healthy subjects [36], suggesting 
+that the surgical procedure did not alter IL-6.
+The serum level of IL-1β was too low to detect in any of the sam-
+ples, suggesting that it was not elevated by surgery.
+Mechanisms of TEA involving autonomic functions
+TEA enhanced vagal activity. Vagal activity (HF) was increased 
+from POD1 to POD 4 with TEA (P < 0.001) but not with sham-
+TEA (P > 0.05) (Fig. 4a). Similarly, the sympathovagal ratio (LF/
+HF) was decreased significantly with TEA (P < 0.001), but not 
+with sham-TEA (P > 0.05) (Fig.  4b). TEA but not sham-TEA 
+decreased the serum level of NE by 42.5% from POD 1 to POD 4 
+(P < 0.05) (Fig. 4c).
+The HF on POD 1 and 4 were negatively correlated with NE 
+on POD 1 (r = −0.353, P < 0.05) and NE on POD 4 (r = −0.328, 
+P < 0.05), respectively, as well as on both of two days (r = −0.353, 
+P < 0.01), suggesting an agreement between these two measures of 
+the autonomic function.
+In addition to the direct effect of TEA on the vagal activity 
+assessed by the HF, the HF was also found to be associated with a 
+number of clinical outcome measures and even capable of predict-
+ing certain clinical outcomes as shown below:
+Correlation of autonomic functions with clinic symptoms.  The 
+HF on POD 4 was negatively correlated with time to resume 
+diet (r = −407, P < 0.01) (Fig. 5a), and time to resume diet was 
+Table 1  Characteristics of patients and surgical details
+Observation index
+Sham-TEA
+TEA
+Patient (n)
+21
+21
+Male (n (%))
+15 (71.4)
+18 (85.7)
+Age (mean ± SE)
+64.0 ± 2.6
+68.0 ± 1.4
+BMI (mean ± SE, kg/m2)
+20.0 ± 1.34
+23.9 ± 1.99
+Diagnosis, GC/CC/RC
+16/2/3
+15/1/5
+Type of surgery, RNY/BI/BII/ CCR/
+RCD/RCM
+11/3/2/2/2/1
+6/8/1/1/4/1
+Surgical time, mean ± SE, min
+197.4 ± 16.8
+181.3 ± 10.0
+Median blood loss(range), mL
+100(0–200)
+100(0–200)
+BMI body mass index, GC/CC/RC gastric, colon, rectal cancer, BI Billroth I, BII 
+Billroth II, RNY Roux-en-y, CCR colon cancer resection, RCD and RCM rectal 
+cancer resection Dixon and Miles respectively
+150
+a
+b
+c
+sham-TEA
+TEA
+sham-TEA
+TEA
+sham-TEA
+TEA
+**
+*
+**
+**
+***
+**
+***
+100
+Time (h)
+Time (days)
+50
+0
+Time to defecation
+Postoperative hospital
+stay
+Time to resume
+diet
+POD 2
+POD 1
+POD 3
+Time to
+ambulation
+Time to flatus
+25
+20
+15
+10
+5
+0
+5
+4
+3
+2
+VAS pain scores
+1
+0
+Fig. 2  Effects of TEA on postoperative clinical symptoms. TEA shortened 
+time to defecation and time to flatus (a), as well as postoperative hospital 
+stay, and time to resume diet and time to ambulation (b). TEA reduced 
+postoperative pain on POD 2 and POD 3 (c). Vs. sham-TEA, *P < 0.05; 
+**P < 0.01; ***P < 0.001; n = 42, analyzed by Student's t-test
+
+
+=== PDF PAGE 5 ===
+Functional GI Disorders
+Volume 113 | July 2018
+Zhang et al. 
+1030
+The American Journal of Gastroenterology
+ www.nature.com/ajg
+positively correlated with time of first of defecation (r = 0.431, 
+P < 0.01) (Fig. 5b). The NE on POD 4 was positively correlated 
+with time to resume diet (r = 0.479, P < 0.001) and time to flatus 
+(r = 0.391, P < 0.01). Also, NE on POD 1 was positively correlated 
+with time to flatus.
+Correlation of HF with IL-6.  The HF on POD 1 and POD 4 
+was negatively correlated with IL-6 on POD 1 and 4 (r = −0.221, 
+P < 0.05).
+Correlation of NE with IL-6.  The NE on POD 1 and 4 were pos-
+itively correlated with IL-6 on POD 1 (r = 0.570, P < 0.001) and 
+IL-6 on POD 4 (r = 782, P < 0.001), also on both 2 days (r = 0.646, 
+P < 0.001).
+HF as an independent predictor of outcome measures.  Many 
+confounding factors, such as age, sex, BMI, intraoperative blood 
+loss, types of surgery, surgical time and TEA, might affect the dura-
+tion of hospital stay. Their effects were analyzed by multiple linear 
+regression. Interestingly, TEA was found to be the only independ-
+ent predictor for a shorter duration of postoperative hospital stay 
+(regression coefficient, −6.3; 95% confidence interval, −12.0 to 
+−0.6; P < 0.05).
+To determine whether the HF and some other parameters were 
+capable of predicting clinical outcomes of the TEA therapy, multi-
+variate logistic regression analyses were performed in five variables 
+that showed a significant or a trend of change with TEA: (1) BMI 
+>24, (2) surgical approach (Roux-en-y or not-RNY), (3) time to 
+ambulation >4, (4) HF4 (HF on POD 4) <0.45 and (5) LF/HF4 
+(LF/HF on POD 4) >1.5 (Table 2). It was found that HF4 <0.45 
+was an independent risk factor predicting the occurrence of the 
+endpoint event (time to defecation higher than 96 h) in patients 
+after open abdominal surgery (Table 3).
+Further, the ROC curve was derived for the HF on POD 4 to 
+predict a clinical outcome of “first defecation >96 h” and the area 
+under the curve was 0.695 (Fig.  6), suggesting that HF4 <0.45 
+might be a predictor of long-time recovery in patients after open 
+abdominal surgery.
+15
+a
+b
+*
+POD 1
+POD 4
+10
+5
+0
+sham-TEA
+TEA
+sham-TEA
+TEA
+0.6
+0.4
+IL-6 (pg/mL)
+TNF-α (pg/mL)
+0.2
+0.0
+POD 1
+POD 4
+Fig. 3  Effects of TEA on inflammation. TEA decreased serum TNF-α. 
+(a). TEA did not decrease serum IL-6 significantly (b). POD 4 vs. POD 1, 
+*P < 0.05; n = 42, analyzed by paired t-test
+***
+POD 1
+POD 4
+POD 1
+POD 4
+POD 1
+POD 4
+*
+***
+0.6
+a
+b
+c
+0.4
+HF
+0.2
+0.0
+sham-TEA
+TEA
+sham-TEA
+TEA
+sham-TEA
+TEA
+2.5
+500
+400
+300
+200
+100
+0
+2.0
+1.5
+1.0
+0.5
+0.0
+LF/HF
+NE (ng/L)
+Fig. 4  Effects of TEA on autonomic function. TEA increased HF (a) and 
+decreased LF/HF (b). TEA decreased serum NE (c). POD 4 vs. POD 1, 
+*P < 0.05; ***P < 0.001, n = 42, analyzed by paired t-test
+
+
+=== PDF PAGE 6 ===
+Functional GI Disorders
+1031
+Needleless Transcutaneous electrical Acustimulation
+© 2018 The American College of Gastroenterology
+The American Journal of Gastroenterology
+Discussion
+In this study, we found that: (1) TEA improved major postopera-
+tive symptoms, including a reduction in time to first defecation, 
+time to first flatus, time to ambulation, time to resuming diet 
+and hospital stay as well as pain score. (2) TEA but not sham-
+TEA decreased the serum level of TNF-α. (3) TEA significantly 
+increased vagal activity and decreased sympathetic activity as well 
+as the serum level of NE. (4) The vagal activity, HF, assessed from 
+the spectral analysis of HRV was negatively correlated with time 
+to resuming diet, whereas the sympathetic measurement, serum 
+norepinephrine was positively correlated with time to resuming 
+diet and time to flatus. (5) TEA was an independent predictor for 
+a shorter hospital stay.
+While the ameliorating effect of needle-based EA on postop-
+erative recovery had been reported [22] it was unclear whether 
+needleless TEA would have a similar therapeutic effect on post-
+operative recovery. We designed a prospective randomized sham-
+controlled study to investigate the effects of TEA for postoperative 
+recovery and its mechanisms involving autonomic functions. The 
+newly developed method of TEA, which is needleless and can be 
+self-administrated, is expected to be well accepted by postopera-
+0.8
+a
+b
+0.6
+0.4
+HF on POD 4
+0.2
+0.0
+0
+5
+Time to resume diet (days)
+Time to resume diet (days)
+10
+r=–0.407
+P=0.007
+r=0.431
+P=0.004
+15
+0
+5
+10
+15
+250
+200
+150
+Time of the first defecation (h)
+100
+50
+0
+Fig. 5  Correlation between vagal activity and clinic symptoms. HF on 
+POD 4 was negatively correlated with time to resume diet (a), and time to 
+resume diet was positively correlated with time to defecation (b)
+Table 2  Comparison of data between patients who reached and 
+did not reach the observation endpoint
+Observation index
+Non-endpoint 
+group (n = 33)
+Endpoint group 
+(n = 11)
+P value
+Age >65 (%)
+(17) 54.8
+(7) 63.6
+0.612
+Male (%)
+(25) 80.6
+(7) 63.6
+0.256
+BMI >24 (%)
+(10) 32.3
+(1) 9.1
+0.133
+Disease (GC, not 
+GC) (%)
+(22) 71
+(9) 81.8
+0.482
+Surgical approach 
+(RNY, not RNY) (%)
+(10) 32.3
+(7) 63.6
+0.069
+Time of surgery >3 h 
+(%)
+(14) 45.2
+(4) 36.4
+0.612
+Time to resume diet 
+>7 day (%)
+(22) 71
+(8) 72.7
+0.912
+Time to ambulation 
+>4 day (%)
+(11) 35.5
+(7) 63.6
+0.105
+ VAS1 >3 (%)
+(15) 48.4
+(7) 63.6
+0.384
+ VAS2 >3 (%)
+(5) 16.1
+(3) 27.3
+0.419
+ VAS3 >3 (%)
+(3) 9.7
+(3) 27.3
+0.152
+HF1 <0.45 (%)
+(26) 83.9
+(7) 63.6
+0.160
+HF4 <0.45 (%)
+(5) 16.1
+(7) 63.6
+0.003
+LF/HF1 >1.5 (%)
+(20) 64.5
+(5)45.5
+0.268
+LF/HF4 >1.5 (%)
+(4) 12.9
+(5) 45.5
+0.024
+BMI body mass index, VAS visual analog scale, LF1 low frequency on postop-
+erative day 1, HF4 high frequency on postoperative day 4
+Table 3  Multivariate logistic regression analysis on defecation 
+progression to the observation endpoint
+Observation index
+OR value
+P value
+BMI >24
+1.087
+0.297
+Surgical approach (RNY, not-RNY)
+5.515
+0.060
+Time to ambulation >4 day
+0.673
+0.412
+HF4 <0.45
+12.377
+0.006
+LF/HF4 >1.5
+0.248
+0.618
+OR odds ratio
+1.0
+0.8
+0.6
+True positive rate
+0.4
+0.2
+0.0
+0.0
+0.2
+0.4
+False-positive rate
+0.6
+HF on POD 4<0.45
+AUC=0.695
+0.8
+1.0
+Fig. 6  ROC curve of HF test on postoperative day 4
+
+
+=== PDF PAGE 7 ===
+Functional GI Disorders
+Volume 113 | July 2018
+Zhang et al. 
+1032
+The American Journal of Gastroenterology
+ www.nature.com/ajg
+tive patients who are under close monitoring of various functions 
+and medications. In this study, there was no significant difference 
+in gender, age, BMI, severity of disease or surgical procedures 
+between the two groups. In order to avoid placebo effects, the 
+sham-controlled group was treated with the same electrical stimu-
+lation at the non-acupoints [9, 28, 30].
+Substantial reductions were noted in major postoperative symp-
+toms with the noninvasive treatment of TEA. TEA shortened time 
+to defecation and time to flatulence by more than 30%, and time 
+to resume diet by 26.5% in comparison of sham-TEA. In addition, 
+TEA reduced length of postoperative hospital stay by 30.2% and 
+was found to be an independent predictor of a shorter hospital 
+stay. In a previously clinic study, needle-based EA was reported 
+to reduce time to defecation by 29.6% and the hospital stay by 
+23.5% compared with control in patients after laparoscopic sur-
+gery for colorectal cancer [22]. They also found that EA was an 
+independent predictor of shorter duration of postoperative recov-
+ery. In comparison with the previous EA therapy, the TEA method 
+used in this study has an obvious advantage of being needleless: 
+the therapy can be administrated by anyone including the patient. 
+To the best of our knowledge, this was the first study to demon-
+strate the therapeutic effects of needleless TEA for postoperative 
+recovery.
+The best indication of GI motility recovery is the combined 
+measure tolerance of solid food and passage of stool [32]. Accord-
+ingly, we speculated that these improvements were probably 
+attributed to improvement in GI motility. GI motility was not 
+assessed in this study due to invasiveness of the procedure and 
+severity of the disease and surgical procedures in these patients. 
+However, previous EA and TEA studies have suggested a possi-
+ble role of improved gastric, intestinal and colonic motility. EA at 
+ST36 significantly accelerated gastric emptying of solids in nor-
+mal rats [37] and in a rodent model of delayed gastric emptying 
+induced by restraint stress [38]. Ouyang et al. [39] reported that 
+EA at PC6 and ST36 significantly improved gastric emptying of 
+liquid in dogs with delayed gastric emptying induced by duodenal 
+distention. EA at PC6 and ST36 improved gastric emptying of sol-
+ids measured by scintigraphy in patients with gastroparesis [40]. 
+Improvement of intestinal motility with EA has been reported in 
+animals [38, 41, 42]. Enhancement of colonic motility with EA 
+or TEA has been investigated in both animals and humans. In 
+conscious rats, contractility of the distal colon and colonic transit 
+were significantly increased by EA [43]. Recent studies reported 
+that EA at ST36 improved colonic contractions and transit 
+impaired by rectal distention [44] and surgery [23] by vagal activ-
+ity enhancement. Similar findings were also investigated in TEA 
+studies. Zhang et al. [30] found that the TEA treatment at ST36 
+could improve the stress-induced gastric slow wave impaired by 
+balancing sympathovagal activities. Huang et al. [28] found that 
+TEA at ST36 and PC6 improved gastric accommodation, gastric 
+slow wave damage and dyspeptic symptoms induced by cool meal 
+in healthy volunteers. TEA has been shown to improve chronic 
+constipation [29]. These previous consistent and positive findings 
+support a prokinetic mechanism of TEA involved in the present 
+clinical study.
+Another noticeable finding of this study was that TEA reduced 
+the VAS pain score by more than 50% on POD 2 and POD 3 in 
+comparison of sham-TEA. Previous studies have suggested that EA 
+blocks pain by activating a variety of bioactive chemicals through 
+peripheral, spinal and supraspinal mechanisms. These include opi-
+oids which reduce proinflammatory cytokines and norepinephrine 
+[45]. The analgesic effect of TEA observed in the current study was 
+also believed to be attributed to these previously reported opioid 
+and sympathetic mechanisms.
+The effects of the surgery on postoperative gastrointestinal dis-
+turbance observed in this study might be secondary to changes in 
+autonomic functions. It was well known that the autonomic neu-
+rological dysfunction plays an important role in the progression of 
+impaired gastrointestinal motility [9]. Early studies [10, 11] have 
+shown that surgery increases sympathetic activity and decreases 
+vagal activity. In the present study, using the spectral analysis of 
+the HRV, a noninvasive and simple method which has been well 
+documented to be an accurate and reliable method for the quan-
+titative evaluation of parasympathetic activity and sympathova-
+gal balance [46, 47], we found that TEA increased vagal activity 
+(HF) and restored the sympathovagal balance (LF/HF). Similar 
+autonomic mechanisms were also reported in other EA and TEA 
+studies. EA at ST36 and PC6 with appropriate parameters has 
+been consistently shown to activate the vagus nerve and decrease 
+sympathovagal balance [23–26, 44]. The needleless TEA has also 
+been reported to be able to balance the sympathovagal activities 
+under various conditions of sympathetic overactivity [9, 30, 48]. 
+In the present study, in addition to the assessment of autonomic 
+functions via the spectral analysis of HRV that provided accurate 
+measures of parasympathetic/vagal activity and the sympathovagal 
+ratio, we also measured the serum level of NE that is an indicator of 
+sympathetic neural activity [49, 50]. Sympathetic neural reflex has 
+been proposed as one of the predominant mechanism of POI [51, 
+52]. Fukuda et al. [53] reported that sympathetic-adrenergic path-
+way mediated entire GI tract motility at the early and late stages 
+of postoperative disturbance and this pathway could be inhibited 
+by α-2-adrenoceptor agonist. While the exact neural pathway was 
+not investigated in the current study, previous animal studies [23, 
+54] have reported that: (1) EA at ST36 activates nucleus tractus 
+solitaries by activating somatic afferent nerves, demonstrating the 
+involvement of the central nervous system; (2) the afferent signal 
+simulates the dorsal motor nucleus of vagus, resulting in increased 
+vagal efferent flow to visceral organs; and (3) the afferent signal is 
+conveyed to other parts of the central nervous system, resulting in 
+a reduced sympathetic outflow. Intuitively, the effects of TEA on 
+postoperative recovery might follow the same pathways as EA: TEA 
+activated somatic nerves that conveyed a signal to the brain via the 
+spinal afferent and the brain processed the signal and produced an 
+enhanced vagal efferent to the GI tract, resulting in improvement 
+in motility and reduction in postoperative symptoms.
+The inflammatory response has been proposed as another pre-
+dominant mechanism of POI [51, 52]. In the current study, TEA 
+decreased serum TNF-α on POD 4 in comparison of POD 1. In a 
+previous animal study, needle-based EA decreased the plasma con-
+centration of TNF-α in a rodent model of 2,4,6-trinitrobenzene 
+
+
+=== PDF PAGE 8 ===
+Functional GI Disorders
+1033
+Needleless Transcutaneous electrical Acustimulation
+© 2018 The American College of Gastroenterology
+The American Journal of Gastroenterology
+sulfonic acid (TNBS)-induced colitis via activating vagus nerve 
+[55]. In a clinical study, EA decreased the serum level of TNF-α 
+in patients with rheumatoid arthritis [56]. De Jonge et al. [51] 
+reported that intestinal manipulation during major surgery 
+increased inflammatory infiltrates and then triggered the inhibi-
+tory enterogastric neurons pathway which resulted in POI in 
+mice. Later, De Jonge at al. [57] found that vagal activity attenu-
+ated the surgery-induced inflammation and POI and decreased 
+the secretion of TNF-α via alpha7 subunit-mediated Jak2-STAT3 
+(Janus kinase/signal transducer and activator of transcription 3) 
+activation in intestinal macrophages in a mouse model of intes-
+tinal manipulation [57]. Recently, Matteoli et al. [58] suggested 
+that vagal activity reduced intestinal inflammation and amelio-
+rated POI through α7 nicotinic acetylcholine receptor activity in 
+the intestine muscularis-resident macrophages in a mouse model 
+of intestinal manipulation. Accordingly, we speculate that TEA 
+decreased TNF-α by activating cholinergic anti-inflammatory 
+pathway due to its enhancement in vagal activity. Furthermore, a 
+number of recent studies have shown the role of inflammation in 
+animal models of POI and suggested that improvement in inflam-
+mation may lead to restoration of gastrointestinal motility. Farro et 
+al. [59] reported a critical role of monocyte-derived macrophages 
+in restoring intestinal hemostasis after surgical trauma. Deng et 
+al. [60] reported an ameliorating effect of acupuncture on POI by 
+suppressing inflammation and protecting interstitial cells of Cajal, 
+resulting in improved intestinal transit.
+Surprisingly, the current study failed to show an increase of 
+serum IL-6 or IL-1β. The level of IL-6 measured in this study was 
+comparable to that in healthy controls [36], suggesting that IL-6 
+was not sufficiently elevated due to the surgeries. Similarly, the 
+level of IL-1β was found undetectable as reported in healthy con-
+trols [61].
+Other interesting results of this study were the correlations of 
+the postoperative symptoms and the autonomic functions. The 
+vagal activity (HF) was negatively correlated with time to resume 
+diet and serum NE was positively correlated with time to resume 
+diet and time to flatus. These were interesting correlation findings 
+that had never been reported previously suggested again the pos-
+sible mechanisms involved in the improvement of postoperative 
+symptoms with TEA: TEA improved GI motility by suppressing 
+sympathetic activity and enhancing vagal activity, resulting in 
+improvement in postoperative symptoms. Also, we found a nega-
+tive correlation between the vagal activity assessed from the spec-
+tral analysis of HRV and the serum level of NE, demonstrating that 
+these two measurements were consistent and complementary with 
+each other [62, 63].
+Furthermore, we discovered that HF <0.45 was an independ-
+ent risk factor for predicting the occurrence of longer postopera-
+tive recovery or postoperative ileus. Our findings indicated that if 
+the vagal activity, HF assessed from the spectral analysis of HRV, 
+was lower than 0.45 on POD 4, the patient would need more time 
+to recover from the surgery. This suggests that in postoperative 
+patients, the HF should be monitored constantly and more aggres-
+sive management (prokinetic therapy) should be considered if this 
+value is low.
+There were several limitations in our study. First, patients had a 
+long duration of hospital stay in comparison with that in western 
+countries. This was attributed to the social background, such as 
+culture and tradition, and hospitalization costs. In China, due to 
+relatively low costs of hospital stay and serious concerns of both 
+patients and surgeons on major invasive surgical procedures and 
+postsurgical recovery, patients stay at hospital much longer to 
+ensure a complete recovery. Second, symptoms of upper abdom-
+inal fullness, nausea and vomiting after the surgery were not 
+recorded. However, due to the fact that very few patients had these 
+symptoms, it was unlikely to observe a significant difference in 
+these symptoms between the sham-TEA and TEA groups. Third, 
+this was a single center study and some bias might be present in 
+the study.
+In conclusion, needleless TEA at PC6 and ST36 is able to accel-
+erate postoperative recovery after open abdominal surgeries in 
+patients with GI cancers by enhancing vagal activity. Needleless 
+and self-administrable TEA may be considered as an easy-to-
+implement and low-cost complementary therapy to improve post-
+operative recovery.
+Conflict of interest
+Guarantor of the article: The first author Bo Zhang is accepting full 
+responsibility for the conduct of the study.
+Specific author contributions: Conceiving and designing the 
+experiments: Liang Zhu, Jiande DZ Chen, Bo Zhang. Performing 
+acustimulation treatment and heart rate variability test: Bo Zhang. 
+Recording symptoms and sampling blood: Feng Xu, Mingyuan 
+Zhang, Kehui Tong. Analyzing data: Bo Zhang, Pingping Hu, Gang 
+Ma, Yuemei Xu. Contributing reagents/materials/analysis tools: Feng 
+Xu, Pingping Hu, Liang Zhu, Jiande D.Z. Chen. Writing and revising 
+paper: Liang Zhu, Jiande DZ Chen, Bo Zhang.
+Financial support: None.
+Potential competing interests: None.
+Study Highlights
+WHAT IS CURRENT KNOWLEDGE
+✓
+✓Gastrointestinal disturbance is a frequent complication 
+after abdominal surgeries.
+✓
+✓Electroacupuncture has been shown to accelerate postop-
+erative gastrointestinal function recovery.
+✓
+✓Transcutaneous electrical acustimulation has been shown 
+to enhance gastrointestinal motility.
+WHAT IS NEW HERE
+✓
+✓TEA significantly increased vagal activity and decreased 
+sympathetic activity as well as the serum level of NE.
+✓
+✓The vagal activity was negatively correlated with time to 
+resuming diet.
+✓
+✓TEA decreased the serum level of TNF-α.
+✓
+✓TEA was an independent predictor for a shorter hospital 
+stay.
+
+
+=== PDF PAGE 9 ===
+Functional GI Disorders
+Volume 113 | July 2018
+Zhang et al. 
+1034
+The American Journal of Gastroenterology
+ www.nature.com/ajg
+References
+ 1. 
+van Bree SH, van Bree S, Vlug MS, et al. Faster recovery of gastrointes-
+tinal transit after laparoscopy and fast-track care in patients undergoing 
+colonic surgery. Gastroenterology. 2011;141:872. e1-4
+ 2. 
+Augestad KM, Delaney CP. Postoperative ileus: impact of pharmacologi-
+cal treatment, laparoscopic surgery and enhanced recovery pathways. 
+World J Gastroenterol. 2010;16:2067–74.
+ 3. 
+Collins TC, Daley J, Henderson WH, Khuri SF. Risk factors for prolonged 
+length of stay after major elective surgery. Ann Surg. 1999;230:251–9.
+ 4. 
+Person B, Wexner SD. The management of postoperative ileus. Curr Probl 
+Surg. 2006;43:6–65.
+ 5. 
+Venara A, Neunlist M, Slim K, et al. Postoperative ileus: pathophysiology, 
+incidence, and prevention. J Visc Surg. 2016;153:439–46.
+ 6. 
+Traut U,Brügger L,Kunz R, et al. Systemic prokinetic pharmacologic treat-
+ment for postoperative adynamic ileus following abdominal surgery in 
+adults. Cochrane Database Syst Rev. 2008;1:CD004930
+ 7. 
+Stakenborg N, Gomez-Pinilla PJ, Boeckxstaens GE. Postoperative ileus: 
+pathophysiology, current therapeutic approaches. Handb Exp Pharmacol. 
+2017;239:39–57.
+ 8. 
+Smart CJ, Malik KI. Prucalopride for the treatment of ileus. Expert Opin 
+Investig Drugs. 2017;26:489–93.
+ 9. 
+Liu S, Peng S, Hou X, Ke M, Chen JD. Transcutaneous electroacupunc-
+ture improves dyspeptic symptoms and increases high frequency heart 
+rate variability in patients with functional dyspepsia. Neurogastroenterol 
+Motil. 2008;20:1204–11.
+ 10. Boeckxstaens GE, Hirsch DP, Kodde A, et al. Activation of an adrenergic 
+and vagally-mediated NANC pathway in surgery-induced fundic relaxa-
+tion in the rat. Neurogastroenterol Motil. 1999;11:467–74.
+ 11. Gaba DM, Howard SK, Flanagan B, Smith BE, Fish KJ, Botney R. Assess-
+ment of clinical performance during simulated crises using both technical 
+and behavioral ratings. Anesthesiology . 1998;89:8–18.
+ 12. Barquist E, Bonaz B, Martinez V, Rivier J, Zinner MJ, Taché Y. Neuronal 
+pathways involved in abdominal surgery-induced gastric ileus in rats. Am 
+J Physiol. 1996;270(4 Pt 2):R888–94.
+ 13. Bonaz B, Plourde V, Taché Y. Abdominal surgery induces Fos immunore-
+activity in the rat brain. J Comp Neurol. 1994;349:212–22.
+ 14. Zittel TT, De Giorgio R, Brecha NC, Sternini C, Raybould HE. Abdominal 
+surgery induces c-fos expression in the nucleus of the solitary tract in the 
+rat. Neurosci Lett. 1993;159:79–82.
+ 15. Boeckxstaens GE, de Jonge WJ. Neuroimmune mechanisms in postopera-
+tive ileus. Gut. 2009;58:1300–11.
+ 16. Ouyang H, Chen JD. Review article: therapeutic roles of acupuncture 
+in functional gastrointestinal disorders. Aliment Pharmacol Ther. 
+2004;20:831–41.
+ 17. Anders EF, Findeisen A, Lode HN, Usichenko TI. Acupuncture for treat-
+ment of acute vomiting in children with gastroenteritis and pneumonia. 
+Klin Padiatr. 2012;224:72–5.
+ 18. Liodden I, Howley M, Grimsgaard AS, et al. Perioperative acupuncture 
+and postoperative acupressure can prevent postoperative vomiting follow-
+ing paediatric tonsillectomy or adenoidectomy: a pragmatic randomised 
+controlled trial. Acupunct Med. 2011;29:9–15.
+ 19. Glickman-Simon R, Tessier J. Guided imagery for postoperative pain, 
+energy healing for quality of life, probiotics for acute diarrhea in children, 
+acupuncture for postoperative nausea and vomiting, and animal-assisted 
+therapy for mental disorders. Explor (NY). 2014;10:326–9.
+ 20. Sun JH, Wu XL, Xia C, et al. Clinical evaluation of Soothing Gan and 
+invigorating Pi acupuncture treatment on diarrhea-predominant irritable 
+bowel syndrome. Chin J Integr Med. 2011;17:780–5.
+ 21. Li Y, Zheng H, Zeng F, et al. Use acupuncture to treat functional 
+constipation: study protocol for a randomized controlled trial. Trials. 
+2012;13:104.
+ 22. Ng SS, Leung WW, Mak TW, et al. Electroacupuncture reduces duration 
+of postoperative ileus after laparoscopic surgery for colorectal cancer. 
+Gastroenterology. 2013;144:307. e1
+ 23. Fang JF, Fang JQ, Shao XM, et al. Electroacupuncture treatment 
+partly promotes the recovery time of postoperative ileus by 
+activating the vagus nerve but not regulating local inflammation. Sci Rep. 
+2017;7:39801.
+ 24. Liu J, Huang H, Xu X, Chen JD. Effects and possible mechanisms of acu-
+puncture at ST36 on upper and lower abdominal symptoms induced by 
+rectal distension in healthy volunteers. Am J Physiol Regul Integr Comp 
+Physiol. 2012;303:R209–17.
+ 25. Yin J, Chen J, Chen JD. Ameliorating effects and mechanisms of elec-
+troacupuncture on gastric dysrhythmia, delayed emptying, and impaired 
+accommodation in diabetic rats. Am J Physiol Gastrointest Liver Physiol. 
+2010;298:G563–70.
+ 26. Song J, Yin J, Sallam HS, Bai T, Chen Y, Chen JD. Electroacupuncture 
+improves burn-induced impairment in gastric motility mediated via the 
+vagal mechanism in rats. Neurogastroenterol Motil. 2013;25:807–e635.
+ 27. Zhang X, Jin HF, Fan YH, Lu B, Meng LN, Chen JD. Effects and 
+mechanisms of transcutaneous electroacupuncture on chemotherapy-
+induced nausea and vomiting. Evid Based Complement Altern Med. 
+2014;2014:860631.
+ 28. Huang Z, Zhang N, Xu F, Yin J, Dai N, Chen JD. Ameliorating effect of 
+transcutaneous electroacupuncture on impaired gastric accommoda-
+tion induced by cold meal in healthy subjects. J Gastroenterol Hepatol. 
+2016;31:561–6.
+ 29. Zhang N, Huang Z, Xu F, et al. Transcutaneous neuromodulation at poste-
+rior tibial nerve and ST36 for chronic constipation. Evid Based Comple-
+ment Altern Med. 2014;2014:560802.
+ 30. Zhang N, Song G, Chen J, et al. Ameliorating effects and autonomic 
+mechanisms of needle-less transcutaneous electrical stimulation at ST36 
+on stress-induced impairment in gastric slow waves. J Gastroenterol 
+Hepatol. 2015;30:1574–81.
+ 31. Ji T, Li X, Lin L, et al. An alternative to current therapies of functional 
+dyspepsia: self-administrated transcutaneous electroacupuncture 
+improves dyspeptic symptoms. Evid Based Complement Altern Med. 
+2014;2014:832523.
+ 32. van Bree SH, Bemelman WA, Hollmann MW, et al. Identification of 
+clinical outcome measures for recovery of gastrointestinal motility in 
+postoperative ileus. Ann Surg. 2014;259:708–14.
+ 33. Lu CL, Zou X, Orr WC, Chen JD. Postprandial changes of sympathovagal 
+balance measured by heart rate variability. Dig Dis Sci. 1999;44:857–61.
+ 34. Zhou J, Li S, Wang Y, et al. Inhibitory effects and mechanisms of elec-
+troacupuncture via chronically implanted electrodes on stress-induced 
+gastric hypersensitivity in rats with neonatal treatment of iodoacetamide. 
+Neuromodulation . 2017;20:767–73.
+ 35. Bragg D, El-Sharkawy AM, Psaltis E, Maxwell-Armstrong CA, Lobo DN. 
+Postoperative ileus: Recent developments in pathophysiology and 
+management. Clin Nutr. 2015;34:367–76.
+ 36. Steensberg A, van Hall G, Osada T, Sacchetti M, Saltin B, Klarlund PB. 
+Production of interleukin-6 in contracting human skeletal muscles can 
+account for the exercise-induced increase in plasma interleukin-6. J 
+Physiol. 2000;529(Pt 1):237–42.
+ 37. Iwa M, Nakade Y, Pappas TN, Takahashi T. Electroacupuncture elicits 
+dual effects: stimulation of delayed gastric emptying and inhibition of 
+accelerated colonic transit induced by restraint stress in rats. Dig Dis Sci. 
+2006;51:1493–500.
+ 38. Tabosa A, Yamamura Y, Forno ER, Mello LE. A comparative study of the 
+effects of electroacupuncture and moxibustion in the gastrointestinal 
+motility of the rat. Dig Dis Sci. 2004;49:602–10.
+ 39. Ouyang H, Yin J, Wang Z, Pasricha PJ, Chen JD. Electroacupuncture 
+accelerates gastric emptying in association with changes in vagal activity. 
+Am J Physiol Gastrointest Liver Physiol. 2002;282:G390–6.
+ 40. Xu S, Hou X, Zha H, Gao Z, Zhang Y, Chen JD. Electroacupuncture 
+accelerates solid gastric emptying and improves dyspeptic symptoms in 
+patients with functional dyspepsia. Dig Dis Sci. 2006;51:2154–9.
+ 41. Choi M, Jung J, Seo M, et al. Ultrasonographic observation of intestinal 
+mobility of dogs after acupunctural stimulation on acupoints ST-36 and 
+BL-27. J Vet Sci. 2001;2:221–6.
+ 42. Iwa M, Sakita M. Effects of acupuncture and moxibustion on intestinal 
+motility in mice. Am J Chin Med. 1994;22:119–25.
+ 43. Luo D, Liu S, Xie X, Hou X. Electroacupuncture at acupoint ST-36 pro-
+motes contractility of distal colon via a cholinergic pathway in conscious 
+rats. Dig Dis Sci. 2008;53:689–93.
+ 44. Jin H, Liu J, Foreman RD, Chen JD, Yin J. Electrical neuromodula-
+tion at acupoint ST36 normalizes impaired colonic motility induced 
+by rectal distension in dogs. Am J Physiol Gastrointest Liver Physiol. 
+2015;309:G368–76.
+ 45. Zhang R, Lao L, Ren K, Berman BM. Mechanisms of acupuncture- 
+electroacupuncture on persistent pain. Anesthesiology. 
+2014;120:482–503.
+ 46. Berntson GG, Bigger JT, Eckberg DL, et al. Heart rate variability: 
+origins, methods, and interpretive caveats. Psychophysiology. 
+1997;34:623–48.
+
+
+=== PDF PAGE 10 ===
+Functional GI Disorders
+1035
+Needleless Transcutaneous electrical Acustimulation
+© 2018 The American College of Gastroenterology
+The American Journal of Gastroenterology
+ 47. Kamath MV, Fallen EL. Power spectral analysis of heart rate variability: 
+a noninvasive signature of cardiac autonomic function. Crit Rev Biomed 
+Eng. 1993;21:245–311.
+ 48. Sallam H, McNearney TA, Doshi D, Chen JD. Transcutaneous electrical 
+nerve stimulation (TENS) improves upper GI symptoms and bal-
+ances the sympathovagal activity in scleroderma patients. Dig Dis Sci. 
+2007;52:1329–37.
+ 49. Goldstein DS. Plasma norepinephrine as an indicator of sympathetic 
+neural activity in clinical cardiology. Am J Cardiol. 1981;48:1147–54.
+ 50. McCance AJ, Forfar JC. Plasma noradrenaline as an index of sympathetic 
+tone in coronary arterial disease: the confounding influence of clearance 
+of noradrenaline. Int J Cardiol. 1990;26:335–42.
+ 51. de Jonge WJ, van den Wijngaard RM, The FO, et al. Postoperative ileus is 
+maintained by intestinal immune infiltrates that activate inhibitory neural 
+pathways in mice. Gastroenterology . 2003;125:1137–47.
+ 52. Livingston EH, Passaro EP. Postoperative ileus. Dig Dis Sci. 1990;35:121–32.
+ 53. Fukuda H, Tsuchida D, Koda K, Miyazaki M, Pappas TN, Takahashi T. In-
+hibition of sympathetic pathways restores postoperative ileus in the upper 
+and lower gastrointestinal tract. J Gastroenterol Hepatol. 2007;22:1293–9.
+ 54. Eshkevari L, Egan R, Phillips D, et al. Acupuncture at ST36 prevents 
+chronic stress-induced increases in neuropeptide Y in rat. Exp Biol Med 
+(Maywood). 2012;237:18–23.
+ 55. Jin H, Guo J, Liu J, et al. Anti-inflammatory effects and mechanisms of 
+vagal nerve stimulation combined with electroacupuncture in a rodent 
+model of TNBS-induced colitis. Am J Physiol Gastrointest Liver Physiol. 
+2017;313:G192–192G202.
+ 56. Ouyang BS, Gao J, Che JL, et al. Effect of electro-acupuncture on tumor 
+necrosis factor-α and vascular endothelial growth factor in peripheral 
+blood and joint synovia of patients with rheumatoid arthritis. Chin J 
+Integr Med. 2011;17:505–9.
+ 57. de Jonge WJ, van der Zanden EP, The FO, et al. Stimulation of the vagus 
+nerve attenuates macrophage activation by activating the Jak2-STAT3 
+signaling pathway. Nat Immunol. 2005;6:844–51.
+ 58. Matteoli G, Gomez-Pinilla PJ, Nemethova A, et al. A distinct vagal 
+anti-inflammatory pathway modulates intestinal muscularis resident 
+macrophages independent of the spleen. Gut. 2014;63:938–48.
+ 59. Farro G, Stakenborg M, Gomez-Pinilla PJ, et al. CCR2-dependent 
+monocyte-derived macrophages resolve inflammation and restore gut 
+motility in postoperative ileus. Gut. 2017;66:2098–109.
+ 60. Deng J, Yang S, Yuan Q, et al. Acupuncture ameliorates postoperative ileus 
+via IL-6-miR-19a-KIT axis to protect interstitial cells of cajal. Am J Chin 
+Med. 2017;45:737–55.
+ 61. Pereira BJ, Shapiro L, King AJ, et al. Plasma levels of IL-1 beta, TNF alpha 
+and their specific inhibitors in undialyzed chronic renal failure, CAPD 
+and hemodialysis patients. Kidney Int. 1994;45:890–6.
+ 62. Saul JP, Berger RD, Albrecht P, Stein SP, Chen MH, Cohen RJ. Transfer 
+function analysis of the circulation: unique insights into cardiovascular 
+regulation. Am J Physiol. 1991;261(4 Pt 2):H1231–45.
+ 63. Sesay M, Tauzin-Fin P, Gosse P, Ballanger P, Maurette P. Real-time heart 
+rate variability and its correlation with plasma catecholamines dur-
+ing laparoscopic adrenal pheochromocytoma surgery. Anesth Analg. 
+2008;106:164–70. table of contents

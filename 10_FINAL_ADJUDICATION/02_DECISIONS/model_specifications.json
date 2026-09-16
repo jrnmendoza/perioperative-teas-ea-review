@@ -1,0 +1,1270 @@
+[
+  {
+    "model_id": "opioid24_TEAS_sham",
+    "result_ids": [
+      "V33-OD-0350"
+    ],
+    "construct": "systemic_opioid_0_24h",
+    "modality": "TEAS",
+    "comparator": "sham",
+    "role": "PRINCIPAL",
+    "measure": "MD",
+    "unit": "mg IVMME",
+    "note": "Source construct/window/contrast reviewed; direct data admitted.",
+    "combine": true,
+    "factor": 1
+  },
+  {
+    "model_id": "opioid24_EA_sham",
+    "result_ids": [],
+    "construct": "systemic_opioid_0_24h",
+    "modality": "EA",
+    "comparator": "sham",
+    "role": "PRINCIPAL",
+    "measure": "MD",
+    "unit": "mg IVMME",
+    "note": "Source construct/window/contrast reviewed; direct data admitted.",
+    "combine": true,
+    "factor": 1
+  },
+  {
+    "model_id": "opioid24_TEAS_usual",
+    "result_ids": [
+      "V33-OD-0351"
+    ],
+    "construct": "systemic_opioid_0_24h",
+    "modality": "TEAS",
+    "comparator": "usual_care",
+    "role": "SUPPORTIVE",
+    "measure": "MD",
+    "unit": "mg IVMME",
+    "note": "Source construct/window/contrast reviewed; direct data admitted.",
+    "combine": true,
+    "factor": 1
+  },
+  {
+    "model_id": "opioid24_EA_usual",
+    "result_ids": [
+      "V33-OD-0252",
+      "V33-OD-0003"
+    ],
+    "construct": "systemic_opioid_0_24h",
+    "modality": "EA",
+    "comparator": "usual_care",
+    "role": "SUPPORTIVE",
+    "measure": "MD",
+    "unit": "mg IVMME",
+    "note": "El-Rakshy outcome Table2 retained with High RoB/source caveat; Seeva includes rescue.",
+    "combine": true,
+    "factor": 1
+  },
+  {
+    "model_id": "opioid24_EA_usual_without_ElRakshy",
+    "result_ids": [
+      "V33-OD-0003"
+    ],
+    "construct": "systemic_opioid_0_24h",
+    "modality": "EA",
+    "comparator": "usual_care",
+    "role": "SENSITIVITY",
+    "measure": "MD",
+    "unit": "mg IVMME",
+    "note": "Source construct/window/contrast reviewed; direct data admitted.",
+    "combine": true,
+    "factor": 1
+  },
+  {
+    "model_id": "opioid24_TEAS_sham_expanded_suf0.25",
+    "result_ids": [
+      "V33-OD-0013",
+      "V33-OD-0214",
+      "V33-OD-0350",
+      "V33-OD-0014"
+    ],
+    "construct": "device_or_equivalence_uncertain_opioid_0_24h",
+    "modality": "TEAS",
+    "comparator": "sham",
+    "role": "SENSITIVITY",
+    "measure": "MD",
+    "unit": "assumed mg IVMME",
+    "note": "Expanded device/rescue/unit-uncertain body. Published source values unchanged. Not the registered systemic estimand.",
+    "combine": true,
+    "factor": {
+      "V33-OD-0013": 5,
+      "V33-OD-0014": 0.25
+    }
+  },
+  {
+    "model_id": "opioid24_TEAS_sham_expanded_suf0.25_without_Chen2020",
+    "result_ids": [
+      "V33-OD-0013",
+      "V33-OD-0214",
+      "V33-OD-0350"
+    ],
+    "construct": "device_or_equivalence_uncertain_opioid_0_24h",
+    "modality": "TEAS",
+    "comparator": "sham",
+    "role": "SENSITIVITY",
+    "measure": "MD",
+    "unit": "assumed mg IVMME",
+    "note": "Expanded device/rescue/unit-uncertain body. Published source values unchanged. Not the registered systemic estimand.",
+    "combine": true,
+    "factor": {
+      "V33-OD-0013": 5,
+      "V33-OD-0014": 0.25
+    }
+  },
+  {
+    "model_id": "opioid24_TEAS_sham_expanded_suf0.5",
+    "result_ids": [
+      "V33-OD-0013",
+      "V33-OD-0214",
+      "V33-OD-0350",
+      "V33-OD-0014"
+    ],
+    "construct": "device_or_equivalence_uncertain_opioid_0_24h",
+    "modality": "TEAS",
+    "comparator": "sham",
+    "role": "SENSITIVITY",
+    "measure": "MD",
+    "unit": "assumed mg IVMME",
+    "note": "Expanded device/rescue/unit-uncertain body. Published source values unchanged. Not the registered systemic estimand.",
+    "combine": true,
+    "factor": {
+      "V33-OD-0013": 5,
+      "V33-OD-0014": 0.5
+    }
+  },
+  {
+    "model_id": "opioid24_TEAS_sham_expanded_suf0.5_without_Chen2020",
+    "result_ids": [
+      "V33-OD-0013",
+      "V33-OD-0214",
+      "V33-OD-0350"
+    ],
+    "construct": "device_or_equivalence_uncertain_opioid_0_24h",
+    "modality": "TEAS",
+    "comparator": "sham",
+    "role": "SENSITIVITY",
+    "measure": "MD",
+    "unit": "assumed mg IVMME",
+    "note": "Expanded device/rescue/unit-uncertain body. Published source values unchanged. Not the registered systemic estimand.",
+    "combine": true,
+    "factor": {
+      "V33-OD-0013": 5,
+      "V33-OD-0014": 0.5
+    }
+  },
+  {
+    "model_id": "opioid24_TEAS_sham_expanded_suf1",
+    "result_ids": [
+      "V33-OD-0013",
+      "V33-OD-0214",
+      "V33-OD-0350",
+      "V33-OD-0014"
+    ],
+    "construct": "device_or_equivalence_uncertain_opioid_0_24h",
+    "modality": "TEAS",
+    "comparator": "sham",
+    "role": "SENSITIVITY",
+    "measure": "MD",
+    "unit": "assumed mg IVMME",
+    "note": "Expanded device/rescue/unit-uncertain body. Published source values unchanged. Not the registered systemic estimand.",
+    "combine": true,
+    "factor": {
+      "V33-OD-0013": 5,
+      "V33-OD-0014": 1.0
+    }
+  },
+  {
+    "model_id": "opioid24_TEAS_sham_expanded_suf1_without_Chen2020",
+    "result_ids": [
+      "V33-OD-0013",
+      "V33-OD-0214",
+      "V33-OD-0350"
+    ],
+    "construct": "device_or_equivalence_uncertain_opioid_0_24h",
+    "modality": "TEAS",
+    "comparator": "sham",
+    "role": "SENSITIVITY",
+    "measure": "MD",
+    "unit": "assumed mg IVMME",
+    "note": "Expanded device/rescue/unit-uncertain body. Published source values unchanged. Not the registered systemic estimand.",
+    "combine": true,
+    "factor": {
+      "V33-OD-0013": 5,
+      "V33-OD-0014": 1.0
+    }
+  },
+  {
+    "model_id": "opioid24_EA_usual_expanded",
+    "result_ids": [
+      "V33-OD-0252",
+      "V33-OD-0003",
+      "V33-OD-0052"
+    ],
+    "construct": "device_or_systemic_opioid_0_24h",
+    "modality": "EA",
+    "comparator": "usual_care",
+    "role": "SENSITIVITY",
+    "measure": "MD",
+    "unit": "mg IVMME",
+    "note": "Source construct/window/contrast reviewed; direct data admitted.",
+    "combine": true,
+    "factor": 1
+  },
+  {
+    "model_id": "opioid_partial_EA_sham",
+    "result_ids": [
+      "V33-OD-0006",
+      "V33-OD-0007"
+    ],
+    "construct": "PCA_partial_1_to_24h",
+    "modality": "EA",
+    "comparator": "sham",
+    "role": "SENSITIVITY",
+    "measure": "MD",
+    "unit": "mg IV morphine",
+    "note": "Source construct/window/contrast reviewed; direct data admitted.",
+    "combine": true,
+    "factor": 1
+  },
+  {
+    "model_id": "opioid_partial_EA_usual",
+    "result_ids": [
+      "V33-OD-0004",
+      "V33-OD-0005"
+    ],
+    "construct": "PCA_partial_1_to_24h",
+    "modality": "EA",
+    "comparator": "usual_care",
+    "role": "SENSITIVITY",
+    "measure": "MD",
+    "unit": "mg IV morphine",
+    "note": "Source construct/window/contrast reviewed; direct data admitted.",
+    "combine": true,
+    "factor": 1
+  },
+  {
+    "model_id": "opioid_partial_TEAS_sham",
+    "result_ids": [
+      "V33-OD-0184",
+      "V33-OD-0185"
+    ],
+    "construct": "PCA_partial_1_to_24h",
+    "modality": "TEAS",
+    "comparator": "sham",
+    "role": "SENSITIVITY",
+    "measure": "MD",
+    "unit": "mg IV morphine",
+    "note": "Lee Table8 excludes recovery-room doses; combine low/high arms; sham interval sum differs fromTable8.",
+    "combine": true,
+    "factor": 1
+  },
+  {
+    "model_id": "opioid24_EA_sham_weight_normalized",
+    "result_ids": [
+      "V33-OD-0107",
+      "V33-OD-0108"
+    ],
+    "construct": "PCA_morphine_0_24h_weight_normalized",
+    "modality": "EA",
+    "comparator": "sham",
+    "role": "SENSITIVITY",
+    "measure": "MD",
+    "unit": "mg/kg IV morphine",
+    "note": "Source construct/window/contrast reviewed; direct data admitted.",
+    "combine": true,
+    "factor": 1
+  },
+  {
+    "model_id": "opioid24_EA_sham_fentanyl_per_kg",
+    "result_ids": [
+      "V33-OD-0016"
+    ],
+    "construct": "fentanyl_0_24h_weight_normalized",
+    "modality": "EA",
+    "comparator": "sham",
+    "role": "SENSITIVITY",
+    "measure": "MD",
+    "unit": "\u00b5g/kg fentanyl",
+    "note": "Source construct/window/contrast reviewed; direct data admitted.",
+    "combine": true,
+    "factor": 1
+  },
+  {
+    "model_id": "ponv24_TEAS_sham",
+    "result_ids": [
+      "V33-OD-0027",
+      "V33-OD-0033",
+      "V33-OD-0130",
+      "V33-OD-0131",
+      "V33-OD-0168",
+      "V33-OD-0195",
+      "V33-OD-0215",
+      "V33-OD-0257",
+      "V33-OD-0261",
+      "V33-OD-0276",
+      "AUDIT-0359"
+    ],
+    "construct": "composite_PONV_0_24h",
+    "modality": "TEAS",
+    "comparator": "sham",
+    "role": "ADDITIONAL",
+    "measure": "RR",
+    "unit": "risk ratio",
+    "note": "0\u201324h or POD1 cumulative adverse-event reporting; Jiang PP population explicit. Lu two active protocols combined.",
+    "combine": true,
+    "factor": 1
+  },
+  {
+    "model_id": "ponv24_TEAS_sham_point_window_sensitivity",
+    "result_ids": [
+      "V33-OD-0027",
+      "V33-OD-0033",
+      "V33-OD-0130",
+      "V33-OD-0131",
+      "V33-OD-0168",
+      "V33-OD-0195",
+      "V33-OD-0215",
+      "V33-OD-0257",
+      "V33-OD-0261",
+      "V33-OD-0276",
+      "AUDIT-0359",
+      "AUDIT-0127"
+    ],
+    "construct": "PONV_24h_including_point_window_uncertain",
+    "modality": "TEAS",
+    "comparator": "sham",
+    "role": "SENSITIVITY",
+    "measure": "RR",
+    "unit": "risk ratio",
+    "note": "Adds Lu2022 24h assessment; cumulative window not presumed in main body. v36: Liang2021 removed (no-stimulation control without sham procedure).",
+    "combine": true,
+    "factor": 1
+  },
+  {
+    "model_id": "nausea24_EA_usual",
+    "result_ids": [
+      "AUDIT-0077",
+      "V34-OD-0759"
+    ],
+    "construct": "nausea_0_24h",
+    "modality": "EA",
+    "comparator": "usual_care",
+    "role": "ADDITIONAL",
+    "measure": "RR",
+    "unit": "risk ratio",
+    "note": "Source construct/window/contrast reviewed; direct data admitted.",
+    "combine": true,
+    "factor": 1
+  },
+  {
+    "model_id": "vomiting24_EA_usual",
+    "result_ids": [
+      "V33-OD-0055",
+      "AUDIT-0078"
+    ],
+    "construct": "vomiting_0_24h",
+    "modality": "EA",
+    "comparator": "usual_care",
+    "role": "ADDITIONAL",
+    "measure": "RR",
+    "unit": "risk ratio",
+    "note": "Source construct/window/contrast reviewed; direct data admitted.",
+    "combine": true,
+    "factor": 1
+  },
+  {
+    "model_id": "nausea24_TEAS_sham",
+    "result_ids": [
+      "V33-OD-0371",
+      "V33-OD-0293",
+      "AUDIT-0292",
+      "AUDIT-0293"
+    ],
+    "construct": "nausea_0_24h",
+    "modality": "TEAS",
+    "comparator": "sham",
+    "role": "ADDITIONAL",
+    "measure": "RR",
+    "unit": "risk ratio",
+    "note": "Source construct/window/contrast reviewed; direct data admitted.",
+    "combine": true,
+    "factor": 1
+  },
+  {
+    "model_id": "vomiting24_TEAS_sham",
+    "result_ids": [
+      "V33-OD-0372",
+      "V33-OD-0296",
+      "V33-OD-0277",
+      "AUDIT-0294",
+      "AUDIT-0295"
+    ],
+    "construct": "vomiting_0_24h",
+    "modality": "TEAS",
+    "comparator": "sham",
+    "role": "ADDITIONAL",
+    "measure": "RR",
+    "unit": "risk ratio",
+    "note": "v36: Pan2023 moved to usual-care body (control did not undergo TEAS; no sham procedure).",
+    "combine": true,
+    "factor": 1
+  },
+  {
+    "model_id": "vomiting24_TEAS_usual",
+    "result_ids": [
+      "AUDIT-0100"
+    ],
+    "construct": "vomiting_0_24h",
+    "modality": "TEAS",
+    "comparator": "usual_care",
+    "role": "ADDITIONAL",
+    "measure": "RR",
+    "unit": "risk ratio",
+    "note": "v36: Pan2023 no-TEAS control; supportive comparison.",
+    "combine": true,
+    "factor": 1
+  },
+  {
+    "model_id": "persistent_nausea24_TEAS_sham",
+    "result_ids": [
+      "V33-OD-0278"
+    ],
+    "construct": "persistent_nausea_over5min_0_24h",
+    "modality": "TEAS",
+    "comparator": "sham",
+    "role": "ADDITIONAL",
+    "measure": "RR",
+    "unit": "risk ratio",
+    "note": "Source construct/window/contrast reviewed; direct data admitted.",
+    "combine": true,
+    "factor": 1
+  },
+  {
+    "model_id": "nausea48_TEAS_sham",
+    "result_ids": [
+      "V33-OD-0139"
+    ],
+    "construct": "nausea_0_48h",
+    "modality": "TEAS",
+    "comparator": "sham",
+    "role": "ADDITIONAL",
+    "measure": "RR",
+    "unit": "risk ratio",
+    "note": "Source construct/window/contrast reviewed; direct data admitted.",
+    "combine": true,
+    "factor": 1
+  },
+  {
+    "model_id": "vomiting48_TEAS_sham",
+    "result_ids": [
+      "V33-OD-0140"
+    ],
+    "construct": "vomiting_0_48h",
+    "modality": "TEAS",
+    "comparator": "sham",
+    "role": "ADDITIONAL",
+    "measure": "RR",
+    "unit": "risk ratio",
+    "note": "Source construct/window/contrast reviewed; direct data admitted.",
+    "combine": true,
+    "factor": 1
+  },
+  {
+    "model_id": "ponv48_TEAS_sham",
+    "result_ids": [
+      "V33-OD-0056"
+    ],
+    "construct": "composite_PONV_0_48h",
+    "modality": "TEAS",
+    "comparator": "sham",
+    "role": "ADDITIONAL",
+    "measure": "RR",
+    "unit": "risk ratio",
+    "note": "v36: Xiong2021 control had electrodes applied and connected without stimulation (sham); formerly ponv48_TEAS_usual.",
+    "combine": true,
+    "factor": 1
+  },
+  {
+    "model_id": "nausea6to24_EA_usual",
+    "result_ids": [
+      "V33-OD-0019",
+      "V33-OD-0021",
+      "V33-OD-0023"
+    ],
+    "construct": "nausea_6_24h",
+    "modality": "EA",
+    "comparator": "usual_care",
+    "role": "ADDITIONAL",
+    "measure": "RR",
+    "unit": "risk ratio",
+    "note": "Source construct/window/contrast reviewed; direct data admitted.",
+    "combine": true,
+    "factor": 1
+  },
+  {
+    "model_id": "vomiting6to24_EA_usual",
+    "result_ids": [
+      "V33-OD-0020",
+      "V33-OD-0022",
+      "V33-OD-0024"
+    ],
+    "construct": "vomiting_6_24h",
+    "modality": "EA",
+    "comparator": "usual_care",
+    "role": "ADDITIONAL",
+    "measure": "RR",
+    "unit": "risk ratio",
+    "note": "Source construct/window/contrast reviewed; direct data admitted.",
+    "combine": true,
+    "factor": 1
+  },
+  {
+    "model_id": "pain24_rest_TEAS_sham",
+    "result_ids": [
+      "V33-OD-0163",
+      "V33-OD-0367",
+      "V33-OD-0064"
+    ],
+    "construct": "pain_rest_approximately24h",
+    "modality": "TEAS",
+    "comparator": "sham",
+    "role": "ADDITIONAL",
+    "measure": "MD",
+    "unit": "0\u201310 points",
+    "note": "Source construct/window/contrast reviewed; direct data admitted.",
+    "combine": true,
+    "factor": 1
+  },
+  {
+    "model_id": "pain24_movement_TEAS_sham",
+    "result_ids": [
+      "V33-OD-0164"
+    ],
+    "construct": "pain_movement_approximately24h",
+    "modality": "TEAS",
+    "comparator": "sham",
+    "role": "ADDITIONAL",
+    "measure": "MD",
+    "unit": "0\u201310 points",
+    "note": "Source construct/window/contrast reviewed; direct data admitted.",
+    "combine": true,
+    "factor": 1
+  },
+  {
+    "model_id": "pain24_rest_TEAS_usual",
+    "result_ids": [],
+    "construct": "pain_rest_approximately24h",
+    "modality": "TEAS",
+    "comparator": "usual_care",
+    "role": "ADDITIONAL",
+    "measure": "MD",
+    "unit": "0\u201310 points",
+    "note": "Xing NTG vs NG isolates TEAS added to balanced TAP block.",
+    "combine": true,
+    "factor": 1
+  },
+  {
+    "model_id": "pain24_movement_EA_sham",
+    "result_ids": [
+      "V33-OD-0201",
+      "V33-OD-0202"
+    ],
+    "construct": "pain_movement_approximately24h",
+    "modality": "EA",
+    "comparator": "sham",
+    "role": "ADDITIONAL",
+    "measure": "MD",
+    "unit": "0\u201310 points",
+    "note": "Source construct/window/contrast reviewed; direct data admitted.",
+    "combine": true,
+    "factor": 0.1
+  },
+  {
+    "model_id": "pain24_rest_EA_sham",
+    "result_ids": [],
+    "construct": "pain_rest_approximately24h",
+    "modality": "EA",
+    "comparator": "sham",
+    "role": "ADDITIONAL",
+    "measure": "MD",
+    "unit": "0\u201310 points",
+    "note": "Source construct/window/contrast reviewed; direct data admitted.",
+    "combine": true,
+    "factor": 1
+  },
+  {
+    "model_id": "pain24_movement_EA_sham_with_He",
+    "result_ids": [
+      "V33-OD-0201",
+      "V33-OD-0202",
+      "V33-OD-0218"
+    ],
+    "construct": "pain_movement_approximately24h",
+    "modality": "EA",
+    "comparator": "sham",
+    "role": "SENSITIVITY",
+    "measure": "MD",
+    "unit": "0\u201310 points",
+    "note": "He2026 reported SDs conflict with threshold counts; retain literal SD only as diagnostic.",
+    "combine": true,
+    "factor": {
+      "V33-OD-0201": 0.1,
+      "V33-OD-0202": 0.1
+    }
+  },
+  {
+    "model_id": "pain24_rest_EA_sham_He_reported_SD",
+    "result_ids": [
+      "V33-OD-0219"
+    ],
+    "construct": "pain_rest_approximately24h",
+    "modality": "EA",
+    "comparator": "sham",
+    "role": "SENSITIVITY",
+    "measure": "MD",
+    "unit": "0\u201310 points",
+    "note": "He2026 extremely small repeated SDs cannot be reconciled with threshold counts; no fabricated replacement.",
+    "combine": true,
+    "factor": 1
+  },
+  {
+    "model_id": "pain24_unclassified_TEAS_sham",
+    "result_ids": [
+      "V33-OD-0015",
+      "V33-OD-0071",
+      "V33-OD-0075",
+      "V33-OD-0142",
+      "V33-OD-0158",
+      "V33-OD-0221",
+      "AUDIT-0342"
+    ],
+    "construct": "pain_setting_unspecified_24h",
+    "modality": "TEAS",
+    "comparator": "sham",
+    "role": "SENSITIVITY",
+    "measure": "MD",
+    "unit": "0\u201310 points",
+    "note": "Rest/movement not established. Never use this mixed-setting body to assert registered pain co-outcome criterion.",
+    "combine": true,
+    "factor": 1
+  },
+  {
+    "model_id": "pain24_Lee_low_arm_only",
+    "result_ids": [
+      "V33-OD-0187"
+    ],
+    "construct": "pain_setting_unspecified_24h",
+    "modality": "TEAS",
+    "comparator": "sham",
+    "role": "SENSITIVITY",
+    "measure": "MD",
+    "unit": "0\u201310 points",
+    "note": "Available low-frequency arm only; not admitted as a complete multiarm evidence body.",
+    "combine": true,
+    "factor": 1
+  },
+  {
+    "model_id": "pain24_Ng_unspecified",
+    "result_ids": [
+      "V33-OD-0118"
+    ],
+    "construct": "pain_setting_unspecified_POD1",
+    "modality": "EA",
+    "comparator": "sham",
+    "role": "SENSITIVITY",
+    "measure": "MD",
+    "unit": "0\u201310 points",
+    "note": "Source construct/window/contrast reviewed; direct data admitted.",
+    "combine": true,
+    "factor": 1
+  },
+  {
+    "model_id": "pain6to24_movement_EA_usual",
+    "result_ids": [
+      "AUDIT-0002",
+      "AUDIT-0003",
+      "AUDIT-0004"
+    ],
+    "construct": "pain_movement_interval6_24h",
+    "modality": "EA",
+    "comparator": "usual_care",
+    "role": "SENSITIVITY",
+    "measure": "MD",
+    "unit": "0\u201310 points",
+    "note": "Interval summary cannot be assumed a point24h co-outcome.",
+    "combine": true,
+    "factor": 1
+  },
+  {
+    "model_id": "flatus_TEAS_sham",
+    "result_ids": [
+      "V33-OD-0028",
+      "V33-OD-0082",
+      "V33-OD-0134",
+      "V33-OD-0223",
+      "V33-OD-0239",
+      "V33-OD-0062",
+      "AUDIT-0251",
+      "AUDIT-0252",
+      "AUDIT-0253",
+      "AUDIT-0347"
+    ],
+    "construct": "time_first_flatus",
+    "modality": "TEAS",
+    "comparator": "sham",
+    "role": "ADDITIONAL",
+    "measure": "MD",
+    "unit": "hours",
+    "note": "Source construct/window/contrast reviewed; direct data admitted.",
+    "combine": true,
+    "factor": 1
+  },
+  {
+    "model_id": "flatus_TEAS_usual",
+    "result_ids": [],
+    "construct": "time_first_flatus",
+    "modality": "TEAS",
+    "comparator": "usual_care",
+    "role": "ADDITIONAL",
+    "measure": "MD",
+    "unit": "hours",
+    "note": "Source construct/window/contrast reviewed; direct data admitted.",
+    "combine": true,
+    "factor": 1
+  },
+  {
+    "model_id": "flatus_EA_sham",
+    "result_ids": [
+      "V33-OD-0117"
+    ],
+    "construct": "time_first_flatus",
+    "modality": "EA",
+    "comparator": "sham",
+    "role": "ADDITIONAL",
+    "measure": "MD",
+    "unit": "hours",
+    "note": "Source construct/window/contrast reviewed; direct data admitted.",
+    "combine": true,
+    "factor": 24
+  },
+  {
+    "model_id": "flatus_EA_usual",
+    "result_ids": [
+      "V33-OD-0002",
+      "V33-OD-0053",
+      "V33-OD-0198",
+      "AUDIT-0017",
+      "AUDIT-0018",
+      "AUDIT-0019"
+    ],
+    "construct": "time_first_flatus",
+    "modality": "EA",
+    "comparator": "usual_care",
+    "role": "ADDITIONAL",
+    "measure": "MD",
+    "unit": "hours",
+    "note": "Source construct/window/contrast reviewed; direct data admitted.",
+    "combine": true,
+    "factor": 1
+  },
+  {
+    "model_id": "bowelsounds_TEAS_sham",
+    "result_ids": [
+      "V33-OD-0222",
+      "AUDIT-0173",
+      "AUDIT-0346"
+    ],
+    "construct": "time_first_bowel_sounds",
+    "modality": "TEAS",
+    "comparator": "sham",
+    "role": "ADDITIONAL",
+    "measure": "MD",
+    "unit": "hours",
+    "note": "Source construct/window/contrast reviewed; direct data admitted.",
+    "combine": true,
+    "factor": 1
+  },
+  {
+    "model_id": "defecation_TEAS_sham",
+    "result_ids": [
+      "V33-OD-0135",
+      "V33-OD-0224",
+      "V33-OD-0240",
+      "AUDIT-0254",
+      "AUDIT-0255",
+      "AUDIT-0256"
+    ],
+    "construct": "time_first_defecation",
+    "modality": "TEAS",
+    "comparator": "sham",
+    "role": "ADDITIONAL",
+    "measure": "MD",
+    "unit": "hours",
+    "note": "Source construct/window/contrast reviewed; direct data admitted.",
+    "combine": true,
+    "factor": 1
+  },
+  {
+    "model_id": "defecation_EA_sham",
+    "result_ids": [
+      "V33-OD-0115"
+    ],
+    "construct": "time_first_defecation",
+    "modality": "EA",
+    "comparator": "sham",
+    "role": "ADDITIONAL",
+    "measure": "MD",
+    "unit": "hours",
+    "note": "Source construct/window/contrast reviewed; direct data admitted.",
+    "combine": true,
+    "factor": 1
+  },
+  {
+    "model_id": "defecation_EA_usual",
+    "result_ids": [
+      "V33-OD-0054",
+      "V33-OD-0116",
+      "V33-OD-0199",
+      "V33-OD-0380"
+    ],
+    "construct": "time_first_defecation",
+    "modality": "EA",
+    "comparator": "usual_care",
+    "role": "ADDITIONAL",
+    "measure": "MD",
+    "unit": "hours",
+    "note": "Source construct/window/contrast reviewed; direct data admitted.",
+    "combine": true,
+    "factor": 1
+  },
+  {
+    "model_id": "opioid48_EA_usual_PCA",
+    "result_ids": [
+      "V33-OD-0254"
+    ],
+    "construct": "PCA_fentanyl_0_48h",
+    "modality": "EA",
+    "comparator": "usual_care",
+    "role": "ADDITIONAL",
+    "measure": "MD",
+    "unit": "mg IVMME",
+    "note": "Source construct/window/contrast reviewed; direct data admitted.",
+    "combine": true,
+    "factor": 100
+  },
+  {
+    "model_id": "opioid72_EA_usual_PCA",
+    "result_ids": [
+      "V35-YANG24-72"
+    ],
+    "construct": "PCA_morphine_0_72h",
+    "modality": "EA",
+    "comparator": "usual_care",
+    "role": "SENSITIVITY",
+    "measure": "MD",
+    "unit": "mg IV morphine",
+    "note": "Yang unquantified IM rescue not included in device total.",
+    "combine": true,
+    "factor": 1
+  },
+  {
+    "model_id": "opioid72_EA_sham_PCA",
+    "result_ids": [
+      "V33-OD-0250"
+    ],
+    "construct": "PCA_morphine_0_72h",
+    "modality": "EA",
+    "comparator": "sham",
+    "role": "ADDITIONAL",
+    "measure": "MD",
+    "unit": "mg IV morphine",
+    "note": "Published three-day PCA mean/SD; separate from strict systemic24h outcome.",
+    "combine": true,
+    "factor": 1
+  },
+  {
+    "model_id": "opioid48_TEAS_sham_uncertain_suf0.25",
+    "result_ids": [
+      "V35-CHEN20-48",
+      "V35-HE26-48"
+    ],
+    "construct": "PCA_or_author_equivalent_0_48h",
+    "modality": "TEAS",
+    "comparator": "sham",
+    "role": "SENSITIVITY",
+    "measure": "MD",
+    "unit": "assumed mg IVMME",
+    "note": "Chen unresolved basal contradiction and He unknown equivalence basis; no principal claim.",
+    "combine": true,
+    "factor": {
+      "V35-CHEN20-48": 0.25
+    }
+  },
+  {
+    "model_id": "opioid48_TEAS_sham_uncertain_suf0.5",
+    "result_ids": [
+      "V35-CHEN20-48",
+      "V35-HE26-48"
+    ],
+    "construct": "PCA_or_author_equivalent_0_48h",
+    "modality": "TEAS",
+    "comparator": "sham",
+    "role": "SENSITIVITY",
+    "measure": "MD",
+    "unit": "assumed mg IVMME",
+    "note": "Chen unresolved basal contradiction and He unknown equivalence basis; no principal claim.",
+    "combine": true,
+    "factor": {
+      "V35-CHEN20-48": 0.5
+    }
+  },
+  {
+    "model_id": "opioid48_TEAS_sham_uncertain_suf1",
+    "result_ids": [
+      "V35-CHEN20-48",
+      "V35-HE26-48"
+    ],
+    "construct": "PCA_or_author_equivalent_0_48h",
+    "modality": "TEAS",
+    "comparator": "sham",
+    "role": "SENSITIVITY",
+    "measure": "MD",
+    "unit": "assumed mg IVMME",
+    "note": "Chen unresolved basal contradiction and He unknown equivalence basis; no principal claim.",
+    "combine": true,
+    "factor": {
+      "V35-CHEN20-48": 1.0
+    }
+  },
+  {
+    "model_id": "intraop_remifentanil_TEAS_sham",
+    "result_ids": [
+      "V33-OD-0034",
+      "V33-OD-0072",
+      "V33-OD-0078",
+      "V33-OD-0128",
+      "V33-OD-0129",
+      "V33-OD-0232",
+      "V33-OD-0061"
+    ],
+    "construct": "intraop_remifentanil",
+    "modality": "TEAS",
+    "comparator": "sham",
+    "role": "ADDITIONAL",
+    "measure": "MD",
+    "unit": "\u00b5g remifentanil",
+    "note": "v36: Pan2023 and Liang2021 no-stimulation controls moved to usual-care body.",
+    "combine": true,
+    "factor": {
+      "V33-OD-0128": 1000,
+      "V33-OD-0129": 1000,
+      "V33-OD-0232": 1000
+    }
+  },
+  {
+    "model_id": "intraop_remifentanil_TEAS_usual",
+    "result_ids": [
+      "V33-OD-0379",
+      "AUDIT-0364"
+    ],
+    "construct": "intraop_remifentanil",
+    "modality": "TEAS",
+    "comparator": "usual_care",
+    "role": "ADDITIONAL",
+    "measure": "MD",
+    "unit": "\u00b5g remifentanil",
+    "note": "v36: Pan2023 and Liang2021 controls received no TEAS/no stimulation without a described sham procedure.",
+    "combine": true,
+    "factor": 1
+  },
+  {
+    "model_id": "intraop_remifentanil_EA_usual",
+    "result_ids": [
+      "V33-OD-0376",
+      "V33-OD-0377",
+      "V33-OD-0378"
+    ],
+    "construct": "intraop_remifentanil",
+    "modality": "EA",
+    "comparator": "usual_care",
+    "role": "ADDITIONAL",
+    "measure": "MD",
+    "unit": "\u00b5g remifentanil",
+    "note": "Source construct/window/contrast reviewed; direct data admitted.",
+    "combine": true,
+    "factor": {
+      "V33-OD-0376": 1000,
+      "V33-OD-0377": 1000,
+      "V33-OD-0378": 1000
+    }
+  },
+  {
+    "model_id": "intraop_remifentanil_EA_sham",
+    "result_ids": [
+      "V33-OD-0112"
+    ],
+    "construct": "intraop_remifentanil",
+    "modality": "EA",
+    "comparator": "sham",
+    "role": "ADDITIONAL",
+    "measure": "MD",
+    "unit": "\u00b5g remifentanil",
+    "note": "Source construct/window/contrast reviewed; direct data admitted.",
+    "combine": true,
+    "factor": 1
+  },
+  {
+    "model_id": "tramadol24_TEAS_usual_PCA",
+    "result_ids": [
+      "V33-OD-0299"
+    ],
+    "construct": "PCA_tramadol_0_24h",
+    "modality": "TEAS",
+    "comparator": "usual_care",
+    "role": "SENSITIVITY",
+    "measure": "MD",
+    "unit": "mg IV tramadol",
+    "note": "Source construct/window/contrast reviewed; direct data admitted.",
+    "combine": true,
+    "factor": 1
+  },
+  {
+    "model_id": "tramadol24_TEAS_active_PCA",
+    "result_ids": [
+      "V33-OD-0300"
+    ],
+    "construct": "PCA_tramadol_0_24h",
+    "modality": "TEAS",
+    "comparator": "active_electrical",
+    "role": "SENSITIVITY",
+    "measure": "MD",
+    "unit": "mg IV tramadol",
+    "note": "Source construct/window/contrast reviewed; direct data admitted.",
+    "combine": true,
+    "factor": 1
+  },
+  {
+    "model_id": "pethidine24_TEAS_usual_rescue",
+    "result_ids": [
+      "V33-OD-0303"
+    ],
+    "construct": "rescue_pethidine_0_24h",
+    "modality": "TEAS",
+    "comparator": "usual_care",
+    "role": "ADDITIONAL",
+    "measure": "MD",
+    "unit": "mg IM pethidine",
+    "note": "Source construct/window/contrast reviewed; direct data admitted.",
+    "combine": true,
+    "factor": 1
+  },
+  {
+    "model_id": "pethidine24_TEAS_active_rescue",
+    "result_ids": [
+      "V33-OD-0304"
+    ],
+    "construct": "rescue_pethidine_0_24h",
+    "modality": "TEAS",
+    "comparator": "active_electrical",
+    "role": "ADDITIONAL",
+    "measure": "MD",
+    "unit": "mg IM pethidine",
+    "note": "Source construct/window/contrast reviewed; direct data admitted.",
+    "combine": true,
+    "factor": 1
+  },
+  {
+    "model_id": "ponv24_TEAS_active",
+    "result_ids": [
+      "V33-OD-0331"
+    ],
+    "construct": "composite_PONV_0_24h",
+    "modality": "TEAS",
+    "comparator": "active_electrical",
+    "role": "ADDITIONAL",
+    "measure": "RR",
+    "unit": "risk ratio",
+    "note": "Song matched non-acupoint electrical stimulation; conservative active-control category. Broad-sham sensitivity available.",
+    "combine": true,
+    "factor": 1
+  },
+  {
+    "model_id": "pain24_TEAS_active_unspecified",
+    "result_ids": [
+      "V33-OD-0328"
+    ],
+    "construct": "pain_setting_unspecified_24h",
+    "modality": "TEAS",
+    "comparator": "active_electrical",
+    "role": "SENSITIVITY",
+    "measure": "MD",
+    "unit": "0\u201310 points",
+    "note": "Source construct/window/contrast reviewed; direct data admitted.",
+    "combine": true,
+    "factor": 1
+  },
+  {
+    "model_id": "ponv24_TEAS_broad_sham_sensitivity",
+    "result_ids": [
+      "V33-OD-0027",
+      "V33-OD-0033",
+      "V33-OD-0130",
+      "V33-OD-0131",
+      "V33-OD-0168",
+      "V33-OD-0195",
+      "V33-OD-0215",
+      "V33-OD-0257",
+      "V33-OD-0261",
+      "V33-OD-0276",
+      "V33-OD-0331",
+      "AUDIT-0359"
+    ],
+    "construct": "composite_PONV_0_24h_broad_sham",
+    "modality": "TEAS",
+    "comparator": "sham",
+    "role": "SENSITIVITY",
+    "measure": "RR",
+    "unit": "risk ratio",
+    "note": "Includes Song non-acupoint active-current sham as permitted by broader registered sham definition; diagnostic against conservative main taxonomy.",
+    "combine": true,
+    "factor": 1
+  },
+  {
+    "model_id": "flatus_TEAS_sham_SMD_sensitivity",
+    "result_ids": [
+      "V33-OD-0028",
+      "V33-OD-0082",
+      "V33-OD-0134",
+      "V33-OD-0223",
+      "V33-OD-0239",
+      "V33-OD-0062",
+      "AUDIT-0251",
+      "AUDIT-0252",
+      "AUDIT-0253",
+      "AUDIT-0347"
+    ],
+    "construct": "time_first_flatus",
+    "modality": "TEAS",
+    "comparator": "sham",
+    "role": "SENSITIVITY",
+    "measure": "SMD",
+    "unit": "Hedges g",
+    "note": "Same construct and membership as hours MD; no selection by I\u00b2 or P.",
+    "combine": true,
+    "factor": 1
+  },
+  {
+    "model_id": "flatus_TEAS_usual_SMD_sensitivity",
+    "result_ids": [],
+    "construct": "time_first_flatus",
+    "modality": "TEAS",
+    "comparator": "usual_care",
+    "role": "SENSITIVITY",
+    "measure": "SMD",
+    "unit": "Hedges g",
+    "note": "Same construct and membership as hours MD; no selection by I\u00b2 or P.",
+    "combine": true,
+    "factor": 1
+  },
+  {
+    "model_id": "flatus_EA_sham_SMD_sensitivity",
+    "result_ids": [
+      "V33-OD-0117"
+    ],
+    "construct": "time_first_flatus",
+    "modality": "EA",
+    "comparator": "sham",
+    "role": "SENSITIVITY",
+    "measure": "SMD",
+    "unit": "Hedges g",
+    "note": "Same construct and membership as hours MD; no selection by I\u00b2 or P.",
+    "combine": true,
+    "factor": 24
+  },
+  {
+    "model_id": "flatus_EA_usual_SMD_sensitivity",
+    "result_ids": [
+      "V33-OD-0002",
+      "V33-OD-0053",
+      "V33-OD-0198",
+      "AUDIT-0017",
+      "AUDIT-0018",
+      "AUDIT-0019"
+    ],
+    "construct": "time_first_flatus",
+    "modality": "EA",
+    "comparator": "usual_care",
+    "role": "SENSITIVITY",
+    "measure": "SMD",
+    "unit": "Hedges g",
+    "note": "Same construct and membership as hours MD; no selection by I\u00b2 or P.",
+    "combine": true,
+    "factor": 1
+  },
+  {
+    "model_id": "flatus_TEAS_sham_without_Zheng2025",
+    "result_ids": [
+      "V33-OD-0028",
+      "V33-OD-0082",
+      "V33-OD-0134",
+      "V33-OD-0223",
+      "V33-OD-0239",
+      "V33-OD-0062",
+      "AUDIT-0251",
+      "AUDIT-0252",
+      "AUDIT-0253"
+    ],
+    "construct": "time_first_flatus",
+    "modality": "TEAS",
+    "comparator": "sham",
+    "role": "SENSITIVITY",
+    "measure": "MD",
+    "unit": "hours",
+    "note": "Leave-out diagnostic: Zheng2025 printed SD/P internal inconsistency unresolved; not a replacement body.",
+    "combine": true,
+    "factor": 1
+  },
+  {
+    "model_id": "bowelsounds_TEAS_sham_without_Zheng2025",
+    "result_ids": [
+      "V33-OD-0222",
+      "AUDIT-0173"
+    ],
+    "construct": "time_first_bowel_sounds",
+    "modality": "TEAS",
+    "comparator": "sham",
+    "role": "SENSITIVITY",
+    "measure": "MD",
+    "unit": "hours",
+    "note": "Leave-out diagnostic: Zheng2025 printed SD/P internal inconsistency unresolved; not a replacement body.",
+    "combine": true,
+    "factor": 1
+  },
+  {
+    "model_id": "intraop_remifentanil_TEAS_sham_without_Zheng2025",
+    "result_ids": [
+      "V33-OD-0072",
+      "V33-OD-0078",
+      "V33-OD-0128",
+      "V33-OD-0129",
+      "V33-OD-0232",
+      "V33-OD-0061"
+    ],
+    "construct": "intraop_remifentanil",
+    "modality": "TEAS",
+    "comparator": "sham",
+    "role": "SENSITIVITY",
+    "measure": "MD",
+    "unit": "\u00b5g remifentanil",
+    "note": "Leave-out diagnostic: Zheng2025 printed SD/P internal inconsistency unresolved; not a replacement body.",
+    "combine": true,
+    "factor": {
+      "V33-OD-0128": 1000,
+      "V33-OD-0129": 1000,
+      "V33-OD-0232": 1000
+    }
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "date": "2026-09-13T10:40:39.635863+00:00",
+  "branch": "astra-final-resolution",
+  "base_commit": "174efe017303ecd7b35ac19f44b71b0e34d7eaac",
+  "previous_local_commit": "8bcdf4eff9bc07f29fe00a3000c95cb5ab0efee6",
+  "protocol_path": "/Users/ryan/Downloads/PROSPERO submitted.pdf",
+  "protocol_sha256": "ceffac76c6dc82cc5ffd92701772bfe23a2546078c37a99ac7bfc2e0d97682f9",
+  "protocol_bytes": 103675,
+  "authority": "User expressly designates this PDF as authoritative methodology; own registration ID not displayed; identifier discrepancy non-blocking",
+  "request_path": "/Users/ryan/.codex/attachments/93030a40-7d6a-4b99-ae8a-19a6ae7d8a01/pasted-text.txt"
+}
