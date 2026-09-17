@@ -1,0 +1,247 @@
+----------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/.claude/worktrees/festive-jenni
+> ngs-0689c3/06_FINAL_ANALYSIS_V26/02_STATA/logs/15_stratum_compliant_diagnostic.log
+  log type:  text
+ opened on:  12 Sep 2026, 21:00:50
+
+. 
+. di as txt "=================================================================="
+==================================================================
+
+. di as txt "15: PROTOCOL-COMPLIANT STRATUM DIAGNOSTIC  (NOT A REPORTED FINDING)"
+15: PROTOCOL-COMPLIANT STRATUM DIAGNOSTIC  (NOT A REPORTED FINDING)
+
+. di as txt "=================================================================="
+==================================================================
+
+. 
+. tempfile out
+
+. postfile h str44 stratum k double(est lo hi pval i2 tau2) using `out', replace
+(file /var/folders/7q/vsx8qt9d0mlfyhgbdt1b27dw0000gn/T//S_76565.000001 not found)
+
+. 
+. * ---------- Target E: time to first flatus, mean difference in hours ----------
+. use "06_FINAL_ANALYSIS_V26/01_DATA/target_E_flatus.dta", clear
+
+. meta set md_hours se_hours, studylabel(study) eslabel("Mean Difference (Hours)")
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 7
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Mean Difference (Hours)
+          Variable: md_hours
+
+         Precision
+         Std. err.: se_hours
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+. 
+. di as txt _n "--- Target E / TEAS vs Sham (k=3) ---"
+
+--- Target E / TEAS vs Sham (k=3) ---
+
+. meta summarize if inlist(study, "Xing 2022", "Zhang 2018", "Zhou 2025"), random(reml) se(kh)
+
+  Effect-size label: Mean Difference (Hours)
+        Effect size: md_hours
+          Std. err.: se_hours
+        Study label: study
+
+Meta-analysis summary                     Number of studies =      3
+Random-effects model                      Heterogeneity:
+Method: REML                                          tau2 = 194.5002
+SE adjustment: Knapp–Hartung                        I2 (%) =   98.41
+                                                        H2 =   63.00
+
+       Effect size: Mean Difference (Hours)
+--------------------------------------------------------------------
+            Study |    Effect size    [95% conf. interval]  % weight
+------------------+-------------------------------------------------
+        Zhou 2025 |         -1.780      -3.171      -0.389     34.87
+        Xing 2022 |         -4.260      -7.645      -0.875     34.43
+       Zhang 2018 |        -28.721     -38.915     -18.527     30.69
+------------------+-------------------------------------------------
+            theta |        -10.903     -47.115      25.309
+--------------------------------------------------------------------
+Test of theta = 0: t(2) = -1.30                  Prob > |t| = 0.3245
+Test of homogeneity: Q = chi2(2) = 27.47           Prob > Q = 0.0000
+
+. scalar kk = r(N) 
+
+.  scalar pp = r(p)
+
+. post h ("TE_FLATUS_TEAS_SHAM") (kk) (r(theta)) (r(ci_lb)) (r(ci_ub)) ///
+>        (pp) (r(I2)) (r(tau2))
+
+. 
+. di as txt _n "--- Target E / EA vs Usual care (k=2) ---"
+
+--- Target E / EA vs Usual care (k=2) ---
+
+. meta summarize if inlist(study, "Yang 2020", "Yang 2024"), random(reml) se(kh)
+
+  Effect-size label: Mean Difference (Hours)
+        Effect size: md_hours
+          Std. err.: se_hours
+        Study label: study
+
+Meta-analysis summary                     Number of studies =      2
+Random-effects model                      Heterogeneity:
+Method: REML                                          tau2 =  0.2608
+SE adjustment: Knapp–Hartung                        I2 (%) =   18.05
+                                                        H2 =    1.22
+
+       Effect size: Mean Difference (Hours)
+--------------------------------------------------------------------
+            Study |    Effect size    [95% conf. interval]  % weight
+------------------+-------------------------------------------------
+        Yang 2020 |         -3.300      -6.142      -0.458     18.22
+        Yang 2024 |         -1.600      -2.611      -0.589     81.78
+------------------+-------------------------------------------------
+            theta |         -1.910     -10.249       6.429
+--------------------------------------------------------------------
+Test of theta = 0: t(1) = -2.91                  Prob > |t| = 0.2107
+Test of homogeneity: Q = chi2(1) = 1.22            Prob > Q = 0.2693
+
+. scalar kk = r(N) 
+
+.  scalar pp = r(p)
+
+. post h ("TE_FLATUS_EA_USUAL") (kk) (r(theta)) (r(ci_lb)) (r(ci_ub)) ///
+>        (pp) (r(I2)) (r(tau2))
+
+. 
+. * ---------- Target A: 48-h opioid, mean difference in mg IV MME --------------
+. use "06_FINAL_ANALYSIS_V26/01_DATA/target_A_48h.dta", clear
+
+. capture confirm variable md_mme
+
+. if !_rc {
+.     meta set md_mme se_mme, studylabel(study) eslabel("Mean Difference (mg IV MME)")
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 5
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Mean Difference (mg IV MME)
+          Variable: md_mme
+
+         Precision
+         Std. err.: se_mme
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+.     di as txt _n "--- Target A / TEAS vs Sham (k=2) ---"
+
+--- Target A / TEAS vs Sham (k=2) ---
+.     meta summarize if inlist(study, "Chen 2020", "Zhang 2023"), random(reml) se(kh)
+
+  Effect-size label: Mean Difference (mg IV MME)
+        Effect size: md_mme
+          Std. err.: se_mme
+        Study label: study
+
+Meta-analysis summary                     Number of studies =      2
+Random-effects model                      Heterogeneity:
+Method: REML                                          tau2 = 165.0283
+SE adjustment: Knapp–Hartung                        I2 (%) =   98.59
+                                                        H2 =   71.06
+
+       Effect size: Mean Difference (mg IV MME)
+--------------------------------------------------------------------
+            Study |    Effect size    [95% conf. interval]  % weight
+------------------+-------------------------------------------------
+        Chen 2020 |        -21.630     -25.518     -17.742     49.53
+       Zhang 2023 |         -3.333      -5.060      -1.606     50.47
+------------------+-------------------------------------------------
+            theta |        -12.395    -128.631     103.840
+--------------------------------------------------------------------
+Test of theta = 0: t(1) = -1.35                  Prob > |t| = 0.4048
+Test of homogeneity: Q = chi2(1) = 71.06           Prob > Q = 0.0000
+.     scalar kk = r(N) 
+.     scalar pp = r(p)
+.     post h ("TA_48H_TEAS_SHAM") (kk) (r(theta)) (r(ci_lb)) (r(ci_ub)) ///
+>            (pp) (r(I2)) (r(tau2))
+. }
+
+. else {
+.     di as error "target_A_48h.dta has no md_mme; Target A stratum not fitted"
+. }
+
+. 
+. postclose h
+
+. use `out', clear
+
+. list, noobs sep(0)
+
+  +---------------------------------------------------------------------------------------+
+  |             stratum | k |        est |         lo |        hi |      pval |        i2 |
+  | TE_FLATUS_TEAS_SHAM | 3 | -10.903047 | -47.115039 | 25.308945 | .32452453 | 98.412751 |
+  |---------------------------------------------------------------------------------------|
+  |                                            tau2                                       |
+  |                                       194.50019                                       |
+  +---------------------------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------------------------+
+  |             stratum | k |        est |         lo |        hi |      pval |        i2 |
+  |  TE_FLATUS_EA_USUAL | 2 | -1.9098177 |  -10.24864 | 6.4290048 | .21071664 | 18.048478 |
+  |---------------------------------------------------------------------------------------|
+  |                                            tau2                                       |
+  |                                       .26080074                                       |
+  +---------------------------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------------------------+
+  |             stratum | k |        est |         lo |        hi |      pval |        i2 |
+  |    TA_48H_TEAS_SHAM | 2 | -12.395357 | -128.63075 | 103.84003 | .40475306 | 98.592718 |
+  |---------------------------------------------------------------------------------------|
+  |                                            tau2                                       |
+  |                                       165.02834                                       |
+  +---------------------------------------------------------------------------------------+
+
+. export delimited using ///
+>   "06_FINAL_ANALYSIS_V26/03_RESULTS/results_stratum_compliant_diagnostic.csv", replace
+file 06_FINAL_ANALYSIS_V26/03_RESULTS/results_stratum_compliant_diagnostic.csv saved
+
+. 
+. di as txt _n "=================================================================="
+
+==================================================================
+
+. di as txt "DIAGNOSTIC ONLY. Target D 0-48 h has no stratum with k>=2 and is"
+DIAGNOSTIC ONLY. Target D 0-48 h has no stratum with k>=2 and is
+
+. di as txt "therefore absent from this file entirely."
+therefore absent from this file entirely.
+
+. di as txt "=================================================================="
+==================================================================
+
+. log close
+      name:  <unnamed>
+       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/.claude/worktrees/festive-jenni
+> ngs-0689c3/06_FINAL_ANALYSIS_V26/02_STATA/logs/15_stratum_compliant_diagnostic.log
+  log type:  text
+ closed on:  12 Sep 2026, 21:00:50
+----------------------------------------------------------------------------------------------------

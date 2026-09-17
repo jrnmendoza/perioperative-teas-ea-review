@@ -2201,12 +2201,27 @@ def t_target_e_post_hoc_change_is_recorded_as_an_amendment():
         text = lbl.group(1)
         for need, what in (
             ("unfilled", "the placeholder's label does not say the modality is unfilled"),
-            ("ST36", "the placeholder's label does not carry the Zhang 2018 source evidence "
-                     "(surface electrodes at ST36 and PC6)"),
-            ("TEAS", "the placeholder's label does not say the study register records TEAS"),
+            ("TEAS", "the placeholder's label does not say the modality is TEAS per the source"),
         ):
             if need not in text:
                 probs.append(what)
+        # The ST36/PC6 evidence moved out of the inline label (it made the warning
+        # sentence unreadable) into the diagnostic bundle's source_modality_notes.
+        # It still has to exist somewhere a reader meets the stratum.
+        diag = DASH / "stratum_compliant_diagnostic.js"
+        if not diag.exists():
+            probs.append("stratum_compliant_diagnostic.js is missing, so the Zhang 2018 source "
+                         "evidence has nowhere to live now that the label is short")
+        else:
+            dj = json.JSONDecoder().raw_decode(
+                diag.read_text(encoding="utf-8")
+                .split("window.STRATUM_COMPLIANT_DIAGNOSTIC = ", 1)[1])[0]
+            notes = " ".join(json.dumps(a.get("source_modality_notes", {}))
+                             for a in dj.get("analyses", []))
+            for need in ("ST36", "PC6", "Needleless"):
+                if need not in notes:
+                    probs.append(f"the stratum diagnostic does not record the Zhang 2018 source "
+                                 f"evidence ({need})")
         if "disagree" in text:
             probs.append("the placeholder's label still calls it a disagreement between "
                          "registers; one register holds an evidenced value, the other a blank")

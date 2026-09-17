@@ -52,7 +52,7 @@ MASTER_XLSX = (
 CACHE_BUSTED_ASSETS = (
     "styles.css", "primary_pathway.js", "tiered_v33.js", "v33_data.js", "v34_data.js",
     "pdf_extracted.js", "outcome_quarantine.js",
-    "interpretation_layer.js", "computed_not_reported.js", "prior_evidence.js", "limitations.js", "prisma_checklist.js", "stratum_purity.js", "forest_context.js", "rob2_source_links.js", "data.js",
+    "interpretation_layer.js", "computed_not_reported.js", "prior_evidence.js", "limitations.js", "prisma_checklist.js", "stratum_purity.js", "stratum_compliant_diagnostic.js", "forest_context.js", "rob2_source_links.js", "data.js",
     "translations.js", "ui_translations.js", "reader_assist.js", "meta_engine.js", "app.js", "findings.js",
     "author_inquiries.js", "search_strategies.js", "meta_outcomes.js",
     "primary_browser.js",

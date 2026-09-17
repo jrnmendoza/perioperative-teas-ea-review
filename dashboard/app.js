@@ -5457,10 +5457,13 @@ function stratumPurityFinding(analysisId) {
 // make Target E protocol-compliant, since it pools TEAS with EA and sham with
 // usual care either way. Modality feeds stratification, so the register edit is
 // the review team's, not this renderer's.
+// Kept short on purpose. The full source evidence used to be inlined here, which
+// made the "combines N comparison types" sentence unreadable once the diagnostic
+// below began listing the strata properly. The evidence now lives in that
+// diagnostic's source_modality_notes, where it sits beside the stratum it settles.
 const STRATUM_LABEL = {
-  MODALITY_REVIEW_REQUIRED: 'modality left unfilled in the v34 outcome register '
-    + '(Zhang 2018 \u2014 the study register records TEAS and the source confirms it: '
-    + '\u201cneedleless\u201d acustimulation via surface electrodes at ST36 and PC6)'
+  MODALITY_REVIEW_REQUIRED: 'modality unfilled in the v34 outcome register '
+    + '(Zhang 2018 \u2014 TEAS per the source; see below)'
 };
 
 function readableStratum(s) {
@@ -5481,6 +5484,59 @@ function stratumPurityFlag(analysisId) {
       This estimate combines ${f.distinct_strata.length} comparison types
       (${pwEsc(strata)}), which the locked protocol keeps separate. Do not quote
       it as a protocol-compliant pooled result.
+      ${stratumCompliantDiagnostic(analysisId)}
+    </div>`;
+}
+
+/**
+ * What the protocol-compliant strata actually give, shown under the warning.
+ *
+ * Added 2026-09-12 at the review team's request. The warning above had been
+ * telling readers the pool is not compliant without telling them what the
+ * compliant version looks like, which left "just split it" looking like an
+ * obvious fix. It is not: Target E's TEAS-vs-Sham stratum carries a HIGHER I²
+ * than the k = 7 pool it would replace, Target A's spans -129 to +104 mg MME,
+ * and Target D 0-48 h has no estimable stratum at all. Compliance and
+ * heterogeneity are separate problems here.
+ *
+ * DIAGNOSTIC. Every figure comes from 15_stratum_compliant_diagnostic.do and
+ * none of it replaces a reported result.
+ */
+function stratumCompliantDiagnostic(analysisId) {
+  const D = window.STRATUM_COMPLIANT_DIAGNOSTIC;
+  if (!D) return '';
+  const a = (D.analyses || []).find(x => x.analysis_id === analysisId);
+  if (!a) return '';
+  const num = (v, d = 2) => (v < 0 ? '\u2212' : '+') + Math.abs(v).toFixed(d);
+  const rows = a.strata.map(s => {
+    const label = `${pwEsc(s.modality)} vs ${pwEsc(s.comparator)}`;
+    const who = `<span style="color:var(--text-muted);">${pwEsc(s.studies.join(', '))}</span>`;
+    if (!s.fit) {
+      return `<li><strong>k = ${s.k}</strong> &middot; ${label} &mdash;
+        <em>not estimable as a pooled result</em>. ${who}</li>`;
+    }
+    const f = s.fit;
+    return `<li><strong>k = ${s.k}</strong> &middot; ${label} &mdash;
+      MD ${num(f.estimate)} ${pwEsc(f.units)}
+      [${num(f.ci_low)}, ${num(f.ci_high)}],
+      p = ${f.p_value.toFixed(4)}, I&sup2; = ${f.i2.toFixed(1)}%. ${who}</li>`;
+  }).join('');
+  const notes = Object.entries(a.source_modality_notes || {})
+    .map(([k, v]) => `<div style="margin-top:0.3rem;">${pwEsc(k)}: ${pwEsc(v)}</div>`).join('');
+  return `<div style="margin-top:0.45rem;padding-top:0.4rem;
+        border-top:1px dashed rgba(253,164,175,0.45);font-weight:400;color:#fecdd3;">
+      <strong>What splitting it would give (diagnostic, not a finding).</strong>
+      Reported as k = ${a.reported_k}; the protocol-compliant split is
+      ${a.compliant_strata} strata, of which ${a.estimable_strata}
+      ${a.estimable_strata === 1 ? 'is' : 'are'} poolable at all
+      (largest k = ${a.largest_k}).
+      <ul style="margin:0.3rem 0 0 1.1rem;padding:0;">${rows}</ul>
+      ${notes}
+      <div style="margin-top:0.35rem;">Fitted by
+        <code>15_stratum_compliant_diagnostic.do</code> on the same locked datasets.
+        Splitting is not a remedy here &mdash; it removes the protocol breach and
+        leaves analyses that are individually uninformative, so what to report is a
+        review-team decision rather than an obvious correction.</div>
     </div>`;
 }
 

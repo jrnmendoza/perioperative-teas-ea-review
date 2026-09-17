@@ -63,6 +63,7 @@ GENERATORS: list[tuple[str, tuple[str, ...], bool, bool]] = [
     ("scripts/build_v33_dashboard_data.py",       ("v33_data.js",), False, False),
     ("scripts/build_v34_dashboard_data.py",       ("v34_data.js",), False, False),
     ("scripts/check_stratum_purity.py",                ("stratum_purity.js",), False, True),
+    ("scripts/build_stratum_compliant_diagnostic.py",  ("stratum_compliant_diagnostic.js",), False, False),
     ("scripts/build_reference_data.py",
      ("author_inquiries.js", "browser_targets.js", "meta_outcomes.js",
       "primary_browser.js", "search_strategies.js", "study_characteristics.js"), False, False),
