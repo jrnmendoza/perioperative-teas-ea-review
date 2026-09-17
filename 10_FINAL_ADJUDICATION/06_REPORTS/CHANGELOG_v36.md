@@ -1,6 +1,6 @@
 # v36 changelog (16 September 2026)
 
-Base: `035ed97` on `astra-final-resolution`, plus the user's uncommitted Huang 2017 EA→TEAS edit, which is retained. Nothing is committed. No source PDF, extracted source text or raw export was modified (`05_REPRODUCTION/integrity_v36.json`: 349 source files unchanged). No file was deleted; three stale reproduction files were moved into a `superseded_…` folder.
+Base: `035ed97` on `astra-final-resolution`, plus the user's Huang 2017 EA→TEAS edit, which was uncommitted at the start of v36 and is retained. v36 was committed in six commits (`dbb15df`–`3e56991`), pushed, and merged into `main` via PR #23 (`98d40cb`). No source PDF, extracted source text or raw export was modified (`05_REPRODUCTION/integrity_v36.json`: 349 source files unchanged). No file was deleted; three stale reproduction files were moved into a `superseded_…` folder.
 
 ## 1. Code (decision logic)
 
@@ -47,4 +47,4 @@ Of the 68 models present at both HEAD and v36, 64 have byte-identical outputs, *
 
 ## 6. Not changed
 
-Primary/supportive opioid membership and estimates; MME conversion policy; statistical policy; Yeh handling; held studies; the participant ledger; historical ASTRA audit files (left in place, historical); the dashboard (not rebuilt or deployed). Nothing committed or pushed.
+Primary/supportive opioid membership and estimates; MME conversion policy; statistical policy; Yeh handling; held studies; the participant ledger; historical ASTRA audit files (left in place, historical); the dashboard, which was not rebuilt from v36 data (a provisional banner was deployed separately on 17 Sep 2026 in `dcd8f23`, merged into `main` via PR #24).

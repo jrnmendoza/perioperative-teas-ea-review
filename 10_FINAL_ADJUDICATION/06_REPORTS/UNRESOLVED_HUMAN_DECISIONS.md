@@ -11,7 +11,7 @@ Each item says what is unresolved, the conservative rule currently applied (so a
 | A3 | **Registration identifier.** Supplied PDF shows no identifier of its own; CRD420251090635 is a similar broader review | No identifier assigned. The dashboard still displays CRD420251090635 (19 `_site` files), which is stale. | External confirmation from PROSPERO of this record's CRD number |
 | A4 | **Human sign-off of GRADE.** All 38 rows are ASTRA recommendations | Labelled as recommendations | Reviewer approval or revision, with names and dates. Explicitly revisit: `bowelsounds_TEAS_sham` downgraded Low→Very low in v36 (Zheng 2025 contradiction); `nausea48_TEAS_sham` has an exact High RoB assessment but only a serious downgrade |
 | A5 | **RoB 2 coverage and sign-off.** 97 of 761 results have exact assessments; many members of non-sensitivity bodies are UNLINKED (e.g., all 5 vomiting24_TEAS_sham contrasts, all bowel-sound/defecation TEAS contrasts, Szmit usual-care opioid). No linked record carries a sign-off date. | Unlinked shown as UNLINKED, never imputed | Result-specific RoB 2 for unlinked members of non-sensitivity bodies; record assessor/date for existing ones |
-| A6 | **Dashboard.** `dashboard/` and `_site/` still present the superseded k=4 TEAS/sham (−13.99), the k=7 combined TEAS+EA (−9.91) and the old registration ID | Not rebuilt, not deployed | Rebuild from `06_REPORTS/model_analysis_manifest.csv` only after A1–A5; semantic claim audit |
+| A6 | **Dashboard.** `dashboard/` and `_site/` still present the superseded k=4 TEAS/sham (−13.99), the k=7 combined TEAS+EA (−9.91) and the old registration ID | Not rebuilt; provisional banner deployed 17 Sep 2026 (`dcd8f23`) | Rebuild from `06_REPORTS/model_analysis_manifest.csv` only after A1–A5; semantic claim audit |
 
 ## B. Source contradictions (disposition applied; external clarification outstanding)
 
@@ -37,7 +37,7 @@ Each correction follows existing documented rules and is quoted from source, but
 | C3 | Xiong 2021 → TEAS/sham (PONV 48 h) | "gel electrodes applied and connected to an acupuncture instrument without stimulation" | ponv48_TEAS_usual renamed ponv48_TEAS_sham; estimate unchanged. Existing RoB record describes the comparison as "antiemetics alone", so reviewer should confirm D2. |
 | C4 | Registry comparator labels for Pan, Liang, Huang 2025, Liu 2021, Xiong, Zhou 2025, Song 2020 | Quotes in `studies.json` → `comparator_source_status` | Descriptive only; 63 other study-level labels remain LEGACY (result-level class governs) |
 | C5 | Three RoB links added (Pan and Liang remifentanil; Song 24-h pain) | Identical study/outcome/window/denominators/arm statistics; only the ID scheme differs. v26 labelled Song pain "rest", but the source does not specify a setting. | 94 → 97 exact links |
-| C6 | Huang 2017 EA → TEAS (user's uncommitted edit, retained) | Title "transcutaneous electrical acupoint stimulation", surface electrodes, HANS-200A, "non-invasive" | Fixes HEAD registry/results inconsistency; Huang 2017 contributes to no model |
+| C6 | Huang 2017 EA → TEAS (user's edit, uncommitted at the start of v36; retained and committed as `dbb15df`) | Title "transcutaneous electrical acupoint stimulation", surface electrodes, HANS-200A, "non-invasive" | Fixes HEAD registry/results inconsistency; Huang 2017 contributes to no model |
 
 ## D. Standing policy choices (documented; approval not recorded)
 
