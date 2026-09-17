@@ -1,6 +1,6 @@
 # Current state of the TEAS/EA review: adjudication v36
 
-16 September 2026 · branch `astra-final-resolution` · base `035ed97` + uncommitted v36 changes
+16 September 2026 · branch `astra-final-resolution` · base `035ed97`; v36 committed as `dbb15df`–`3e56991` and merged into `main` via PR #23
 
 ## Data lock: NOT ALLOWED
 
@@ -10,7 +10,7 @@ The adjudication layer is internally consistent, source-traceable for the primar
 2. **PRISMA provenance.** Six included reports, among them Szmit 2021, the sole principal TEAS/sham opioid contributor, are still marked "excluded" in Covidence, and the reason counts in the PRISMA figure do not match the records.
 3. **Sign-off gaps.** No human sign-off exists for GRADE or RoB 2 linkage, most secondary-body results lack exact RoB 2 assessments, and the registration identifier is unconfirmed.
 
-The dashboard is stale and must not be rebuilt or deployed yet. Details: `10_FINAL_ADJUDICATION/06_REPORTS/UNRESOLVED_HUMAN_DECISIONS.md`.
+The dashboard is stale and must not be rebuilt from v36 data yet; since 17 Sep 2026 it carries a provisional banner (`dcd8f23`) warning readers not to cite it. Details: `10_FINAL_ADJUDICATION/06_REPORTS/UNRESOLVED_HUMAN_DECISIONS.md`.
 
 ## Which files are authoritative
 
@@ -27,7 +27,7 @@ The "FINAL" filename prefix does not signal approval. Every adjudication decisio
 | Contradiction | Disposition |
 |---|---|
 | Lock report (13 Sep): "no human decisions implemented; existing k=4 TEAS/sham −13.99" vs adjudication layer: TEAS/sham k=1 −7.7 | Lock report is the historical blocked run. The adjudication layer was produced under the later user authorization in `00_STARTING_STATE/user_authorization.txt` and `run_identity.json`. |
-| Committed HEAD registry labels Huang 2017 EA; HEAD results label it TEAS | Source is unambiguous TEAS (surface electrodes, HANS-200A, "non-invasive"). The user's uncommitted edit is retained and makes the chain consistent. |
+| Committed HEAD registry labels Huang 2017 EA; HEAD results label it TEAS | Source is unambiguous TEAS (surface electrodes, HANS-200A, "non-invasive"). The user's edit (uncommitted at the start of v36, now `dbb15df`) is retained and makes the chain consistent. |
 | `statistical_policy.md` cites an independent metafor 5.0-1 reproduction | That reproduction was stale (above). Regenerated with metafor 5.2-1: 68 models, 731 fields, 0 failures. |
 | Pan 2023 and Liang 2021 no-stimulation controls sat in sham bodies; Xiong 2021's electrode sham sat in a usual-care body | Corrected with source quotes (v36 C1–C3). Every membership now passes a comparator gate. |
 | Seven study-level comparator labels contradicted source-verified result classes | Corrected with quotes; the other 63 flagged LEGACY |

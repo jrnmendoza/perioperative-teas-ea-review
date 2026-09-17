@@ -6,7 +6,7 @@
 
 | Item | Value |
 |---|---|
-| Branch / HEAD | `astra-final-resolution` / `035ed976033944c5861ac3f471ac3852778b715f` (worktree dirty; v36 changes uncommitted) |
+| Branch / HEAD | `astra-final-resolution` / `035ed976033944c5861ac3f471ac3852778b715f` (checks ran with v36 changes in the worktree; those changes were then committed unaltered as `dbb15df`–`3e56991` and merged via PR #23) |
 | Python | 3.14.7, numpy 2.5.3, scipy 1.18.1, in a scratch venv (Homebrew Python lacks scipy) |
 | R | 4.5.2, metafor 5.2-1 in a scratch library (the 13 Sep run used metafor 5.0-1 from `/tmp/astra-r-library`, which no longer exists) |
 | Input hashes | `05_REPRODUCTION/integrity_v36.json` → `input_sha256` (v34 outcome extraction, verification-support JSON, v26 target CSVs, Covidence exports, source manifests) |
@@ -58,7 +58,7 @@ $PY 10_FINAL_ADJUDICATION/code/validate_adjudication.py # independent validator
 | `scipy` missing from Homebrew Python | Archive environment | Scratch venv; not committed |
 | `/tmp/astra-r-library` absent (13 Sep metafor library) | Archive environment | `reproduce_metafor.R` now honours `ASTRA_R_LIBRARY`; default unchanged |
 | Untracked `05_REPRODUCTION/` from 13:06 predated the 13:08 model inputs (different membership: PONV k=11, pain-rest k=2, Xing as usual care); its 554/554 PASS did not certify the committed outputs | Computational provenance | Preserved in `superseded_2026-09-13T1306_pre_final_membership/` with README; regenerated against current inputs |
-| Committed HEAD not internally consistent (Huang 2017 registry EA vs results TEAS) | Scientific metadata | User's uncommitted TEAS edit is source-supported and resolves it (see changelog) |
+| Committed HEAD not internally consistent (Huang 2017 registry EA vs results TEAS) | Scientific metadata | User's TEAS edit (uncommitted at the start of v36, now `dbb15df`) is source-supported and resolves it (see changelog) |
 | metafor SMD warning (`abs(yi) > 2`) | Scientific data flag | Traced to Zheng 2025 flatus (g = −2.04). Source labels values mean (SD), but the printed P values are incompatible with them. Leave-out diagnostics were added; printed values are unchanged. |
 | First triage run joined no full texts (int vs string Covidence ID) | Computational (this run) | Fixed before outputs were used |
 | First determinism check hashed 0 files (zsh word-splitting) | Computational (this run) | Re-run with array; 21/21 identical |
