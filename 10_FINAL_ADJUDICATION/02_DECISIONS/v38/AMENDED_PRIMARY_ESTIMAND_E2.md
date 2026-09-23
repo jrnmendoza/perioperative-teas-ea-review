@@ -185,3 +185,32 @@ This applies to every candidate result, including the Tier B2 re-check.
 
 **Consequence.** Both reports enter the E2 TEAS-versus-sham body. The sufentanil
 factors 0.25 and 1.0 are mandatory sensitivities for that body (G11).
+
+---
+
+## Decision after the E2 run — 23 September 2026: E1 retained as primary
+
+**The review author (J.R.N. Mendoza) decided to keep the registered outcome (E1)
+as the primary outcome and to report E2 in full as a post-hoc sensitivity
+analysis.** The PROSPERO primary outcome is therefore **not** revised.
+
+**Timing, stated plainly.** This decision was made after the E2 results were
+known (`09_E2_ANALYSIS/E2_RESULTS.md`). Those results were:
+
+- TEAS vs sham: k = 7, −6.17 mg IV MME (−12.47, 0.14), I² 98%. Smaller and less
+  precise than E1's −7.70 (−10.62, −4.78).
+- EA vs sham: a single trial (Lin 2002), −11.80 (−18.52, −5.08), for which the
+  joint criterion cannot be evaluated.
+- The joint criterion was met in no body.
+
+Reverting to the registered outcome is the conservative direction. It is recorded
+here so the sequence is not misread: E2 was defined, amended (E2.1), applied, run,
+and only then set aside as the primary.
+
+**Consequences.**
+
+- E2 and E2.1 remain on record unchanged.
+- E2 results are reported as a labelled post-hoc sensitivity analysis, with the
+  amendment history disclosed.
+- The manuscript's primary results remain E1. The Methods gain a post-hoc
+  analyses statement in place of a "Changes from the protocol" outcome switch.
