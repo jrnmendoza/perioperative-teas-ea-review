@@ -1,0 +1,73 @@
+{
+ "axis": {
+  "slope": -0.20862841587550837,
+  "intercept": 102.02434043150176,
+  "gridlines": 11,
+  "units_per_px": 0.20862841587550837,
+  "max_gridline_residual": 0.21367348425367538
+ },
+ "C-TEAS": {
+  "T1": {
+   "mean": 15.23,
+   "sd_upper_whisker": 3.34,
+   "sd_lower_whisker": 2.92,
+   "sd": 3.13
+  },
+  "T2": {
+   "mean": 27.34,
+   "sd_upper_whisker": 4.38,
+   "sd_lower_whisker": 3.76,
+   "sd": 4.07
+  },
+  "T3": {
+   "mean": 41.52,
+   "sd_upper_whisker": 5.63,
+   "sd_lower_whisker": 5.63,
+   "sd": 5.63
+  },
+  "T4": {
+   "mean": 58.84,
+   "sd_upper_whisker": 7.72,
+   "sd_lower_whisker": 7.09,
+   "sd": 7.41
+  },
+  "T5": {
+   "mean": 79.91,
+   "sd_upper_whisker": 10.85,
+   "sd_lower_whisker": 10.43,
+   "sd": 10.64
+  }
+ },
+ "L-TEAS": {
+  "T1": {
+   "mean": 10.02,
+   "sd_upper_whisker": 2.29,
+   "sd_lower_whisker": 2.29,
+   "sd": 2.29
+  },
+  "T2": {
+   "mean": 19.41,
+   "sd_upper_whisker": 5.01,
+   "sd_lower_whisker": 4.8,
+   "sd": 4.9
+  },
+  "T3": {
+   "mean": 36.72,
+   "sd_upper_whisker": 5.63,
+   "sd_lower_whisker": 5.01,
+   "sd": 5.32
+  },
+  "T4": {
+   "mean": 55.71,
+   "sd_upper_whisker": 8.14,
+   "sd_lower_whisker": 7.72,
+   "sd": 7.93
+  },
+  "T5": {
+   "mean": 72.4,
+   "sd_upper_whisker": 10.01,
+   "sd_lower_whisker": 9.6,
+   "sd": 9.81
+  }
+ }
+}

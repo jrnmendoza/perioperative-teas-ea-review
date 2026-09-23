@@ -6,6 +6,11 @@ DP5 is unchanged registered policy. **No model has been run under E2.** The file
 hash is in `amended_primary_estimand_E2.sha256`. An external timestamp (a git
 commit) is still to be made, and must precede any E2 extraction or model run.
 
+**Timestamp note (23 September 2026).** The review author chose not to send the hashes to a
+third party. The only timestamp is local git commit `95fcf66` (2026-09-23 20:58 +0200), which
+the review team controls. This is recorded so the strength of the pre-registration claim is not
+overstated.
+
 ## Why this document exists, stated plainly
 
 The registered primary outcome (E1) admits one sham-controlled TEAS trial and no
@@ -145,3 +150,38 @@ before the file is fixed.
 4. All bodies are rerun under E2 through the unchanged pipeline.
 5. PROSPERO major revision; manuscript "Changes from the protocol" section, with
    E1 and E2 reported side by side.
+
+---
+
+## Amendment E2.1 — 23 September 2026 (after E2 was applied to Tier B1)
+
+**Made by the review author (J.R.N. Mendoza) after E2 had been applied to the eight
+Tier B1 reports, knowing that these two changes admit exactly Zhang 2025 and
+Gu 2019. Zhang 2025's effect was known, and so were three of Gu 2019's four time
+points.** The superseded text above is retained unchanged.
+
+**Reason, as given:** the review author chose to admit these reports without
+querying their authors.
+
+**Change 1 — DP1, POD1.** A total reported for "POD1" is accepted as the first 24
+hours after surgery, **whatever the report's own definition of POD0 or POD1**.
+This supersedes the DP1 default ("POD1 only where the report defines it as the
+first 24 hours"). It applies to every candidate result, not only Zhang 2025.
+
+**Change 2 — figure digitisation adopted.** An arm-level mean and SD printed only
+in a figure may be digitised from the source image, subject to all of these:
+
+- pixel measurement against the figure's own axis gridlines, with the axis fit
+  residual and the units per pixel recorded;
+- a reproducible script that re-extracts the image from the hash-pinned PDF;
+- validation against every value from the same figure that is also printed in the
+  text;
+- any figure–text disagreement beyond measurement resolution is handled under the
+  review's source-contradiction policy: the result is admitted with a flag and a
+  **mandatory leave-out sensitivity analysis**, and published values are never
+  "corrected".
+
+This applies to every candidate result, including the Tier B2 re-check.
+
+**Consequence.** Both reports enter the E2 TEAS-versus-sham body. The sufentanil
+factors 0.25 and 1.0 are mandatory sensitivities for that body (G11).

@@ -1,0 +1,24 @@
+body,report,result_ids,E1_disposition,E2_disposition,E2_basis,flags,mandatory_sensitivity
+TEAS vs sham,Szmit 2021,V33-OD-0350,INCLUDE,ADMIT,All systemic opioid; meets E1,,
+TEAS vs sham,Chen 1998,V33-OD-0013,SENSITIVITY,ADMIT,A3: hydromorphone PCA 0-24 h with unquantified rescue,Unquantified rescue,Exclude-known-unquantified-rescue
+TEAS vs sham,Chen 2020,V33-OD-0014,SENSITIVITY,ADMIT,"A1/DP3: 'sufentanil consumption during postoperative PCIA', 24 h; A4 sufentanil 0.5",Delivered vs demanded unstated; sufentanil conversion,Sufentanil 0.25 and 1.0
+TEAS vs sham,He 2026 (hepatectomy),V33-OD-0214,SENSITIVITY,ADMIT,DP2: author-reported morphine equivalents of unstated route (IV vs oral),Unit-uncertain equivalents,Exclude-unstated-route-equivalents
+TEAS vs sham,Lee 2011,V33-OD-0184+V33-OD-0185 (arms combined; shared sham once),SENSITIVITY,ADMIT,DP1: canonical construct is PCA_partial_1_to_24h (PCA after recovery-room treatment; start time not precisely documented) - admitted on the same boundary reading as Lin 2002; A3: recovery-room doses unquantified,Window start not precisely documented (DP1 boundary); unquantified recovery-room doses; source contradiction (sham interval sum differs from Table 8; Table 8 values used),Leave-out (source contradiction); exclude-known-unquantified-rescue
+TEAS vs sham,Yeh 2011,V33-OD-0245,HOLD,HOLD,Cohort overlap and route unresolved; E2 does not resolve source questions,,
+TEAS vs sham,Zhang 2025,Tier B1 extraction,NOT ADMITTED,ADMIT,E2.1 Change 1: POD1 taken as first 24 h; sufentanil 0.5,Amendment E2.1; PACU rescue sufentanil may be outside total,Sufentanil 0.25 and 1.0; exclude-E2.1-admissions
+TEAS vs sham,Gu 2019,Tier B1 extraction,NOT ADMITTED,ADMIT,E2.1 Change 2: 24-h value digitised from Fig. 4; mL x 1 ug/mL sufentanil; sufentanil 0.5,Amendment E2.1; figure-text contradiction (control bars 1.85-3.90 above text),Leave-out (source contradiction); sufentanil 0.25 and 1.0; exclude-E2.1-admissions
+TEAS vs usual care,Szmit 2021,V33-OD-0351,INCLUDE,ADMIT,All systemic opioid; meets E1,,
+TEAS vs usual care,Oztas 2019,V33-OD-0299 / V33-OD-0303,SENSITIVITY / INCLUDE (rescue construct),NOT ADMITTED,A4: only quantified opioids are tramadol (PCA) and pethidine (rescue); both unfactored,,
+TEAS vs active electrical,Oztas 2019,V33-OD-0300 / V33-OD-0304,SENSITIVITY / INCLUDE (rescue construct),NOT ADMITTED,A4: tramadol and pethidine unfactored,,
+EA vs sham,Lin 2002,V33-OD-0006+V33-OD-0007 (arms combined vs Group II sham-EA),SENSITIVITY,ADMIT,"DP1: PCA connected at 1 h (boundary of 'within the first hour'), ends 24 h; DP4: IM pethidine 1 mg/kg first-hour rescue unfactored and unquantified",Window starts at hour 1 (boundary); unfactored first-hour rescue,Exclude-known-unquantified-rescue
+EA vs sham,Sim 2002,V33-OD-0107+V33-OD-0108,SENSITIVITY,NOT ADMITTED,X1: mg/kg; never multiplied by mean weight,,
+EA vs sham,Coura 2011,V33-OD-0016,SENSITIVITY,NOT ADMITTED,X1: ug/kg; never multiplied by mean weight,,
+EA vs sham,Jin 2023,V33-OD-0190 / V33-OD-0191,HOLD,HOLD,GA unverified (source question); also X3 mL without verified concentration,,
+EA vs sham,Xie 2014,V33-OD-0067,HOLD,HOLD,Source question unresolved; also A2 window unstated ('study PCA period'),,
+EA vs sham,Ntritsou 2014,V33-OD-0111,EXCLUDE,NOT ADMITTED,A4: tramadol only quantified opioid,,
+EA vs sham,Wong 2006,V33-OD-0250,INCLUDE (0-72 h construct),NOT ADMITTED,A2: first 3 postoperative days total; no 24-h value,,
+EA vs usual care,El-Rakshy 2009,V33-OD-0252,INCLUDE,ADMIT,All systemic opioid; meets E1,High RoB; allocation/label discrepancies (existing),Leave-out (existing El-Rakshy diagnostic)
+EA vs usual care,Seevaunnamtum 2016,V33-OD-0003,INCLUDE,ADMIT,All systemic opioid; meets E1,,
+EA vs usual care,Yang 2024,V33-OD-0052,SENSITIVITY,ADMIT,A3: IV PCA morphine 'first 24 h / POD1' with unquantified rescue,Unquantified rescue,Exclude-known-unquantified-rescue
+EA vs usual care,Lin 2002,V33-OD-0004+V33-OD-0005 (arms combined vs Group I control),SENSITIVITY,ADMIT,As Lin 2002 vs sham (DP1 boundary; DP4 pethidine rescue),Window starts at hour 1 (boundary); unfactored first-hour rescue,Exclude-known-unquantified-rescue
+EA vs usual care,An 2014,V33-OD-0254,INCLUDE (0-48 h construct),NOT ADMITTED,A2: 48-h PCIA period only,,
