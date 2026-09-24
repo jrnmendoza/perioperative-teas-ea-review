@@ -370,8 +370,10 @@ capture. It admits patient-controlled analgesia totals and totals where rescue
 opioid was given but not quantified, and it keeps the unit, the conversion
 factors, the prohibited conversions and the separation of modalities and
 comparators unchanged. E2 was fixed in writing before it was applied, and then
-applied uniformly: to every extracted opioid result, and to every included report
-without one. After it had been applied to those reports, and knowing which two
+applied uniformly: to every extracted opioid result, and to the 32 of the 70
+included reports without one whose text indicated a possibly unextracted opioid quantity.
+The remaining 20 reports, whose text showed no numeric opioid data, were not
+re-examined individually. After it had been applied to those reports, and knowing which two
 reports each change would admit, it was amended (E2.1). The amendment accepted
 totals reported for "postoperative day 1" as the first 24 hours, and allowed
 arm-level values printed only in figures to be digitised by pixel measurement

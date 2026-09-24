@@ -398,7 +398,7 @@ project's methodological decision record.
 | Clinical-importance criterion | Retain ≥10 mg opioid sparing **plus** paired ~24-hour pain upper confidence limit below +1. Separate pain bodies cannot supply a missing pairing. 8 mg and 30% are sensitivity thresholds, not replacements. |
 | PRISMA | Citation-search route for one report confirmed by the review team. Exported record dispositions reconciled locally, not by editing the screening platform. Twelve import references remain unmapped; aggregate provenance preserved. |
 | Re-screening | A reviewer re-screening package was withdrawn by the review team. The outcome-exclusion label preserves historical dispositions and does not retrospectively validate every exclusion; the completeness limitation is disclosed. |
-| Post-hoc broadened opioid estimand (E2) | Defined after the primary results were known, fixed in writing before being applied, and applied uniformly to every extracted opioid result and to every included report without one. Relaxes completeness of capture only. See Section 7.1. |
+| Post-hoc broadened opioid estimand (E2) | Defined after the primary results were known, fixed in writing before being applied, and applied uniformly to every extracted opioid result and to the 32 of the 70 included reports without one whose text indicated a possibly unextracted opioid quantity (Additional file 12); the other 20 were not re-examined individually. Relaxes completeness of capture only. See Section 7.1. |
 | Amendment E2.1 | Made after E2 had been applied to the reports lacking an extracted result, **knowing that it admitted exactly two of them**: postoperative-day-1 totals taken as the first 24 hours, and figure-only arm-level values digitised against the axis gridlines, with validation against printed text. See Section 7.1. |
 | Primary outcome after E2 | E2 was briefly adopted as the primary outcome and run. The registered outcome was then retained as primary, **with the E2 results known**, and E2 is reported only as a sensitivity analysis. The PROSPERO primary outcome was not revised. |
 | External actions | Eleven author queries were sent on 22 September 2026 (Jin 2023, Xie 2014, Yeh 2010/2011, Ntritsou 2014, Chen 1998, Lee 2011, Lin 2002, Sim 2002, Coura 2011, Chen 2020, He 2026 hepatectomy); one did not reach its recipient and four drafted queries remain unsent. No reply had been received at the time of writing and no disposition depends on one. No external database was edited. |
@@ -437,7 +437,8 @@ the statistical methods.
 **Timeline.**
 
 1. E2 was defined and committed.
-2. The reports without an extracted opioid result were classified under it.
+2. The 32 of the 70 included reports without an extracted opioid result, but with text indicating a
+   possible opioid quantity, were classified under it.
 3. E2.1 was made and committed.
 4. All results were classified and committed.
 5. The E2 models were run.
