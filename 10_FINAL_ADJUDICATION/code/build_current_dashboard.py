@@ -69,8 +69,8 @@ data['e2_labels']={
   'E2_EA_usual_LOO_Seevaunnamtum': 'without Seevaunnamtum 2016',
   'E2_EA_usual_LOO_Yang': 'without Yang 2024',
   'E2_EA_usual_LOO_Lin': 'without Lin 2002',
-  'E2_TEAS_sham_suf0.25': 'Sufentanil 0.25',
-  'E2_TEAS_sham_suf1.0': 'Sufentanil 1.0',
+  'E2_TEAS_sham_suf0.25': 'Sufentanil 0.25 mg/µg',
+  'E2_TEAS_sham_suf1.0': 'Sufentanil 1.0 mg/µg (main analysis uses 0.5 mg/µg)',
   'E2_EA_usual_excl_unquantified_rescue': 'Without known unquantified rescue (= E1 body)',
   'E2_TEAS_sham_E1_restriction': 'Restricted to E1-eligible (= registered primary)'
  }
@@ -78,6 +78,35 @@ if 'e2_analysis' in data:
  e2_ids = {m['model_id'] for m in data['e2_analysis']['models']}
  for k in data['e2_labels'].keys():
   assert k in e2_ids, f"Label key not found in E2 model outputs: {k}"
+
+ if 'e2_analysis' in data:
+  data['e2_joint'] = []
+  for b in ['TEAS vs sham', 'TEAS vs usual care', 'EA vs sham', 'EA vs usual care']:
+   model_id = 'E2_opioid24_' + b.replace(' vs ', '_').replace(' ', '_')
+   m = next((x for x in data['e2_analysis']['models'] if x['model_id'] == model_id), None)
+   if not m:
+    data['e2_joint'].append({'body': b, 'opioid_limb': 'Not met', 'pain_limb': '—', 'joint_criterion': 'Not met'})
+    continue
+   
+   if m['ci_high'] < -10:
+    op_limb = f"Met ({m['effect']:.2f})"
+   elif m['effect'] <= -10:
+    op_limb = f"Met by point estimate ({m['effect']:.2f}), k={m['k']}"
+   else:
+    op_limb = "Not met"
+    
+   if m['effect'] > -10:
+    pain_limb = "—"
+    joint_crit = "Not met"
+   else:
+    if b == 'EA vs sham':
+     pain_limb = "Cannot be evaluated: Lin 2002 reports pain only in a figure (Fig. 1) and has no eligible ~24-h pain result; pain from other trials cannot supply the pairing."
+     joint_crit = "Cannot be evaluated"
+    else:
+     pain_limb = "Not met"
+     joint_crit = "Not met"
+     
+   data['e2_joint'].append({'body': b, 'opioid_limb': op_limb, 'pain_limb': pain_limb, 'joint_criterion': joint_crit})
 (DASH/'current_review.json').write_text(json.dumps(data,ensure_ascii=False,indent=2,allow_nan=False)+'\n')
 (DASH/'current_review.js').write_text('/* Generated from canonical v38 data; do not edit. */\nwindow.CURRENT_REVIEW = '+json.dumps(data,ensure_ascii=False,allow_nan=False)+';\n')
 e=html.escape
@@ -88,13 +117,11 @@ for m in data['models']:
  static+=f'<tr><td>{e(m["model_id"])}</td><td>{m["k"]} / {m["N"]}</td><td>{value}</td></tr>'
 static+='</tbody></table></div><p>No body establishes the registered ≥10mg sparing plus paired ~24h pain upper CI &lt;+1 criterion. The 12-reference historical import gap and exclusion-completeness limitation remain disclosed. See downloads for details.</p>'
 if qor_path.exists():static+='<p>QoR addendum: three approximately-24-hour syntheses, eight new result-specific assessments and three Very-low-certainty judgments. All pooled confidence intervals include zero. See the QoR analysis tab. Four later-window QoR models (POD2/3) are also available.</p>'
-if e2_path.exists():
- e2_data = json.loads(e2_path.read_text())
- teas = next(m for m in e2_data['models'] if m['model_id'] == 'E2_opioid24_TEAS_sham')
- ea = next(m for m in e2_data['models'] if m['model_id'] == 'E2_opioid24_EA_sham')
- any_met = (teas['ci_high'] < -10)
+if 'e2_joint' in data:
+ ea_joint = next((x['joint_criterion'] for x in data['e2_joint'] if x['body'] == 'EA vs sham'), 'Not met')
+ ea_text = 'cannot be evaluated because its pain limb cannot be evaluated' if 'Cannot be evaluated' in ea_joint else 'is ' + ea_joint.lower()
+ any_met = any('Met' in x['joint_criterion'] and 'Not met' not in x['joint_criterion'] for x in data['e2_joint'])
  met_text = 'in at least one body' if any_met else 'in no body'
- ea_text = 'cannot be evaluated' if ea['ci_high'] >= -10 else 'met'
  static += f'<p>E2 post-hoc sensitivity analysis: E1 kept as primary, not graded. The joint criterion is met {met_text} (for EA vs sham it {ea_text}).</p>'
 nav=''.join(f'<button type="button" role="tab" data-view="{key}" aria-controls="content" aria-selected="{str(key=="overview").lower()}" class="{"active" if key=="overview" else ""}">{label}</button>' for key,label in [('overview','Overview'),('results','Results'),('qor','QoR analysis'),('coverage','Outcome coverage'),('studies','Studies & figures'),('risk','Risk of bias'),('evidence','GRADE'),('prisma','PRISMA'),('methods','Methods'),('downloads','Downloads')])
 build_date = ""

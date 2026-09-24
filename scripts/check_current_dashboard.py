@@ -59,11 +59,47 @@ def main(site=None):
     for required_file in ['e2_model_outputs.csv', 'E2_RESULTS.md', 'AMENDED_PRIMARY_ESTIMAND_E2.md', 'qor_models_later.csv']:
         assert required_file in downloads_hrefs, f'Missing from downloads manifest: {required_file}'
     
+    
+    # v38 download checks
+    report_text = (site/'current/FINAL_CURRENT_STATE_REPORT.md').read_text()
+    assert 'adjudication v38' in report_text.splitlines()[0], 'FINAL_CURRENT_STATE_REPORT.md not v38'
+
+    grade_text = (site/'current/FINAL_GRADE_RECOMMENDATIONS.md').read_text()
+    assert 'v38' in grade_text.splitlines()[0], 'FINAL_GRADE_RECOMMENDATIONS.md not v38'
+
+    import csv
+    matrix_csv = (site/'current/FINAL_MODEL_MEMBERSHIP_MATRIX.csv').read_text().splitlines()
+    matrix_reader = csv.DictReader(matrix_csv)
+    matrix_pairs = {(row['result_id'], row['model_id']) for row in matrix_reader if row['decision'] == 'INCLUDE'}
+    
+    spec_json = json.loads((pathlib.Path(__file__).parent.parent / '10_FINAL_ADJUDICATION/02_DECISIONS/model_specifications.json').read_text())
+    expected_pairs = {(r, s['model_id']) for s in spec_json if s['role'] != 'SENSITIVITY' for r in s['result_ids']}
+    
+    assert matrix_pairs == expected_pairs, f"Matrix pairs mismatch. Found {len(matrix_pairs)}, expected {len(expected_pairs)} (90)"
+    
+    rob2_csv = (site/'current/FINAL_RESULT_ROB2_LINKAGE.csv').read_text().splitlines()
+    rob2_reader = csv.DictReader(rob2_csv)
+    rob_linkages = set()
+    for row in rob2_reader:
+        if row['rob2_assessment_id']: rob_linkages.add(row['rob2_assessment_id'])
+        if row['alternative_assessments']:
+            rob_linkages.update([x.strip() for x in row['alternative_assessments'].split(';')])
+            
+    rob2_assessments_csv = (pathlib.Path(__file__).parent.parent / '10_FINAL_ADJUDICATION/02_DECISIONS/v38/rob2_assessments.csv').read_text().splitlines()
+    assess_ids = {row['assessment_id'] for row in csv.DictReader(rob2_assessments_csv)}
+    
+    missing_assessments = assess_ids - rob_linkages
+    assert not missing_assessments, f"Missing assessments in linkage: {missing_assessments}"
+
+    import glob
+    scratch_files = glob.glob(str(site.parent / 'fix_*.py')) + glob.glob(str(site.parent / 'test_ui.py'))
+    assert not scratch_files, f"Scratch files found in repo root: {scratch_files}"
+
     ui_js = (site/'current_review_ui.js').read_text()
     for forbidden in ['fetch(','XMLHttpRequest','localStorage.setItem']:
         assert forbidden not in ui_js, 'Unexpected external/hidden state operation'
     assert not re.search(r'k=\d+', ui_js), 'Literal k=<digits> found in current_review_ui.js'
-    assert not re.search(r'-\d{1,2}\.\d{2}(?!\d)', ui_js), 'Literal decimal estimate found in current_review_ui.js'
+    assert not re.search(r'[−-]?\d{1,2}\.\d{2}(?!\d)', ui_js), 'Literal decimal estimate found in current_review_ui.js'
     # Existing figures must survive and resolve in both source and built site.
     figures=json.JSONDecoder().raw_decode((site/'article_figures.js').read_text().split('window.ARTICLE_FIGURES = ',1)[1])[0]
     images=[f['src'] for fs in figures.values() for f in fs]

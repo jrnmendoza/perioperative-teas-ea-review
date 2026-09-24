@@ -1,4 +1,7 @@
-"""Render explicitly authored GRADE judgments; no I²/P-value grading thresholds."""
+"""v38 entrypoint; historical v37 judgments below retained but not executed."""
+import runpy, pathlib
+runpy.run_path(str(pathlib.Path(__file__).with_name('grade_v38.py')),run_name='__main__')
+raise SystemExit(0)
 import json,pathlib,csv
 ROOT=pathlib.Path(__file__).resolve().parents[2];D=ROOT/'10_FINAL_ADJUDICATION';models=json.load(open(D/'04_MODELS/model_outputs.json'))
 # Each entry is a considered evidence-body judgment, not an algorithm that assigns domains from k or P.
@@ -31,6 +34,9 @@ setj('opioid48_EA_usual_PCA|opioid72_EA_sham_PCA','Very low','Serious: existing 
 setj('intraop_remifentanil_TEAS_sham','Very low','Serious: clinician titration/masking varies, exact assessments are incomplete and Zheng2025 SD/P inconsistency (leave-out diagnostic CI still excludes no effect).','Serious: highly different surgery durations, baseline requirements and effects; PI permits increased dose.','Serious: intraoperative dose reduction does not establish postoperative opioid sparing or improved patient outcomes.','Not separately downgraded: average CI excludes null but transportability uncertainty counted above.','No extra downgrade; omissions in selection affect this secondary body directly.')
 setj('intraop_remifentanil_EA_usual|intraop_remifentanil_EA_sham','Very low','Serious: exact outcome/combined-arm linkage incomplete and unblinded titration possible.','Not assessable in a single independent trial per stratum.','Serious: anaesthetic dose is indirect for postoperative clinical benefit.','Serious: CI permits reductions and increases.','No additional downgrade.')
 setj('pethidine24_TEAS_usual_rescue|pethidine24_TEAS_active_rescue','Very low','Serious: one small trial, exact rescue-result assessment unavailable, co-intervention/measurement concerns.','Not assessable in one trial.','Not downgraded for rescue pethidine; not total systemic consumption.','Very serious:31 participants and CI allows meaningful benefit and harm.','No separate downgrade.')
+# v37: keep the inherited judgment pending review but make its symptom-specific rationale accurate.
+# Nausea has 77 events (24/138 versus 53/139), not the 36 vomiting events.
+J['nausea48_TEAS_sham']['imprecision']='Serious (inherited recommendation; reviewer confirmation pending): 277 participants and 77 nausea events in one trial (24/138 versus 53/139); the relative and absolute benefit magnitudes remain uncertain and no symptom-specific clinical-importance threshold was registered. The previous reference to few vomiting events did not apply to nausea.'
 rows=[];text=['# FINAL GRADE RECOMMENDATIONS','', '**ASTRA FINAL GRADE RECOMMENDATION — for the adjudicated 70-report dataset. These recommendations do not certify review-wide completeness or human signoff.**','', 'Randomized evidence starts at high certainty. The following domain judgments were authored for each evidence body; no p-value or I² cutoff assigns certainty. The newly documented outcome-focused exclusions are a review-level selection problem, not automatically relabeled publication bias. They prevent submission-ready review-wide conclusions until the evidence base is reconciled. Diagnostic sensitivities do not receive independent efficacy grades. Existing RoB2 assessments are linked where applicable; unlinked results are explicit and are not silently called Low risk.','', 'Basis: [Cochrane GRADE guidance](https://training.cochrane.org/handbook/current/chapter-14). The opioid10mg and pain+1 margins are registered; secondary GI/symptom clinical-importance thresholds were not registered and are not invented.','']
 for m in models:
  if m['role']=='SENSITIVITY':continue

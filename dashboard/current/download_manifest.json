@@ -15,13 +15,13 @@
     "label": "Current-state report",
     "href": "current/FINAL_CURRENT_STATE_REPORT.md",
     "source": "FINAL_CURRENT_STATE_REPORT.md",
-    "sha256": "80267d3f0c74536d2c273ca7d0787fe1e314f86b1f6fa7141e8c0f2c8de1a3e6"
+    "sha256": "6099d92f8e78dfe685b54a64b59c727cedd4b90cb73bd78fa4e56133acf938b2"
   },
   {
     "label": "GRADE: all 38 reviewed bodies",
     "href": "current/FINAL_GRADE_RECOMMENDATIONS.md",
     "source": "FINAL_GRADE_RECOMMENDATIONS.md",
-    "sha256": "78034fff8b360a445f7932b3d58d15648f76f05d5695e8419dbf82880dd6c8b7"
+    "sha256": "45a19664705eebb3aff90a7d539032ae91521130791799d42e40b9983fffe85e"
   },
   {
     "label": "GRADE table",
@@ -87,7 +87,7 @@
     "label": "Exact result membership",
     "href": "current/FINAL_MODEL_MEMBERSHIP_MATRIX.csv",
     "source": "FINAL_MODEL_MEMBERSHIP_MATRIX.csv",
-    "sha256": "673d974bbc95a20fccba3afe178e5a314cc5ee28d51e36f88d8e614d9064364a"
+    "sha256": "156dd6d4cbff2746ccf8b0ccd8743093b0a00f3d04a32bc822c8c89e412bf666"
   },
   {
     "label": "All 761 canonical results",
@@ -105,7 +105,7 @@
     "label": "Exact-result RoB linkage",
     "href": "current/FINAL_RESULT_ROB2_LINKAGE.csv",
     "source": "FINAL_RESULT_ROB2_LINKAGE.csv",
-    "sha256": "72622effa080828e4a079263da4eecdea669a07283c1d7920d2c3b925d520707"
+    "sha256": "6d6246b1d1479a6728bb3c278043bd6d3621e5a40cc2e67984f51a2a503511de"
   },
   {
     "label": "v37 \u2192 v38 changes",

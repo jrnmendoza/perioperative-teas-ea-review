@@ -1,5 +1,7 @@
 # Single authoritative statistical policy
 
+v38 adoption (20 September 2026): methodological decisions are adopted under user delegation without an outstanding approval requirement. Current independent reproduction uses R 4.5.2 / metafor 5.2-1; historical software-version wording below is not the current run. Source holds and posthoc decisions are in `v38/METHODOLOGICAL_DECISIONS.md`.
+
 Random-effects MD/log-RR/Hedges g: REML tau². With k≥2 use Hartung–Knapp residual scaling safeguarded at1, and a t(k−1) confidence interval/test. With k=1 report the study contrast and within-study normal CI, with no pooled random-effects claim, heterogeneity estimate or prediction interval. k=2 uses the same safeguarded rule and is explicitly very uncertain. Sparse PIs are not displayed; k≥5 uses t(k−1)×sqrt(tau²+SE²) and is interpreted cautiously. I² uses the REML tau² and typical sampling variance, matching metafor; CochranQ is also retained.
 
 Binary RR: add0.5 to all four cells only if at least one cell is zero; each arm denominator therefore increases by1. Exclude double-zero and double-all-event studies from RR pooling, retaining them descriptively. No universal correction and no denominator+0.5 error. MD always intervention minus comparator. RR<1 denotes fewer adverse events. Negative GI MD denotes earlier event, not demonstrated better global recovery.

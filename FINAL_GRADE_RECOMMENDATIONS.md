@@ -1,10 +1,10 @@
-# FINAL GRADE RECOMMENDATIONS
+# GRADE adjudication — v38
 
-**ASTRA FINAL GRADE RECOMMENDATION — for the adjudicated 70-report dataset. These recommendations do not certify review-wide completeness or human signoff.**
+All 38 non-sensitivity recommendations reviewed on 20 September 2026 by the AI assistant under user delegation. Prior human completion is user-reported; no independent human signatures invented. Four empty bodies are not rated. Diagnostic sensitivities have no independent efficacy grade.
 
-Randomized evidence starts at high certainty. The following domain judgments were authored for each evidence body; no p-value or I² cutoff assigns certainty. The newly documented outcome-focused exclusions are a review-level selection problem, not automatically relabeled publication bias. They prevent submission-ready review-wide conclusions until the evidence base is reconciled. Diagnostic sensitivities do not receive independent efficacy grades. Existing RoB2 assessments are linked where applicable; unlinked results are explicit and are not silently called Low risk.
+Randomized evidence starts High. Explicit downgrades below are authored judgments; k, I², P values and absent secondary MCIDs do not mechanically assign certainty. Risk-of-bias evidence is result-specific. Selection completeness remains a limitation, not a requirement to await reviewer approval.
 
-Basis: [Cochrane GRADE guidance](https://training.cochrane.org/handbook/current/chapter-14). The opioid10mg and pain+1 margins are registered; secondary GI/symptom clinical-importance thresholds were not registered and are not invented.
+[Cochrane GRADE guidance](https://www.cochrane.org/authors/handbooks-and-manuals/handbook/current/chapter-14).
 
 ## opioid24_TEAS_sham
 
@@ -12,33 +12,33 @@ Basis: [Cochrane GRADE guidance](https://training.cochrane.org/handbook/current/
 
 MD -7.700 (95% CI -10.623 to -4.777) mg IVMME.
 
-- **Risk of bias:** Serious: only trial has selective-reporting concerns and no full prespecified analysis plan; exact existing assessment Some concerns.
-- **Inconsistency:** Not downgraded: single study; consistency cannot be evaluated.
-- **Indirectness:** Not downgraded for the hernia population itself; extrapolation across surgery remains limited.
-- **Imprecision:** Serious: CI crosses the registered10mg benefit threshold;48 analyzed participants cannot establish its magnitude reliably.
-- **Publication bias:** Not downgraded again: small evidence body; no informative funnel test. Review-level selection problem reported separately.
+- Risk Of Bias (−1): Serious: Szmit exact assessments have prespecification concerns; usual-care arm additionally has possible co-intervention differences. No missing linkage remains.
+- Inconsistency (−0): Not downgraded solely for one trial; consistency cannot be assessed.
+- Indirectness (−0): Direct for the explicitly named outcome, window and comparator; not interchangeable with another construct or proof across all surgeries.
+- Imprecision (−1): Serious: body-specific N=48 or N=47 and intervals cross registered 10mg benefit threshold. Crossing the supportive 8mg threshold is not a second independent reason to downgrade.
+- Publication Bias (−0): No separate downgrade: sparse evidence cannot rule out missing results, but specific evidence is insufficient to assert publication bias. Historical selection completeness is disclosed separately.
 
 ## opioid24_EA_sham
 
 **Not rated — insufficient evidence**; k=0, N=0.
 
-- **Risk of bias:** No eligible quantitative body.
-- **Inconsistency:** Not applicable.
-- **Indirectness:** Not applicable.
-- **Imprecision:** No estimate.
-- **Publication bias:** Cannot assess.
+- Risk Of Bias (−0): No eligible quantitative evidence body.
+- Inconsistency (−0): No eligible quantitative evidence body.
+- Indirectness (−0): No eligible quantitative evidence body.
+- Imprecision (−0): No eligible quantitative evidence body.
+- Publication Bias (−0): No eligible quantitative evidence body.
 
 ## opioid24_TEAS_usual
 
-**Very low**; k=1, N=47.
+**Low**; k=1, N=47.
 
 MD -8.000 (95% CI -10.920 to -5.080) mg IVMME.
 
-- **Risk of bias:** Serious: no-stimulation comparison is unblinded; exact comparator-specific RoB linkage unavailable.
-- **Inconsistency:** Not assessable in one trial.
-- **Indirectness:** Not downgraded for the supportive usual-care question; not evidence for sham-specific efficacy.
-- **Imprecision:** Very serious:47 participants and CI crosses both8/10mg interpretation thresholds.
-- **Publication bias:** No separate downgrade; selective inclusion remains a review-level qualification.
+- Risk Of Bias (−1): Serious: Szmit exact assessments have prespecification concerns; usual-care arm additionally has possible co-intervention differences. No missing linkage remains.
+- Inconsistency (−0): Not downgraded solely for one trial; consistency cannot be assessed.
+- Indirectness (−0): Direct for the explicitly named outcome, window and comparator; not interchangeable with another construct or proof across all surgeries.
+- Imprecision (−1): Serious: body-specific N=48 or N=47 and intervals cross registered 10mg benefit threshold. Crossing the supportive 8mg threshold is not a second independent reason to downgrade.
+- Publication Bias (−0): No separate downgrade: sparse evidence cannot rule out missing results, but specific evidence is insufficient to assert publication bias. Historical selection completeness is disclosed separately.
 
 ## opioid24_EA_usual
 
@@ -46,11 +46,11 @@ MD -8.000 (95% CI -10.920 to -5.080) mg IVMME.
 
 MD -6.832 (95% CI -76.391 to 62.727) mg IVMME.
 
-- **Risk of bias:** Serious: El-Rakshy High RoB with internally conflicting arm and population descriptions; Seeva Some concerns.
-- **Inconsistency:** Serious: clinically divergent morphine effects under different perioperative regimens; two studies cannot characterize distribution reliably.
-- **Indirectness:** Not downgraded for supportive question; usual-care effects cannot substitute for principal EA/sham.
-- **Imprecision:** Very serious: safeguarded HK CI includes substantial benefit and harm;159 analyzed participants.
-- **Publication bias:** No additional downgrade beyond floor; small evidence body cannot exclude missing unfavorable results.
+- Risk Of Bias (−1): Serious: El-Rakshy High for informative attrition/conflicting population descriptions; Seeva Some concerns.
+- Inconsistency (−1): Serious: divergent effects under different perioperative regimens; k=2 cannot establish stable magnitude.
+- Indirectness (−0): Direct for the explicitly named outcome, window and comparator; not interchangeable with another construct or proof across all surgeries.
+- Imprecision (−2): Very serious: safeguarded HK interval allows very large benefit and harm; N=159.
+- Publication Bias (−0): No separate downgrade: sparse evidence cannot rule out missing results, but specific evidence is insufficient to assert publication bias. Historical selection completeness is disclosed separately.
 
 ## ponv24_TEAS_sham
 
@@ -58,11 +58,11 @@ MD -6.832 (95% CI -76.391 to 62.727) mg IVMME.
 
 RR 0.640 (95% CI 0.517 to 0.793) risk ratio.
 
-- **Risk of bias:** Serious: subjective nausea component, variable sensory masking, postrandomization exclusions and incomplete exact RoB linkage.
-- **Inconsistency:** Serious: variation in effects, surgery and prophylaxis; prediction interval permits null/slightly unfavorable effects despite average benefit.
-- **Indirectness:** Not downgraded: clinically relevant cumulative composite; POD1 reports carry modest timing uncertainty.
-- **Imprecision:** Not downgraded:3447 participants; average RR interval supports a reduction, although magnitude across settings is uncertain.
-- **Publication bias:** Not downgraded separately: funnel asymmetry cannot distinguish heterogeneity from missing reports. Selection completeness problem is separate and blocks a final review-wide claim.
+- Risk Of Bias (−1): Serious: all components reviewed; variable sensory masking, exclusions and prespecification concerns remain. He primary PONV is Low risk.
+- Inconsistency (−1): Serious: variation across surgery/prophylaxis and prediction interval near/beyond null make a new-setting magnitude uncertain.
+- Indirectness (−0): Direct for the explicitly named outcome, window and comparator; not interchangeable with another construct or proof across all surgeries.
+- Imprecision (−0): Not downgraded: N=3447, average RR CI 0.52–0.79 supports reduction; across-setting uncertainty counted above.
+- Publication Bias (−0): No separate downgrade: sparse evidence cannot rule out missing results, but specific evidence is insufficient to assert publication bias. Historical selection completeness is disclosed separately.
 
 ## nausea24_EA_usual
 
@@ -70,11 +70,11 @@ RR 0.640 (95% CI 0.517 to 0.793) risk ratio.
 
 RR 0.660 (95% CI 0.059 to 7.441) risk ratio.
 
-- **Risk of bias:** Serious: open-label thoracic trials and incomplete exact symptom-specific RoB linkage.
-- **Inconsistency:** Not downgraded: broadly compatible direction in two studies; uncertainty is captured in imprecision.
-- **Indirectness:** Not downgraded for thoracic supportive question; do not generalize to all surgery/sham efficacy.
-- **Imprecision:** Very serious: k2 safeguarded intervals permit major benefit and harm.
-- **Publication bias:** No separate downgrade; sparse evidence cannot assess small-study effects.
+- Risk Of Bias (−1): Serious: open-label reporting (especially nausea), co-intervention and prespecification concerns.
+- Inconsistency (−0): No separate inconsistency downgrade: two studies cannot distinguish heterogeneity from very imprecise estimates.
+- Indirectness (−0): Direct for the explicitly named outcome, window and comparator; not interchangeable with another construct or proof across all surgeries.
+- Imprecision (−2): Very serious: safeguarded k=2 intervals allow very large benefit and harm.
+- Publication Bias (−0): No separate downgrade: sparse evidence cannot rule out missing results, but specific evidence is insufficient to assert publication bias. Historical selection completeness is disclosed separately.
 
 ## vomiting24_EA_usual
 
@@ -82,11 +82,11 @@ RR 0.660 (95% CI 0.059 to 7.441) risk ratio.
 
 RR 0.529 (95% CI 0.017 to 16.691) risk ratio.
 
-- **Risk of bias:** Serious: open-label thoracic trials and incomplete exact symptom-specific RoB linkage.
-- **Inconsistency:** Not downgraded: broadly compatible direction in two studies; uncertainty is captured in imprecision.
-- **Indirectness:** Not downgraded for thoracic supportive question; do not generalize to all surgery/sham efficacy.
-- **Imprecision:** Very serious: k2 safeguarded intervals permit major benefit and harm.
-- **Publication bias:** No separate downgrade; sparse evidence cannot assess small-study effects.
+- Risk Of Bias (−1): Serious: open-label reporting (especially nausea), co-intervention and prespecification concerns.
+- Inconsistency (−0): No separate inconsistency downgrade: two studies cannot distinguish heterogeneity from very imprecise estimates.
+- Indirectness (−0): Direct for the explicitly named outcome, window and comparator; not interchangeable with another construct or proof across all surgeries.
+- Imprecision (−2): Very serious: safeguarded k=2 intervals allow very large benefit and harm.
+- Publication Bias (−0): No separate downgrade: sparse evidence cannot rule out missing results, but specific evidence is insufficient to assert publication bias. Historical selection completeness is disclosed separately.
 
 ## nausea24_TEAS_sham
 
@@ -94,11 +94,11 @@ RR 0.529 (95% CI 0.017 to 16.691) risk ratio.
 
 RR 0.668 (95% CI 0.287 to 1.553) risk ratio.
 
-- **Risk of bias:** Serious: incomplete exact outcome-specific assessments, subjective nausea ascertainment and variable masking.
-- **Inconsistency:** Serious: clinically heterogeneous surgeries and background prophylaxis; effect-size variation matters to absolute benefit.
-- **Indirectness:** No additional downgrade for specific symptom construct.
-- **Imprecision:** Serious: intervals cross no effect and permit materially different clinical effects; event evidence is less decisive than composite PONV.
-- **Publication bias:** No separate downgrade; missing-result bias cannot be excluded.
+- Risk Of Bias (−1): Serious: result-specific missingness/prespecification concerns; nausea additionally vulnerable to sensory masking. Observable vomiting is not automatically High when patients know treatment.
+- Inconsistency (−1): Serious: effects and clinical contexts vary enough to undermine stable magnitude.
+- Indirectness (−0): Direct for the explicitly named outcome, window and comparator; not interchangeable with another construct or proof across all surgeries.
+- Imprecision (−1): Serious: intervals allow substantial reductions and no benefit/increased risk.
+- Publication Bias (−0): No separate downgrade: sparse evidence cannot rule out missing results, but specific evidence is insufficient to assert publication bias. Historical selection completeness is disclosed separately.
 
 ## vomiting24_TEAS_sham
 
@@ -106,11 +106,11 @@ RR 0.668 (95% CI 0.287 to 1.553) risk ratio.
 
 RR 0.680 (95% CI 0.345 to 1.342) risk ratio.
 
-- **Risk of bias:** Serious: incomplete exact outcome-specific assessments, subjective nausea ascertainment and variable masking.
-- **Inconsistency:** Serious: clinically heterogeneous surgeries and background prophylaxis; effect-size variation matters to absolute benefit.
-- **Indirectness:** No additional downgrade for specific symptom construct.
-- **Imprecision:** Serious: intervals cross no effect and permit materially different clinical effects; event evidence is less decisive than composite PONV.
-- **Publication bias:** No separate downgrade; missing-result bias cannot be excluded.
+- Risk Of Bias (−1): Serious: result-specific missingness/prespecification concerns; nausea additionally vulnerable to sensory masking. Observable vomiting is not automatically High when patients know treatment.
+- Inconsistency (−1): Serious: effects and clinical contexts vary enough to undermine stable magnitude.
+- Indirectness (−0): Direct for the explicitly named outcome, window and comparator; not interchangeable with another construct or proof across all surgeries.
+- Imprecision (−1): Serious: intervals allow substantial reductions and no benefit/increased risk.
+- Publication Bias (−0): No separate downgrade: sparse evidence cannot rule out missing results, but specific evidence is insufficient to assert publication bias. Historical selection completeness is disclosed separately.
 
 ## vomiting24_TEAS_usual
 
@@ -118,11 +118,11 @@ RR 0.680 (95% CI 0.345 to 1.342) risk ratio.
 
 RR 0.483 (95% CI 0.241 to 0.967) risk ratio.
 
-- **Risk of bias:** Serious: no sham procedure described; 15 of 120 enrolled excluded after randomization; exact vomiting-specific RoB assessment not established.
-- **Inconsistency:** Not assessable in one trial.
-- **Indirectness:** Not downgraded for supportive no-stimulation question after laparoscopic myomectomy; not evidence for sham-specific efficacy.
-- **Imprecision:** Very serious: 105 participants and 28 events in one trial; upper CI bound close to no effect.
-- **Publication bias:** No separate downgrade beyond floor.
+- Risk Of Bias (−2): Very serious: entire Pan body High for informative exclusions (external analgesia/PCIA) and internally conflicting flow counts; observed vomiting itself not High measurement risk.
+- Inconsistency (−0): Not downgraded solely for one trial; consistency cannot be assessed.
+- Indirectness (−0): Direct for the explicitly named outcome, window and comparator; not interchangeable with another construct or proof across all surgeries.
+- Imprecision (−1): Serious: N=105/28 events; interval from large reduction to nearly no reduction.
+- Publication Bias (−0): No separate downgrade: sparse evidence cannot rule out missing results, but specific evidence is insufficient to assert publication bias. Historical selection completeness is disclosed separately.
 
 ## persistent_nausea24_TEAS_sham
 
@@ -130,11 +130,11 @@ RR 0.483 (95% CI 0.241 to 0.967) risk ratio.
 
 RR 0.429 (95% CI 0.249 to 0.739) risk ratio.
 
-- **Risk of bias:** Serious: exact persistent-nausea RoB assessment not established and subjective duration reporting can be affected by masking.
-- **Inconsistency:** Not assessable in one trial.
-- **Indirectness:** Not downgraded for persistent-nausea question; not a substitute for any nausea.
-- **Imprecision:** Serious: relatively few persistent-nausea events and broad effect interval despite large trial N.
-- **Publication bias:** No additional downgrade; report availability limits publication-bias assessment.
+- Risk Of Bias (−1): Serious: Gao incomplete patient masking and unverified result-level prospective analysis plan.
+- Inconsistency (−0): Not downgraded solely for one trial; consistency cannot be assessed.
+- Indirectness (−0): Direct for the explicitly named outcome, window and comparator; not interchangeable with another construct or proof across all surgeries.
+- Imprecision (−1): Serious: relatively few persistent-nausea events despite N=1655; wide relative reduction range leaves uncertain absolute magnitude.
+- Publication Bias (−0): No separate downgrade: sparse evidence cannot rule out missing results, but specific evidence is insufficient to assert publication bias. Historical selection completeness is disclosed separately.
 
 ## nausea48_TEAS_sham
 
@@ -142,11 +142,11 @@ RR 0.429 (95% CI 0.249 to 0.739) risk ratio.
 
 RR 0.456 (95% CI 0.299 to 0.695) risk ratio.
 
-- **Risk of bias:** Serious: single-blind design with blinded patients/assessors; exact assessments High for nausea (outcome measurement) and Some concerns for vomiting. Reviewer to confirm whether High nausea RoB warrants very serious.
-- **Inconsistency:** Not assessable in one trial.
-- **Indirectness:** Not downgraded for48h tympanoplasty question; generalization beyond this setting limited.
-- **Imprecision:** Serious:277 participants, few vomiting events and material uncertainty in absolute reduction.
-- **Publication bias:** No separate downgrade; absence of replication limits missing-results assessment.
+- Risk Of Bias (−2): Very serious: entire body is Luo; verified failed sensory masking and subjective nausea imply High measurement risk, compounded by unblinded care and uncertain prespecification.
+- Inconsistency (−0): Not downgraded solely for one trial; consistency cannot be assessed.
+- Indirectness (−0): Direct for the explicitly named outcome, window and comparator; not interchangeable with another construct or proof across all surgeries.
+- Imprecision (−0): Not downgraded again: 77 nausea events (24/138 vs 53/139), RR CI 0.30–0.69 supports reduction. Not confused with the 36-event vomiting result; dominant uncertainty is bias.
+- Publication Bias (−0): No separate downgrade: sparse evidence cannot rule out missing results, but specific evidence is insufficient to assert publication bias. Historical selection completeness is disclosed separately.
 
 ## vomiting48_TEAS_sham
 
@@ -154,125 +154,125 @@ RR 0.456 (95% CI 0.299 to 0.695) risk ratio.
 
 RR 0.336 (95% CI 0.164 to 0.687) risk ratio.
 
-- **Risk of bias:** Serious: single-blind design with blinded patients/assessors; exact assessments High for nausea (outcome measurement) and Some concerns for vomiting. Reviewer to confirm whether High nausea RoB warrants very serious.
-- **Inconsistency:** Not assessable in one trial.
-- **Indirectness:** Not downgraded for48h tympanoplasty question; generalization beyond this setting limited.
-- **Imprecision:** Serious:277 participants, few vomiting events and material uncertainty in absolute reduction.
-- **Publication bias:** No separate downgrade; absence of replication limits missing-results assessment.
+- Risk Of Bias (−1): Serious: Luo clinical-care/prespecification concerns. Observable vomiting measurement Low, not copied from nausea.
+- Inconsistency (−0): Not downgraded solely for one trial; consistency cannot be assessed.
+- Indirectness (−0): Direct for the explicitly named outcome, window and comparator; not interchangeable with another construct or proof across all surgeries.
+- Imprecision (−1): Serious: 36 events in 277 participants and wide relative/absolute reduction range.
+- Publication Bias (−0): No separate downgrade: sparse evidence cannot rule out missing results, but specific evidence is insufficient to assert publication bias. Historical selection completeness is disclosed separately.
 
 ## ponv48_TEAS_sham
 
-**Very low**; k=1, N=62.
+**Low**; k=1, N=62.
 
 RR 0.542 (95% CI 0.343 to 0.854) risk ratio.
 
-- **Risk of bias:** Serious: exact existing assessment Some concerns (outcome measurement and selection domains); anaesthetists unblinded and postoperative tingling could reveal allocation despite no-current electrode sham.
-- **Inconsistency:** Not assessable in one trial.
-- **Indirectness:** Not downgraded for 48h composite PONV after sleeve gastrectomy with dual antiemetic prophylaxis; transportability to other surgery limited.
-- **Imprecision:** Very serious: 62 participants and 37 events in one trial; CI excludes no effect but spans small to large reductions.
-- **Publication bias:** No separate downgrade beyond floor.
+- Risk Of Bias (−1): Serious: Xiong concealment, clinical awareness, sensory masking and prespecification concerns. Five pre-randomization eligibility exclusions are not attrition.
+- Inconsistency (−0): Not downgraded solely for one trial; consistency cannot be assessed.
+- Indirectness (−0): Direct for the explicitly named outcome, window and comparator; not interchangeable with another construct or proof across all surgeries.
+- Imprecision (−1): Serious, not very serious: N=62/37 events and RR CI 0.34–0.85; sparse information, but interval does not encompass major benefit AND harm.
+- Publication Bias (−0): No separate downgrade: sparse evidence cannot rule out missing results, but specific evidence is insufficient to assert publication bias. Historical selection completeness is disclosed separately.
 
 ## nausea6to24_EA_usual
 
-**Low**; k=1, N=400.
+**Moderate**; k=1, N=400.
 
 RR 0.500 (95% CI 0.325 to 0.772) risk ratio.
 
-- **Risk of bias:** Serious: unblinded active-vs-usual-care trial; exact assessment only available for selected vomiting contrast, not every combined arm/outcome.
-- **Inconsistency:** Not assessable in a single trial.
-- **Indirectness:** Not downgraded for6–24h symptom question; indirect for cumulative0–24h and explicitly kept separate.
-- **Imprecision:** Serious: one multiarm trial provides limited replication and a range of potentially important effects; no registered symptom MCID.
-- **Publication bias:** No separate downgrade; registry/report comparability and publication bias unresolved.
+- Risk Of Bias (−1): Serious: all three Zhu active arms assessed; sequence implementation/prespecification concerns and patient-report concerns for nausea. Vomiting measurement itself Low.
+- Inconsistency (−0): Not downgraded solely for one trial; consistency cannot be assessed.
+- Indirectness (−0): Direct for the explicitly named outcome, window and comparator; not interchangeable with another construct or proof across all surgeries.
+- Imprecision (−0): Not downgraded: N=400 and intervals wholly support reduction. Single-trial status or no registered symptom MCID does not automatically imply imprecision; no minimum important benefit claimed.
+- Publication Bias (−0): No separate downgrade: sparse evidence cannot rule out missing results, but specific evidence is insufficient to assert publication bias. Historical selection completeness is disclosed separately.
 
 ## vomiting6to24_EA_usual
 
-**Low**; k=1, N=400.
+**Moderate**; k=1, N=400.
 
 RR 0.338 (95% CI 0.196 to 0.583) risk ratio.
 
-- **Risk of bias:** Serious: unblinded active-vs-usual-care trial; exact assessment only available for selected vomiting contrast, not every combined arm/outcome.
-- **Inconsistency:** Not assessable in a single trial.
-- **Indirectness:** Not downgraded for6–24h symptom question; indirect for cumulative0–24h and explicitly kept separate.
-- **Imprecision:** Serious: one multiarm trial provides limited replication and a range of potentially important effects; no registered symptom MCID.
-- **Publication bias:** No separate downgrade; registry/report comparability and publication bias unresolved.
+- Risk Of Bias (−1): Serious: all three Zhu active arms assessed; sequence implementation/prespecification concerns and patient-report concerns for nausea. Vomiting measurement itself Low.
+- Inconsistency (−0): Not downgraded solely for one trial; consistency cannot be assessed.
+- Indirectness (−0): Direct for the explicitly named outcome, window and comparator; not interchangeable with another construct or proof across all surgeries.
+- Imprecision (−0): Not downgraded: N=400 and intervals wholly support reduction. Single-trial status or no registered symptom MCID does not automatically imply imprecision; no minimum important benefit claimed.
+- Publication Bias (−0): No separate downgrade: sparse evidence cannot rule out missing results, but specific evidence is insufficient to assert publication bias. Historical selection completeness is disclosed separately.
 
 ## pain24_rest_TEAS_sham
 
-**Low**; k=3, N=218.
+**Moderate**; k=3, N=218.
 
 MD -0.213 (95% CI -0.754 to 0.327) 0–10 points.
 
-- **Risk of bias:** Serious: Liu and Xing resting-pain exact assessments High; Yu exact assessment not established.
-- **Inconsistency:** Not downgraded: observed study differences do not overturn the pain-worsening-margin conclusion; statistical homogeneity alone is not proof of consistency.
-- **Indirectness:** Not downgraded for24h rest pain; separate trials from the opioid contributor create indirect pairing.
-- **Imprecision:** Serious: only218 participants and limited surgery representation; CI excludes+1 average worsening but is not a formal noninferiority trial.
-- **Publication bias:** No separate downgrade; missing unfavorable pain results remain possible.
+- Risk Of Bias (−1): Serious: exact pain results assessed; Liu masking/Xing sensory-unmasking and prospective-selection concerns. Prior blanket High assignments not sustained.
+- Inconsistency (−0): No downgrade: contrasts compatible with little average difference; movement body single trial.
+- Indirectness (−0): Direct for the explicitly named outcome, window and comparator; not interchangeable with another construct or proof across all surgeries.
+- Imprecision (−0): Not downgraded for registered +1 pain-worsening decision: full CIs lie within −1 to +1. Standalone average-pain evidence is NOT paired opioid/pain proof or a formal noninferiority trial.
+- Publication Bias (−0): No separate downgrade: sparse evidence cannot rule out missing results, but specific evidence is insufficient to assert publication bias. Historical selection completeness is disclosed separately.
 
 ## pain24_movement_TEAS_sham
 
-**Low**; k=1, N=100.
+**Moderate**; k=1, N=100.
 
 MD 0.040 (95% CI -0.206 to 0.286) 0–10 points.
 
-- **Risk of bias:** Serious: subjective cough pain with uncertain sensory masking and no independently established exact cough-pain RoB record.
-- **Inconsistency:** Not assessable in one trial.
-- **Indirectness:** Not downgraded for coughing-pain question; not equivalent to every movement task.
-- **Imprecision:** Serious:100 participants, one trial; upperCI below+1 does not establish paired clinical benefit in Szmit.
-- **Publication bias:** No separate downgrade; selective availability of movement pain remains possible.
+- Risk Of Bias (−1): Serious: exact pain results assessed; Liu masking/Xing sensory-unmasking and prospective-selection concerns. Prior blanket High assignments not sustained.
+- Inconsistency (−0): No downgrade: contrasts compatible with little average difference; movement body single trial.
+- Indirectness (−0): Direct for the explicitly named outcome, window and comparator; not interchangeable with another construct or proof across all surgeries.
+- Imprecision (−0): Not downgraded for registered +1 pain-worsening decision: full CIs lie within −1 to +1. Standalone average-pain evidence is NOT paired opioid/pain proof or a formal noninferiority trial.
+- Publication Bias (−0): No separate downgrade: sparse evidence cannot rule out missing results, but specific evidence is insufficient to assert publication bias. Historical selection completeness is disclosed separately.
 
 ## pain24_rest_TEAS_usual
 
 **Not rated — insufficient evidence**; k=0, N=0.
 
-- **Risk of bias:** No eligible quantitative body.
-- **Inconsistency:** Not applicable.
-- **Indirectness:** Not applicable.
-- **Imprecision:** No estimate.
-- **Publication bias:** Cannot assess.
+- Risk Of Bias (−0): No eligible quantitative evidence body.
+- Inconsistency (−0): No eligible quantitative evidence body.
+- Indirectness (−0): No eligible quantitative evidence body.
+- Imprecision (−0): No eligible quantitative evidence body.
+- Publication Bias (−0): No eligible quantitative evidence body.
 
 ## pain24_movement_EA_sham
 
-**Low**; k=1, N=114.
+**Moderate**; k=1, N=114.
 
 MD -0.338 (95% CI -0.728 to 0.052) 0–10 points.
 
-- **Risk of bias:** Serious: one three-arm trial; result assessment applies to contralateral comparison only and does not fully cover combined active arms.
-- **Inconsistency:** Not assessable across independent trials.
-- **Indirectness:** Not downgraded for knee-movement question; not evidence across all surgeries.
-- **Imprecision:** Serious:114 participants, single trial; modest effect and imprecise generalization.
-- **Publication bias:** No separate downgrade; He source-dispersion contradiction addressed by sensitivity, not invented data.
+- Risk Of Bias (−1): Serious: both Huang arms assessed; missing-measurement handling and sensory masking concerns.
+- Inconsistency (−0): Not downgraded solely for one trial; consistency cannot be assessed.
+- Indirectness (−0): Direct for the explicitly named outcome, window and comparator; not interchangeable with another construct or proof across all surgeries.
+- Imprecision (−0): Not downgraded for +1 worsening margin: CI −0.73 to +0.05 excludes important average worsening. Does not establish paired opioid reduction or broad analgesic benefit.
+- Publication Bias (−0): No separate downgrade: sparse evidence cannot rule out missing results, but specific evidence is insufficient to assert publication bias. Historical selection completeness is disclosed separately.
 
 ## pain24_rest_EA_sham
 
 **Not rated — insufficient evidence**; k=0, N=0.
 
-- **Risk of bias:** No eligible quantitative body.
-- **Inconsistency:** Not applicable.
-- **Indirectness:** Not applicable.
-- **Imprecision:** No estimate.
-- **Publication bias:** Cannot assess.
+- Risk Of Bias (−0): No eligible quantitative evidence body.
+- Inconsistency (−0): No eligible quantitative evidence body.
+- Indirectness (−0): No eligible quantitative evidence body.
+- Imprecision (−0): No eligible quantitative evidence body.
+- Publication Bias (−0): No eligible quantitative evidence body.
 
 ## flatus_TEAS_sham
 
-**Very low**; k=8, N=1505.
+**Very low**; k=7, N=1420.
 
-MD -5.335 (95% CI -9.092 to -1.578) hours.
+MD -4.983 (95% CI -9.507 to -0.459) hours.
 
-- **Risk of bias:** Serious: varying ascertainment of patient-reported flatus, sensory masking, incomplete exact-result RoB linkage and Zheng2025 SD/P inconsistency (leave-out diagnostic direction and CI unchanged).
-- **Inconsistency:** Very serious: large clinically disparate time effects including little/no effect; prediction interval crosses no benefit and delay.
-- **Indirectness:** Not downgraded for time-to-flatus itself. It does not establish overall GI or functional recovery.
-- **Imprecision:** Not separately downgraded: mean CI favors earlier flatus, while major uncertainty across settings is counted in inconsistency.
-- **Publication bias:** No extra downgrade; review-level omissions prevent a definitive comprehensive synthesis.
+- Risk Of Bias (−1): Serious: exact patient-report/missingness/prespecification concerns. Zheng continuous data excluded for source/construct uncertainty.
+- Inconsistency (−2): Very serious: clinically disparate magnitudes and prediction interval includes no improvement/delay; unstable expected benefit.
+- Indirectness (−0): Direct for the explicitly named outcome, window and comparator; not interchangeable with another construct or proof across all surgeries.
+- Imprecision (−0): No extra downgrade: mean CI favours earlier passage; setting uncertainty counted under inconsistency.
+- Publication Bias (−0): No separate downgrade: sparse evidence cannot rule out missing results, but specific evidence is insufficient to assert publication bias. Historical selection completeness is disclosed separately.
 
 ## flatus_TEAS_usual
 
 **Not rated — insufficient evidence**; k=0, N=0.
 
-- **Risk of bias:** No eligible quantitative body.
-- **Inconsistency:** Not applicable.
-- **Indirectness:** Not applicable.
-- **Imprecision:** No estimate.
-- **Publication bias:** Cannot assess.
+- Risk Of Bias (−0): No eligible quantitative evidence body.
+- Inconsistency (−0): No eligible quantitative evidence body.
+- Indirectness (−0): No eligible quantitative evidence body.
+- Imprecision (−0): No eligible quantitative evidence body.
+- Publication Bias (−0): No eligible quantitative evidence body.
 
 ## flatus_EA_sham
 
@@ -280,11 +280,11 @@ MD -5.335 (95% CI -9.092 to -1.578) hours.
 
 MD -7.200 (95% CI -16.215 to 1.815) hours.
 
-- **Risk of bias:** Serious: patient-reported event and exact flatus-specific assessment not established.
-- **Inconsistency:** Not assessable in one trial.
-- **Indirectness:** Not downgraded for flatus question; postoperative timing/adherence limits transportability.
-- **Imprecision:** Very serious:110 participants and CI includes potentially important earlier passage and no benefit/delay.
-- **Publication bias:** No additional downgrade.
+- Risk Of Bias (−1): Serious: Ng nonopaque envelopes and incomplete prospective analysis-plan verification.
+- Inconsistency (−0): Not downgraded solely for one trial; consistency cannot be assessed.
+- Indirectness (−0): Direct for the explicitly named outcome, window and comparator; not interchangeable with another construct or proof across all surgeries.
+- Imprecision (−2): Very serious: N=110, CI allows materially earlier flatus and no benefit/delay.
+- Publication Bias (−0): No separate downgrade: sparse evidence cannot rule out missing results, but specific evidence is insufficient to assert publication bias. Historical selection completeness is disclosed separately.
 
 ## flatus_EA_usual
 
@@ -292,23 +292,23 @@ MD -7.200 (95% CI -16.215 to 1.815) hours.
 
 MD -2.888 (95% CI -5.387 to -0.388) hours.
 
-- **Risk of bias:** Serious: unblinded usual-care comparisons, Huang 2025 and Yang 2024 exact assessments High, and no exact assessment of combined Zhu arms.
-- **Inconsistency:** Serious: effects vary with surgical setting/protocol and baseline recovery time; same direction is insufficient to establish stable magnitude.
-- **Indirectness:** Not downgraded for flatus-hours question; no broad faster-recovery claim.
-- **Imprecision:** No extra downgrade: CI supports earlier mean flatus within this body; no registered flatus MCID to imply clinical importance.
-- **Publication bias:** No separate downgrade; selection completeness remains a separate blocker.
+- Risk Of Bias (−1): Serious: open-label reporting including High measurement risk in Huang/Yang2024; all Zhu arms assessed.
+- Inconsistency (−1): Serious: magnitude varies by surgery, bowel care and baseline recovery.
+- Indirectness (−0): Direct for the explicitly named outcome, window and comparator; not interchangeable with another construct or proof across all surgeries.
+- Imprecision (−0): No extra downgrade: average CI favours earlier flatus; no invented MCID or broad faster-recovery claim.
+- Publication Bias (−0): No separate downgrade: sparse evidence cannot rule out missing results, but specific evidence is insufficient to assert publication bias. Historical selection completeness is disclosed separately.
 
 ## bowelsounds_TEAS_sham
 
-**Very low**; k=3, N=812.
+**Very low**; k=2, N=727.
 
-MD -7.191 (95% CI -11.618 to -2.763) hours.
+MD -6.086 (95% CI -20.323 to 8.150) hours.
 
-- **Risk of bias:** Serious: observer/time-origin ascertainment varies; no exact bowel-sounds RoB record is linked for any trial; Zheng2025 printed mean(SD) values are inconsistent with its printed P value.
-- **Inconsistency:** Serious: different measurement schedules and control recovery times make a stable magnitude uncertain.
-- **Indirectness:** Not downgraded for audible bowel sounds; indirectness would be serious if interpreted as global recovery, which is not claimed.
-- **Imprecision:** Serious (v36): pooled CI excludes no effect only with Zheng2025; the leave-out diagnostic (k=2) CI includes no effect and delay. Reviewer to confirm.
-- **Publication bias:** No separate downgrade; evidence-selection limitation applies.
+- Risk Of Bias (−1): Serious: Gu/Gao exact assessments now available; concealment/prespecification concerns. Zheng dispersion held out.
+- Inconsistency (−1): Serious: different recovery profiles/auscultation schedules undermine stable magnitude.
+- Indirectness (−0): Direct for the explicitly named outcome, window and comparator; not interchangeable with another construct or proof across all surgeries.
+- Imprecision (−1): Serious: k=2 main MD −6.09h, CI −20.32 to +8.15; meaningful improvement and delay possible.
+- Publication Bias (−0): No separate downgrade: sparse evidence cannot rule out missing results, but specific evidence is insufficient to assert publication bias. Historical selection completeness is disclosed separately.
 
 ## defecation_TEAS_sham
 
@@ -316,11 +316,11 @@ MD -7.191 (95% CI -11.618 to -2.763) hours.
 
 MD -7.769 (95% CI -17.468 to 1.930) hours.
 
-- **Risk of bias:** Serious: ascertainment, masking and incomplete exact-outcome assessments; open-label EA/usual-care studies add concerns.
-- **Inconsistency:** Serious: effect sizes vary materially with surgery and bowel-management protocols; EA/usual-care especially disparate.
-- **Indirectness:** Not downgraded for first-defecation timing; laxative/co-intervention context must remain explicit.
-- **Imprecision:** Serious: intervals include substantial earlier defecation and no benefit/delay.
-- **Publication bias:** No further downgrade; selective availability unresolved.
+- Risk Of Bias (−1): Serious: all exact assessments completed; missingness/prespecification and open-label reporting in EA usual-care.
+- Inconsistency (−1): Serious: varying surgery and bowel-management/laxative protocols.
+- Indirectness (−0): Direct for the explicitly named outcome, window and comparator; not interchangeable with another construct or proof across all surgeries.
+- Imprecision (−1): Serious: intervals include important earlier defecation and no benefit/delay.
+- Publication Bias (−0): No separate downgrade: sparse evidence cannot rule out missing results, but specific evidence is insufficient to assert publication bias. Historical selection completeness is disclosed separately.
 
 ## defecation_EA_sham
 
@@ -328,11 +328,11 @@ MD -7.769 (95% CI -17.468 to 1.930) hours.
 
 MD -21.600 (95% CI -37.095 to -6.105) hours.
 
-- **Risk of bias:** Serious: existing selected-result assessment Some concerns; patient-reported event and prespecification concerns.
-- **Inconsistency:** Not assessable in one trial.
-- **Indirectness:** Not downgraded for this colorectal-surgery defecation question.
-- **Imprecision:** Serious: single110-participant trial; uncertain magnitude/generalizability despite CI excluding null.
-- **Publication bias:** No separate downgrade; absence of independent replication.
+- Risk Of Bias (−1): Serious: Ng concealment/prespecification concerns.
+- Inconsistency (−0): Not downgraded solely for one trial; consistency cannot be assessed.
+- Indirectness (−0): Direct for the explicitly named outcome, window and comparator; not interchangeable with another construct or proof across all surgeries.
+- Imprecision (−1): Serious: N=110 and wide magnitude interval, about 6–37h earlier; sparse information despite excluding null.
+- Publication Bias (−0): No separate downgrade: sparse evidence cannot rule out missing results, but specific evidence is insufficient to assert publication bias. Historical selection completeness is disclosed separately.
 
 ## defecation_EA_usual
 
@@ -340,11 +340,11 @@ MD -21.600 (95% CI -37.095 to -6.105) hours.
 
 MD -10.106 (95% CI -32.890 to 12.678) hours.
 
-- **Risk of bias:** Serious: ascertainment, masking and incomplete exact-outcome assessments; open-label EA/usual-care studies add concerns.
-- **Inconsistency:** Serious: effect sizes vary materially with surgery and bowel-management protocols; EA/usual-care especially disparate.
-- **Indirectness:** Not downgraded for first-defecation timing; laxative/co-intervention context must remain explicit.
-- **Imprecision:** Serious: intervals include substantial earlier defecation and no benefit/delay.
-- **Publication bias:** No further downgrade; selective availability unresolved.
+- Risk Of Bias (−1): Serious: all exact assessments completed; missingness/prespecification and open-label reporting in EA usual-care.
+- Inconsistency (−1): Serious: varying surgery and bowel-management/laxative protocols.
+- Indirectness (−0): Direct for the explicitly named outcome, window and comparator; not interchangeable with another construct or proof across all surgeries.
+- Imprecision (−1): Serious: intervals include important earlier defecation and no benefit/delay.
+- Publication Bias (−0): No separate downgrade: sparse evidence cannot rule out missing results, but specific evidence is insufficient to assert publication bias. Historical selection completeness is disclosed separately.
 
 ## opioid48_EA_usual_PCA
 
@@ -352,11 +352,11 @@ MD -10.106 (95% CI -32.890 to 12.678) hours.
 
 MD -6.000 (95% CI -10.628 to -1.372) mg IVMME.
 
-- **Risk of bias:** Serious: existing exact assessments High, postrandomization missingness/attrition.
-- **Inconsistency:** Not assessable across independent studies.
-- **Indirectness:** Serious: PCA exposure may omit other systemic analgesia; these are additional device outcomes, not24h primary exposure.
-- **Imprecision:** Serious: small single studies;72h CI includes no benefit/harm,48h effect magnitude remains uncertain.
-- **Publication bias:** No further downgrade.
+- Risk Of Bias (−2): Very serious: An/Wong entire bodies High for informative missingness; complications/reoperations can strongly affect opioid demand.
+- Inconsistency (−0): Not downgraded solely for one trial; consistency cannot be assessed.
+- Indirectness (−0): Direct for labelled PCA-device exposure, not total systemic 24h opioid. No extra penalty merely for a different explicit question.
+- Imprecision (−1): Serious: small trials/wide magnitude intervals; 72h CI includes no reduction/increased dose.
+- Publication Bias (−0): No separate downgrade: sparse evidence cannot rule out missing results, but specific evidence is insufficient to assert publication bias. Historical selection completeness is disclosed separately.
 
 ## opioid72_EA_sham_PCA
 
@@ -364,23 +364,23 @@ MD -6.000 (95% CI -10.628 to -1.372) mg IVMME.
 
 MD -8.400 (95% CI -22.316 to 5.516) mg IV morphine.
 
-- **Risk of bias:** Serious: existing exact assessments High, postrandomization missingness/attrition.
-- **Inconsistency:** Not assessable across independent studies.
-- **Indirectness:** Serious: PCA exposure may omit other systemic analgesia; these are additional device outcomes, not24h primary exposure.
-- **Imprecision:** Serious: small single studies;72h CI includes no benefit/harm,48h effect magnitude remains uncertain.
-- **Publication bias:** No further downgrade.
+- Risk Of Bias (−2): Very serious: An/Wong entire bodies High for informative missingness; complications/reoperations can strongly affect opioid demand.
+- Inconsistency (−0): Not downgraded solely for one trial; consistency cannot be assessed.
+- Indirectness (−0): Direct for labelled PCA-device exposure, not total systemic 24h opioid. No extra penalty merely for a different explicit question.
+- Imprecision (−1): Serious: small trials/wide magnitude intervals; 72h CI includes no reduction/increased dose.
+- Publication Bias (−0): No separate downgrade: sparse evidence cannot rule out missing results, but specific evidence is insufficient to assert publication bias. Historical selection completeness is disclosed separately.
 
 ## intraop_remifentanil_TEAS_sham
 
-**Very low**; k=6, N=1013.
+**Low**; k=4, N=828.
 
-MD -114.812 (95% CI -199.686 to -29.937) µg remifentanil.
+MD -175.702 (95% CI -289.866 to -61.538) µg remifentanil.
 
-- **Risk of bias:** Serious: clinician titration/masking varies, exact assessments are incomplete and Zheng2025 SD/P inconsistency (leave-out diagnostic CI still excludes no effect).
-- **Inconsistency:** Serious: highly different surgery durations, baseline requirements and effects; PI permits increased dose.
-- **Indirectness:** Serious: intraoperative dose reduction does not establish postoperative opioid sparing or improved patient outcomes.
-- **Imprecision:** Not separately downgraded: average CI excludes null but transportability uncertainty counted above.
-- **Publication bias:** No extra downgrade; omissions in selection affect this secondary body directly.
+- Risk Of Bias (−1): Serious: four retained trials have missingness/prespecification concerns. Zheng source uncertainty and Wu2025 pre-treatment dose excluded.
+- Inconsistency (−1): Serious: surgery duration, baseline dose and observed effects differ substantially.
+- Indirectness (−0): Direct for the explicitly named outcome, window and comparator; not interchangeable with another construct or proof across all surgeries.
+- Imprecision (−0): No extra downgrade: average interval supports lower intraoperative dose; not postoperative opioid sparing/patient-important benefit.
+- Publication Bias (−0): No separate downgrade: sparse evidence cannot rule out missing results, but specific evidence is insufficient to assert publication bias. Historical selection completeness is disclosed separately.
 
 ## intraop_remifentanil_TEAS_usual
 
@@ -388,23 +388,23 @@ MD -114.812 (95% CI -199.686 to -29.937) µg remifentanil.
 
 MD -25.279 (95% CI -1108.956 to 1058.399) µg remifentanil.
 
-- **Risk of bias:** Serious: exact existing assessments High (Pan) and Some concerns (Liang); no sham procedure and anaesthetist-titrated dose.
-- **Inconsistency:** Serious: opposite effect directions in two trials (Pan reduction, Liang increase); two studies cannot characterize heterogeneity.
-- **Indirectness:** Serious: intraoperative dose reduction does not establish postoperative opioid sparing or patient benefit.
-- **Imprecision:** Very serious: safeguarded HK CI spans very large reductions and increases.
-- **Publication bias:** No separate downgrade beyond floor.
+- Risk Of Bias (−2): Very serious: Pan High for informative exclusions/unblinded titration; Liang missingness concerns despite masked anaesthetist.
+- Inconsistency (−1): Serious: opposite observed directions in two small studies.
+- Indirectness (−0): Direct for the explicitly named outcome, window and comparator; not interchangeable with another construct or proof across all surgeries.
+- Imprecision (−2): Very serious: k=2 interval spans very large decreases/increases.
+- Publication Bias (−0): No separate downgrade: sparse evidence cannot rule out missing results, but specific evidence is insufficient to assert publication bias. Historical selection completeness is disclosed separately.
 
 ## intraop_remifentanil_EA_usual
 
-**Very low**; k=1, N=400.
+**Low**; k=1, N=400.
 
 MD -16.756 (95% CI -74.250 to 40.738) µg remifentanil.
 
-- **Risk of bias:** Serious: exact outcome/combined-arm linkage incomplete and unblinded titration possible.
-- **Inconsistency:** Not assessable in a single independent trial per stratum.
-- **Indirectness:** Serious: anaesthetic dose is indirect for postoperative clinical benefit.
-- **Imprecision:** Serious: CI permits reductions and increases.
-- **Publication bias:** No additional downgrade.
+- Risk Of Bias (−1): Serious: Zhu sequence implementation/prespecification concerns; all arms assessed; masked anaesthesia supports Low measurement risk.
+- Inconsistency (−0): Not downgraded solely for one trial; consistency cannot be assessed.
+- Indirectness (−0): Direct for the explicitly named outcome, window and comparator; not interchangeable with another construct or proof across all surgeries.
+- Imprecision (−1): Serious: N=400 but CI spans lower and increased dose; magnitude uncertain without registered dose MCID.
+- Publication Bias (−0): No separate downgrade: sparse evidence cannot rule out missing results, but specific evidence is insufficient to assert publication bias. Historical selection completeness is disclosed separately.
 
 ## intraop_remifentanil_EA_sham
 
@@ -412,11 +412,11 @@ MD -16.756 (95% CI -74.250 to 40.738) µg remifentanil.
 
 MD -38.300 (95% CI -309.984 to 233.384) µg remifentanil.
 
-- **Risk of bias:** Serious: exact outcome/combined-arm linkage incomplete and unblinded titration possible.
-- **Inconsistency:** Not assessable in a single independent trial per stratum.
-- **Indirectness:** Serious: anaesthetic dose is indirect for postoperative clinical benefit.
-- **Imprecision:** Serious: CI permits reductions and increases.
-- **Publication bias:** No additional downgrade.
+- Risk Of Bias (−2): Very serious: Ntritsou unblinded clinician titration High, compounded by missingness/prespecification concerns.
+- Inconsistency (−0): Not downgraded solely for one trial; consistency cannot be assessed.
+- Indirectness (−0): Direct for the explicitly named outcome, window and comparator; not interchangeable with another construct or proof across all surgeries.
+- Imprecision (−2): Very serious: N=70; interval spans very large decreases/increases.
+- Publication Bias (−0): No separate downgrade: sparse evidence cannot rule out missing results, but specific evidence is insufficient to assert publication bias. Historical selection completeness is disclosed separately.
 
 ## pethidine24_TEAS_usual_rescue
 
@@ -424,11 +424,11 @@ MD -38.300 (95% CI -309.984 to 233.384) µg remifentanil.
 
 MD -12.460 (95% CI -37.694 to 12.774) mg IM pethidine.
 
-- **Risk of bias:** Serious: one small trial, exact rescue-result assessment unavailable, co-intervention/measurement concerns.
-- **Inconsistency:** Not assessable in one trial.
-- **Indirectness:** Not downgraded for rescue pethidine; not total systemic consumption.
-- **Imprecision:** Very serious:31 participants and CI allows meaningful benefit and harm.
-- **Publication bias:** No separate downgrade.
+- Risk Of Bias (−2): Very serious: Oztas rescue determined by unblinded clinical/patient decisions; both exact contrasts High. Active TENS does not establish assessor masking.
+- Inconsistency (−0): Not downgraded solely for one trial; consistency cannot be assessed.
+- Indirectness (−0): Direct for the explicitly named outcome, window and comparator; not interchangeable with another construct or proof across all surgeries.
+- Imprecision (−2): Very serious: N=31 per contrast; intervals allow substantial reductions/increases; rescue component is not total systemic consumption.
+- Publication Bias (−0): No separate downgrade: sparse evidence cannot rule out missing results, but specific evidence is insufficient to assert publication bias. Historical selection completeness is disclosed separately.
 
 ## pethidine24_TEAS_active_rescue
 
@@ -436,11 +436,11 @@ MD -12.460 (95% CI -37.694 to 12.774) mg IM pethidine.
 
 MD -13.090 (95% CI -44.187 to 18.007) mg IM pethidine.
 
-- **Risk of bias:** Serious: one small trial, exact rescue-result assessment unavailable, co-intervention/measurement concerns.
-- **Inconsistency:** Not assessable in one trial.
-- **Indirectness:** Not downgraded for rescue pethidine; not total systemic consumption.
-- **Imprecision:** Very serious:31 participants and CI allows meaningful benefit and harm.
-- **Publication bias:** No separate downgrade.
+- Risk Of Bias (−2): Very serious: Oztas rescue determined by unblinded clinical/patient decisions; both exact contrasts High. Active TENS does not establish assessor masking.
+- Inconsistency (−0): Not downgraded solely for one trial; consistency cannot be assessed.
+- Indirectness (−0): Direct for the explicitly named outcome, window and comparator; not interchangeable with another construct or proof across all surgeries.
+- Imprecision (−2): Very serious: N=31 per contrast; intervals allow substantial reductions/increases; rescue component is not total systemic consumption.
+- Publication Bias (−0): No separate downgrade: sparse evidence cannot rule out missing results, but specific evidence is insufficient to assert publication bias. Historical selection completeness is disclosed separately.
 
 ## ponv24_TEAS_active
 
@@ -448,8 +448,8 @@ MD -13.090 (95% CI -44.187 to 18.007) mg IM pethidine.
 
 RR 0.307 (95% CI 0.091 to 1.038) risk ratio.
 
-- **Risk of bias:** Serious: exact existing assessment Some concerns; active non-acupoint stimulation preserves masking but is not an inert comparator.
-- **Inconsistency:** Not assessable in one trial.
-- **Indirectness:** Serious if read as sham efficacy; not downgraded for the separate active-control question.
-- **Imprecision:** Very serious: 85 participants in one trial; CI crosses no effect.
-- **Publication bias:** No separate downgrade beyond floor.
+- Risk Of Bias (−1): Serious: Song result-level prespecification concerns; matched active-current sensory masking otherwise credible.
+- Inconsistency (−0): Not downgraded solely for one trial; consistency cannot be assessed.
+- Indirectness (−0): Direct for active non-acupoint electrical control; not inert-sham efficacy. No penalty for answering its own labelled question.
+- Imprecision (−2): Very serious: N=85 and sparse events; interval spans very large reduction through no benefit/slight increase.
+- Publication Bias (−0): No separate downgrade: sparse evidence cannot rule out missing results, but specific evidence is insufficient to assert publication bias. Historical selection completeness is disclosed separately.
