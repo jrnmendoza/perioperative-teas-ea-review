@@ -4,7 +4,7 @@
   "files": [
     {
       "file": "forest_qor_later.R",
-      "sha256": "8d7aec755d00e20571f9bd3e3142237fd84b0fac06ef313505de7cb6d3c56136"
+      "sha256": "1468c5f1ce29fce380184569ff2bcfa56f0dd02fc02851be0c7030dfbb9dd06d"
     },
     {
       "file": "metafor_estimates.csv",
@@ -24,27 +24,27 @@
     },
     {
       "file": "forest_QOR40_SHAM_POD2.svg",
-      "sha256": "bce709b33311e702c5af54035d4f26a95caa509a7db3a42bef38233062946f3e"
+      "sha256": "cafd7587031236afa27111a7e60e2144ec4bf9b1ce1b79f9ba3bd10e857c8e2a"
     },
     {
       "file": "forest_QOR40_USUAL_48H.svg",
-      "sha256": "c46786d1b92474ce2a1a8f2126475ab1bf275c30d58fabfaa256e629cc09a12a"
+      "sha256": "97ccafba7fc3e03b8dc7114c8b10e6f3eb46942e3043220f985fe1da20ec3cff"
     },
     {
       "file": "forest_QOR15_SHAM_POD2.svg",
-      "sha256": "9999791c5185d9c151b0aa684e05b3693d97a3d51d01cfd9645b3dfc9a6f2df8"
+      "sha256": "673836b75ea8714d80a5a07b464bad1ba5db0c5a09da09436ba54bcfd4953340"
     },
     {
       "file": "forest_QOR15_SHAM_POD3.svg",
-      "sha256": "f2043c2971b37784b44f618e320dcb5b0a02ed6b7d4c8b607a265586a86ac7dd"
+      "sha256": "783e662517e45930fa004c93035325c6ef4b357659550f7bfedf2f9dd2da07f0"
     },
     {
       "file": "forest_QOR15_SHAM_POD3_WITHOUT_HOU_2023.svg",
-      "sha256": "11dd949b500e88a5789a9837bbf2fdc2f14b5055547fee974c56b52d8f8b87f4"
+      "sha256": "b3d82c56787d70c6b9c5265a2f4f67f13e8c699656a62c9c8678f24770a766c1"
     },
     {
       "file": "forest_QOR15_SHAM_POD3_WITHOUT_XING_2022.svg",
-      "sha256": "0eee43df3a268cb28cc041761c27f7365cd61f595734df3d70c1cae90f15807f"
+      "sha256": "da54659d961ffa25c36393ff7d26f7a760752277ff713fc6e64c818b2b12631c"
     }
   ]
 }

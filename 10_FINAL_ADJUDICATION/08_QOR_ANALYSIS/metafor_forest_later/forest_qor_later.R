@@ -94,70 +94,63 @@ for (i in 1:length(models)) {
   svg_path <- sprintf("forest_%s.svg", model_id)
   svg(svg_path, width=12, height=4.5 + k*0.35)
   par(mar=c(6, 1, 3, 1))
-  plot.new() # allow strwidth
-  
+  plot.new()  # opens the plot region so text widths can be measured
+
   ci_lbs <- c(res$yi - 1.96*sqrt(res$vi), res$ci.lb)
   ci_ubs <- c(res$yi + 1.96*sqrt(res$vi), res$ci.ub)
-  min_val <- min(ci_lbs)
-  max_val <- max(ci_ubs)
-  pticks <- pretty(c(min_val, max_val))
+  pticks <- pretty(c(min(ci_lbs), max(ci_ubs), 0))  # always include the null (0) so refline=0 sits on the axis
   alim_val <- range(pticks)
-  
+
+  comp <- unique(df$comparator)
+  if (length(comp) != 1) stop("Mixed comparators in ", model_id)
+  ctrl <- switch(comp, "sham"="Sham", "usual care"="Usual care", stop("Unknown comparator '", comp, "' in ", model_id))
+  hdr <- c("TEAS n", "TEAS mean (SD)", paste(ctrl, "n"), paste(ctrl, "mean (SD)"))
   c1_vals <- as.character(df$n_i)
   c2_vals <- sprintf("%.1f (%.1f)", df$mean_i, df$sd_i)
   c3_vals <- as.character(df$n_c)
   c4_vals <- sprintf("%.1f (%.1f)", df$mean_c, df$sd_c)
-  
-  do_forest <- function(cex_val) {
-    w_space <- strwidth("M", cex=cex_val)
-    w_study <- max(strwidth(c("Study", df$study), cex=cex_val))
-    w_c1 <- max(strwidth(c("TEAS n", c1_vals), cex=cex_val))
-    w_c2 <- max(strwidth(c("TEAS mean (SD)", c2_vals), cex=cex_val))
-    w_c3 <- max(strwidth(c("Sham n", c3_vals), cex=cex_val))
-    w_c4 <- max(strwidth(c("Sham mean (SD)", c4_vals), cex=cex_val))
-    
-    x4 <- alim_val[1] - w_space * 2
-    x3 <- x4 - w_c4 - w_space * 2
-    x2 <- x3 - w_c3 - w_space * 2
-    x1 <- x2 - w_c2 - w_space * 2
-    x_study_right <- x1 - w_c1 - w_space * 2
-    
-    xlim_left <- min(x_study_right - w_study - w_space, alim_val[1] - 1.5 * (alim_val[2] - alim_val[1]))
-    xlim_right <- alim_val[2] + max(strwidth(c("MD [95% CI]", "99.99 [99.99, 99.99]"), cex=cex_val)) + 2*w_space
-    xlim_val <- c(xlim_left, xlim_right)
-    
-    ilab_pos <- c(x1, x2, x3, x4)
-    ilab_vals <- cbind(c1_vals, c2_vals, c3_vals, c4_vals)
-    
-    if (k > 1) {
-      fp <- forest(res, slab=df$study, ilab=ilab_vals, ilab.xpos=ilab_pos, ilab.pos=2,
-                   xlab=m$unit, xlim=xlim_val, alim=alim_val, at=pticks, refline=0,
-                   top=3, addfit=TRUE, mlab="RE model (REML, safeguarded HK)",
-                   header=FALSE)
-    } else {
-      fp <- forest(res, slab=df$study, ilab=ilab_vals, ilab.xpos=ilab_pos, ilab.pos=2,
-                   xlab=m$unit, xlim=xlim_val, alim=alim_val, at=pticks, refline=0,
-                   top=3, addfit=FALSE, header=FALSE)
-    }
-    return(list(fp=fp, xlim_val=xlim_val, ilab_pos=ilab_pos))
-  }
-  
-  ret <- do_forest(1)
-  if (abs(ret$fp$cex - 1) > 0.01) {
-     ret <- do_forest(ret$fp$cex)
-  }
-  
-  fp <- ret$fp
-  xlim_val <- ret$xlim_val
-  ilab_pos <- ret$ilab_pos
+  annot_vals <- sprintf("%.2f [%.2f, %.2f]", c(res$yi, res$b), c(res$yi - 1.96*sqrt(res$vi), res$ci.lb), c(res$yi + 1.96*sqrt(res$vi), res$ci.ub))
+
+  # Measure every width in INCHES (independent of user coordinates), then convert to
+  # plot units once the inch width of the plot region (par("pin")) is known.
+  cex_val <- 0.9
+  win <- function(x, bold=FALSE) max(strwidth(x, units="inches", cex=cex_val, font=if (bold) 2 else 1))
+  gap   <- win("MM")
+  w_st  <- max(win(df$study), win("Study", TRUE), if (k > 1) win("RE model (REML, safeguarded HK)") else 0)
+  w_col <- c(max(win(c1_vals), win(hdr[1], TRUE)),
+             max(win(c2_vals), win(hdr[2], TRUE)),
+             max(win(c3_vals), win(hdr[3], TRUE)),
+             max(win(c4_vals), win(hdr[4], TRUE)))
+  w_ann <- max(win(annot_vals), win("MD [95% CI]", TRUE))
+
+  left_in  <- w_st + gap + sum(w_col) + 4*gap      # study label + four columns, each followed by a gap
+  right_in <- gap + w_ann
+  plot_in  <- par("pin")[1]
+  axis_in  <- plot_in - left_in - right_in
+  if (axis_in < 2) stop("Not enough width for the axis in ", model_id, ": ", round(axis_in, 2), " in")
+  u <- diff(alim_val) / axis_in                    # plot units per inch
+
+  xlim_val <- c(alim_val[1] - left_in*u, alim_val[2] + right_in*u)
+  # Right edge of each column (values and headers are right-aligned with pos=2)
+  x4 <- alim_val[1] - gap*u
+  x3 <- x4 - (w_col[4] + gap)*u
+  x2 <- x3 - (w_col[3] + gap)*u
+  x1 <- x2 - (w_col[2] + gap)*u
+  ilab_pos <- c(x1, x2, x3, x4)
+  ilab_vals <- cbind(c1_vals, c2_vals, c3_vals, c4_vals)
+
+  fp <- forest(res, slab=df$study, ilab=ilab_vals, ilab.xpos=ilab_pos, ilab.pos=2,
+               xlab=m$unit, xlim=xlim_val, alim=alim_val, at=pticks, refline=0,
+               top=3, addfit=(k > 1), header=FALSE, cex=cex_val,
+               mlab=if (k > 1) "RE model (REML, safeguarded HK)" else NULL)
   
   y_head <- fp$ylim[2] - 1
   
   text(fp$textpos[1], y_head, "Study", pos=4, font=2, cex=fp$cex)
-  text(ilab_pos[1], y_head, "TEAS n", pos=2, font=2, cex=fp$cex)
-  text(ilab_pos[2], y_head, "TEAS mean (SD)", pos=2, font=2, cex=fp$cex)
-  text(ilab_pos[3], y_head, "Sham n", pos=2, font=2, cex=fp$cex)
-  text(ilab_pos[4], y_head, "Sham mean (SD)", pos=2, font=2, cex=fp$cex)
+  text(ilab_pos[1], y_head, hdr[1], pos=2, font=2, cex=fp$cex)
+  text(ilab_pos[2], y_head, hdr[2], pos=2, font=2, cex=fp$cex)
+  text(ilab_pos[3], y_head, hdr[3], pos=2, font=2, cex=fp$cex)
+  text(ilab_pos[4], y_head, hdr[4], pos=2, font=2, cex=fp$cex)
   text(fp$textpos[2], y_head, "MD [95% CI]", pos=2, font=2, cex=fp$cex)
   
   if (k > 1) {
