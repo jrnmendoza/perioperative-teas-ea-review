@@ -1,0 +1,46 @@
+{
+  "metafor_version": "5.2.1",
+  "R_version": "R version 4.5.2 (2025-10-31)",
+  "files": [
+    {
+      "file": "forest_qor_later.R",
+      "sha256": "64e33a3f4c433d901e85acbbcb7d4fea7ccbabde77000a4e7eadecc85043c117"
+    },
+    {
+      "file": "metafor_estimates.csv",
+      "sha256": "973f67e17a98267e7faf4d7ad6d95be9a43a4047ad0f6bbfb1ab5cd0148b2991"
+    },
+    {
+      "file": "metafor_comparison_later.csv",
+      "sha256": "7b9a7f95c38d8f95aed7963adeddce50f1b8d7679b8ab4021026550b62993789"
+    },
+    {
+      "file": "R_session_forest_later.txt",
+      "sha256": "e8ddd4fc673c120fac5ee25c98d8c6e1292f08b73f85ba9874cd3fa4e2c3d527"
+    },
+    {
+      "file": "forest_QOR40_SHAM_POD2.svg",
+      "sha256": "e1a0ba7066500bf68cbdb765abfde2c18f4f16936b70066d77956f8c5bc0c446"
+    },
+    {
+      "file": "forest_QOR40_USUAL_48H.svg",
+      "sha256": "0346c4a61035fd6799daa111b708bce784321946151459d48b3a4d8ab6c158b2"
+    },
+    {
+      "file": "forest_QOR15_SHAM_POD2.svg",
+      "sha256": "e1538c60eae43c2d6c353a84b54919f9f39ac13004b05a26e52af9c76c5782aa"
+    },
+    {
+      "file": "forest_QOR15_SHAM_POD3.svg",
+      "sha256": "6483733f803c6e644aad8926b0bcd108c9fcdeec47ab0f64e59fcad1bdbd55c7"
+    },
+    {
+      "file": "forest_QOR15_SHAM_POD3_WITHOUT_HOU_2023.svg",
+      "sha256": "6cf58503aac52a5e32a67eb2ce8d7863a8c72a390e79b88d9dcec5bbc225171d"
+    },
+    {
+      "file": "forest_QOR15_SHAM_POD3_WITHOUT_XING_2022.svg",
+      "sha256": "4a62de7d4603254536c71718d973d53ca7d94e6100d8c70011c642c089174197"
+    }
+  ]
+}

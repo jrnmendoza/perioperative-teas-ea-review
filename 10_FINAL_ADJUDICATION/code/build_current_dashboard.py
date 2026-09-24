@@ -33,6 +33,21 @@ if qor_path.exists():
   files.append(('QoR forest: '+name,'10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/'+name+'.svg'))
  if (D/'08_QOR_ANALYSIS/qor_models_later.csv').exists():
   files.append(('QoR later-window models','10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/qor_models_later.csv'))
+  files.append(('QoR later-window exact arm inputs', '10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/qor_inputs_later.csv'))
+  files.append(('QoR later-window RoB', '10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/qor_rob2_later.csv'))
+  files.append(('QoR later-window RoB signals', '10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/qor_rob2_signals_later.csv'))
+  files.append(('QoR later-window source locators', '10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/qor_source_locators_later.csv'))
+  files.append(('QoR later-window R script', '10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/metafor_forest_later/forest_qor_later.R'))
+  files.append(('QoR later-window R log', '10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/metafor_forest_later/forest_qor_later.log'))
+  files.append(('QoR later-window metafor estimates', '10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/metafor_forest_later/metafor_estimates.csv'))
+  files.append(('QoR later-window metafor comparison', '10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/metafor_forest_later/metafor_comparison_later.csv'))
+  import shutil
+  shutil.copyfile(D/'08_QOR_ANALYSIS/metafor_forest_later/R_session_forest_later.txt', OUT/'R_session_forest_later.txt')
+  files.append(('QoR later-window R session info', '10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/metafor_forest_later/R_session_forest_later.txt'))
+  import json
+  qor_later_models = json.loads((D/'08_QOR_ANALYSIS/qor_models_later.json').read_text())
+  for m in qor_later_models:
+      files.append(('QoR later-window forest: ' + m['model_id'], '10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/metafor_forest_later/forest_' + m['model_id'] + '.svg'))
  # Distinct download name avoids collision with the v38 verification file.
  shutil.copyfile(D/'08_QOR_ANALYSIS/verification.json',OUT/'qor_verification.json')
  downloads.append(dict(label='QoR numerical and preservation checks',href='current/qor_verification.json',source='10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/verification.json',sha256=hashlib.sha256((OUT/'qor_verification.json').read_bytes()).hexdigest()))
@@ -58,6 +73,8 @@ if qor_path.exists():
  data['qor_analysis']=json.loads(qor_path.read_text())
  if (D/'08_QOR_ANALYSIS/qor_models_later.json').exists():
   data['qor_later_models']=json.loads((D/'08_QOR_ANALYSIS/qor_models_later.json').read_text())
+  data['qor_later_rob'] = rows('10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/qor_rob2_later.csv')
+  data['qor_later_metafor_manifest'] = json.loads((D/'08_QOR_ANALYSIS/metafor_forest_later/manifest.json').read_text())
 
 e2_path=D/'09_E2_ANALYSIS/e2_model_outputs.json'
 if e2_path.exists():

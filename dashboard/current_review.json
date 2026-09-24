@@ -19391,6 +19391,96 @@
       "sha256": "a84da11ffd88e080a99f3131e4da5cd3038d31e5839c8b4ec275d04270836459"
     },
     {
+      "label": "QoR later-window exact arm inputs",
+      "href": "current/qor_inputs_later.csv",
+      "source": "10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/qor_inputs_later.csv",
+      "sha256": "d2c9d36f320185180428ab4079a3e4953fd333b314018ccea840b429b3595dff"
+    },
+    {
+      "label": "QoR later-window RoB",
+      "href": "current/qor_rob2_later.csv",
+      "source": "10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/qor_rob2_later.csv",
+      "sha256": "50afbad2fe6233cb761edd47dcf39f0e1c350c61cd3b12b87be8a28cb51f6993"
+    },
+    {
+      "label": "QoR later-window RoB signals",
+      "href": "current/qor_rob2_signals_later.csv",
+      "source": "10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/qor_rob2_signals_later.csv",
+      "sha256": "cc5ed7bcfd349bf761eff4ea9913416293fdd3c7beb0c4634bb60ee6ace7a8bb"
+    },
+    {
+      "label": "QoR later-window source locators",
+      "href": "current/qor_source_locators_later.csv",
+      "source": "10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/qor_source_locators_later.csv",
+      "sha256": "05a369926111dbeba6fe821b91ff9fadefd2e7f02d861c7e986ee1087f614e16"
+    },
+    {
+      "label": "QoR later-window R script",
+      "href": "current/forest_qor_later.R",
+      "source": "10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/metafor_forest_later/forest_qor_later.R",
+      "sha256": "64e33a3f4c433d901e85acbbcb7d4fea7ccbabde77000a4e7eadecc85043c117"
+    },
+    {
+      "label": "QoR later-window R log",
+      "href": "current/forest_qor_later.log",
+      "source": "10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/metafor_forest_later/forest_qor_later.log",
+      "sha256": "7ef4b2b222f403ebe80c7182de5af91c017b735e217ee44f01f6d3c10b84bb35"
+    },
+    {
+      "label": "QoR later-window metafor estimates",
+      "href": "current/metafor_estimates.csv",
+      "source": "10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/metafor_forest_later/metafor_estimates.csv",
+      "sha256": "973f67e17a98267e7faf4d7ad6d95be9a43a4047ad0f6bbfb1ab5cd0148b2991"
+    },
+    {
+      "label": "QoR later-window metafor comparison",
+      "href": "current/metafor_comparison_later.csv",
+      "source": "10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/metafor_forest_later/metafor_comparison_later.csv",
+      "sha256": "7b9a7f95c38d8f95aed7963adeddce50f1b8d7679b8ab4021026550b62993789"
+    },
+    {
+      "label": "QoR later-window R session info",
+      "href": "current/R_session_forest_later.txt",
+      "source": "10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/metafor_forest_later/R_session_forest_later.txt",
+      "sha256": "e8ddd4fc673c120fac5ee25c98d8c6e1292f08b73f85ba9874cd3fa4e2c3d527"
+    },
+    {
+      "label": "QoR later-window forest: QOR40_SHAM_POD2",
+      "href": "current/forest_QOR40_SHAM_POD2.svg",
+      "source": "10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/metafor_forest_later/forest_QOR40_SHAM_POD2.svg",
+      "sha256": "e1a0ba7066500bf68cbdb765abfde2c18f4f16936b70066d77956f8c5bc0c446"
+    },
+    {
+      "label": "QoR later-window forest: QOR40_USUAL_48H",
+      "href": "current/forest_QOR40_USUAL_48H.svg",
+      "source": "10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/metafor_forest_later/forest_QOR40_USUAL_48H.svg",
+      "sha256": "0346c4a61035fd6799daa111b708bce784321946151459d48b3a4d8ab6c158b2"
+    },
+    {
+      "label": "QoR later-window forest: QOR15_SHAM_POD2",
+      "href": "current/forest_QOR15_SHAM_POD2.svg",
+      "source": "10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/metafor_forest_later/forest_QOR15_SHAM_POD2.svg",
+      "sha256": "e1538c60eae43c2d6c353a84b54919f9f39ac13004b05a26e52af9c76c5782aa"
+    },
+    {
+      "label": "QoR later-window forest: QOR15_SHAM_POD3",
+      "href": "current/forest_QOR15_SHAM_POD3.svg",
+      "source": "10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/metafor_forest_later/forest_QOR15_SHAM_POD3.svg",
+      "sha256": "6483733f803c6e644aad8926b0bcd108c9fcdeec47ab0f64e59fcad1bdbd55c7"
+    },
+    {
+      "label": "QoR later-window forest: QOR15_SHAM_POD3_WITHOUT_HOU_2023",
+      "href": "current/forest_QOR15_SHAM_POD3_WITHOUT_HOU_2023.svg",
+      "source": "10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/metafor_forest_later/forest_QOR15_SHAM_POD3_WITHOUT_HOU_2023.svg",
+      "sha256": "6cf58503aac52a5e32a67eb2ce8d7863a8c72a390e79b88d9dcec5bbc225171d"
+    },
+    {
+      "label": "QoR later-window forest: QOR15_SHAM_POD3_WITHOUT_XING_2022",
+      "href": "current/forest_QOR15_SHAM_POD3_WITHOUT_XING_2022.svg",
+      "source": "10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/metafor_forest_later/forest_QOR15_SHAM_POD3_WITHOUT_XING_2022.svg",
+      "sha256": "4a62de7d4603254536c71718d973d53ca7d94e6100d8c70011c642c089174197"
+    },
+    {
       "label": "E2 sensitivity estimates",
       "href": "current/e2_model_outputs.csv",
       "source": "10_FINAL_ADJUDICATION/09_E2_ANALYSIS/e2_model_outputs.csv",
@@ -22666,6 +22756,194 @@
       ]
     }
   ],
+  "qor_later_rob": [
+    {
+      "assessment_id": "QORLATER-V33-OD-0009-LATER",
+      "result_id": "V33-OD-0009-LATER",
+      "study": "Yu 2020",
+      "outcome": "Global QoR-40",
+      "window": "POD2 (~48 h)",
+      "comparison": "Preoperative TEAS vs no-current electrodes",
+      "population": "30/30",
+      "effect_of_interest": "Assignment to intervention",
+      "reviewer": "AI assistant under user delegation",
+      "review_date": "2026-09-20",
+      "source_pdf": "TEAS EA Verification/Source PDFs/s13063-019-3892-4.pdf",
+      "source_sha256": "12fbd503870f7f12216ff5f2544b159c66fecd557d4838bcabceec1aa151fb69",
+      "source_text": "10_FINAL_ADJUDICATION/01_SOURCE_EVIDENCE/Yu_2020.txt",
+      "result_location": "Abstract, PDF p1; Figure 4, p5",
+      "d1": "Some concerns",
+      "d1_rationale": "Computer sequence and nurse-mediated assignment are reported; a tamper-resistant concealment mechanism is not described.",
+      "d2": "Low",
+      "d2_rationale": "Standardized care, masked clinical personnel and all 60 participants analyzed as assigned. No trial-context departures affecting recovery are reported; awareness alone is not such a departure.",
+      "d3": "Low",
+      "d3_rationale": "Complete datasets are explicitly reported for all 60 randomized participants; 30 per arm.",
+      "d4": "Some concerns",
+      "d4_rationale": "Patient-reported QoR-40 with 12-15 mA preanesthetic twitching versus no current. Identical electrodes and a masked interviewer do not demonstrate patient masking; influence on reporting remains possible rather than proven.",
+      "d5": "Some concerns",
+      "d5_rationale": "POD1/POD2 global QoR named in methods; no verified prospective analysis plan. Published repeated-measures/adjusted P values are not the unadjusted endpoint contrast used here, and are not substituted for its calculated uncertainty.",
+      "overall": "Some concerns",
+      "overall_rationale": "Residual uncertainty requires Some concerns. Multiple concerns were considered jointly, not mechanically counted; available evidence does not establish likely material bias warranting High."
+    },
+    {
+      "assessment_id": "QORLATER-V33-OD-0381-LATER",
+      "result_id": "V33-OD-0381-LATER",
+      "study": "Liang 2021",
+      "outcome": "Global QoR-40",
+      "window": "48 h (T12)",
+      "comparison": "TEAS vs no stimulation; dummy electrodes not documented",
+      "population": "35/35",
+      "effect_of_interest": "Assignment to intervention",
+      "reviewer": "AI assistant under user delegation",
+      "review_date": "2026-09-20",
+      "source_pdf": "retrieved_pdfs/014_liang_2021.pdf",
+      "source_sha256": "cf2cc8a627b115ade55a85190c39352aa1a8e63ff1974e4a33dc7b65f961a5a3",
+      "source_text": "10_FINAL_ADJUDICATION/01_SOURCE_EVIDENCE/Liang_2021.txt",
+      "result_location": "Table 4, PDF p6",
+      "d1": "Low",
+      "d1_rationale": "Independent computer-generated sequence and identical sealed envelopes support probably concealed allocation. No imbalance pattern suggesting failure was identified.",
+      "d2": "Some concerns",
+      "d2_rationale": "Anesthetist and follow-up investigator are masked. Dummy electrodes and patient masking are not established, and five randomized patients are removed. No documented material differential cointervention, but trial-context deviation information is incomplete.",
+      "d3": "Some concerns",
+      "d3_rationale": "Flowchart distinguishes 80 screened from 75 randomized (37/38), with 35/35 analyzed. Two procedural/blood-sampling losses and three changed surgeries do not establish ignorable missing QoR outcomes.",
+      "d4": "Some concerns",
+      "d4_rationale": "Validated patient-reported QoR-40. No-current usual-care description does not document a credible sham; patient awareness at assessment is unclear. Interviewer masking cannot resolve this, so Some concerns rather than assuming either successful masking or definite influence.",
+      "d5": "Some concerns",
+      "d5_rationale": "24/48-hour total QoR is described, but no independently verified prospective exact-result analysis plan. No direct evidence of result selection.",
+      "overall": "Some concerns",
+      "overall_rationale": "Residual uncertainty requires Some concerns. Multiple concerns were considered jointly, not mechanically counted; available evidence does not establish likely material bias warranting High."
+    },
+    {
+      "assessment_id": "QORLATER-QOR48-HOU2023",
+      "result_id": "QOR48-HOU2023",
+      "study": "Hou 2023",
+      "outcome": "Global QoR-15",
+      "window": "POD3 (D3)",
+      "comparison": "TEAS vs no-current electrodes; TAP block in both arms",
+      "population": "36/36",
+      "effect_of_interest": "Assignment to intervention",
+      "reviewer": "AI assistant under user delegation",
+      "review_date": "2026-09-20",
+      "source_pdf": "retrieved_pdfs/007_hou_2023.pdf",
+      "source_sha256": "e942cff2967fe015df636ad7e2c2070c665cdc8ac23b7dafab141d6d16cddbe6",
+      "source_text": "10_FINAL_ADJUDICATION/01_SOURCE_EVIDENCE/Hou_2023.txt",
+      "result_location": "Table 4, PDF p7",
+      "d1": "Low",
+      "d1_rationale": "Independent SPSS sequence, sealed envelopes and assignment revealed only at first intervention support probably concealed allocation.",
+      "d2": "Low",
+      "d2_rationale": "Common anesthesia, TAP block and analgesia; practitioner unmasked but otherwise masking reported and no material trial-context departures documented. One withdrawal per arm, with nearly all assigned participants assessed.",
+      "d3": "Low",
+      "d3_rationale": "72/74 analyzed (36/37 each). Two personal-reason withdrawals, no recovery-related pattern documented; nearly all data available. This is a contextual judgment, not a universal attrition cutoff.",
+      "d4": "Some concerns",
+      "d4_rationale": "QoR-15 is self-reported. Acupuncture-naive patients were told stimulation might not be felt, supporting masking, but vibration at 6-15 mA over three sessions versus a disabled device could still reveal allocation. Reporting influence remains uncertain.",
+      "d5": "Some concerns",
+      "d5_rationale": "Registration is reported as preceding recruitment and QoR is named in published methods, but prospective exact-result/timepoint/analysis specification has not been independently verified.",
+      "overall": "Some concerns",
+      "overall_rationale": "Residual uncertainty requires Some concerns. Multiple concerns were considered jointly, not mechanically counted; available evidence does not establish likely material bias warranting High."
+    },
+    {
+      "assessment_id": "QORLATER-QOR48-XING2022",
+      "result_id": "QOR48-XING2022",
+      "study": "Xing 2022",
+      "outcome": "Global QoR-15",
+      "window": "POD3 (~72 h)",
+      "comparison": "NTG vs NG: TEAS+TAP block vs sham+TAP block; G arm excluded",
+      "population": "29/29",
+      "effect_of_interest": "Assignment to intervention",
+      "reviewer": "AI assistant under user delegation",
+      "review_date": "2026-09-20",
+      "source_pdf": "TEAS EA Verification/Source PDFs/s40122-022-00429-2.pdf",
+      "source_sha256": "ef7826ca61ea657ea56689464a863c5340af1703488c259420346131727062c3",
+      "source_text": "10_FINAL_ADJUDICATION/01_SOURCE_EVIDENCE/Xing_2022.txt",
+      "result_location": "Results, PDF p5; Figure 3, p7",
+      "d1": "Low",
+      "d1_rationale": "Computer sequence and sealed code delivered to an independent nurse. Printed 1:1:1:1 ratio conflicts with the three-arm trial but is treated as a reporting error, not proof of nonrandom allocation.",
+      "d2": "Low",
+      "d2_rationale": "NTG versus NG preserves TAP block in both arms; G is not used. Masked clinical team and no documented departures affecting assignment effect.",
+      "d3": "Some concerns",
+      "d3_rationale": "29/30 per relevant arm analyzed after one loss to follow-up each. Exact reasons and outcome availability at POD1 versus later follow-up are unspecified; possible outcome-related missingness cannot be excluded.",
+      "d4": "Some concerns",
+      "d4_rationale": "Self-reported QoR. Authors explicitly acknowledge possible unblinding because TEAS began before anesthesia; hiding the stimulator and masking data collectors do not establish patient masking. Influence is possible, not established as likely.",
+      "d5": "Some concerns",
+      "d5_rationale": "Published primary QoR at POD1/3/7, without independent verification of a prospective exact-result analysis plan. This review fixes POD1 rather than selecting the largest later contrast.",
+      "overall": "Some concerns",
+      "overall_rationale": "Residual uncertainty requires Some concerns. Multiple concerns were considered jointly, not mechanically counted; available evidence does not establish likely material bias warranting High."
+    },
+    {
+      "assessment_id": "QORLATER-V33-OD-0025-LATER",
+      "result_id": "V33-OD-0025-LATER",
+      "study": "Zhou 2025",
+      "outcome": "Global QoR-15",
+      "window": "POD2 (~48 h)",
+      "comparison": "PACU TEAS vs no-current electrodes",
+      "population": "48/49",
+      "effect_of_interest": "Assignment to intervention",
+      "reviewer": "AI assistant under user delegation",
+      "review_date": "2026-09-20",
+      "source_pdf": "TEAS EA Verification/Source PDFs/105119.pdf",
+      "source_sha256": "d9bf76bd7e244dd4513f686ee9be168122d8db4ced699a7f881f93237b3cb52b",
+      "source_text": "10_FINAL_ADJUDICATION/01_SOURCE_EVIDENCE/Zhou_2025.txt",
+      "result_location": "Table 2, PDF p7",
+      "d1": "Low",
+      "d1_rationale": "Computer sequence, sequential opaque sealed envelopes and an independent assistant uninvolved in recruitment/outcomes.",
+      "d2": "Low",
+      "d2_rationale": "Scripted neutral interaction, common anesthesia/analgesia, no documented trial-context departures. 97/100 assigned participants analyzed; no substantial assignment-analysis error established.",
+      "d3": "Low",
+      "d3_rationale": "Two TEAS and one sham withdrawals (48/50 and 49/50 assessed). Nearly all data and no documented recovery-related pattern. No imputation is claimed.",
+      "d4": "Some concerns",
+      "d4_rationale": "Self-reported QoR after PACU active current versus no current. Scripted interaction supports masking but preoperative current calibration and sensory differences could reveal assignment; influence on reporting remains uncertain.",
+      "d5": "Some concerns",
+      "d5_rationale": "POD1 global QoR is the sample-size target and all three days are reported, but prospective exact-result analysis specification is unverified. The contradictory POD3 P value is a separate held timepoint, not a reason to replace the POD1 data.",
+      "overall": "Some concerns",
+      "overall_rationale": "Residual uncertainty requires Some concerns. Multiple concerns were considered jointly, not mechanically counted; available evidence does not establish likely material bias warranting High."
+    }
+  ],
+  "qor_later_metafor_manifest": {
+    "metafor_version": "5.2.1",
+    "R_version": "R version 4.5.2 (2025-10-31)",
+    "files": [
+      {
+        "file": "forest_qor_later.R",
+        "sha256": "64e33a3f4c433d901e85acbbcb7d4fea7ccbabde77000a4e7eadecc85043c117"
+      },
+      {
+        "file": "metafor_estimates.csv",
+        "sha256": "973f67e17a98267e7faf4d7ad6d95be9a43a4047ad0f6bbfb1ab5cd0148b2991"
+      },
+      {
+        "file": "metafor_comparison_later.csv",
+        "sha256": "7b9a7f95c38d8f95aed7963adeddce50f1b8d7679b8ab4021026550b62993789"
+      },
+      {
+        "file": "R_session_forest_later.txt",
+        "sha256": "e8ddd4fc673c120fac5ee25c98d8c6e1292f08b73f85ba9874cd3fa4e2c3d527"
+      },
+      {
+        "file": "forest_QOR40_SHAM_POD2.svg",
+        "sha256": "e1a0ba7066500bf68cbdb765abfde2c18f4f16936b70066d77956f8c5bc0c446"
+      },
+      {
+        "file": "forest_QOR40_USUAL_48H.svg",
+        "sha256": "0346c4a61035fd6799daa111b708bce784321946151459d48b3a4d8ab6c158b2"
+      },
+      {
+        "file": "forest_QOR15_SHAM_POD2.svg",
+        "sha256": "e1538c60eae43c2d6c353a84b54919f9f39ac13004b05a26e52af9c76c5782aa"
+      },
+      {
+        "file": "forest_QOR15_SHAM_POD3.svg",
+        "sha256": "6483733f803c6e644aad8926b0bcd108c9fcdeec47ab0f64e59fcad1bdbd55c7"
+      },
+      {
+        "file": "forest_QOR15_SHAM_POD3_WITHOUT_HOU_2023.svg",
+        "sha256": "6cf58503aac52a5e32a67eb2ce8d7863a8c72a390e79b88d9dcec5bbc225171d"
+      },
+      {
+        "file": "forest_QOR15_SHAM_POD3_WITHOUT_XING_2022.svg",
+        "sha256": "4a62de7d4603254536c71718d973d53ca7d94e6100d8c70011c642c089174197"
+      }
+    ]
+  },
   "e2_analysis": {
     "validation": [
       {
