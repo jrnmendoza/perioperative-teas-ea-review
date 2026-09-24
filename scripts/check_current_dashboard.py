@@ -24,6 +24,7 @@ def checks(d):
       'QoR analytical addendum identity':d.get('qor_analysis')==json.load(open(D/'08_QOR_ANALYSIS/qor_summary.json')) if (D/'08_QOR_ANALYSIS/qor_summary.json').exists() else True,
       'E2 sensitivity identity':d.get('e2_analysis')==json.load(open(D/'09_E2_ANALYSIS/e2_model_outputs.json')) if (D/'09_E2_ANALYSIS/e2_model_outputs.json').exists() else True,
       'QoR later-window identity':d.get('qor_later_models')==json.load(open(D/'08_QOR_ANALYSIS/qor_models_later.json')) if (D/'08_QOR_ANALYSIS/qor_models_later.json').exists() else True,
+      'E2 methods integrity': d.get('e2_methods', {}).get('Timestamp note', '') == re.search(r'(\*\*Timestamp note[^\n]+(?:\n[^\n]+)+)', (D/'02_DECISIONS/v38/AMENDED_PRIMARY_ESTIMAND_E2.md').read_text(encoding='utf-8')).group(1).strip() if 'e2_methods' in d else True,
     }
 def main(site=None):
     site=pathlib.Path(site or ROOT/'dashboard');data=json.load(open(site/'current_review.json'));c=checks(data)
@@ -56,8 +57,32 @@ def main(site=None):
             assert label_key in e2_ids, f'e2_labels key {label_key} not in e2_analysis.models'
     
     downloads_hrefs = [item['href'].split('/')[-1] for item in data['downloads']]
-    for required_file in ['e2_model_outputs.csv', 'E2_RESULTS.md', 'AMENDED_PRIMARY_ESTIMAND_E2.md', 'qor_models_later.csv']:
+    for required_file in ['e2_model_outputs.csv', 'E2_RESULTS.md', 'AMENDED_PRIMARY_ESTIMAND_E2.md', 'qor_models_later.csv', 'ADDITIONAL_FILE_12.md', 'additional_file_12_A1_primary_construct.csv', 'additional_file_12_A2_other_windows.csv', 'additional_file_12_tierB_no_candidate_result.csv']:
         assert required_file in downloads_hrefs, f'Missing from downloads manifest: {required_file}'
+    assert len(downloads_hrefs) == len(set(downloads_hrefs)), 'Filename collision in downloads manifest'
+    
+    report_text = (ROOT/'FINAL_CURRENT_STATE_REPORT.md').read_text(encoding='utf-8')
+    section_match = re.search(r'\*\*Not completed — outstanding\*\*(.*?)(?=\n\*\*|\n## |\Z)', report_text, re.DOTALL)
+    expected_outstanding = re.findall(r'- \*\*(.*?)\*\*', section_match.group(1))
+    assert data.get('outstanding') == expected_outstanding and len(expected_outstanding) > 0, "outstanding data mismatch or empty"
+    
+    e2_methods_text = (D/'02_DECISIONS/v38/AMENDED_PRIMARY_ESTIMAND_E2.md').read_text(encoding='utf-8')
+    def get_sec(txt, h, st=None):
+        pat = r'#+\s+' + re.escape(h) + r'\s*\n(.*?)(?=\n#|\Z)'
+        if st: pat = r'#+\s+' + re.escape(h) + r'\s*\n(.*?)(?=\n' + re.escape(st) + r'|\n#|\Z)'
+        return re.search(pat, txt, re.DOTALL).group(1).strip()
+    
+    expected_e2 = {
+        'Timestamp note': re.search(r'(\*\*Timestamp note[^\n]+(?:\n[^\n]+)+)', e2_methods_text).group(1).strip(),
+        'Why this document exists, stated plainly': get_sec(e2_methods_text, 'Why this document exists, stated plainly'),
+        'E1 — registered primary (retained, reported in full)': get_sec(e2_methods_text, 'E1 — registered primary (retained, reported in full)'),
+        'E2 — amended primary (post hoc)': get_sec(e2_methods_text, 'E2 — amended primary (post hoc)', st='### Admission rules'),
+        'Prespecified sensitivity analyses for E2': get_sec(e2_methods_text, 'Prespecified sensitivity analyses for E2'),
+        'Amendment E2.1 — 23 September 2026 (after E2 was applied to Tier B1)': get_sec(e2_methods_text, 'Amendment E2.1 — 23 September 2026 (after E2 was applied to Tier B1)'),
+        'Decision after the E2 run — 23 September 2026: E1 retained as primary': get_sec(e2_methods_text, 'Decision after the E2 run — 23 September 2026: E1 retained as primary')
+    }
+    assert data.get('e2_methods') == expected_e2, "e2_methods data mismatch"
+
     
     
     # v38 download checks
@@ -100,6 +125,7 @@ def main(site=None):
     assert not root_files, f"Scratch files found in repo root: {root_files}"
 
     ui_js = (site/'current_review_ui.js').read_text()
+    assert 'Review complete' not in ui_js, '"Review complete" found in current_review_ui.js without qualifier'
     for forbidden in ['fetch(','XMLHttpRequest','localStorage.setItem']:
         assert forbidden not in ui_js, 'Unexpected external/hidden state operation'
     assert not re.search(r'k=\d+', ui_js), 'Literal k=<digits> found in current_review_ui.js'
@@ -118,6 +144,7 @@ def main(site=None):
         mutations.append(('E2 sensitivity identity',lambda d:d['e2_analysis']['models'][0].__setitem__('effect',999)))
     if 'qor_later_models' in data:
         mutations.append(('QoR later-window identity',lambda d:d['qor_later_models'][0].__setitem__('effect',999)))
+    mutations.append(('E2 methods integrity', lambda d: d['e2_methods'].update({'Timestamp note': 'Altered text'})))
     for key,mutate in mutations:
         x=copy.deepcopy(data);mutate(x);assert not checks(x)[key],f'Mutation escaped: {key}'
     

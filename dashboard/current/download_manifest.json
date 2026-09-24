@@ -256,5 +256,29 @@
     "href": "current/AMENDED_PRIMARY_ESTIMAND_E2.md",
     "source": "10_FINAL_ADJUDICATION/02_DECISIONS/v38/AMENDED_PRIMARY_ESTIMAND_E2.md",
     "sha256": "1ea80e53568f1c62b630e3ee28c623f147420057d9994b39fe34dd5f5fdae8c2"
+  },
+  {
+    "label": "Additional file 12: trial-by-trial accounting for the primary opioid outcome",
+    "href": "current/ADDITIONAL_FILE_12.md",
+    "source": "manuscript/ADDITIONAL_FILE_12.md",
+    "sha256": "2f9a5429127a1199256af57a6b0ab0db1779c8c53572cc95622a0cff4cd53e30"
+  },
+  {
+    "label": "Additional file 12 A1 primary construct",
+    "href": "current/additional_file_12_A1_primary_construct.csv",
+    "source": "manuscript/additional_files/additional_file_12_A1_primary_construct.csv",
+    "sha256": "acd32238e4c38677e2ebd8660a8a53f07b42a6087ca1a4e54aa4a0b8dd177d2e"
+  },
+  {
+    "label": "Additional file 12 A2 other windows",
+    "href": "current/additional_file_12_A2_other_windows.csv",
+    "source": "manuscript/additional_files/additional_file_12_A2_other_windows.csv",
+    "sha256": "f3a65c5d8df03fc5227e09e6a177d9ca22c78c0300b8eac5ba70069a4e4e9163"
+  },
+  {
+    "label": "Additional file 12 tierB no candidate result",
+    "href": "current/additional_file_12_tierB_no_candidate_result.csv",
+    "source": "manuscript/additional_files/additional_file_12_tierB_no_candidate_result.csv",
+    "sha256": "6c1135e0ca2dc3059fb6ceb6d2ff7d599ad9ca83dceb36088506deb01c5d29c5"
   }
 ]
