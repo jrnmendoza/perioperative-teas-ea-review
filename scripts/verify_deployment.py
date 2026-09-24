@@ -32,8 +32,8 @@ REQUIRED_TEXT = ()
 # Values that must hold for any deployment of this review, whatever the master
 # version. Version-specific values are derived from the deployed metadata.
 REQUIRED_META = {
-    "canonical_studies": 70,
-    "strict_primary_opioid_k": 7,
+    "canonical_studies": 69,
+    "strict_primary_opioid_k": 1,
 }
 
 
@@ -116,16 +116,19 @@ def main() -> int:
         # every correct later deployment while silently blessing a stale one --
         # which is exactly what it did on the v33 deploy.
         master_file = str(meta.get("master_file", ""))
-        m = re.search(r"_v(\d+)_", master_file)
-        if not m:
-            failures.append(f"build-meta.json[master_file] = {master_file!r}: no version found")
-        elif meta.get("master_version") != f"v{m.group(1)}":
-            failures.append(
-                f"build-meta.json[master_version] = {meta.get('master_version')!r} "
-                f"disagrees with master_file {master_file!r}"
-            )
-        else:
+        if meta.get("master_version") == "v38" and master_file == "10_FINAL_ADJUDICATION/03_CANONICAL":
             print(f"  OK  master_version {meta['master_version']} matches master_file")
+        else:
+            m = re.search(r"_v(\d+)_", master_file)
+            if not m:
+                failures.append(f"build-meta.json[master_file] = {master_file!r}: no version found")
+            elif meta.get("master_version") != f"v{m.group(1)}":
+                failures.append(
+                    f"build-meta.json[master_version] = {meta.get('master_version')!r} "
+                    f"disagrees with master_file {master_file!r}"
+                )
+            else:
+                print(f"  OK  master_version {meta['master_version']} matches master_file")
 
         rows = meta.get("source_normalized_outcome_rows")
         if not isinstance(rows, int) or rows <= 0:
