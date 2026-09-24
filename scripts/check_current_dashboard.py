@@ -91,9 +91,13 @@ def main(site=None):
     missing_assessments = assess_ids - rob_linkages
     assert not missing_assessments, f"Missing assessments in linkage: {missing_assessments}"
 
-    import glob
-    scratch_files = glob.glob(str(site.parent / 'fix_*.py')) + glob.glob(str(site.parent / 'test_ui.py'))
-    assert not scratch_files, f"Scratch files found in repo root: {scratch_files}"
+    # Look in the repository, not next to the site: a build can be written anywhere.
+    # Tracked files are what gets published; fall back to the working tree without git.
+    try:
+        root_files=subprocess.run(['git','ls-files','--','fix_*.py','test_ui.py'],cwd=ROOT,capture_output=True,text=True,check=True).stdout.split()
+    except (OSError,subprocess.CalledProcessError):
+        root_files=[p.name for pattern in ('fix_*.py','test_ui.py') for p in ROOT.glob(pattern)]
+    assert not root_files, f"Scratch files found in repo root: {root_files}"
 
     ui_js = (site/'current_review_ui.js').read_text()
     for forbidden in ['fetch(','XMLHttpRequest','localStorage.setItem']:
