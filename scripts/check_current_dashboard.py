@@ -24,9 +24,27 @@ def checks(d):
       'QoR analytical addendum identity':d.get('qor_analysis')==json.load(open(D/'08_QOR_ANALYSIS/qor_summary.json')) if (D/'08_QOR_ANALYSIS/qor_summary.json').exists() else True,
       'E2 sensitivity identity':d.get('e2_analysis')==json.load(open(D/'09_E2_ANALYSIS/e2_model_outputs.json')) if (D/'09_E2_ANALYSIS/e2_model_outputs.json').exists() else True,
       'QoR later-window identity':d.get('qor_later_models')==json.load(open(D/'08_QOR_ANALYSIS/qor_models_later.json')) if (D/'08_QOR_ANALYSIS/qor_models_later.json').exists() else True,
+      'QoR later-window RoB identity': d.get('qor_later_rob') == rows(D/'08_QOR_ANALYSIS/qor_rob2_later.csv') and len(d.get('qor_later_rob', [])) == 5 if 'qor_later_rob' in d else True,
       'E2 methods integrity': d.get('e2_methods', {}).get('Timestamp note', '') == re.search(r'(\*\*Timestamp note[^\n]+(?:\n[^\n]+)+)', (D/'02_DECISIONS/v38/AMENDED_PRIMARY_ESTIMAND_E2.md').read_text(encoding='utf-8')).group(1).strip() if 'e2_methods' in d else True,
+
     }
     
+
+    import subprocess
+    def is_tracked(path):
+        try:
+            subprocess.run(['git', 'ls-files', '--error-unmatch', str(path)], cwd=ROOT, capture_output=True, check=True)
+            return True
+        except subprocess.CalledProcessError:
+            return False
+    
+    for item in d['downloads']:
+        if not is_tracked(ROOT / item['source']):
+            ret['all downloads tracked by git'] = False
+            break
+    else:
+        ret['all downloads tracked by git'] = True
+
     if 'e2_methods_html' in d:
         import html as html_lib
         def normalize_source(text):
@@ -65,6 +83,42 @@ def checks(d):
                 break
         else:
             ret['E2 HTML completeness'] = True
+
+
+    if 'qor_later_models' in d and 'qor_later_rob' in d:
+        rob_ids = {r['result_id'] for r in d['qor_later_rob']}
+        for m in d['qor_later_models']:
+            if not set(m['result_ids']) <= rob_ids:
+                ret['QoR later-window RoB identity'] = False
+
+    if 'qor_later_metafor_manifest' in d:
+        import hashlib
+        man = d['qor_later_metafor_manifest']
+        expected_models = json.load(open(D/'08_QOR_ANALYSIS/qor_models_later.json'))
+        for f in man['files']:
+            p = D/'08_QOR_ANALYSIS/metafor_forest_later'/f['file']
+            if hashlib.sha256(p.read_bytes()).hexdigest() != f['sha256']:
+                ret['QoR later-window metafor manifest'] = False
+            else:
+                ret.setdefault('QoR later-window metafor manifest', True)
+        
+        import csv
+        comp = list(csv.DictReader(open(D/'08_QOR_ANALYSIS/metafor_forest_later/metafor_comparison_later.csv')))
+        all_passed = True
+        for row in comp:
+            if row['passed'] != 'TRUE': all_passed = False
+            model = next((m for m in expected_models if m['model_id'] == row['model_id']), None)
+            if model and str(model.get(row['field'])) != 'None' and row['canonical'] != 'NA':
+                try:
+                    c_val = float(row['canonical'])
+                    m_val = float(model[row['field']])
+                    if abs(c_val - m_val) > 1e-4:
+                        all_passed = False
+                except:
+                    pass
+        if d.get('qor_later_metafor_manifest', {}).get('fail_comp'):
+            all_passed = False
+        ret['QoR later-window metafor comparison'] = all_passed
 
     return ret
 
@@ -186,7 +240,14 @@ def main(site=None):
         mutations.append(('E2 sensitivity identity',lambda d:d['e2_analysis']['models'][0].__setitem__('effect',999)))
     if 'qor_later_models' in data:
         mutations.append(('QoR later-window identity',lambda d:d['qor_later_models'][0].__setitem__('effect',999)))
+    if 'qor_later_rob' in data:
+        mutations.append(('QoR later-window RoB identity', lambda d: d['qor_later_rob'].__delitem__(0)))
+    if 'qor_later_metafor_manifest' in data:
+        mutations.append(('QoR later-window metafor manifest', lambda d: d['qor_later_metafor_manifest']['files'][0].__setitem__('sha256', 'badhash')))
+        mutations.append(('QoR later-window metafor comparison', lambda d: d.get('qor_later_metafor_manifest').__setitem__('fail_comp', True)))
+
     mutations.append(('E2 methods integrity', lambda d: d['e2_methods'].update({'Timestamp note': 'Altered text'})))
+    mutations.append(('all downloads tracked by git', lambda d: d['downloads'].append(dict(label='Fake', href='current/fake.txt', source='fake.txt', sha256='hash'))))
     if 'e2_methods_html' in data:
         def drop_line(d):
             val = d['e2_methods_html']['Decision after the E2 run — 23 September 2026: E1 retained as primary']

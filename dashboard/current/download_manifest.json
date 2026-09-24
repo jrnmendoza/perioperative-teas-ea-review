@@ -240,6 +240,96 @@
     "sha256": "a84da11ffd88e080a99f3131e4da5cd3038d31e5839c8b4ec275d04270836459"
   },
   {
+    "label": "QoR later-window exact arm inputs",
+    "href": "current/qor_inputs_later.csv",
+    "source": "10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/qor_inputs_later.csv",
+    "sha256": "d2c9d36f320185180428ab4079a3e4953fd333b314018ccea840b429b3595dff"
+  },
+  {
+    "label": "QoR later-window RoB",
+    "href": "current/qor_rob2_later.csv",
+    "source": "10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/qor_rob2_later.csv",
+    "sha256": "50afbad2fe6233cb761edd47dcf39f0e1c350c61cd3b12b87be8a28cb51f6993"
+  },
+  {
+    "label": "QoR later-window RoB signals",
+    "href": "current/qor_rob2_signals_later.csv",
+    "source": "10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/qor_rob2_signals_later.csv",
+    "sha256": "cc5ed7bcfd349bf761eff4ea9913416293fdd3c7beb0c4634bb60ee6ace7a8bb"
+  },
+  {
+    "label": "QoR later-window source locators",
+    "href": "current/qor_source_locators_later.csv",
+    "source": "10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/qor_source_locators_later.csv",
+    "sha256": "05a369926111dbeba6fe821b91ff9fadefd2e7f02d861c7e986ee1087f614e16"
+  },
+  {
+    "label": "QoR later-window R script",
+    "href": "current/forest_qor_later.R",
+    "source": "10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/metafor_forest_later/forest_qor_later.R",
+    "sha256": "9c4dfa7a9821da73e08132b703aeecc19481dfd457cfb006f7062f38d9af80bd"
+  },
+  {
+    "label": "QoR later-window R log",
+    "href": "current/forest_qor_later_run.txt",
+    "source": "10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/metafor_forest_later/forest_qor_later_run.txt",
+    "sha256": "bf5f624848a21c124ec600ca5a86a0375c75ad465b78b598d28fb1837c9a8f9d"
+  },
+  {
+    "label": "QoR later-window metafor estimates",
+    "href": "current/metafor_estimates.csv",
+    "source": "10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/metafor_forest_later/metafor_estimates.csv",
+    "sha256": "973f67e17a98267e7faf4d7ad6d95be9a43a4047ad0f6bbfb1ab5cd0148b2991"
+  },
+  {
+    "label": "QoR later-window metafor comparison",
+    "href": "current/metafor_comparison_later.csv",
+    "source": "10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/metafor_forest_later/metafor_comparison_later.csv",
+    "sha256": "7b9a7f95c38d8f95aed7963adeddce50f1b8d7679b8ab4021026550b62993789"
+  },
+  {
+    "label": "QoR later-window R session info",
+    "href": "current/R_session_forest_later.txt",
+    "source": "10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/metafor_forest_later/R_session_forest_later.txt",
+    "sha256": "e8ddd4fc673c120fac5ee25c98d8c6e1292f08b73f85ba9874cd3fa4e2c3d527"
+  },
+  {
+    "label": "QoR later-window forest: QOR40_SHAM_POD2",
+    "href": "current/forest_QOR40_SHAM_POD2.svg",
+    "source": "10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/metafor_forest_later/forest_QOR40_SHAM_POD2.svg",
+    "sha256": "34cfbc8beeb8587b91273399e457ee8df0692ea82f185c2e898030f188bd9c3e"
+  },
+  {
+    "label": "QoR later-window forest: QOR40_USUAL_48H",
+    "href": "current/forest_QOR40_USUAL_48H.svg",
+    "source": "10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/metafor_forest_later/forest_QOR40_USUAL_48H.svg",
+    "sha256": "17839178541ea1387f52b2b1aa23ab05c407246dc632c6a54e912d4d4e462f6f"
+  },
+  {
+    "label": "QoR later-window forest: QOR15_SHAM_POD2",
+    "href": "current/forest_QOR15_SHAM_POD2.svg",
+    "source": "10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/metafor_forest_later/forest_QOR15_SHAM_POD2.svg",
+    "sha256": "515e3762ebc7ac031da209aea416ffadc3227a0ac823202d599f44eeba8e9b50"
+  },
+  {
+    "label": "QoR later-window forest: QOR15_SHAM_POD3",
+    "href": "current/forest_QOR15_SHAM_POD3.svg",
+    "source": "10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/metafor_forest_later/forest_QOR15_SHAM_POD3.svg",
+    "sha256": "ce26fc99539479ee8771c1c5437206ddffe71584f219ccc396b5b60a3933da20"
+  },
+  {
+    "label": "QoR later-window forest: QOR15_SHAM_POD3_WITHOUT_HOU_2023",
+    "href": "current/forest_QOR15_SHAM_POD3_WITHOUT_HOU_2023.svg",
+    "source": "10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/metafor_forest_later/forest_QOR15_SHAM_POD3_WITHOUT_HOU_2023.svg",
+    "sha256": "a247c769ad8e5442efcfdfbc1adc56f815f3fa86fe65c825382c678a54048955"
+  },
+  {
+    "label": "QoR later-window forest: QOR15_SHAM_POD3_WITHOUT_XING_2022",
+    "href": "current/forest_QOR15_SHAM_POD3_WITHOUT_XING_2022.svg",
+    "source": "10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/metafor_forest_later/forest_QOR15_SHAM_POD3_WITHOUT_XING_2022.svg",
+    "sha256": "9064d1ccf9a02b681dc3d455ef3c2b26164c3618549e927bf7f8e85904194b00"
+  },
+  {
     "label": "E2 sensitivity estimates",
     "href": "current/e2_model_outputs.csv",
     "source": "10_FINAL_ADJUDICATION/09_E2_ANALYSIS/e2_model_outputs.csv",

@@ -173,6 +173,7 @@
   function qor(){
     const q=d.qor_analysis;if(!q)return title('Quality of recovery')+note('QoR analysis not loaded.');
     const estimate=m=>`${num(m.effect)} [${num(m.ci_low)}, ${num(m.ci_high)}]`;
+    const renderRob=robList=>robList.map(r=>`<details><summary>${esc(r.study)} · ${esc(r.outcome)} · ${tag(r.overall)}</summary><p>${esc(r.window)} · ${esc(r.comparison)}</p>${[1,2,3,4,5].map(i=>`<p><strong>D${i}: ${esc(r['d'+i])}</strong> — ${esc(r['d'+i+'_rationale'])}</p>`).join('')}<p>${esc(r.overall_rationale)}</p><p class="source">${esc(r.source_pdf)} · ${esc(r.result_location)}</p></details>`).join('');
     return title('Quality of recovery at approximately 24 hours','Three separate TEAS comparisons · Eight reports · Positive differences favor TEAS')+
       note(esc(q.certainty_conclusion))+
       table(['Comparison','k / reported N','MD [95% CI], scale points','I²','Certainty'],q.main_models.map(m=>[esc(m.label),`${m.k} / ${m.N}`,estimate(m),`${num(m.I2,1)}%`,'Very low']))+
@@ -180,17 +181,20 @@
       q.main_models.map(m=>{const g=q.grade.find(g=>g.model_id===m.model_id);return `<section><h3>${esc(m.label)}</h3><img src="current/${esc(m.model_id)}.svg" style="width:100%;height:auto" alt="Forest plot: ${esc(m.label)}"><details><summary>Inputs and all five GRADE rationales</summary>${table(['Study / exact result','n TEAS / control','Mean (SD), TEAS / control','Source'],m.inputs.map(r=>[`${esc(r.study)}<br>${esc(r.result_id)}`,`${r.n_i} / ${r.n_c}`,`${r.mean_i} (${r.sd_i}) / ${r.mean_c} (${r.sd_c})`,esc(r.source_location)]))}${['risk_of_bias','inconsistency','indirectness','imprecision','publication_bias'].map(k=>`<p><strong>${esc(k.replaceAll('_',' '))} (−${g[k+'_downgrades']})</strong>: ${esc(g[k])}</p>`).join('')}</details></section>`;}).join('')+
       `<h3>Sensitivity analyses</h3>`+note('Eight leave-one-out analyses and one hypothetical Wu denominator-only stress test. Single-study remainders are not pooled. Diagnostics are not independently graded.')+
       table(['Diagnostic','k / N','MD [95% CI]','Limitation'],q.diagnostics.map(m=>[esc(m.label),`${m.k} / ${m.N}`,estimate(m),esc((m.note||'').replace('mg/ug', 'mg/µg'))]))+
-      `<h3>Eight exact-result risk-of-bias assessments</h3>`+q.rob.map(r=>`<details><summary>${esc(r.study)} · ${esc(r.outcome)} · ${tag(r.overall)}</summary><p>${esc(r.window)} · ${esc(r.comparison)}</p>${[1,2,3,4,5].map(i=>`<p><strong>D${i}: ${esc(r['d'+i])}</strong> — ${esc(r['d'+i+'_rationale'])}</p>`).join('')}<p>${esc(r.overall_rationale)}</p><p class="source">${esc(r.source_pdf)} · ${esc(r.result_location)}</p></details>`).join('')+
+      `<h3>Eight exact-result risk-of-bias assessments</h3>`+renderRob(q.rob)+
       note(esc(q.remaining)) + note(esc(q.core_status)) + note('The later-window models are now shown below, ungraded.') +
       (d.qor_later_models ? 
         `<h3>Later QoR windows (POD2 / 48 h and POD3)</h3>` +
         note('Ungraded. Single-study bodies are not pooled.') +
-        table(['Model', 'k / N', 'MD [95% CI]', 'Certainty'], d.qor_later_models.map(m => [
+        table(['Model', 'k / N', 'MD [95% CI]', 'RoB', 'Certainty'], d.qor_later_models.map(m => [
           esc(m.label) + (m.note.includes('Leave-one-out') ? '<br><small>'+esc(m.note)+'</small>' : ''),
           `${m.k} / ${m.N}`,
           `${num(m.effect)} [${num(m.ci_low)}, ${num(m.ci_high)}]`,
+          m.result_ids.map(rid => { const rr = d.qor_later_rob.find(r => r.result_id === rid); return rr ? esc(rr.study) + ': ' + tag(rr.overall) : ''; }).join('<br>'),
           tag('Not graded')
-        ])) : '') +
+        ])) +
+        d.qor_later_models.map(m => `<details><summary>${esc(m.label)}</summary><img src="current/forest_${esc(m.model_id)}.svg" alt="${esc(m.label)}" style="width:100%;height:auto"><p>Forest plot produced with R ${esc(d.qor_later_metafor_manifest.R_version)} / metafor ${esc(d.qor_later_metafor_manifest.metafor_version)} (same specification as the canonical cross-check); script: forest_qor_later.R</p></details>`).join('') +
+        `<h3>Five exact-result risk-of-bias assessments (later windows)</h3>` + renderRob(d.qor_later_rob) : '') +
       `<p><a href="current/QOR_ANALYSIS_REPORT.md" download>Full QoR report</a> · <a href="current/qor_rob2_signals.csv" download>176 signalling responses</a> · <a href="current/qor_source_locators.csv" download>Source locators</a> · <a href="current/qor_verification.json" download>Independent verification</a></p>`;
   }
   const views={overview,results,qor,coverage,prisma,evidence,risk,studies,methods,downloads};
