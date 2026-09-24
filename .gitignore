@@ -47,3 +47,14 @@ node_modules/
 # TEAS EA Verification/v34_reconciliation/POST_LOCK_ERRATA_v34.md).
 TEAS EA Verification/TEAS_EA_RECONCILED_MASTER_DATA_v34_PRE_ERRATA_BACKUP.xlsx
 TEAS EA Verification/TEAS_EA_RECONCILED_MASTER_DATA_v34_CORRECTED_CANDIDATE.xlsx
+
+# Unpublished previous manuscript, journal correspondence and its extracted text.
+# This repository is PUBLIC. Preserved locally as a read-only audit source only
+# (see reports/PREVIOUS_MANUSCRIPT_IDENTIFICATION.md). Never commit.
+reports/previous_manuscript/original/
+reports/previous_manuscript/extracted_text/
+
+# Author correspondence: recipient addresses, send/bounce status and message text.
+# This repository is PUBLIC. Kept locally as the audit record only. Never commit.
+10_FINAL_ADJUDICATION/02_DECISIONS/v38/author_query_log.csv
+10_FINAL_ADJUDICATION/02_DECISIONS/v38/sent_messages/
