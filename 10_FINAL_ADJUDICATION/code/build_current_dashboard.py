@@ -82,12 +82,12 @@ if 'e2_analysis' in data:
  if 'e2_analysis' in data:
   data['e2_joint'] = []
   for b in ['TEAS vs sham', 'TEAS vs usual care', 'EA vs sham', 'EA vs usual care']:
-   model_id = 'E2_opioid24_' + b.replace(' vs ', '_').replace(' ', '_')
-   m = next((x for x in data['e2_analysis']['models'] if x['model_id'] == model_id), None)
-   if not m:
-    data['e2_joint'].append({'body': b, 'opioid_limb': 'Not met', 'pain_limb': '—', 'joint_criterion': 'Not met'})
-    continue
-   
+   # Look up the E2 main model by body; a missing or duplicate body is an error,
+   # never a silent "Not met".
+   hits = [x for x in data['e2_analysis']['models'] if x['body'] == b and x['role'] == 'E2 POST-HOC SENSITIVITY (main)']
+   assert len(hits) == 1, f"Expected one E2 main model for {b!r}, found {len(hits)}"
+   m = hits[0]
+
    if m['ci_high'] < -10:
     op_limb = f"Met ({m['effect']:.2f})"
    elif m['effect'] <= -10:
@@ -103,9 +103,9 @@ if 'e2_analysis' in data:
      pain_limb = "Cannot be evaluated: Lin 2002 reports pain only in a figure (Fig. 1) and has no eligible ~24-h pain result; pain from other trials cannot supply the pairing."
      joint_crit = "Cannot be evaluated"
     else:
-     pain_limb = "Not met"
-     joint_crit = "Not met"
-     
+     # No recorded pain-limb disposition exists for any other body (E2_RESULTS.md).
+     raise AssertionError(f"{b}: opioid limb reaches 10 mg but no pain-limb disposition is recorded")
+
    data['e2_joint'].append({'body': b, 'opioid_limb': op_limb, 'pain_limb': pain_limb, 'joint_criterion': joint_crit})
 (DASH/'current_review.json').write_text(json.dumps(data,ensure_ascii=False,indent=2,allow_nan=False)+'\n')
 (DASH/'current_review.js').write_text('/* Generated from canonical v38 data; do not edit. */\nwindow.CURRENT_REVIEW = '+json.dumps(data,ensure_ascii=False,allow_nan=False)+';\n')
