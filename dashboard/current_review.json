@@ -19166,13 +19166,13 @@
       "label": "Current-state report",
       "href": "current/FINAL_CURRENT_STATE_REPORT.md",
       "source": "FINAL_CURRENT_STATE_REPORT.md",
-      "sha256": "6099d92f8e78dfe685b54a64b59c727cedd4b90cb73bd78fa4e56133acf938b2"
+      "sha256": "80267d3f0c74536d2c273ca7d0787fe1e314f86b1f6fa7141e8c0f2c8de1a3e6"
     },
     {
       "label": "GRADE: all 38 reviewed bodies",
       "href": "current/FINAL_GRADE_RECOMMENDATIONS.md",
       "source": "FINAL_GRADE_RECOMMENDATIONS.md",
-      "sha256": "45a19664705eebb3aff90a7d539032ae91521130791799d42e40b9983fffe85e"
+      "sha256": "78034fff8b360a445f7932b3d58d15648f76f05d5695e8419dbf82880dd6c8b7"
     },
     {
       "label": "GRADE table",
@@ -19238,7 +19238,7 @@
       "label": "Exact result membership",
       "href": "current/FINAL_MODEL_MEMBERSHIP_MATRIX.csv",
       "source": "FINAL_MODEL_MEMBERSHIP_MATRIX.csv",
-      "sha256": "156dd6d4cbff2746ccf8b0ccd8743093b0a00f3d04a32bc822c8c89e412bf666"
+      "sha256": "673d974bbc95a20fccba3afe178e5a314cc5ee28d51e36f88d8e614d9064364a"
     },
     {
       "label": "All 761 canonical results",
@@ -19256,7 +19256,7 @@
       "label": "Exact-result RoB linkage",
       "href": "current/FINAL_RESULT_ROB2_LINKAGE.csv",
       "source": "FINAL_RESULT_ROB2_LINKAGE.csv",
-      "sha256": "6d6246b1d1479a6728bb3c278043bd6d3621e5a40cc2e67984f51a2a503511de"
+      "sha256": "72622effa080828e4a079263da4eecdea669a07283c1d7920d2c3b925d520707"
     },
     {
       "label": "v37 → v38 changes",
@@ -19389,6 +19389,24 @@
       "href": "current/qor_models_later.csv",
       "source": "10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/qor_models_later.csv",
       "sha256": "a84da11ffd88e080a99f3131e4da5cd3038d31e5839c8b4ec275d04270836459"
+    },
+    {
+      "label": "E2 sensitivity estimates",
+      "href": "current/e2_model_outputs.csv",
+      "source": "10_FINAL_ADJUDICATION/09_E2_ANALYSIS/e2_model_outputs.csv",
+      "sha256": "1b380c12c1ce8dfe55320f61f388e11c2d2035fe88d3ce45ab3e24f05ba02fa9"
+    },
+    {
+      "label": "E2 sensitivity report",
+      "href": "current/E2_RESULTS.md",
+      "source": "10_FINAL_ADJUDICATION/09_E2_ANALYSIS/E2_RESULTS.md",
+      "sha256": "984e7ca5e057b8e5f549c2f3a1f7cb943b020e426d96479476e3bc3fefb1b218"
+    },
+    {
+      "label": "E2 amended estimand decision",
+      "href": "current/AMENDED_PRIMARY_ESTIMAND_E2.md",
+      "source": "10_FINAL_ADJUDICATION/02_DECISIONS/v38/AMENDED_PRIMARY_ESTIMAND_E2.md",
+      "sha256": "1ea80e53568f1c62b630e3ee28c623f147420057d9994b39fe34dd5f5fdae8c2"
     }
   ],
   "outcome_coverage": {
@@ -23207,5 +23225,24 @@
         "contrast_ids": "V33-OD-0252;V33-OD-0003;V33-OD-0052"
       }
     ]
+  },
+  "e2_labels": {
+    "E2_TEAS_sham_LOO_Gu_2019": "Leave out Gu 2019 (figure–text contradiction)",
+    "E2_TEAS_sham_LOO_Lee_2011": "Leave out Lee 2011 (Table 8 contradiction)",
+    "E2_TEAS_sham_LOO_He_2026": "Without unstated-route equivalents (He 2026)",
+    "E2_TEAS_sham_excl_unquantified_rescue": "Without known unquantified rescue (Chen 1998, Lee 2011)",
+    "E2_TEAS_sham_excl_E2.1": "Without E2.1 admissions (Zhang 2025, Gu 2019)",
+    "E2_EA_usual_LOO_El-Rakshy": "Leave out El-Rakshy 2009",
+    "E2_TEAS_sham_LOO_Szmit_2021": "without Szmit 2021",
+    "E2_TEAS_sham_LOO_Chen_1998": "without Chen 1998",
+    "E2_TEAS_sham_LOO_Chen_2020": "without Chen 2020",
+    "E2_TEAS_sham_LOO_Zhang_2025": "without Zhang 2025",
+    "E2_EA_usual_LOO_Seevaunnamtum": "without Seevaunnamtum 2016",
+    "E2_EA_usual_LOO_Yang": "without Yang 2024",
+    "E2_EA_usual_LOO_Lin": "without Lin 2002",
+    "E2_TEAS_sham_suf0.25": "Sufentanil 0.25",
+    "E2_TEAS_sham_suf1.0": "Sufentanil 1.0",
+    "E2_EA_usual_excl_unquantified_rescue": "Without known unquantified rescue (= E1 body)",
+    "E2_TEAS_sham_E1_restriction": "Restricted to E1-eligible (= registered primary)"
   }
 }

@@ -36,6 +36,11 @@ if qor_path.exists():
  # Distinct download name avoids collision with the v38 verification file.
  shutil.copyfile(D/'08_QOR_ANALYSIS/verification.json',OUT/'qor_verification.json')
  downloads.append(dict(label='QoR numerical and preservation checks',href='current/qor_verification.json',source='10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/verification.json',sha256=hashlib.sha256((OUT/'qor_verification.json').read_bytes()).hexdigest()))
+e2_path=D/'09_E2_ANALYSIS/e2_model_outputs.json'
+if e2_path.exists():
+ files.append(('E2 sensitivity estimates','10_FINAL_ADJUDICATION/09_E2_ANALYSIS/e2_model_outputs.csv'))
+ files.append(('E2 sensitivity report','10_FINAL_ADJUDICATION/09_E2_ANALYSIS/E2_RESULTS.md'))
+ files.append(('E2 amended estimand decision','10_FINAL_ADJUDICATION/02_DECISIONS/v38/AMENDED_PRIMARY_ESTIMAND_E2.md'))
 for label,path in files:
  p=ROOT/path;target=OUT/p.name;shutil.copyfile(p,target);downloads.append(dict(label=label,href='current/'+p.name,source=path,sha256=hashlib.sha256(target.read_bytes()).hexdigest()))
 oldtext=(DASH/'data.js').read_text();old=json.JSONDecoder().raw_decode(oldtext.split('window.STUDIES_DATA = ',1)[1])[0]
@@ -50,9 +55,29 @@ if qor_path.exists():
 e2_path=D/'09_E2_ANALYSIS/e2_model_outputs.json'
 if e2_path.exists():
  data['e2_analysis']=json.loads(e2_path.read_text())
- files.append(('E2 sensitivity estimates','10_FINAL_ADJUDICATION/09_E2_ANALYSIS/e2_model_outputs.csv'))
- files.append(('E2 sensitivity report','10_FINAL_ADJUDICATION/09_E2_ANALYSIS/E2_RESULTS.md'))
- files.append(('E2 amended estimand decision','10_FINAL_ADJUDICATION/02_DECISIONS/v38/AMENDED_PRIMARY_ESTIMAND_E2.md'))
+data['e2_labels']={
+  'E2_TEAS_sham_LOO_Gu_2019': 'Leave out Gu 2019 (figure–text contradiction)',
+  'E2_TEAS_sham_LOO_Lee_2011': 'Leave out Lee 2011 (Table 8 contradiction)',
+  'E2_TEAS_sham_LOO_He_2026': 'Without unstated-route equivalents (He 2026)',
+  'E2_TEAS_sham_excl_unquantified_rescue': 'Without known unquantified rescue (Chen 1998, Lee 2011)',
+  'E2_TEAS_sham_excl_E2.1': 'Without E2.1 admissions (Zhang 2025, Gu 2019)',
+  'E2_EA_usual_LOO_El-Rakshy': 'Leave out El-Rakshy 2009',
+  'E2_TEAS_sham_LOO_Szmit_2021': 'without Szmit 2021',
+  'E2_TEAS_sham_LOO_Chen_1998': 'without Chen 1998',
+  'E2_TEAS_sham_LOO_Chen_2020': 'without Chen 2020',
+  'E2_TEAS_sham_LOO_Zhang_2025': 'without Zhang 2025',
+  'E2_EA_usual_LOO_Seevaunnamtum': 'without Seevaunnamtum 2016',
+  'E2_EA_usual_LOO_Yang': 'without Yang 2024',
+  'E2_EA_usual_LOO_Lin': 'without Lin 2002',
+  'E2_TEAS_sham_suf0.25': 'Sufentanil 0.25',
+  'E2_TEAS_sham_suf1.0': 'Sufentanil 1.0',
+  'E2_EA_usual_excl_unquantified_rescue': 'Without known unquantified rescue (= E1 body)',
+  'E2_TEAS_sham_E1_restriction': 'Restricted to E1-eligible (= registered primary)'
+ }
+if 'e2_analysis' in data:
+ e2_ids = {m['model_id'] for m in data['e2_analysis']['models']}
+ for k in data['e2_labels'].keys():
+  assert k in e2_ids, f"Label key not found in E2 model outputs: {k}"
 (DASH/'current_review.json').write_text(json.dumps(data,ensure_ascii=False,indent=2,allow_nan=False)+'\n')
 (DASH/'current_review.js').write_text('/* Generated from canonical v38 data; do not edit. */\nwindow.CURRENT_REVIEW = '+json.dumps(data,ensure_ascii=False,allow_nan=False)+';\n')
 e=html.escape
@@ -63,10 +88,25 @@ for m in data['models']:
  static+=f'<tr><td>{e(m["model_id"])}</td><td>{m["k"]} / {m["N"]}</td><td>{value}</td></tr>'
 static+='</tbody></table></div><p>No body establishes the registered ≥10mg sparing plus paired ~24h pain upper CI &lt;+1 criterion. The 12-reference historical import gap and exclusion-completeness limitation remain disclosed. See downloads for details.</p>'
 if qor_path.exists():static+='<p>QoR addendum: three approximately-24-hour syntheses, eight new result-specific assessments and three Very-low-certainty judgments. All pooled confidence intervals include zero. See the QoR analysis tab. Four later-window QoR models (POD2/3) are also available.</p>'
+if e2_path.exists():
+ e2_data = json.loads(e2_path.read_text())
+ teas = next(m for m in e2_data['models'] if m['model_id'] == 'E2_opioid24_TEAS_sham')
+ ea = next(m for m in e2_data['models'] if m['model_id'] == 'E2_opioid24_EA_sham')
+ any_met = (teas['ci_high'] < -10)
+ met_text = 'in at least one body' if any_met else 'in no body'
+ ea_text = 'cannot be evaluated' if ea['ci_high'] >= -10 else 'met'
+ static += f'<p>E2 post-hoc sensitivity analysis: E1 kept as primary, not graded. The joint criterion is met {met_text} (for EA vs sham it {ea_text}).</p>'
 nav=''.join(f'<button type="button" role="tab" data-view="{key}" aria-controls="content" aria-selected="{str(key=="overview").lower()}" class="{"active" if key=="overview" else ""}">{label}</button>' for key,label in [('overview','Overview'),('results','Results'),('qor','QoR analysis'),('coverage','Outcome coverage'),('studies','Studies & figures'),('risk','Risk of bias'),('evidence','GRADE'),('prisma','PRISMA'),('methods','Methods'),('downloads','Downloads')])
+build_date = ""
+meta_path = DASH / 'build-meta.json'
+if meta_path.exists():
+    meta = json.loads(meta_path.read_text())
+    if 'build_date' in meta:
+        build_date = f" · Build {meta['build_date']}"
+
 page=f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Perioperative TEAS &amp; EA — Evidence Review v38</title><link rel="stylesheet" href="current_review.css"></head>
-<body><a class="skip" href="#content">Skip to evidence</a><div class="shell"><header><span class="eyebrow">Systematic review · Adjudication v38</span><h1>Perioperative electrical acupoint stimulation for postoperative opioid sparing</h1><p class="lede">TEAS and needle EA assessed separately · <a href="https://www.crd.york.ac.uk/PROSPERO/view/CRD420261452908" target="_blank" rel="noopener">PROSPERO CRD420261452908</a></p><nav class="nav" role="tablist" aria-label="Review sections">{nav}</nav></header><main id="content" tabindex="-1" style="padding-top:32px">{static}<noscript><p>JavaScript enables model selection, detailed bias assessments and article figures. <a href="current/FINAL_CURRENT_STATE_REPORT.md">Download the current-state report</a>.</p></noscript></main><footer>v38 · 20 September 2026 · Local analytical release. Posthoc AI-assisted adjudication, with source and selection limitations disclosed. Review displays currently in English. Historical interface and user changes preserved in the project’s v38 baseline.</footer></div><dialog id="figure-dialog"><button type="button" id="close-figure" aria-label="Close article figure">Close</button><p id="figure-caption"></p><img id="figure-image" alt=""></dialog><script src="current_review.js"></script><script src="article_figures.js"></script><script src="search_strategies.js"></script><script src="current_review_ui.js"></script><!--BUILD_BADGE--></body></html>'''
+<body><a class="skip" href="#content">Skip to evidence</a><div class="shell"><header><span class="eyebrow">Systematic review · Adjudication v38</span><h1>Perioperative electrical acupoint stimulation for postoperative opioid sparing</h1><p class="lede">TEAS and needle EA assessed separately · <a href="https://www.crd.york.ac.uk/PROSPERO/view/CRD420261452908" target="_blank" rel="noopener">PROSPERO CRD420261452908</a></p><nav class="nav" role="tablist" aria-label="Review sections">{nav}</nav></header><main id="content" tabindex="-1" style="padding-top:32px">{static}<noscript><p>JavaScript enables model selection, detailed bias assessments and article figures. <a href="current/FINAL_CURRENT_STATE_REPORT.md">Download the current-state report</a>.</p></noscript></main><footer>v38 core · 20 September 2026 · E2 sensitivity analysis · 23 September 2026{build_date} · Public analytical release (not data-locked). Post-hoc AI-assisted adjudication, with source and selection limitations disclosed. Review displays currently in English. Historical interface and user changes preserved in the project’s v38 baseline.</footer></div><dialog id="figure-dialog"><button type="button" id="close-figure" aria-label="Close article figure">Close</button><p id="figure-caption"></p><img id="figure-image" alt=""></dialog><script src="current_review.js"></script><script src="article_figures.js"></script><script src="search_strategies.js"></script><script src="current_review_ui.js"></script><!--BUILD_BADGE--></body></html>'''
 (DASH/'index.html').write_text(page)
 (OUT/'download_manifest.json').write_text(json.dumps(downloads,indent=2)+'\n')
 print('Dashboard v38:',len(data['models']),'models;',len(downloads),'current downloads; article figures preserved')

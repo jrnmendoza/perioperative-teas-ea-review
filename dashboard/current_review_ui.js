@@ -14,11 +14,11 @@
   const primary=models(['PRINCIPAL','SUPPORTIVE']);
   const modelTable=ms=>table(['Evidence body / role','k / N','Estimate [95% CI]','Certainty'],ms.map(m=>[`<button class="text-button model-link" data-model="${esc(m.model_id)}">${esc(m.model_id)}</button><br><small>${esc(m.role)}</small>`,`${m.k} / ${m.N}`,effect(m),tag(grade.get(m.model_id)?.certainty||'Diagnostic — not graded') ]));
   function title(h,p=''){return `<h2>${h}</h2>${p?`<p class="lede">${p}</p>`:''}`;}
-  function overview(){return title('Evidence, with its limits','Adjudication v38 · 20 September 2026 · PROSPERO CRD420261452908')+
+  function overview(){return title('Evidence, with its limits','v38 core · 20 September 2026 · E2 sensitivity analysis · 23 September 2026 · PROSPERO CRD420261452908')+
     `<div class="summary-grid"><article><span class="eyebrow">Evidence inventory</span><strong>70 reports · 69 families</strong><p>12,103 randomized participants, operational count. This is not an analysed efficacy population. Yeh probable overlap counted once and held out of models.</p></article><article><span class="eyebrow">Review complete under delegation</span><strong>94 RoB assessments · 38 GRADE bodies</strong><p>All 90 current non-sensitivity component results covered. Four empty bodies not rated. New judgments are AI-conducted; prior human completion is user-reported.</p></article></div>`+
     qorLink()+`<h3>Primary question</h3>${modelTable(primary)}${note('No body establishes ≥10mg opioid sparing together with paired ~24h pain upper CI &lt;+1. Separate pain evidence cannot supply Szmit’s missing paired fixed-24h measurement. A one-study estimate is not a pooled meta-analysis.')}`+
-    `<h3>What changed</h3><ul><li>Wu 2016 recorded as citation-search evidence; full-text dispositions reconciled.</li><li>Risk-of-bias and all 38 certainty decisions adopted; no reviewer approval queue.</li><li>Zheng’s unresolved continuous data held out of main models; original values retained in diagnostics.</li><li>Wu 2025 intraoperative dose preceded treatment and is now diagnostic only.</li></ul>`+
-    note('Local analytical release, not certification of exhaustive evidence selection. The 12-reference import gap and historical outcome-focused exclusion limitation remain disclosed. No public deployment performed.');}
+    `<h3>What changed</h3><ul><li>Wu 2016 recorded as citation-search evidence; full-text dispositions reconciled.</li><li>Risk-of-bias and all 38 certainty decisions adopted; no reviewer approval queue.</li><li>Zheng’s unresolved continuous data held out of main models; original values retained in diagnostics.</li><li>Wu 2025 intraoperative dose preceded treatment and is now diagnostic only.</li><li>The 24-h QoR addendum (3 Very-low-certainty bodies).</li><li>Later-window QoR models, ungraded.</li><li>The E2 post-hoc sensitivity analysis, with E1 retained as primary. <button type="button" class="text-button" data-view="results">See E2 results</button>.</li></ul>`+
+    note('The 12-reference import gap and historical outcome-focused exclusion limitation remain disclosed.');}
   function forest(m){
     const rows=d.inputs.filter(r=>r.model_id===m.model_id);if(!rows.length)return '';
     const pts=rows.map(r=>({name:r.study,y:+r.yi,lo:+r.yi-1.95996398454*Math.sqrt(+r.vi),hi:+r.yi+1.95996398454*Math.sqrt(+r.vi)}));
@@ -31,7 +31,7 @@
   function modelDetail(mid){
     const m=d.models.find(m=>m.model_id===mid);if(!m)return;
     const s=d.specifications.find(s=>s.model_id===mid),g=grade.get(mid),ins=d.inputs.filter(r=>r.model_id===mid);
-    const panel=$('model-panel');panel.innerHTML=title(esc(mid),`${esc(m.role)} · ${esc(m.status)} · k=${m.k}, N=${m.N}`)+`<p class="estimate">${effect(m)}</p>`+forest(m)+note(esc(s.note||'Separate modality/comparator body. Compatible active arms combined; control counted once.'))+
+    const panel=$('model-panel');panel.innerHTML=title(esc(mid),`${esc(m.role)} · ${esc(m.status)} · k=${m.k}, N=${m.N}`)+`<p class="estimate">${effect(m)}</p>`+forest(m)+note(esc((s.note||'Separate modality/comparator body. Compatible active arms combined; control counted once.').replace('mg/ug', 'mg/µg')))+
     (m.k>1?`<p>I² ${num(m.I2,1)}% · τ² ${num(m.tau2,3)} · safeguarded Hartung–Knapp interval.</p>`:'')+
     (m.pi_low!==null&&m.pi_low!==undefined?`<p>Prediction interval: ${num(m.measure==='RR'?Math.exp(m.pi_low):m.pi_low)} to ${num(m.measure==='RR'?Math.exp(m.pi_high):m.pi_high)} ${esc(m.unit)}. Interpret cautiously.</p>`:'')+
     table(['Contributor / exact result IDs','n intervention / control','Source location'],ins.map(r=>[`${esc(r.study)}<br><small>${esc(r.result_id)}</small>`,`${num(r.n_i,0)} / ${num(r.n_c,0)}`,esc(r.source_location)]))+
@@ -43,34 +43,97 @@
     const e2 = d.e2_analysis;
     const est = m => m ? `${num(m.effect)} [${num(m.ci_low)}, ${num(m.ci_high)}]` : '—';
     const mainE2 = e2.models.filter(m => m.role === 'E2 POST-HOC SENSITIVITY (main)');
-    const teasSens = e2.models.filter(m => m.body === 'TEAS vs sham' && m.role !== 'E2 POST-HOC SENSITIVITY (main)');
-    const eaSens = e2.models.filter(m => m.body === 'EA vs usual care' && m.role !== 'E2 POST-HOC SENSITIVITY (main)');
-    return `<h3>E2 post-hoc sensitivity analysis</h3>` +
-      note('E1 stays primary. E2 is post-hoc, defined and amended (E2.1) after data were seen, and the decision to keep E1 primary was made after the E2 results were known.') +
-      table(['Body', 'E1 k / N', 'E1 Estimate [95% CI]', 'E2 k / N', 'E2 Estimate [95% CI]', 'E2 Certainty'], mainE2.map(m2 => {
-        const m1 = primary.find(m => m.model_id === 'opioid24_' + m2.model_id.replace('E2_opioid24_', ''));
+    
+    const removeDups = ms => ms.filter(m => !['E2_TEAS_sham_leaveout_Gu2019', 'E2_TEAS_sham_leaveout_Lee2011', 'E2_TEAS_sham_excl_unstated_route', 'E2_EA_usual_leaveout_ElRakshy', 'E2_TEAS_sham_E1_restriction'].includes(m.model_id));
+    const teasAll = removeDups(e2.models.filter(m => m.body === 'TEAS vs sham' && m.role !== 'E2 POST-HOC SENSITIVITY (main)'));
+    const eaAll = removeDups(e2.models.filter(m => m.body === 'EA vs usual care' && m.role !== 'E2 POST-HOC SENSITIVITY (main)'));
+
+    const teasSens = teasAll.filter(m => !m.model_id.includes('_LOO_'));
+    const teasLoo = teasAll.filter(m => m.model_id.includes('_LOO_'));
+    const eaSens = eaAll.filter(m => !m.model_id.includes('_LOO_'));
+    const eaLoo = eaAll.filter(m => m.model_id.includes('_LOO_'));
+
+    const getLabel = m => (d.e2_labels && d.e2_labels[m.model_id]) ? d.e2_labels[m.model_id] : esc((m.note || 'E2 main').replace('mg/ug', 'mg/µg'));
+
+    const estTable = (m2, m1) => {
+        const piText = (m2.k >= 5 && m2.pi_low !== null && m2.pi_high !== null) ? `PI ${num(m2.pi_low)} to ${num(m2.pi_high)}` : 'PI not shown (k<5)';
+        const hetero = (m2.k > 1 && m2.I2 !== null) ? `<br><small>I² ${num(m2.I2, 1)}%, ${piText}</small>` : '<br><small>—</small>';
+        const caveat = m2.body === 'EA vs sham' ? '<br><small>Lin 2002 only; admitted on a boundary reading of DP1 (PCA from hour 1) and DP4 (unquantified IM pethidine first-hour rescue); high risk of bias</small>' : '';
         return [
           esc(m2.body),
           m1 && m1.k ? `${m1.k} / ${m1.N}` : '0 / 0',
           m1 && m1.k ? effect(m1).replace(' mg IV MME', '') : 'No eligible data',
           `${m2.k} / ${m2.N}`,
-          est(m2),
+          est(m2) + hetero + caveat,
           tag('Not graded')
         ];
+    };
+
+    const teasMain = mainE2.find(m=>m.model_id==='E2_opioid24_TEAS_sham');
+    const teasModels = [teasMain, ...teasSens, ...teasLoo];
+    const crossesZero = teasModels.filter(m => m.ci_high > 0).length;
+    const noneReaches = teasModels.filter(m => m.effect > -10).length;
+    const total = teasModels.length;
+    const crossZeroText = crossesZero === total ? 'All ' + total + ' TEAS-vs-sham E2 analyses cross zero' : crossesZero + ' of ' + total + ' TEAS-vs-sham E2 analyses cross zero';
+    const noneReachesText = noneReaches === total ? 'none reaches -10 mg.' : (total - noneReaches) + ' reaches -10 mg.';
+    const teasCaption = `${crossZeroText}; ${noneReachesText}`;
+
+    const looRange = (loo) => {
+        if (!loo.length) return '';
+        const min = Math.min(...loo.map(m => m.effect));
+        const max = Math.max(...loo.map(m => m.effect));
+        return note(`Leave-one-out range: ${num(min)} to ${num(max)} mg.`);
+    };
+
+    const opioidLimb = m => {
+        if (!m) return 'Not met';
+        if (m.ci_high < -10) return `Met (${num(m.effect)})`;
+        if (m.effect <= -10) return `Met by point estimate (${num(m.effect)}), k=${m.k}`;
+        return 'Not met';
+    };
+    const painLimb = m => {
+        if (!m || (m.effect > -10)) return '—';
+        if (m.body === 'EA vs sham') return 'Cannot be evaluated: Lin 2002 reports pain only in a figure (Fig. 1) and has no eligible ~24-h pain result; pain from other trials cannot supply the pairing.';
+        return 'Not met';
+    };
+    const jointText = m => {
+        if (!m || (m.effect > -10)) return 'Not met';
+        if (m.body === 'EA vs sham') return 'Cannot be evaluated';
+        return 'Not met';
+    };
+    const e2PainConstant = 'As stated in E2_RESULTS.md, digitising Lin 2002 Fig. 1 has not been done and would be a further post-hoc decision.';
+
+    const jointRows = [
+        'TEAS vs sham', 'TEAS vs usual care', 'EA vs sham', 'EA vs usual care'
+    ].map(b => {
+        const m = mainE2.find(x => x.body === b);
+        return [b, opioidLimb(m), painLimb(m), jointText(m)];
+    });
+
+    return `<h3>E2 post-hoc sensitivity analysis</h3>` +
+      note('E1 stays primary. E2 is post-hoc, defined and amended (E2.1) after data were seen, and the decision to keep E1 primary was made after the E2 results were known.') +
+      table(['Body', 'E1 k / N', 'E1 Estimate [95% CI]', 'E2 k / N', 'E2 Estimate [95% CI]', 'E2 Certainty'], mainE2.map(m2 => {
+        const m1 = primary.find(m => m.model_id === 'opioid24_' + m2.model_id.replace('E2_opioid24_', ''));
+        return estTable(m2, m1);
       })) +
       `<h4>TEAS vs sham — sensitivity analyses</h4>` +
-      note('Every TEAS-vs-sham E2 analysis crosses zero and none reaches -10 mg.') +
-      table(['Analysis', 'k', 'MD [95% CI]'], [mainE2.find(m=>m.model_id==='E2_opioid24_TEAS_sham'), ...teasSens].map(m => [esc(m.note || 'E2 main'), m.k, est(m)])) +
+      note(teasCaption) +
+      table(['Analysis', 'k', 'MD [95% CI]'], [teasMain, ...teasSens].map(m => [getLabel(m), m.k, est(m)])) +
+      (() => {
+        const e1Rest = e2.models.find(m => m.model_id === 'E2_TEAS_sham_E1_restriction');
+        return e1Rest ? note(`The registered E1 primary (${esc(e1Rest.studies)} only; k=${e1Rest.k}, N=${e1Rest.N}): ${est(e1Rest)}`) : '';
+      })() +
+      `<h4>TEAS vs sham — leave-one-out</h4>` +
+      looRange(teasLoo) +
+      table(['Analysis', 'k', 'MD [95% CI]'], teasLoo.map(m => [getLabel(m), m.k, est(m)])) +
       `<h4>EA vs usual care — sensitivity analyses</h4>` +
-      table(['Analysis', 'k', 'MD [95% CI]'], [mainE2.find(m=>m.model_id==='E2_opioid24_EA_usual'), ...eaSens].map(m => [esc(m.note || 'E2 main'), m.k, est(m)])) +
+      table(['Analysis', 'k', 'MD [95% CI]'], [mainE2.find(m=>m.model_id==='E2_opioid24_EA_usual'), ...eaSens].map(m => [getLabel(m), m.k, est(m)])) +
+      `<h4>EA vs usual care — leave-one-out</h4>` +
+      looRange(eaLoo) +
+      table(['Analysis', 'k', 'MD [95% CI]'], eaLoo.map(m => [getLabel(m), m.k, est(m)])) +
       `<h4>Joint criterion (≥10 mg sparing and paired pain upper limit &lt; +1)</h4>` +
-      table(['Body', 'Opioid limb', 'Joint criterion'], [
-        ['TEAS vs sham', 'Not met', 'Not met'],
-        ['TEAS vs usual care', 'Not met', 'Not met'],
-        ['EA vs sham', 'Met by point estimate (−11.80), k=1', 'Cannot be evaluated'],
-        ['EA vs usual care', 'Not met', 'Not met']
-      ]) +
-      note('EA vs sham under E2 is Lin 2002 alone (k=1, high RoB). Its joint criterion CANNOT BE EVALUATED.');
+      table(['Body', 'Opioid limb', 'Pain limb', 'Joint criterion'], jointRows) +
+      note(e2PainConstant);
   }
   function results(){return title('Results and diagnostics','Fixed canonical analyses. Selecting a model does not silently change study membership.')+`<label for="model-select">Evidence body</label><select id="model-select"><option value="">Choose a model…</option>${['PRINCIPAL','SUPPORTIVE','ADDITIONAL','SENSITIVITY'].map(role=>`<optgroup label="${role}">${d.models.filter(m=>m.role===role).map(m=>`<option value="${esc(m.model_id)}">${esc(m.model_id)} · k=${m.k}</option>`).join('')}</optgroup>`).join('')}</select><div id="model-panel" class="panel" hidden></div><h3>Principal and supportive</h3>${modelTable(primary)}<h3>Additional outcomes</h3>${modelTable(models(['ADDITIONAL']))}<details><summary>36 explicitly labelled sensitivity / diagnostic models</summary>${modelTable(models(['SENSITIVITY']))}</details>`+e2_section();}
   function prisma(){const p=d.prisma;return title('Selection and accounting','Historical aggregate screening counts, reconciled full-text record dispositions and a separate citation route.')+
@@ -108,9 +171,9 @@
       note(esc(q.wu_note))+
       q.main_models.map(m=>{const g=q.grade.find(g=>g.model_id===m.model_id);return `<section><h3>${esc(m.label)}</h3><img src="current/${esc(m.model_id)}.svg" style="width:100%;height:auto" alt="Forest plot: ${esc(m.label)}"><details><summary>Inputs and all five GRADE rationales</summary>${table(['Study / exact result','n TEAS / control','Mean (SD), TEAS / control','Source'],m.inputs.map(r=>[`${esc(r.study)}<br>${esc(r.result_id)}`,`${r.n_i} / ${r.n_c}`,`${r.mean_i} (${r.sd_i}) / ${r.mean_c} (${r.sd_c})`,esc(r.source_location)]))}${['risk_of_bias','inconsistency','indirectness','imprecision','publication_bias'].map(k=>`<p><strong>${esc(k.replaceAll('_',' '))} (−${g[k+'_downgrades']})</strong>: ${esc(g[k])}</p>`).join('')}</details></section>`;}).join('')+
       `<h3>Sensitivity analyses</h3>`+note('Eight leave-one-out analyses and one hypothetical Wu denominator-only stress test. Single-study remainders are not pooled. Diagnostics are not independently graded.')+
-      table(['Diagnostic','k / N','MD [95% CI]','Limitation'],q.diagnostics.map(m=>[esc(m.label),`${m.k} / ${m.N}`,estimate(m),esc(m.note)]))+
+      table(['Diagnostic','k / N','MD [95% CI]','Limitation'],q.diagnostics.map(m=>[esc(m.label),`${m.k} / ${m.N}`,estimate(m),esc((m.note||'').replace('mg/ug', 'mg/µg'))]))+
       `<h3>Eight exact-result risk-of-bias assessments</h3>`+q.rob.map(r=>`<details><summary>${esc(r.study)} · ${esc(r.outcome)} · ${tag(r.overall)}</summary><p>${esc(r.window)} · ${esc(r.comparison)}</p>${[1,2,3,4,5].map(i=>`<p><strong>D${i}: ${esc(r['d'+i])}</strong> — ${esc(r['d'+i+'_rationale'])}</p>`).join('')}<p>${esc(r.overall_rationale)}</p><p class="source">${esc(r.source_pdf)} · ${esc(r.result_location)}</p></details>`).join('')+
-      note(esc(q.remaining))+note(esc(q.core_status))+
+      note(esc(q.remaining)) + note(esc(q.core_status)) + note('The later-window models are now shown below, ungraded.') +
       (d.qor_later_models ? 
         `<h3>Later QoR windows (POD2 / 48 h and POD3)</h3>` +
         note('Ungraded. Single-study bodies are not pooled.') +
