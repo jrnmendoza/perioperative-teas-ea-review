@@ -291,14 +291,16 @@ never combined in a pooled estimate**, and sham-controlled, usual-care and
 active-comparator evidence were never pooled with one another.
 
 Random-effects models for mean differences, log risk ratios and Hedges' *g* used
-restricted maximum likelihood estimation of between-study variance. For k ≥ 2 we
-applied Hartung–Knapp residual scaling safeguarded at 1, with a *t*(k−1) interval
-and test; k = 2 bodies are interpreted as very uncertain. For **k = 1 we report
+restricted maximum likelihood estimation of between-study variance
+[@veroniki2016]. For k ≥ 2 we applied Hartung–Knapp residual scaling
+[@hartung2001] safeguarded at 1 [@rover2015], with a *t*(k−1) interval and test; k = 2 bodies are interpreted as very uncertain. For **k = 1 we report
 the study contrast with a within-study normal confidence interval, and make no
 pooled random-effects claim, no heterogeneity estimate and no prediction
-interval**. Prediction intervals were computed only for k ≥ 5, as
-*t*(k−1) × √(τ² + SE²). Heterogeneity is reported as τ², I² and Cochran's *Q*,
-with I² from the REML τ² and the typical sampling variance.
+interval**. Prediction intervals, the expected range of true effects in similar
+settings [@inthout2016], were computed only for k ≥ 5, as *t*(k−1) × √(τ² + SE²),
+using the same degrees of freedom as the Hartung–Knapp interval. Heterogeneity is
+reported as τ², I² [@higgins2002] and Cochran's *Q*, with I² from the REML τ² and
+the typical sampling variance.
 
 Dichotomous outcomes were pooled as risk ratios, with a continuity correction of
 0.5 added to **all four cells** — so each arm denominator increases by 1 — and

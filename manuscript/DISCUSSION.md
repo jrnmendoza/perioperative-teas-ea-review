@@ -75,13 +75,20 @@ light of the two disclosed exclusions that produced that consistency.
 
 ## Comparison with previous reviews
 
-Earlier syntheses have generally reported opioid-sparing benefits for
-perioperative acupuncture. Our more restrictive conclusion does not rest on
-different trials so much as on different rules: separating TEAS from EA,
-separating sham from usual care, and refusing to pool opioid quantities that
-measure different things. Where a prior review reports a pooled benefit across
-modalities and comparators, it is answering a question the registered protocol
-here treats as unanswerable.
+Earlier syntheses that examined opioid or analgesic consumption reported
+reductions [@wu2016review; @tahmasbi2025]. One of them found the reduction in
+opioid use on the first postoperative day confined to TEAS, with no benefit for
+conventional acupuncture or electroacupuncture [@wu2016review], which supports
+treating the two modalities as separate questions. Our more restrictive
+conclusion reflects different rules: separating TEAS from EA, separating sham
+from usual care, and declining to pool opioid quantities that measure different
+things. Within our own data, relaxing only the last of these rules enlarged the
+TEAS-versus-sham body from one trial to seven without producing an estimate that
+excluded no effect. We did not formally compare our trial set with those of
+earlier reviews, so a contribution from differing evidence bases cannot be
+excluded. Where a prior review reports a pooled benefit across modalities or
+comparators [@wu2016review; @lu2023review], it is answering a question the
+registered protocol here treats as unanswerable.
 
 ## Strengths
 
@@ -147,7 +154,7 @@ itself the most actionable finding. Trials should report all delivered systemic
 opioid including rescue, in absolute units with a stated conversion basis, at a
 fixed 24-hour clock window; report pain at the same fixed window in both rest
 and movement settings; and characterise stimulation parameters to STRICTA
-standards. No sham-controlled electroacupuncture trial captures all delivered
+standards [@macpherson2010]. No sham-controlled electroacupuncture trial captures all delivered
 systemic opioid over the first 24 hours in absolute units: those reporting a
 24-hour total give it per kilogram, as a pump volume, or without a first-hour
 rescue. Such trials are the clearest gap.
