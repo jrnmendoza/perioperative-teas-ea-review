@@ -2688,3 +2688,210 @@ pre code { overflow-wrap: normal; word-break: normal; }
 }
 .estimator-note p { margin: 0; font-size: 0.83rem; line-height: 1.55; color: var(--text-secondary); }
 .estimator-note-sub { margin-top: 0.3rem !important; color: var(--text-muted) !important; font-size: 0.78rem !important; }
+
+/* ==========================================================================
+   Article Figures & Visual Evidence Styles
+   ========================================================================== */
+.sd-figures-card {
+  background: var(--bg-panel);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.sd-figures-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.sd-figures-title {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: #818cf8;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.sd-figures-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.sd-figure-card {
+  position: relative;
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.sd-figure-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(129, 140, 248, 0.5);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), 0 0 12px rgba(99, 102, 241, 0.2);
+}
+
+.sd-figure-thumb-wrap {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.sd-figure-thumb {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.sd-figure-card:hover .sd-figure-thumb {
+  transform: scale(1.05);
+}
+
+.sd-figure-page-badge {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(4px);
+  color: #a5b4fc;
+  font-size: 0.68rem;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: 4px;
+  border: 1px solid rgba(129, 140, 248, 0.3);
+}
+
+.sd-figure-zoom-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(99, 102, 241, 0.25);
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s ease;
+  font-size: 1.4rem;
+  color: #fff;
+}
+
+.sd-figure-card:hover .sd-figure-zoom-overlay {
+  opacity: 1;
+}
+
+.sd-figure-meta {
+  padding: 0.6rem 0.75rem;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.02);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Lightbox Modal */
+.figure-lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(5, 10, 25, 0.85);
+  backdrop-filter: blur(8px);
+  z-index: 999999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.figure-lightbox-overlay.active {
+  display: flex;
+}
+
+.figure-lightbox-dialog {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  background: #0f172a;
+  border: 1px solid rgba(129, 140, 248, 0.3);
+  border-radius: 12px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 25px rgba(99, 102, 241, 0.2);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.figure-lightbox-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.figure-lightbox-close:hover {
+  background: rgba(239, 68, 68, 0.8);
+  transform: scale(1.1);
+}
+
+.figure-lightbox-body {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-height: calc(90vh - 2rem);
+  overflow: auto;
+}
+
+.figure-lightbox-img {
+  max-width: 100%;
+  max-height: 75vh;
+  object-fit: contain;
+  border-radius: 6px;
+  background: #ffffff;
+  padding: 4px;
+}
+
+.figure-lightbox-caption {
+  margin-top: 0.8rem;
+  font-size: 0.85rem;
+  color: #cbd5e1;
+  text-align: center;
+  font-weight: 500;
+}

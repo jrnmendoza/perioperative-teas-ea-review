@@ -22,6 +22,8 @@ def checks(d):
       'GRADE is evidence-body specific':{g['model_id'] for g in gs}=={s['model_id'] for s in spec if s['role']!='SENSITIVITY'},
       'outcome coverage addendum identity':d.get('outcome_coverage')==json.load(open(D/'07_OUTCOME_COVERAGE/coverage_summary.json')) if (D/'07_OUTCOME_COVERAGE/coverage_summary.json').exists() else True,
       'QoR analytical addendum identity':d.get('qor_analysis')==json.load(open(D/'08_QOR_ANALYSIS/qor_summary.json')) if (D/'08_QOR_ANALYSIS/qor_summary.json').exists() else True,
+      'E2 sensitivity identity':d.get('e2_analysis')==json.load(open(D/'09_E2_ANALYSIS/e2_model_outputs.json')) if (D/'09_E2_ANALYSIS/e2_model_outputs.json').exists() else True,
+      'QoR later-window identity':d.get('qor_later_models')==json.load(open(D/'08_QOR_ANALYSIS/qor_models_later.json')) if (D/'08_QOR_ANALYSIS/qor_models_later.json').exists() else True,
     }
 def main(site=None):
     site=pathlib.Path(site or ROOT/'dashboard');data=json.load(open(site/'current_review.json'));c=checks(data)
@@ -48,6 +50,10 @@ def main(site=None):
         q=data['qor_analysis']
         assert len(q['main_models'])==len(q['grade'])==3 and len(q['rob'])==8 and len(q['diagnostics'])==9
         assert {r['result_id'] for r in q['inputs']}=={r['result_id'] for r in q['rob']}
+    if 'e2_analysis' in data:
+        mutations.append(('E2 sensitivity identity',lambda d:d['e2_analysis']['models'][0].__setitem__('effect',999)))
+    if 'qor_later_models' in data:
+        mutations.append(('QoR later-window identity',lambda d:d['qor_later_models'][0].__setitem__('effect',999)))
     for key,mutate in mutations:
         x=copy.deepcopy(data);mutate(x);assert not checks(x)[key],f'Mutation escaped: {key}'
     if (site/'build-meta.json').exists():

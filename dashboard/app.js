@@ -1789,6 +1789,11 @@ function renderStudyExplorer() {
 
     // A companion report is one row in this table but not a separate trial. It is
     // marked here so no reader counts the table's rows as the number of trials.
+    const figs = (window.ARTICLE_FIGURES || {})[s.key] || [];
+    const figureBadge = figs.length
+      ? `<span class="kpi-badge badge-indigo" title="${figs.length} figures/photos extracted from source publication PDF" style="font-size:0.68rem; padding: 0.12rem 0.4rem; cursor: pointer; display: inline-flex; align-items: center; gap: 0.2rem;" onclick="event.stopPropagation(); openStudyDrawer('${s.id}')">📷 ${figs.length}</span>`
+      : '';
+
     const companionBadge = s.duplicate_report_of
       ? `<span class="kpi-badge badge-amber" title="Companion report of ${pwEsc(s.duplicate_report_of)} \u2014 same randomised cohort, counted once. It does not add to the trial count and does not contribute to any synthesis independently.">Companion report</span>`
       : (s.companion_report
@@ -1798,7 +1803,7 @@ function renderStudyExplorer() {
     return `
       <tr style="cursor: pointer;" onclick="openStudyDrawer('${s.id}')">
         <td style="font-weight: 700; color: var(--text-accent);">
-          ${idx + 1}. ${s.key} ${inquiryBadge} ${companionBadge}
+          ${idx + 1}. ${s.key} ${figureBadge} ${inquiryBadge} ${companionBadge}
         </td>
         <td>${s.year}</td>
         <td>${s.country ? pwEsc(s.country) : '<span class="nr-tag" title="Country not recorded in the structured register">NR</span>'}</td>
@@ -3781,7 +3786,37 @@ function openStudyDrawer(id) {
 
   outcomesHtml += '</div></div>';
 
-  content.innerHTML += outcomesHtml;
+  const figs = (window.ARTICLE_FIGURES || {})[s.key] || [];
+  let figuresHtml = '';
+  if (figs.length > 0) {
+    figuresHtml = `
+      <section class="sd-card sd-figures-card">
+        <div class="sd-figures-header">
+          <h4 class="sd-figures-title">
+            📷 Article Photos &amp; Figures <span class="badge badge-indigo">${figs.length} available</span>
+          </h4>
+          <span style="font-size: 0.72rem; color: var(--text-muted);">Extracted from publication PDF &bull; Click any image to enlarge</span>
+        </div>
+        <div class="sd-figures-grid">
+          ${figs.map((f, fIdx) => `
+            <div class="sd-figure-card" onclick="openFigureLightbox('${f.src}', '${pwEsc(s.key)} &mdash; ${pwEsc(f.caption)} (${f.width}&times;${f.height})')">
+              <div class="sd-figure-thumb-wrap">
+                <img src="${f.src}" alt="${pwEsc(f.caption)}" class="sd-figure-thumb" loading="lazy">
+                <span class="sd-figure-page-badge">PDF p. ${f.page}</span>
+                <div class="sd-figure-zoom-overlay">🔍</div>
+              </div>
+              <div class="sd-figure-meta">
+                <span style="font-weight: 600; color: #cbd5e1;">Figure ${fIdx + 1}</span>
+                <span style="color: var(--text-muted); font-size: 0.7rem;">${f.width}&times;${f.height}</span>
+              </div>
+            </div>
+          `).join('')}
+        </div>
+      </section>
+    `;
+  }
+
+  content.innerHTML += outcomesHtml + figuresHtml;
   modal.classList.add('active');
 }
 
@@ -6145,3 +6180,29 @@ function v34GradeNewModelsHtml(G){
 window.v34GradeNewModelsHtml = v34GradeNewModelsHtml;
 
 window.renderV34 = renderV34;
+
+
+function openFigureLightbox(src, caption) {
+  const modal = document.getElementById("figure-lightbox-modal");
+  const img = document.getElementById("figure-lightbox-img");
+  const cap = document.getElementById("figure-lightbox-caption");
+  if (!modal || !img) return;
+  img.src = src;
+  img.alt = caption || "Article Figure";
+  if (cap) cap.innerHTML = caption || "";
+  modal.classList.add("active");
+}
+
+function closeFigureLightbox() {
+  const modal = document.getElementById("figure-lightbox-modal");
+  if (modal) modal.classList.remove("active");
+}
+
+window.openFigureLightbox = openFigureLightbox;
+window.closeFigureLightbox = closeFigureLightbox;
+
+document.addEventListener("keydown", function(e) {
+  if (e.key === "Escape") {
+    closeFigureLightbox();
+  }
+});

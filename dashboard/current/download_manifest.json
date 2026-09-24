@@ -238,5 +238,23 @@
     "href": "current/qor_models_later.csv",
     "source": "10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/qor_models_later.csv",
     "sha256": "a84da11ffd88e080a99f3131e4da5cd3038d31e5839c8b4ec275d04270836459"
+  },
+  {
+    "label": "E2 sensitivity estimates",
+    "href": "current/e2_model_outputs.csv",
+    "source": "10_FINAL_ADJUDICATION/09_E2_ANALYSIS/e2_model_outputs.csv",
+    "sha256": "1b380c12c1ce8dfe55320f61f388e11c2d2035fe88d3ce45ab3e24f05ba02fa9"
+  },
+  {
+    "label": "E2 sensitivity report",
+    "href": "current/E2_RESULTS.md",
+    "source": "10_FINAL_ADJUDICATION/09_E2_ANALYSIS/E2_RESULTS.md",
+    "sha256": "984e7ca5e057b8e5f549c2f3a1f7cb943b020e426d96479476e3bc3fefb1b218"
+  },
+  {
+    "label": "E2 amended estimand decision",
+    "href": "current/AMENDED_PRIMARY_ESTIMAND_E2.md",
+    "source": "10_FINAL_ADJUDICATION/02_DECISIONS/v38/AMENDED_PRIMARY_ESTIMAND_E2.md",
+    "sha256": "1ea80e53568f1c62b630e3ee28c623f147420057d9994b39fe34dd5f5fdae8c2"
   }
 ]
