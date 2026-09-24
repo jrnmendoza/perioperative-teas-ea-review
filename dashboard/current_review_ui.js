@@ -16,14 +16,26 @@
   function title(h,p=''){return `<h2>${h}</h2>${p?`<p class="lede">${p}</p>`:''}`;}
   function overview(){return title('Evidence, with its limits','v38 core · 20 September 2026 · E2 sensitivity analysis · 23 September 2026 · PROSPERO CRD420261452908')+
     `<div class="summary-grid"><article><span class="eyebrow">Evidence inventory</span><strong>70 reports · 69 families</strong><p>12,103 randomized participants, operational count. This is not an analysed efficacy population. Yeh probable overlap counted once and held out of models.</p></article><article><span class="eyebrow">v38 core RoB and GRADE complete under delegation</span><strong>94 RoB assessments · 38 GRADE bodies</strong><p>All 90 current non-sensitivity component results covered. Four empty bodies not rated. New judgments are AI-conducted; prior human completion is user-reported.</p></article></div>`+
-    note(`<strong>Outstanding work:</strong> ${d.outstanding.map(esc).join('; ')}. <a href="current/FINAL_CURRENT_STATE_REPORT.md">Download the current-state report</a>.`)+
+    note(`<strong>Outstanding work:</strong> ${d.outstanding.map(x => esc(x).replace(/\.$/, '')).join('; ')}. <a href=\"current/FINAL_CURRENT_STATE_REPORT.md\">Download the current-state report</a>.`)+
     qorLink()+`<h3>Primary question</h3>${modelTable(primary)}${note('No body establishes ≥10mg opioid sparing together with paired ~24h pain upper CI &lt;+1. Separate pain evidence cannot supply Szmit’s missing paired fixed-24h measurement. A one-study estimate is not a pooled meta-analysis.')}`+
     (d.e2_joint ? `<div class="panel"><h4>E2 post-hoc sensitivity analysis</h4>${
       (() => {
         const mTeas = d.e2_analysis.models.find(m=>m.body==='TEAS vs sham' && m.role==='E2 POST-HOC SENSITIVITY (main)');
         const mEa = d.e2_analysis.models.find(m=>m.body==='EA vs sham' && m.role==='E2 POST-HOC SENSITIVITY (main)');
-        let txt = `TEAS vs sham (k=${mTeas.k}, N=${mTeas.N}): ${num(mTeas.effect)} [${num(mTeas.ci_low)}, ${num(mTeas.ci_high)}]. EA vs sham: ` + (mEa.k ? `(k=${mEa.k}) ${num(mEa.effect)} [${num(mEa.ci_low)}, ${num(mEa.ci_high)}]` : `k=${mEa.k}.`);
-        txt += ` Joint criterion met in no body; for EA vs sham it cannot be evaluated.`;
+        let txt = `TEAS vs sham (k=${mTeas.k}, N=${mTeas.N}): ${num(mTeas.effect)} mg IV MME [${num(mTeas.ci_low)}, ${num(mTeas.ci_high)}]. EA vs sham: ` + (mEa.k ? `(k=${mEa.k}) ${num(mEa.effect)} mg IV MME [${num(mEa.ci_low)}, ${num(mEa.ci_high)}].` : `k=${mEa.k}.`);
+        
+        const met_bodies = d.e2_joint.filter(x => x.joint_criterion === 'Met').map(x => x.body);
+        if (met_bodies.length > 0) {
+            txt += ` Joint criterion met in ${met_bodies.join(' and ')}`;
+        } else {
+            txt += ` Joint criterion met in no body`;
+        }
+        
+        const cant_eval_bodies = d.e2_joint.filter(x => x.joint_criterion === 'Cannot be evaluated').map(x => x.body);
+        if (cant_eval_bodies.length > 0) {
+            txt += `; for ${cant_eval_bodies.join(' and ')} it cannot be evaluated`;
+        }
+        txt += `.`;
         txt += ` E2 was defined and amended after results were known. E1 stays primary. E2 is not graded.`;
         txt += ` <button type="button" class="text-button" data-view="results">See E2 section in Results</button>.`;
         txt += ` Trial-by-trial accounting: <a href="current/ADDITIONAL_FILE_12.md">Additional file 12</a>.`;
@@ -102,7 +114,7 @@
     const jointRows = (d.e2_joint || []).map(j => [j.body, j.opioid_limb, j.pain_limb, j.joint_criterion]);
 
     return `<h3>E2 post-hoc sensitivity analysis</h3>` +
-      note('E1 stays primary. E2 is post-hoc, defined and amended (E2.1) after data were seen, and the decision to keep E1 primary was made after the E2 results were known.') +
+      note('E1 stays primary. Trial-by-trial accounting: <a href="current/ADDITIONAL_FILE_12.md">Additional file 12</a>. E2 is post-hoc, defined and amended (E2.1) after data were seen, and the decision to keep E1 primary was made after the E2 results were known.') +
       table(['Body', 'E1 k / N', 'E1 Estimate [95% CI]', 'E2 k / N', 'E2 Estimate [95% CI]', 'E2 Certainty'], mainE2.map(m2 => {
         const m1 = primary.find(m => m.model_id === 'opioid24_' + m2.model_id.replace('E2_opioid24_', ''));
         return estTable(m2, m1);
@@ -139,19 +151,8 @@
     const ms=d.models.filter(m=>m.studies.split(';').map(x=>x.trim()).includes(s.report_id)),rs=d.rob.filter(r=>r.study===s.report_id),fs=window.ARTICLE_FIGURES?.[s.report_id]||[];
     return `<details><summary>${esc(s.report_id)} · ${esc(s.modality)}<br><small>${esc(s.comparator)} · randomized n=${s.randomized_n_report}; counted n=${s.randomized_n_counted}</small></summary><p>${esc(s.notes)}</p><p class="source">${esc(s.source_pdf)}<br>SHA-256: ${esc(s.source_sha256)}</p><p>Trial family: ${esc(s.trial_id)} · ${esc(s.n_source_excerpt)}</p><h3>Current models (${ms.length})</h3>${ms.length?modelTable(ms):note('No current quantitative contribution; retained inventory/eligibility/source hold is not an efficacy claim.')}<h3>Fresh result-specific assessments (${rs.length})</h3>${rs.length?table(['Result','Outcome','Overall'],rs.map(r=>[esc(r.result_id),esc(r.outcome),tag(r.overall)])):note('No fresh v38 assessment needed for a current non-sensitivity contribution. Historical assessments are not displayed as current study-wide judgments.')}<h3>Article figures (${fs.length})</h3><div class="figure-grid">${fs.map(f=>`<figure><button class="figure-open" data-src="${esc(f.src)}" data-caption="${esc(s.report_id+' · '+f.caption)}"><img src="${esc(f.src)}" loading="lazy" alt="${esc(s.report_id+' '+f.caption)}"></button><figcaption>${esc(f.caption)}</figcaption></figure>`).join('')}</div></details>`;}).join('');}
   function methods(){
-    const e2_html = d.e2_methods ? `<h3>Post-hoc E2 sensitivity analysis</h3>` + Object.entries(d.e2_methods).map(([h, text]) => {
-      let paras = text.split(/\n\n+/);
-      let t = paras.map(p => {
-        if(p.startsWith('- ')) {
-           let lis = p.split('\n').filter(l=>l.startsWith('- ')).map(l=>`<li>${esc(l.slice(2)).replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')}</li>`).join('');
-           return `<ul>${lis}</ul>`;
-        }
-        if(p.startsWith('> ')) {
-           return `<blockquote>${esc(p.replace(/^> /gm, '')).replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')}</blockquote>`;
-        }
-        return `<p>${esc(p).replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')}</p>`;
-      }).join('');
-      return `<details><summary>${esc(h)}</summary>${t}</details>`;
+    const e2_html = d.e2_methods_html ? `<h3>Post-hoc E2 sensitivity analysis</h3>` + Object.entries(d.e2_methods_html).map(([h, html]) => {
+      return `<details><summary>${esc(h)}</summary>${html}</details>`;
     }).join('') + `<p><a href="current/AMENDED_PRIMARY_ESTIMAND_E2.md" download>Full E2 definition</a> · <a href="current/E2_RESULTS.md" download>E2 results</a></p>` : '';
     return title('Methods and adopted decisions','Posthoc adjudication with results known. No reviewer approval is awaited for these decisions.')+d.policies.map(p=>`<details><summary>${esc(p.topic)} · ${esc(p.status)}</summary><p>${esc(p.decision)}</p></details>`).join('')+e2_html+`<h3>Search strategies</h3>${(window.SEARCH_STRATEGIES||[]).map(s=>`<details><summary>${esc(s.name)} · ${esc(s.date)} · ${s.hits} records</summary><p>${esc(s.platform)} · ${esc(s.status)}</p><pre>${esc(s.strategy_text)}</pre><p class="source">${esc(s.source)}</p></details>`).join('')}`+note('Current R/metafor and independent Python validation results are in Downloads. Reproduction establishes computational consistency, not source truth or exhaustive selection.');
   }

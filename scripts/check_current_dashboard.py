@@ -8,7 +8,7 @@ def checks(d):
     canonical=json.load(open(D/'04_MODELS/model_outputs.json'));spec=json.load(open(D/'02_DECISIONS/model_specifications.json'))
     active={i for s in spec if s['role']!='SENSITIVITY' for i in s['result_ids']}
     p=d['prisma'];rs=d['rob'];gs=d['grade']
-    return {
+    ret = {
       'current version':d['version']=='v38' and d['registration']=='CRD420261452908',
       'exact model estimates and membership':d['models']==canonical and d['specifications']==spec,
       'exact numerical input identity':d['inputs']==rows(D/'04_MODELS/model_inputs.csv'),
@@ -26,6 +26,48 @@ def checks(d):
       'QoR later-window identity':d.get('qor_later_models')==json.load(open(D/'08_QOR_ANALYSIS/qor_models_later.json')) if (D/'08_QOR_ANALYSIS/qor_models_later.json').exists() else True,
       'E2 methods integrity': d.get('e2_methods', {}).get('Timestamp note', '') == re.search(r'(\*\*Timestamp note[^\n]+(?:\n[^\n]+)+)', (D/'02_DECISIONS/v38/AMENDED_PRIMARY_ESTIMAND_E2.md').read_text(encoding='utf-8')).group(1).strip() if 'e2_methods' in d else True,
     }
+    
+    if 'e2_methods_html' in d:
+        import html as html_lib
+        def normalize_source(text):
+            text = re.sub(r'(?m)^---$', '', text)
+            text = re.sub(r'\*\*(.*?)\*\*', r'\g<1>', text, flags=re.DOTALL)
+            text = re.sub(r'`(.*?)`', r'\g<1>', text, flags=re.DOTALL)
+            text = re.sub(r'(?m)^-\s+', '', text)
+            text = re.sub(r'(?m)^\d+\.\s+', '', text)
+            text = re.sub(r'(?m)^>\s+', '', text)
+            return re.sub(r'\s+', ' ', text).strip()
+        def normalize_html(h):
+            h = h.replace('<p>', ' ').replace('</p>', ' ').replace('<ul>', ' ').replace('</ul>', ' ').replace('<li>', ' ').replace('</li>', ' ').replace('<blockquote>', ' ').replace('</blockquote>', ' ')
+            h = re.sub(r'<[^>]+>', '', h)
+            h = html_lib.unescape(h)
+            return re.sub(r'\s+', ' ', h).strip()
+            
+        e2_methods_text = (D/'02_DECISIONS/v38/AMENDED_PRIMARY_ESTIMAND_E2.md').read_text(encoding='utf-8')
+        def get_sec(txt, h, st=None):
+            pat = r'#+\s+' + re.escape(h) + r'\s*\n(.*?)(?=\n#|\Z)'
+            if st: pat = r'#+\s+' + re.escape(h) + r'\s*\n(.*?)(?=\n' + re.escape(st) + r'|\n#|\Z)'
+            return re.search(pat, txt, re.DOTALL).group(1).strip()
+        
+        expected_e2 = {
+            'Timestamp note': re.search(r'(\*\*Timestamp note[^\n]+(?:\n[^\n]+)+)', e2_methods_text).group(1).strip(),
+            'Why this document exists, stated plainly': get_sec(e2_methods_text, 'Why this document exists, stated plainly'),
+            'E1 — registered primary (retained, reported in full)': get_sec(e2_methods_text, 'E1 — registered primary (retained, reported in full)'),
+            'E2 — amended primary (post hoc)': get_sec(e2_methods_text, 'E2 — amended primary (post hoc)', st='### Admission rules'),
+            'Prespecified sensitivity analyses for E2': get_sec(e2_methods_text, 'Prespecified sensitivity analyses for E2'),
+            'Amendment E2.1 — 23 September 2026 (after E2 was applied to Tier B1)': get_sec(e2_methods_text, 'Amendment E2.1 — 23 September 2026 (after E2 was applied to Tier B1)'),
+            'Decision after the E2 run — 23 September 2026: E1 retained as primary': get_sec(e2_methods_text, 'Decision after the E2 run — 23 September 2026: E1 retained as primary')
+        }
+        
+        for k, v in expected_e2.items():
+            if normalize_html(d['e2_methods_html'].get(k, '')) != normalize_source(v):
+                ret['E2 HTML completeness'] = False
+                break
+        else:
+            ret['E2 HTML completeness'] = True
+
+    return ret
+
 def main(site=None):
     site=pathlib.Path(site or ROOT/'dashboard');data=json.load(open(site/'current_review.json'));c=checks(data)
     for name,ok in c.items():print(('PASS ' if ok else 'FAIL ')+name)
@@ -145,6 +187,11 @@ def main(site=None):
     if 'qor_later_models' in data:
         mutations.append(('QoR later-window identity',lambda d:d['qor_later_models'][0].__setitem__('effect',999)))
     mutations.append(('E2 methods integrity', lambda d: d['e2_methods'].update({'Timestamp note': 'Altered text'})))
+    if 'e2_methods_html' in data:
+        def drop_line(d):
+            val = d['e2_methods_html']['Decision after the E2 run — 23 September 2026: E1 retained as primary']
+            d['e2_methods_html']['Decision after the E2 run — 23 September 2026: E1 retained as primary'] = val.replace('precise than E1&#x27;s −7.70 (−10.62, −4.78).', '')
+        mutations.append(('E2 HTML completeness', drop_line))
     for key,mutate in mutations:
         x=copy.deepcopy(data);mutate(x);assert not checks(x)[key],f'Mutation escaped: {key}'
     

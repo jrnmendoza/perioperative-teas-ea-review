@@ -89,6 +89,58 @@ e2_methods_data['Amendment E2.1 — 23 September 2026 (after E2 was applied to T
 e2_methods_data['Decision after the E2 run — 23 September 2026: E1 retained as primary'] = get_sec(e2_methods_text, 'Decision after the E2 run — 23 September 2026: E1 retained as primary')
 data['e2_methods'] = e2_methods_data
 
+data['e2_methods_html'] = {}
+for h, text in e2_methods_data.items():
+    html_blocks = []
+    blocks = re.split(r'\n\n+', text.strip())
+    for block in blocks:
+        if block == "---":
+            continue
+        lines = block.split('\n')
+        
+        # Check if it is a list block
+        is_ul = lines[0].startswith('- ')
+        is_ol = re.match(r'^\d+\.\s', lines[0]) is not None
+        if is_ul or is_ol:
+            tag = 'ul' if is_ul else 'ol'
+            items = []
+            cur_item = []
+            for line in lines:
+                if line.startswith('- ') or re.match(r'^\d+\.\s', line):
+                    if cur_item:
+                        items.append(' '.join(cur_item))
+                    # Remove bullet/number prefix
+                    cur_item = [re.sub(r'^-\s+|^\d+\.\s+', '', line)]
+                elif line.strip():
+                    cur_item.append(line.strip())
+            if cur_item:
+                items.append(' '.join(cur_item))
+            
+            lis = []
+            for item in items:
+                esc_item = html.escape(item)
+                esc_item = re.sub(r'\*\*(.*?)\*\*', r'<strong>\1</strong>', esc_item)
+                esc_item = re.sub(r'`(.*?)`', r'<code>\1</code>', esc_item)
+                lis.append(f"<li>{esc_item}</li>")
+            html_blocks.append(f"<{tag}>{''.join(lis)}</{tag}>")
+            
+        elif lines[0].startswith('> '):
+            text_content = ' '.join([line[2:] if line.startswith('> ') else line.strip() for line in lines])
+            esc_item = html.escape(text_content)
+            esc_item = re.sub(r'\*\*(.*?)\*\*', r'<strong>\1</strong>', esc_item)
+            esc_item = re.sub(r'`(.*?)`', r'<code>\1</code>', esc_item)
+            html_blocks.append(f"<blockquote>{esc_item}</blockquote>")
+            
+        else:
+            text_content = ' '.join([line.strip() for line in lines if line.strip()])
+            esc_item = html.escape(text_content)
+            esc_item = re.sub(r'\*\*(.*?)\*\*', r'<strong>\1</strong>', esc_item)
+            esc_item = re.sub(r'`(.*?)`', r'<code>\1</code>', esc_item)
+            html_blocks.append(f"<p>{esc_item}</p>")
+            
+    data['e2_methods_html'][h] = ''.join(html_blocks)
+
+
 data['e2_labels']={
   'E2_TEAS_sham_LOO_Gu_2019': 'Leave out Gu 2019 (figure–text contradiction)',
   'E2_TEAS_sham_LOO_Lee_2011': 'Leave out Lee 2011 (Table 8 contradiction)',
