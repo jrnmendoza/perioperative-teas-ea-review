@@ -85,30 +85,8 @@
         return note(`Leave-one-out range: ${num(min)} to ${num(max)} mg.`);
     };
 
-    const opioidLimb = m => {
-        if (!m) return 'Not met';
-        if (m.ci_high < -10) return `Met (${num(m.effect)})`;
-        if (m.effect <= -10) return `Met by point estimate (${num(m.effect)}), k=${m.k}`;
-        return 'Not met';
-    };
-    const painLimb = m => {
-        if (!m || (m.effect > -10)) return '—';
-        if (m.body === 'EA vs sham') return 'Cannot be evaluated: Lin 2002 reports pain only in a figure (Fig. 1) and has no eligible ~24-h pain result; pain from other trials cannot supply the pairing.';
-        return 'Not met';
-    };
-    const jointText = m => {
-        if (!m || (m.effect > -10)) return 'Not met';
-        if (m.body === 'EA vs sham') return 'Cannot be evaluated';
-        return 'Not met';
-    };
     const e2PainConstant = 'As stated in E2_RESULTS.md, digitising Lin 2002 Fig. 1 has not been done and would be a further post-hoc decision.';
-
-    const jointRows = [
-        'TEAS vs sham', 'TEAS vs usual care', 'EA vs sham', 'EA vs usual care'
-    ].map(b => {
-        const m = mainE2.find(x => x.body === b);
-        return [b, opioidLimb(m), painLimb(m), jointText(m)];
-    });
+    const jointRows = (d.e2_joint || []).map(j => [j.body, j.opioid_limb, j.pain_limb, j.joint_criterion]);
 
     return `<h3>E2 post-hoc sensitivity analysis</h3>` +
       note('E1 stays primary. E2 is post-hoc, defined and amended (E2.1) after data were seen, and the decision to keep E1 primary was made after the E2 results were known.') +

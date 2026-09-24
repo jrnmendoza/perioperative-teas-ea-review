@@ -1,64 +1,110 @@
-# Current state of the TEAS/EA review: adjudication v36
+# Current state — adjudication v38
 
-16 September 2026 · branch `astra-final-resolution` · base `035ed97`; v36 committed as `dbb15df`–`3e56991` and merged into `main` via PR #23
+20 September 2026 · PROSPERO CRD420261452908 · current analytical release adopted under user delegation. All decisions are posthoc with results known.
 
-## Data lock: NOT ALLOWED
+## Completed
 
-The adjudication layer is internally consistent, source-traceable for the primary construct, and numerically reproducible. The review is **not ready for data lock**. Three things block it:
+- Wu2016 citation route recorded; all 225 full-text/citation records reconciled locally. 70 included reports / 69 operational families.
+- 94 fresh exact-result RoB assessments across 40 reports, including all 90 currently non-sensitivity component results. Unique v38 IDs and source locators; historical records preserved.
+- All 38 GRADE recommendations reviewed: 11 Low, 4 Not rated — insufficient evidence, 18 Very low, 5 Moderate.
+- Methodological choices adopted; no further reviewer approval awaited. Prior human completion is user-reported; new decisions are AI-conducted.
+- Zheng continuous data held from main models; Wu2025 pre-intervention dose removed from causal synthesis and retained as diagnostic.
+- Local dashboard now reads canonical v38 data; article-figure assets preserved. No publication/deployment authorized.
 
-1. **Completeness.** 122 full texts were excluded as "wrong outcomes" under a primary-outcome screening rule, but registered eligibility admits any eligible outcome. Mechanical triage flags 84 of them for priority re-screening.
-2. **PRISMA provenance.** Six included reports, among them Szmit 2021, the sole principal TEAS/sham opioid contributor, are still marked "excluded" in Covidence, and the reason counts in the PRISMA figure do not match the records.
-3. **Sign-off gaps.** No human sign-off exists for GRADE or RoB 2 linkage, most secondary-body results lack exact RoB 2 assessments, and the registration identifier is unconfirmed.
+## Primary conclusion unchanged
 
-The dashboard is stale and must not be rebuilt from v36 data yet; since 17 Sep 2026 it carries a provisional banner (`dcd8f23`) warning readers not to cite it. Details: `10_FINAL_ADJUDICATION/06_REPORTS/UNRESOLVED_HUMAN_DECISIONS.md`.
+| Body | k | N | MD mg IV MME (95% CI) | Certainty |
+|---|---:|---:|---|---|
+| opioid24_TEAS_sham | 1 | 48 | -7.70 (-10.62, -4.78) | Low |
+| opioid24_EA_sham | 0 | 0 | No eligible data | Not rated — insufficient evidence |
+| opioid24_TEAS_usual | 1 | 47 | -8.00 (-10.92, -5.08) | Low |
+| opioid24_EA_usual | 2 | 159 | -6.83 (-76.39, 62.73) | Very low |
 
-## Which files are authoritative
+No body establishes the registered joint criterion (≥10mg sparing with paired ~24h pain upper CI <+1). Szmit has discharge rather than eligible fixed-24h pain; separate pain studies do not provide the missing pairing.
 
-| Role | Files |
-|---|---|
-| **Current (v36)** | `10_FINAL_ADJUDICATION/01–06` and `code/`; root `FINAL_TRIAL_REPORT_MAPPING.csv`, `FINAL_PARTICIPANT_LEDGER.csv`, `FINAL_PRIMARY_OUTCOME_TRACEABILITY.csv`, `FINAL_MODEL_MEMBERSHIP_MATRIX.csv`, `FINAL_RESULT_ROB2_LINKAGE.csv`, `FINAL_GRADE_RECOMMENDATIONS.md`; decision records `ASTRA_FINAL_PROTOCOL_RECONCILIATION.md`, `FINAL_PROSPERO_CURRENT_REVIEW_MATRIX.md`, `FINAL_PRIMARY_SOURCE_DECISIONS.md`, `FINAL_MME_CONVERSION_POLICY.md`, `FINAL_MME_CONVERSIONS.csv` |
-| **Historical, not current** | `ASTRA_SCIENTIFIC_AUDIT.md`, `ASTRA_AUDIT_ISSUES.csv`, `ASTRA_VERIFICATION_AUDIT.md` (initial findings, still valid as findings); `ASTRA_FINAL_LOCK_REPORT.md`, `FINAL_DATA_LOCK_CHECKLIST.md`, `ASTRA_IMPLEMENTATION_PLAN.md`, `ASTRA_REMEDIATION_CHANGELOG.md`, `ASTRA_POST_REMEDIATION_INTEGRITY.md`, `ASTRA_PROSPERO_REMEDIATION_EVIDENCE.md` (13 Sep blocked pre-adjudication run: "no decisions implemented", k=4/k=7 estimates); copies in `00_STARTING_STATE/`; `06_FINAL_ANALYSIS_V26`, `07_TIERED_V33`, `08_V33_MASTER`, `09_V34_*`; `dashboard/`, `_site/` |
-| **Superseded** | `10_FINAL_ADJUDICATION/05_REPRODUCTION/superseded_2026-09-13T1306_pre_final_membership/`: its 554/554 metafor PASS predated the committed model inputs and certified a different membership |
+## What remains a limitation, not an approval queue
 
-The "FINAL" filename prefix does not signal approval. Every adjudication decision was made after results were known.
+The 12-reference import gap lacks record-level mapping; upstream deduplication can be reconciled arithmetically but not fully replayed. Historical outcome-focused exclusions leave review-wide completeness uncertain. The user withdrew re-screening; no screening package or reviewer approval is awaited. Source ambiguities remain explicit holds/diagnostics. These limitations prevent claiming that numerical reproducibility certifies source truth or exhaustive evidence selection.
 
-## Contradictions found and dispositions
+Eleven author queries were SENT on 2026-09-22 by the review author (Jin 2023, Xie 2014, Yeh 2010/2011, Ntritsou 2014, Chen 1998, Lee 2011, Lin 2002, Sim 2002, Coura 2011); Coura 2011 hard-bounced (undelivered); four drafted queries remain UNSENT (El-Rakshy 2009, Zheng 2025, He 2026 breast, Long 2025). No reply recorded; no analysis depends on one. Log: `10_FINAL_ADJUDICATION/02_DECISIONS/v38/author_query_log.csv`. Covidence was not edited. No commit, push or public deployment performed. Any submission manuscript must disclose AI-assisted adjudication, posthoc choices, selection chronology and source holds.
 
-| Contradiction | Disposition |
-|---|---|
-| Lock report (13 Sep): "no human decisions implemented; existing k=4 TEAS/sham −13.99" vs adjudication layer: TEAS/sham k=1 −7.7 | Lock report is the historical blocked run. The adjudication layer was produced under the later user authorization in `00_STARTING_STATE/user_authorization.txt` and `run_identity.json`. |
-| Committed HEAD registry labels Huang 2017 EA; HEAD results label it TEAS | Source is unambiguous TEAS (surface electrodes, HANS-200A, "non-invasive"). The user's edit (uncommitted at the start of v36, now `dbb15df`) is retained and makes the chain consistent. |
-| `statistical_policy.md` cites an independent metafor 5.0-1 reproduction | That reproduction was stale (above). Regenerated with metafor 5.2-1: 68 models, 731 fields, 0 failures. |
-| Pan 2023 and Liang 2021 no-stimulation controls sat in sham bodies; Xiong 2021's electrode sham sat in a usual-care body | Corrected with source quotes (v36 C1–C3). Every membership now passes a comparator gate. |
-| Seven study-level comparator labels contradicted source-verified result classes | Corrected with quotes; the other 63 flagged LEGACY |
-| GRADE rationale text named only some High-RoB trials (pain rest, flatus EA/usual); nausea/vomiting 48 h text said "linkage incomplete" when linked | Text corrected; certainty unchanged |
-| He 2026 48-h value cited the SAP (sm8842) instead of the eTables (sm8843) | Label corrected; eTables preserved byte-identically in `01_SOURCE_EVIDENCE/supplements/` |
-| Zheng 2025 printed mean (SD) cannot produce its printed P values (new) | Values unchanged; three leave-out diagnostics added; bowel-sounds GRADE Low→Very low (reviewer to confirm) |
+## Current files
 
-## Primary construct (all delivered systemic opioid, end of surgery–24 h, mg IV MME)
+`10_FINAL_ADJUDICATION/03_CANONICAL`, `04_MODELS`, the root FINAL result/membership/participant tables, `02_DECISIONS/v38`, and dashboard/current_review data are authoritative. Earlier v26–v37 snapshots/reports remain historical. v38 baseline preserves pre-existing user dashboard/article-figure work.
 
-| Body | Role | k | N | MD (95% CI) | GRADE (ASTRA recommendation) |
-|---|---|---:|---:|---|---|
-| TEAS vs sham | Principal | 1 (Szmit 2021) | 48 | −7.70 (−10.62 to −4.78), single-study contrast | Low |
-| EA vs sham | Principal | 0 | 0 | No eligible absolute 24-h systemic data | Not rated |
-| TEAS vs usual care | Supportive | 1 (Szmit 2021, separate arm) | 47 | −8.00 (−10.92 to −5.08), single-study contrast | Very low |
-| EA vs usual care | Supportive | 2 (El-Rakshy 2009, Seevaunnamtum 2016) | 159 | −6.83 (−76.39 to 62.73), REML + safeguarded HK | Very low |
+74 estimands defined; 69 fitted, 33 pooled, five empty (four non-sensitivity plus one sensitivity). 761 canonical results; 177 model inputs. 12,103 is an operational randomized count, not an analysed efficacy population. Analyzed N is model-specific.
 
-No body meets the registered clinical criterion. No point estimate reaches −10 mg, and none of these trials contributes an eligible ~24-h pain result: Szmit's VAS is adjudicated as discharge pain, and the TEAS/sham rest-pain body (upper CI 0.33) comes from different trials. Chen 1998, Chen 2020, He 2026 hepatectomy, Yang 2024, Lin 2002, Lee 2011, Sim 2002 and Coura 2011 contribute only to labelled sensitivity or diagnostic models, never to primary results. All 22 primary-construct rows were verified literally against source text or registered supplements (`06_REPORTS/PRIMARY_EVIDENCE_TABLE.md`). v36 changed none of these four bodies.
+Numerical/integrity verification: `10_FINAL_ADJUDICATION/06_REPORTS/REPRODUCIBILITY_REPORT.md`. Full change comparison: `model_comparison_v38.csv`.
 
-## Participant accounting
+## Outcome-coverage addendum — 20 September 2026
 
-70 reports; 69 operational trial units (Yeh 2010/2011 held as one probable-overlap family, counted once and excluded from models); 12,103 randomized participants as an operational count with a Yeh lower bound. That figure is **not** an analyzed or efficacy population, and the dashboard's 10,618 remains unsupported. Analyzed N is body-specific (see manifest). 48 of 70 reports contribute to at least one model.
+The available-source coverage check covers all 70 included report texts. It identifies 16 QoR reports, 9 satisfaction/willingness reports, 2 additional quality-of-life reports and 2 additional acceptability reports. The 32 safety-relevant entries distinguish nonzero reactions, explicit zero statements, limited reporting and all-cause outcomes without established intervention attribution. No eligible opioid-use result beyond 30 days was located.
 
-## What was verified in v36
+See [outcome coverage report](10_FINAL_ADJUDICATION/07_OUTCOME_COVERAGE/OUTCOME_COVERAGE_REPORT.md). The subsequent QoR analytical addendum below completes three approximately-24-hour bodies and their exact-result RoB/GRADE; the coverage report preserves its earlier audit status. The v38 74-model/38-GRADE analytical state above is unchanged. Its verification does not certify this new addendum; separate source/hash checks accompany the coverage report.
 
-- Pre-edit committed state regenerated byte-identically (15/15 files); v36 chain deterministic (21/21 outputs).
-- Independent validator (`code/validate_adjudication.py`, separate REML algorithm and input re-derivation) passes all 8 check groups. It fails on committed HEAD and on injected 1%/0.001 perturbations, so it can detect errors.
-- metafor cross-check: 0 failures.
-- 70 source PDFs, the PROSPERO PDF and the supplement copy hash-verified; 349 source files unchanged; no destructive commands; user edits preserved.
+## QoR analytical addendum — 20 September 2026
 
-See `06_REPORTS/REPRODUCIBILITY_REPORT.md`, `GRADE_ROB2_RECONCILIATION.md`, `PRISMA_REPORT_TRIAL_ACCOUNTING.md`, `MODEL_MEMBERSHIP_ANALYSIS_MANIFEST.md` and `CHANGELOG_v36.md`.
+Frozen v38 core unchanged: 74 models, 38 GRADE bodies, 94 assessments. This addendum adds 3 main models, 9 diagnostics, 3 grades and 8 exact-result assessments.
 
-## Reporting requirements that remain in force
+| Comparison (~24 h) | k | Reported analysis N | MD (95% CI), points | I² | Certainty |
+|---|---:|---:|---|---:|---|
+| QoR-40: TEAS versus sham, ~24 h | 2 | 131 | 10.19 (-13.26 to 33.63) | 0.0% | Very low |
+| QoR-40: TEAS versus usual care, 24 h | 2 | 175 | 4.34 (-19.12 to 27.81) | 78.5% | Very low |
+| QoR-15: TEAS versus sham, ~24 h | 4 | 327 | 7.49 (-0.71 to 15.68) | 80.1% | Very low |
 
-Disclose that the protocol identifier is unconfirmed and that CRD420251090635 belongs to a similar review; all adjudication occurred after results were known; the 14 Aug screening rule versus the 20 Aug registered eligibility; re-inclusions outside Covidence; source contradictions (Chen 2020, He 2026 ×2, El-Rakshy 2009, Zheng 2025, Yeh); IV-MME unit uncertainty; and that k=1 and k=2 bodies are very uncertain. Do not present a diagnostic sensitivity as a primary result, and do not describe the reproducible calculations as validating source truth or completeness.
+Very low certainty for all three comparisons. A clinically important improvement is not established; absence of benefit is not demonstrated. Wu 2025: reported ITT n=50/50, observed completers 48/49; missing-data handling unexplained. Omission and denominator-only diagnostics provided.
+
+Later QoR windows, unavailable supplements, median/range-only reports and source conflicts remain separate; no pooled EA or all-instrument effect.
+
+Source: [QoR analysis report](10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/QOR_ANALYSIS_REPORT.md). The registered joint opioid/pain conclusion is unchanged.
+
+## Deliverable status — corrected 20 September 2026
+
+An earlier version of this section claimed completion of several deliverables
+that had not been produced. It was corrected after a read-only verification
+pass. The record below states what exists on disk.
+
+**Completed**
+
+- **Later-window QoR synthesis.** Six models in `08_QOR_ANALYSIS/qor_models_later.csv`:
+  QoR-40 TEAS/sham POD2 (k=1, N=60); QoR-40 TEAS/usual care 48 h (k=1, N=70);
+  QoR-15 TEAS/sham POD2 (k=1, N=97); QoR-15 TEAS/sham POD3 (k=2, N=130) with two
+  leave-one-out diagnostics. Instrument, modality, comparator and window are kept
+  separate; single-study bodies use normal intervals and are not described as
+  pooled. Five exact-result RoB assessments, 110 signalling answers and 25 source
+  locators accompany them.
+- **Manuscript Results, Discussion, Abstract and Conclusions** drafted in
+  `manuscript/`, corrected 20 September 2026 to report k and N for every body, to
+  include the ~24-hour pain co-outcome, and to cover the additional outcome
+  families that the first draft omitted.
+- **24-hour QoR and v38 core preserved unchanged.** 74 models, 38 GRADE bodies,
+  94 assessments; the three 24-hour QoR estimates are byte-identical to the
+  handover record.
+
+**Not completed — outstanding**
+
+- **GRADE for the four new later-window QoR bodies.** `qor_grade.csv` covers only
+  the three 24-hour bodies. The later-window results are reported in the
+  manuscript as ungraded, and must not be presented as certainty-rated evidence
+  until domain judgements exist.
+- **Structured length-of-stay, PACU, extubation and mobilisation tables.**
+  `10_FINAL_ADJUDICATION/los_audit.md` and `los_exact.md` contain located source
+  excerpts only. They are not structured narrative tables: they do not separate
+  total hospital stay from postoperative stay from PACU stay, carry no
+  definition/unit/time-point/comparator columns, and do not distinguish
+  reported-but-unusable outcomes from outcomes not located.
+- **Finalised harms and satisfaction tables.** No new harms/satisfaction
+  deliverable was produced. The dispositions — including the Gu 2019 count/prose
+  conflict and the Liu 2026 ESD mean-rank ambiguity — remain where they were
+  already documented, in `07_OUTCOME_COVERAGE/OUTCOME_COVERAGE_REPORT.md` and
+  `safety_evidence.csv`. No composite adverse-event risk ratio was calculated,
+  and none should be.
+- **Reference registry and claim-citation audit extension.**
+  `references/reference_registry.csv` and `claim_citation_audit.csv` are
+  unchanged by this work; placeholders in the manuscript are unresolved.
+
+**Holds retained, not resolved.** Chen 2015, Gao 2022, Grech 2016, He 2026
+hepatectomy, Lu 2022, Huang 2025, Zheng 2025 and Zhu 2022 remain held from
+quantitative QoR synthesis on the grounds recorded in
+`08_QOR_ANALYSIS/QOR_ANALYSIS_REPORT.md`. None contributed to any model. A hold
+is a completed disposition; it is not a resolved data gap.

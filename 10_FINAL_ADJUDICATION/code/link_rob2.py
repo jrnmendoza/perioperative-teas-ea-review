@@ -31,6 +31,10 @@ def equal(a,b):
 # was rejected: identical counts but a different outcome (vomiting vs rescue bucinnazine).
 manual={'V33-OD-0379':'AF26-F-intra-013','AUDIT-0364':'AF26-F-intra-012','V33-OD-0328':'AF26-SONG20-POSTLOCK-C'}
 byid={z['assessment_id']:z for z in reg}
+fresh=loadcsv('10_FINAL_ADJUDICATION/02_DECISIONS/v38/rob2_assessments.csv')
+fresh_by={z['result_id']:z for z in fresh}
+assert len(fresh_by)==len(fresh)==94
+reg.extend(fresh)
 out=[]
 for r in rows:
  candidates=[z for a,z in af if a['study']==r['study'] and a['comparison_id']==r['comparison_id'] and equal(a,r)]
@@ -42,6 +46,11 @@ for r in rows:
   rule='v36 reviewed exact match: same study/outcome/window/denominators/arm statistics; only comparison-ID scheme differs.'+(' v26 rest-pain label not source-supported; setting remains unspecified.' if r['result_id']=='V33-OD-0328' else '')
  alt=[z['assessment_id'] for z in candidates if not selected or z['assessment_id']!=selected['assessment_id']]
  z=dict(result_id=r['result_id'],outcome=r['outcome'],timepoint=r['window'],contrast=r['comparison_id'],population=r['population'],n_i=r['n_i'],n_c=r['n_c'],rob2_assessment_id=selected['assessment_id'] if selected else '',linkage_status='LINKED EXISTING RESULT ASSESSMENT' if selected else 'UNLINKED — no exact existing assessment established',overall=selected['overall'] if selected else 'UNLINKED',**{f'd{j}':selected[f'd{j}'] if selected else '' for j in range(1,6)},selection_rule=rule,alternative_assessments=';'.join(alt),provenance=selected['source'] if selected else 'Study-level record retained only as background; not an exact-result assessment.',human_final_signoff='NOT INDEPENDENTLY DOCUMENTED',models=r['models'])
+ if r['result_id'] in fresh_by:
+  a=fresh_by[r['result_id']]
+  assert a['study']==r['study'] and a['outcome']==r['outcome'] and a['window']==r['window']
+  assert a['population']==str(r['n_i'])+'/'+str(r['n_c'])
+  z.update(rob2_assessment_id=a['assessment_id'],linkage_status='V38 AI-CONDUCTED EXACT RESULT ASSESSMENT',overall=a['overall'],**{f'd{j}':a[f'd{j}'] for j in range(1,6)},selection_rule='Fresh delegated source-based assessment; exact study/outcome/window/contrast/population. Historical judgments retained, not silently endorsed.',provenance=a['source'],human_final_signoff=a['human_signoff_date'],alternative_assessments=';'.join(filter(None,[z['rob2_assessment_id'],z['alternative_assessments']])))
  out.append(z)
 save('FINAL_RESULT_ROB2_LINKAGE.csv',out);save('10_FINAL_ADJUDICATION/02_DECISIONS/existing_rob2_assessments.csv',reg)
 print('Exact linked',sum(bool(r['rob2_assessment_id']) for r in out),'of',len(out),'unique canonical results')

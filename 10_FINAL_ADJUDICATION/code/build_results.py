@@ -134,14 +134,19 @@ add('ponv24_TEAS_broad_sham_sensitivity',ids([27,33,130,131,168,195,215,257,261,
 for s in list(spec):
  if s['construct']=='time_first_flatus':
   d=copy.deepcopy(s);d.update(model_id=s['model_id']+'_SMD_sensitivity',measure='SMD',role='SENSITIVITY',unit='Hedges g',note='Same construct and membership as hours MD; no selection by I² or P.');spec.append(d)
-# v36: Zheng2025 printed mean(SD) values imply far smaller P values than printed (flatus P=0.003, borborygmus P=0.035,
-# remifentanil P=0.031); treating them as SE does not reproduce the P values either. Printed values retained unchanged;
-# mandatory leave-out diagnostics show consequence. Membership is not changed on the basis of P values.
+# v38: Hold internally unreconciled continuous Zheng results from main bodies.
+# This is a source-validity/construct decision, not selection for significance.
+# Wu2025 PACU treatment cannot affect a dose delivered before randomization.
 ZHENG={'AUDIT-0347','AUDIT-0346','V33-OD-0034'}
 for base in ['flatus_TEAS_sham','bowelsounds_TEAS_sham','intraop_remifentanil_TEAS_sham']:
  s=next(z for z in spec if z['model_id']==base);d=copy.deepcopy(s)
- d.update(model_id=base+'_without_Zheng2025',result_ids=[i for i in s['result_ids'] if i not in ZHENG],role='SENSITIVITY',note='Leave-out diagnostic: Zheng2025 printed SD/P internal inconsistency unresolved; not a replacement body.')
- assert len(d['result_ids'])==len(s['result_ids'])-1;spec.append(d)
+ d.update(model_id=base+'_with_Zheng2025_as_printed',result_ids=[i for i in s['result_ids'] if i!='V33-OD-0078'],role='SENSITIVITY',note='Source-uncertainty diagnostic: adds Zheng2025 as printed; unresolved dispersion/P inconsistencies and flatus/stool definition. Not efficacy evidence. Wu2025 pre-intervention dose remains excluded.')
+ s['result_ids']=[i for i in s['result_ids'] if i not in ZHENG and i!='V33-OD-0078']
+ s['note']+=' v38: Zheng continuous data held for unresolved source inconsistency; no inferred SD corrections. Wu2025 pre-intervention dose excluded where relevant.'
+ spec.append(d)
+for s in spec:
+ if s['model_id']=='flatus_TEAS_sham_SMD_sensitivity':s['result_ids']=[i for i in s['result_ids'] if i not in ZHENG]
+add('intraop_remifentanil_Wu2025_preintervention_diagnostic',ids([78]),'pre_intervention_intraop_remifentanil','TEAS','sham','SENSITIVITY',unit='µg remifentanil',note='Wu2025 allocation and treatment start in PACU AFTER intraoperative dose. Negative-control/baseline diagnostic only; cannot estimate treatment efficacy.')
 
 def combine_arm(g):
  z=copy.deepcopy(g[0]);assert len(set((r['n_c'],r['mean_c'],r['sd_c'],r['events_c']) for r in g))==1,'Control mismatch '+str(g)
@@ -164,7 +169,9 @@ for s in spec:
   r['models']+=';'+s['model_id'];r['decision']='INCLUDE' if s['role']!='SENSITIVITY' or r['decision']=='INCLUDE' else 'SENSITIVITY';r['rationale']=s['note']
   decisions.append(dict(result_id=id,model_id=s['model_id'],decision='SENSITIVITY' if s['role']=='SENSITIVITY' else 'INCLUDE',construct=s['construct'],window=r['window'],modality=s['modality'],comparator=s['comparator'],population=r['population'],rationale=s['note'],factor=f))
  for trial,g in group.items():
-  x=combine_arm(g);x.update(model_id=s['model_id'],measure=s['measure'],construct=s['construct'],role=s['role'],analysis_unit=s['unit'],comparator_class=s['comparator'])
+  # v37: export per-model metadata, not the stale pre-admission canonical snapshot.
+  # Numeric inputs and membership are unchanged; combined rows retain their component IDs.
+  x=combine_arm(g);x.update(model_id=s['model_id'],measure=s['measure'],construct=s['construct'],role=s['role'],analysis_unit=s['unit'],comparator_class=s['comparator'],decision='SENSITIVITY' if s['role']=='SENSITIVITY' else 'INCLUDE',models=s['model_id'],rationale=s['note'])
   if s['measure']=='RR':
    a,c=x['events_i'],x['events_c'];ni,nc=x['n_i'],x['n_c'];assert a is not None and c is not None and 0<=a<=ni and 0<=c<=nc
    if (a==0 and c==0) or (a==ni and c==nc):continue

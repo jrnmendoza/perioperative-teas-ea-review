@@ -105,6 +105,14 @@ if any(s['modality'] not in ('TEAS', 'EA') for s in spec):
     fails.append('model without single modality')
 record('membership_semantics', fails, n)
 
+# v37: exported input metadata must describe the specific model, not an earlier snapshot.
+fails = []
+for r in inputs:
+    expected = 'SENSITIVITY' if r['role'] == 'SENSITIVITY' else 'INCLUDE'
+    if r['decision'] != expected or r['models'] != r['model_id']:
+        fails.append(f"{r['model_id']}/{r['result_id']}: stale decision/models metadata")
+record('input_metadata', fails, len(inputs))
+
 # 4. Independent re-derivation of model inputs (arm combination, factors, effect sizes).
 def combine(rows):
     if len(rows) == 1:
@@ -299,3 +307,5 @@ for name, c in checks.items():
     for x in c['failures'][:10]:
         print('     -', x)
 print('OVERALL', summary['overall'], json.dumps(summary['counts']))
+if summary['overall'] != 'PASS':
+    raise SystemExit(1)

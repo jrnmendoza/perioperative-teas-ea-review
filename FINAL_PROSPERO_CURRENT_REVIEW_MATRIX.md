@@ -1,10 +1,16 @@
 # PROSPERO → final review matrix
 
-All registered specifications below come from the supplied version 1.0, not from a preview. “Prior” describes v26/v33/v34; “final” describes the adjudicated layer. Timing of this reconciliation: 13 September 2026, after results were known.
+## v38 current execution status — 20 September 2026
+
+The registered specifications below remain the protocol comparison. Current execution supersedes v37 wording about missing linkage, awaiting approval and an untouched dashboard: Wu 2016 is user-confirmed citation evidence; all 225 selection records have reconciled local dispositions; 94 fresh AI-conducted exact-result RoB assessments cover all 90 current non-sensitivity components; all 38 GRADE bodies are reviewed/adopted under delegation. Methodological choices are adopted in `10_FINAL_ADJUDICATION/02_DECISIONS/v38/METHODOLOGICAL_DECISIONS.md`. The local dashboard reads v38. No reviewer approval or re-screening package is awaited; prior human completion is user-reported. Source/selection limitations remain, including the unmapped 12-reference import gap. No Covidence edit or public deployment is implied.
+
+New posthoc decisions: Zheng2025 continuous results held from main bodies, with unchanged as-printed diagnostics retained; Wu2025 intraoperative remifentanil preceded PACU allocation/treatment and is diagnostic only. Registered primary numerical estimates and joint clinical threshold are unchanged.
+
+All registered specifications below come from the supplied version 1.0, not from a preview. “Prior” describes v26/v33/v34; “final” describes the adjudicated layer. Timing of the original reconciliation: 13 September 2026, after results were known. Identity externally verified on 20 September 2026: [CRD420261452908](https://www.crd.york.ac.uk/PROSPERO/view/CRD420261452908); see `10_FINAL_ADJUDICATION/02_DECISIONS/v37_external_verification.md`.
 
 |Protocol item|Registered specification|Current implementation|Classification|Timing|Impact|Required disclosure|
 |---|---|---|---|---|---|---|
-|Identity|Supplied title, four authors, 19/20 August 2026, v1.0|Own identifier absent; similar-review ID removed from current claims|UNRESOLVED|Identifier previously displayed|Bibliographic, non-blocking|REGISTRATION IDENTIFIER DISCREPANCY; do not assign a similar review's number|
+|Identity|Supplied title, four authors, 19/20 August 2026, v1.0|Official public record CRD420261452908 matches title, authors, submission/registration dates and v1.0 history|VERIFIED 20 Sep 2026; A3 CLOSED|Verification after results known|Bibliographic only; no numerical impact; dashboard left untouched|Use CRD420261452908, not the similar-review identifier CRD420251090635; do not infer prospective conduct|
 |Population|Adults under general anaesthesia; GA + regional allowed|Source anaesthesia determines eligibility; unverified cases held from inference|MATCH|Final source reconciliation|Prevents unsupported inclusion|Report any source eligibility holds|
 |Intervention|Surface TEAS; inserted-needle EA; first session by 24 h|Physical classification; Yeh surface TEAS; ambiguous method held|OPERATIONAL CLARIFICATION|Post-registration|Changes historical labels|Report definitions and ambiguous cases|
 |Primary opioid|All delivered systemic opioid end surgery–24 h, IV MME|Verified systemic body; PCA/rescue/basis uncertainty in separate sensitivities|OPERATIONAL CLARIFICATION|Post-registration, results known|Substantially narrows principal membership|Explicitly report all omissions and expanded sensitivities|
