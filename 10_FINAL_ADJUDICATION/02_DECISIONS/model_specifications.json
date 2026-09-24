@@ -709,8 +709,7 @@
       "V33-OD-0062",
       "AUDIT-0251",
       "AUDIT-0252",
-      "AUDIT-0253",
-      "AUDIT-0347"
+      "AUDIT-0253"
     ],
     "construct": "time_first_flatus",
     "modality": "TEAS",
@@ -718,7 +717,7 @@
     "role": "ADDITIONAL",
     "measure": "MD",
     "unit": "hours",
-    "note": "Source construct/window/contrast reviewed; direct data admitted.",
+    "note": "Source construct/window/contrast reviewed; direct data admitted. v38: Zheng continuous data held for unresolved source inconsistency; no inferred SD corrections. Wu2025 pre-intervention dose excluded where relevant.",
     "combine": true,
     "factor": 1
   },
@@ -774,8 +773,7 @@
     "model_id": "bowelsounds_TEAS_sham",
     "result_ids": [
       "V33-OD-0222",
-      "AUDIT-0173",
-      "AUDIT-0346"
+      "AUDIT-0173"
     ],
     "construct": "time_first_bowel_sounds",
     "modality": "TEAS",
@@ -783,7 +781,7 @@
     "role": "ADDITIONAL",
     "measure": "MD",
     "unit": "hours",
-    "note": "Source construct/window/contrast reviewed; direct data admitted.",
+    "note": "Source construct/window/contrast reviewed; direct data admitted. v38: Zheng continuous data held for unresolved source inconsistency; no inferred SD corrections. Wu2025 pre-intervention dose excluded where relevant.",
     "combine": true,
     "factor": 1
   },
@@ -942,9 +940,7 @@
   {
     "model_id": "intraop_remifentanil_TEAS_sham",
     "result_ids": [
-      "V33-OD-0034",
       "V33-OD-0072",
-      "V33-OD-0078",
       "V33-OD-0128",
       "V33-OD-0129",
       "V33-OD-0232",
@@ -956,7 +952,7 @@
     "role": "ADDITIONAL",
     "measure": "MD",
     "unit": "\u00b5g remifentanil",
-    "note": "v36: Pan2023 and Liang2021 no-stimulation controls moved to usual-care body.",
+    "note": "v36: Pan2023 and Liang2021 no-stimulation controls moved to usual-care body. v38: Zheng continuous data held for unresolved source inconsistency; no inferred SD corrections. Wu2025 pre-intervention dose excluded where relevant.",
     "combine": true,
     "factor": {
       "V33-OD-0128": 1000,
@@ -1143,8 +1139,7 @@
       "V33-OD-0062",
       "AUDIT-0251",
       "AUDIT-0252",
-      "AUDIT-0253",
-      "AUDIT-0347"
+      "AUDIT-0253"
     ],
     "construct": "time_first_flatus",
     "modality": "TEAS",
@@ -1205,7 +1200,7 @@
     "factor": 1
   },
   {
-    "model_id": "flatus_TEAS_sham_without_Zheng2025",
+    "model_id": "flatus_TEAS_sham_with_Zheng2025_as_printed",
     "result_ids": [
       "V33-OD-0028",
       "V33-OD-0082",
@@ -1215,7 +1210,8 @@
       "V33-OD-0062",
       "AUDIT-0251",
       "AUDIT-0252",
-      "AUDIT-0253"
+      "AUDIT-0253",
+      "AUDIT-0347"
     ],
     "construct": "time_first_flatus",
     "modality": "TEAS",
@@ -1223,15 +1219,16 @@
     "role": "SENSITIVITY",
     "measure": "MD",
     "unit": "hours",
-    "note": "Leave-out diagnostic: Zheng2025 printed SD/P internal inconsistency unresolved; not a replacement body.",
+    "note": "Source-uncertainty diagnostic: adds Zheng2025 as printed; unresolved dispersion/P inconsistencies and flatus/stool definition. Not efficacy evidence. Wu2025 pre-intervention dose remains excluded.",
     "combine": true,
     "factor": 1
   },
   {
-    "model_id": "bowelsounds_TEAS_sham_without_Zheng2025",
+    "model_id": "bowelsounds_TEAS_sham_with_Zheng2025_as_printed",
     "result_ids": [
       "V33-OD-0222",
-      "AUDIT-0173"
+      "AUDIT-0173",
+      "AUDIT-0346"
     ],
     "construct": "time_first_bowel_sounds",
     "modality": "TEAS",
@@ -1239,15 +1236,15 @@
     "role": "SENSITIVITY",
     "measure": "MD",
     "unit": "hours",
-    "note": "Leave-out diagnostic: Zheng2025 printed SD/P internal inconsistency unresolved; not a replacement body.",
+    "note": "Source-uncertainty diagnostic: adds Zheng2025 as printed; unresolved dispersion/P inconsistencies and flatus/stool definition. Not efficacy evidence. Wu2025 pre-intervention dose remains excluded.",
     "combine": true,
     "factor": 1
   },
   {
-    "model_id": "intraop_remifentanil_TEAS_sham_without_Zheng2025",
+    "model_id": "intraop_remifentanil_TEAS_sham_with_Zheng2025_as_printed",
     "result_ids": [
+      "V33-OD-0034",
       "V33-OD-0072",
-      "V33-OD-0078",
       "V33-OD-0128",
       "V33-OD-0129",
       "V33-OD-0232",
@@ -1259,12 +1256,27 @@
     "role": "SENSITIVITY",
     "measure": "MD",
     "unit": "\u00b5g remifentanil",
-    "note": "Leave-out diagnostic: Zheng2025 printed SD/P internal inconsistency unresolved; not a replacement body.",
+    "note": "Source-uncertainty diagnostic: adds Zheng2025 as printed; unresolved dispersion/P inconsistencies and flatus/stool definition. Not efficacy evidence. Wu2025 pre-intervention dose remains excluded.",
     "combine": true,
     "factor": {
       "V33-OD-0128": 1000,
       "V33-OD-0129": 1000,
       "V33-OD-0232": 1000
     }
+  },
+  {
+    "model_id": "intraop_remifentanil_Wu2025_preintervention_diagnostic",
+    "result_ids": [
+      "V33-OD-0078"
+    ],
+    "construct": "pre_intervention_intraop_remifentanil",
+    "modality": "TEAS",
+    "comparator": "sham",
+    "role": "SENSITIVITY",
+    "measure": "MD",
+    "unit": "\u00b5g remifentanil",
+    "note": "Wu2025 allocation and treatment start in PACU AFTER intraoperative dose. Negative-control/baseline diagnostic only; cannot estimate treatment efficacy.",
+    "combine": true,
+    "factor": 1
   }
 ]
