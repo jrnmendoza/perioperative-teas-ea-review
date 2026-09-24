@@ -56,7 +56,8 @@
     const getLabel = m => (d.e2_labels && d.e2_labels[m.model_id]) ? d.e2_labels[m.model_id] : esc((m.note || 'E2 main').replace('mg/ug', 'mg/µg'));
 
     const estTable = (m2, m1) => {
-        const hetero = (m2.k >= 5 && m2.I2 !== null && m2.pi_low !== null && m2.pi_high !== null) ? `<br><small>I² ${num(m2.I2, 1)}%, PI ${num(m2.pi_low)} to ${num(m2.pi_high)}</small>` : '<br><small>—</small>';
+        const piText = (m2.k >= 5 && m2.pi_low !== null && m2.pi_high !== null) ? `PI ${num(m2.pi_low)} to ${num(m2.pi_high)}` : 'PI not shown (k<5)';
+        const hetero = (m2.k > 1 && m2.I2 !== null) ? `<br><small>I² ${num(m2.I2, 1)}%, ${piText}</small>` : '<br><small>—</small>';
         const caveat = m2.body === 'EA vs sham' ? '<br><small>Lin 2002 only; admitted on a boundary reading of DP1 (PCA from hour 1) and DP4 (unquantified IM pethidine first-hour rescue); high risk of bias</small>' : '';
         return [
           esc(m2.body),
@@ -70,9 +71,12 @@
 
     const teasMain = mainE2.find(m=>m.model_id==='E2_opioid24_TEAS_sham');
     const teasModels = [teasMain, ...teasSens, ...teasLoo];
-    const crossesZero = teasModels.every(m => m.ci_high > 0) ? ' crosses zero' : '';
-    const noneReaches = teasModels.every(m => m.effect > -10) ? ' and none reaches -10 mg' : '';
-    const teasCaption = `Every TEAS-vs-sham E2 analysis${crossesZero}${noneReaches}.`;
+    const crossesZero = teasModels.filter(m => m.ci_high > 0).length;
+    const noneReaches = teasModels.filter(m => m.effect > -10).length;
+    const total = teasModels.length;
+    const crossZeroText = crossesZero === total ? 'All ' + total + ' TEAS-vs-sham E2 analyses cross zero' : crossesZero + ' of ' + total + ' TEAS-vs-sham E2 analyses cross zero';
+    const noneReachesText = noneReaches === total ? 'none reaches -10 mg.' : (total - noneReaches) + ' reaches -10 mg.';
+    const teasCaption = `${crossZeroText}; ${noneReachesText}`;
 
     const looRange = (loo) => {
         if (!loo.length) return '';
@@ -115,7 +119,10 @@
       `<h4>TEAS vs sham — sensitivity analyses</h4>` +
       note(teasCaption) +
       table(['Analysis', 'k', 'MD [95% CI]'], [teasMain, ...teasSens].map(m => [getLabel(m), m.k, est(m)])) +
-      note('The registered E1 primary analysis is also available as a sensitivity restriction (k=24, MD -7.70 [-10.62, -4.78]).') +
+      (() => {
+        const e1Rest = e2.models.find(m => m.model_id === 'E2_TEAS_sham_E1_restriction');
+        return e1Rest ? note(`The registered E1 primary (${esc(e1Rest.studies)} only; k=${e1Rest.k}, N=${e1Rest.N}): ${est(e1Rest)}`) : '';
+      })() +
       `<h4>TEAS vs sham — leave-one-out</h4>` +
       looRange(teasLoo) +
       table(['Analysis', 'k', 'MD [95% CI]'], teasLoo.map(m => [getLabel(m), m.k, est(m)])) +
