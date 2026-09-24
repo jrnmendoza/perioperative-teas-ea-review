@@ -1,0 +1,180 @@
+--- RUN LOG ---
+[1] "R version 4.5.2 (2025-10-31)"
+metafor version: 5.2.1
+---------------
+
+
+=== MODEL: QOR40_SHAM_POD2 ===
+Result IDs: V33-OD-0009-LATER
+Studies: Yu 2020
+
+Equal-Effects Model (k = 1)
+
+I^2 (total heterogeneity / total variability):   0.00%
+H^2 (total variability / sampling variability):  1.00
+
+Test for Heterogeneity:
+Q(df = 0) = 0.0000, p-val = 1.0000
+
+Model Results:
+
+estimate      se    zval    pval   ci.lb   ci.ub    
+  3.6700  1.4476  2.5352  0.0112  0.8327  6.5073  * 
+
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+=== MODEL: QOR40_USUAL_48H ===
+Result IDs: V33-OD-0381-LATER
+Studies: Liang 2021
+
+Equal-Effects Model (k = 1)
+
+I^2 (total heterogeneity / total variability):   0.00%
+H^2 (total variability / sampling variability):  1.00
+
+Test for Heterogeneity:
+Q(df = 0) = 0.0000, p-val = 1.0000
+
+Model Results:
+
+estimate      se    zval    pval   ci.lb   ci.ub      
+  2.0000  0.6002  3.3320  0.0009  0.8236  3.1764  *** 
+
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+=== MODEL: QOR15_SHAM_POD2 ===
+Result IDs: V33-OD-0025-LATER
+Studies: Zhou 2025
+
+Equal-Effects Model (k = 1)
+
+I^2 (total heterogeneity / total variability):   0.00%
+H^2 (total variability / sampling variability):  1.00
+
+Test for Heterogeneity:
+Q(df = 0) = 0.0000, p-val = 1.0000
+
+Model Results:
+
+estimate      se    zval    pval    ci.lb   ci.ub    
+  3.8600  2.0141  1.9165  0.0553  -0.0875  7.8075  . 
+
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+=== MODEL: QOR15_SHAM_POD3 ===
+Result IDs: QOR48-HOU2023, QOR48-XING2022
+Studies: Hou 2023, Xing 2022
+
+Random-Effects Model (k = 2; tau^2 estimator: REML)
+
+tau^2 (estimated amount of total heterogeneity): 27.7524 (SE = 47.8944)
+tau (square root of estimated tau^2 value):      5.2681
+I^2 (total heterogeneity / total variability):   81.95%
+H^2 (total variability / sampling variability):  5.54
+
+Test for Heterogeneity:
+Q(df = 1) = 5.5391, p-val = 0.0186
+
+Model Results:
+
+estimate      se    tval  df    pval     ci.lb    ci.ub    
+ 11.5433  4.1114  2.8076   1  0.2178  -40.6972  63.7839    
+
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+=== MODEL: QOR15_SHAM_POD3_WITHOUT_HOU_2023 ===
+Result IDs: QOR48-XING2022
+Studies: Xing 2022
+
+Equal-Effects Model (k = 1)
+
+I^2 (total heterogeneity / total variability):   0.00%
+H^2 (total variability / sampling variability):  1.00
+
+Test for Heterogeneity:
+Q(df = 0) = 0.0000, p-val = 1.0000
+
+Model Results:
+
+estimate      se    zval    pval    ci.lb    ci.ub      
+ 15.8300  2.7435  5.7700  <.0001  10.4529  21.2071  *** 
+
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+=== MODEL: QOR15_SHAM_POD3_WITHOUT_XING_2022 ===
+Result IDs: QOR48-HOU2023
+Studies: Hou 2023
+
+Equal-Effects Model (k = 1)
+
+I^2 (total heterogeneity / total variability):   0.00%
+H^2 (total variability / sampling variability):  1.00
+
+Test for Heterogeneity:
+Q(df = 0) = 0.0000, p-val = 1.0000
+
+Model Results:
+
+estimate      se    zval    pval   ci.lb    ci.ub      
+  7.6000  2.1683  3.5051  0.0005  3.3503  11.8497  *** 
+
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+
+=== COMPARISON TABLE ===
+                            model_id   field    canonical      metafor
+1                    QOR40_SHAM_POD2  effect   3.67000000   3.67000000
+2                    QOR40_SHAM_POD2  ci_low   0.83270813   0.83270813
+3                    QOR40_SHAM_POD2 ci_high   6.50729187   6.50729187
+4                    QOR40_USUAL_48H  effect   2.00000000   2.00000000
+5                    QOR40_USUAL_48H  ci_low   0.82355504   0.82355504
+6                    QOR40_USUAL_48H ci_high   3.17644496   3.17644496
+7                    QOR15_SHAM_POD2  effect   3.86000000   3.86000000
+8                    QOR15_SHAM_POD2  ci_low  -0.08754966  -0.08754966
+9                    QOR15_SHAM_POD2 ci_high   7.80754966   7.80754966
+10                   QOR15_SHAM_POD3  effect  11.54334935  11.54334935
+11                   QOR15_SHAM_POD3  ci_low -40.69717449 -40.69717428
+12                   QOR15_SHAM_POD3 ci_high  63.78387319  63.78387298
+13                   QOR15_SHAM_POD3    tau2  27.75237652  27.75237625
+14                   QOR15_SHAM_POD3      I2  81.94651726  81.94651711
+15  QOR15_SHAM_POD3_WITHOUT_HOU_2023  effect  15.83000000  15.83000000
+16  QOR15_SHAM_POD3_WITHOUT_HOU_2023  ci_low  10.45285082  10.45285082
+17  QOR15_SHAM_POD3_WITHOUT_HOU_2023 ci_high  21.20714918  21.20714918
+18 QOR15_SHAM_POD3_WITHOUT_XING_2022  effect   7.60000000   7.60000000
+19 QOR15_SHAM_POD3_WITHOUT_XING_2022  ci_low   3.35027156   3.35027156
+20 QOR15_SHAM_POD3_WITHOUT_XING_2022 ci_high  11.84972844  11.84972844
+       abs_diff tolerance passed
+1  0.000000e+00     1e-06   TRUE
+2  0.000000e+00     1e-06   TRUE
+3  0.000000e+00     1e-06   TRUE
+4  2.220446e-16     1e-06   TRUE
+5  2.220446e-16     1e-06   TRUE
+6  8.881784e-16     1e-06   TRUE
+7  0.000000e+00     1e-06   TRUE
+8  4.440892e-16     1e-06   TRUE
+9  8.881784e-16     1e-06   TRUE
+10 1.405571e-09     1e-06   TRUE
+11 2.132274e-07     1e-06   TRUE
+12 2.160385e-07     1e-06   TRUE
+13 2.773175e-07     1e-04   TRUE
+14 1.478321e-07     1e-04   TRUE
+15 0.000000e+00     1e-06   TRUE
+16 0.000000e+00     1e-06   TRUE
+17 0.000000e+00     1e-06   TRUE
+18 0.000000e+00     1e-06   TRUE
+19 8.881784e-16     1e-06   TRUE
+20 0.000000e+00     1e-06   TRUE
+
+ALL COMPARISONS PASSED

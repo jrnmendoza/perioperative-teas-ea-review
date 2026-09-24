@@ -38,7 +38,7 @@ if qor_path.exists():
   files.append(('QoR later-window RoB signals', '10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/qor_rob2_signals_later.csv'))
   files.append(('QoR later-window source locators', '10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/qor_source_locators_later.csv'))
   files.append(('QoR later-window R script', '10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/metafor_forest_later/forest_qor_later.R'))
-  files.append(('QoR later-window R log', '10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/metafor_forest_later/forest_qor_later.log'))
+  files.append(('QoR later-window R log', '10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/metafor_forest_later/forest_qor_later_run.txt'))
   files.append(('QoR later-window metafor estimates', '10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/metafor_forest_later/metafor_estimates.csv'))
   files.append(('QoR later-window metafor comparison', '10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/metafor_forest_later/metafor_comparison_later.csv'))
   import shutil

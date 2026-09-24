@@ -267,13 +267,13 @@
     "label": "QoR later-window R script",
     "href": "current/forest_qor_later.R",
     "source": "10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/metafor_forest_later/forest_qor_later.R",
-    "sha256": "64e33a3f4c433d901e85acbbcb7d4fea7ccbabde77000a4e7eadecc85043c117"
+    "sha256": "9c4dfa7a9821da73e08132b703aeecc19481dfd457cfb006f7062f38d9af80bd"
   },
   {
     "label": "QoR later-window R log",
-    "href": "current/forest_qor_later.log",
-    "source": "10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/metafor_forest_later/forest_qor_later.log",
-    "sha256": "7ef4b2b222f403ebe80c7182de5af91c017b735e217ee44f01f6d3c10b84bb35"
+    "href": "current/forest_qor_later_run.txt",
+    "source": "10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/metafor_forest_later/forest_qor_later_run.txt",
+    "sha256": "bf5f624848a21c124ec600ca5a86a0375c75ad465b78b598d28fb1837c9a8f9d"
   },
   {
     "label": "QoR later-window metafor estimates",
@@ -297,37 +297,37 @@
     "label": "QoR later-window forest: QOR40_SHAM_POD2",
     "href": "current/forest_QOR40_SHAM_POD2.svg",
     "source": "10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/metafor_forest_later/forest_QOR40_SHAM_POD2.svg",
-    "sha256": "e1a0ba7066500bf68cbdb765abfde2c18f4f16936b70066d77956f8c5bc0c446"
+    "sha256": "34cfbc8beeb8587b91273399e457ee8df0692ea82f185c2e898030f188bd9c3e"
   },
   {
     "label": "QoR later-window forest: QOR40_USUAL_48H",
     "href": "current/forest_QOR40_USUAL_48H.svg",
     "source": "10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/metafor_forest_later/forest_QOR40_USUAL_48H.svg",
-    "sha256": "0346c4a61035fd6799daa111b708bce784321946151459d48b3a4d8ab6c158b2"
+    "sha256": "17839178541ea1387f52b2b1aa23ab05c407246dc632c6a54e912d4d4e462f6f"
   },
   {
     "label": "QoR later-window forest: QOR15_SHAM_POD2",
     "href": "current/forest_QOR15_SHAM_POD2.svg",
     "source": "10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/metafor_forest_later/forest_QOR15_SHAM_POD2.svg",
-    "sha256": "e1538c60eae43c2d6c353a84b54919f9f39ac13004b05a26e52af9c76c5782aa"
+    "sha256": "515e3762ebc7ac031da209aea416ffadc3227a0ac823202d599f44eeba8e9b50"
   },
   {
     "label": "QoR later-window forest: QOR15_SHAM_POD3",
     "href": "current/forest_QOR15_SHAM_POD3.svg",
     "source": "10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/metafor_forest_later/forest_QOR15_SHAM_POD3.svg",
-    "sha256": "6483733f803c6e644aad8926b0bcd108c9fcdeec47ab0f64e59fcad1bdbd55c7"
+    "sha256": "ce26fc99539479ee8771c1c5437206ddffe71584f219ccc396b5b60a3933da20"
   },
   {
     "label": "QoR later-window forest: QOR15_SHAM_POD3_WITHOUT_HOU_2023",
     "href": "current/forest_QOR15_SHAM_POD3_WITHOUT_HOU_2023.svg",
     "source": "10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/metafor_forest_later/forest_QOR15_SHAM_POD3_WITHOUT_HOU_2023.svg",
-    "sha256": "6cf58503aac52a5e32a67eb2ce8d7863a8c72a390e79b88d9dcec5bbc225171d"
+    "sha256": "a247c769ad8e5442efcfdfbc1adc56f815f3fa86fe65c825382c678a54048955"
   },
   {
     "label": "QoR later-window forest: QOR15_SHAM_POD3_WITHOUT_XING_2022",
     "href": "current/forest_QOR15_SHAM_POD3_WITHOUT_XING_2022.svg",
     "source": "10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/metafor_forest_later/forest_QOR15_SHAM_POD3_WITHOUT_XING_2022.svg",
-    "sha256": "4a62de7d4603254536c71718d973d53ca7d94e6100d8c70011c642c089174197"
+    "sha256": "9064d1ccf9a02b681dc3d455ef3c2b26164c3618549e927bf7f8e85904194b00"
   },
   {
     "label": "E2 sensitivity estimates",

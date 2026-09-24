@@ -29,6 +29,22 @@ def checks(d):
 
     }
     
+
+    import subprocess
+    def is_tracked(path):
+        try:
+            subprocess.run(['git', 'ls-files', '--error-unmatch', str(path)], cwd=ROOT, capture_output=True, check=True)
+            return True
+        except subprocess.CalledProcessError:
+            return False
+    
+    for item in d['downloads']:
+        if not is_tracked(ROOT / item['source']):
+            ret['all downloads tracked by git'] = False
+            break
+    else:
+        ret['all downloads tracked by git'] = True
+
     if 'e2_methods_html' in d:
         import html as html_lib
         def normalize_source(text):
@@ -231,6 +247,7 @@ def main(site=None):
         mutations.append(('QoR later-window metafor comparison', lambda d: d.get('qor_later_metafor_manifest').__setitem__('fail_comp', True)))
 
     mutations.append(('E2 methods integrity', lambda d: d['e2_methods'].update({'Timestamp note': 'Altered text'})))
+    mutations.append(('all downloads tracked by git', lambda d: d['downloads'].append(dict(label='Fake', href='current/fake.txt', source='fake.txt', sha256='hash'))))
     if 'e2_methods_html' in data:
         def drop_line(d):
             val = d['e2_methods_html']['Decision after the E2 run — 23 September 2026: E1 retained as primary']
