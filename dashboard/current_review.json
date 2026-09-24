@@ -19407,6 +19407,30 @@
       "href": "current/AMENDED_PRIMARY_ESTIMAND_E2.md",
       "source": "10_FINAL_ADJUDICATION/02_DECISIONS/v38/AMENDED_PRIMARY_ESTIMAND_E2.md",
       "sha256": "1ea80e53568f1c62b630e3ee28c623f147420057d9994b39fe34dd5f5fdae8c2"
+    },
+    {
+      "label": "Additional file 12: trial-by-trial accounting for the primary opioid outcome",
+      "href": "current/ADDITIONAL_FILE_12.md",
+      "source": "manuscript/ADDITIONAL_FILE_12.md",
+      "sha256": "2f9a5429127a1199256af57a6b0ab0db1779c8c53572cc95622a0cff4cd53e30"
+    },
+    {
+      "label": "Additional file 12 A1 primary construct",
+      "href": "current/additional_file_12_A1_primary_construct.csv",
+      "source": "manuscript/additional_files/additional_file_12_A1_primary_construct.csv",
+      "sha256": "acd32238e4c38677e2ebd8660a8a53f07b42a6087ca1a4e54aa4a0b8dd177d2e"
+    },
+    {
+      "label": "Additional file 12 A2 other windows",
+      "href": "current/additional_file_12_A2_other_windows.csv",
+      "source": "manuscript/additional_files/additional_file_12_A2_other_windows.csv",
+      "sha256": "f3a65c5d8df03fc5227e09e6a177d9ca22c78c0300b8eac5ba70069a4e4e9163"
+    },
+    {
+      "label": "Additional file 12 tierB no candidate result",
+      "href": "current/additional_file_12_tierB_no_candidate_result.csv",
+      "source": "manuscript/additional_files/additional_file_12_tierB_no_candidate_result.csv",
+      "sha256": "6c1135e0ca2dc3059fb6ceb6d2ff7d599ad9ca83dceb36088506deb01c5d29c5"
     }
   ],
   "outcome_coverage": {
@@ -23225,6 +23249,21 @@
         "contrast_ids": "V33-OD-0252;V33-OD-0003;V33-OD-0052"
       }
     ]
+  },
+  "outstanding": [
+    "GRADE for the four new later-window QoR bodies.",
+    "Structured length-of-stay, PACU, extubation and mobilisation tables.",
+    "Finalised harms and satisfaction tables.",
+    "Reference registry and claim-citation audit extension."
+  ],
+  "e2_methods": {
+    "Timestamp note": "**Timestamp note (23 September 2026).** The review author chose not to send the hashes to a\nthird party. The only timestamp is local git commit `95fcf66` (2026-09-23 20:58 +0200), which\nthe review team controls. This is recorded so the strength of the pre-registration claim is not\noverstated.",
+    "Why this document exists, stated plainly": "The registered primary outcome (E1) admits one sham-controlled TEAS trial and no\nsham-controlled EA trial. After seeing that result, and after seeing the expanded\nk=4 sensitivity estimates, the review team decided to amend the primary outcome\nto a broader construct. **This is a post-hoc change made with results known.** It\nwill be reported as such in PROSPERO and in the manuscript. E1 remains fully\nreported.\n\nThis document defines E2 **before** E2 is applied to any result. Its purpose is to\nmake the definition checkable: every admission and exclusion must follow from\nthe text here, not from what a result does to the estimate.\n\n---",
+    "E1 — registered primary (retained, reported in full)": "> Cumulative systemic postoperative opioid consumption from the end of surgery to\n> 24 hours, converted to IV MME using prespecified conversion rules. Programmed\n> but undelivered patient-controlled analgesia doses will not be counted as\n> consumed opioid. (PROSPERO CRD420261452908, v1.0)",
+    "E2 — amended primary (post hoc)": "**Construct.** Cumulative postoperative opioid **reported as consumed or\ndelivered** in the first 24 postoperative hours, in mg IV morphine equivalents,\n**including totals that capture patient-controlled analgesia only and totals\nwhere additional rescue opioid was given but not quantified.**\n\nWhat E2 relaxes relative to E1 is limited to **completeness of capture**. What\ncounts as a dose, the unit, the conversion rules and the prohibited conversions\nare unchanged.",
+    "Prespecified sensitivity analyses for E2": "- Sufentanil 0.25 and 1.0 mg/µg, for every body with a sufentanil-derived result.\n- Restriction to E1-eligible results — that is, the registered primary.\n- Exclusion of results with known unquantified rescue (A3).\n- Exclusion of author-reported equivalents of unstated route (decision point 2).\n- Leave-one-out for k ≥ 3.\n\n---",
+    "Amendment E2.1 — 23 September 2026 (after E2 was applied to Tier B1)": "**Made by the review author (J.R.N. Mendoza) after E2 had been applied to the eight\nTier B1 reports, knowing that these two changes admit exactly Zhang 2025 and\nGu 2019. Zhang 2025's effect was known, and so were three of Gu 2019's four time\npoints.** The superseded text above is retained unchanged.\n\n**Reason, as given:** the review author chose to admit these reports without\nquerying their authors.\n\n**Change 1 — DP1, POD1.** A total reported for \"POD1\" is accepted as the first 24\nhours after surgery, **whatever the report's own definition of POD0 or POD1**.\nThis supersedes the DP1 default (\"POD1 only where the report defines it as the\nfirst 24 hours\"). It applies to every candidate result, not only Zhang 2025.\n\n**Change 2 — figure digitisation adopted.** An arm-level mean and SD printed only\nin a figure may be digitised from the source image, subject to all of these:\n\n- pixel measurement against the figure's own axis gridlines, with the axis fit\n  residual and the units per pixel recorded;\n- a reproducible script that re-extracts the image from the hash-pinned PDF;\n- validation against every value from the same figure that is also printed in the\n  text;\n- any figure–text disagreement beyond measurement resolution is handled under the\n  review's source-contradiction policy: the result is admitted with a flag and a\n  **mandatory leave-out sensitivity analysis**, and published values are never\n  \"corrected\".\n\nThis applies to every candidate result, including the Tier B2 re-check.\n\n**Consequence.** Both reports enter the E2 TEAS-versus-sham body. The sufentanil\nfactors 0.25 and 1.0 are mandatory sensitivities for that body (G11).\n\n---",
+    "Decision after the E2 run — 23 September 2026: E1 retained as primary": "**The review author (J.R.N. Mendoza) decided to keep the registered outcome (E1)\nas the primary outcome and to report E2 in full as a post-hoc sensitivity\nanalysis.** The PROSPERO primary outcome is therefore **not** revised.\n\n**Timing, stated plainly.** This decision was made after the E2 results were\nknown (`09_E2_ANALYSIS/E2_RESULTS.md`). Those results were:\n\n- TEAS vs sham: k = 7, −6.17 mg IV MME (−12.47, 0.14), I² 98%. Smaller and less\n  precise than E1's −7.70 (−10.62, −4.78).\n- EA vs sham: a single trial (Lin 2002), −11.80 (−18.52, −5.08), for which the\n  joint criterion cannot be evaluated.\n- The joint criterion was met in no body.\n\nReverting to the registered outcome is the conservative direction. It is recorded\nhere so the sequence is not misread: E2 was defined, amended (E2.1), applied, run,\nand only then set aside as the primary.\n\n**Consequences.**\n\n- E2 and E2.1 remain on record unchanged.\n- E2 results are reported as a labelled post-hoc sensitivity analysis, with the\n  amendment history disclosed.\n- The manuscript's primary results remain E1. The Methods gain a post-hoc\n  analyses statement in place of a \"Changes from the protocol\" outcome switch."
   },
   "e2_labels": {
     "E2_TEAS_sham_LOO_Gu_2019": "Leave out Gu 2019 (figure–text contradiction)",

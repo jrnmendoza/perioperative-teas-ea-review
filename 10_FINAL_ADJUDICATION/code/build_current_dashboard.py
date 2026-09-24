@@ -3,7 +3,7 @@
 Legacy assets and the full pre-edit dashboard baseline remain untouched. Only
 explicitly selected descriptive metadata (not old effects/RoB) is reused.
 """
-import csv,json,pathlib,shutil,html,hashlib
+import csv,json,pathlib,shutil,html,hashlib,re
 ROOT=pathlib.Path(__file__).resolve().parents[2];D=ROOT/'10_FINAL_ADJUDICATION';DASH=ROOT/'dashboard';OUT=DASH/'current';OUT.mkdir(exist_ok=True)
 def rows(p):return list(csv.DictReader(open(ROOT/p,encoding='utf-8-sig')))
 def js(p):return json.load(open(ROOT/p))
@@ -41,7 +41,14 @@ if e2_path.exists():
  files.append(('E2 sensitivity estimates','10_FINAL_ADJUDICATION/09_E2_ANALYSIS/e2_model_outputs.csv'))
  files.append(('E2 sensitivity report','10_FINAL_ADJUDICATION/09_E2_ANALYSIS/E2_RESULTS.md'))
  files.append(('E2 amended estimand decision','10_FINAL_ADJUDICATION/02_DECISIONS/v38/AMENDED_PRIMARY_ESTIMAND_E2.md'))
+files.append(('Additional file 12: trial-by-trial accounting for the primary opioid outcome','manuscript/ADDITIONAL_FILE_12.md'))
+files.append(('Additional file 12 A1 primary construct','manuscript/additional_files/additional_file_12_A1_primary_construct.csv'))
+files.append(('Additional file 12 A2 other windows','manuscript/additional_files/additional_file_12_A2_other_windows.csv'))
+files.append(('Additional file 12 tierB no candidate result','manuscript/additional_files/additional_file_12_tierB_no_candidate_result.csv'))
+filenames=set()
 for label,path in files:
+ if pathlib.Path(path).name in filenames: raise ValueError('Filename collision: ' + pathlib.Path(path).name)
+ filenames.add(pathlib.Path(path).name)
  p=ROOT/path;target=OUT/p.name;shutil.copyfile(p,target);downloads.append(dict(label=label,href='current/'+p.name,source=path,sha256=hashlib.sha256(target.read_bytes()).hexdigest()))
 oldtext=(DASH/'data.js').read_text();old=json.JSONDecoder().raw_decode(oldtext.split('window.STUDIES_DATA = ',1)[1])[0]
 background={s['key']:{k:s.get(k) for k in ['citation','doi','country','country_evidence','surgery_procedure','stricta','population']} for s in old}
@@ -55,6 +62,33 @@ if qor_path.exists():
 e2_path=D/'09_E2_ANALYSIS/e2_model_outputs.json'
 if e2_path.exists():
  data['e2_analysis']=json.loads(e2_path.read_text())
+
+report_text = (ROOT/'FINAL_CURRENT_STATE_REPORT.md').read_text(encoding='utf-8')
+section_match = re.search(r'\*\*Not completed — outstanding\*\*(.*?)(?=\n\*\*|\n## |\Z)', report_text, re.DOTALL)
+if not section_match or not section_match.group(1).strip(): raise ValueError("Not completed — outstanding section missing or empty")
+outstanding_items = re.findall(r'- \*\*(.*?)\*\*', section_match.group(1))
+if not outstanding_items: raise ValueError("No outstanding items found")
+data['outstanding'] = outstanding_items
+
+e2_methods_text = (D/'02_DECISIONS/v38/AMENDED_PRIMARY_ESTIMAND_E2.md').read_text(encoding='utf-8')
+e2_methods_data = {}
+m = re.search(r'(\*\*Timestamp note[^\n]+(?:\n[^\n]+)+)', e2_methods_text)
+if not m: raise ValueError("Timestamp note not found")
+e2_methods_data['Timestamp note'] = m.group(1).strip()
+def get_sec(txt, h, st=None):
+    pat = r'#+\s+' + re.escape(h) + r'\s*\n(.*?)(?=\n#|\Z)'
+    if st: pat = r'#+\s+' + re.escape(h) + r'\s*\n(.*?)(?=\n' + re.escape(st) + r'|\n#|\Z)'
+    m2 = re.search(pat, txt, re.DOTALL)
+    if not m2: raise ValueError(f"Heading not found: {h}")
+    return m2.group(1).strip()
+e2_methods_data['Why this document exists, stated plainly'] = get_sec(e2_methods_text, 'Why this document exists, stated plainly')
+e2_methods_data['E1 — registered primary (retained, reported in full)'] = get_sec(e2_methods_text, 'E1 — registered primary (retained, reported in full)')
+e2_methods_data['E2 — amended primary (post hoc)'] = get_sec(e2_methods_text, 'E2 — amended primary (post hoc)', st='### Admission rules')
+e2_methods_data['Prespecified sensitivity analyses for E2'] = get_sec(e2_methods_text, 'Prespecified sensitivity analyses for E2')
+e2_methods_data['Amendment E2.1 — 23 September 2026 (after E2 was applied to Tier B1)'] = get_sec(e2_methods_text, 'Amendment E2.1 — 23 September 2026 (after E2 was applied to Tier B1)')
+e2_methods_data['Decision after the E2 run — 23 September 2026: E1 retained as primary'] = get_sec(e2_methods_text, 'Decision after the E2 run — 23 September 2026: E1 retained as primary')
+data['e2_methods'] = e2_methods_data
+
 data['e2_labels']={
   'E2_TEAS_sham_LOO_Gu_2019': 'Leave out Gu 2019 (figure–text contradiction)',
   'E2_TEAS_sham_LOO_Lee_2011': 'Leave out Lee 2011 (Table 8 contradiction)',
