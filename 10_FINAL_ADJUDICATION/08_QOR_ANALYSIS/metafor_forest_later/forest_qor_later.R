@@ -20,7 +20,6 @@ comparison_out <- data.frame(
   stringsAsFactors = FALSE
 )
 
-# Start logging
 sink("forest_qor_later_run.txt")
 cat("--- RUN LOG ---\n")
 print(R.version.string)
@@ -92,68 +91,82 @@ for (i in 1:length(models)) {
     stringsAsFactors = FALSE
   ))
   
-  # Prepare plotting bounds
-  # all plotted intervals
+  svg_path <- sprintf("forest_%s.svg", model_id)
+  svg(svg_path, width=12, height=4.5 + k*0.35)
+  par(mar=c(6, 1, 3, 1))
+  plot.new() # allow strwidth
+  
   ci_lbs <- c(res$yi - 1.96*sqrt(res$vi), res$ci.lb)
   ci_ubs <- c(res$yi + 1.96*sqrt(res$vi), res$ci.ub)
   min_val <- min(ci_lbs)
   max_val <- max(ci_ubs)
-  
-  # Compute alim with pretty()
   pticks <- pretty(c(min_val, max_val))
-  alim_val <- c(min(pticks), max(pticks))
+  alim_val <- range(pticks)
   
-  # Layout setup: xlim leaves space on left and right
-  # left space for study name and 4 arm columns. right for MD [CI]
-  span <- alim_val[2] - alim_val[1]
-  xlim_val <- c(alim_val[1] - span * 1.5, alim_val[2] + span * 0.6)
+  c1_vals <- as.character(df$n_i)
+  c2_vals <- sprintf("%.1f (%.1f)", df$mean_i, df$sd_i)
+  c3_vals <- as.character(df$n_c)
+  c4_vals <- sprintf("%.1f (%.1f)", df$mean_c, df$sd_c)
   
-  # Position of 4 columns in the left space (between xlim[1] and alim[1])
-  left_w <- alim_val[1] - xlim_val[1]
-  # space out the columns: TEAS n, TEAS mean(SD), Sham n, Sham mean(SD)
-  ilab_pos <- c(
-    xlim_val[1] + left_w * 0.35,
-    xlim_val[1] + left_w * 0.55,
-    xlim_val[1] + left_w * 0.75,
-    xlim_val[1] + left_w * 0.95
-  )
-  
-  svg_path <- sprintf("forest_%s.svg", model_id)
-  svg(svg_path, width=12, height=4.5 + k*0.35)
-  par(mar=c(5, 1, 3, 1))
-  
-  slab_vals <- df$study
-  ilab_vals <- cbind(df$n_i, sprintf("%.1f (%.1f)", df$mean_i, df$sd_i), df$n_c, sprintf("%.1f (%.1f)", df$mean_c, df$sd_c))
-  
-  if (k > 1) {
-    # No prediction interval, use short mlab
-    forest(res, slab=slab_vals, ilab=ilab_vals, ilab.xpos=ilab_pos, ilab.pos=2,
-           xlab=m$unit, xlim=xlim_val, alim=alim_val, refline=0,
-           top=3, addfit=TRUE, mlab="RE model (REML, safeguarded HK)")
-           
-    # I2 and tau2 underneath the diamond
-    text(xlim_val[1], -1.5, sprintf("I^2 = %.1f%%, tau^2 = %.2f", res$I2, res$tau2), pos=4, cex=0.85)
-  } else {
-    forest(res, slab=slab_vals, ilab=ilab_vals, ilab.xpos=ilab_pos, ilab.pos=2,
-           xlab=m$unit, xlim=xlim_val, alim=alim_val, refline=0,
-           top=3, addfit=FALSE)
-    text(xlim_val[1], 0, "Single study, not pooled", pos=4, cex=0.85)
+  do_forest <- function(cex_val) {
+    w_space <- strwidth("M", cex=cex_val)
+    w_study <- max(strwidth(c("Study", df$study), cex=cex_val))
+    w_c1 <- max(strwidth(c("TEAS n", c1_vals), cex=cex_val))
+    w_c2 <- max(strwidth(c("TEAS mean (SD)", c2_vals), cex=cex_val))
+    w_c3 <- max(strwidth(c("Sham n", c3_vals), cex=cex_val))
+    w_c4 <- max(strwidth(c("Sham mean (SD)", c4_vals), cex=cex_val))
+    
+    x4 <- alim_val[1] - w_space * 2
+    x3 <- x4 - w_c4 - w_space * 2
+    x2 <- x3 - w_c3 - w_space * 2
+    x1 <- x2 - w_c2 - w_space * 2
+    x_study_right <- x1 - w_c1 - w_space * 2
+    
+    xlim_left <- min(x_study_right - w_study - w_space, alim_val[1] - 1.5 * (alim_val[2] - alim_val[1]))
+    xlim_right <- alim_val[2] + max(strwidth(c("MD [95% CI]", "99.99 [99.99, 99.99]"), cex=cex_val)) + 2*w_space
+    xlim_val <- c(xlim_left, xlim_right)
+    
+    ilab_pos <- c(x1, x2, x3, x4)
+    ilab_vals <- cbind(c1_vals, c2_vals, c3_vals, c4_vals)
+    
+    if (k > 1) {
+      fp <- forest(res, slab=df$study, ilab=ilab_vals, ilab.xpos=ilab_pos, ilab.pos=2,
+                   xlab=m$unit, xlim=xlim_val, alim=alim_val, at=pticks, refline=0,
+                   top=3, addfit=TRUE, mlab="RE model (REML, safeguarded HK)",
+                   header=FALSE)
+    } else {
+      fp <- forest(res, slab=df$study, ilab=ilab_vals, ilab.xpos=ilab_pos, ilab.pos=2,
+                   xlab=m$unit, xlim=xlim_val, alim=alim_val, at=pticks, refline=0,
+                   top=3, addfit=FALSE, header=FALSE)
+    }
+    return(list(fp=fp, xlim_val=xlim_val, ilab_pos=ilab_pos))
   }
   
-  # Headers
-  # The first study is at y=1, header one row above (y = k+1)
-  # But forest internally sets ylim slightly higher. Let's just use text() at k+1.5 or so
-  text(xlim_val[1], k + 1.5, "Study", pos=4, font=2)
-  text(ilab_pos[1], k + 1.5, "TEAS n", pos=2, font=2)
-  text(ilab_pos[2], k + 1.5, "TEAS mean (SD)", pos=2, font=2)
-  text(ilab_pos[3], k + 1.5, "Sham n", pos=2, font=2)
-  text(ilab_pos[4], k + 1.5, "Sham mean (SD)", pos=2, font=2)
-  text(xlim_val[2], k + 1.5, "MD [95% CI]", pos=2, font=2)
+  ret <- do_forest(1)
+  if (abs(ret$fp$cex - 1) > 0.01) {
+     ret <- do_forest(ret$fp$cex)
+  }
   
-  # Title
+  fp <- ret$fp
+  xlim_val <- ret$xlim_val
+  ilab_pos <- ret$ilab_pos
+  
+  y_head <- fp$ylim[2] - 1
+  
+  text(fp$textpos[1], y_head, "Study", pos=4, font=2, cex=fp$cex)
+  text(ilab_pos[1], y_head, "TEAS n", pos=2, font=2, cex=fp$cex)
+  text(ilab_pos[2], y_head, "TEAS mean (SD)", pos=2, font=2, cex=fp$cex)
+  text(ilab_pos[3], y_head, "Sham n", pos=2, font=2, cex=fp$cex)
+  text(ilab_pos[4], y_head, "Sham mean (SD)", pos=2, font=2, cex=fp$cex)
+  text(fp$textpos[2], y_head, "MD [95% CI]", pos=2, font=2, cex=fp$cex)
+  
+  if (k > 1) {
+    text(xlim_val[1], -1.5, sprintf("I\u00b2 = %.1f%%, \u03c4\u00b2 = %.2f", res$I2, res$tau2), pos=4, cex=fp$cex * 0.85)
+  } else {
+    mtext("Single study, not pooled", side=1, line=4.5, adj=0, cex=fp$cex * 0.85)
+  }
+  
   title(m$label, line=1.5, cex.main=1.1)
-  
-  # Positive MD favours TEAS
   mtext("Positive MD favours TEAS", side=1, line=4, cex=0.8, adj=1)
   
   dev.off()
