@@ -38,9 +38,12 @@ name: Deploy dashboard to GitHub Pages
       - "scripts/build_study_characteristics.py"
       - "TEAS EA Verification/ChatGPT Sol Extraction/**"
       - "TEAS EA Verification/astra_audit/source_text/**"
+      # v38 contract; every other gate below delegates to it for the v38 site.
+      - "scripts/check_current_dashboard.py"
       - "scripts/check_handover.py"
       - "scripts/check_handover_ui.cjs"
       - "scripts/check_tab_data.py"
+      - "scripts/check_generated_artifacts.py"
       - "scripts/check_tabs_ui.cjs"
       - "scripts/check_navigation_ui.cjs"
       - "09_V34_INTAKE/**"
