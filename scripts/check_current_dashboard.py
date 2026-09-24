@@ -226,6 +226,25 @@ def main(site=None):
         assert forbidden not in ui_js, 'Unexpected external/hidden state operation'
     assert not re.search(r'k=\d+', ui_js), 'Literal k=<digits> found in current_review_ui.js'
     assert not re.search(r'[−-]?\d{1,2}\.\d{2}(?!\d)', ui_js), 'Literal decimal estimate found in current_review_ui.js'
+    assert "addEventListener('hashchange'" in ui_js, "hashchange listener missing"
+    assert "addEventListener('popstate'" in ui_js, "popstate listener missing"
+    assert "history.replaceState" in ui_js, "replaceState missing"
+    if "function show(" in ui_js:
+        show_body = ui_js.split("function show(")[1].split("}")[0]
+        assert "history.replaceState" not in show_body, "replaceState found inside show()"
+    if "document.addEventListener('click'" in ui_js:
+        click_body = ui_js.split("document.addEventListener('click'")[1].split("});")[0]
+        assert "history.replaceState" not in click_body, "replaceState found inside click listener"
+
+    assert "addEventListener('hashchange'" in ui_js, "hashchange listener missing"
+    assert "addEventListener('popstate'" in ui_js, "popstate listener missing"
+    assert "history.replaceState" in ui_js, "replaceState missing"
+    if "function show(" in ui_js:
+        show_body = ui_js.split("function show(")[1].split("}")[0]
+        assert "history.replaceState" not in show_body, "replaceState found inside show()"
+    if "document.addEventListener('click'" in ui_js:
+        click_body = ui_js.split("document.addEventListener('click'")[1].split("});")[0]
+        assert "history.replaceState" not in click_body, "replaceState found inside click listener"
     # Existing figures must survive and resolve in both source and built site.
     figures=json.JSONDecoder().raw_decode((site/'article_figures.js').read_text().split('window.ARTICLE_FIGURES = ',1)[1])[0]
     images=[f['src'] for fs in figures.values() for f in fs]

@@ -198,10 +198,13 @@
       `<p><a href="current/QOR_ANALYSIS_REPORT.md" download>Full QoR report</a> · <a href="current/qor_rob2_signals.csv" download>176 signalling responses</a> · <a href="current/qor_source_locators.csv" download>Source locators</a> · <a href="current/qor_verification.json" download>Independent verification</a></p>`;
   }
   const views={overview,results,qor,coverage,prisma,evidence,risk,studies,methods,downloads};
-  function show(id){if(!views[id])id='overview';$('content').innerHTML=(['results','risk','evidence','studies','methods','downloads'].includes(id)?qorLink():'')+views[id]();document.querySelectorAll('.nav [data-view]').forEach(b=>{b.classList.toggle('active',b.dataset.view===id);b.setAttribute('aria-selected',String(b.dataset.view===id));});if(id==='risk')riskRows();if(id==='studies')studyRows();history.replaceState(null,'','#'+id);$('content').focus({preventScroll:true});}
+  function render(id){if(!views[id])id='overview';$('content').innerHTML=(['results','risk','evidence','studies','methods','downloads'].includes(id)?qorLink():'')+views[id]();document.querySelectorAll('.nav [data-view]').forEach(b=>{b.classList.toggle('active',b.dataset.view===id);b.setAttribute('aria-selected',String(b.dataset.view===id));});if(id==='risk')riskRows();if(id==='studies')studyRows();$('content').focus({preventScroll:true});return id;}
+  function show(id){id=render(id);if(location.hash!=='#'+id)history.pushState(null,'','#'+id);}
   document.addEventListener('click',e=>{const nav=e.target.closest('[data-view]');if(nav){show(nav.dataset.view);return;}const model=e.target.closest('[data-model]');if(model){show('results');$('model-select').value=model.dataset.model;modelDetail(model.dataset.model);return;}const fig=e.target.closest('.figure-open');if(fig){$('figure-image').src=fig.dataset.src;$('figure-image').alt=fig.dataset.caption;$('figure-caption').textContent=fig.dataset.caption;$('figure-dialog').showModal();}});
   document.addEventListener('input',e=>{if(e.target.id==='risk-search')riskRows(e.target.value);if(e.target.id==='study-search')studyRows(e.target.value);});
   document.addEventListener('change',e=>{if(e.target.id==='model-select')modelDetail(e.target.value);});
   $('close-figure').addEventListener('click',()=>$('figure-dialog').close());
-  show(location.hash.slice(1)||'overview');
+  window.addEventListener('hashchange',()=>render(location.hash.slice(1)));
+  window.addEventListener('popstate',()=>render(location.hash.slice(1)));
+  const initId=render(location.hash.slice(1));history.replaceState(null,'','#'+initId);
 })();
