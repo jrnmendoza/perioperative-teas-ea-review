@@ -1,0 +1,158 @@
+// COMPUTED BUT NOT REPORTED — generated file, do not hand-edit.
+// Regenerate with:  python3 scripts/build_computed_not_reported.py
+//
+// Analyses the review fitted but does not present as findings, each with the
+// reason it is not one. Not findings; no GRADE certainty is attached, because
+// none was adopted.
+//
+// Source : 06_FINAL_ANALYSIS_V26/03_RESULTS/master_reconciled_results_v26.csv
+// Of 45 analyses: 14 reported, 3 duplicates, 20 sensitivity variants,
+// 8 computed-but-not-reported (shown here).
+window.COMPUTED_NOT_REPORTED = {
+  "generated_by": "scripts/build_computed_not_reported.py",
+  "source": "06_FINAL_ANALYSIS_V26/03_RESULTS/master_reconciled_results_v26.csv",
+  "total_analyses": 45,
+  "reported": 14,
+  "duplicate": 3,
+  "sensitivity": 20,
+  "not_reported": 8,
+  "note": "Analyses this review computed but does not report as findings. They are shown so that a question like \"you report composite PONV — what about nausea and vomiting separately?\" has an answer other than silence. None carries a GRADE certainty rating, because none was adopted for it; adding one here would be exactly the unplanned outcome addition this panel exists to make visible rather than commit. Each row states why it is not reported.",
+  "rows": [
+    {
+      "analysis_id": "TD_NAUSEA_0_24H",
+      "target": "Target D (PONV)",
+      "outcome": "Postoperative Nausea & Vomiting (PONV)",
+      "stratum": "Nausea 0-24h (Yang 2024, Ma 2026, Szmit 2021)",
+      "k": 3,
+      "measure": "Risk Ratio (RR)",
+      "estimate": 0.6118,
+      "ci_low": 0.3066,
+      "ci_high": 1.2208,
+      "p_value": 0.0922,
+      "i2": 0.0,
+      "model": "REML + Hartung-Knapp",
+      "null_value": 1.0,
+      "why": "component of a reported composite",
+      "detail": "Composite PONV 0–24 h is reported and rated (Low certainty). Nausea is one component of that composite at the same window; the review reports the composite rather than grading its parts separately."
+    },
+    {
+      "analysis_id": "TD_NAUSEA_0_48H",
+      "target": "Target D (PONV)",
+      "outcome": "Postoperative Nausea & Vomiting (PONV)",
+      "stratum": "Nausea 0-48h (Luo 2026 alone)",
+      "k": 1,
+      "measure": "Risk Ratio (RR)",
+      "estimate": 0.4612,
+      "ci_low": 0.3041,
+      "ci_high": 0.6996,
+      "p_value": null,
+      "i2": null,
+      "model": "Single study (Not pooled)",
+      "null_value": 1.0,
+      "why": "single trial",
+      "detail": "One trial (Luo 2026). The review labels this 'Single study (Not pooled)'; a single trial is not presented as a pooled finding."
+    },
+    {
+      "analysis_id": "TD_VOMIT_0_24H",
+      "target": "Target D (PONV)",
+      "outcome": "Postoperative Nausea & Vomiting (PONV)",
+      "stratum": "Vomiting 0-24h (Yang 2024, Ma 2026)",
+      "k": 2,
+      "measure": "Risk Ratio (RR)",
+      "estimate": 0.5896,
+      "ci_low": 0.0259,
+      "ci_high": 13.4465,
+      "p_value": 0.2775,
+      "i2": 0.0,
+      "model": "REML + Hartung-Knapp",
+      "null_value": 1.0,
+      "why": "component of a reported composite",
+      "detail": "Composite PONV 0–24 h is reported and rated (Low certainty). Vomiting is the other component at the same window."
+    },
+    {
+      "analysis_id": "TD_VOMIT_0_48H",
+      "target": "Target D (PONV)",
+      "outcome": "Postoperative Nausea & Vomiting (PONV)",
+      "stratum": "Vomiting 0-48h (Luo 2026 alone)",
+      "k": 1,
+      "measure": "Risk Ratio (RR)",
+      "estimate": 0.3479,
+      "ci_low": 0.1729,
+      "ci_high": 0.7002,
+      "p_value": null,
+      "i2": null,
+      "model": "Single study (Not pooled)",
+      "null_value": 1.0,
+      "why": "single trial",
+      "detail": "One trial (Luo 2026), 'Single study (Not pooled)'."
+    },
+    {
+      "analysis_id": "TE_FLATUS_MD_REML_KH",
+      "target": "Target E (Flatus)",
+      "outcome": "Time to first flatus",
+      "stratum": "MD Hours (REML + KH)",
+      "k": 7,
+      "measure": "MD (Hours)",
+      "estimate": -6.7864,
+      "ci_low": -14.8382,
+      "ci_high": 1.2654,
+      "p_value": 0.0848,
+      "i2": 97.33,
+      "model": "MD Hours (REML + KH)",
+      "null_value": 0.0,
+      "why": "superseded as the reported measure",
+      "detail": "The prespecified mean difference in hours for time to first flatus. It is still computed, published and displayed beside the measure that replaced it, but it is no longer what the review reports for this outcome: admitting Zhang 2018 on 2026-09-12 took the model to k = 7 and I² = 97.3%, at which a pooled mean difference in hours is not interpretable as a single effect. The standardised measure (Hedges' g = −0.55, I² = 39.2%) carries the outcome instead. That substitution is post hoc and is recorded as a protocol amendment in 00_protocol/amendments/2026-09-12_target_e_effect_measure.md."
+    },
+    {
+      "analysis_id": "TF_POSTOP_DELIVERED_MORPH",
+      "target": "Target F (Exploratory)",
+      "outcome": "Postoperative delivered morphine",
+      "stratum": "Strict delivered IV morphine (Seevaunnamtum 2016, Lee 2011 High)",
+      "k": 2,
+      "measure": "MD (mg)",
+      "estimate": -7.2671,
+      "ci_low": -67.226,
+      "ci_high": 52.6919,
+      "p_value": 0.3666,
+      "i2": 68.74,
+      "model": "MD mg, REML + Hartung-Knapp",
+      "null_value": 0.0,
+      "why": "no adopted certainty",
+      "detail": "Computed under Target F (exploratory). No GRADE certainty was adopted for it, so it is not presented as a finding."
+    },
+    {
+      "analysis_id": "TF_RESCUE_OPIOID_ALL",
+      "target": "Target F (Exploratory)",
+      "outcome": "Rescue opioid requirement",
+      "stratum": "All binary rescue (including Liu 2026 burn)",
+      "k": 5,
+      "measure": "Risk Ratio (RR)",
+      "estimate": 0.5071,
+      "ci_low": 0.3903,
+      "ci_high": 0.659,
+      "p_value": 0.002,
+      "i2": 0.0,
+      "model": "RR, REML + Hartung-Knapp",
+      "null_value": 1.0,
+      "why": "inclusion variant",
+      "detail": "The same endpoint as the reported rescue-opioid analysis (k = 4, RR 0.50, Moderate certainty) with Liu 2026 (burn) added. Shown because the difference between the strict and broader inclusion sets is itself a reasonable question."
+    },
+    {
+      "analysis_id": "TF_PCA_DEMANDS_SMD",
+      "target": "Target F (Exploratory)",
+      "outcome": "PCA demands / button presses",
+      "stratum": "PCA button presses/demands across trials (SMD)",
+      "k": 8,
+      "measure": "SMD",
+      "estimate": -1.2686,
+      "ci_low": -2.7741,
+      "ci_high": 0.2369,
+      "p_value": 0.0866,
+      "i2": 97.87,
+      "model": "SMD Hedges g, REML + Hartung-Knapp",
+      "null_value": 0.0,
+      "why": "no adopted certainty",
+      "detail": "PCA button presses/demands as a standardized effect — a proxy for opioid demand rather than a delivered dose. Computed under Target F (exploratory) with no adopted GRADE certainty."
+    }
+  ]
+};

@@ -1,0 +1,79 @@
+{
+  "validator": "10_FINAL_ADJUDICATION/code/validate_adjudication.py",
+  "python": "3.14.7",
+  "counts": {
+    "reports": 70,
+    "trial_units": 69,
+    "canonical_results": 761,
+    "models": 73,
+    "fitted_models": 68,
+    "model_input_contrasts": 179,
+    "graded_bodies": 38,
+    "rob_linked_results": 97,
+    "randomized_counted_operational": 12103
+  },
+  "tolerances": {
+    "MD_RR": "relative 1e-6 (tau2 +1e-6 absolute)",
+    "SMD": "relative 5e-4 (large-sample J approximation)",
+    "inputs_MD_RR": "relative 1e-9"
+  },
+  "checks": {
+    "source_integrity": {
+      "status": "PASS",
+      "n_checked": 73,
+      "n_failed": 0,
+      "failures": []
+    },
+    "registry_consistency": {
+      "status": "PASS",
+      "n_checked": 831,
+      "n_failed": 0,
+      "failures": []
+    },
+    "membership_semantics": {
+      "status": "PASS",
+      "n_checked": 212,
+      "n_failed": 0,
+      "failures": []
+    },
+    "input_metadata": {
+      "status": "FAIL",
+      "n_checked": 179,
+      "n_failed": 1,
+      "failures": [
+        "opioid24_TEAS_sham/V33-OD-0350: stale decision/models metadata"
+      ]
+    },
+    "input_rederivation": {
+      "status": "PASS",
+      "n_checked": 179,
+      "n_failed": 0,
+      "failures": []
+    },
+    "independent_refit": {
+      "status": "PASS",
+      "n_checked": 340,
+      "n_failed": 0,
+      "failures": []
+    },
+    "rob2_linkage": {
+      "status": "PASS",
+      "n_checked": 97,
+      "n_failed": 0,
+      "failures": []
+    },
+    "grade_correspondence": {
+      "status": "PASS",
+      "n_checked": 38,
+      "n_failed": 0,
+      "failures": []
+    },
+    "participant_ledger": {
+      "status": "PASS",
+      "n_checked": 70,
+      "n_failed": 0,
+      "failures": []
+    }
+  },
+  "overall": "FAIL"
+}

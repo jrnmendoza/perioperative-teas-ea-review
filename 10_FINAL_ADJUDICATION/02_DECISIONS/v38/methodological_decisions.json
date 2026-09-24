@@ -1,0 +1,121 @@
+[
+  {
+    "topic": "Assignment effect and RoB",
+    "status": "ADOPTED",
+    "decision": "Assess each exact outcome/window/arm/population for assignment effect. Awareness alone is not High D2; patient-reported nausea/pain differ from observable vomiting and recorded PCA dose. No invented independent human signatures.",
+    "reviewer": "AI assistant under user delegation",
+    "date": "2026-09-20"
+  },
+  {
+    "topic": "GRADE",
+    "status": "ADOPTED",
+    "decision": "All 38 bodies independently considered: 34 rated, four empty. Explicit domain downgrades, not I\u00b2/P-value rules. No automatic single-trial downgrade; pain precision judged against registered +1 margin. No independent grades for diagnostics.",
+    "reviewer": "AI assistant under user delegation",
+    "date": "2026-09-20"
+  },
+  {
+    "topic": "IV-MME",
+    "status": "ADOPTED",
+    "decision": "Central sufentanil factor 0.5mg IV morphine per microgram, with 0.25/1.0 sensitivities; uncertainty retained. Unknown oral/IV author-equivalent basis is diagnostic only.",
+    "reviewer": "AI assistant under user delegation",
+    "date": "2026-09-20"
+  },
+  {
+    "topic": "Systemic versus device exposure",
+    "status": "ADOPTED",
+    "decision": "Admit delivered end-surgery\u201324h systemic totals, including quantified rescue. Chen1998/Yang2024/Lin2002 incomplete-rescue/window evidence stays sensitivity-only; never assume permitted rescue is zero.",
+    "reviewer": "AI assistant under user delegation",
+    "date": "2026-09-20"
+  },
+  {
+    "topic": "Chen2020 / He hepatectomy",
+    "status": "ADOPTED HOLD",
+    "decision": "Chen basal-dose contradiction and He unknown MME basis remain flagged diagnostics; no fabricated unit or dose correction.",
+    "reviewer": "AI assistant under user delegation",
+    "date": "2026-09-20"
+  },
+  {
+    "topic": "El-Rakshy2009",
+    "status": "ADOPTED",
+    "decision": "Retain outcome Table2 assignment in supportive EA/usual-care with High RoB and leave-out sensitivity. Do not silently swap arm labels or pretend flow contradiction resolved.",
+    "reviewer": "AI assistant under user delegation",
+    "date": "2026-09-20"
+  },
+  {
+    "topic": "Song2020",
+    "status": "ADOPTED",
+    "decision": "Matched active non-acupoint electrical control remains separate from inert sham; broad-sham diagnostic retained.",
+    "reviewer": "AI assistant under user delegation",
+    "date": "2026-09-20"
+  },
+  {
+    "topic": "GI effect measure",
+    "status": "ADOPTED",
+    "decision": "Use clinically interpretable hours MD within modality/control strata; SMD only diagnostic. Disclose posthoc choice; no effect-significance-based model selection.",
+    "reviewer": "AI assistant under user delegation",
+    "date": "2026-09-20"
+  },
+  {
+    "topic": "Zheng2025 continuous results",
+    "status": "ADOPTED HOLD",
+    "decision": "Remove three unreconciled continuous results from main analyses. Dispersion/P inconsistencies and flatus/stool construct ambiguity remain unresolved; retain values unchanged only in with-Zheng-as-printed diagnostics. Binary PONV remains eligible.",
+    "reviewer": "AI assistant under user delegation",
+    "date": "2026-09-20"
+  },
+  {
+    "topic": "Wu2025 intraoperative dose",
+    "status": "ADOPTED EXCLUSION FROM CAUSAL BODY",
+    "decision": "Randomization/treatment starts on PACU arrival after the intraoperative dose. Keep only pre-intervention negative-control diagnostic, not treatment efficacy.",
+    "reviewer": "AI assistant under user delegation",
+    "date": "2026-09-20"
+  },
+  {
+    "topic": "Other source holds",
+    "status": "ADOPTED HOLD",
+    "decision": "Yeh probable family counted once and excluded from models; Jin2023 anaesthesia/concentration, Long2025 needle/patch ambiguity and He breast dispersion remain held/diagnostic. No author response presumed.",
+    "reviewer": "AI assistant under user delegation",
+    "date": "2026-09-20"
+  },
+  {
+    "topic": "Statistical inference",
+    "status": "ADOPTED",
+    "decision": "REML with safeguarded Hartung\u2013Knapp for k\u22652; k=1 within-study normal interval, not pooled. Prediction intervals only k\u22655. Combine compatible active arms with shared control once. Separate TEAS/EA and comparator classes.",
+    "reviewer": "AI assistant under user delegation",
+    "date": "2026-09-20"
+  },
+  {
+    "topic": "Moderators",
+    "status": "ADOPTED",
+    "decision": "Do not carry forward historical mixed-modality k=7 regression. Registered minimum counts (\u226510 per predictor, \u22654 per level, \u226520 multivariable) plus source-verified covariates govern; no new valid moderator model established.",
+    "reviewer": "AI assistant under user delegation",
+    "date": "2026-09-20"
+  },
+  {
+    "topic": "Clinical-importance criterion",
+    "status": "ADOPTED",
+    "decision": "Keep \u226510mg opioid sparing plus paired ~24h pain upper CI <+1. Separate pain bodies cannot supply Szmit paired pain. 8mg/30% are sensitivity thresholds, not replacements.",
+    "reviewer": "AI assistant under user delegation",
+    "date": "2026-09-20"
+  },
+  {
+    "topic": "PRISMA",
+    "status": "ADOPTED WITH PROVENANCE LIMIT",
+    "decision": "Wu2016 citation route user-confirmed. Reconcile exported record dispositions locally, not by editing Covidence. 12 import references remain unmapped; preserve aggregate provenance.",
+    "reviewer": "AI assistant under user delegation",
+    "date": "2026-09-20"
+  },
+  {
+    "topic": "Reviewer re-screening package",
+    "status": "REMOVED FROM REQUESTED WORK",
+    "decision": "User withdrew this deliverable. Use requested outcome-exclusion label, retain raw reasons, and disclose completeness limitation without treating it as an outstanding approval workflow.",
+    "reviewer": "AI assistant under user delegation",
+    "date": "2026-09-20"
+  },
+  {
+    "topic": "External actions",
+    "status": "NOT AUTHORIZED",
+    "decision": "Author queries remain UNSENT; local dashboard update only, no commit/push/public deployment.",
+    "reviewer": "AI assistant under user delegation",
+    "date": "2026-09-20"
+  }
+]

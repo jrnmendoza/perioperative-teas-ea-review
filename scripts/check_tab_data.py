@@ -6,6 +6,9 @@ import json
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
+if (ROOT/'dashboard/current_review.json').exists():
+    from check_current_dashboard import main as check_current
+    raise SystemExit(check_current())
 source=list(csv.DictReader((ROOT/'06_FINAL_ANALYSIS_V26/01_DATA/opioid_24h_primary.csv').open()))
 locked={r['study_unit']:r for r in source if r['inc_primary']=='1'}
 data=json.JSONDecoder().raw_decode((ROOT/'dashboard/primary_browser.js').read_text().split('window.PRIMARY_BROWSER = ',1)[1])[0]

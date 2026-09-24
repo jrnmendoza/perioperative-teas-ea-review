@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1060" height="295" viewBox="0 0 1060 295" role="img" aria-label="QoR-40: TEAS versus sham, ~24 h">
+<rect width="100%" height="100%" fill="#101c30"/>
+<text x="24" y="34" fill="#f1f5f9" font-size="20" font-family="Arial">QoR-40: TEAS versus sham, ~24 h</text>
+<text x="24" y="59" fill="#94a3b8" font-size="14" font-family="Arial">Positive difference favors TEAS. Study CIs use normal approximation; pooled CI uses safeguarded HK.</text>
+<line x1="405.0936261274272" x2="405.0936261274272" y1="76" y2="231" stroke="#94a3b8" stroke-dasharray="4 4"/>
+<text x="24" y="100" fill="#e2e8f0" font-size="15" font-family="Arial">Yao 2015</text>
+<line x1="447.9557260050037" x2="534.3195378712007" y1="95" y2="95" stroke="#93c5fd" stroke-width="2"/>
+<circle cx="491.13763193810223" cy="95" r="4" fill="#93c5fd"/>
+<text x="710" y="100" fill="#e2e8f0" font-size="15" font-family="Arial">11.70 [5.83, 17.57]</text>
+<text x="24" y="145" fill="#e2e8f0" font-size="15" font-family="Arial">Yu 2020</text>
+<line x1="439.4359248174799" x2="506.9508990282897" y1="140" y2="140" stroke="#93c5fd" stroke-width="2"/>
+<circle cx="473.19341192288476" cy="140" r="4" fill="#93c5fd"/>
+<text x="710" y="145" fill="#e2e8f0" font-size="15" font-family="Arial">9.26 [4.67, 13.85]</text>
+<text x="24" y="190" fill="#e2e8f0" font-size="15" font-family="Arial">REML / safeguarded HK</text>
+<line x1="307.58620689655174" x2="652.4137931034484" y1="185" y2="185" stroke="#5eead4" stroke-width="2"/>
+<circle cx="480.00000000000006" cy="185" r="6" fill="#5eead4"/>
+<text x="710" y="190" fill="#e2e8f0" font-size="15" font-family="Arial">10.19 [-13.26, 33.63]</text>
+<text x="280.0" y="257" text-anchor="middle" fill="#94a3b8" font-size="13" font-family="Arial">-17.0</text>
+<text x="480.0" y="257" text-anchor="middle" fill="#94a3b8" font-size="13" font-family="Arial">10.2</text>
+<text x="680.0" y="257" text-anchor="middle" fill="#94a3b8" font-size="13" font-family="Arial">37.4</text>
+<text x="280" y="283" fill="#cbd5e1" font-size="14" font-family="Arial">Mean difference in QoR-40 points</text></svg>

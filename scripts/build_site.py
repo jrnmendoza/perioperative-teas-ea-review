@@ -58,6 +58,8 @@ CACHE_BUSTED_ASSETS = (
     "primary_browser.js",
     "browser_targets.js",
     "study_characteristics.js",
+    "article_figures.js",
+    "current_review.js", "current_review_ui.js", "current_review.css",
 )
 CACHE_BUSTED_FETCH_PATHS = (
     "v26/02_STATA/logs/01_opioid24_primary.log",
@@ -285,6 +287,44 @@ def main() -> int:
     ap.add_argument("--commit", default=None, help="override git commit (default: current HEAD)")
     args = ap.parse_args()
     out = Path(args.out)
+
+    # v38 canonical release: do not regenerate or serve stale v26 inference.
+    if (DASH / 'current_review.json').exists():
+        run([sys.executable, '10_FINAL_ADJUDICATION/code/build_current_dashboard.py'])
+        current = json.loads((DASH / 'current_review.json').read_text())
+        commit = git_commit(args.commit)
+        meta = dict(master_version='v38', master_file='10_FINAL_ADJUDICATION/03_CANONICAL',
+                    canonical_reports=len(current['studies']), canonical_studies=len({s['trial_id'] for s in current['studies']}),
+                    included_studies=len({s['trial_id'] for s in current['studies']}), companion_reports=len(current['studies'])-len({s['trial_id'] for s in current['studies']}),
+                    source_normalized_outcome_rows=len(read_csv_rows(ROOT/'10_FINAL_ADJUDICATION/03_CANONICAL/results.csv')),
+                    strict_primary_opioid_k=next(m['k'] for m in current['models'] if m['model_id']=='opioid24_TEAS_sham'),
+                    defined_models=len(current['models']), grade_bodies=len(current['grade']),
+                    fresh_rob_assessments=len(current['rob']), git_commit=commit,
+                    build_timestamp_utc=datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'))
+        if 'qor_analysis' in current:
+            q=current['qor_analysis']
+            meta['qor_addendum']=dict(version=q['version'],main_models=len(q['main_models']),
+                                     diagnostic_models=len(q['diagnostics']),grade_bodies=len(q['grade']),
+                                     exact_result_assessments=len(q['rob']))
+        out=out.resolve()
+        if out in (ROOT, DASH, Path.home(), Path('/')):
+            raise RuntimeError('Refuse build into a source or broad directory')
+        out.mkdir(parents=True,exist_ok=True)
+        for name in ['index.html','current_review.js','current_review.json','current_review_ui.js','current_review.css','article_figures.js','search_strategies.js']:
+            shutil.copyfile(DASH/name,out/name)
+        for name in ['current','article_figures']:
+            shutil.copytree(DASH/name,out/name,dirs_exist_ok=True)
+        # Hash current content, not only HEAD: this working-tree build is uncommitted.
+        import hashlib
+        fingerprint=hashlib.sha256(b''.join((DASH/name).read_bytes() for name in ['current_review.js','current_review_ui.js','current_review.css','article_figures.js','search_strategies.js'])).hexdigest()[:12]
+        text=(out/'index.html').read_text()
+        for asset in ['current_review.js','current_review_ui.js','current_review.css','article_figures.js','search_strategies.js']:
+            text=text.replace(asset+'"',asset+'?v='+fingerprint+'"')
+        (out/'index.html').write_text(text)
+        meta['content_fingerprint']=fingerprint
+        inject_build_badge(out,meta);write_build_meta(out,meta)
+        print(json.dumps(meta,indent=2));print(f'Built local v38 site at {out}')
+        return 0
 
     run([sys.executable, "scripts/build_reference_data.py"])
     # scripts/extract_baseline_from_pdfs.py is deliberately NOT run here. It reads

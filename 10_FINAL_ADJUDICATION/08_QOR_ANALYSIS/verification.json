@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "independent_numeric_fields": 104,
+  "absolute_tolerance": 1e-05,
+  "independent_arm_effect_variance_checks": 12,
+  "protected_files_unchanged": 166,
+  "exact_result_assessments": 8,
+  "signalling_responses": 176,
+  "source_domain_locators": 40,
+  "source_excerpt_hash_checks": 8,
+  "main_bodies": 3,
+  "diagnostics": 9,
+  "grades": 3,
+  "negative_controls": [
+    "identical two-study effects still receive safeguarded t interval",
+    "changed pooled effect rejected by R agreement tolerance",
+    "missing exact-result assessment rejected by coverage identity"
+  ],
+  "public_deployment": false,
+  "output_sha256": {
+    "CURRENT_STATE_SECTION.md": "a4989d567f06b95f0a4d1f3c3dfa9cf992908dbd5a0b22fb5f6e71de2462bd4a",
+    "QOR15_SHAM_24H.svg": "63dff5c46786dd16731decdf2e764ebb0a13be3d1477f145ed7016e2acc9482f",
+    "QOR40_SHAM_24H.svg": "055a96419531642137a62c280e6a7f86aa0b06abd2803929511c8c289be89605",
+    "QOR40_USUAL_24H.svg": "b037bcf54e9b3b9b821ab862e143f4c1ec17b768cf95d194f6f5d671727d5a94",
+    "QOR_ANALYSIS_REPORT.md": "76cf14e33e486d5cf4f92f0c33e457cf4fccb016a6b3aec155d6c7667a94a5ab",
+    "R_session.txt": "377c343ca762e652b40bb8e84973ca7d10c4a439c26df73a540cf48a3828f4e4",
+    "qor_grade.csv": "69bb2c79cbe575fd0cc2ef08456fd011b2fe2fcaa6a619e0262df6e7df389021",
+    "qor_inputs.csv": "c0cd42c2f54bab6c108c246157cffcc9f2bdac1c927fff9252d6377001f0c5cf",
+    "qor_metafor.csv": "6e81f332a61d34b303ce273a29543b2bba42464e3d4172cf8fd3069be26df5fa",
+    "qor_metafor_comparison.csv": "688d54ce807198208d432f7a3acd7d82d02e992505596a29da0a34b673f09b7c",
+    "qor_models.csv": "2a4ca8f3f657389bcfa4e75321576fdfdbb4bd6ca59f68931c27cb6b2014773a",
+    "qor_models.json": "119ed4d6ee22cd716d53bdcf7296e58e503e8f1eb17f5c9cac09eb0575b605b6",
+    "qor_rob2.csv": "3af95f2b1072105a5bd55b0d09b3e697e4b3031649a0d1293d426766e86e6942",
+    "qor_rob2_signals.csv": "82ff7569c17c24717cbf8f8d96ea775a86872252c5249846feeaacbffd9e9719",
+    "qor_source_locators.csv": "69df5a2927f23fc6080e48334aa6bff2ee2cf369ec4697a52c0cebc21b5b817f",
+    "qor_summary.json": "315c51a366826b204a4fa9ba0e94019f1de664e25a42d1d2a858f20f3c009b5a"
+  }
+}

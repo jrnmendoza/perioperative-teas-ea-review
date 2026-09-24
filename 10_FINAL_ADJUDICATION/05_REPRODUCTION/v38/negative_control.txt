@@ -1,0 +1,11 @@
+PASS source_integrity: 73 checked, 0 failed
+PASS registry_consistency: 831 checked, 0 failed
+PASS membership_semantics: 210 checked, 0 failed
+PASS input_metadata: 177 checked, 0 failed
+PASS input_rederivation: 177 checked, 0 failed
+FAIL independent_refit: 345 checked, 1 failed
+     - opioid24_TEAS_sham: effect stored -7.6 vs independent -7.699999999999999
+PASS rob2_linkage: 155 checked, 0 failed
+PASS grade_correspondence: 38 checked, 0 failed
+PASS participant_ledger: 70 checked, 0 failed
+OVERALL FAIL {"reports": 70, "trial_units": 69, "canonical_results": 761, "models": 74, "fitted_models": 69, "model_input_contrasts": 177, "graded_bodies": 38, "rob_linked_results": 155, "randomized_counted_operational": 12103}

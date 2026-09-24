@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1060" height="295" viewBox="0 0 1060 295" role="img" aria-label="QoR-40: TEAS versus usual care, 24 h">
+<rect width="100%" height="100%" fill="#101c30"/>
+<text x="24" y="34" fill="#f1f5f9" font-size="20" font-family="Arial">QoR-40: TEAS versus usual care, 24 h</text>
+<text x="24" y="59" fill="#94a3b8" font-size="14" font-family="Arial">Positive difference favors TEAS. Study CIs use normal approximation; pooled CI uses safeguarded HK.</text>
+<line x1="448.0862366661489" x2="448.0862366661489" y1="76" y2="231" stroke="#94a3b8" stroke-dasharray="4 4"/>
+<text x="24" y="100" fill="#e2e8f0" font-size="15" font-family="Arial">Liang 2021</text>
+<line x1="452.2136794232513" x2="482.16231939481395" y1="95" y2="95" stroke="#93c5fd" stroke-width="2"/>
+<circle cx="467.18799940903256" cy="95" r="4" fill="#93c5fd"/>
+<text x="710" y="100" fill="#e2e8f0" font-size="15" font-family="Arial">2.60 [0.56, 4.64]</text>
+<text x="24" y="145" fill="#e2e8f0" font-size="15" font-family="Arial">Pan 2023</text>
+<line x1="474.6975565268804" x2="514.0449977901612" y1="140" y2="140" stroke="#93c5fd" stroke-width="2"/>
+<circle cx="494.3712771585208" cy="140" r="4" fill="#93c5fd"/>
+<text x="710" y="145" fill="#e2e8f0" font-size="15" font-family="Arial">6.30 [3.62, 8.98]</text>
+<text x="24" y="190" fill="#e2e8f0" font-size="15" font-family="Arial">REML / safeguarded HK</text>
+<line x1="307.5862068965517" x2="652.4137931034483" y1="185" y2="185" stroke="#5eead4" stroke-width="2"/>
+<circle cx="480.0" cy="185" r="6" fill="#5eead4"/>
+<text x="710" y="190" fill="#e2e8f0" font-size="15" font-family="Arial">4.34 [-19.12, 27.81]</text>
+<text x="280.0" y="257" text-anchor="middle" fill="#94a3b8" font-size="13" font-family="Arial">-22.9</text>
+<text x="480.0" y="257" text-anchor="middle" fill="#94a3b8" font-size="13" font-family="Arial">4.3</text>
+<text x="680.0" y="257" text-anchor="middle" fill="#94a3b8" font-size="13" font-family="Arial">31.6</text>
+<text x="280" y="283" fill="#cbd5e1" font-size="14" font-family="Arial">Mean difference in QoR-40 points</text></svg>

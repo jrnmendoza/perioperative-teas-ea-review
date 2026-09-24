@@ -1,0 +1,11 @@
+{
+  "non_sensitivity_results": 94,
+  "linked": 36,
+  "unlinked": 58,
+  "unlinked_with_existing_candidates": 38,
+  "models_unchanged": 73,
+  "source_contradiction_queries": 8,
+  "grade_recommendations": 38,
+  "screening_package": "DEFERRED BY USER",
+  "registration": "CRD420261452908"
+}

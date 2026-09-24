@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "reports": 70,
+  "evidence_records": 61,
+  "exact_page_anchors_verified": true,
+  "protected_files_unchanged": 158,
+  "new_models_fitted": 0,
+  "new_grade_bodies": 0,
+  "source_visual_checks": [
+    "Huang 2024 PDF p10 Table 4",
+    "He 2026 hepatectomy PDF p8 Table 3",
+    "Jiang 2026 PDF p5 Table 5"
+  ],
+  "limitations": [
+    "Search-assisted coverage audit, not an independent second full-text extraction.",
+    "NOT LOCATED is bounded by supplied report text and is not proof an outcome was unmeasured.",
+    "Supplement/figure/denominator holds remain explicitly listed; no invented values.",
+    "The earlier v38 verification remains historical evidence for its own outputs."
+  ]
+}

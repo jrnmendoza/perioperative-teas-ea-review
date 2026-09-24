@@ -1,0 +1,1107 @@
+assessment_id,result_id,study,domain,source_text,source_text_sha256,line_start,line_end,excerpt
+QOR24-V33-OD-0008,V33-OD-0008,Yao 2015,1,10_FINAL_ADJUDICATION/01_SOURCE_EVIDENCE/Yao_2015.txt,8a196fed942d9398e2dae6aa32a56cd978655acfc586f73b184f49271205bf77,90,97,"2.2. Randomization and Blinding. Patients were assigned to
+either the TEAS group or the control group by a table of
+computer-generated random numbers. The allocation ratio
+was 1 : 1 for the two groups. Group assignments were sealed
+in sequentially numbered opaque envelopes. The patients,
+attending anesthesiologist, surgeons, recovery ward nurses,
+data collectors, and the person who performed the final
+statistical analysis were blinded to group assignment."
+QOR24-V33-OD-0008,V33-OD-0008,Yao 2015,2,10_FINAL_ADJUDICATION/01_SOURCE_EVIDENCE/Yao_2015.txt,8a196fed942d9398e2dae6aa32a56cd978655acfc586f73b184f49271205bf77,98,156,"2.3. Study Protocol. Patients in the TEAS group received pre-
+operative TEAS for 30 min before the induction of anesthesia
+in the holding area. TEAS was applied to four pairs of acu-
+points: bilateral Hegu (LI4), Neiguan (PC6), Zusanli (ST36),
+and Sanyinjiao (SP6). These acupoints were identified accord-
+ing to the traditional anatomical localisations (Figure 1).
+TEAS was performed with a dense-disperse frequency of
+2/10 Hz and an intensity of 6–9 mA for 30 min using the
+Hans electronic acupuncture apparatus (HANS-100B, Nan-
+jing Jisheng Medical Technology Company, Nanjing, China).
+The optimal intensity was adjusted to maintain a slight
+twitching of the regional muscle according to individual
+maximum tolerance. In the control group, the patients were
+connected to the apparatus, but electronic stimulation was
+not applied.
+2.4. Standardized Anesthesia. All patients were fasted for at
+least 8 h and premedicated with IV midazolam 0.05 mg/kg
+30 min before anesthesia induction. Standard monitoring,
+including electrocardiogram, noninvasive blood pressure,
+pulse oximetry, and temperature, was used in all patients
+for the duration of surgery. General anesthesia was induced
+(Hegu)
+LI4
+(Neiguan)
+PC6
+(Zusanli)
+ST36
+(Sanyinjiao)
+SP6
+Figure 1: Location of Hegu (LI4), Neiguan (PC6), Zusanli (ST36),
+and Sanyinjiao (SP6) acupoints.
+with IV sufentanil 0.5 𝜇g/kg and propofol 2.0 mg/kg. Tracheal
+intubation was facilitated with cisatracurium 0.15 mg/kg.
+After intubation, mechanical ventilation was used to main-
+tain PETCO2 at 35–45 mmHg. Anesthesia maintenance was
+achieved with sevoflurane 2%-3% according to both hemo-
+dynamic parameters and bispectral index (BIS) of 40–60.
+Perioperative fluids were administrated in a standardized
+way, and normothermia (36∘C to 37∘C) was maintained by
+a warming device (Bair Hugger; Augustine Medical Inc.,
+Eden Prairie, USA). All patients received IV tropisetron 5 mg
+30 min before the end of surgery. Neuromuscular blockade
+was antagonized using neostigmine 0.02 mg/kg and atropine
+0.01 mg/kg.
+2.5. Study Outcomes. The primary outcome was the quality
+of recovery, which was assessed on the day before surgery
+and 24 h after surgery using a 40-item questionnaire (QoR-
+40) [10]. The global QoR-40 score ranges from 40 to 200,
+representing extremely poor to excellent quality of recovery,
+respectively.
+Secondary outcomes were postoperative pain scores, the
+incidence of nausea and vomiting, duration of PACU stay,
+and patient’s satisfaction. Postoperative pain was assessed
+using Visual Analogue Scale (VAS) in 24 h after surgery. If
+the VAS score was greater than or equal to 4, the patient
+received IV sufentanil 0.05 𝜇g/kg as rescue analgesia. Patient’s
+satisfaction was evaluated on postoperative 24 h with a 10-
+point numerical rating scale: 10 = excellent, 1 = bad. Patient’s
+satisfaction is defined as the scale with a threshold value of"
+QOR24-V33-OD-0008,V33-OD-0008,Yao 2015,3,10_FINAL_ADJUDICATION/01_SOURCE_EVIDENCE/Yao_2015.txt,8a196fed942d9398e2dae6aa32a56cd978655acfc586f73b184f49271205bf77,173,224,"Assessed for eligibility (n = 103)
+Excluded (n = 29)
+Not meeting inclusion criteria (n = 21)
+Declined to participate (n = 8)
+Randomized (n = 74)
+Allocated to control (n = 37)
+Received allocated control (n = 37)
+Allocated to TEAS (n = 37)
+Received allocated TEAS (n = 37)
+Discontinued intervention (n = 2)
+Protocol breach
+Lost to follow-up (n = 0)
+Discontinued intervention (n = 1)
+Protocol breach
+Lost to follow-up (n = 0)
+Analysed (n = 36)
+n = 0
+Excluded from analysis (
+)
+Analysed (n = 35)
+Excluded from analysis (n = 0)
+Figure 2: Consolidated Standards of Reporting Trials (CONSORT) flow diagram depicting the progress of subject through the trail. TEAS:
+transcutaneous electric acupoint stimulation group.
+(standard deviation) of the QoR score at 24 h postoperative
+equivalent to 171 (14.3) was estimated based on our pilot study.
+A power analysis using a type I error estimate of 5% (alpha =
+0.05) and a power (1-Beta) of 80% indicated that a sample
+of 34 subjects per group would be required. Allowing for
+approximately 10% incomplete follow-up or dropout, a total
+of 74 subjects were enrolled in this study.
+Statistical analysis was performed using SPSS version 18.0
+(SPSS Inc., Chicago, IL, USA). The normality of distribution
+was assessed with the Kolmogorov-Smirnov test. Parametric
+data were reported as mean (standard deviation (SD)) and
+analyzed with the independent 𝑡-test, and nonparametric
+data were reported as median and (interquartile range (IQR))
+and analyzed using the Mann-Whitney 𝑈test. Categorical
+variables were reported as the number of patients (%) and
+evaluated using the 𝑥2 or Fisher’s exact test when appropriate.
+The level of significance was considered at a 𝑃value of less
+than 0.05.
+3. Results
+We initially assessed 103 patients for eligibility to participate
+in this study (Figure 2). Of these, 21 patients did not meet the
+inclusion criteria, 8 declined to participate, and the remaining
+74 patients enrolled to the study. Two patients from the TEAS
+group and one patient from the Control group were later
+excluded because of protocol breach. A total of 71 patients
+randomized to treatment allocation completed the study and
+their data were included in the analysis. Patient demographic
+characteristics, type, and durations of procedures were sim-
+ilar with no statistically significant differences (𝑃> 0.05)"
+QOR24-V33-OD-0008,V33-OD-0008,Yao 2015,4,10_FINAL_ADJUDICATION/01_SOURCE_EVIDENCE/Yao_2015.txt,8a196fed942d9398e2dae6aa32a56cd978655acfc586f73b184f49271205bf77,94,116,"in sequentially numbered opaque envelopes. The patients,
+attending anesthesiologist, surgeons, recovery ward nurses,
+data collectors, and the person who performed the final
+statistical analysis were blinded to group assignment.
+2.3. Study Protocol. Patients in the TEAS group received pre-
+operative TEAS for 30 min before the induction of anesthesia
+in the holding area. TEAS was applied to four pairs of acu-
+points: bilateral Hegu (LI4), Neiguan (PC6), Zusanli (ST36),
+and Sanyinjiao (SP6). These acupoints were identified accord-
+ing to the traditional anatomical localisations (Figure 1).
+TEAS was performed with a dense-disperse frequency of
+2/10 Hz and an intensity of 6–9 mA for 30 min using the
+Hans electronic acupuncture apparatus (HANS-100B, Nan-
+jing Jisheng Medical Technology Company, Nanjing, China).
+The optimal intensity was adjusted to maintain a slight
+twitching of the regional muscle according to individual
+maximum tolerance. In the control group, the patients were
+connected to the apparatus, but electronic stimulation was
+not applied.
+2.4. Standardized Anesthesia. All patients were fasted for at
+least 8 h and premedicated with IV midazolam 0.05 mg/kg
+30 min before anesthesia induction. Standard monitoring,
+including electrocardiogram, noninvasive blood pressure,"
+QOR24-V33-OD-0008,V33-OD-0008,Yao 2015,5,10_FINAL_ADJUDICATION/01_SOURCE_EVIDENCE/Yao_2015.txt,8a196fed942d9398e2dae6aa32a56cd978655acfc586f73b184f49271205bf77,143,163,"of recovery, which was assessed on the day before surgery
+and 24 h after surgery using a 40-item questionnaire (QoR-
+40) [10]. The global QoR-40 score ranges from 40 to 200,
+representing extremely poor to excellent quality of recovery,
+respectively.
+Secondary outcomes were postoperative pain scores, the
+incidence of nausea and vomiting, duration of PACU stay,
+and patient’s satisfaction. Postoperative pain was assessed
+using Visual Analogue Scale (VAS) in 24 h after surgery. If
+the VAS score was greater than or equal to 4, the patient
+received IV sufentanil 0.05 𝜇g/kg as rescue analgesia. Patient’s
+satisfaction was evaluated on postoperative 24 h with a 10-
+point numerical rating scale: 10 = excellent, 1 = bad. Patient’s
+satisfaction is defined as the scale with a threshold value of
+greater than or equal to 8.
+2.6. Statistical Analysis. Our sample size calculation for the
+two-tailed testing of the TEAS superiority hypothesis was
+based on the global QoR-40 score. A 10-point difference
+represents a clinically relevant improvement in quality of
+recovery based on data from a previous study [10]. A mean
+ 4747, 2015, 1, Downloaded from https://onlinelibrary.wiley.com/doi/10.1155/2015/324360 by John Ryan Nual Mendoza - Statens Beredning , Wiley Online Library on [17/08/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License"
+QOR24-V33-OD-0009,V33-OD-0009,Yu 2020,1,10_FINAL_ADJUDICATION/01_SOURCE_EVIDENCE/Yu_2020.txt,a1018b46eec1d8df75bd7c11d0a7ce0f5ec19a70194a7812a651c55f003871a1,100,112,"Randomization and blinding
+Patients were assigned by the nurse to either TEAS
+stimulus (TEAS group) or control (Con group) on the
+basis of random numbers generated by a computer be-
+fore the start of surgery (Fig. 1). Only the acupuncturist
+was informed by the nurse of the randomization alloca-
+tion, just before the onset of TEAS. None of the anesthe-
+siologists, surgeons, physicians in the post-anesthesia
+care unit (PACU), or participants were aware of the allo-
+cation. Blinding of the patients was ensured by using gel
+electrodes in the same therapeutic setting, which has
+previously been proved to be a successful strategy [9].
+TEAS protocol"
+QOR24-V33-OD-0009,V33-OD-0009,Yu 2020,2,10_FINAL_ADJUDICATION/01_SOURCE_EVIDENCE/Yu_2020.txt,a1018b46eec1d8df75bd7c11d0a7ce0f5ec19a70194a7812a651c55f003871a1,113,174,"An experienced acupuncturist performed TEAS for
+30 min before anesthesia. According to the theory of
+traditional Chinese medicine, bilateral Baihui (GV20),
+Yingtang
+(EX-HN3),
+Zusanli
+(ST36)
+and
+Neiguan
+(PC6) were chosen as the acupuncture points. These
+acupoints were identified according to traditional ana-
+tomic localization (Fig. 2). Gel electrodes were applied
+to the skin after it had been cleaned with ethyl alco-
+hol. The acupoints were then stimulated electrically
+with an intensity of 12–15 mA and dense-disperse fre-
+quency of 2/100 Hz for 30 min, using the Hwato elec-
+tronic
+acupuncture
+treatment
+instrument
+(model
+SDZ-V, Suzhou Medical Appliances Co., Ltd., Suzhou,
+China). The intensity was adjusted to maintain slight
+twitching of local muscles according to individual
+maximum tolerance, indicating a satisfactory De-Qi
+phenomenon and thus adequate stimulation. The pa-
+tients in the control group had the electrodes applied
+but received no stimulation.
+Anesthesia and perioperative management
+One surgeon conducted all surgery according to a
+standard protocol; surgery commenced between 8:30
+and 1:00 p.m. Anesthesia was induced intravenously
+(i.v.) with propofol and remifentanil using a target-
+controlled infusion (TCI) system. After loss of con-
+sciousness,
+vecuronium
+(0.1 mg·kg−1)
+was
+adminis-
+tered i.v., and patients were orotracheally intubated 5
+min later. Anesthesia was maintained with TCI of
+propofol and remifentanil. The depth of anesthesia
+was monitored using the bispectral index (BIS). Con-
+centrations at the affected sites of propofol and remi-
+fentanil were adjusted to the hemodynamic index and
+BIS. Patients’ lungs were mechanically ventilated in a
+volume-controlled mode with a tidal volume of 8
+ml·kg−1 body weight during the operation. In both
+groups,
+remifentanil
+and
+propofol
+infusions
+were
+stopped 5 min before the end of surgery. Patients
+were extubated and transferred to the Post Anasthesia
+Care Unit (PACU) after surgery.
+Yu et al. Trials (2020) 21:43 
+Page 2 of 9
+
+
+=== PDF PAGE 3 ==="
+QOR24-V33-OD-0009,V33-OD-0009,Yu 2020,3,10_FINAL_ADJUDICATION/01_SOURCE_EVIDENCE/Yu_2020.txt,a1018b46eec1d8df75bd7c11d0a7ce0f5ec19a70194a7812a651c55f003871a1,221,238,"All statistical analysis was based on the intention-to-
+treat principle. Normally distributed numeric data were
+analyzed using the t test and are reported as mean and
+standard deviation (SD). Variables measured at multiple
+time points were analyzed using repeated-measures ana-
+lysis of variance. Dichotomous variables were presented
+as the number of patients (percent) and analyzed using
+the chi-square (X2) test and are reported as counts with
+percentages. Statistical significance was assessed at P <
+0.05.
+Results
+Patient characteristics
+Complete datasets were collected for all 60 participants
+and all the data were analyzed (Fig. 3). The characteris-
+tics of patients such as age, height, BMI, ASA physical
+status, anesthesia duration, surgery duration, estimated
+Fig. 1 Consolidated standards of reporting trials (Consort) flowchart. TEAS, Transcutaneous electrical acupoint stimulation
+Yu et al. Trials (2020) 21:43 "
+QOR24-V33-OD-0009,V33-OD-0009,Yu 2020,4,10_FINAL_ADJUDICATION/01_SOURCE_EVIDENCE/Yu_2020.txt,a1018b46eec1d8df75bd7c11d0a7ce0f5ec19a70194a7812a651c55f003871a1,100,140,"Randomization and blinding
+Patients were assigned by the nurse to either TEAS
+stimulus (TEAS group) or control (Con group) on the
+basis of random numbers generated by a computer be-
+fore the start of surgery (Fig. 1). Only the acupuncturist
+was informed by the nurse of the randomization alloca-
+tion, just before the onset of TEAS. None of the anesthe-
+siologists, surgeons, physicians in the post-anesthesia
+care unit (PACU), or participants were aware of the allo-
+cation. Blinding of the patients was ensured by using gel
+electrodes in the same therapeutic setting, which has
+previously been proved to be a successful strategy [9].
+TEAS protocol
+An experienced acupuncturist performed TEAS for
+30 min before anesthesia. According to the theory of
+traditional Chinese medicine, bilateral Baihui (GV20),
+Yingtang
+(EX-HN3),
+Zusanli
+(ST36)
+and
+Neiguan
+(PC6) were chosen as the acupuncture points. These
+acupoints were identified according to traditional ana-
+tomic localization (Fig. 2). Gel electrodes were applied
+to the skin after it had been cleaned with ethyl alco-
+hol. The acupoints were then stimulated electrically
+with an intensity of 12–15 mA and dense-disperse fre-
+quency of 2/100 Hz for 30 min, using the Hwato elec-
+tronic
+acupuncture
+treatment
+instrument
+(model
+SDZ-V, Suzhou Medical Appliances Co., Ltd., Suzhou,
+China). The intensity was adjusted to maintain slight
+twitching of local muscles according to individual
+maximum tolerance, indicating a satisfactory De-Qi
+phenomenon and thus adequate stimulation. The pa-
+tients in the control group had the electrodes applied
+but received no stimulation."
+QOR24-V33-OD-0009,V33-OD-0009,Yu 2020,5,10_FINAL_ADJUDICATION/01_SOURCE_EVIDENCE/Yu_2020.txt,a1018b46eec1d8df75bd7c11d0a7ce0f5ec19a70194a7812a651c55f003871a1,176,232,"The primary end points were postoperative quality of re-
+covery and cognitive functioning, and the secondary
+endpoint was anesthesia-related side effects, including
+pain scores, the incidence of nausea and vomiting and
+use of postoperative pain medications and antiemetics.
+The Quality of Recovery-40 (QoR-40) is a validated
+scale with five domains [10–12]. These measure physical
+comfort, emotional state, physical independence, psy-
+chological support and pain. Each domain is scored to a
+maximum global score of 200. QoR-40 scores have been
+found to be associated with quality-of-life scales, patient
+satisfaction indices [13] and postoperative pain [14]. In
+the present study, QoR-40 evaluation was performed on
+preoperative day 1 (T0), postoperative day 1 (T1) and
+postoperative day 2 (T2).
+The Mini-Mental State Examination (MMSE) is one of
+the most widely used assessment instruments of postop-
+erative cognitive functioning, and screens domains of
+orientation to time and place, attention and memory,
+concentration, language and praxis [15]. Patient cogni-
+tive function was assessed using the MMSE on days T0,
+T1 and T2.
+The visual analog scale (VAS) is widely used in behav-
+ioral science, and previous studies have reported their
+usefulness and validity [16, 17]. We used VAS scores to
+determine participants’ levels of pain at rest on postop-
+erative day 1 (T1) and postoperative day 2 (T2).
+Data collection
+Baseline data included demographics, body mass index
+(BMI) and ASA physical status. Surgical information re-
+corded included anesthesia duration, surgery duration,
+estimated blood loss and all other intraoperative medica-
+tions. BN, who was blinded to grouping, conducted the
+data collection and administered the questionnaires; FZ an-
+alyzed the data.
+Sample size
+Sample size calculation was based on the primary out-
+come of QoR-40 scores and MMSE. We calculated that
+16 patients in each group were required to detect a 30%
+difference between the groups, assuming two-sided type
+I error (α) of 0.05 and power of 80%. To account for po-
+tential loss to follow up and enable greater statistical
+power for secondary analysis, the sample size was in-
+creased to 60 patients (30 per group).
+Statistical analysis
+All statistical analysis was based on the intention-to-
+treat principle. Normally distributed numeric data were
+analyzed using the t test and are reported as mean and
+standard deviation (SD). Variables measured at multiple
+time points were analyzed using repeated-measures ana-
+lysis of variance. Dichotomous variables were presented
+as the number of patients (percent) and analyzed using
+the chi-square (X2) test and are reported as counts with
+percentages. Statistical significance was assessed at P <
+0.05.
+Results
+Patient characteristics"
+QOR24-V33-OD-0381,V33-OD-0381,Liang 2021,1,10_FINAL_ADJUDICATION/01_SOURCE_EVIDENCE/Liang_2021.txt,774810820c5e5ba80f1259fa1349bd6065859536d95dd2e001d02e8b80c21ef8,143,162,"2.2. Randomization. Eligible patients were randomly dis-
+tributed into two groups, with the help of a computer-
+generated table of random numbers by an independent
+statistician. An anesthesiologist (RYL) performed the pre-
+operative evaluation and recorded the data as participants
+had signed the consent. Clinical trial consent and QoR-40
+(quality of recovery 40 items) questionnaire were explained
+to the patients one day before the surgery. )e independent
+statistician created identical sealed envelopes before surgery
+containing either TEAS stimulus (Tgroup) or control group
+(C group). )e acupuncturist (DZH) opened the envelope
+and performed TEAS. One preoperative nurse (RY), who
+was not involved in patient care, prepared the items of
+arterial puncture and TEAS device. An anesthesiologist
+(HLD) performed the arterial puncture. An anesthesiologist
+(LDD), who was not aware of the allocation, performed
+general anesthesia and all intraoperative data recording, and
+another investigator (WL), in charge of all postoperative
+assessments, was also blinded to the group identity. Two
+investigators (YKN and JSH) performed data recording and"
+QOR24-V33-OD-0381,V33-OD-0381,Liang 2021,2,10_FINAL_ADJUDICATION/01_SOURCE_EVIDENCE/Liang_2021.txt,774810820c5e5ba80f1259fa1349bd6065859536d95dd2e001d02e8b80c21ef8,163,209,"analysis.
+2.3. TEAS Protocol. According to the theory of traditional
+Chinese medicine [17], we selected Yinjiao (1 cun below the
+umbilicus, RN7), Qihai (1.5 cun below the umbilicus, RN6),
+Shimen (2 cun below the umbilicus, RN5), GuanYuan (3 cun
+below the umbilicus, RN4), Zhongji point (4 cun below the
+umbilicus RN3), bilateral ciliao (second posterior sacral
+hole, BL32), zhongliao (a third sacral posterior hole, BL33),
+and xialiao (fourth sacral posterior hole, BL34) as the
+acupuncture points (Figure 1). TEAS was applied to the
+patients through self-adhesive cutaneous electrode pads
+(5 cm × 5 cm). We used HANS-200A Acupoint Stimulator
+for TEAS. )e frequency was set 2/100 HZ for 30 minutes,
+the highest tolerable level that caused no discomfort to the
+patient;
+in
+control
+group,
+the
+patients
+received
+no
+stimulation.
+2.4. Anesthesia and Perioperative Procedures. Considering
+the comfort of general anesthesia and the patient’s active
+choice of general anesthesia due to fear of surgery, we chose
+laryngeal mask general anesthesia. All patients were induced
+with propofol 2 mg／kg and sufentanil 0.3–0.5 μg／kg and
+intubation was performed with Cisatracurium 2 mg／kg.
+Anesthesia was maintained by a target-controlled infusion
+(TCI) of propofol and remifentanil. )e bispectrum index
+(BIS) was maintained within the range of 45–55 by adjusting
+to control the depth of anesthesia. Mechanical ventilation
+was performed to maintain PetCO2 at 35–40 mmHg.
+2
+Evidence-Based Complementary and Alternative Medicine
+ 4747, 2021, 1, Downloaded from https://onlinelibrary.wiley.com/doi/10.1155/2021/6691459 by John Ryan Nual Mendoza - Statens Beredning , Wiley Online Library on [17/08/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+
+=== PDF PAGE 3 ===
+Sufentanil 0.1 mg／kg per 30 minutes during the surgery
+was administered to provide analgesia. Intravenous pro-
+phylactic ondansetron (8 mg) was administered to prevent
+postoperative nausea and vomiting. After spontaneous
+breath recovery and consciousness, the neuromuscular
+blockade was reversed with neostigmine, the trachea was
+extubated, and patients were moved to the postanesthesia"
+QOR24-V33-OD-0381,V33-OD-0381,Liang 2021,3,10_FINAL_ADJUDICATION/01_SOURCE_EVIDENCE/Liang_2021.txt,774810820c5e5ba80f1259fa1349bd6065859536d95dd2e001d02e8b80c21ef8,440,479,"Enrollment
+Assessed for eligibility
+(n = 80)
+Randomized (n = 75)
+Allocation
+Lost to follow-up (surgical procedure
+change) (n = 3)
+Discontinued intervention (n = 0)
+Lost to follow-up (n = 0)
+Discontinued intervention (blood sample
+loss, failure to arterial puncture) (n = 2)
+Follow-up
+Analysis
+Excluded (n = 5)
+Not meeting inclusion criteria
+(n = 3)
+(i)
+Other reasons (n = 2)
+(ii)
+Control group (n = 38)
+Received allocated intervention
+(n = 38) (no TEAS stimulation)
+(i)
+TEAS group (n = 37)
+Received allocated intervention
+(n = 37) (Acupoints: RN7, RN6, RN5,
+RN4, RN3, BL32, BL33, and BL34, 3
+minutes, 2/100HZ, dense-disperse)
+(i)
+Analysed (n = 35)
+Excluded from analysis (n = 0)
+(i)
+Analysed (n = 35)
+Excluded from analysis (n = 0)
+(i)
+Figure 2: )e ﬂow diagram of study procedures. TEAS, transcutaneous electrical acupoint stimulation; Yinjiao (RN7); Qihai (RN6); Shimen
+(RN5); GuanYuan (RN4); Zhongji point (RN3); bilateral ciliao (BL32); bilateral zhongliao (BL33); and bilateral xialiao (BL34).
+Table 2: )e incidence of postoperative catheter-related bladder discomfort between two groups.
+Time (hours)
+T5"
+QOR24-V33-OD-0381,V33-OD-0381,Liang 2021,4,10_FINAL_ADJUDICATION/01_SOURCE_EVIDENCE/Liang_2021.txt,774810820c5e5ba80f1259fa1349bd6065859536d95dd2e001d02e8b80c21ef8,143,185,"2.2. Randomization. Eligible patients were randomly dis-
+tributed into two groups, with the help of a computer-
+generated table of random numbers by an independent
+statistician. An anesthesiologist (RYL) performed the pre-
+operative evaluation and recorded the data as participants
+had signed the consent. Clinical trial consent and QoR-40
+(quality of recovery 40 items) questionnaire were explained
+to the patients one day before the surgery. )e independent
+statistician created identical sealed envelopes before surgery
+containing either TEAS stimulus (Tgroup) or control group
+(C group). )e acupuncturist (DZH) opened the envelope
+and performed TEAS. One preoperative nurse (RY), who
+was not involved in patient care, prepared the items of
+arterial puncture and TEAS device. An anesthesiologist
+(HLD) performed the arterial puncture. An anesthesiologist
+(LDD), who was not aware of the allocation, performed
+general anesthesia and all intraoperative data recording, and
+another investigator (WL), in charge of all postoperative
+assessments, was also blinded to the group identity. Two
+investigators (YKN and JSH) performed data recording and
+analysis.
+2.3. TEAS Protocol. According to the theory of traditional
+Chinese medicine [17], we selected Yinjiao (1 cun below the
+umbilicus, RN7), Qihai (1.5 cun below the umbilicus, RN6),
+Shimen (2 cun below the umbilicus, RN5), GuanYuan (3 cun
+below the umbilicus, RN4), Zhongji point (4 cun below the
+umbilicus RN3), bilateral ciliao (second posterior sacral
+hole, BL32), zhongliao (a third sacral posterior hole, BL33),
+and xialiao (fourth sacral posterior hole, BL34) as the
+acupuncture points (Figure 1). TEAS was applied to the
+patients through self-adhesive cutaneous electrode pads
+(5 cm × 5 cm). We used HANS-200A Acupoint Stimulator
+for TEAS. )e frequency was set 2/100 HZ for 30 minutes,
+the highest tolerable level that caused no discomfort to the
+patient;
+in
+control
+group,
+the
+patients
+received
+no
+stimulation."
+QOR24-V33-OD-0381,V33-OD-0381,Liang 2021,5,10_FINAL_ADJUDICATION/01_SOURCE_EVIDENCE/Liang_2021.txt,774810820c5e5ba80f1259fa1349bd6065859536d95dd2e001d02e8b80c21ef8,238,248,"(QoR-40) [18] Chinese version with ﬁve domains was used
+to measure at diﬀerent time points, including before an-
+esthesia (T0), postoperative 24 hours (T11), and postoper-
+ative 48 hours (T12). QoR-40 was comprised of ﬁve
+subscales: physical comfort (PC), emotional state (ES),
+physical independence (PI), psychological support (PS), and
+pain (P). Each item was rated on a scale of 1–5, providing a
+minimum score of 40 and a maximum of 200. A qoR-40
+questionnaire was used to measure physical condition after
+anesthesia in patients.
+Patient cognitive function was assessed using the min-"
+QOR24-AUDIT-0120,AUDIT-0120,Pan 2023,1,10_FINAL_ADJUDICATION/01_SOURCE_EVIDENCE/Pan_2023.txt,afaa51e8883649e5a3366e84e0d6a016c8ca737b38ad94552dd5bc944f8a7d91,72,81,"In this double-blind randomized control-group clinical trial, we studied about Transcutaneous electrical acupoint 
+stimulation accelerates the recovery of patients undergoing laparoscopic myomectomy. The Ethics Committee of 
+Wenzhou Medical University (WMU) approved this study (clinical trial number: ChiCTR2100045173; Registry URL: 
+YJLCYJ-2020-148). The study was conducted in accordance with the Declaration of Helsinki. Included in the study 
+cohort were 120 women (ASA I and II) aged 18 to 60 years and who received laparoscopic myomectomy at the First 
+Affiliated Hospital, WMU, Zhejiang, China, from May 2021 to December 2021. Patients were assigned to TEAS group 
+(Group T) and control group (Group C) using random number tables. All participants provided informed consent.
+Exclusion criteria included: incision or surgical scar at acupoint; infection of acupoint; nerve injury in any limb; prior 
+spinal surgery; allergic reaction to any of the drugs used in this study; sinus bradycardia; severe neurological disease; 
+severe respiratory disease; smoking; severe cardiovascular disease; addiction to an anaesthetic; recent history of "
+QOR24-AUDIT-0120,AUDIT-0120,Pan 2023,2,10_FINAL_ADJUDICATION/01_SOURCE_EVIDENCE/Pan_2023.txt,afaa51e8883649e5a3366e84e0d6a016c8ca737b38ad94552dd5bc944f8a7d91,84,143,"Transcutaneous Electrical Acupoint Stimulation (TEAS)
+Patients in Group T received TEAS. The anesthesiologist selected acupoints of LI4 (Hegu) and PC6 (Neiguan) on both 
+hands of the patients, stuck the electrodes, and connected Han’s Acupoint Nerve Stimulator (Nanjing Jinan Xinsheng 
+Technology, Jinan, Nanjing, China) capable of producing a dilatational wave with a frequency of 2/100 HZ, which is the 
+maximum tolerable for patients receiving −1 mA of electrical stimulation for 30 minutes before the operation and lasting 
+until the end of anesthesia. Using the same method at bilateral acupoints of ST36 (Zusanli) and SP6 (Sanyinjiao) for 30 
+minutes while in PACU (Postanesthesia care unit). Patients in Group C did not undergo TEAS. The acupoint locations 
+are shown in Figure 1.
+Numerical Rating Scale (NRS)
+1h and 24h after the procedure, a PACU nurse, who was unaware of the group of each patient, assisted patients to 
+evaluate their pain level by using a numerical rating scale (NRS: 0–10,0 = none, 10 = most severe, 1–3 mild pain, 4–6 
+moderate pain, 7–10 severe pain).
+Grade of Abdominal Distension Severity
+Grade 0: No or transient abdominal distension; Grade 1: mild abdominal distension, or temporary sudden abdominal 
+distension, gas movement in the abdomen, but does not affect rest and sleep, mild abdominal bulge, abdominal wall 
+tension; Grade 2: moderate abdominal distension, nausea, rest, sleep, moderate abdominal bulge, large abdominal 
+tension; Grade 3: severe abdominal distension, severe nausea, vomiting, irritability, serious sleep, significant abdominal 
+swelling, and percussion.
+Anesthesia, Surgical Procedures, and Analgesia
+A 22-gauge trocar was used to obtain venous access on the dorsal side of the non-dominant hand prior when the patient is 
+in the preoperative preparation room. After the infusion channel was connected to the extension tube, 500 mL Ringer’s 
+https://doi.org/10.2147/JPR.S399249 
+DovePress 
+Journal of Pain Research 2023:16 
+810
+Pan et al 
+Dovepress
+Powered by TCPDF (www.tcpdf.org)
+Powered by TCPDF (www.tcpdf.org)
+
+
+=== PDF PAGE 3 ===
+solution was infused through the channel, with an infusion speed of 20 mL/min. No medications were given. Blood 
+pressure, oxygen saturation and electrocardiography were monitored while in operating theatre. The anesthesia induction 
+sequence was started with intravenous sufentanil (0.5 µg/kg) (Yichang Renfu, Yichang, Hubei, China) over two seconds, 
+propofol (2mg/kg) (Aspen Pharma Trading Limited) and cisatracurium (2mg/kg) (Jiangsu Hengrui, Jiangsu, China) were 
+given and endotracheal intubation was performed. Propofol and remifentanil (Yichang Renfu, Yichang, Hubei, China) 
+were injected by electronic pump during anesthesia maintenance to kept the patient’s blood pressure stable during 
+operation and BIS(Bispectral Index) maintained between 40 and 60. Add the cisatracurium or sufentanil and record the 
+dosage according to the actual situation. Both groups were given tropisetron 5mg immediately at the start of surgery to 
+prevent postoperative nausea and vomiting and flurbiprofen 100mg for postoperative analgesia. The surgeon was 
+instructed to administer ropivacaine for local infiltration analgesia around the incision at the end of the procedure. At 
+the end of surgery, the muscle relaxation antagonism (neostigmine 1mg, atropine 0.5mg) was given immediately, and 
+20mg was given to promote the recovery of spontaneous breathing. When the patient recovered spontaneous breathing, 
+tidal volume was >6 mL/kg, respiratory waveform was regular, he could respond to oral instructions, and the tracheal 
+tube was removed after sputum suction and the patient was taken to the PACU. Norepinephrine(4ug) was administered 
+intravenously every time when systolic blood pressure fell to <90 mmHg or diastolic blood pressure fell to <60 mmHg. 
+Atropine (0.5 mg) was administered when the heart rate fell below 50 per minute (Figure 2).
+Figure 1 Illustration of the acupoints.
+Journal of Pain Research 2023:16 
+https://doi.org/10.2147/JPR.S399249 
+DovePress 
+811
+Dovepress 
+Pan et al
+Powered by TCPDF (www.tcpdf.org)
+Powered by TCPDF (www.tcpdf.org)
+
+
+=== PDF PAGE 4 ==="
+QOR24-AUDIT-0120,AUDIT-0120,Pan 2023,3,10_FINAL_ADJUDICATION/01_SOURCE_EVIDENCE/Pan_2023.txt,afaa51e8883649e5a3366e84e0d6a016c8ca737b38ad94552dd5bc944f8a7d91,184,194,"Results
+The overall study cohort was comprised of 105 patients, with 52 in Group T and 53 in Group C. Six patients used 
+analgesic drugs other than those in the experimental plan, 6 patients underwent a different surgical procedure, two 
+patients used PCIA (Patient-controlled intravenous analgesia), and one patient had intraoperative bleeding (Figure 3).
+General Characteristics
+The general preoperative (Table 1) and intraoperative (Table 2) conditions were compared between Groups T and C. No 
+statistically significant differences were observed for ASA, age, weight, BMI, MAP, HR, BIS, temperature, duration of 
+anesthesia, duration of operation, intraoperative blood loss, intraoperative urine volume, dosage of sufentanil, propofol, 
+or atracurium cisbenzenesulfonate. However, the dosage of remifentanil used in Group T was significantly lower by 
+almost 15% relative to Group C.
+Figure 3 Flowchart for inclusion, exclusion and missing interviews."
+QOR24-AUDIT-0120,AUDIT-0120,Pan 2023,4,10_FINAL_ADJUDICATION/01_SOURCE_EVIDENCE/Pan_2023.txt,afaa51e8883649e5a3366e84e0d6a016c8ca737b38ad94552dd5bc944f8a7d91,84,99,"Transcutaneous Electrical Acupoint Stimulation (TEAS)
+Patients in Group T received TEAS. The anesthesiologist selected acupoints of LI4 (Hegu) and PC6 (Neiguan) on both 
+hands of the patients, stuck the electrodes, and connected Han’s Acupoint Nerve Stimulator (Nanjing Jinan Xinsheng 
+Technology, Jinan, Nanjing, China) capable of producing a dilatational wave with a frequency of 2/100 HZ, which is the 
+maximum tolerable for patients receiving −1 mA of electrical stimulation for 30 minutes before the operation and lasting 
+until the end of anesthesia. Using the same method at bilateral acupoints of ST36 (Zusanli) and SP6 (Sanyinjiao) for 30 
+minutes while in PACU (Postanesthesia care unit). Patients in Group C did not undergo TEAS. The acupoint locations 
+are shown in Figure 1.
+Numerical Rating Scale (NRS)
+1h and 24h after the procedure, a PACU nurse, who was unaware of the group of each patient, assisted patients to 
+evaluate their pain level by using a numerical rating scale (NRS: 0–10,0 = none, 10 = most severe, 1–3 mild pain, 4–6 
+moderate pain, 7–10 severe pain).
+Grade of Abdominal Distension Severity
+Grade 0: No or transient abdominal distension; Grade 1: mild abdominal distension, or temporary sudden abdominal 
+distension, gas movement in the abdomen, but does not affect rest and sleep, mild abdominal bulge, abdominal wall 
+tension; Grade 2: moderate abdominal distension, nausea, rest, sleep, moderate abdominal bulge, large abdominal "
+QOR24-AUDIT-0120,AUDIT-0120,Pan 2023,5,10_FINAL_ADJUDICATION/01_SOURCE_EVIDENCE/Pan_2023.txt,afaa51e8883649e5a3366e84e0d6a016c8ca737b38ad94552dd5bc944f8a7d91,144,181,"Observation Indexes
+The main observation indexes included the 40 items in QoR-40 24 hours after surgery to evaluate the quality of 
+postoperative rehabilitation. The secondary outcome measures: the general patient condition, dosage of remifentanil, 
+propofol, any vasoactive drugs, etc used during the operation, incidence of pain caused by propofol injection during the 
+operation, and the incidence of cough induced by sufentanil during anesthesia induction. Ten recordings of the patients’ 
+mean arterial pressure (MAP), HR (Heart Rate), SaO2 (oxygen saturation), BIS were recorded at the following times: in 
+the operating room and patient calmed (T0), immediately before tracheal intubation (T1), one min after tracheal 
+intubation (T2), two min after tracheal intubation (T3), immediately at the beginning of operation (T4), pneumoper­
+itoneum at 5 min (T5), pneumoperitoneum at 30 min (T6), suture of the operation (T7), immediately before extubation 
+(T8), one min after extubation (T9). Records were also made of bleeding, urine volume, liquid, the time of anesthesia, the 
+time of operation, the incidence of intraoperative hemodynamic instability, the utilization rate of vasoactive drugs, the 
+postoperative respiratory recovery time, the conscious time, the extubation time, Aldrete score, highest pain score in 
+PACU, the retention time in PACU, the utilization rate of remedial drugs in PACU, NRS (Numerical Rating Scale) at 1 
+h and 24 h after the operation, the occurrence of adverse reactions including nausea, vomiting, abdominal distention, the 
+utilization rate of analgesic and antiemetic drugs in 24h, the time to first postoperative anal exhaust, the time to first 
+postoperative water intake, the time to solid food tolerance, the time to catheter removal, the time to first postoperative 
+implantation activity, the time of postoperative hospitalization.
+Figure 2 Test flowchart. 
+Abbreviations: TEAS, transcutaneousacupoint electrical stimulation; BP, Blood Pressure; SaO2, Arterial Oxygen Saturation; ECG, Electrocardiogram; BIS, Bispectral Index; 
+PACU, Postanesthesia care unit; QoR40, Quality of Recovery Score-40.
+https://doi.org/10.2147/JPR.S399249 
+DovePress 
+Journal of Pain Research 2023:16 
+812
+Pan et al 
+Dovepress
+Powered by TCPDF (www.tcpdf.org)
+Powered by TCPDF (www.tcpdf.org)
+
+
+=== PDF PAGE 5 ===
+Statistical Analysis
+The necessary sample size was estimated based on an improvement of 4 points in the QoR-40 evaluation. With a = 0.05 
+and β = 0.20, at least 49 patients were needed in each group. All data were analyzed by SPSS 23.0. The mean ± standard 
+deviation of measurement data that had a normal distribution was used in statistical descriptions. The median (with 
+interquartile spacing) was used for statistical description of measurement data not conforming to a normal distribution. 
+Two-sample independent t-test was employed to evaluate measurement indexes with normal distribution and to test the 
+homogeneity of variance. Rank sum test was employed to evaluate non-conforming normal distribution. Numerical data "
+QOR24-QOR24-HOU2023,QOR24-HOU2023,Hou 2023,1,10_FINAL_ADJUDICATION/01_SOURCE_EVIDENCE/Hou_2023.txt,bbe80fd736c7d0e2bd0002b2dd8f8bbb61efdef209046e6fd05b82ae52b8f97f,184,189,"2.6. Randomization and blinding 
+The participants were randomized into either TEAS (n = 37) or control (n = 37) group in a 1:1 ratio based on a randomization 
+number generated by an independent researcher using IBM®SPSS 25.0 (Armonk, New York USA). The randomization number was 
+placed in a sealed envelope and was not revealed until the first intervention. Only the acupuncturist performing the intervention knew 
+which intervention the assigned number represented. No participant, surgeon, anesthesiologist, data collector, or outcome assessor 
+knew the allocation of participants. "
+QOR24-QOR24-HOU2023,QOR24-HOU2023,Hou 2023,2,10_FINAL_ADJUDICATION/01_SOURCE_EVIDENCE/Hou_2023.txt,bbe80fd736c7d0e2bd0002b2dd8f8bbb61efdef209046e6fd05b82ae52b8f97f,94,138,"2.1. TEAS and control interventions 
+Based on Traditional Chinese Medicine (TCM) and available clinical trials, five acupoints [Yingtang (EX-HN3), bilateral Taichong 
+(LR3) [15,16] and Neiguan (PC6) [15,17] [please refer to Fig. S1]; and foot note3 were selected for TEAS intervention aimed at 
+reducing patient anxiety. TEAS was performed for 30 min at one day before surgery (D0), before the induction of anesthesia (D1), and 
+one day after surgery (D2) i.e., a total of three treatment over a three-day period. The first author YH, who has extensive acupuncture 
+training and who has been in practice for 2 years, performed the assigned TEAS intervention on every LKD based on this/her group 
+assignment. The group assignment was written in a piece of paper and placed in a sealed envelope. All participants were asked to 
+remain in a supine position for and during the intervention. The skin at the selected acupoints and area was cleaned and prepped with 
+75% isopropyl alcohol. The surface electrodes (3 × 3cm) (see supplement) were placed onto these acupoints. Yingtang point pairing 
+electrode patch was placed on the skin located at right mid-subclavicular area. All electrodes were then connected to a Hwato elec­
+tronic stimulator (model SDZ-V, Suzhou Medical Appliances Co. Ltd, Suzhou, China). The mode of electrical stimulation was 
+dense-disperse, alternated 2Hz/100 Hz frequencies; the intensity was adjusted according to individual tolerance, generally between 6 
+and 15 mA. Participants in TEAS could sense vibration following activation of the stimulator for a total of 30 min [18]. Participants 
+assigned to the control group had the same electrode placements, but the stimulator was disabled without any transmission of elec­
+tricity. This method had been used to blind the participants successfully in a previous study [19]. 
+2.2. Intraoperative and postoperative management 
+All participants received the same intraoperative and postoperative management. On the day of surgery, all LKDs received 
+intravenous (IV) pantoprazole (80 mg) and methylprednisolone (40 mg) preoperatively. Once ASA standard monitors and a bispectral 
+2 “We are going to test the effects of an acupuncture-like electrical stimulations being integrated into routine perioperative care and the intensity 
+of electrical stimulation is very low so you may or may not be able feel the stimulations.” 
+3 Yintang (EX-HN3, located in the root of the nose, and between the eyebrows.) and bilateral Neiguan (PC6, located 2 cun* up the transverse wrist, 
+between the palmaris longus tendon and the radial carpal flexor tendon.) and Taichong (LR3, located in the depression of the first two metatarsal 
+unions). * Unit of Chinese measurement. 
+Y. Hou et al. 
+
+
+=== PDF PAGE 3 ===
+Heliyon 9 (2023) e14423
+3
+index monitor (BIS) were placed, general anesthesia was induced with IV sufentanil 0.3–0.5 μg kg−1 and propofol 0.2–0.3 mg kg−1. 
+When the BIS number reached between 40 and 60, IV cisatracurium 0.2–0.3 mg kg −1 was administered and a laryngeal mask airway 
+(Male: I-gel® 4, Female: I-gel® 3, Berman, Germany) was placed. All participants received volume-controlled mechanical ventilation 
+with tidal volume of 8 ml kg−1 body weight. Bilateral transversus abdominis plane block (TAP block) was performed under ultrasound 
+guidance and a total of 30 ml of 0.375% ropivacaine was injected via 0.7 × 90 mm block needles (15 ml each side). All LKDs received 
+continuous target-controlled infusion (TCI) of propofol (modified Marsh model, Cp 2.0–3.0 μg ml−1) and remifentanil (modified Marsh 
+model, Cp 2.0–3.0 ng ml−1). In addition, 1% sevoflurane was used to maintain the BIS between 40 and 60. Based on the standard 
+protocol, IV phenylephrine and/or atropine were administered to ensure adequate blood perfusion to the kidney at the time of harvest. 
+Intravenous muscle relaxant (IV cisatracurium 0.05–1 mg kg −1) was administered when T1 twitch height reached 25% of baseline 
+detected by a Train of Four (TOF) monitor (Veryark-TOF, Guangxi, China). Sevoflurane and TCI (propofol and remifentanil mixture) 
+were discontinued 30 min before the end of surgery. Fifteen minutes before the end of surgery, IV droperidol (1 mg) and flurbiprofen 
+(100 mg) were administered to prevent postoperative nausea and vomiting (PONV) and pain. At the end of surgery, IV 50 μg kg−1 
+neostigmine and 20 μg kg−1 atropine were administered to reverse the effect of muscle relaxant. Participants were transferred to the 
+Post Anesthesia Care Unit (PACU), and I-gel® was removed when the participant met the clinical criteria [20]. A patient-controlled 
+intravenous analgesia pump [sufentanil (1 μg ml−1), azasetron (0.4 mg ml−1) and droperidol (0.01 mg ml−1); flow rate (2 ml h−1); 
+bolus (4 ml); lock time (30min)] was connected to the PACU for 48 h postoperatively. At D3, if a visual analogue scale–pain (VAS-P) "
+QOR24-QOR24-HOU2023,QOR24-HOU2023,Hou 2023,3,10_FINAL_ADJUDICATION/01_SOURCE_EVIDENCE/Hou_2023.txt,bbe80fd736c7d0e2bd0002b2dd8f8bbb61efdef209046e6fd05b82ae52b8f97f,199,203,"3. Results 
+A total of 74 LKDs were recruited but two LKDs withdrew from the study for personal reasons (Fig. 1). Therefore, only 72 LKDs 
+completed the study and were included in the final data analyses. There were no differences in baseline characteristics between the 
+groups (Table 2). There were also no significant differences in the duration of surgery and anesthesia, time to removal of LMA, 
+intraoperative consumption of remifentanil and propofol, blood loss and urine output between the groups (Table 3). "
+QOR24-QOR24-HOU2023,QOR24-HOU2023,Hou 2023,4,10_FINAL_ADJUDICATION/01_SOURCE_EVIDENCE/Hou_2023.txt,bbe80fd736c7d0e2bd0002b2dd8f8bbb61efdef209046e6fd05b82ae52b8f97f,94,113,"2.1. TEAS and control interventions 
+Based on Traditional Chinese Medicine (TCM) and available clinical trials, five acupoints [Yingtang (EX-HN3), bilateral Taichong 
+(LR3) [15,16] and Neiguan (PC6) [15,17] [please refer to Fig. S1]; and foot note3 were selected for TEAS intervention aimed at 
+reducing patient anxiety. TEAS was performed for 30 min at one day before surgery (D0), before the induction of anesthesia (D1), and 
+one day after surgery (D2) i.e., a total of three treatment over a three-day period. The first author YH, who has extensive acupuncture 
+training and who has been in practice for 2 years, performed the assigned TEAS intervention on every LKD based on this/her group 
+assignment. The group assignment was written in a piece of paper and placed in a sealed envelope. All participants were asked to 
+remain in a supine position for and during the intervention. The skin at the selected acupoints and area was cleaned and prepped with 
+75% isopropyl alcohol. The surface electrodes (3 × 3cm) (see supplement) were placed onto these acupoints. Yingtang point pairing 
+electrode patch was placed on the skin located at right mid-subclavicular area. All electrodes were then connected to a Hwato elec­
+tronic stimulator (model SDZ-V, Suzhou Medical Appliances Co. Ltd, Suzhou, China). The mode of electrical stimulation was 
+dense-disperse, alternated 2Hz/100 Hz frequencies; the intensity was adjusted according to individual tolerance, generally between 6 
+and 15 mA. Participants in TEAS could sense vibration following activation of the stimulator for a total of 30 min [18]. Participants 
+assigned to the control group had the same electrode placements, but the stimulator was disabled without any transmission of elec­
+tricity. This method had been used to blind the participants successfully in a previous study [19]. 
+2.2. Intraoperative and postoperative management 
+All participants received the same intraoperative and postoperative management. On the day of surgery, all LKDs received 
+intravenous (IV) pantoprazole (80 mg) and methylprednisolone (40 mg) preoperatively. Once ASA standard monitors and a bispectral 
+2 “We are going to test the effects of an acupuncture-like electrical stimulations being integrated into routine perioperative care and the intensity 
+of electrical stimulation is very low so you may or may not be able feel the stimulations.” "
+QOR24-QOR24-HOU2023,QOR24-HOU2023,Hou 2023,5,10_FINAL_ADJUDICATION/01_SOURCE_EVIDENCE/Hou_2023.txt,bbe80fd736c7d0e2bd0002b2dd8f8bbb61efdef209046e6fd05b82ae52b8f97f,150,178,"(c) The Quality of Recovery-15(QoR-15): The QoR-15 scale is a validated measure to evaluate the quality of a patient’s recovery. The 
+scale consists of 15 items assessing patient-reported health status in five domains: pain intensity, physical independence, 
+physical satisfaction, psychological and emotional state. Each item is rated on a scale of 0–10; 150 is the maximum score and 0 is 
+the minimum score. The quality of recovery has been classified based on the scores assessed by QoR-15 into excellent, good, 
+moderate, and poor; they are 136–150, 122–135, 90–121, and 0–89, respectively [23]. 
+(d) Visual Analogue Scale for Pain (VAS-P): The VAS-P scale is a unidimensional measure of pain intensity. It consists of a line with 
+left side “0” representing “no pain” and right side “100” representing “extreme pain”. 
+(e) Leeds Assessment of Neuropathic Symptoms and Signs Pain Scale (LANSS): LANSS comprises of a 7 items pain scale including 5 
+items for the sensory descriptors and 2 items for sensory examination. The primary purpose of this test is to assess whether the 
+pain experienced is predominantly caused by nerve damage or not. The LANSS scale is the only scale with validity for 
+discriminating the origin of pain (neuropathic vs. nociceptive) [24]. 
+(f) Blood Samples for Biomarkers: Three milliliter of venous blood samples were collected in anticoagulant tubes before every TEAS 
+treatment. Blood samples were immediately centrifuged at 4000r min−1 for 10min, and the plasma was transferred to 
+Eppendorf tubes and stored in a −80 ◦C freezer until analyses. Concentrations of plasma 5-hydroxytryptamine (5-HT), mela­
+tonin (MT), interleukin-1β (IL-1β) and tumor necrosis factor-α (TNF-α) were measured using commercial ELISA kits (Hefei 
+Nuozhuo Biological Technology). These biomarkers were chosen because 5-HT and MT are neurotransmitters closely related to 
+anxiety and the sleep cycle [25,26]. IL-1β and TNF-α are pro-inflammatory cytokines closely related to the intensity of pain and 
+pathogenesis of chronic pain [27]. 
+2.4. Primary outcome and recovery profiles 
+The primary outcome was the difference of anxiety levels in LKDs who received or did not receive TEAS. We also collected recovery 
+profiles including sleep quality (ISI) and postoperative recovery (e.g., incidence of PONV, usage of rescue analgesics, severity of 
+postoperative pain, postoperative recovery index, etc.). In addition, blood samples were collected at D0, D1, and D2 to determine 
+plasma levels of biomarkers (5-HT, melatonin, IL-1β and TNF-α). 
+2.5. Sample size calculation 
+Using PASS 15.0 (NCC, Kaysville, Utah, United States), the required sample size was calculated based on existing data that indicates 
+approximately 65% of LKDs experienced anxiety [6] and nearly 32% of surgical patients had anxiety despite TEAS treatment [28]. 
+Assuming a two-sided type I error (α) of 0.05 and a power of 80%, a total of 66 LKDs were needed. To allow for a 10% drop out rate, the 
+sample size needed to be 74 LKDs. 
+Y. Hou et al. "
+QOR24-QOR24-WU2025,QOR24-WU2025,Wu 2025,1,10_FINAL_ADJUDICATION/01_SOURCE_EVIDENCE/Wu_2025.txt,aebc2703278c084d7aa54d27cd5ed11fb08e4efb39fa2dd5d2055572dd10bb0d,94,104,"Eligible participants (n=100) were randomly assigned (1:1) to receive either TEAS or sham TEAS upon arrival at the 
+Post-Anesthesia Care Unit (PACU). Randomization was performed using a computer-generated list of random numbers 
+created by an independent third party. A professionally trained anesthesiologist administered the interventions according 
+to a serial number corresponding to the random number table All clinicians and researchers collecting or analyzing the 
+data were blinded to the group assignments. To enhance blinding, the sham TEAS group received electrode patches 
+affixed without electrical stimulation to simulate the sensory experience without actual electrical current. Complete 
+blinding of all subjects was attempted; however, the sensation of electrical stimulation can bring about some perceptual 
+differences, and this difference may affect the interpretation of the result. Nonetheless, considering that the participants’ 
+consciousness level was basically low when they entered the PACU, the weak current intensity might not be detected by 
+https://doi.org/10.2147/JPR.S529193 
+Journal of Pain Research 2025:18 "
+QOR24-QOR24-WU2025,QOR24-WU2025,Wu 2025,2,10_FINAL_ADJUDICATION/01_SOURCE_EVIDENCE/Wu_2025.txt,aebc2703278c084d7aa54d27cd5ed11fb08e4efb39fa2dd5d2055572dd10bb0d,115,146,"Ultrasound-guided thoracic paravertebral nerve blocks were performed at T4-7 levels. After anesthesia induction, 
+endotracheal intubation was performed, adopting one-lung ventilation and a protective lung ventilation strategy.20 The 
+patients’ core temperature was maintained stable by using 41°C infusion heating and a warm air blower, and the 
+bispectral index (BIS) was maintained between 40–60 throughout the operation. Vasoactive agents were administered to 
+maintain the heart rate and blood pressure within 20% of the baseline values, and 200 mg of sugammadex sodium was 
+administered postoperatively. Sufentanil, propofol, and rocuronium bromide were used for anesthesia induction, whereas 
+propofol, remifentanil, rocuronium bromide, and dexmedetomidine were continuously administered during the operation. 
+Ropivacaine (150 mg) is used for TPVB,21 but postoperative patient-controlled analgesia (PCA) is not routinely applied. 
+No additional postoperative analgesics were administered unless the postoperative VAS(visual analogue scale) score 
+exceeded 4. Paracetamol and oxycodone with acetaminophen tablets or intravenous parecoxib sodium (40 mg) were 
+administered.22 More details can be found in Supplementary Material 1.
+Intervention
+Upon arrival in the PACU, participants were randomly assigned to the TEAS or Sham groups. Prior to anesthesia 
+induction, all patients were informed about the potential use of TEAS for postoperative pain management and were 
+shown the electrode patches to be applied to specific acupoints, ensuring awareness and minimizing placebo effects.
+In the TEAS group, an experienced anesthesiologist administered Transcutaneous Electrical Acupoint Stimulation at 
+the bilateral Hegu (LI14) and Neiguan (PC6) points23 using an acupoint nerve stimulator (Model: HANS-200A; Nanjing 
+Jisheng Medical Technology Co., Ltd.). The device delivered fixed-intensity electrical stimulation at frequencies of 2 hz 
+and 10 hz and a current of 12–20 mA for 30 min.24 Stimulation began immediately upon PACU arrival, while the patients 
+were still under residual anesthesia, ensuring consistency and minimizing the placebo effects.
+In the sham TEAS group, electrode patches were affixed to the same acupoints without electrical stimulation for 
+30 min. The presence of electrode patches and prior briefings created a comparable experience, maintained blinding, and 
+reduced psychological biases.
+Administering TEAS during residual anesthesia reduced the likelihood of participants discerning their group based on 
+sensation. TEAS participants might experience numbness and acid distension at acupoints if they become more awake, 
+reinforcing the perception of receiving active treatment. Conversely, sham TEAS participants, despite no active stimulation, 
+might believe that they received TEAS due to the electrode patches and initial briefing, further minimizing placebo-related bias.
+TEAS was implemented in accordance with the Standards for Reporting of Controlled Trials in Acupuncture 
+(STRICTA) guidelines to ensure methodological rigor and reproducibility.23
+Outcomes
+The primary outcome was pain intensity 24 h after surgery, measured using visual analog scale (VAS) scores (0–10).
+Secondary outcomes included VAS scores at 1 h and 12 h post-surgery, incidence of moderate to severe pain (VAS >4) in "
+QOR24-QOR24-WU2025,QOR24-WU2025,Wu 2025,3,10_FINAL_ADJUDICATION/01_SOURCE_EVIDENCE/Wu_2025.txt,aebc2703278c084d7aa54d27cd5ed11fb08e4efb39fa2dd5d2055572dd10bb0d,164,189,"=== PDF PAGE 4 ===
+a random intercept for each participant. Estimates were summarized as mean differences (MD) or relative risks (RR) with 
+95% confidence intervals (CI). A 2-factor repeated measures ANOVA was used to analyze the VAS scores at each time 
+point post-surgery. The Kolmogorov–Smirnov test was used to assess data normality. Statistical significance was set at 
+a 95% confidence limit and p < 0.05. All outcomes were evaluated in the intention-to-treat (ITT) population, which 
+included all subjects in the full analysis set (FAS). Statistical analyses were performed using SPSS version 21 (IBM, 
+Armonk, NY, USA), Stata 14 (StataCorp, TX, USA), and GraphPad Prism (version 7.0, GraphPad Software, USA).
+Calculation of Sample Sizes
+The sample size was determined based on a 25% reduction in pain scores with a statistical power of 90% and a type 
+I error of 5%. This calculation was based on preliminary data, where patients receiving standard general anesthesia had 
+a mean VAS pain score of 4.05 with a standard deviation of 1.95 in the first 24 h postoperatively. A 25% reduction 
+corresponds to a VAS score decrease of at least 1 point (from 4 to 3), which is considered clinically significant as it 
+transitions pain from moderate to mild levels. To account for the potential loss to follow-up (estimated at approximately 
+20%), 50 patients per treatment group were included, resulting in a total of 100 participants.
+Results
+Participant Flow
+Between January 5, 2023, and May 28, 2023, 132 patients admitted to the day ward of the Chest Hospital Affiliated to 
+Shanghai Jiao Tong University School of Medicine for minimally invasive lung cancer surgery were screened. Among 
+them, 32 refused to sign an informed consent form or met at least one exclusion criterion. Consequently, 100 eligible 
+patients were selected and randomly assigned to two groups: 50 in the TEAS group and 50 in the control group. All 
+patients successfully completed the final follow-up, with no data loss, except for three patients who were discharged 
+within 24 hours post-surgery and could not be contacted for data collection at the 24-hour mark. All the results were 
+included in the final analysis according to the ITT principle (Figure 1). Baseline demographics and clinical characteristics 
+were well balanced between the two groups (Table 1).
+Figure 1 CONSORT flow diagram of the study participants. 
+Abbreviation: ITT, intention-to-treat."
+QOR24-QOR24-WU2025,QOR24-WU2025,Wu 2025,4,10_FINAL_ADJUDICATION/01_SOURCE_EVIDENCE/Wu_2025.txt,aebc2703278c084d7aa54d27cd5ed11fb08e4efb39fa2dd5d2055572dd10bb0d,127,143,"Upon arrival in the PACU, participants were randomly assigned to the TEAS or Sham groups. Prior to anesthesia 
+induction, all patients were informed about the potential use of TEAS for postoperative pain management and were 
+shown the electrode patches to be applied to specific acupoints, ensuring awareness and minimizing placebo effects.
+In the TEAS group, an experienced anesthesiologist administered Transcutaneous Electrical Acupoint Stimulation at 
+the bilateral Hegu (LI14) and Neiguan (PC6) points23 using an acupoint nerve stimulator (Model: HANS-200A; Nanjing 
+Jisheng Medical Technology Co., Ltd.). The device delivered fixed-intensity electrical stimulation at frequencies of 2 hz 
+and 10 hz and a current of 12–20 mA for 30 min.24 Stimulation began immediately upon PACU arrival, while the patients 
+were still under residual anesthesia, ensuring consistency and minimizing the placebo effects.
+In the sham TEAS group, electrode patches were affixed to the same acupoints without electrical stimulation for 
+30 min. The presence of electrode patches and prior briefings created a comparable experience, maintained blinding, and 
+reduced psychological biases.
+Administering TEAS during residual anesthesia reduced the likelihood of participants discerning their group based on 
+sensation. TEAS participants might experience numbness and acid distension at acupoints if they become more awake, 
+reinforcing the perception of receiving active treatment. Conversely, sham TEAS participants, despite no active stimulation, 
+might believe that they received TEAS due to the electrode patches and initial briefing, further minimizing placebo-related bias.
+TEAS was implemented in accordance with the Standards for Reporting of Controlled Trials in Acupuncture 
+(STRICTA) guidelines to ensure methodological rigor and reproducibility.23"
+QOR24-QOR24-WU2025,QOR24-WU2025,Wu 2025,5,10_FINAL_ADJUDICATION/01_SOURCE_EVIDENCE/Wu_2025.txt,aebc2703278c084d7aa54d27cd5ed11fb08e4efb39fa2dd5d2055572dd10bb0d,145,169,"The primary outcome was pain intensity 24 h after surgery, measured using visual analog scale (VAS) scores (0–10).
+Secondary outcomes included VAS scores at 1 h and 12 h post-surgery, incidence of moderate to severe pain (VAS >4) in 
+the first 12 h, analgesic consumption, incidence of postoperative nausea and vomiting (PONV) within 1 hour, 1–12 hours, and 
+12–24 hours post-surgery, Quality of Recovery (QoR-15)25 scores at 24 h post-surgery, length of hospital stay, and safety.
+Statistical Analysis
+We evaluated the distributions of continuous variables using histograms and QQ plots and checked for normality using 
+the Shapiro–Wilk test. Normally distributed continuous variables were expressed as mean ± standard deviation (SD) and 
+compared using Student’s t-test. Asymmetrically distributed variables were presented as medians (interquartile range 
+[IQR]) and compared using the Mann–Whitney U-test. Categorical variables are expressed as absolute numbers 
+(percentages) and compared using Pearson’s χ2 test with continuity correction or Fisher’s exact test. Mixed linear 
+models were used for repeated measures, considering the treatment group, time, and their interaction as fixed effects with 
+Journal of Pain Research 2025:18 
+https://doi.org/10.2147/JPR.S529193 
+3019
+Wu et al
+Powered by TCPDF (www.tcpdf.org)
+Powered by TCPDF (www.tcpdf.org)
+
+
+=== PDF PAGE 4 ===
+a random intercept for each participant. Estimates were summarized as mean differences (MD) or relative risks (RR) with 
+95% confidence intervals (CI). A 2-factor repeated measures ANOVA was used to analyze the VAS scores at each time 
+point post-surgery. The Kolmogorov–Smirnov test was used to assess data normality. Statistical significance was set at 
+a 95% confidence limit and p < 0.05. All outcomes were evaluated in the intention-to-treat (ITT) population, which 
+included all subjects in the full analysis set (FAS). Statistical analyses were performed using SPSS version 21 (IBM, "
+QOR24-QOR24-XING2022,QOR24-XING2022,Xing 2022,1,10_FINAL_ADJUDICATION/01_SOURCE_EVIDENCE/Xing_2022.txt,b7777b307e38b0d85457e7ce3439bbfc8aac27ba8adc43e57eace188c2857533,250,286,"the ratio of 1:1:1 into the general anesthesia
+group (group G), TAPB group (group NG), and
+TEAS combined with TAPB group (group NTG).
+Patients that met the following inclusion crite-
+ria were selected for the study: (1) American
+Society of Anesthesiologists grades I–III; (2)
+age C 60 years; (3) undergoing elective laparo-
+scopic gastric cancer surgery. Patients that met
+the following exclusion criteria were not selec-
+ted: (1) central nervous system and mental dis-
+eases; (2) history of an allergic reaction to local
+anesthetics; (3) swelling, infection, or ulcera-
+tion at the site of TEAS.
+Randomization
+We randomized patients with an allocation
+ratio of 1:1:1:1 using computer-generated ran-
+dom numbers. Randomization codes were kept
+in
+a
+sealed
+envelope
+and
+relayed
+to
+an
+independent nurse. The TEAS stimulator was
+obscured by an opaque cloth throughout the
+experiment. In addition, the nurse prepared
+0.375% ropivacaine or saline (40 mL) for all
+patients during the study period. All TAPBs were
+performed by the same anesthesiologist who
+was not involved in anesthesia management.
+The allocation was blinded for all patients, sur-
+geons, the leading anesthesiologist, physician
+in the post-anesthesia care unit, and follow-up
+observers until the end of the study.
+TEAS Procedure"
+QOR24-QOR24-XING2022,QOR24-XING2022,Xing 2022,2,10_FINAL_ADJUDICATION/01_SOURCE_EVIDENCE/Xing_2022.txt,b7777b307e38b0d85457e7ce3439bbfc8aac27ba8adc43e57eace188c2857533,287,302,"For all patients, electrode pads were pasted at
+the acupoints of Hegu (LI4), Neiguan (PC6), and
+Zusanli (ST36) on both sides 30 min before
+anesthesia. The G group and NG group received
+TEAS without actual electric stimuli. The NTG
+group was provided with a 2/100 Hz density
+wave and actual electric stimuli. The optimal
+intensity was set to mild twitching of the sur-
+rounding muscle up to the maximum tolerated
+by the individual. Stopped stimulus and the
+electrodes were removed at the end of the
+operation in each group. The electrodes were
+connected to the TEAS instrument (SDZ-V,
+Suzhou Medical Technology Co. Ltd., Suzhou,
+China).
+The Hegu (LI4) acupoint is located radial to"
+QOR24-QOR24-XING2022,QOR24-XING2022,Xing 2022,3,10_FINAL_ADJUDICATION/01_SOURCE_EVIDENCE/Xing_2022.txt,b7777b307e38b0d85457e7ce3439bbfc8aac27ba8adc43e57eace188c2857533,479,487,"Patient Characteristics
+The method of operation was changed in one
+patient in the G group, and one patient each
+was withdrawn by the end of the trial because of
+loss of follow-up in both the NG and NTG
+groups. A total of 87 patients were available for
+the analysis (Fig. 2). Each group was similar in
+terms of sex, age, BMI, ASA, and operation time
+(Table 1)."
+QOR24-QOR24-XING2022,QOR24-XING2022,Xing 2022,4,10_FINAL_ADJUDICATION/01_SOURCE_EVIDENCE/Xing_2022.txt,b7777b307e38b0d85457e7ce3439bbfc8aac27ba8adc43e57eace188c2857533,949,972,"Second,
+our
+study
+only
+included
+elderly
+patients, making it difﬁcult to generalize the
+ﬁndings to patients of other age groups. Third,
+as we performed TEAS on the patients before
+induction of anesthesia, there may be a lack of
+blinding to some extent, leading to biased
+results of the test. However, the stimulator is
+covered by an opaque cloth so that the surgeons
+and
+anesthesiologists
+were
+blinded.
+The
+researchers who conducted data collection and
+performed the outcome assessment were blin-
+ded to group allocation. These procedures may
+minimize
+bias.
+Additionally,"
+QOR24-QOR24-XING2022,QOR24-XING2022,Xing 2022,5,10_FINAL_ADJUDICATION/01_SOURCE_EVIDENCE/Xing_2022.txt,b7777b307e38b0d85457e7ce3439bbfc8aac27ba8adc43e57eace188c2857533,378,417,"Outcomes
+Primary Outcomes
+The primary outcome was the early postopera-
+tive quality of recovery, assessed via the Quality
+of Recovery (QoR-15) score. The QoR-15 scale is
+a self-rating scale widely used to evaluate the
+quality of early postoperative recovery and
+which is both effective and reliable [17–19].
+This score measures the quality of a patient’s
+postoperative recovery in terms of changes in
+physical
+comfort,
+mood,
+physical
+Fig. 1 Location of the acupoints for transcutaneous
+electrical acupoint stimulation and transversus abdominis
+plane block ultrasound images. a LI4 is located radial to
+the midpoint of the second metacarpal in the dorsal hand.
+PC6 is located on the forearm palm side, 2 cun (approx.
+40 mm) above the transverse wrist line, between the
+palmaris longus and the ﬂexor carpi radialis tendon. ST36
+is located on the lateral aspect of the patella of the lower
+leg, 3 cun (approx. 60 mm) below the hollow of the
+patellar ligament lateral. b White dashed line: needle
+trajectory. TA transversus abdominis, IO internal oblique,
+EO external oblique, RA rectus abdominis muscle
+1330
+Pain Ther (2022) 11:1327–1339
+
+
+=== PDF PAGE 5 ===
+independence, psychological support, and pain
+[20]. In the present study, QoR-15 evaluation
+was
+performed
+on
+preoperative
+day 1
+and
+POD 1, POD 3, and POD 7."
+QOR24-V33-OD-0025,V33-OD-0025,Zhou 2025,1,10_FINAL_ADJUDICATION/01_SOURCE_EVIDENCE/Zhou_2025.txt,38b208d76d539a13ff08f8d64b3f562ae95f71a58076aa61464983f48af82af4,120,130,"Randomization and Blinding
+Participants underwent randomization into either the TEAS or Sham group at a 1:1 ratio, utilizing a computer-generated 
+randomization sequence. Allocation was concealed using sequentially numbered, sealed, opaque envelopes. An inde­
+pendent research assistant, uninvolved in patient recruitment, intervention, or outcome assessment, opened these 
+envelopes sequentially in the PACU just before the intervention to reveal group assignment. Patients, anesthesiologists, 
+surgeons, and data collectors remained blinded to group allocation. Due to the nature of the intervention, the acupunc­
+turist administering TEAS could not be blinded. To maintain blinding, the acupuncturist adhered to a standardized 
+interaction protocol for both groups. This involved scripted explanations, identical application of electrodes and device 
+operation, and neutral responses to inquiries, avoiding any cues about group allocation. Patients were informed they 
+would receive electrical acupoint stimulation, Sham TEAS was performed using the same protocol as real TEAS, but 
+without electrical current output from the stimulator."
+QOR24-V33-OD-0025,V33-OD-0025,Zhou 2025,2,10_FINAL_ADJUDICATION/01_SOURCE_EVIDENCE/Zhou_2025.txt,38b208d76d539a13ff08f8d64b3f562ae95f71a58076aa61464983f48af82af4,125,168,"surgeons, and data collectors remained blinded to group allocation. Due to the nature of the intervention, the acupunc­
+turist administering TEAS could not be blinded. To maintain blinding, the acupuncturist adhered to a standardized 
+interaction protocol for both groups. This involved scripted explanations, identical application of electrodes and device 
+operation, and neutral responses to inquiries, avoiding any cues about group allocation. Patients were informed they 
+would receive electrical acupoint stimulation, Sham TEAS was performed using the same protocol as real TEAS, but 
+without electrical current output from the stimulator.
+Anesthesia Management
+Experienced anesthesiologists administered standard general anesthesia with endotracheal intubation to all patients, 
+adhering to the institutional protocol. Monitoring included electrocardiography, noninvasive blood pressure, pulse 
+oximetry, end-tidal carbon dioxide (PetCO2), and bispectral index (BIS). Anesthesia was induced after sufficient 
+denitrogenation using midazolam (0.05 mg/kg), etomidate (0.2 mg/kg), cisatracurium (0.2 mg/kg), and sufentanil 
+(0.5 μg/kg). Once sufficient muscle relaxation was achieved, endotracheal intubation was performed. Mechanical 
+ventilation was adjusted to maintain PetCO2 between 35–45 mmHg.
+Anesthesia was maintained with continuous infusion of propofol (4–10mg/kg/h) and remifentanil (0.1–0.4μg/kg/min), 
+supplemented with intermittent sevoflurane inhalation (1.0–2.0%) to keep BIS values between 40 and 60 and vital signs 
+within 20% of baseline values. Patients received flurbiprofen axetil (50 mg) and sufentanil (0.1 μg/kg) for postoperative 
+pain management, and tropisetron (5 mg) for PONV prophylaxis, 30 minutes prior to the conclusion of surgery. 
+Ropivacaine (0.5%, 10 mL) was infiltrated at the abdominal incision site for local analgesia at the conclusion of the 
+surgery. All patients were transferred to the PACU with endotracheal tubes, maintaining continued monitoring and 
+respiratory support until they met the extubation criteria. Discharge from the PACU occurred after meeting the modified 
+Aldrete criteria. Postoperative pain management included intravenous tramadol (50–100 mg) every 6 hours as needed, at 
+the discretion of the treating gynecologists.
+TEAS Intervention
+After patients arrived at PACU and their vital signs stabilized, the TEAS intervention was conducted in the PACU by 
+a certified acupuncturist using the SDZ-II acupoint nerve stimulator (Hwato, Suzhou Medical Appliance Factory, China). 
+The intervention involved stimulating four pairs of acupoints—LI4 (Hegu), PC6 (Neiguan), ST36 (Zusanli), and SP6 
+(Sanyinjiao)—located according to the WHO Standard Acupuncture Point Locations (Figure 1).24 These acupoints were 
+strategically selected for their established therapeutic roles in postoperative recovery: LI4 (Hegu) is primarily used for its 
+potent analgesic effects;25 PC6 (Neiguan) is a key point for preventing nausea and vomiting,26 ST36 (Zusanli) and SP6 
+Therapeutics and Clinical Risk Management 2025:21 
+https://doi.org/10.2147/TCRM.S507856 
+1177
+Zhou et al
+Powered by TCPDF (www.tcpdf.org)
+Powered by TCPDF (www.tcpdf.org)
+
+
+=== PDF PAGE 4 ===
+(Sanyinjiao) are known to modulate gastrointestinal motility and regulate autonomic function.27,28 A more detailed 
+mechanistic discussion of these effects is provided in the Discussion section. The stimulation parameters were set to an 
+alternating dense-disperse wave mode at 2/10 Hz, with an intensity of 10–15 mA and a duration of 30 minutes. Prior to 
+anesthesia induction, the optimal intensity for each patient was determined by gradually increasing the current until the 
+patient experienced a strong but comfortable “De Qi” sensation, a traditional Chinese medicine indicator of effective 
+stimulation.29 This intensity was then applied during the TEAS intervention in the PACU."
+QOR24-V33-OD-0025,V33-OD-0025,Zhou 2025,3,10_FINAL_ADJUDICATION/01_SOURCE_EVIDENCE/Zhou_2025.txt,38b208d76d539a13ff08f8d64b3f562ae95f71a58076aa61464983f48af82af4,203,210,"Initially, 127 patients were assessed for study eligibility. Out of these, 18 patients did not meet the inclusion criteria and 9 
+declined participation. Consequently, 100 patients were successfully enrolled and subsequently randomized into two 
+distinct groups: the TEAS group (n=50) and the Sham group (n=50). Each participant received the intervention assigned 
+to their respective group. During the postoperative assessment period, two patients from the TEAS group and one from 
+the Sham group were lost due to their decision to withdraw. Ultimately, 97 patients completed the study, with 48 from the 
+TEAS group and 49 from the Sham group. The data from these participants were incorporated into the final analysis. An 
+overview of the recruitment, allocation, postoperative assessment, and analysis of the trial participants is illustrated in 
+Figure 2."
+QOR24-V33-OD-0025,V33-OD-0025,Zhou 2025,4,10_FINAL_ADJUDICATION/01_SOURCE_EVIDENCE/Zhou_2025.txt,38b208d76d539a13ff08f8d64b3f562ae95f71a58076aa61464983f48af82af4,125,168,"surgeons, and data collectors remained blinded to group allocation. Due to the nature of the intervention, the acupunc­
+turist administering TEAS could not be blinded. To maintain blinding, the acupuncturist adhered to a standardized 
+interaction protocol for both groups. This involved scripted explanations, identical application of electrodes and device 
+operation, and neutral responses to inquiries, avoiding any cues about group allocation. Patients were informed they 
+would receive electrical acupoint stimulation, Sham TEAS was performed using the same protocol as real TEAS, but 
+without electrical current output from the stimulator.
+Anesthesia Management
+Experienced anesthesiologists administered standard general anesthesia with endotracheal intubation to all patients, 
+adhering to the institutional protocol. Monitoring included electrocardiography, noninvasive blood pressure, pulse 
+oximetry, end-tidal carbon dioxide (PetCO2), and bispectral index (BIS). Anesthesia was induced after sufficient 
+denitrogenation using midazolam (0.05 mg/kg), etomidate (0.2 mg/kg), cisatracurium (0.2 mg/kg), and sufentanil 
+(0.5 μg/kg). Once sufficient muscle relaxation was achieved, endotracheal intubation was performed. Mechanical 
+ventilation was adjusted to maintain PetCO2 between 35–45 mmHg.
+Anesthesia was maintained with continuous infusion of propofol (4–10mg/kg/h) and remifentanil (0.1–0.4μg/kg/min), 
+supplemented with intermittent sevoflurane inhalation (1.0–2.0%) to keep BIS values between 40 and 60 and vital signs 
+within 20% of baseline values. Patients received flurbiprofen axetil (50 mg) and sufentanil (0.1 μg/kg) for postoperative 
+pain management, and tropisetron (5 mg) for PONV prophylaxis, 30 minutes prior to the conclusion of surgery. 
+Ropivacaine (0.5%, 10 mL) was infiltrated at the abdominal incision site for local analgesia at the conclusion of the 
+surgery. All patients were transferred to the PACU with endotracheal tubes, maintaining continued monitoring and 
+respiratory support until they met the extubation criteria. Discharge from the PACU occurred after meeting the modified 
+Aldrete criteria. Postoperative pain management included intravenous tramadol (50–100 mg) every 6 hours as needed, at 
+the discretion of the treating gynecologists.
+TEAS Intervention
+After patients arrived at PACU and their vital signs stabilized, the TEAS intervention was conducted in the PACU by 
+a certified acupuncturist using the SDZ-II acupoint nerve stimulator (Hwato, Suzhou Medical Appliance Factory, China). 
+The intervention involved stimulating four pairs of acupoints—LI4 (Hegu), PC6 (Neiguan), ST36 (Zusanli), and SP6 
+(Sanyinjiao)—located according to the WHO Standard Acupuncture Point Locations (Figure 1).24 These acupoints were 
+strategically selected for their established therapeutic roles in postoperative recovery: LI4 (Hegu) is primarily used for its 
+potent analgesic effects;25 PC6 (Neiguan) is a key point for preventing nausea and vomiting,26 ST36 (Zusanli) and SP6 
+Therapeutics and Clinical Risk Management 2025:21 
+https://doi.org/10.2147/TCRM.S507856 
+1177
+Zhou et al
+Powered by TCPDF (www.tcpdf.org)
+Powered by TCPDF (www.tcpdf.org)
+
+
+=== PDF PAGE 4 ===
+(Sanyinjiao) are known to modulate gastrointestinal motility and regulate autonomic function.27,28 A more detailed 
+mechanistic discussion of these effects is provided in the Discussion section. The stimulation parameters were set to an 
+alternating dense-disperse wave mode at 2/10 Hz, with an intensity of 10–15 mA and a duration of 30 minutes. Prior to 
+anesthesia induction, the optimal intensity for each patient was determined by gradually increasing the current until the 
+patient experienced a strong but comfortable “De Qi” sensation, a traditional Chinese medicine indicator of effective 
+stimulation.29 This intensity was then applied during the TEAS intervention in the PACU."
+QOR24-V33-OD-0025,V33-OD-0025,Zhou 2025,5,10_FINAL_ADJUDICATION/01_SOURCE_EVIDENCE/Zhou_2025.txt,38b208d76d539a13ff08f8d64b3f562ae95f71a58076aa61464983f48af82af4,170,176,"The primary outcome was the QoR-15 score, assessed at baseline (one day before surgery) and on POD 1, 2, and 3. The 
+QoR-15 is a validated, patient-reported questionnaire that evaluates five dimensions of recovery: physical comfort, 
+emotional state, physical independence, psychological support, and pain. The total QoR-15 score ranges from 0 to 150, 
+with higher scores indicating better overall recovery quality. In this study, QoR-15 scores were compared between groups 
+at each time point, and the scores for each dimension were analyzed separately.
+Secondary outcomes included: (1) Postoperative pain and analgesic consumption: Pain levels were measured using 
+a Visual Analog Scale (VAS) at rest and during exercise (coughing and movement) preoperatively and on POD 1, 2, and "

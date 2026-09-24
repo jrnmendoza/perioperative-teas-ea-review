@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1060" height="385" viewBox="0 0 1060 385" role="img" aria-label="QoR-15: TEAS versus sham, ~24 h">
+<rect width="100%" height="100%" fill="#101c30"/>
+<text x="24" y="34" fill="#f1f5f9" font-size="20" font-family="Arial">QoR-15: TEAS versus sham, ~24 h</text>
+<text x="24" y="59" fill="#94a3b8" font-size="14" font-family="Arial">Positive difference favors TEAS. Study CIs use normal approximation; pooled CI uses safeguarded HK.</text>
+<line x1="327.15051630918407" x2="327.15051630918407" y1="76" y2="321" stroke="#94a3b8" stroke-dasharray="4 4"/>
+<text x="24" y="100" fill="#e2e8f0" font-size="15" font-family="Arial">Hou 2023</text>
+<line x1="351.2035880888514" x2="486.9948413710797" y1="95" y2="95" stroke="#93c5fd" stroke-width="2"/>
+<circle cx="419.0992147299655" cy="95" r="4" fill="#93c5fd"/>
+<text x="710" y="100" fill="#e2e8f0" font-size="15" font-family="Arial">5.40 [1.41, 9.39]</text>
+<text x="24" y="145" fill="#e2e8f0" font-size="15" font-family="Arial">Wu 2025</text>
+<line x1="509.3078345036765" x2="652.4137931034483" y1="140" y2="140" stroke="#93c5fd" stroke-width="2"/>
+<circle cx="580.8608138035625" cy="140" r="4" fill="#93c5fd"/>
+<text x="710" y="145" fill="#e2e8f0" font-size="15" font-family="Arial">14.90 [10.70, 19.10]</text>
+<text x="24" y="190" fill="#e2e8f0" font-size="15" font-family="Arial">Xing 2022</text>
+<line x1="307.58620689655174" x2="513.2441350838983" y1="185" y2="185" stroke="#93c5fd" stroke-width="2"/>
+<circle cx="410.41517099022496" cy="185" r="4" fill="#93c5fd"/>
+<text x="710" y="190" fill="#e2e8f0" font-size="15" font-family="Arial">4.89 [-1.15, 10.93]</text>
+<text x="24" y="235" fill="#e2e8f0" font-size="15" font-family="Arial">Zhou 2025</text>
+<line x1="330.74417901169903" x2="472.71807548926984" y1="230" y2="230" stroke="#93c5fd" stroke-width="2"/>
+<circle cx="401.7311272504844" cy="230" r="4" fill="#93c5fd"/>
+<text x="710" y="235" fill="#e2e8f0" font-size="15" font-family="Arial">4.38 [0.21, 8.55]</text>
+<text x="24" y="280" fill="#e2e8f0" font-size="15" font-family="Arial">REML / safeguarded HK</text>
+<line x1="315.1029811865078" x2="594.1010732988461" y1="275" y2="275" stroke="#5eead4" stroke-width="2"/>
+<circle cx="454.60202724267697" cy="275" r="6" fill="#5eead4"/>
+<text x="710" y="280" fill="#e2e8f0" font-size="15" font-family="Arial">7.49 [-0.71, 15.68]</text>
+<text x="280.0" y="347" text-anchor="middle" fill="#94a3b8" font-size="13" font-family="Arial">-2.8</text>
+<text x="480.0" y="347" text-anchor="middle" fill="#94a3b8" font-size="13" font-family="Arial">9.0</text>
+<text x="680.0" y="347" text-anchor="middle" fill="#94a3b8" font-size="13" font-family="Arial">20.7</text>
+<text x="280" y="373" fill="#cbd5e1" font-size="14" font-family="Arial">Mean difference in QoR-15 points</text></svg>

@@ -42,6 +42,9 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+if (ROOT/'dashboard/current_review.json').exists():
+    from check_current_dashboard import main as check_current
+    raise SystemExit(check_current())
 DASH = ROOT / "dashboard"
 DATA = ROOT / "06_FINAL_ANALYSIS_V26" / "01_DATA"
 RESULTS = ROOT / "06_FINAL_ANALYSIS_V26" / "03_RESULTS"

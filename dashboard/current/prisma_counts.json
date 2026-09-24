@@ -1,0 +1,48 @@
+{
+  "version": "v38",
+  "date": "2026-09-20",
+  "databases": {
+    "Embase": 1928,
+    "CENTRAL": 1698,
+    "CINAHL": 465,
+    "PubMed": 1009
+  },
+  "references": 5100,
+  "reported_import_records": 5088,
+  "unmapped_import_difference": 12,
+  "automatic_duplicates": 1651,
+  "manual_duplicates": 1,
+  "automation_exclusions": 508,
+  "screened": 2928,
+  "title_abstract_excluded": 2704,
+  "database_sought": 224,
+  "database_not_retrieved": 2,
+  "database_assessed_records": 222,
+  "late_duplicates": 6,
+  "database_assessed": 216,
+  "database_excluded": 147,
+  "database_included": 69,
+  "citation_sought": 1,
+  "citation_assessed": 1,
+  "citation_included": 1,
+  "included_reports": 70,
+  "operational_trial_families": 69,
+  "exclusion_reasons": {
+    "no perioperative analgesia outcome found": 113,
+    "Wrong intervention": 7,
+    "Wrong comparator": 3,
+    "Publication language": 12,
+    "Wrong setting": 8,
+    "Wrong patient population": 2,
+    "Wrong study design": 1,
+    "Abstract only": 1
+  },
+  "caveats": [
+    "The 12-reference difference between raw RIS exports and reported imports is an unmapped historical import/consolidation gap, not 12 verified duplicate removals.",
+    "Upstream 5088/1651/1/508/2928/2704 counts are historical aggregate figures, not a replayed record-level deduplication log.",
+    "Six exact DOI/title duplicates identified late: Chung, Tian, Tong, Tu, Wang and Yang. Lowest-ID record retained for count convention; Tu records conflict on outcome versus intervention reason, and that clinical exclusion rationale is not newly validated.",
+    "Zhang2018 conference abstract has a distinct DOI and remains Abstract only, not an exact duplicate publication.",
+    "The requested outcome-exclusion label preserves historical dispositions; it is not a fresh proof that all excluded articles lack every protocol-eligible outcome.",
+    "Yeh 2010/2011 remain one probable overlapping family for operational counting; both are held out of models."
+  ]
+}

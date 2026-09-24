@@ -1,0 +1,55 @@
+{
+  "version": "v38",
+  "overall": "PASS",
+  "protected_source_files": 333,
+  "preserved_existing_dashboard_assets": 311,
+  "deterministic_outputs": 26,
+  "canonical_source_rows_unchanged": 761,
+  "primary_estimates_unchanged": 4,
+  "changed_existing_models": [
+    "bowelsounds_TEAS_sham",
+    "flatus_TEAS_sham",
+    "flatus_TEAS_sham_SMD_sensitivity",
+    "intraop_remifentanil_TEAS_sham"
+  ],
+  "defined_models": 74,
+  "fitted_models": 69,
+  "pooled_models": 33,
+  "independent_validator_groups": 9,
+  "negative_control": "PASS: in-memory effect perturbation rejected with nonzero exit; canonical outputs unchanged",
+  "metafor_fields": 739,
+  "metafor_failures": 0,
+  "fresh_rob_assessments": 94,
+  "current_non_sensitivity_components": 90,
+  "signalling_responses": 2068,
+  "prisma_ledger_rows": 225,
+  "grade_rows": 38,
+  "browser_qa": {
+    "date": "2026-09-20",
+    "surface": "Local built dashboard, http://127.0.0.1:8768",
+    "model_views_tested": 74,
+    "model_view_failures": 0,
+    "console_errors_observed": 0,
+    "study_rows": 70,
+    "fresh_rob_rows": 94,
+    "grade_rows": 38,
+    "methods_and_search_sections": 21,
+    "checks": [
+      "Overview displays canonical primary k/N/estimates and limitations",
+      "PRISMA displays Wu citation branch, 2 nonretrievals, six late duplicates, 147 exclusions and requested 113-record outcome label (rechecked after duplicate reconciliation)",
+      "Every model selector entry rendered exact model ID and no NaN, including empty models",
+      "Luo search separates High nausea from Some concerns vomiting",
+      "Pan study shows current model contributions and result-specific High judgments",
+      "Pan PDF p5 image opens in lightbox, loaded at width1200 and closes successfully",
+      "GRADE and methods tabs render current data",
+      "Download links render; filesystem/hash/HTTP checks recorded separately",
+      "390px overview and PRISMA have no page-level horizontal overflow",
+      "Mobile screenshot inspected; viewport override reset"
+    ]
+  },
+  "limitations": [
+    "Historical import events cannot be replayed from missing logs.",
+    "Reproducibility is not validation of source truth or selection completeness.",
+    "Legacy validator entrypoints now route v38 to the current-data contract; historical v26 contracts are not claimed as current validation."
+  ]
+}

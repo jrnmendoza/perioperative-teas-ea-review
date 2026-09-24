@@ -53,6 +53,9 @@ def main() -> int:
         print(f"FAIL: {meta_path} does not exist")
         return 1
     meta = json.loads(meta_path.read_text(encoding="utf-8"))
+    if meta.get('master_version') == 'v38':
+        from check_current_dashboard import main as check_current
+        return check_current(site)
 
     print("Checking build-meta.json against required values...")
 

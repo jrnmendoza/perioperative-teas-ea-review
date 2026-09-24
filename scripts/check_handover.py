@@ -9,6 +9,9 @@ import sys
 from build_reference_data import search_data
 
 ROOT = Path(__file__).resolve().parents[1]
+if (ROOT/'dashboard/current_review.json').exists():
+    from check_current_dashboard import main as check_current
+    raise SystemExit(check_current())
 
 
 def rows(path):

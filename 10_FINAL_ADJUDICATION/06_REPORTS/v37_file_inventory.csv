@@ -1,0 +1,86 @@
+path,action,role
+10_FINAL_ADJUDICATION/02_DECISIONS/v37/author_query_log.csv,CREATED,Decision evidence/draft
+10_FINAL_ADJUDICATION/02_DECISIONS/v37/grade_review_ledger.csv,CREATED,Decision evidence/draft
+10_FINAL_ADJUDICATION/02_DECISIONS/v37/prisma_export_reason_counts.csv,CREATED,Decision evidence/draft
+10_FINAL_ADJUDICATION/02_DECISIONS/v37/prisma_report_provenance_ledger.csv,CREATED,Decision evidence/draft
+10_FINAL_ADJUDICATION/02_DECISIONS/v37/rob2_existing_candidates.csv,CREATED,Decision evidence/draft
+10_FINAL_ADJUDICATION/02_DECISIONS/v37/rob2_id_collisions.csv,CREATED,Decision evidence/draft
+10_FINAL_ADJUDICATION/02_DECISIONS/v37/rob2_non_sensitivity_worklist.csv,CREATED,Decision evidence/draft
+10_FINAL_ADJUDICATION/02_DECISIONS/v37/source_corrections_and_policy_review.csv,CREATED,Decision evidence/draft
+10_FINAL_ADJUDICATION/02_DECISIONS/v37_author_queries.md,CREATED,Decision evidence/draft
+10_FINAL_ADJUDICATION/02_DECISIONS/v37_external_verification.md,CREATED,Decision evidence/draft
+10_FINAL_ADJUDICATION/03_CANONICAL/grade.csv,MODIFIED,Report/derived artifact
+10_FINAL_ADJUDICATION/04_MODELS/model_inputs.csv,MODIFIED,Report/derived artifact
+10_FINAL_ADJUDICATION/05_REPRODUCTION/R_session.txt,MODIFIED,Report/derived artifact
+10_FINAL_ADJUDICATION/05_REPRODUCTION/v37/baseline/10_FINAL_ADJUDICATION/03_CANONICAL/grade.csv,CREATED,Preserved baseline copy
+10_FINAL_ADJUDICATION/05_REPRODUCTION/v37/baseline/10_FINAL_ADJUDICATION/04_MODELS/model_outputs.csv,CREATED,Preserved baseline copy
+10_FINAL_ADJUDICATION/05_REPRODUCTION/v37/baseline/10_FINAL_ADJUDICATION/04_MODELS/model_outputs.json,CREATED,Preserved baseline copy
+10_FINAL_ADJUDICATION/05_REPRODUCTION/v37/baseline/10_FINAL_ADJUDICATION/05_REPRODUCTION/R_session.txt,CREATED,Preserved baseline copy
+10_FINAL_ADJUDICATION/05_REPRODUCTION/v37/baseline/10_FINAL_ADJUDICATION/05_REPRODUCTION/metafor_comparison.csv,CREATED,Preserved baseline copy
+10_FINAL_ADJUDICATION/05_REPRODUCTION/v37/baseline/10_FINAL_ADJUDICATION/05_REPRODUCTION/metafor_outputs.csv,CREATED,Preserved baseline copy
+10_FINAL_ADJUDICATION/05_REPRODUCTION/v37/baseline/10_FINAL_ADJUDICATION/05_REPRODUCTION/validation_report.json,CREATED,Preserved baseline copy
+10_FINAL_ADJUDICATION/05_REPRODUCTION/v37/baseline/10_FINAL_ADJUDICATION/06_REPORTS/CHANGELOG_v36.md,CREATED,Preserved baseline copy
+10_FINAL_ADJUDICATION/05_REPRODUCTION/v37/baseline/10_FINAL_ADJUDICATION/06_REPORTS/GRADE_ROB2_RECONCILIATION.md,CREATED,Preserved baseline copy
+10_FINAL_ADJUDICATION/05_REPRODUCTION/v37/baseline/10_FINAL_ADJUDICATION/06_REPORTS/MODEL_MEMBERSHIP_ANALYSIS_MANIFEST.md,CREATED,Preserved baseline copy
+10_FINAL_ADJUDICATION/05_REPRODUCTION/v37/baseline/10_FINAL_ADJUDICATION/06_REPORTS/PRIMARY_EVIDENCE_TABLE.md,CREATED,Preserved baseline copy
+10_FINAL_ADJUDICATION/05_REPRODUCTION/v37/baseline/10_FINAL_ADJUDICATION/06_REPORTS/PRISMA_REPORT_TRIAL_ACCOUNTING.md,CREATED,Preserved baseline copy
+10_FINAL_ADJUDICATION/05_REPRODUCTION/v37/baseline/10_FINAL_ADJUDICATION/06_REPORTS/REPRODUCIBILITY_REPORT.md,CREATED,Preserved baseline copy
+10_FINAL_ADJUDICATION/05_REPRODUCTION/v37/baseline/10_FINAL_ADJUDICATION/06_REPORTS/UNRESOLVED_HUMAN_DECISIONS.md,CREATED,Preserved baseline copy
+10_FINAL_ADJUDICATION/05_REPRODUCTION/v37/baseline/10_FINAL_ADJUDICATION/06_REPORTS/model_analysis_manifest.csv,CREATED,Preserved baseline copy
+10_FINAL_ADJUDICATION/05_REPRODUCTION/v37/baseline/10_FINAL_ADJUDICATION/06_REPORTS/primary_evidence_table.csv,CREATED,Preserved baseline copy
+10_FINAL_ADJUDICATION/05_REPRODUCTION/v37/baseline/FINAL_CURRENT_STATE_REPORT.md,CREATED,Preserved baseline copy
+10_FINAL_ADJUDICATION/05_REPRODUCTION/v37/baseline/FINAL_GRADE_RECOMMENDATIONS.md,CREATED,Preserved baseline copy
+10_FINAL_ADJUDICATION/05_REPRODUCTION/v37/baseline/FINAL_RESULT_ROB2_LINKAGE.csv,CREATED,Preserved baseline copy
+10_FINAL_ADJUDICATION/05_REPRODUCTION/v37/followup_counts.json,CREATED,Verification record/log
+10_FINAL_ADJUDICATION/05_REPRODUCTION/v37/integrity.json,CREATED,Verification record/log
+10_FINAL_ADJUDICATION/05_REPRODUCTION/v37/negative_metadata_test.json,CREATED,Verification record/log
+10_FINAL_ADJUDICATION/05_REPRODUCTION/v37/negative_metadata_test.log,CREATED,Verification record/log
+10_FINAL_ADJUDICATION/05_REPRODUCTION/v37/protected_integrity.log,CREATED,Verification record/log
+10_FINAL_ADJUDICATION/05_REPRODUCTION/v37/restored_validation.log,CREATED,Verification record/log
+10_FINAL_ADJUDICATION/05_REPRODUCTION/v37/run1_build_registry.py.log,CREATED,Verification record/log
+10_FINAL_ADJUDICATION/05_REPRODUCTION/v37/run1_build_reports.py.log,CREATED,Verification record/log
+10_FINAL_ADJUDICATION/05_REPRODUCTION/v37/run1_build_results.py.log,CREATED,Verification record/log
+10_FINAL_ADJUDICATION/05_REPRODUCTION/v37/run1_build_v37_followup.py.log,CREATED,Verification record/log
+10_FINAL_ADJUDICATION/05_REPRODUCTION/v37/run1_compare_metafor.log,CREATED,Verification record/log
+10_FINAL_ADJUDICATION/05_REPRODUCTION/v37/run1_crosswalk_covidence.py.log,CREATED,Verification record/log
+10_FINAL_ADJUDICATION/05_REPRODUCTION/v37/run1_fit_models.py.log,CREATED,Verification record/log
+10_FINAL_ADJUDICATION/05_REPRODUCTION/v37/run1_grade_recommendations.py.log,CREATED,Verification record/log
+10_FINAL_ADJUDICATION/05_REPRODUCTION/v37/run1_link_rob2.py.log,CREATED,Verification record/log
+10_FINAL_ADJUDICATION/05_REPRODUCTION/v37/run1_metafor.log,CREATED,Verification record/log
+10_FINAL_ADJUDICATION/05_REPRODUCTION/v37/run1_validate_adjudication.py.log,CREATED,Verification record/log
+10_FINAL_ADJUDICATION/05_REPRODUCTION/v37/run2_build_registry.py.log,CREATED,Verification record/log
+10_FINAL_ADJUDICATION/05_REPRODUCTION/v37/run2_build_reports.py.log,CREATED,Verification record/log
+10_FINAL_ADJUDICATION/05_REPRODUCTION/v37/run2_build_results.py.log,CREATED,Verification record/log
+10_FINAL_ADJUDICATION/05_REPRODUCTION/v37/run2_build_v37_followup.py.log,CREATED,Verification record/log
+10_FINAL_ADJUDICATION/05_REPRODUCTION/v37/run2_compare_metafor.log,CREATED,Verification record/log
+10_FINAL_ADJUDICATION/05_REPRODUCTION/v37/run2_crosswalk_covidence.py.log,CREATED,Verification record/log
+10_FINAL_ADJUDICATION/05_REPRODUCTION/v37/run2_fit_models.py.log,CREATED,Verification record/log
+10_FINAL_ADJUDICATION/05_REPRODUCTION/v37/run2_grade_recommendations.py.log,CREATED,Verification record/log
+10_FINAL_ADJUDICATION/05_REPRODUCTION/v37/run2_link_rob2.py.log,CREATED,Verification record/log
+10_FINAL_ADJUDICATION/05_REPRODUCTION/v37/run2_metafor.log,CREATED,Verification record/log
+10_FINAL_ADJUDICATION/05_REPRODUCTION/v37/run2_validate_adjudication.py.log,CREATED,Verification record/log
+10_FINAL_ADJUDICATION/05_REPRODUCTION/v37/starting_state.json,CREATED,Verification record/log
+10_FINAL_ADJUDICATION/05_REPRODUCTION/v37/verification.json,CREATED,Verification record/log
+10_FINAL_ADJUDICATION/05_REPRODUCTION/validation_report.json,MODIFIED,Report/derived artifact
+10_FINAL_ADJUDICATION/06_REPORTS/CHANGELOG_v37.md,CREATED,Report/derived artifact
+10_FINAL_ADJUDICATION/06_REPORTS/GRADE_ROB2_RECONCILIATION.md,MODIFIED,Report/derived artifact
+10_FINAL_ADJUDICATION/06_REPORTS/MODEL_MEMBERSHIP_ANALYSIS_MANIFEST.md,MODIFIED,Report/derived artifact
+10_FINAL_ADJUDICATION/06_REPORTS/PRIMARY_EVIDENCE_TABLE.md,MODIFIED,Report/derived artifact
+10_FINAL_ADJUDICATION/06_REPORTS/PRISMA_REPORT_TRIAL_ACCOUNTING.md,MODIFIED,Report/derived artifact
+10_FINAL_ADJUDICATION/06_REPORTS/REPRODUCIBILITY_REPORT.md,MODIFIED,Report/derived artifact
+10_FINAL_ADJUDICATION/06_REPORTS/ROB2_PROVENANCE_RECONCILIATION_v37.md,CREATED,Report/derived artifact
+10_FINAL_ADJUDICATION/06_REPORTS/UNRESOLVED_HUMAN_DECISIONS.md,MODIFIED,Report/derived artifact
+10_FINAL_ADJUDICATION/06_REPORTS/model_comparison_v37.csv,CREATED,Report/derived artifact
+10_FINAL_ADJUDICATION/06_REPORTS/v37_file_inventory.csv,CREATED,Report/derived artifact
+10_FINAL_ADJUDICATION/code/build_reports.py,MODIFIED,Generator/validator
+10_FINAL_ADJUDICATION/code/build_results.py,MODIFIED,Generator/validator
+10_FINAL_ADJUDICATION/code/build_v37_followup.py,CREATED,Generator/validator
+10_FINAL_ADJUDICATION/code/finalize_v37.py,CREATED,Generator/validator
+10_FINAL_ADJUDICATION/code/grade_recommendations.py,MODIFIED,Generator/validator
+10_FINAL_ADJUDICATION/code/v37_integrity.py,CREATED,Generator/validator
+10_FINAL_ADJUDICATION/code/validate_adjudication.py,MODIFIED,Generator/validator
+10_FINAL_ADJUDICATION/code/verify_v37.py,CREATED,Generator/validator
+ASTRA_FINAL_PROTOCOL_RECONCILIATION.md,MODIFIED,Report/derived artifact
+FINAL_CURRENT_STATE_REPORT.md,MODIFIED,Report/derived artifact
+FINAL_GRADE_RECOMMENDATIONS.md,MODIFIED,Report/derived artifact
+FINAL_PROSPERO_CURRENT_REVIEW_MATRIX.md,MODIFIED,Report/derived artifact

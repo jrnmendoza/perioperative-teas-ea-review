@@ -1,0 +1,18 @@
+{
+  "date": "2026-09-20",
+  "url": "http://127.0.0.1:8768/#coverage",
+  "result": "PASS",
+  "coverage_tab_selected": true,
+  "visible_qor_reports": 16,
+  "visible_recovery_records": 29,
+  "visible_safety_entries": 32,
+  "withdrawal_detail_expansion": "Liu 2026 burn: 44/44 randomized, 43/43 efficacy, one withdrawal per arm",
+  "download_links_visible": 4,
+  "browser_console_errors": 0,
+  "document_client_width": 1280,
+  "document_scroll_width": 1280,
+  "dashboard_contracts_passed": 12,
+  "download_hashes_passed": 27,
+  "article_figures_preserved": 253,
+  "public_deployment_performed": false
+}
