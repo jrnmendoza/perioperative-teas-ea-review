@@ -9,7 +9,7 @@
 - All 38 GRADE recommendations reviewed: 11 Low, 4 Not rated — insufficient evidence, 18 Very low, 5 Moderate.
 - Methodological choices adopted; no further reviewer approval awaited. Prior human completion is user-reported; new decisions are AI-conducted.
 - Zheng continuous data held from main models; Wu2025 pre-intervention dose removed from causal synthesis and retained as diagnostic.
-- Local dashboard now reads canonical v38 data; article-figure assets preserved. No publication/deployment authorized.
+- Dashboard reads canonical v38 data; article-figure assets preserved. Publicly deployed 24 September 2026; see "Public deployment" below.
 
 ## Primary conclusion unchanged
 
@@ -26,7 +26,7 @@ No body establishes the registered joint criterion (≥10mg sparing with paired 
 
 The 12-reference import gap lacks record-level mapping; upstream deduplication can be reconciled arithmetically but not fully replayed. Historical outcome-focused exclusions leave review-wide completeness uncertain. The user withdrew re-screening; no screening package or reviewer approval is awaited. Source ambiguities remain explicit holds/diagnostics. These limitations prevent claiming that numerical reproducibility certifies source truth or exhaustive evidence selection.
 
-Eleven author queries were SENT on 2026-09-22 by the review author (Jin 2023, Xie 2014, Yeh 2010/2011, Ntritsou 2014, Chen 1998, Lee 2011, Lin 2002, Sim 2002, Coura 2011); Coura 2011 hard-bounced (undelivered); four drafted queries remain UNSENT (El-Rakshy 2009, Zheng 2025, He 2026 breast, Long 2025). No reply recorded; no analysis depends on one. Log: `10_FINAL_ADJUDICATION/02_DECISIONS/v38/author_query_log.csv`. Covidence was not edited. No commit, push or public deployment performed. Any submission manuscript must disclose AI-assisted adjudication, posthoc choices, selection chronology and source holds.
+Eleven author queries were SENT on 2026-09-22 by the review author (Jin 2023, Xie 2014, Yeh 2010/2011, Ntritsou 2014, Chen 1998, Lee 2011, Lin 2002, Sim 2002, Coura 2011); Coura 2011 hard-bounced (undelivered); four drafted queries remain UNSENT (El-Rakshy 2009, Zheng 2025, He 2026 breast, Long 2025). No reply recorded; no analysis depends on one. Log: `10_FINAL_ADJUDICATION/02_DECISIONS/v38/author_query_log.csv` (kept locally; not in the public repository). Covidence was not edited. The v38 work was committed, pushed and publicly deployed on 24 September 2026; see "Public deployment" below. Any submission manuscript must disclose AI-assisted adjudication, posthoc choices, selection chronology and source holds.
 
 ## Current files
 
@@ -108,3 +108,13 @@ hepatectomy, Lu 2022, Huang 2025, Zheng 2025 and Zhu 2022 remain held from
 quantitative QoR synthesis on the grounds recorded in
 `08_QOR_ANALYSIS/QOR_ANALYSIS_REPORT.md`. None contributed to any model. A hold
 is a completed disposition; it is not a resolved data gap.
+
+## Public deployment — 24 September 2026
+
+The v38 dashboard is public at <https://jrnmendoza.github.io/perioperative-teas-ea-review/>. It is built from `claude-v26-dashboard-final` by `.github/workflows/deploy-pages.yml`, which runs the integrity, tab-data, generated-artifact and v38 contract checks before publishing. The site's `build-meta.json` gives the commit it currently serves; before this report was updated, that was `d6f18d1` (12:51 UTC).
+
+**What the site shows.** The v38 core above; the outcome-coverage addendum; the three ~24-hour QoR bodies with RoB and GRADE; the six later-window QoR models, labelled ungraded; and the E2 post-hoc sensitivity analysis (`09_E2_ANALYSIS/E2_RESULTS.md`). E2 is shown alongside the registered E1, which stays primary. E2 bodies are not graded. Under E2, TEAS versus sham is k=7, −6.17 mg IV MME (−12.47, 0.14), and every TEAS-versus-sham E2 analysis crosses zero. The joint criterion is met in no body; for EA versus sham (Lin 2002 only) it cannot be evaluated, because there is no eligible ~24-hour pain result. There are 43 downloads, each hash-checked against its source file.
+
+**Status.** This is a public analytical release, not a data lock. Deployment changed no estimate, GRADE or RoB judgement. It does not certify source accuracy or completeness of evidence selection. The items under "Not completed — outstanding" above remain outstanding.
+
+**Deployment record.** The first v38 deploy was `90d2675`. `b00082d` published with no tab navigation (08:54–11:59 UTC). `0731f52` served v36 versions of four downloads (this report, `FINAL_GRADE_RECOMMENDATIONS.md`, `FINAL_MODEL_MEMBERSHIP_MATRIX.csv`, `FINAL_RESULT_ROB2_LINKAGE.csv`) from 11:59 to 12:14 UTC, because their v38 versions had not been committed. Both faults were corrected in `71743ce`, and checks that would have blocked them were added to `scripts/check_current_dashboard.py`. `d6f18d1` added a build-script guard only; its dashboard content is byte-identical to `71743ce`.
