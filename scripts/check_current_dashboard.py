@@ -235,16 +235,6 @@ def main(site=None):
     if "document.addEventListener('click'" in ui_js:
         click_body = ui_js.split("document.addEventListener('click'")[1].split("});")[0]
         assert "history.replaceState" not in click_body, "replaceState found inside click listener"
-
-    assert "addEventListener('hashchange'" in ui_js, "hashchange listener missing"
-    assert "addEventListener('popstate'" in ui_js, "popstate listener missing"
-    assert "history.replaceState" in ui_js, "replaceState missing"
-    if "function show(" in ui_js:
-        show_body = ui_js.split("function show(")[1].split("}")[0]
-        assert "history.replaceState" not in show_body, "replaceState found inside show()"
-    if "document.addEventListener('click'" in ui_js:
-        click_body = ui_js.split("document.addEventListener('click'")[1].split("});")[0]
-        assert "history.replaceState" not in click_body, "replaceState found inside click listener"
     # Existing figures must survive and resolve in both source and built site.
     figures=json.JSONDecoder().raw_decode((site/'article_figures.js').read_text().split('window.ARTICLE_FIGURES = ',1)[1])[0]
     images=[f['src'] for fs in figures.values() for f in fs]
@@ -283,6 +273,9 @@ def main(site=None):
     
     mutated_page = page.replace('<noscript>', '<noscript>{unfilled_placeholder}</noscript>')
     assert not check_placeholders(mutated_page), 'Placeholder mutation escaped'
+
+    assert "IVMME" not in page, "IVMME found in built index.html"
+    assert "unitLabel" in ui_js, "current_review_ui.js missing unitLabel mapping"
 
     if (site/'build-meta.json').exists():
         meta=json.load(open(site/'build-meta.json'));assert meta['master_version']=='v38' and meta['strict_primary_opioid_k']==1 and meta['canonical_reports']==70 and meta['included_studies']==69

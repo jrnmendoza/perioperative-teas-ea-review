@@ -1,11 +1,12 @@
 /* v38 canonical dashboard. No historical pooled or study-overall RoB inference. */
 (() => {
   'use strict';
+  function unitLabel(u){return u==='mg IVMME'?'mg IV MME':u==='assumed mg IVMME'?'assumed mg IV MME':u;}
   const d=window.CURRENT_REVIEW, $=id=>document.getElementById(id);
   const esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const num=(x,n=2)=>x===null||x===undefined||x===''?'—':Number(x).toFixed(n);
   const grade=new Map(d.grade.map(g=>[g.model_id,g]));
-  const effect=m=>m.k?`${num(m.display_effect)} [${num(m.display_ci_low)}, ${num(m.display_ci_high)}] ${esc(m.unit)}`:'No eligible quantitative evidence';
+  const effect=m=>m.k?`${num(m.display_effect)} [${num(m.display_ci_low)}, ${num(m.display_ci_high)}] ${esc(unitLabel(m.unit))}`:'No eligible quantitative evidence';
   const table=(heads,rows)=>`<div class="table-scroll"><table><thead><tr>${heads.map(h=>`<th scope="col">${h}</th>`).join('')}</tr></thead><tbody>${rows.map(row=>`<tr>${row.map(v=>`<td>${v}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
   const tag=x=>`<span class="tag ${x==='High'?'risk-high':x==='Low'?'risk-low':''}">${esc(x)}</span>`;
   const note=t=>`<p class="note">${t}</p>`;
@@ -51,14 +52,14 @@
     let lo=Math.min(0,...pts.map(p=>p.lo)),hi=Math.max(0,...pts.map(p=>p.hi));const span=hi-lo||1;lo-=span*.07;hi+=span*.07;
     const x=v=>250+(v-lo)/(hi-lo)*410,ht=50+pts.length*35;
     const display=v=>num(m.measure==='RR'?Math.exp(v):v);
-    return `<div class="forest-wrap"><svg viewBox="0 0 960 ${ht}" role="img" aria-label="Forest plot for ${esc(m.model_id)}"><line x1="${x(0)}" x2="${x(0)}" y1="12" y2="${ht-27}" stroke="#64748b" stroke-dasharray="4 4"/>${pts.map((p,i)=>{const y=28+i*35;return `<text x="8" y="${y+4}" fill="#dbeafe" font-size="13">${esc(p.name)}</text><line x1="${x(p.lo)}" x2="${x(p.hi)}" y1="${y}" y2="${y}" stroke="${p.total?'#5eead4':'#93c5fd'}" stroke-width="2"/><circle cx="${x(p.y)}" cy="${y}" r="${p.total?6:4}" fill="${p.total?'#5eead4':'#93c5fd'}"/><text x="682" y="${y+4}" fill="#dbeafe" font-size="13">${display(p.y)} [${display(p.lo)}, ${display(p.hi)}]</text>`;}).join('')}<text x="250" y="${ht-5}" fill="#94a3b8" font-size="12">${m.measure==='RR'?'Risk ratio (log axis; null = 1)':'Difference (null = 0)'} · ${esc(m.unit)}</text></svg></div>`;
+    return `<div class="forest-wrap"><svg viewBox="0 0 960 ${ht}" role="img" aria-label="Forest plot for ${esc(m.model_id)}"><line x1="${x(0)}" x2="${x(0)}" y1="12" y2="${ht-27}" stroke="#64748b" stroke-dasharray="4 4"/>${pts.map((p,i)=>{const y=28+i*35;return `<text x="8" y="${y+4}" fill="#dbeafe" font-size="13">${esc(p.name)}</text><line x1="${x(p.lo)}" x2="${x(p.hi)}" y1="${y}" y2="${y}" stroke="${p.total?var(--plot-mark2, #5eead4):var(--plot-mark1, #93c5fd)}" stroke-width="2"/><circle cx="${x(p.y)}" cy="${y}" r="${p.total?6:4}" fill="${p.total?var(--plot-mark2, #5eead4):var(--plot-mark1, #93c5fd)}"/><text x="682" y="${y+4}" fill="#dbeafe" font-size="13">${display(p.y)} [${display(p.lo)}, ${display(p.hi)}]</text>`;}).join('')}<text x="250" y="${ht-5}" fill="#94a3b8" font-size="12">${m.measure==='RR'?'Risk ratio (log axis; null = 1)':'Difference (null = 0)'} · ${esc(unitLabel(m.unit))}</text></svg></div>`;
   }
   function modelDetail(mid){
     const m=d.models.find(m=>m.model_id===mid);if(!m)return;
     const s=d.specifications.find(s=>s.model_id===mid),g=grade.get(mid),ins=d.inputs.filter(r=>r.model_id===mid);
     const panel=$('model-panel');panel.innerHTML=title(esc(mid),`${esc(m.role)} · ${esc(m.status)} · k=${m.k}, N=${m.N}`)+`<p class="estimate">${effect(m)}</p>`+forest(m)+note(esc((s.note||'Separate modality/comparator body. Compatible active arms combined; control counted once.').replace('mg/ug', 'mg/µg')))+
     (m.k>1?`<p>I² ${num(m.I2,1)}% · τ² ${num(m.tau2,3)} · safeguarded Hartung–Knapp interval.</p>`:'')+
-    (m.pi_low!==null&&m.pi_low!==undefined?`<p>Prediction interval: ${num(m.measure==='RR'?Math.exp(m.pi_low):m.pi_low)} to ${num(m.measure==='RR'?Math.exp(m.pi_high):m.pi_high)} ${esc(m.unit)}. Interpret cautiously.</p>`:'')+
+    (m.pi_low!==null&&m.pi_low!==undefined?`<p>Prediction interval: ${num(m.measure==='RR'?Math.exp(m.pi_low):m.pi_low)} to ${num(m.measure==='RR'?Math.exp(m.pi_high):m.pi_high)} ${esc(unitLabel(m.unit))}. Interpret cautiously.</p>`:'')+
     table(['Contributor / exact result IDs','n intervention / control','Source location'],ins.map(r=>[`${esc(r.study)}<br><small>${esc(r.result_id)}</small>`,`${num(r.n_i,0)} / ${num(r.n_c,0)}`,esc(r.source_location)]))+
     (g?`<h3>GRADE: ${esc(g.certainty)}</h3>${['risk_of_bias','inconsistency','indirectness','imprecision','publication_bias'].map(k=>`<p><strong>${esc(k.replaceAll('_',' '))} (−${g[k+'_downgrades']})</strong> — ${esc(g[k])}</p>`).join('')}`:note('Diagnostic only. Not an independently graded efficacy conclusion.'));
     panel.hidden=false;panel.scrollIntoView({behavior:'smooth',block:'start'});
@@ -206,5 +207,11 @@
   $('close-figure').addEventListener('click',()=>$('figure-dialog').close());
   window.addEventListener('hashchange',()=>render(location.hash.slice(1)));
   window.addEventListener('popstate',()=>render(location.hash.slice(1)));
+    document.querySelector('.nav').insertAdjacentHTML('beforeend', '<button type="button" id="theme-toggle" aria-label="Toggle light/dark theme" aria-pressed="false" style="margin-left:auto;padding:8px" title="Toggle theme">🌓</button>');
+  $('theme-toggle').addEventListener('click', e => {
+    const isDark = document.documentElement.dataset.theme === 'dark' || (!document.documentElement.dataset.theme && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    document.documentElement.dataset.theme = isDark ? 'light' : 'dark';
+    e.target.setAttribute('aria-pressed', isDark);
+  });
   const initId=render(location.hash.slice(1));history.replaceState(null,'','#'+initId);
 })();
