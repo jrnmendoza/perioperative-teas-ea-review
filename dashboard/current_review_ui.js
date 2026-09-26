@@ -85,6 +85,38 @@
       T(660,axisY+18,`${rr?'Risk ratio, log scale; null = 1':'Difference; null = 0'} · ${esc(unitLabel(m.unit))}`,'class="fp-mut" font-size="12" fill="#94a3b8"')+
       `</svg></div>`;
   }
+  // Sensitivity comparison for the Results panel: the baseline body and every mapped sensitivity (sensitivity_map,
+  // a proposed display grouping) from stored outputs. Only models on the baseline's scale share its ladder.
+  const modelById=id=>d.models.find(x=>x.model_id===id);
+  const sameScale=(a,b)=>a.measure===b.measure&&a.unit.replace('assumed ','')===b.unit.replace('assumed ','');
+  const excludesNull=m=>m.k?(m.ci_high<0||m.ci_low>0):null;
+  const descendants=(id,depth=0)=>(d.sensitivity_map||[]).filter(r=>r.parent_model_id===id).flatMap(r=>[{...r,depth},...descendants(r.model_id,depth+1)]);
+  function sensitivitySection(m){
+    if(!d.sensitivity_map)return '';
+    const own=d.sensitivity_map.find(r=>r.model_id===m.model_id),link=id=>`<button type="button" class="text-button model-link" data-model="${esc(id)}">${esc(id)}</button>`;
+    let base=m,head='',rows;
+    if(own&&own.parent_model_id){base=modelById(own.parent_model_id);head=note(`This model is a sensitivity analysis of ${link(base.model_id)} (${esc(own.relation)}). It is not an independently graded evidence body.`);}
+    if(own&&!own.parent_model_id){
+      const fam=d.sensitivity_map.filter(r=>!r.parent_model_id&&(()=>{const x=modelById(r.model_id);return x.construct===m.construct&&x.modality===m.modality&&x.comparator===m.comparator;})());
+      head=note(`Stand-alone diagnostic (${esc(own.relation)}): there is no main evidence body to compare it with.${fam.length>1?' Models of the same construct and comparison are shown together.':''}`);
+      rows=fam.map(r=>({r,m:modelById(r.model_id),depth:0}));base=null;
+    }else rows=descendants(base.model_id).map(r=>({r,m:modelById(r.model_id),depth:r.depth}));
+    if(!rows.length)return '';
+    const ref=base&&base.k?base:null,rr=(base||m).measure==='RR',disp=v=>num(rr?Math.exp(v):v);
+    const est=x=>x.k?`<span style="white-space:nowrap">${disp(x.effect)} [${disp(x.ci_low)}, ${disp(x.ci_high)}]</span>`:'No eligible evidence';
+    const pi=x=>x.pi_low!==null&&x.pi_low!==undefined?`${disp(x.pi_low)} to ${disp(x.pi_high)}`:'—';
+    const nullTxt=x=>x.k?(excludesNull(x)?'Excludes null':'Includes null'):'—';
+    const shift=x=>!ref||!x.k||!sameScale(x,ref)?'—':excludesNull(x)===excludesNull(ref)?'Same':'<strong>Changes</strong>';
+    const delta=x=>!ref||!x.k||!sameScale(x,ref)?'—':rr?`×${num(Math.exp(x.effect-ref.effect))}`:num(x.effect-ref.effect);
+    const tbl=table(['Model','Relation','k','Estimate [95% CI]','Prediction interval','Δ vs baseline','95% CI','Conclusion vs baseline'],
+      [...(base?[[`${link(base.model_id)}<br><small>baseline · ${esc(base.role)}</small>`,'—',base.k,est(base),pi(base),'—',nullTxt(base),'—']]:[]),
+       ...rows.map(({r,m:x,depth})=>[`${'&nbsp;&nbsp;'.repeat(depth*2)}${link(x.model_id)}${base&&!sameScale(x,base)?'<br><small>different scale: '+esc(x.unit)+'</small>':''}`,esc(r.relation),x.k,est(x),pi(x),delta(x),nullTxt(x),shift(x)])]);
+    const plotBase=base||m,onAxis=[...(base&&base.k?[base]:[]),...rows.map(o=>o.m).filter(x=>x.k&&sameScale(x,plotBase))];
+    const thr=plotBase.reaches10mg!==null&&plotBase.reaches10mg!==undefined?-10:null;
+    const lad=onAxis.length>1?ladder(onAxis.map(x=>({label:x.model_id,effect:x.effect,lo:x.ci_low,hi:x.ci_high,k:x.k,main:x===base})),padRange([0,...(thr===null?[]:[thr]),...onAxis.flatMap(x=>[x.ci_low,x.ci_high])]),{rr,unit:unitLabel(plotBase.unit),thr}):'';
+    return `<h3>Sensitivity comparison</h3>`+head+lad+tbl+
+      note('Stored estimates only. “Conclusion vs baseline” compares whether each 95% CI excludes the null; a change is a prompt to look at the model, not evidence of effect modification. Parent links are a proposed display grouping, not an analysis decision.');
+  }
   function modelDetail(mid){
     const m=d.models.find(m=>m.model_id===mid);if(!m)return;
     const s=d.specifications.find(s=>s.model_id===mid),g=grade.get(mid),ins=d.inputs.filter(r=>r.model_id===mid);
@@ -94,6 +126,7 @@
     (m.k>1?`<p>I² ${num(m.I2,1)}% <span title="I² represents the percentage of variation across studies that is due to heterogeneity rather than chance." style="cursor:help; border-bottom:1px dotted var(--accent); color:var(--accent)">?</span> · τ² ${num(m.tau2,3)} · safeguarded Hartung–Knapp interval.</p>`:'')+
     (m.pi_low!==null&&m.pi_low!==undefined?`<p>Prediction interval: ${num(m.measure==='RR'?Math.exp(m.pi_low):m.pi_low)} to ${num(m.measure==='RR'?Math.exp(m.pi_high):m.pi_high)} ${esc(unitLabel(m.unit))}. Interpret cautiously.</p>`:'')+
     table(['Contributor / exact result IDs','n intervention / control','Source location'],ins.map(r=>[`<button type="button" class="text-button result-open" data-result="${esc(r.result_id)}" data-result-model="${esc(r.model_id)}">${esc(r.study)}<br><small>${esc(r.result_id)}</small></button>`,`${num(r.n_i,0)} / ${num(r.n_c,0)}`,esc(r.source_location)]))+
+    sensitivitySection(m)+
     (g?`<h3>GRADE: ${esc(g.certainty)}</h3>${['risk_of_bias','inconsistency','indirectness','imprecision','publication_bias'].map(k=>`<p><strong>${esc(k.replaceAll('_',' '))} (−${g[k+'_downgrades']})</strong> — ${esc(g[k])}</p>`).join('')}`:note('Diagnostic only. Not an independently graded efficacy conclusion.'));
     panel.hidden=false;panel.scrollIntoView({behavior:'smooth',block:'start'});
   }
@@ -248,18 +281,19 @@
     return rows.map(r=>({...r,e1:hit(d.inputs,e1id,r),e2:hit(d.e2_inputs,e2id,r)}));
   };
   // Model ladder: stored estimate and CI per model on one axis (no recomputation).
-  function ladder(items,range){
-    const [lo,hi]=range,X0=400,X1=700,x=v=>X0+(v-lo)/(hi-lo)*(X1-X0),RH=26,top=36,axisY=top+items.length*RH,ticks=axisTicks(lo,hi,false);
+  // opts: rr (effects on the log scale, displayed as ratios), unit (axis caption), thr (threshold line, e.g. -10 mg; null for none).
+  function ladder(items,range,{rr=false,unit='mg IV MME',thr=-10}={}){
+    const [lo,hi]=range,X0=400,X1=700,x=v=>X0+(v-lo)/(hi-lo)*(X1-X0),RH=26,top=36,axisY=top+items.length*RH,ticks=axisTicks(lo,hi,rr),show=v=>num(rr?Math.exp(v):v);
     const T=(tx,ty,s,o='')=>`<text x="${tx}" y="${ty}" fill="#dbeafe" font-size="12" ${o}>${s}</text>`;
     return `<div class="forest-wrap"><svg viewBox="0 0 960 ${axisY+34}" role="img" aria-label="Sensitivity ladder: ${items.length} stored model estimates on a shared axis">`+
-      T(8,18,'Model','fill-opacity=".75"')+T(716,18,'MD [95% CI] · k','fill-opacity=".75"')+
-      `<line x1="${x(0)}" x2="${x(0)}" y1="24" y2="${axisY}" class="fp-null" stroke="#94a3b8" stroke-dasharray="4 4"/><line x1="${x(-10)}" x2="${x(-10)}" y1="24" y2="${axisY}" class="fp-tl" stroke="#fbbf24" stroke-dasharray="1 4" stroke-width="2"/>`+
+      T(8,18,'Model','fill-opacity=".75"')+T(716,18,`${rr?'RR':'Estimate'} [95% CI] · k`,'fill-opacity=".75"')+
+      `<line x1="${x(0)}" x2="${x(0)}" y1="24" y2="${axisY}" class="fp-null" stroke="#94a3b8" stroke-dasharray="4 4"/>${thr===null?'':`<line x1="${x(thr)}" x2="${x(thr)}" y1="24" y2="${axisY}" class="fp-tl" stroke="#fbbf24" stroke-dasharray="1 4" stroke-width="2"/>`}`+
       items.map((it,i)=>{const y=top+i*RH,cls=it.e2?'fp-ps':'fp-s',fcls=it.e2?'fp-pf':'fp-f',col=it.e2?'#5eead4':'#93c5fd';
         return T(8,y+4,esc(it.label),it.main?'font-weight="600"':'class="fp-mut" fill="#94a3b8"')+`<line x1="${x(it.lo)}" x2="${x(it.hi)}" y1="${y}" y2="${y}" class="${cls}" stroke="${col}" stroke-width="${it.main?2.5:1.5}"/>`+
           (it.main?`<polygon points="${x(it.lo)},${y} ${x(it.effect)},${y-6} ${x(it.hi)},${y} ${x(it.effect)},${y+6}" class="${fcls}" fill="${col}"/>`:`<circle cx="${x(it.effect)}" cy="${y}" r="4" class="${fcls}" fill="${col}"/>`)+
-          T(716,y+4,`${num(it.effect)} [${num(it.lo)}, ${num(it.hi)}] · ${it.k}`,it.main?'font-weight="600"':'');}).join('')+
+          T(716,y+4,`${show(it.effect)} [${show(it.lo)}, ${show(it.hi)}] · ${it.k}`,it.main?'font-weight="600"':'');}).join('')+
       `<line x1="${X0}" x2="${X1}" y1="${axisY}" y2="${axisY}" class="fp-axis" stroke="#94a3b8"/>`+ticks.map(t=>`<line x1="${x(t.v)}" x2="${x(t.v)}" y1="${axisY}" y2="${axisY+5}" class="fp-axis" stroke="#94a3b8"/><text class="fp-mut" x="${x(t.v)}" y="${axisY+18}" fill="#94a3b8" font-size="11" text-anchor="middle">${t.label}</text>`).join('')+
-      T(716,axisY+18,'mg IV MME · dotted line −10 mg','class="fp-mut" font-size="11" fill="#94a3b8"')+`</svg></div>`;
+      T(716,axisY+18,`${esc(unit)}${rr?' (log scale)':''}${thr===null?'':' · dotted line '+(Number.isInteger(thr)?String(thr):show(thr))}`,'class="fp-mut" font-size="11" fill="#94a3b8"')+`</svg></div>`;
   }
   // Paired opioid-pain check: per opioid contrast, the trial's opioid MD against -10 mg beside its same-trial pain MD
   // against +1 (0-10 scale), from the paired-pain registry. Only ~24 h pain is drawn; eligibility is the registry's.

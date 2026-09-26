@@ -33,6 +33,18 @@ def paired_pain_consistent(d):
     if any(r['pairing_status']=='ELIGIBLE PAIRED PAIN' and (r['pain_decision']!='INCLUDE' or r['arm_match']!='SAME ARMS') for r in P):return False
     blocked={b for b,_,m in E2_BODIES for j in d.get('e2_joint',[]) if j['body']==b and j['pain_limb'].startswith('Cannot be evaluated')}
     return not any(r['analysis']=='E2' and r['body'] in blocked and r['pairing_status']=='ELIGIBLE PAIRED PAIN' for r in P)
+def sensitivity_map_complete(d):
+    """Every SENSITIVITY-role core model is mapped exactly once; each parent is a core model; parent chains end at a
+    non-sensitivity body or a stand-alone entry (no cycles); every row states a relation."""
+    if 'sensitivity_map' not in d:return True
+    S=d['sensitivity_map'];ids=[r['model_id'] for r in S];models={m['model_id']:m for m in d['models']};par={r['model_id']:r['parent_model_id'] for r in S}
+    if sorted(ids)!=sorted(m for m,x in models.items() if x['role']=='SENSITIVITY') or any(not r['relation'] for r in S):return False
+    for m in ids:
+        seen=set()
+        while par.get(m):
+            if m in seen or par[m] not in models:return False
+            seen.add(m);m=par[m]
+    return True
 def e2_inputs_consistent(d):
     """Each E2 model's exported contrasts match its study/contrast order and N, and reproduce its pooled effect from the stored tau2."""
     if 'e2_inputs' not in d:return True
@@ -68,6 +80,8 @@ def checks(d):
       'E2 accounting covers E1 and E2 inputs':e2_accounting_complete(d),
       'Paired pain registry identity':d.get('paired_pain')==rows(D/'10_PAIRED_PAIN/paired_pain_registry.csv') if (D/'10_PAIRED_PAIN/paired_pain_registry.csv').exists() else True,
       'Paired pain registry covers contrasts and agrees with decisions':paired_pain_consistent(d),
+      'Sensitivity map identity':d.get('sensitivity_map')==rows(D/'12_SENSITIVITY_MAP/sensitivity_parent_map.csv') if (D/'12_SENSITIVITY_MAP/sensitivity_parent_map.csv').exists() else True,
+      'Sensitivity map covers every sensitivity model':sensitivity_map_complete(d),
       'QoR later-window identity':d.get('qor_later_models')==json.load(open(D/'08_QOR_ANALYSIS/qor_models_later.json')) if (D/'08_QOR_ANALYSIS/qor_models_later.json').exists() else True,
       'QoR later-window RoB identity': d.get('qor_later_rob') == rows(D/'08_QOR_ANALYSIS/qor_rob2_later.csv') and len(d.get('qor_later_rob', [])) == 5 if 'qor_later_rob' in d else True,
       'E2 methods integrity': d.get('e2_methods', {}).get('Timestamp note', '') == re.search(r'(\*\*Timestamp note[^\n]+(?:\n[^\n]+)+)', (D/'02_DECISIONS/v38/AMENDED_PRIMARY_ESTIMAND_E2.md').read_text(encoding='utf-8')).group(1).strip() if 'e2_methods' in d else True,
@@ -310,6 +324,9 @@ def main(site=None):
     if 'e2_inputs' in data:
         mutations.append(('E2 per-contrast input identity',lambda d:d['e2_inputs'][0].__setitem__('yi','0')))
         mutations.append(('E2 inputs reproduce E2 membership and pooled effects',lambda d:d['e2_inputs'].pop()))
+    if 'sensitivity_map' in data:
+        mutations.append(('Sensitivity map identity',lambda d:d['sensitivity_map'][0].__setitem__('relation','changed')))
+        mutations.append(('Sensitivity map covers every sensitivity model',lambda d:d['sensitivity_map'].pop()))
     if 'paired_pain' in data:
         mutations.append(('Paired pain registry identity',lambda d:d['paired_pain'][0].__setitem__('pain_md','0')))
         mutations.append(('Paired pain registry covers contrasts and agrees with decisions',lambda d:[r.update(pairing_status='ELIGIBLE PAIRED PAIN') for r in d['paired_pain'] if r['study']=='Lin 2002' and r['analysis']=='E2']))

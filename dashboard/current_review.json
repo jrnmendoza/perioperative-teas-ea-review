@@ -25933,6 +25933,224 @@
       }
     ]
   },
+  "sensitivity_map": [
+    {
+      "model_id": "opioid24_EA_usual_without_ElRakshy",
+      "parent_model_id": "opioid24_EA_usual",
+      "relation": "leave-one-out",
+      "status": "PROPOSED 2026-09-26 display grouping"
+    },
+    {
+      "model_id": "opioid24_TEAS_sham_expanded_suf0.25",
+      "parent_model_id": "opioid24_TEAS_sham",
+      "relation": "expanded membership (sufentanil 0.25)",
+      "status": "PROPOSED 2026-09-26 display grouping"
+    },
+    {
+      "model_id": "opioid24_TEAS_sham_expanded_suf0.5",
+      "parent_model_id": "opioid24_TEAS_sham",
+      "relation": "expanded membership (sufentanil 0.5)",
+      "status": "PROPOSED 2026-09-26 display grouping"
+    },
+    {
+      "model_id": "opioid24_TEAS_sham_expanded_suf1",
+      "parent_model_id": "opioid24_TEAS_sham",
+      "relation": "expanded membership (sufentanil 1)",
+      "status": "PROPOSED 2026-09-26 display grouping"
+    },
+    {
+      "model_id": "opioid24_TEAS_sham_expanded_suf0.25_without_Chen2020",
+      "parent_model_id": "opioid24_TEAS_sham_expanded_suf0.25",
+      "relation": "leave-one-out",
+      "status": "PROPOSED 2026-09-26 display grouping"
+    },
+    {
+      "model_id": "opioid24_TEAS_sham_expanded_suf0.5_without_Chen2020",
+      "parent_model_id": "opioid24_TEAS_sham_expanded_suf0.5",
+      "relation": "leave-one-out",
+      "status": "PROPOSED 2026-09-26 display grouping"
+    },
+    {
+      "model_id": "opioid24_TEAS_sham_expanded_suf1_without_Chen2020",
+      "parent_model_id": "opioid24_TEAS_sham_expanded_suf1",
+      "relation": "leave-one-out",
+      "status": "PROPOSED 2026-09-26 display grouping"
+    },
+    {
+      "model_id": "opioid24_EA_usual_expanded",
+      "parent_model_id": "opioid24_EA_usual",
+      "relation": "expanded membership",
+      "status": "PROPOSED 2026-09-26 display grouping"
+    },
+    {
+      "model_id": "opioid_partial_TEAS_sham",
+      "parent_model_id": "opioid24_TEAS_sham",
+      "relation": "alternative construct (PCA 1-24 h partial window)",
+      "status": "PROPOSED 2026-09-26 display grouping"
+    },
+    {
+      "model_id": "opioid_partial_EA_sham",
+      "parent_model_id": "opioid24_EA_sham",
+      "relation": "alternative construct (PCA 1-24 h partial window)",
+      "status": "PROPOSED 2026-09-26 display grouping"
+    },
+    {
+      "model_id": "opioid_partial_EA_usual",
+      "parent_model_id": "opioid24_EA_usual",
+      "relation": "alternative construct (PCA 1-24 h partial window)",
+      "status": "PROPOSED 2026-09-26 display grouping"
+    },
+    {
+      "model_id": "opioid24_EA_sham_weight_normalized",
+      "parent_model_id": "opioid24_EA_sham",
+      "relation": "alternative construct (weight-normalised)",
+      "status": "PROPOSED 2026-09-26 display grouping"
+    },
+    {
+      "model_id": "opioid24_EA_sham_fentanyl_per_kg",
+      "parent_model_id": "opioid24_EA_sham",
+      "relation": "alternative construct (weight-normalised)",
+      "status": "PROPOSED 2026-09-26 display grouping"
+    },
+    {
+      "model_id": "ponv24_TEAS_sham_point_window_sensitivity",
+      "parent_model_id": "ponv24_TEAS_sham",
+      "relation": "window uncertainty",
+      "status": "PROPOSED 2026-09-26 display grouping"
+    },
+    {
+      "model_id": "ponv24_TEAS_broad_sham_sensitivity",
+      "parent_model_id": "ponv24_TEAS_sham",
+      "relation": "broader comparator",
+      "status": "PROPOSED 2026-09-26 display grouping"
+    },
+    {
+      "model_id": "pain24_movement_EA_sham_with_He",
+      "parent_model_id": "pain24_movement_EA_sham",
+      "relation": "added trial (source-uncertain)",
+      "status": "PROPOSED 2026-09-26 display grouping"
+    },
+    {
+      "model_id": "pain24_rest_EA_sham_He_reported_SD",
+      "parent_model_id": "pain24_rest_EA_sham",
+      "relation": "reported-SD diagnostic",
+      "status": "PROPOSED 2026-09-26 display grouping"
+    },
+    {
+      "model_id": "pain24_unclassified_TEAS_sham",
+      "parent_model_id": "",
+      "relation": "stand-alone (pain setting unspecified)",
+      "status": "PROPOSED 2026-09-26 display grouping"
+    },
+    {
+      "model_id": "pain24_Lee_low_arm_only",
+      "parent_model_id": "",
+      "relation": "stand-alone (single arm of a multi-arm trial)",
+      "status": "PROPOSED 2026-09-26 display grouping"
+    },
+    {
+      "model_id": "pain24_Ng_unspecified",
+      "parent_model_id": "",
+      "relation": "stand-alone (pain setting unspecified)",
+      "status": "PROPOSED 2026-09-26 display grouping"
+    },
+    {
+      "model_id": "pain24_TEAS_active_unspecified",
+      "parent_model_id": "",
+      "relation": "stand-alone (pain setting unspecified)",
+      "status": "PROPOSED 2026-09-26 display grouping"
+    },
+    {
+      "model_id": "pain6to24_movement_EA_usual",
+      "parent_model_id": "",
+      "relation": "stand-alone (interval window)",
+      "status": "PROPOSED 2026-09-26 display grouping"
+    },
+    {
+      "model_id": "opioid72_EA_usual_PCA",
+      "parent_model_id": "",
+      "relation": "stand-alone (0-72 h window)",
+      "status": "PROPOSED 2026-09-26 display grouping"
+    },
+    {
+      "model_id": "opioid48_TEAS_sham_uncertain_suf0.25",
+      "parent_model_id": "",
+      "relation": "stand-alone (conversion variant; no principal body)",
+      "status": "PROPOSED 2026-09-26 display grouping"
+    },
+    {
+      "model_id": "opioid48_TEAS_sham_uncertain_suf0.5",
+      "parent_model_id": "",
+      "relation": "stand-alone (conversion variant; no principal body)",
+      "status": "PROPOSED 2026-09-26 display grouping"
+    },
+    {
+      "model_id": "opioid48_TEAS_sham_uncertain_suf1",
+      "parent_model_id": "",
+      "relation": "stand-alone (conversion variant; no principal body)",
+      "status": "PROPOSED 2026-09-26 display grouping"
+    },
+    {
+      "model_id": "tramadol24_TEAS_usual_PCA",
+      "parent_model_id": "",
+      "relation": "stand-alone (unconverted tramadol)",
+      "status": "PROPOSED 2026-09-26 display grouping"
+    },
+    {
+      "model_id": "tramadol24_TEAS_active_PCA",
+      "parent_model_id": "",
+      "relation": "stand-alone (unconverted tramadol)",
+      "status": "PROPOSED 2026-09-26 display grouping"
+    },
+    {
+      "model_id": "flatus_TEAS_sham_SMD_sensitivity",
+      "parent_model_id": "flatus_TEAS_sham",
+      "relation": "alternative scale (SMD)",
+      "status": "PROPOSED 2026-09-26 display grouping"
+    },
+    {
+      "model_id": "flatus_TEAS_usual_SMD_sensitivity",
+      "parent_model_id": "flatus_TEAS_usual",
+      "relation": "alternative scale (SMD)",
+      "status": "PROPOSED 2026-09-26 display grouping"
+    },
+    {
+      "model_id": "flatus_EA_sham_SMD_sensitivity",
+      "parent_model_id": "flatus_EA_sham",
+      "relation": "alternative scale (SMD)",
+      "status": "PROPOSED 2026-09-26 display grouping"
+    },
+    {
+      "model_id": "flatus_EA_usual_SMD_sensitivity",
+      "parent_model_id": "flatus_EA_usual",
+      "relation": "alternative scale (SMD)",
+      "status": "PROPOSED 2026-09-26 display grouping"
+    },
+    {
+      "model_id": "flatus_TEAS_sham_with_Zheng2025_as_printed",
+      "parent_model_id": "flatus_TEAS_sham",
+      "relation": "added trial (source-uncertain)",
+      "status": "PROPOSED 2026-09-26 display grouping"
+    },
+    {
+      "model_id": "bowelsounds_TEAS_sham_with_Zheng2025_as_printed",
+      "parent_model_id": "bowelsounds_TEAS_sham",
+      "relation": "added trial (source-uncertain)",
+      "status": "PROPOSED 2026-09-26 display grouping"
+    },
+    {
+      "model_id": "intraop_remifentanil_TEAS_sham_with_Zheng2025_as_printed",
+      "parent_model_id": "intraop_remifentanil_TEAS_sham",
+      "relation": "added trial (source-uncertain)",
+      "status": "PROPOSED 2026-09-26 display grouping"
+    },
+    {
+      "model_id": "intraop_remifentanil_Wu2025_preintervention_diagnostic",
+      "parent_model_id": "intraop_remifentanil_TEAS_sham",
+      "relation": "excluded-result diagnostic",
+      "status": "PROPOSED 2026-09-26 display grouping"
+    }
+  ],
   "paired_pain": [
     {
       "analysis": "E1",
