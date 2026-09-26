@@ -1,0 +1,37 @@
+model_id,parent_model_id,relation,status
+opioid24_EA_usual_without_ElRakshy,opioid24_EA_usual,leave-one-out,PROPOSED 2026-09-26 display grouping
+opioid24_TEAS_sham_expanded_suf0.25,opioid24_TEAS_sham,expanded membership (sufentanil 0.25),PROPOSED 2026-09-26 display grouping
+opioid24_TEAS_sham_expanded_suf0.5,opioid24_TEAS_sham,expanded membership (sufentanil 0.5),PROPOSED 2026-09-26 display grouping
+opioid24_TEAS_sham_expanded_suf1,opioid24_TEAS_sham,expanded membership (sufentanil 1),PROPOSED 2026-09-26 display grouping
+opioid24_TEAS_sham_expanded_suf0.25_without_Chen2020,opioid24_TEAS_sham_expanded_suf0.25,leave-one-out,PROPOSED 2026-09-26 display grouping
+opioid24_TEAS_sham_expanded_suf0.5_without_Chen2020,opioid24_TEAS_sham_expanded_suf0.5,leave-one-out,PROPOSED 2026-09-26 display grouping
+opioid24_TEAS_sham_expanded_suf1_without_Chen2020,opioid24_TEAS_sham_expanded_suf1,leave-one-out,PROPOSED 2026-09-26 display grouping
+opioid24_EA_usual_expanded,opioid24_EA_usual,expanded membership,PROPOSED 2026-09-26 display grouping
+opioid_partial_TEAS_sham,opioid24_TEAS_sham,alternative construct (PCA 1-24 h partial window),PROPOSED 2026-09-26 display grouping
+opioid_partial_EA_sham,opioid24_EA_sham,alternative construct (PCA 1-24 h partial window),PROPOSED 2026-09-26 display grouping
+opioid_partial_EA_usual,opioid24_EA_usual,alternative construct (PCA 1-24 h partial window),PROPOSED 2026-09-26 display grouping
+opioid24_EA_sham_weight_normalized,opioid24_EA_sham,alternative construct (weight-normalised),PROPOSED 2026-09-26 display grouping
+opioid24_EA_sham_fentanyl_per_kg,opioid24_EA_sham,alternative construct (weight-normalised),PROPOSED 2026-09-26 display grouping
+ponv24_TEAS_sham_point_window_sensitivity,ponv24_TEAS_sham,window uncertainty,PROPOSED 2026-09-26 display grouping
+ponv24_TEAS_broad_sham_sensitivity,ponv24_TEAS_sham,broader comparator,PROPOSED 2026-09-26 display grouping
+pain24_movement_EA_sham_with_He,pain24_movement_EA_sham,added trial (source-uncertain),PROPOSED 2026-09-26 display grouping
+pain24_rest_EA_sham_He_reported_SD,pain24_rest_EA_sham,reported-SD diagnostic,PROPOSED 2026-09-26 display grouping
+pain24_unclassified_TEAS_sham,,stand-alone (pain setting unspecified),PROPOSED 2026-09-26 display grouping
+pain24_Lee_low_arm_only,,stand-alone (single arm of a multi-arm trial),PROPOSED 2026-09-26 display grouping
+pain24_Ng_unspecified,,stand-alone (pain setting unspecified),PROPOSED 2026-09-26 display grouping
+pain24_TEAS_active_unspecified,,stand-alone (pain setting unspecified),PROPOSED 2026-09-26 display grouping
+pain6to24_movement_EA_usual,,stand-alone (interval window),PROPOSED 2026-09-26 display grouping
+opioid72_EA_usual_PCA,,stand-alone (0-72 h window),PROPOSED 2026-09-26 display grouping
+opioid48_TEAS_sham_uncertain_suf0.25,,stand-alone (conversion variant; no principal body),PROPOSED 2026-09-26 display grouping
+opioid48_TEAS_sham_uncertain_suf0.5,,stand-alone (conversion variant; no principal body),PROPOSED 2026-09-26 display grouping
+opioid48_TEAS_sham_uncertain_suf1,,stand-alone (conversion variant; no principal body),PROPOSED 2026-09-26 display grouping
+tramadol24_TEAS_usual_PCA,,stand-alone (unconverted tramadol),PROPOSED 2026-09-26 display grouping
+tramadol24_TEAS_active_PCA,,stand-alone (unconverted tramadol),PROPOSED 2026-09-26 display grouping
+flatus_TEAS_sham_SMD_sensitivity,flatus_TEAS_sham,alternative scale (SMD),PROPOSED 2026-09-26 display grouping
+flatus_TEAS_usual_SMD_sensitivity,flatus_TEAS_usual,alternative scale (SMD),PROPOSED 2026-09-26 display grouping
+flatus_EA_sham_SMD_sensitivity,flatus_EA_sham,alternative scale (SMD),PROPOSED 2026-09-26 display grouping
+flatus_EA_usual_SMD_sensitivity,flatus_EA_usual,alternative scale (SMD),PROPOSED 2026-09-26 display grouping
+flatus_TEAS_sham_with_Zheng2025_as_printed,flatus_TEAS_sham,added trial (source-uncertain),PROPOSED 2026-09-26 display grouping
+bowelsounds_TEAS_sham_with_Zheng2025_as_printed,bowelsounds_TEAS_sham,added trial (source-uncertain),PROPOSED 2026-09-26 display grouping
+intraop_remifentanil_TEAS_sham_with_Zheng2025_as_printed,intraop_remifentanil_TEAS_sham,added trial (source-uncertain),PROPOSED 2026-09-26 display grouping
+intraop_remifentanil_Wu2025_preintervention_diagnostic,intraop_remifentanil_TEAS_sham,excluded-result diagnostic,PROPOSED 2026-09-26 display grouping
