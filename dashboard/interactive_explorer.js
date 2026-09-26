@@ -70,7 +70,7 @@
                 }
                 .explorer-toolbar input, .explorer-toolbar select {
                     background: var(--bg);
-                    border: 1px solid #3c506b;
+                    border: 1px solid var(--input-border);
                     border-radius: 8px;
                     padding: 0.75rem 1rem;
                     font-size: 14px;
@@ -90,12 +90,12 @@
                 }
                 .matrix-cell {
                     display: inline-flex; align-items: center; justify-content: center;
-                    width: 26px; height: 20px; border-radius: 10px; font-size: 10px; font-weight: 700; color: #0b1220;
+                    width: 26px; height: 20px; border-radius: 10px; font-size: 10px; font-weight: 700; color: var(--bg);
                 }
                 .matrix-cell.e1 { background: var(--accent); }
-                .matrix-cell.e2 { background: #fbbf24; }
-                .matrix-cell.main { background: #93c5fd; width: 14px; height: 14px; }
-                .matrix-cell.sens { border: 2px solid #93c5fd; width: 14px; height: 14px; }
+                .matrix-cell.e2 { background: var(--focus); }
+                .matrix-cell.main { background: var(--plot-mark1); width: 14px; height: 14px; }
+                .matrix-cell.sens { border: 2px solid var(--plot-mark1); width: 14px; height: 14px; }
                 .matrix-cell.none { color: var(--muted); font-weight: 400; font-size: 14px; }
                 .matrix-legend { display: flex; flex-wrap: wrap; gap: 6px 18px; align-items: center; font-size: 13px; color: var(--muted); margin: 0 0 8px; }
                 .matrix-legend span { display: inline-flex; align-items: center; gap: 6px; }
@@ -111,7 +111,7 @@
                     width: 800px;
                     max-width: 95vw;
                     border-radius: 16px 0 0 16px;
-                    background: #0d1624;
+                    background: var(--card);
                     box-shadow: -10px 0 30px rgba(0,0,0,0.5);
                     border: 1px solid var(--line);
                     border-right: none;
@@ -311,7 +311,7 @@
             const stricta = bg.stricta || {};
             
             let html = `
-                <div style="position:sticky; top:0; background:#0d1624; padding-bottom:16px; margin-bottom:16px; border-bottom:1px solid var(--line); z-index:10;">
+                <div style="position:sticky; top:0; background:var(--card); padding-bottom:16px; margin-bottom:16px; border-bottom:1px solid var(--line); z-index:10;">
                     <button type="button" id="close-drawer" aria-label="Close" style="float:right; background:rgba(255,255,255,0.05); border:1px solid var(--line); color:var(--ink); cursor:pointer; font-size:20px; border-radius:50%; width:36px; height:36px; display:flex; align-items:center; justify-content:center; transition:background 0.2s;">&times;</button>
                     <h2 style="margin:0 0 4px 0">${esc(s.report_id)}</h2>
                     <p class="source" style="margin:0;">${esc(bg.citation || '')}</p>
@@ -320,7 +320,7 @@
                 <div style="padding-right:8px;">
                     <div style="display:flex; gap:8px; margin-bottom:24px;">
                         <span class="tag">${esc(s.modality)}</span>
-                        <span class="tag" style="background:#133833; color:#99f6e4;">${esc(s.comparator)}</span>
+                        <span class="tag" style="background:var(--nav-active-bg); color:var(--nav-active-text);">${esc(s.comparator)}</span>
                     </div>
                     
                     <h3>Intervention details (STRICTA)</h3>
