@@ -7,7 +7,23 @@
         const graph = window.EVIDENCE_GRAPH;
         const $ = id => document.getElementById(id);
         const esc = x => String(x ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-        
+
+        // Contribution matrix: outcome family from the model ID, state from the canonical role.
+        const COLS = { opioid: 'Opioid 0–24 h', pain: 'Pain', ponv: 'PONV', qor: 'QoR', gi: 'GI recovery' };
+        const STATE = { e1: 'E1 primary body (principal/supportive)', e2: 'E2 post-hoc main body only', main: 'main (non-sensitivity) body', sens: 'sensitivity/diagnostic models only' };
+        const TIER = { sens: 1, main: 2, e2: 3, e1: 4 };
+        const classify = (mid, m) => {
+            const role = m?.role || '', main = ['PRINCIPAL', 'SUPPORTIVE', 'ADDITIONAL'].includes(role);
+            if (mid.startsWith('E2_')) return ['opioid', role.includes('(main)') ? 'e2' : 'sens'];
+            if (mid.startsWith('opioid24_')) return ['opioid', role === 'PRINCIPAL' || role === 'SUPPORTIVE' ? 'e1' : 'sens'];
+            if (mid.startsWith('QOR')) return ['qor', main ? 'main' : 'sens'];
+            if (mid.startsWith('pain')) return ['pain', main ? 'main' : 'sens'];
+            if (/^(ponv|nausea|vomiting|persistent_nausea)/.test(mid)) return ['ponv', main ? 'main' : 'sens'];
+            if (/^(flatus|defecation|bowelsounds)/.test(mid)) return ['gi', main ? 'main' : 'sens'];
+            return null;
+        };
+        const ROLE_RANK = { PRINCIPAL: 0, SUPPORTIVE: 1, ADDITIONAL: 2 };
+
         let state = {
             search: '',
             modality: 'all',
@@ -69,21 +85,18 @@
                     background-color: rgba(255, 255, 255, 0.03);
                     transform: translateX(4px);
                 }
-                .matrix-dot {
-                    width: 12px; height: 12px; border-radius: 50%; margin: 0 auto;
-                    transition: transform 0.2s ease, box-shadow 0.2s ease;
+                .matrix-cell {
+                    display: inline-flex; align-items: center; justify-content: center;
+                    width: 26px; height: 20px; border-radius: 10px; font-size: 10px; font-weight: 700; color: #0b1220;
                 }
-                .matrix-dot.active {
-                    background: var(--accent);
-                    box-shadow: 0 0 8px rgba(94, 234, 212, 0.4);
-                }
-                .matrix-dot.inactive {
-                    background: var(--line);
-                }
-                .study-row:hover .matrix-dot.active {
-                    transform: scale(1.2);
-                    box-shadow: 0 0 12px rgba(94, 234, 212, 0.6);
-                }
+                .matrix-cell.e1 { background: var(--accent); }
+                .matrix-cell.e2 { background: #fbbf24; }
+                .matrix-cell.main { background: #93c5fd; width: 14px; height: 14px; }
+                .matrix-cell.sens { border: 2px solid #93c5fd; width: 14px; height: 14px; }
+                .matrix-cell.none { color: var(--muted); font-weight: 400; font-size: 14px; }
+                .matrix-legend { display: flex; flex-wrap: wrap; gap: 6px 18px; align-items: center; font-size: 13px; color: var(--muted); margin: 0 0 8px; }
+                .matrix-legend span { display: inline-flex; align-items: center; gap: 6px; }
+                .study-open { font-weight: 700; color: var(--ink); max-width: none; }
                 /* Sleek Side Drawer */
                 #study-drawer {
                     margin-right: 0;
@@ -127,6 +140,7 @@
                         <option value="all" ${state.modality === 'all' ? 'selected' : ''}>All Modalities</option>
                         <option value="TEAS" ${state.modality === 'TEAS' ? 'selected' : ''}>TEAS</option>
                         <option value="EA" ${state.modality === 'EA' ? 'selected' : ''}>Needle EA</option>
+                        <option value="Unclear" ${state.modality === 'Unclear' ? 'selected' : ''}>Unclear modality</option>
                     </select>
                 </div>
                 <div>
@@ -141,6 +155,14 @@
                 </div>
             </div>
             
+            <div class="matrix-legend" aria-label="Contribution legend">
+                <span><span class="matrix-cell e1">E1</span> E1 primary opioid body</span>
+                <span><span class="matrix-cell e2">E2</span> E2 post-hoc body only</span>
+                <span><span class="matrix-cell main"></span> Main body</span>
+                <span><span class="matrix-cell sens"></span> Sensitivity/diagnostic only</span>
+                <span><span class="matrix-cell none">–</span> No model contribution (may still be reported, held or ineligible)</span>
+            </div>
+            <p class="source" style="margin:0 0 4px"><span id="explorer-count" aria-live="polite"></span> · Hover a cell for the exact models. Pain includes the 6–24 h interval sensitivity; PONV includes nausea/vomiting and 48 h windows.</p>
             <div id="explorer-table-container"></div>
             
             <dialog id="study-drawer">
@@ -163,10 +185,17 @@
                 if (s.modality === 'EA') modalities.add('EA');
                 if (s.modality === 'UNCLEAR') modalities.add('Unclear');
 
-                // Add from models to catch multi-arm
+                // Add from models and arm-level inputs to catch multi-arm trials
+                for (const inp of graph.studies[s.report_id]?.inputs || []) {
+                    const cls = (inp.comparator_class || inp.comparator || '').toLowerCase();
+                    if (cls.includes('sham')) contrasts.add('Sham');
+                    if (cls.includes('usual')) contrasts.add('Usual');
+                    if (cls.includes('active')) contrasts.add('Active');
+                }
                 for (const mid of models) {
                     if (mid.includes('_sham') || mid.includes('SHAM')) contrasts.add('Sham');
                     if (mid.includes('_usual') || mid.includes('USUAL')) contrasts.add('Usual');
+                    if (mid.includes('_active')) contrasts.add('Active');
                     if (mid.includes('TEAS_')) modalities.add('TEAS');
                     if (mid.includes('EA_')) modalities.add('EA');
                 }
@@ -196,71 +225,41 @@
                 const inputs = graph.studies[s.report_id]?.inputs || [];
                 const numFigs = (window.ARTICLE_FIGURES?.[s.report_id] || []).length;
                 
-                // Determine N(anal) based on selected contrast, else fallback
-                let displayN = s.analyzed_n || '—';
-                if (state.comparator !== 'all' && inputs.length > 0) {
-                    // Find an input matching the comparator
-                    const compInput = inputs.find(inp => {
-                        const mStr = inp.model_id.toLowerCase();
-                        return (state.comparator === 'Sham' && mStr.includes('sham')) ||
-                               (state.comparator === 'Usual' && mStr.includes('usual'));
-                    });
-                    if (compInput) {
-                        displayN = `${Number(compInput.n_i) + Number(compInput.n_c)} (${state.comparator})`;
-                    }
+                // With a comparator selected, show the analysed n of that contrast, taken from the
+                // highest-ranked model input (principal > supportive > additional > sensitivity).
+                let displayN = esc(s.analyzed_n || '—');
+                if (state.comparator !== 'all') {
+                    const compInput = inputs
+                        .filter(inp => inp.n_i !== undefined && inp.n_i !== '' && (inp.comparator_class || inp.comparator || '').toLowerCase().includes(state.comparator.toLowerCase()))
+                        .sort((a, b) => (ROLE_RANK[graph.models[a.model_id]?.canonical?.role] ?? 3) - (ROLE_RANK[graph.models[b.model_id]?.canonical?.role] ?? 3))[0];
+                    if (compInput) displayN = `${Number(compInput.n_i) + Number(compInput.n_c)}<br><small>${esc(compInput.model_id)}</small>`;
                 }
                 
-                // Evaluate contribution dots using exact roles
-                let opioid24 = 'none', pain24 = 'none', ponv = 'none', recovery = 'none';
-                
+                // Contribution cells: highest-ranked role per outcome family; tooltip lists every model.
+                const cells = {};
                 for (const mid of models) {
-                    const mObj = graph.models[mid]?.canonical;
-                    if (!mObj) continue;
-                    
-                    const midLower = mid.toLowerCase();
-                    const isE1 = mObj.role === 'PRINCIPAL' || mObj.role === 'SUPPORTIVE';
-                    const isE2 = mObj.role?.includes('E2');
-                    
-                    if (midLower.includes('opioid24') && !midLower.includes('opioid24_pacu')) {
-                        if (isE1) opioid24 = 'E1';
-                        else if (isE2 && opioid24 !== 'E1') opioid24 = 'E2';
-                    }
-                    
-                    if (midLower.includes('pain24')) {
-                        if (isE1) pain24 = 'E1';
-                    }
-                    
-                    if (midLower.includes('ponv') || midLower.includes('nausea') || midLower.includes('vomiting')) {
-                        if (isE1) ponv = 'E1';
-                    }
-                    
-                    if (midLower.includes('qor') || midLower.includes('flatus') || midLower.includes('defecation')) {
-                        if (midLower.includes('qor')) recovery = 'QoR';
-                        else if (recovery === 'none') recovery = 'GI';
-                    }
+                    const c = classify(mid, graph.models[mid]?.canonical);
+                    if (!c) continue;
+                    const cell = cells[c[0]] ||= { tier: 'sens', models: [] };
+                    cell.models.push(mid);
+                    if (TIER[c[1]] > TIER[cell.tier]) cell.tier = c[1];
                 }
-                
-                const dotHtml = (type) => {
-                    if (type === 'none') return `<div class="matrix-dot inactive" title="No contribution"></div>`;
-                    let color = 'var(--accent)';
-                    if (type === 'E2') color = '#fbbf24'; // Warning color for E2
-                    if (type === 'QoR') color = '#a78bfa'; // Purple for QoR
-                    if (type === 'GI') color = '#60a5fa'; // Blue for GI
-                    return `<div class="matrix-dot active" style="background:${color}" title="Contributes (${type})"></div>`;
+                const dotHtml = (key) => {
+                    const cell = cells[key];
+                    if (!cell) return `<span class="matrix-cell none" role="img" aria-label="${esc(COLS[key])}: no current model contribution" title="No contribution to any current model. The outcome may still be reported, held or ineligible.">–</span>`;
+                    const label = `${COLS[key]}: ${STATE[cell.tier]}. Models: ${cell.models.join(', ')}`;
+                    return `<span class="matrix-cell ${cell.tier}" role="img" aria-label="${esc(label)}" title="${esc(label)}">${cell.tier === 'e1' ? 'E1' : cell.tier === 'e2' ? 'E2' : ''}</span>`;
                 };
                 
                 return `
-                    <tr style="cursor:pointer" class="study-row" data-id="${esc(s.report_id)}" title="Click to open study details and figures">
-                        <td><strong>${esc(s.report_id)}</strong><br><small style="color:var(--text-secondary)">${esc(s.year)}</small></td>
+                    <tr style="cursor:pointer" class="study-row" data-id="${esc(s.report_id)}">
+                        <td><button type="button" class="text-button study-open" data-id="${esc(s.report_id)}" aria-haspopup="dialog">${esc(s.report_id)}</button><br><small>${esc(s.trial_id)}</small></td>
                         <td><span class="tag">${esc(s.modality)}</span></td>
                         <td><span class="tag">${esc(s.comparator)}</span></td>
-                        <td>${esc(bg.surgery_procedure || s.notes || '—')}</td>
+                        <td>${esc(bg.surgery_procedure || 'Not verified')}</td>
                         <td style="text-align:right">${s.randomized_n_report || '—'}</td>
-                        <td style="text-align:right">${esc(displayN)}</td>
-                        <td style="text-align:center">${dotHtml(opioid24)}</td>
-                        <td style="text-align:center">${dotHtml(pain24)}</td>
-                        <td style="text-align:center">${dotHtml(ponv)}</td>
-                        <td style="text-align:center">${dotHtml(recovery)}</td>
+                        <td style="text-align:right">${displayN}</td>
+                        ${Object.keys(COLS).map(k => `<td style="text-align:center">${dotHtml(k)}</td>`).join('')}
                         <td style="text-align:center">${numFigs > 0 ? `<span class="badge" style="background:var(--accent); color:white;">${numFigs}</span>` : '<span style="color:var(--text-muted)">-</span>'}</td>
                     </tr>
                 `;
@@ -277,17 +276,15 @@
                                 <th>Surgery</th>
                                 <th style="text-align:right">N(rand)</th>
                                 <th style="text-align:right">N(anal)</th>
-                                <th style="text-align:center" title="Opioid 24h">Opioid</th>
-                                <th style="text-align:center" title="Pain 24h (Rest/Movement)">Pain</th>
-                                <th style="text-align:center" title="Nausea/Vomiting">PONV</th>
-                                <th style="text-align:center" title="QoR or GI Recovery">Recovery</th>
+                                ${Object.values(COLS).map(c => `<th style="text-align:center">${c}</th>`).join('')}
                                 <th style="text-align:center">Figures</th>
                             </tr>
                         </thead>
-                        <tbody>${rows || '<tr><td colspan="11" style="text-align:center; padding:2rem;">No studies found matching criteria.</td></tr>'}</tbody>
+                        <tbody>${rows || '<tr><td colspan="12" style="text-align:center; padding:2rem;">No studies found matching criteria.</td></tr>'}</tbody>
                     </table>
                 </div>
             `;
+            $('explorer-count').textContent = `${filtered.length} of ${d.studies.length} reports`;
             
             document.querySelectorAll('.study-row').forEach(row => {
                 row.addEventListener('click', () => openDrawer(row.dataset.id));
@@ -317,6 +314,9 @@
                     </div>
                     
                     <h3>Intervention details (STRICTA)</h3>
+                    ${stricta.status === 'Verified'
+                        ? `<p class="note"><span class="tag risk-low">Partly source-verified ${esc(stricta.verification_date)}</span> Fields shown as “Unverified” were not checked. Source excerpt: “${esc(stricta.source_excerpt)}”</p>`
+                        : `<p class="note"><span class="tag risk-high">Not source-verified</span> Imported from the historical dashboard. Check the PDF before using these details for subgrouping or characteristics text.</p>`}
                     <div class="table-scroll">
                         <table>
                             <tbody>
@@ -330,22 +330,23 @@
                     </div>
                     
                     <h3>Model Contributions</h3>
-                    ${models.length ? `<ul style="list-style:none; padding:0; display:flex; flex-wrap:wrap; gap:8px;">${models.map(m => `<li><button class="text-button model-link" data-model="${esc(m)}" style="background:rgba(94,234,212,0.1); padding:6px 12px; border-radius:6px; font-weight:500;">${esc(m)} &rarr;</button></li>`).join('')}</ul>` : '<p>No quantitative contributions.</p>'}
-                    
-                    <h3>Result-specific Risk of Bias (v38)</h3>
-                    <div class="table-scroll">
+                    ${models.length ? `<div class="table-scroll"><table><thead><tr><th>Model</th><th>Role</th><th>k</th></tr></thead><tbody>${models.map(mid => { const m = graph.models[mid]?.canonical || {}; return `<tr><td><button type="button" class="text-button model-link" data-model="${esc(mid)}">${esc(mid)} &rarr;</button></td><td>${esc(m.role || '—')}</td><td>${esc(m.k ?? '—')}</td></tr>`; }).join('')}</tbody></table></div>` : '<p>No contribution to any current model. This is not an efficacy claim; the report may still be reported-not-poolable, held or ineligible for these outcomes.</p>'}
+
+                    <h3>Result-specific Risk of Bias (v38 and QoR addenda)</h3>
+                    ${results.length ? `<div class="table-scroll">
                         <table>
                             <thead>
-                                <tr><th>Result</th><th>Outcome</th><th>Overall</th></tr>
+                                <tr><th>Result</th><th>Outcome / window</th><th>Overall</th></tr>
                             </thead>
                             <tbody>
                                 ${results.map(rid => {
                                     const rr = graph.results[rid]?.rob;
-                                    return rr ? `<tr><td>${esc(rid)}</td><td>${esc(rr.outcome)}</td><td><span class="tag ${rr.overall==='High'?'risk-high':rr.overall==='Low'?'risk-low':''}">${esc(rr.overall)}</span></td></tr>` : '';
+                                    return rr ? `<tr><td>${esc(rid)}</td><td>${esc(rr.outcome)}<br><small>${esc(rr.window)}</small></td><td><span class="tag ${rr.overall==='High'?'risk-high':rr.overall==='Low'?'risk-low':''}">${esc(rr.overall)}</span></td></tr>`
+                                              : `<tr><td>${esc(rid)}</td><td colspan="2"><small>No result-specific assessment recorded (used in: ${esc((graph.results[rid]?.models || []).join(', ') || '—')})</small></td></tr>`;
                                 }).join('')}
                             </tbody>
                         </table>
-                    </div>
+                    </div>` : '<p>No linked results.</p>'}
                     
                     ${(window.ARTICLE_FIGURES?.[s.report_id] || []).length ? `
                     <h3>Article figures (${(window.ARTICLE_FIGURES?.[s.report_id] || []).length})</h3>
@@ -361,23 +362,7 @@
             drawer.showModal();
             
             $('close-drawer').addEventListener('click', () => drawer.close());
-            
-            // Handle model links inside the drawer
-            drawer.querySelectorAll('.model-link').forEach(btn => {
-                btn.addEventListener('click', (e) => {
-                    drawer.close();
-                    // trigger global routing (from current_review_ui.js)
-                    const mid = e.target.dataset.model;
-                    document.querySelector(`[data-view="results"]`).click();
-                    setTimeout(() => {
-                        const sel = document.getElementById('model-select');
-                        if(sel) {
-                            sel.value = mid;
-                            sel.dispatchEvent(new Event('change'));
-                        }
-                    }, 50);
-                });
-            });
+            // Model links (data-model) are routed by current_review_ui.js to core, QoR or E2 displays.
         };
 
         const container = $(containerId);

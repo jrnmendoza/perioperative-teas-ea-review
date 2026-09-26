@@ -33,6 +33,7 @@ def build():
     # Gather all models
     all_models = list(data.get('models', []))
     all_models += data.get('qor_analysis', {}).get('main_models', [])
+    all_models += data.get('qor_analysis', {}).get('diagnostics', [])
     all_models += data.get('qor_later_models', [])
     all_models += data.get('e2_analysis', {}).get('models', [])
     
@@ -50,6 +51,7 @@ def build():
         
     # Gather all RoB
     all_rob = list(data.get('rob', []))
+    all_rob += data.get('qor_analysis', {}).get('rob', [])
     all_rob += data.get('qor_later_rob', [])
     
     # 3. Results / RoB
@@ -72,7 +74,7 @@ def build():
 
     # Gather all inputs
     all_inputs = list(data.get('inputs', []))
-    for m in data.get('qor_analysis', {}).get('main_models', []):
+    for m in data.get('qor_analysis', {}).get('main_models', []) + data.get('qor_analysis', {}).get('diagnostics', []):
         for inp in m.get('inputs', []):
             inp_copy = dict(inp)
             inp_copy['model_id'] = m['model_id']
