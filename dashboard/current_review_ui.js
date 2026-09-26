@@ -261,6 +261,43 @@
       `<line x1="${X0}" x2="${X1}" y1="${axisY}" y2="${axisY}" class="fp-axis" stroke="#94a3b8"/>`+ticks.map(t=>`<line x1="${x(t.v)}" x2="${x(t.v)}" y1="${axisY}" y2="${axisY+5}" class="fp-axis" stroke="#94a3b8"/><text class="fp-mut" x="${x(t.v)}" y="${axisY+18}" fill="#94a3b8" font-size="11" text-anchor="middle">${t.label}</text>`).join('')+
       T(716,axisY+18,'mg IV MME · dotted line −10 mg','class="fp-mut" font-size="11" fill="#94a3b8"')+`</svg></div>`;
   }
+  // Paired opioid-pain check: per opioid contrast, the trial's opioid MD against -10 mg beside its same-trial pain MD
+  // against +1 (0-10 scale), from the paired-pain registry. Only ~24 h pain is drawn; eligibility is the registry's.
+  const PAIR_RANK={'ELIGIBLE PAIRED PAIN':0,'PAIN ELIGIBLE, ARMS DIFFER':1,'NOT USABLE FOR REGISTERED CRITERION':2,'NO SAME-TRIAL PAIN RESULT':3};
+  function pairedPlot(groups){
+    const items=groups.map(rs=>{const shown=rs.filter(r=>r.pain_md!==''&&/24|POD1/i.test(r.pain_window)).sort((a,b)=>PAIR_RANK[a.pairing_status]-PAIR_RANK[b.pairing_status])[0];return {o:rs[0],p:shown,best:rs.slice().sort((a,b)=>PAIR_RANK[a.pairing_status]-PAIR_RANK[b.pairing_status])[0]};});
+    const [olo,ohi]=padRange([0,-10,...items.flatMap(i=>[+i.o.opioid_ci_low,+i.o.opioid_ci_high])]),[plo,phi]=padRange([0,1,...items.filter(i=>i.p).flatMap(i=>[+i.p.pain_ci_low,+i.p.pain_ci_high])]);
+    const OX0=220,OX1=470,PX0=540,PX1=760,ox=v=>OX0+(v-olo)/(ohi-olo)*(OX1-OX0),px=v=>PX0+(v-plo)/(phi-plo)*(PX1-PX0),RH=28,top=44,axisY=top+items.length*RH;
+    const T=(tx,ty,s,o='')=>`<text x="${tx}" y="${ty}" fill="#dbeafe" font-size="12" ${o}>${s}</text>`;
+    const status=s=>({'ELIGIBLE PAIRED PAIN':'eligible pair','PAIN ELIGIBLE, ARMS DIFFER':'arms differ','NOT USABLE FOR REGISTERED CRITERION':'not usable','NO SAME-TRIAL PAIN RESULT':'no pain result'})[s];
+    return `<div class="forest-wrap"><svg viewBox="0 0 960 ${axisY+40}" role="img" aria-label="Paired opioid and pain estimates for ${items.length} opioid contrasts">`+
+      T(8,16,'Contrast','fill-opacity=".75"')+T((OX0+OX1)/2,16,'Opioid MD, mg IV MME (trial)','fill-opacity=".75" text-anchor="middle"')+T((PX0+PX1)/2,16,'Same-trial ~24 h pain MD, 0–10','fill-opacity=".75" text-anchor="middle"')+T(775,16,'Pairing','fill-opacity=".75"')+
+      `<line x1="${ox(0)}" x2="${ox(0)}" y1="24" y2="${axisY}" class="fp-null" stroke="#94a3b8" stroke-dasharray="4 4"/><line x1="${ox(-10)}" x2="${ox(-10)}" y1="24" y2="${axisY}" class="fp-tl" stroke="#fbbf24" stroke-dasharray="1 4" stroke-width="2"/>`+
+      `<line x1="${px(0)}" x2="${px(0)}" y1="24" y2="${axisY}" class="fp-null" stroke="#94a3b8" stroke-dasharray="4 4"/><line x1="${px(1)}" x2="${px(1)}" y1="24" y2="${axisY}" class="fp-tl" stroke="#fbbf24" stroke-dasharray="1 4" stroke-width="2"/>`+
+      items.map((it,i)=>{const y=top+i*RH,o=it.o,p=it.p,ok=p&&p.pairing_status==='ELIGIBLE PAIRED PAIN';
+        return T(8,y+4,`${esc(o.analysis)} · ${esc(o.study)}`)+`<line x1="${ox(+o.opioid_ci_low)}" x2="${ox(+o.opioid_ci_high)}" y1="${y}" y2="${y}" class="fp-s" stroke="#93c5fd" stroke-width="1.6"/><rect class="fp-f" x="${ox(+o.opioid_md)-4}" y="${y-4}" width="8" height="8" fill="#93c5fd"/>`+
+          (p?`<line x1="${px(+p.pain_ci_low)}" x2="${px(+p.pain_ci_high)}" y1="${y}" y2="${y}" class="fp-ps" stroke="#5eead4" stroke-width="1.6" ${ok?'':'stroke-dasharray="3 3"'}/><circle cx="${px(+p.pain_md)}" cy="${y}" r="4" ${ok?'class="fp-pf" fill="#5eead4"':'class="fp-ps" fill="none" stroke="#5eead4" stroke-width="1.6"'}/>`:T((PX0+PX1)/2,y+4,'—','class="fp-mut" fill="#94a3b8" text-anchor="middle"'))+
+          T(775,y+4,status(it.best.pairing_status),ok?'font-weight="600"':'class="fp-mut" fill="#94a3b8"');}).join('')+
+      [[OX0,OX1,olo,ohi,ox],[PX0,PX1,plo,phi,px]].map(([a,b,lo,hi,f])=>`<line x1="${a}" x2="${b}" y1="${axisY}" y2="${axisY}" class="fp-axis" stroke="#94a3b8"/>`+axisTicks(lo,hi,false).map(t=>`<line x1="${f(t.v)}" x2="${f(t.v)}" y1="${axisY}" y2="${axisY+5}" class="fp-axis" stroke="#94a3b8"/><text class="fp-mut" x="${f(t.v)}" y="${axisY+18}" fill="#94a3b8" font-size="11" text-anchor="middle">${t.label}</text>`).join('')).join('')+
+      T(8,axisY+34,'Dotted lines: −10 mg (opioid) and +1 point (pain upper limit). Hollow, dashed pain marks are descriptive only: not usable for the registered criterion.','class="fp-mut" font-size="11" fill="#94a3b8"')+`</svg></div>`;
+  }
+  function pairedSection(body,m1,j){
+    if(!d.paired_pain)return '';
+    const rows=d.paired_pain.filter(r=>r.body===body),groups=[...new Map(rows.map(r=>[r.analysis+'|'+r.opioid_result_id,rows.filter(x=>x.analysis===r.analysis&&x.opioid_result_id===r.opioid_result_id)])).values()];
+    const eligible=rows.filter(r=>r.pairing_status==='ELIGIBLE PAIRED PAIN').length,ci=(a,b,c)=>a===''?'—':`<span style="white-space:nowrap">${num(+a)} [${num(+b)}, ${num(+c)}]</span>`;
+    return `<h3>Paired opioid–pain check</h3>`+
+      note(`Registered clinical-importance criterion: ≥10 mg IV MME sparing <em>and</em> a paired ~24 h pain difference whose upper 95% limit is below +1 point, from the same trials. Pain from other trials cannot supply the pairing. Eligible paired pain results for this comparison: <strong>${eligible}</strong> of ${groups.length} opioid contrasts.`)+
+      table(['','Opioid limb','Pain limb','Joint criterion'],[
+        ['E1 (registered primary)',m1.k?(m1.reaches10mg?'Point estimate ≤ −10 mg':`Not met (point estimate ${num(m1.effect)})`):'No eligible E1 evidence',eligible&&rows.some(r=>r.analysis==='E1'&&r.pairing_status==='ELIGIBLE PAIRED PAIN')?'See registry':'No eligible paired pain','Not established'],
+        ['E2 (post-hoc)',esc(j?.opioid_limb||'—'),j?.pain_limb==='—'?'— (not evaluated: opioid limb not met)':esc(j?.pain_limb||'—'),`<strong>${esc(j?.joint_criterion||'—')}</strong>`]])+
+      pairedPlot(groups)+
+      `<details><summary>Paired-pain registry: ${rows.length} rows for ${groups.length} opioid contrasts</summary>`+
+      table(['Contrast','Opioid MD [95% CI]','Same-trial pain result','Pain MD [95% CI]','Arms','Pairing','Reason'],rows.map(r=>[
+        `${esc(r.analysis)} · ${esc(r.study)}<br><small>${esc(r.opioid_result_id)}</small>`,ci(r.opioid_md,r.opioid_ci_low,r.opioid_ci_high),
+        r.pain_result_id?`${esc(r.pain_outcome)}<br><small>${esc(r.pain_result_id)} · ${esc(r.pain_window)} · ${esc(r.pain_unit)}</small>`:'—',ci(r.pain_md,r.pain_ci_low,r.pain_ci_high),esc(r.arm_match||'—'),`<strong>${esc(r.pairing_status)}</strong>`,esc(r.reason)]))+
+      note('Built mechanically by code/build_paired_pain.py from the canonical results register and model specifications: same trial, same intervention and comparator arms (E2.1 admissions by comparator class). Eligibility is the pipeline’s own rule (a ~24 h rest or movement pain body outside sensitivity roles); every other result shows its canonical decision. No new adjudication.')+
+      `</details>`;
+  }
   function e1e2(){
     if(!d.e2_accounting||!d.e2_inputs)return title('E1 vs E2')+note('E2 inputs or accounting not loaded.');
     const want=parseHash().params.get('body'),[body,e1id,e2id]=E2_BODIES.find(b=>b[0]===want)||E2_BODIES[0];
@@ -295,6 +332,7 @@
         esc(r.E2_basis)+(r.detail?.source_locator?`<br><small>${esc(r.detail.source_locator)}${r.detail.resolvable_by?' · resolvable by: '+esc(r.detail.resolvable_by):''}</small>`:''),
         r.e1?'✓':'—',trial(r.e2),[r.flags,r.mandatory_sensitivity].filter(Boolean).map(esc).join('<br>')||'—']))+
       note('Dispositions are the committed E2 decision files (Tier A reclassification and addendum; Tier B1 extraction; Tier B2 re-check), unchanged. Reports held for unresolved source or comparator questions stay out of both analyses.')+
+      pairedSection(body,m1,j)+
       `<h3>Sensitivity ladder</h3>`+ladder(sens,lrange)+
       note('Stored estimates only; nothing is re-fitted in the browser. E1 sensitivities with assumed MME conversions are labelled. A different estimate under a sensitivity is not evidence of effect modification.')+
       `<p><a href="current/ADDITIONAL_FILE_12.md" download>Additional file 12 (trial-by-trial accounting)</a> · <a href="current/AMENDED_PRIMARY_ESTIMAND_E2.md" download>E2 estimand and amendment</a> · <a href="current/e2_model_outputs.csv" download>E2 estimates</a></p>`;

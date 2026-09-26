@@ -22,6 +22,17 @@ def e2_accounting_complete(d):
             m=match(inp)
             if len(m)!=1 or m[0]['E2_disposition']!='ADMIT':return False
     return True
+def paired_pain_consistent(d):
+    """The registry covers every E1 principal/supportive and E2 main opioid contrast; an eligible pairing needs an
+    INCLUDE pain decision and matching arms; no eligible pairing exists where e2_joint says the pain limb cannot be evaluated."""
+    if 'paired_pain' not in d:return True
+    P=d['paired_pain']
+    e1={m for _,m,_ in E2_BODIES};e2={m for _,_,m in E2_BODIES}
+    want={(r['model_id'],r['result_id']) for r in d['inputs'] if r['model_id'] in e1}|{(r['model_id'],r['result_id']) for r in d['e2_inputs'] if r['model_id'] in e2}
+    if {(r['opioid_model_id'],r['opioid_result_id']) for r in P}!=want:return False
+    if any(r['pairing_status']=='ELIGIBLE PAIRED PAIN' and (r['pain_decision']!='INCLUDE' or r['arm_match']!='SAME ARMS') for r in P):return False
+    blocked={b for b,_,m in E2_BODIES for j in d.get('e2_joint',[]) if j['body']==b and j['pain_limb'].startswith('Cannot be evaluated')}
+    return not any(r['analysis']=='E2' and r['body'] in blocked and r['pairing_status']=='ELIGIBLE PAIRED PAIN' for r in P)
 def e2_inputs_consistent(d):
     """Each E2 model's exported contrasts match its study/contrast order and N, and reproduce its pooled effect from the stored tau2."""
     if 'e2_inputs' not in d:return True
@@ -55,6 +66,8 @@ def checks(d):
       'E2 inputs reproduce E2 membership and pooled effects':e2_inputs_consistent(d),
       'E2 accounting identity':d.get('e2_accounting')=={k:rows(D/'02_DECISIONS/v38'/f) for k,f in [('tierA','E2_tierA_reclassification.csv'),('tierA_addendum','E2_tierA_reclassification_addendum.csv'),('tierB1','E2_tierB1_extraction.csv'),('tierB2','E2_tierB2_recheck.csv')]} if 'e2_accounting' in d else True,
       'E2 accounting covers E1 and E2 inputs':e2_accounting_complete(d),
+      'Paired pain registry identity':d.get('paired_pain')==rows(D/'10_PAIRED_PAIN/paired_pain_registry.csv') if (D/'10_PAIRED_PAIN/paired_pain_registry.csv').exists() else True,
+      'Paired pain registry covers contrasts and agrees with decisions':paired_pain_consistent(d),
       'QoR later-window identity':d.get('qor_later_models')==json.load(open(D/'08_QOR_ANALYSIS/qor_models_later.json')) if (D/'08_QOR_ANALYSIS/qor_models_later.json').exists() else True,
       'QoR later-window RoB identity': d.get('qor_later_rob') == rows(D/'08_QOR_ANALYSIS/qor_rob2_later.csv') and len(d.get('qor_later_rob', [])) == 5 if 'qor_later_rob' in d else True,
       'E2 methods integrity': d.get('e2_methods', {}).get('Timestamp note', '') == re.search(r'(\*\*Timestamp note[^\n]+(?:\n[^\n]+)+)', (D/'02_DECISIONS/v38/AMENDED_PRIMARY_ESTIMAND_E2.md').read_text(encoding='utf-8')).group(1).strip() if 'e2_methods' in d else True,
@@ -297,6 +310,9 @@ def main(site=None):
     if 'e2_inputs' in data:
         mutations.append(('E2 per-contrast input identity',lambda d:d['e2_inputs'][0].__setitem__('yi','0')))
         mutations.append(('E2 inputs reproduce E2 membership and pooled effects',lambda d:d['e2_inputs'].pop()))
+    if 'paired_pain' in data:
+        mutations.append(('Paired pain registry identity',lambda d:d['paired_pain'][0].__setitem__('pain_md','0')))
+        mutations.append(('Paired pain registry covers contrasts and agrees with decisions',lambda d:[r.update(pairing_status='ELIGIBLE PAIRED PAIN') for r in d['paired_pain'] if r['study']=='Lin 2002' and r['analysis']=='E2']))
     if 'e2_accounting' in data:
         mutations.append(('E2 accounting identity',lambda d:d['e2_accounting']['tierB2'].pop()))
         mutations.append(('E2 accounting covers E1 and E2 inputs',lambda d:[r.__setitem__('E2_disposition','NOT ADMITTED') for r in d['e2_accounting']['tierA'] if r['report']=='Chen 1998']))
