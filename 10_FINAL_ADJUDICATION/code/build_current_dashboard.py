@@ -104,6 +104,9 @@ if (D/'09_E2_ANALYSIS/e2_model_inputs.csv').exists():
  data['e2_inputs']=rows('10_FINAL_ADJUDICATION/09_E2_ANALYSIS/e2_model_inputs.csv')
 # E2 trial-by-trial dispositions, unchanged from the decision files, for the E1 vs E2 workspace.
 data['e2_accounting']={k:rows('10_FINAL_ADJUDICATION/02_DECISIONS/v38/'+f) for k,f in [('tierA','E2_tierA_reclassification.csv'),('tierA_addendum','E2_tierA_reclassification_addendum.csv'),('tierB1','E2_tierB1_extraction.csv'),('tierB2','E2_tierB2_recheck.csv')]}
+# Paired opioid-pain registry (code/build_paired_pain.py): same-trial pain for every E1/E2 opioid contrast.
+if (D/'10_PAIRED_PAIN/paired_pain_registry.csv').exists():
+ data['paired_pain']=rows('10_FINAL_ADJUDICATION/10_PAIRED_PAIN/paired_pain_registry.csv')
 
 report_text = (ROOT/'FINAL_CURRENT_STATE_REPORT.md').read_text(encoding='utf-8')
 section_match = re.search(r'\*\*Not completed — outstanding\*\*(.*?)(?=\n\*\*|\n## |\Z)', report_text, re.DOTALL)
