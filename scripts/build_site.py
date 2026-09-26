@@ -310,15 +310,16 @@ def main() -> int:
         if out in (ROOT, DASH, Path.home(), Path('/')):
             raise RuntimeError('Refuse build into a source or broad directory')
         out.mkdir(parents=True,exist_ok=True)
-        for name in ['index.html','current_review.js','current_review.json','current_review_ui.js','current_review.css','article_figures.js','search_strategies.js']:
+        for name in ['index.html','current_review.js','current_review.json','current_review_ui.js','current_review.css','article_figures.js','search_strategies.js','evidence_graph.js','interactive_explorer.js']:
             shutil.copyfile(DASH/name,out/name)
         for name in ['current','article_figures']:
             shutil.copytree(DASH/name,out/name,dirs_exist_ok=True)
         # Hash current content, not only HEAD: this working-tree build is uncommitted.
+        V38_ASSETS=['current_review.js','current_review_ui.js','current_review.css','article_figures.js','search_strategies.js','evidence_graph.js','interactive_explorer.js']
         import hashlib
-        fingerprint=hashlib.sha256(b''.join((DASH/name).read_bytes() for name in ['current_review.js','current_review_ui.js','current_review.css','article_figures.js','search_strategies.js'])).hexdigest()[:12]
+        fingerprint=hashlib.sha256(b''.join((DASH/name).read_bytes() for name in V38_ASSETS)).hexdigest()[:12]
         text=(out/'index.html').read_text()
-        for asset in ['current_review.js','current_review_ui.js','current_review.css','article_figures.js','search_strategies.js']:
+        for asset in V38_ASSETS:
             text=text.replace(asset+'"',asset+'?v='+fingerprint+'"')
         (out/'index.html').write_text(text)
         meta['content_fingerprint']=fingerprint

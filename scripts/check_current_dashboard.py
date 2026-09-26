@@ -4,6 +4,16 @@ import csv,json,pathlib,hashlib,copy,sys,re,subprocess
 ROOT=pathlib.Path(__file__).resolve().parents[1];D=ROOT/'10_FINAL_ADJUDICATION'
 def rows(p):return list(csv.DictReader(open(p,encoding='utf-8-sig')))
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+def e2_inputs_consistent(d):
+    """Each E2 model's exported contrasts match its study/contrast order and N, and reproduce its pooled effect from the stored tau2."""
+    if 'e2_inputs' not in d:return True
+    for m in d['e2_analysis']['models']:
+        g=[r for r in d['e2_inputs'] if r['model_id']==m['model_id']]
+        if [r['study'] for r in g]!=m['studies'].split(';') or [r['result_id'] for r in g]!=m['contrast_ids'].split(';'):return False
+        if sum(float(r['n_i'])+float(r['n_c']) for r in g)!=m['N']:return False
+        w=[1/(float(r['vi'])+float(m['tau2'])) for r in g]
+        if abs(sum(wi*float(r['yi']) for wi,r in zip(w,g))/sum(w)-float(m['effect']))>1e-9:return False
+    return True
 def checks(d):
     canonical=json.load(open(D/'04_MODELS/model_outputs.json'));spec=json.load(open(D/'02_DECISIONS/model_specifications.json'))
     active={i for s in spec if s['role']!='SENSITIVITY' for i in s['result_ids']}
@@ -23,6 +33,8 @@ def checks(d):
       'outcome coverage addendum identity':d.get('outcome_coverage')==json.load(open(D/'07_OUTCOME_COVERAGE/coverage_summary.json')) if (D/'07_OUTCOME_COVERAGE/coverage_summary.json').exists() else True,
       'QoR analytical addendum identity':d.get('qor_analysis')==json.load(open(D/'08_QOR_ANALYSIS/qor_summary.json')) if (D/'08_QOR_ANALYSIS/qor_summary.json').exists() else True,
       'E2 sensitivity identity':d.get('e2_analysis')==json.load(open(D/'09_E2_ANALYSIS/e2_model_outputs.json')) if (D/'09_E2_ANALYSIS/e2_model_outputs.json').exists() else True,
+      'E2 per-contrast input identity':d.get('e2_inputs')==rows(D/'09_E2_ANALYSIS/e2_model_inputs.csv') if (D/'09_E2_ANALYSIS/e2_model_inputs.csv').exists() else True,
+      'E2 inputs reproduce E2 membership and pooled effects':e2_inputs_consistent(d),
       'QoR later-window identity':d.get('qor_later_models')==json.load(open(D/'08_QOR_ANALYSIS/qor_models_later.json')) if (D/'08_QOR_ANALYSIS/qor_models_later.json').exists() else True,
       'QoR later-window RoB identity': d.get('qor_later_rob') == rows(D/'08_QOR_ANALYSIS/qor_rob2_later.csv') and len(d.get('qor_later_rob', [])) == 5 if 'qor_later_rob' in d else True,
       'E2 methods integrity': d.get('e2_methods', {}).get('Timestamp note', '') == re.search(r'(\*\*Timestamp note[^\n]+(?:\n[^\n]+)+)', (D/'02_DECISIONS/v38/AMENDED_PRIMARY_ESTIMAND_E2.md').read_text(encoding='utf-8')).group(1).strip() if 'e2_methods' in d else True,
@@ -128,6 +140,13 @@ def main(site=None):
     if not all(c.values()):return 1
     js=(site/'current_review.js').read_text();loaded=json.JSONDecoder().raw_decode(js.split('window.CURRENT_REVIEW = ',1)[1])[0]
     assert loaded==data,'JS/JSON bundle mismatch'
+    # The Study Explorer graph must be exactly what the payload implies (catches a stale or hand-edited graph).
+    from build_evidence_graph import graph_from
+    shipped=json.JSONDecoder().raw_decode((site/'evidence_graph.js').read_text().split('window.EVIDENCE_GRAPH = ',1)[1])[0]
+    assert shipped==graph_from(data),'Evidence graph is stale or not derived from current_review.json'
+    x=copy.deepcopy(data);x['qor_analysis']['rob'].pop();assert graph_from(x)!=shipped,'Evidence-graph mutation escaped'
+    assert {'QOR24-HOU2023','QOR48-HOU2023'}<=set(shipped['studies']['Hou 2023']['rob']),'Hou 2023 QoR assessments unlinked'
+    assert all(shipped['models'][m['model_id']]['studies'] for m in data.get('e2_analysis',{}).get('models',[])),'E2 model without linked studies'
     page=(site/'index.html').read_text();srcs=re.findall(r'(?:src|href)="([^"#]+)"',page)
     for src in srcs:
         if src.startswith(('https:','http:')):continue
@@ -265,6 +284,9 @@ def main(site=None):
         mutations.append(('QoR later-window metafor manifest', lambda d: d['qor_later_metafor_manifest']['files'][0].__setitem__('sha256', 'badhash')))
         mutations.append(('QoR later-window metafor comparison', lambda d: d.get('qor_later_metafor_manifest').__setitem__('fail_comp', True)))
 
+    if 'e2_inputs' in data:
+        mutations.append(('E2 per-contrast input identity',lambda d:d['e2_inputs'][0].__setitem__('yi','0')))
+        mutations.append(('E2 inputs reproduce E2 membership and pooled effects',lambda d:d['e2_inputs'].pop()))
     mutations.append(('E2 methods integrity', lambda d: d['e2_methods'].update({'Timestamp note': 'Altered text'})))
     mutations.append(('all downloads tracked by git', lambda d: d['downloads'].append(dict(label='Fake', href='current/fake.txt', source='fake.txt', sha256='hash'))))
     if 'e2_methods_html' in data:

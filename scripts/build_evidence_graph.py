@@ -3,14 +3,8 @@ import json, pathlib
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 DASH = ROOT / 'dashboard'
 
-def build():
-    cr_path = DASH / 'current_review.json'
-    if not cr_path.exists():
-        print("current_review.json not found")
-        return
-        
-    data = json.loads(cr_path.read_text())
-    
+def graph_from(data):
+    """Derive the study/model/result graph from a current_review payload (pure; no file access)."""
     graph = {
         'studies': {},
         'models': {},
@@ -123,6 +117,13 @@ def build():
             if mid not in graph['results'][rid]['models']:
                 graph['results'][rid]['models'].append(mid)
 
+    return graph
+
+def build():
+    cr_path = DASH / 'current_review.json'
+    if not cr_path.exists():
+        raise SystemExit("current_review.json not found")
+    graph = graph_from(json.loads(cr_path.read_text()))
     (DASH / 'evidence_graph.json').write_text(json.dumps(graph, indent=2))
     (DASH / 'evidence_graph.js').write_text("window.EVIDENCE_GRAPH = " + json.dumps(graph) + ";\n")
     print("Graph built successfully.")
