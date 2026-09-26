@@ -45,21 +45,27 @@
     }</div>` : '')+
     `<h3>What changed</h3><ul><li>Wu 2016 recorded as citation-search evidence; full-text dispositions reconciled.</li><li>Risk-of-bias and all 38 certainty decisions adopted; no reviewer approval queue.</li><li>Zheng’s unresolved continuous data held out of main models; original values retained in diagnostics.</li><li>Wu 2025 intraoperative dose preceded treatment and is now diagnostic only.</li><li>The 24-h QoR addendum (3 Very-low-certainty bodies).</li><li>Later-window QoR models, ungraded.</li><li>The E2 post-hoc sensitivity analysis, with E1 retained as primary. <button type="button" class="text-button" data-view="results">See E2 results</button>.</li></ul>`+
     note('The 12-reference import gap and historical outcome-focused exclusion limitation remain disclosed.');}
-  // Drawn only from canonical model_outputs and model_inputs: pooled estimate/CI/PI are never recomputed here.
-  function forest(m){
-    const rows=d.inputs.filter(r=>r.model_id===m.model_id);if(!rows.length)return '';
-    const rr=m.measure==='RR',show=v=>num(rr?Math.exp(v):v),z=1.95996398454,tau2=+m.tau2||0,pooled=m.k>1;
-    const w=rows.map(r=>1/(+r.vi+tau2)),wsum=w.reduce((a,b)=>a+b,0);
-    const pts=rows.map((r,i)=>({name:r.study,y:+r.yi,lo:+r.yi-z*Math.sqrt(+r.vi),hi:+r.yi+z*Math.sqrt(+r.vi),w:w[i]/wsum}));
-    const hasPI=m.pi_low!==null&&m.pi_low!==undefined,thr=m.reaches10mg!==null&&m.reaches10mg!==undefined?-10:null;
-    const vals=[0,...pts.flatMap(p=>[p.lo,p.hi]),m.ci_low,m.ci_high,...(hasPI?[m.pi_low,m.pi_high]:[]),...(thr===null?[]:[thr])];
-    let lo=Math.min(...vals),hi=Math.max(...vals);const pad=(hi-lo||1)*.05;lo-=pad;hi+=pad;
-    const X0=290,X1=640,x=v=>X0+(v-lo)/(hi-lo)*(X1-X0),fmt=v=>String(+v.toFixed(6));
-    let ticks;
+  // Plot extent: study CIs, stored pooled CI/PI, the null and (where recorded) the -10 mg threshold, padded 5%.
+  const Z95=1.95996398454;
+  const plotVals=(m,rows)=>[0,...rows.flatMap(r=>[+r.yi-Z95*Math.sqrt(+r.vi),+r.yi+Z95*Math.sqrt(+r.vi)]),...(m.k?[m.ci_low,m.ci_high]:[]),...(m.pi_low!==null&&m.pi_low!==undefined?[m.pi_low,m.pi_high]:[]),...(m.reaches10mg!==null&&m.reaches10mg!==undefined?[-10]:[])];
+  const padRange=vals=>{const lo=Math.min(...vals),hi=Math.max(...vals),pad=(hi-lo||1)*.05;return [lo-pad,hi+pad];};
+  function axisTicks(lo,hi,rr){
+    const fmt=v=>String(+v.toFixed(6));
     if(rr){const sets=[[.01,.02,.05,.1,.2,.5,.75,1,1.5,2,4,5,10,20,50,100],[.001,.002,.005,.01,.02,.05,.1,.2,.5,1,2,5,10,20,50,100,200,500,1000],[.001,.01,.1,1,10,100,1000]];
-      ticks=sets.map(s=>s.filter(t=>Math.log(t)>=lo&&Math.log(t)<=hi)).find(s=>s.length<=7).map(t=>({v:Math.log(t),label:fmt(t)}));}
-    else{const raw=(hi-lo)/5,p=10**Math.floor(Math.log10(raw)),step=[1,2,2.5,5,10].map(s=>s*p).find(s=>raw<=s);
-      ticks=[];for(let v=Math.ceil(lo/step)*step;v<=hi;v+=step)ticks.push({v,label:fmt(v)});}
+      return sets.map(s=>s.filter(t=>Math.log(t)>=lo&&Math.log(t)<=hi)).find(s=>s.length<=7).map(t=>({v:Math.log(t),label:fmt(t)}));}
+    const raw=(hi-lo)/5,p=10**Math.floor(Math.log10(raw)),step=[1,2,2.5,5,10].map(s=>s*p).find(s=>raw<=s),ticks=[];
+    for(let v=Math.ceil(lo/step)*step;v<=hi;v+=step)ticks.push({v,label:fmt(v)});return ticks;
+  }
+  // Drawn only from canonical outputs and inputs: pooled estimate/CI/PI are never recomputed here.
+  // rows defaults to the model's core inputs; range lets several plots share one axis.
+  function forest(m,rows=d.inputs.filter(r=>r.model_id===m.model_id),range){
+    if(!rows.length)return '';
+    const rr=m.measure==='RR',show=v=>num(rr?Math.exp(v):v),z=Z95,tau2=+m.tau2||0,pooled=m.k>1;
+    const w=rows.map(r=>1/(+r.vi+tau2)),wsum=w.reduce((a,b)=>a+b,0);
+    const pts=rows.map((r,i)=>({name:r.study,mark:r.mark,y:+r.yi,lo:+r.yi-z*Math.sqrt(+r.vi),hi:+r.yi+z*Math.sqrt(+r.vi),w:w[i]/wsum}));
+    const hasPI=m.pi_low!==null&&m.pi_low!==undefined,thr=m.reaches10mg!==null&&m.reaches10mg!==undefined?-10:null;
+    const [lo,hi]=range||padRange(plotVals(m,rows));
+    const X0=290,X1=640,x=v=>X0+(v-lo)/(hi-lo)*(X1-X0),ticks=axisTicks(lo,hi,rr);
     const RH=30,top=46,poolY=top+pts.length*RH+(pooled?8:0),piY=poolY+RH,axisY=(pooled?(hasPI?piY:poolY):top+(pts.length-1)*RH)+28,ht=axisY+(m.construct.startsWith('pre_')?46:66);
     const T=(tx,ty,s,o='')=>`<text x="${tx}" y="${ty}" fill="#dbeafe" font-size="13" ${o}>${s}</text>`;
     const comp={sham:'sham',usual_care:'usual care',active_electrical:'active electrical control'}[m.comparator]||esc(m.comparator);
@@ -68,7 +74,7 @@
       T(8,20,'Study','fill-opacity=".75"')+T(660,20,rr?'Risk ratio [95% CI]':'Estimate [95% CI]','fill-opacity=".75"')+(pooled?T(952,20,'Weight','fill-opacity=".75" text-anchor="end"'):'')+
       `<line x1="${x(0)}" x2="${x(0)}" y1="30" y2="${axisY}" class="fp-null" stroke="#94a3b8" stroke-dasharray="4 4"/>`+
       (thr===null?'':`<line x1="${x(thr)}" x2="${x(thr)}" y1="30" y2="${axisY}" class="fp-tl" stroke="#fbbf24" stroke-dasharray="1 4" stroke-width="2"/><text class="fp-tt" x="${x(thr)}" y="${axisY+54}" fill="#fbbf24" font-size="11" text-anchor="middle">−10 mg registered threshold</text>`)+
-      pts.map((p,i)=>{const y=top+i*RH,sz=pooled?5+11*Math.sqrt(p.w):9;return T(8,y+4,esc(p.name))+`<line x1="${x(p.lo)}" x2="${x(p.hi)}" y1="${y}" y2="${y}" class="fp-s" stroke="#93c5fd" stroke-width="1.6"/><rect class="fp-f" x="${x(p.y)-sz/2}" y="${y-sz/2}" width="${sz}" height="${sz}" fill="#93c5fd"/>`+T(660,y+4,`${show(p.y)} [${show(p.lo)}, ${show(p.hi)}]`)+(pooled?T(952,y+4,`${(100*p.w).toFixed(1)}%`,'text-anchor="end"'):'');}).join('')+
+      pts.map((p,i)=>{const y=top+i*RH,sz=pooled?5+11*Math.sqrt(p.w):9;return T(8,y+4,esc(p.name)+(p.mark?` <tspan class="fp-mut" fill="#94a3b8">${esc(p.mark)}</tspan>`:''))+`<line x1="${x(p.lo)}" x2="${x(p.hi)}" y1="${y}" y2="${y}" class="fp-s" stroke="#93c5fd" stroke-width="1.6"/><rect class="fp-f" x="${x(p.y)-sz/2}" y="${y-sz/2}" width="${sz}" height="${sz}" fill="#93c5fd"/>`+T(660,y+4,`${show(p.y)} [${show(p.lo)}, ${show(p.hi)}]`)+(pooled?T(952,y+4,`${(100*p.w).toFixed(1)}%`,'text-anchor="end"'):'');}).join('')+
       (pooled?`<line x1="8" x2="952" y1="${poolY-RH/2-4}" y2="${poolY-RH/2-4}" class="fp-sep" stroke="#2a3a52"/>`+T(8,poolY+4,'Pooled · REML, safeguarded HK','font-weight="600"')+
         `<polygon points="${x(m.ci_low)},${poolY} ${x(m.effect)},${poolY-8} ${x(m.ci_high)},${poolY} ${x(m.effect)},${poolY+8}" class="fp-pf" fill="#5eead4"/>`+T(660,poolY+4,`${show(m.effect)} [${show(m.ci_low)}, ${show(m.ci_high)}]`,'class="fp-pf" font-weight="600" fill="#5eead4"')+T(952,poolY+4,'100%','text-anchor="end"')+
         (hasPI?T(8,piY+4,'95% prediction interval','fill-opacity=".75"')+`<line x1="${x(m.pi_low)}" x2="${x(m.pi_high)}" y1="${piY}" y2="${piY}" class="fp-ps" stroke="#5eead4" stroke-width="2"/><line x1="${x(m.pi_low)}" x2="${x(m.pi_low)}" y1="${piY-5}" y2="${piY+5}" class="fp-ps" stroke="#5eead4" stroke-width="2"/><line x1="${x(m.pi_high)}" x2="${x(m.pi_high)}" y1="${piY-5}" y2="${piY+5}" class="fp-ps" stroke="#5eead4" stroke-width="2"/>`+T(660,piY+4,`${show(m.pi_low)} to ${show(m.pi_high)}`,'fill-opacity=".75"'):'')
