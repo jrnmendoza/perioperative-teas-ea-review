@@ -179,6 +179,7 @@
     (m.k>1?`<p>I² ${num(m.I2,1)}% <span title="I² represents the percentage of variation across studies that is due to heterogeneity rather than chance." style="cursor:help; border-bottom:1px dotted var(--accent); color:var(--accent)">?</span> · τ² ${num(m.tau2,3)} · safeguarded Hartung–Knapp interval.</p>`:'')+
     (m.pi_low!==null&&m.pi_low!==undefined?`<p>Prediction interval: ${num(m.measure==='RR'?Math.exp(m.pi_low):m.pi_low)} to ${num(m.measure==='RR'?Math.exp(m.pi_high):m.pi_high)} ${esc(unitLabel(m.unit))}. Interpret cautiously.</p>`:'')+
     table(['Contributor / exact result IDs','n intervention / control','Source location'],ins.map(r=>[`<button type="button" class="text-button result-open" data-result="${esc(r.result_id)}" data-result-model="${esc(r.model_id)}">${esc(r.study)}<br><small>${esc(r.result_id)}</small></button>`,`${num(r.n_i,0)} / ${num(r.n_c,0)}`,esc(r.source_location)]))+
+    (m.k?`<p><button type="button" class="text-button" data-risk-model="${esc(m.model_id)}">Risk of bias for this body →</button></p>`:'')+
     cardPanel(evidenceCard(m,ins),m.model_id)+
     sensitivitySection(m)+
     (g?`<h3>GRADE: ${esc(g.certainty)}</h3>${['risk_of_bias','inconsistency','indirectness','imprecision','publication_bias'].map(k=>`<p><strong>${esc(k.replaceAll('_',' '))} (−${g[k+'_downgrades']})</strong> — ${esc(g[k])}</p>`).join('')}`:note('Diagnostic only. Not an independently graded efficacy conclusion.'));
@@ -265,8 +266,51 @@
     table(['Full-text exclusion reason','Records'],Object.entries(p.exclusion_reasons).map(([r,n])=>[esc(r),n]))+
     note('147 substantive report exclusions are separate from six exact DOI/title duplicate records removed late. Zhang’s distinct conference abstract remains Abstract only. Six formerly excluded reports reinstated locally; original Covidence decisions are preserved in the downloadable ledger.')+p.caveats.map(c=>note(esc(c))).join('');}
   function evidence(){return title('Certainty of evidence','38 bodies reviewed and adopted under delegation: 34 rated, four empty. No sensitivity is given a standalone efficacy grade.')+table(['Body','Certainty','Downgrades: bias / inconsistency / indirectness / imprecision / publication','Decision'],d.grade.map(g=>[`<button class="text-button model-link" data-model="${esc(g.model_id)}">${esc(g.model_id)}</button>`,tag(g.certainty),['risk_of_bias','inconsistency','indirectness','imprecision','publication_bias'].map(k=>g[k+'_downgrades']).join(' / '),esc(g.decision_status)]))+note('Select an evidence body to inspect all five rationales, its estimate and contributors. Moderate-certainty standalone pain evidence does not establish the joint opioid-and-pain criterion.');}
-  function risk(){return title('Result-specific risk of bias','94 fresh assessments cover all 90 current non-sensitivity components plus four held/diagnostic results. No study-overall rating is substituted for an outcome-specific assessment.')+`<label for="risk-search">Find study, outcome, result ID or judgment</label><input id="risk-search" type="search" placeholder="e.g. Luo, nausea, V33-OD-0139"><div id="risk-list"></div>`+note('AI-conducted assessment under user delegation, dated 20 September 2026. Prior human completion is user-reported. Complete domain rationales and source locators are downloadable. Other historical/sensitivity results without fresh assessment are not silently called Low risk.');}
-  function riskRows(q=''){$('risk-list').innerHTML=d.rob.filter(r=>`${r.study} ${r.outcome} ${r.result_id} ${r.overall}`.toLowerCase().includes(q.toLowerCase())).map(r=>`<details><summary>${esc(r.study)} · ${esc(r.outcome)} · ${tag(r.overall)}<br><small>${esc(r.result_id)} · ${esc(r.window)} · n=${esc(r.population)}</small></summary><p>${esc(r.comparison)}</p>${[1,2,3,4,5].map(i=>`<p><strong>D${i}: ${esc(r['d'+i])}</strong> — ${esc(r['d'+i+'_rationale'])}</p>`).join('')}<p>${esc(r.overall_rationale)}</p><p class="source">${esc(r.source_pdf)} · ${esc(r.result_location)}</p></details>`).join('');}
+  // Risk of bias: every result-specific assessment (core v38, QoR ~24 h, QoR later windows) as a matrix of domains.
+  const ROB_ALL=()=>[...d.rob.map(r=>({...r,set:'Core v38'})),...(d.qor_analysis?.rob||[]).map(r=>({...r,set:'QoR ~24 h'})),...(d.qor_later_rob||[]).map(r=>({...r,set:'QoR later window'}))];
+  const ROB_SYM={Low:'+','Some concerns':'!',High:'×'},ROB_CLS={Low:'rob-low','Some concerns':'rob-sc',High:'rob-high'};
+  // Assessed components of an evidence body (combined-arm inputs split into their components).
+  const bodyResults=mid=>{const core=d.inputs.filter(r=>r.model_id===mid).flatMap(r=>r.result_id.split('+'));if(core.length)return core;
+    const q=[...(d.qor_analysis?.main_models||[]),...(d.qor_analysis?.diagnostics||[])].find(m=>m.model_id===mid);if(q)return q.inputs.map(r=>r.result_id);
+    const l=(d.qor_later_models||[]).find(m=>m.model_id===mid);return l?l.result_ids:[];};
+  const robBodies=()=>{const ids=new Set(ROB_ALL().map(r=>r.result_id));return [...d.models.map(m=>m.model_id),...(d.qor_analysis?.main_models||[]).map(m=>m.model_id),...(d.qor_analysis?.diagnostics||[]).map(m=>m.model_id),...(d.qor_later_models||[]).map(m=>m.model_id)].filter(mid=>bodyResults(mid).some(r=>ids.has(r)));};
+  function risk(){
+    const {params}=parseHash(),scope=params.get('model')||params.get('set')||'',q=params.get('q')||'';
+    const sets=['Core v38','QoR ~24 h','QoR later window'],all=ROB_ALL();
+    return title('Result-specific risk of bias',`${all.length} result-specific RoB 2 assessments: ${d.rob.length} core v38 (all current non-sensitivity components plus held/diagnostic results), ${(d.qor_analysis?.rob||[]).length} QoR ~24 h and ${(d.qor_later_rob||[]).length} QoR later-window. No study-overall rating is substituted for an outcome-specific assessment.`)+
+      `<div class="rob-filters"><div><label for="risk-scope">Show</label><select id="risk-scope"><option value="">All assessments (${all.length})</option><optgroup label="Assessment set">${sets.map(s=>`<option value="set:${esc(s)}"${scope===s?' selected':''}>${esc(s)} (${all.filter(r=>r.set===s).length})</option>`).join('')}</optgroup>`+
+      `<optgroup label="Evidence body (its assessed components)">${robBodies().map(mid=>`<option value="model:${esc(mid)}"${scope===mid?' selected':''}>${esc(mid)}</option>`).join('')}</optgroup></select></div>`+
+      `<div><label for="risk-search">Find study, outcome, result ID or judgement</label><input id="risk-search" type="search" placeholder="e.g. Luo, nausea, V33-OD-0139" value="${esc(q)}"></div></div>`+
+      `<div id="risk-summary"></div><div id="risk-matrix"></div><h3>Assessment details</h3><div id="risk-list"></div>`+
+      note('AI-conducted assessment under user delegation, dated 20 September 2026 (QoR addenda dated with their analyses). Prior human completion is user-reported. Symbols: + Low, ! Some concerns, × High. Select a cell for that domain’s rationale. Other historical/sensitivity results without a fresh assessment are not silently called Low risk.')+
+      `<dialog id="rob-dialog" aria-labelledby="rob-dialog-title"><button type="button" id="close-rob-dialog">Close</button><div id="rob-dialog-content"></div></dialog>`;
+  }
+  function riskFiltered(){
+    const sel=$('risk-scope')?.value||'',q=($('risk-search')?.value||'').toLowerCase();
+    let rows=ROB_ALL();
+    if(sel.startsWith('set:'))rows=rows.filter(r=>r.set===sel.slice(4));
+    if(sel.startsWith('model:')){const ids=new Set(bodyResults(sel.slice(6)));rows=rows.filter(r=>ids.has(r.result_id));}
+    return rows.filter(r=>`${r.study} ${r.outcome} ${r.result_id} ${r.window} ${r.overall} ${[1,2,3,4,5].map(i=>r['d'+i]).join(' ')}`.toLowerCase().includes(q));
+  }
+  function riskRows(){
+    if(!$('risk-list'))return;
+    const rows=riskFiltered(),doms=['d1','d2','d3','d4','d5','overall'],lab={d1:'D1 Randomisation',d2:'D2 Deviations',d3:'D3 Missing data',d4:'D4 Measurement',d5:'D5 Reporting',overall:'Overall'};
+    const sel=$('risk-scope').value,q=$('risk-search').value,params={};if(sel.startsWith('model:'))params.model=sel.slice(6);if(sel.startsWith('set:'))params.set=sel.slice(4);if(q)params.q=q;
+    if(parseHash().view==='risk')setHash(hashFor('risk',params));
+    $('risk-summary').innerHTML=rows.length?`<div class="rob-summary" role="img" aria-label="Judgements by domain for ${rows.length} assessments">${doms.map(k=>{const c={Low:0,'Some concerns':0,High:0};rows.forEach(r=>c[r[k]]++);
+      return `<div class="rob-sum-row"><span class="rob-sum-label">${lab[k]}</span><span class="rob-bar">${['Low','Some concerns','High'].filter(j=>c[j]).map(j=>`<span class="${ROB_CLS[j]}" style="flex:${c[j]}" title="${j}: ${c[j]}">${c[j]}</span>`).join('')}</span></div>`;}).join('')}</div>`:'';
+    $('risk-matrix').innerHTML=rows.length?`<div class="table-scroll"><table class="rob-matrix"><thead><tr><th scope="col">Result</th>${doms.map(k=>`<th scope="col" title="${lab[k]}">${k==='overall'?'Overall':k.toUpperCase()}</th>`).join('')}</tr></thead><tbody>`+
+      rows.map(r=>`<tr><td>${esc(r.study)} · ${esc(r.outcome)}<br><small>${esc(r.result_id)} · ${esc(r.window)} · ${esc(r.set)}</small></td>${doms.map(k=>`<td><button type="button" class="rob-cell ${ROB_CLS[r[k]]}" data-rob="${esc(r.set+'|'+(r.assessment_id||r.result_id))}" data-dom="${k}" aria-label="${esc(r.study)} ${lab[k]}: ${esc(r[k])}. Show rationale">${ROB_SYM[r[k]]}</button></td>`).join('')}</tr>`).join('')+`</tbody></table></div>`:note('No assessments match this filter.');
+    $('risk-list').innerHTML=rows.map(r=>`<details><summary>${esc(r.study)} · ${esc(r.outcome)} · ${tag(r.overall)}<br><small>${esc(r.result_id)} · ${esc(r.window)} · n=${esc(r.population)} · ${esc(r.set)}</small></summary><p>${esc(r.comparison)}</p>${[1,2,3,4,5].map(i=>`<p><strong>D${i}: ${esc(r['d'+i])}</strong> — ${esc(r['d'+i+'_rationale'])}</p>`).join('')}<p>${esc(r.overall_rationale)}</p><p class="source">${esc(r.source_pdf)} · ${esc(r.result_location)}</p></details>`).join('');
+  }
+  function robCell(btn){
+    const [set,key]=btn.dataset.rob.split(/\|(.*)/s),r=ROB_ALL().find(x=>x.set===set&&(x.assessment_id||x.result_id)===key),k=btn.dataset.dom;if(!r)return;
+    const dn=k==='overall'?'Overall':'Domain '+k.slice(1);
+    $('rob-dialog-content').innerHTML=`<h2 id="rob-dialog-title" style="margin-top:0">${esc(r.study)} · ${esc(dn)}: ${tag(r[k])}</h2><p class="lede">${esc(r.outcome)} · ${esc(r.window)} · ${esc(r.result_id)}</p>`+
+      `<p>${esc(r[k+'_rationale'])}</p>`+table(['Domain','Judgement'],[1,2,3,4,5].map(i=>[`D${i}`,tag(r['d'+i])]).concat([['Overall',tag(r.overall)]]))+
+      `<p class="source">${esc(r.source_pdf)} · ${esc(r.result_location)} · ${esc(r.set)} · assessed ${esc(r.review_date||'')}</p>`;
+    $('rob-dialog').showModal();
+  }
   function studies(){return `<div id="rich-explorer-container"></div>`;}
   function studyRows(q=''){}
   function methods(){
@@ -471,9 +515,9 @@
     $('result-drawer-content').innerHTML=html;$('result-drawer-content').querySelector('h2').id='result-drawer-title';$('result-drawer').showModal();
     if(parseHash().view==='results')setHash(hashFor('results',{model:r.model_id,result:rid}));
   }
-  document.addEventListener('click',e=>{const nav=e.target.closest('[data-view]');if(nav){document.querySelectorAll('dialog[open]').forEach(x=>x.close());show(nav.dataset.view);return;}const model=e.target.closest('[data-model]');if(model){openModel(model.dataset.model);return;}const fig=e.target.closest('.figure-open');if(fig){$('figure-image').src=fig.dataset.src;$('figure-image').alt=fig.dataset.caption;$('figure-caption').textContent=fig.dataset.caption;$('figure-dialog').showModal();return;}const cardBtn=e.target.closest('[data-card-action]');if(cardBtn){cardAction(cardBtn);return;}const bodyBtn=e.target.closest('.e1e2-body');if(bodyBtn){show('e1e2',{body:bodyBtn.dataset.body});return;}const res=e.target.closest('.result-open');if(res){openResultDrawer(res.dataset.result,res.dataset.resultModel);return;}if(e.target.id==='close-result-drawer'){$('result-drawer').close();clearResultKey();}});
-  document.addEventListener('input',e=>{if(e.target.id==='risk-search')riskRows(e.target.value);if(e.target.id==='study-search')studyRows(e.target.value);});
-  document.addEventListener('change',e=>{if(e.target.id==='model-select'){history.pushState(null,'',hashFor('results',{model:e.target.value}));routed=location.hash;modelDetail(e.target.value);}});
+  document.addEventListener('click',e=>{const nav=e.target.closest('[data-view]');if(nav){document.querySelectorAll('dialog[open]').forEach(x=>x.close());show(nav.dataset.view);return;}const model=e.target.closest('[data-model]');if(model){openModel(model.dataset.model);return;}const fig=e.target.closest('.figure-open');if(fig){$('figure-image').src=fig.dataset.src;$('figure-image').alt=fig.dataset.caption;$('figure-caption').textContent=fig.dataset.caption;$('figure-dialog').showModal();return;}const robBtn=e.target.closest('.rob-cell');if(robBtn){robCell(robBtn);return;}if(e.target.id==='close-rob-dialog'){$('rob-dialog').close();return;}const riskLink=e.target.closest('[data-risk-model]');if(riskLink){show('risk',{model:riskLink.dataset.riskModel});return;}const cardBtn=e.target.closest('[data-card-action]');if(cardBtn){cardAction(cardBtn);return;}const bodyBtn=e.target.closest('.e1e2-body');if(bodyBtn){show('e1e2',{body:bodyBtn.dataset.body});return;}const res=e.target.closest('.result-open');if(res){openResultDrawer(res.dataset.result,res.dataset.resultModel);return;}if(e.target.id==='close-result-drawer'){$('result-drawer').close();clearResultKey();}});
+  document.addEventListener('input',e=>{if(e.target.id==='risk-search')riskRows();if(e.target.id==='study-search')studyRows(e.target.value);});
+  document.addEventListener('change',e=>{if(e.target.id==='risk-scope'){riskRows();return;}if(e.target.id==='model-select'){history.pushState(null,'',hashFor('results',{model:e.target.value}));routed=location.hash;modelDetail(e.target.value);}});
   $('close-figure').addEventListener('click',()=>$('figure-dialog').close());
   window.addEventListener('hashchange',()=>route());
   window.addEventListener('popstate',()=>route());
