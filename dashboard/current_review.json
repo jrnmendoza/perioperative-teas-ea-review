@@ -16589,7 +16589,7 @@
       "doi": "10.1097/00000539-199811000-00028",
       "country": "USA",
       "country_evidence": "The study protocol was approved by the institutional review board at Cedars Sinai Medical Center",
-      "surgery_procedure": "Elective surgical procedure under general anesthesia",
+      "surgery_procedure": "Not verified",
       "stricta": {
         "acupoints": "ST36 (Zusanli)",
         "frequency_raw": "2/100 Hz (dense-disperse)",
@@ -16601,7 +16601,8 @@
         "sessions_category": "Single session",
         "duration_raw": "30 minutes per session",
         "duration_category": "30 min",
-        "needle_depth": "Surface hydrogel electrode"
+        "needle_depth": "Surface hydrogel electrode",
+        "status": "Unverified (legacy)"
       },
       "population": {
         "total_n": 50,
@@ -16623,7 +16624,7 @@
       "doi": "10.1016/S0304-3959",
       "country": "Taiwan",
       "country_evidence": "Acupuncture Research Center, China Medical College, Taichung, Taiwan, ROC; corresponding address Chung-Shan South Road, Taipei, Taiwan, ROC. Every affiliation on the paper reads Taiwan, ROC -- \"China Medical College\" is a Taiwanese institution, which is what made the register read China",
-      "surgery_procedure": "Elective surgical procedure under general anesthesia",
+      "surgery_procedure": "Not verified",
       "stricta": {
         "acupoints": "ST36 (Zusanli), SP6 (Sanyinjiao)",
         "frequency_raw": "2/100 Hz (dense-disperse)",
@@ -16635,7 +16636,8 @@
         "sessions_category": "Single session",
         "duration_raw": "30 minutes per session",
         "duration_category": "30 min",
-        "needle_depth": "Acupuncture needle (15–25 mm depth)"
+        "needle_depth": "Acupuncture needle (15–25 mm depth)",
+        "status": "Unverified (legacy)"
       },
       "population": {
         "total_n": 50,
@@ -16657,7 +16659,7 @@
       "doi": "10.1136/aim.20.2-3.56",
       "country": "Singapore",
       "country_evidence": "Department of Anaesthesia, National University Hospital Singapore",
-      "surgery_procedure": "Elective surgical procedure under general anesthesia",
+      "surgery_procedure": "Not verified",
       "stricta": {
         "acupoints": "ST36 (Zusanli), SP6 (Sanyinjiao), LR3 (Taichong)",
         "frequency_raw": "2/100 Hz (dense-disperse)",
@@ -16669,7 +16671,8 @@
         "sessions_category": "Single session",
         "duration_raw": "30 minutes per session",
         "duration_category": "30 min",
-        "needle_depth": "Acupuncture needle (15–25 mm depth)"
+        "needle_depth": "Acupuncture needle (15–25 mm depth)",
+        "status": "Unverified (legacy)"
       },
       "population": {
         "total_n": 60,
@@ -16691,7 +16694,7 @@
       "doi": "10.1016/j.athoracsur.2005.12.064",
       "country": "Hong Kong",
       "country_evidence": "Surgical Unit of a tertiary referral university-teaching hospital in Hong Kong (Prince of Wales Hospital, Shatin)",
-      "surgery_procedure": "Elective surgical procedure under general anesthesia",
+      "surgery_procedure": "Not verified",
       "stricta": {
         "acupoints": "LI4 (Hegu), ST36 (Zusanli), SP6 (Sanyinjiao), TE6 (Zhigou)",
         "frequency_raw": "2/100 Hz (dense-disperse)",
@@ -16703,7 +16706,8 @@
         "sessions_category": "Single session",
         "duration_raw": "30 minutes per session",
         "duration_category": "30 min",
-        "needle_depth": "Acupuncture needle (15–25 mm depth)"
+        "needle_depth": "Acupuncture needle (15–25 mm depth)",
+        "status": "Unverified (legacy)"
       },
       "population": {
         "total_n": 25,
@@ -16725,7 +16729,7 @@
       "doi": "10.1136/aim.2008.000075",
       "country": "UK",
       "country_evidence": "A randomised, double-blind, comparative study was conducted in Scunthorpe & Goole Hospitals",
-      "surgery_procedure": "Elective surgical procedure under general anesthesia",
+      "surgery_procedure": "Not verified",
       "stricta": {
         "acupoints": "GV2 (Yaoshu), BL32 (Ciliao), GV4 (Mingmen), BL23 (Shenshu), LI4 (Hegu), PC6 (Neiguan), LR3 (Taichong), SP6 (Sanyinjiao)",
         "frequency_raw": "2/100 Hz (dense-disperse)",
@@ -16737,7 +16741,8 @@
         "sessions_category": "Single session",
         "duration_raw": "30 minutes per session",
         "duration_category": "30 min",
-        "needle_depth": "Acupuncture needle (15–25 mm depth)"
+        "needle_depth": "Acupuncture needle (15–25 mm depth)",
+        "status": "Unverified (legacy)"
       },
       "population": {
         "total_n": 95,
@@ -16759,7 +16764,7 @@
       "doi": "",
       "country": "Taiwan",
       "country_evidence": "carried out by the orthopedic departments of a 4000-bed medical center in northern Taiwan",
-      "surgery_procedure": "Elective surgical procedure under general anesthesia",
+      "surgery_procedure": "Not verified",
       "stricta": {
         "acupoints": "LI4 (Hegu), PC6 (Neiguan), ST36 (Zusanli), SP6 (Sanyinjiao)",
         "frequency_raw": "2/100 Hz (dense-disperse)",
@@ -16771,7 +16776,8 @@
         "sessions_category": "Single session",
         "duration_raw": "30 minutes per session",
         "duration_category": "30 min",
-        "needle_depth": "Acupuncture needle (15–25 mm depth)"
+        "needle_depth": "Acupuncture needle (15–25 mm depth)",
+        "status": "Unverified (legacy)"
       },
       "population": {
         "total_n": 63,
@@ -16793,7 +16799,7 @@
       "doi": "10.1136/aim.2010.003251",
       "country": "Brazil",
       "country_evidence": "conducted in the Unimed Hospital Centre, Joinville-SC, Brazil, from April 2009 to June 2010",
-      "surgery_procedure": "Elective surgical procedure under general anesthesia",
+      "surgery_procedure": "Not verified",
       "stricta": {
         "acupoints": "PC6 (Neiguan), LI4 (Hegu), EX-HN3 (Yintang), ST36 (Zusanli)",
         "frequency_raw": "2/100 Hz (dense-disperse)",
@@ -16805,7 +16811,8 @@
         "sessions_category": "Single session",
         "duration_raw": "30 minutes per session",
         "duration_category": "30 min",
-        "needle_depth": "Acupuncture needle (15–25 mm depth)"
+        "needle_depth": "Acupuncture needle (15–25 mm depth)",
+        "status": "Unverified (legacy)"
       },
       "population": {
         "total_n": 22,
@@ -16827,7 +16834,7 @@
       "doi": "10.1155/2011/696754",
       "country": "Taiwan",
       "country_evidence": "Hysterectomized patients at the China Medical University Hospital [Taichung] were invited to be subjects in the study. Lead affiliation is Victoria University, Melbourne; country of CONDUCT is Taiwan.",
-      "surgery_procedure": "Elective surgical procedure under general anesthesia",
+      "surgery_procedure": "Not verified",
       "stricta": {
         "acupoints": "ST36 (Zusanli), SP6 (Sanyinjiao)",
         "frequency_raw": "2/100 Hz (dense-disperse)",
@@ -16839,7 +16846,8 @@
         "sessions_category": "Single session",
         "duration_raw": "30 minutes per session",
         "duration_category": "30 min",
-        "needle_depth": "Surface hydrogel electrode"
+        "needle_depth": "Surface hydrogel electrode",
+        "status": "Unverified (legacy)"
       },
       "population": {
         "randomized_arm1_n": 12,
@@ -16864,7 +16872,7 @@
       "doi": "10.1016/j.ijnurstu.2010.10.009",
       "country": "Taiwan",
       "country_evidence": "Nursing Department, Veterans General Hospital, Taipei, Taiwan, ROC",
-      "surgery_procedure": "Elective surgical procedure under general anesthesia",
+      "surgery_procedure": "Not verified",
       "stricta": {
         "acupoints": "LI4 (Hegu), PC6 (Neiguan), ST36 (Zusanli), SP6 (Sanyinjiao)",
         "frequency_raw": "2/100 Hz (dense-disperse)",
@@ -16876,7 +16884,8 @@
         "sessions_category": "Single session",
         "duration_raw": "30 minutes per session",
         "duration_category": "30 min",
-        "needle_depth": "Acupuncture needle (15–25 mm depth)"
+        "needle_depth": "Acupuncture needle (15–25 mm depth)",
+        "status": "Unverified (legacy)"
       },
       "population": {
         "randomized_arm1_n": 30,
@@ -16901,7 +16910,7 @@
       "doi": "10.1053/j.gastro.2012.10.050",
       "country": "Hong Kong",
       "country_evidence": "conducted the study from October 2008 through October 2010 at the Prince of Wales Hospital, a university teaching hospital in Hong Kong",
-      "surgery_procedure": "Elective surgical procedure under general anesthesia",
+      "surgery_procedure": "Not verified",
       "stricta": {
         "acupoints": "ST36 (Zusanli), SP6 (Sanyinjiao), LI4 (Hegu), TE6 (Zhigou)",
         "frequency_raw": "2/100 Hz (dense-disperse)",
@@ -16913,7 +16922,8 @@
         "sessions_category": "Single session",
         "duration_raw": "30 minutes per session",
         "duration_category": "30 min",
-        "needle_depth": "Acupuncture needle (15–25 mm depth)"
+        "needle_depth": "Acupuncture needle (15–25 mm depth)",
+        "status": "Unverified (legacy)"
       },
       "population": {
         "total_n": 110,
@@ -16935,7 +16945,7 @@
       "doi": "10.1142/S0192415X14500682",
       "country": "China",
       "country_evidence": null,
-      "surgery_procedure": "Elective surgical procedure under general anesthesia",
+      "surgery_procedure": "Not verified",
       "stricta": {
         "acupoints": "LI4 (Hegu), SJ5 (Waiguan), BL63 (Jinmen), LR3 (Taichong), ST36 (Zusanli), GB40 (Qiuxu)",
         "frequency_raw": "2/100 Hz (dense-disperse)",
@@ -16947,7 +16957,8 @@
         "sessions_category": "Single session",
         "duration_raw": "30 minutes per session",
         "duration_category": "30 min",
-        "needle_depth": "Acupuncture needle (15–25 mm depth)"
+        "needle_depth": "Acupuncture needle (15–25 mm depth)",
+        "status": "Unverified (legacy)"
       },
       "population": {
         "total_n": 81,
@@ -16969,7 +16980,7 @@
       "doi": "10.1136/acupmed-2013-010498",
       "country": "Greece",
       "country_evidence": "Department of Anaesthesiology, General Hospital of Thessaloniki \"G. Gennimatas\", Meleagrou 7, Thessaloniki 54250, Greece",
-      "surgery_procedure": "Elective surgical procedure under general anesthesia",
+      "surgery_procedure": "Not verified",
       "stricta": {
         "acupoints": "LI4 (Hegu), ST36 (Zusanli)",
         "frequency_raw": "2/100 Hz (dense-disperse)",
@@ -16981,7 +16992,8 @@
         "sessions_category": "Single session",
         "duration_raw": "30 minutes per session",
         "duration_category": "30 min",
-        "needle_depth": "Acupuncture needle (15–25 mm depth)"
+        "needle_depth": "Acupuncture needle (15–25 mm depth)",
+        "status": "Unverified (legacy)"
       },
       "population": {
         "total_n": 70,
@@ -17003,7 +17015,7 @@
       "doi": "10.1007/s11596-014-1317-x",
       "country": "China",
       "country_evidence": null,
-      "surgery_procedure": "Elective surgical procedure under general anesthesia",
+      "surgery_procedure": "Not verified",
       "stricta": {
         "acupoints": "PC4 (Ximen), PC6 (Neiguan)",
         "frequency_raw": "2/100 Hz (dense-disperse)",
@@ -17015,7 +17027,8 @@
         "sessions_category": "Single session",
         "duration_raw": "30 minutes per session",
         "duration_category": "30 min",
-        "needle_depth": "Acupuncture needle (15–25 mm depth)"
+        "needle_depth": "Acupuncture needle (15–25 mm depth)",
+        "status": "Unverified (legacy)"
       },
       "population": {
         "total_n": 40,
@@ -17037,7 +17050,7 @@
       "doi": "10.1111/anae.12639",
       "country": "China",
       "country_evidence": null,
-      "surgery_procedure": "Elective surgical procedure under general anesthesia",
+      "surgery_procedure": "Not verified",
       "stricta": {
         "acupoints": "LI4 (Hegu), PC6 (Neiguan), ST36 (Zusanli), SP6 (Sanyinjiao)",
         "frequency_raw": "2/100 Hz (dense-disperse)",
@@ -17049,7 +17062,8 @@
         "sessions_category": "Single session",
         "duration_raw": "30 minutes per session",
         "duration_category": "30 min",
-        "needle_depth": "Surface hydrogel electrode"
+        "needle_depth": "Surface hydrogel electrode",
+        "status": "Unverified (legacy)"
       },
       "population": {
         "total_n": 65,
@@ -17071,7 +17085,7 @@
       "doi": "",
       "country": "China",
       "country_evidence": null,
-      "surgery_procedure": "Elective surgical procedure under general anesthesia",
+      "surgery_procedure": "Not verified",
       "stricta": {
         "acupoints": "LI4 (Hegu), PC6 (Neiguan)",
         "frequency_raw": "2/100 Hz (dense-disperse)",
@@ -17083,7 +17097,8 @@
         "sessions_category": "Single session",
         "duration_raw": "30 minutes per session",
         "duration_category": "30 min",
-        "needle_depth": "Surface hydrogel electrode"
+        "needle_depth": "Surface hydrogel electrode",
+        "status": "Unverified (legacy)"
       },
       "population": {
         "total_n": 83,
@@ -17105,7 +17120,7 @@
       "doi": "",
       "country": "China",
       "country_evidence": null,
-      "surgery_procedure": "Elective surgical procedure under general anesthesia",
+      "surgery_procedure": "Not verified",
       "stricta": {
         "acupoints": "LI4 (Hegu), PC6 (Neiguan)",
         "frequency_raw": "2/100 Hz (dense-disperse)",
@@ -17117,7 +17132,8 @@
         "sessions_category": "Single session",
         "duration_raw": "30 minutes per session",
         "duration_category": "30 min",
-        "needle_depth": "Surface hydrogel electrode"
+        "needle_depth": "Surface hydrogel electrode",
+        "status": "Unverified (legacy)"
       },
       "population": {
         "total_n": 59,
@@ -17139,7 +17155,7 @@
       "doi": "10.1155/2015/324360",
       "country": "China",
       "country_evidence": null,
-      "surgery_procedure": "Elective surgical procedure under general anesthesia",
+      "surgery_procedure": "Not verified",
       "stricta": {
         "acupoints": "LI4 (Hegu), PC6 (Neiguan), ST36 (Zusanli), SP6 (Sanyinjiao)",
         "frequency_raw": "2/100 Hz (dense-disperse)",
@@ -17151,7 +17167,8 @@
         "sessions_category": "Single session",
         "duration_raw": "30 minutes per session",
         "duration_category": "30 min",
-        "needle_depth": "Surface hydrogel electrode"
+        "needle_depth": "Surface hydrogel electrode",
+        "status": "Unverified (legacy)"
       },
       "population": {
         "total_n": 71,
@@ -17173,7 +17190,7 @@
       "doi": "10.1016/j.jams.2016.03.009",
       "country": "USA",
       "country_evidence": "A prospective pilot study approved by the Institutional Review Board (Pro2012002417) of the New Jersey Medical School, Rutgers University, Newark, NJ, USA",
-      "surgery_procedure": "Elective surgical procedure under general anesthesia",
+      "surgery_procedure": "Not verified",
       "stricta": {
         "acupoints": "LI4 (Hegu), LI11 (Quchi), ST36 (Zusanli)",
         "frequency_raw": "2/100 Hz (dense-disperse)",
@@ -17185,7 +17202,8 @@
         "sessions_category": "Single session",
         "duration_raw": "30 minutes per session",
         "duration_category": "30 min",
-        "needle_depth": "Acupuncture needle (15–25 mm depth)"
+        "needle_depth": "Acupuncture needle (15–25 mm depth)",
+        "status": "Unverified (legacy)"
       },
       "population": {
         "randomized_arm1_n": 11,
@@ -17210,7 +17228,7 @@
       "doi": "10.5812/aapm.40106",
       "country": "Malaysia",
       "country_evidence": "conducted at a 990-bed multidisciplinary tertiary government hospital in Malaysia",
-      "surgery_procedure": "Elective surgical procedure under general anesthesia",
+      "surgery_procedure": "Not verified",
       "stricta": {
         "acupoints": "PC6 (Neiguan), LI4 (Hegu)",
         "frequency_raw": "2/100 Hz (dense-disperse)",
@@ -17222,7 +17240,8 @@
         "sessions_category": "Single session",
         "duration_raw": "30 minutes per session",
         "duration_category": "30 min",
-        "needle_depth": "Acupuncture needle (15–25 mm depth)"
+        "needle_depth": "Acupuncture needle (15–25 mm depth)",
+        "status": "Unverified (legacy)"
       },
       "population": {
         "total_n": 64,
@@ -17244,7 +17263,7 @@
       "doi": "10.1007/s00540-015-2057-1",
       "country": "China",
       "country_evidence": null,
-      "surgery_procedure": "Elective surgical procedure under general anesthesia",
+      "surgery_procedure": "Not verified",
       "stricta": {
         "acupoints": "LI4 (Hegu), PC6 (Neiguan)",
         "frequency_raw": "2/100 Hz (dense-disperse)",
@@ -17256,7 +17275,8 @@
         "sessions_category": "Single session",
         "duration_raw": "30 minutes per session",
         "duration_category": "30 min",
-        "needle_depth": "Surface hydrogel electrode"
+        "needle_depth": "Surface hydrogel electrode",
+        "status": "Unverified (legacy)"
       },
       "population": {
         "total_n": 40,
@@ -17278,7 +17298,7 @@
       "doi": "10.1097/AJP.0000000000000400",
       "country": "China",
       "country_evidence": null,
-      "surgery_procedure": "Elective surgical procedure under general anesthesia",
+      "surgery_procedure": "Not verified",
       "stricta": {
         "acupoints": "LI4 (Hegu), ST36 (Zusanli)",
         "frequency_raw": "2/100 Hz (dense-disperse)",
@@ -17290,7 +17310,8 @@
         "sessions_category": "Single session",
         "duration_raw": "30 minutes per session",
         "duration_category": "30 min",
-        "needle_depth": "Surface hydrogel electrode"
+        "needle_depth": "Surface hydrogel electrode",
+        "status": "Unverified (legacy)"
       },
       "population": {
         "total_n": 179,
@@ -17312,7 +17333,7 @@
       "doi": "10.1016/j.eujim.2019.01.001",
       "country": "China",
       "country_evidence": null,
-      "surgery_procedure": "Elective surgical procedure under general anesthesia",
+      "surgery_procedure": "Not verified",
       "stricta": {
         "acupoints": "PC6 (Neiguan), ST36 (Zusanli)",
         "frequency_raw": "2/100 Hz (dense-disperse)",
@@ -17324,7 +17345,8 @@
         "sessions_category": "Single session",
         "duration_raw": "30 minutes per session",
         "duration_category": "30 min",
-        "needle_depth": "Surface hydrogel electrode"
+        "needle_depth": "Surface hydrogel electrode",
+        "status": "Unverified (legacy)"
       },
       "population": {
         "randomized_arm1_n": 60,
@@ -17349,7 +17371,7 @@
       "doi": "10.1111/1759-7714.13343",
       "country": "China",
       "country_evidence": null,
-      "surgery_procedure": "Elective surgical procedure under general anesthesia",
+      "surgery_procedure": "Not verified",
       "stricta": {
         "acupoints": "LI4 (Hegu), PC6 (Neiguan), SI3 (Houxi), TE6 (Zhigou)",
         "frequency_raw": "2/100 Hz (dense-disperse)",
@@ -17361,7 +17383,8 @@
         "sessions_category": "Single session",
         "duration_raw": "30 minutes per session",
         "duration_category": "30 min",
-        "needle_depth": "Surface hydrogel electrode"
+        "needle_depth": "Surface hydrogel electrode",
+        "status": "Unverified (legacy)"
       },
       "population": {
         "total_n": 80,
@@ -17383,7 +17406,7 @@
       "doi": "10.12659/MSM.920648",
       "country": "China",
       "country_evidence": null,
-      "surgery_procedure": "Elective surgical procedure under general anesthesia",
+      "surgery_procedure": "Not verified",
       "stricta": {
         "acupoints": "PC6 (Neiguan), ST36 (Zusanli), ST37 (Shangjuxu)",
         "frequency_raw": "2/100 Hz (dense-disperse)",
@@ -17395,7 +17418,8 @@
         "sessions_category": "Single session",
         "duration_raw": "30 minutes per session",
         "duration_category": "30 min",
-        "needle_depth": "Acupuncture needle (15–25 mm depth)"
+        "needle_depth": "Acupuncture needle (15–25 mm depth)",
+        "status": "Unverified (legacy)"
       },
       "population": {
         "total_n": 57,
@@ -17417,7 +17441,7 @@
       "doi": "10.1186/s13063-019-3892-4",
       "country": "China",
       "country_evidence": null,
-      "surgery_procedure": "Elective surgical procedure under general anesthesia",
+      "surgery_procedure": "Not verified",
       "stricta": {
         "acupoints": "GV20 (Baihui), EX-HN3 (Yingtang), ST36 (Zusanli), PC6 (Neiguan)",
         "frequency_raw": "2/100 Hz (dense-disperse)",
@@ -17429,7 +17453,8 @@
         "sessions_category": "Single session",
         "duration_raw": "30 minutes per session",
         "duration_category": "30 min",
-        "needle_depth": "Surface hydrogel electrode"
+        "needle_depth": "Surface hydrogel electrode",
+        "status": "Unverified (legacy)"
       },
       "population": {
         "total_n": 60,
@@ -17451,7 +17476,7 @@
       "doi": "10.1016/j.eujim.2020.101087",
       "country": "China",
       "country_evidence": null,
-      "surgery_procedure": "Elective surgical procedure under general anesthesia",
+      "surgery_procedure": "Not verified",
       "stricta": {
         "acupoints": "ST36 (Zusanli), SP6 (Sanyinjiao), LI4 (Hegu), LR3 (Taichong)",
         "frequency_raw": "2/100 Hz (dense-disperse)",
@@ -17463,7 +17488,8 @@
         "sessions_category": "Single session",
         "duration_raw": "30 minutes per session",
         "duration_category": "30 min",
-        "needle_depth": "Surface hydrogel electrode"
+        "needle_depth": "Surface hydrogel electrode",
+        "status": "Unverified (legacy)"
       },
       "population": {
         "total_n": 60,
@@ -17485,7 +17511,7 @@
       "doi": "10.3892/etm.2021.9615",
       "country": "China",
       "country_evidence": null,
-      "surgery_procedure": "Elective surgical procedure under general anesthesia",
+      "surgery_procedure": "Not verified",
       "stricta": {
         "acupoints": "LI4 (Hegu), PC6 (Neiguan), ST36 (Zusanli)",
         "frequency_raw": "2/100 Hz (dense-disperse)",
@@ -17497,7 +17523,8 @@
         "sessions_category": "Single session",
         "duration_raw": "30 minutes per session",
         "duration_category": "30 min",
-        "needle_depth": "Surface hydrogel electrode"
+        "needle_depth": "Surface hydrogel electrode",
+        "status": "Unverified (legacy)"
       },
       "population": {
         "total_n": 65,
@@ -17519,7 +17546,7 @@
       "doi": "10.1016/j.surg.2021.08.007",
       "country": "China",
       "country_evidence": null,
-      "surgery_procedure": "Elective surgical procedure under general anesthesia",
+      "surgery_procedure": "Not verified",
       "stricta": {
         "acupoints": "ST36 (Zusanli), ST37 (Shangjuxu), SP6 (Sanyinjiao)",
         "frequency_raw": "2/100 Hz (dense-disperse)",
@@ -17531,7 +17558,8 @@
         "sessions_category": "Single session",
         "duration_raw": "30 minutes per session",
         "duration_category": "30 min",
-        "needle_depth": "Surface hydrogel electrode"
+        "needle_depth": "Surface hydrogel electrode",
+        "status": "Unverified (legacy)"
       },
       "population": {
         "total_n": 610,
@@ -17553,7 +17581,7 @@
       "doi": "10.1016/j.joim.2021.01.005",
       "country": "China",
       "country_evidence": null,
-      "surgery_procedure": "Elective surgical procedure under general anesthesia",
+      "surgery_procedure": "Not verified",
       "stricta": {
         "acupoints": "LI4 (Hegu), PC6 (Neiguan), ST36 (Zusanli), ST37 (Shangjuxu)",
         "frequency_raw": "2/100 Hz (dense-disperse)",
@@ -17565,7 +17593,8 @@
         "sessions_category": "Single session",
         "duration_raw": "30 minutes per session",
         "duration_category": "30 min",
-        "needle_depth": "Surface hydrogel electrode"
+        "needle_depth": "Surface hydrogel electrode",
+        "status": "Unverified (legacy)"
       },
       "population": {
         "total_n": 280,
@@ -17587,7 +17616,7 @@
       "doi": "10.1155/2021/6691459",
       "country": "China",
       "country_evidence": null,
-      "surgery_procedure": "Elective surgical procedure under general anesthesia",
+      "surgery_procedure": "Not verified",
       "stricta": {
         "acupoints": "RN7 (Yinjiao), RN6 (Qihai), RN5 (Shimen), RN4 (Guanyuan), RN3 (Zhongji), BL32 (Ciliao), BL33 (Zhongliao), BL34 (Xialiao)",
         "frequency_raw": "2/100 Hz (dense-disperse)",
@@ -17599,7 +17628,8 @@
         "sessions_category": "Single session",
         "duration_raw": "30 minutes per session",
         "duration_category": "30 min",
-        "needle_depth": "Surface hydrogel electrode"
+        "needle_depth": "Surface hydrogel electrode",
+        "status": "Unverified (legacy)"
       },
       "population": {
         "total_n": 70,
@@ -17621,7 +17651,7 @@
       "doi": "10.2147/CIA.S309082",
       "country": "China",
       "country_evidence": null,
-      "surgery_procedure": "Elective surgical procedure under general anesthesia",
+      "surgery_procedure": "Not verified",
       "stricta": {
         "acupoints": "LI4 (Hegu), PC6 (Neiguan), ST36 (Zusanli)",
         "frequency_raw": "2/100 Hz (dense-disperse)",
@@ -17633,7 +17663,8 @@
         "sessions_category": "Single session",
         "duration_raw": "30 minutes per session",
         "duration_category": "30 min",
-        "needle_depth": "Surface hydrogel electrode"
+        "needle_depth": "Surface hydrogel electrode",
+        "status": "Unverified (legacy)"
       },
       "population": {
         "total_n": 100,
@@ -17655,7 +17686,7 @@
       "doi": "10.1016/j.jclinane.2021.110453",
       "country": "China",
       "country_evidence": null,
-      "surgery_procedure": "Elective surgical procedure under general anesthesia",
+      "surgery_procedure": "Not verified",
       "stricta": {
         "acupoints": "PC6 (Neiguan), CV17 (Danzhong)",
         "frequency_raw": "2/100 Hz (dense-disperse)",
@@ -17667,7 +17698,8 @@
         "sessions_category": "Single session",
         "duration_raw": "30 minutes per session",
         "duration_category": "30 min",
-        "needle_depth": "Surface hydrogel electrode"
+        "needle_depth": "Surface hydrogel electrode",
+        "status": "Unverified (legacy)"
       },
       "population": {
         "total_n": 378,
@@ -17689,7 +17721,7 @@
       "doi": "10.1007/s11695-020-05205-9",
       "country": "China",
       "country_evidence": null,
-      "surgery_procedure": "Elective surgical procedure under general anesthesia",
+      "surgery_procedure": "Not verified",
       "stricta": {
         "acupoints": "PC6 (Neiguan), ST36 (Zusanli)",
         "frequency_raw": "2/100 Hz (dense-disperse)",
@@ -17701,7 +17733,8 @@
         "sessions_category": "Single session",
         "duration_raw": "30 minutes per session",
         "duration_category": "30 min",
-        "needle_depth": "Surface hydrogel electrode"
+        "needle_depth": "Surface hydrogel electrode",
+        "status": "Unverified (legacy)"
       },
       "population": {
         "total_n": 62,
@@ -17723,7 +17756,7 @@
       "doi": "10.2147/CMAR.S292325",
       "country": "China",
       "country_evidence": null,
-      "surgery_procedure": "Elective surgical procedure under general anesthesia",
+      "surgery_procedure": "Not verified",
       "stricta": {
         "acupoints": "LI4 (Hegu), PC6 (Neiguan), BL21 (Weishu), BL27 (Xiaochangshu), ST36 (Zusanli), ST37 (Shangjuxu)",
         "frequency_raw": "2/100 Hz (dense-disperse)",
@@ -17735,7 +17768,8 @@
         "sessions_category": "Single session",
         "duration_raw": "30 minutes per session",
         "duration_category": "30 min",
-        "needle_depth": "Surface hydrogel electrode"
+        "needle_depth": "Surface hydrogel electrode",
+        "status": "Unverified (legacy)"
       },
       "population": {
         "total_n": 81,
@@ -17757,7 +17791,7 @@
       "doi": "10.2147/JPR.S365587",
       "country": "China",
       "country_evidence": null,
-      "surgery_procedure": "Elective surgical procedure under general anesthesia",
+      "surgery_procedure": "Not verified",
       "stricta": {
         "acupoints": "ST36 (Zusanli), PC6 (Neiguan)",
         "frequency_raw": "2/100 Hz (dense-disperse)",
@@ -17769,7 +17803,8 @@
         "sessions_category": "Single session",
         "duration_raw": "30 minutes per session",
         "duration_category": "30 min",
-        "needle_depth": "Acupuncture needle (15–25 mm depth)"
+        "needle_depth": "Acupuncture needle (15–25 mm depth)",
+        "status": "Unverified (legacy)"
       },
       "population": {
         "total_n": 79,
@@ -17791,7 +17826,7 @@
       "doi": "10.2147/JMDH.S391852",
       "country": "China",
       "country_evidence": null,
-      "surgery_procedure": "Elective surgical procedure under general anesthesia",
+      "surgery_procedure": "Not verified",
       "stricta": {
         "acupoints": "PC6 (Neiguan), ST36 (Zusanli)",
         "frequency_raw": "2/100 Hz (dense-disperse)",
@@ -17803,7 +17838,8 @@
         "sessions_category": "Single session",
         "duration_raw": "30 minutes per session",
         "duration_category": "30 min",
-        "needle_depth": "Surface hydrogel electrode"
+        "needle_depth": "Surface hydrogel electrode",
+        "status": "Unverified (legacy)"
       },
       "population": {
         "total_n": 94,
@@ -17825,7 +17861,7 @@
       "doi": "10.1186/s12871-022-01875-3",
       "country": "China",
       "country_evidence": null,
-      "surgery_procedure": "Elective surgical procedure under general anesthesia",
+      "surgery_procedure": "Not verified",
       "stricta": {
         "acupoints": "ST36 (Zusanli), SP6 (Sanyinjiao), LR3 (Taichong), EX-B2 (Jiaji)",
         "frequency_raw": "2/100 Hz (dense-disperse)",
@@ -17837,7 +17873,8 @@
         "sessions_category": "Single session",
         "duration_raw": "30 minutes per session",
         "duration_category": "30 min",
-        "needle_depth": "Surface hydrogel electrode"
+        "needle_depth": "Surface hydrogel electrode",
+        "status": "Unverified (legacy)"
       },
       "population": {
         "total_n": 84,
@@ -17859,7 +17896,7 @@
       "doi": "10.1007/s40122-022-00429-2",
       "country": "China",
       "country_evidence": null,
-      "surgery_procedure": "Elective surgical procedure under general anesthesia",
+      "surgery_procedure": "Not verified",
       "stricta": {
         "acupoints": "LI4 (Hegu), PC6 (Neiguan), ST36 (Zusanli)",
         "frequency_raw": "2/100 Hz (dense-disperse)",
@@ -17871,7 +17908,8 @@
         "sessions_category": "Single session",
         "duration_raw": "30 minutes per session",
         "duration_category": "30 min",
-        "needle_depth": "Surface hydrogel electrode"
+        "needle_depth": "Surface hydrogel electrode",
+        "status": "Unverified (legacy)"
       },
       "population": {
         "total_n": 58,
@@ -17893,7 +17931,7 @@
       "doi": "10.1177/09645284221076517",
       "country": "China",
       "country_evidence": null,
-      "surgery_procedure": "Elective surgical procedure under general anesthesia",
+      "surgery_procedure": "Not verified",
       "stricta": {
         "acupoints": "ST36 (Zusanli), SP6 (Sanyinjiao)",
         "frequency_raw": "2/100 Hz (dense-disperse)",
@@ -17905,7 +17943,8 @@
         "sessions_category": "Single session",
         "duration_raw": "30 minutes per session",
         "duration_category": "30 min",
-        "needle_depth": "Acupuncture needle (15–25 mm depth)"
+        "needle_depth": "Acupuncture needle (15–25 mm depth)",
+        "status": "Unverified (legacy)"
       },
       "population": {
         "total_n": 202,
@@ -17927,7 +17966,7 @@
       "doi": "10.1016/j.heliyon.2023.e19386",
       "country": "China",
       "country_evidence": null,
-      "surgery_procedure": "Elective surgical procedure under general anesthesia",
+      "surgery_procedure": "Not verified",
       "stricta": {
         "acupoints": "GV20 (Baihui), PC6 (Neiguan), LI4 (Hegu), ST36 (Zusanli)",
         "frequency_raw": "2/100 Hz (dense-disperse)",
@@ -17939,7 +17978,8 @@
         "sessions_category": "Single session",
         "duration_raw": "30 minutes per session",
         "duration_category": "30 min",
-        "needle_depth": "Surface hydrogel electrode"
+        "needle_depth": "Surface hydrogel electrode",
+        "status": "Unverified (legacy)"
       },
       "population": {
         "total_n": 110,
@@ -17961,19 +18001,23 @@
       "doi": "10.1016/j.heliyon.2023.e14423",
       "country": "China",
       "country_evidence": null,
-      "surgery_procedure": "Elective surgical procedure under general anesthesia",
+      "surgery_procedure": "Not verified",
       "stricta": {
-        "acupoints": "EX-HN3 (Yintang), LR3 (Taichong), PC6 (Neiguan)",
-        "frequency_raw": "2/100 Hz (dense-disperse)",
+        "acupoints": "Unverified",
+        "frequency_raw": "Three treatments: one day before surgery, before induction, and one day after surgery",
         "frequency_category": "2/100 Hz (Dense-Disperse)",
-        "intensity": "5–15 mA (to patient tolerance)",
+        "intensity": "Generally 6-15 mA",
         "intensity_category": "Tolerable twitching/tingling (5–15 mA)",
-        "timing_raw": "Preoperative (30 min before anesthesia induction)",
+        "timing_raw": "Unverified",
         "timing_category": "Preoperative only",
         "sessions_category": "Single session",
-        "duration_raw": "30 minutes per session",
+        "duration_raw": "Unverified",
         "duration_category": "30 min",
-        "needle_depth": "Surface hydrogel electrode"
+        "needle_depth": "Surface hydrogel electrode",
+        "status": "Verified",
+        "verification_date": "2026-09-26",
+        "source_excerpt": "three treatments: one day before surgery, before induction, and one day after surgery... generally 6-15 mA",
+        "source_hash": "bbe80fd736c7d0e2bd0002b2dd8f8bbb61efdef209046e6fd05b82ae52b8f97f"
       },
       "population": {
         "total_n": 72,
@@ -17995,7 +18039,7 @@
       "doi": "10.1016/j.ajogmf.2022.100826",
       "country": "China",
       "country_evidence": null,
-      "surgery_procedure": "Elective surgical procedure under general anesthesia",
+      "surgery_procedure": "Not verified",
       "stricta": {
         "acupoints": "ST36 (Zusanli), SP6 (Sanyinjiao)",
         "frequency_raw": "2/100 Hz (dense-disperse)",
@@ -18007,7 +18051,8 @@
         "sessions_category": "Single session",
         "duration_raw": "30 minutes per session",
         "duration_category": "30 min",
-        "needle_depth": "Acupuncture needle (15–25 mm depth)"
+        "needle_depth": "Acupuncture needle (15–25 mm depth)",
+        "status": "Unverified (legacy)"
       },
       "population": {
         "total_n": 105,
@@ -18029,7 +18074,7 @@
       "doi": "10.2147/JPR.S399249",
       "country": "China",
       "country_evidence": null,
-      "surgery_procedure": "Elective surgical procedure under general anesthesia",
+      "surgery_procedure": "Not verified",
       "stricta": {
         "acupoints": "LI4 (Hegu), PC6 (Neiguan), ST36 (Zusanli), SP6 (Sanyinjiao)",
         "frequency_raw": "2/100 Hz (dense-disperse)",
@@ -18041,7 +18086,8 @@
         "sessions_category": "Single session",
         "duration_raw": "30 minutes per session",
         "duration_category": "30 min",
-        "needle_depth": "Surface hydrogel electrode"
+        "needle_depth": "Surface hydrogel electrode",
+        "status": "Unverified (legacy)"
       },
       "population": {
         "total_n": 105,
@@ -18063,7 +18109,7 @@
       "doi": "10.1007/s40122-023-00493-2",
       "country": "China",
       "country_evidence": null,
-      "surgery_procedure": "Elective surgical procedure under general anesthesia",
+      "surgery_procedure": "Not verified",
       "stricta": {
         "acupoints": "HT7 (Shenmen), PC6 (Neiguan), ST36 (Zusanli)",
         "frequency_raw": "2/100 Hz (dense-disperse)",
@@ -18075,7 +18121,8 @@
         "sessions_category": "Single session",
         "duration_raw": "30 minutes per session",
         "duration_category": "30 min",
-        "needle_depth": "Surface hydrogel electrode"
+        "needle_depth": "Surface hydrogel electrode",
+        "status": "Unverified (legacy)"
       },
       "population": {
         "total_n": 83,
@@ -18097,7 +18144,7 @@
       "doi": "10.1007/s00268-023-06924-7",
       "country": "China",
       "country_evidence": null,
-      "surgery_procedure": "Elective surgical procedure under general anesthesia",
+      "surgery_procedure": "Not verified",
       "stricta": {
         "acupoints": "BL32 (Ciliao), CV3 (Zhongji), CV4 (Guanyuan), SP6 (Sanyinjiao)",
         "frequency_raw": "2/100 Hz (dense-disperse)",
@@ -18109,7 +18156,8 @@
         "sessions_category": "Single session",
         "duration_raw": "30 minutes per session",
         "duration_category": "30 min",
-        "needle_depth": "Surface hydrogel electrode"
+        "needle_depth": "Surface hydrogel electrode",
+        "status": "Unverified (legacy)"
       },
       "population": {
         "total_n": 1838,
@@ -18131,7 +18179,7 @@
       "doi": "10.1177/09645284231211601",
       "country": "China",
       "country_evidence": null,
-      "surgery_procedure": "Elective surgical procedure under general anesthesia",
+      "surgery_procedure": "Not verified",
       "stricta": {
         "acupoints": "ST32 (Futu), ST36 (Zusanli), SP9 (Yinlingquan), GB34 (Yanglingquan)",
         "frequency_raw": "2/100 Hz (dense-disperse)",
@@ -18143,7 +18191,8 @@
         "sessions_category": "Single session",
         "duration_raw": "30 minutes per session",
         "duration_category": "30 min",
-        "needle_depth": "Acupuncture needle (15–25 mm depth)"
+        "needle_depth": "Acupuncture needle (15–25 mm depth)",
+        "status": "Unverified (legacy)"
       },
       "population": {
         "total_n": 76,
@@ -18165,7 +18214,7 @@
       "doi": "10.1016/j.ctcp.2023.101824",
       "country": "China",
       "country_evidence": null,
-      "surgery_procedure": "Elective surgical procedure under general anesthesia",
+      "surgery_procedure": "Not verified",
       "stricta": {
         "acupoints": "PC6 (Neiguan)",
         "frequency_raw": "2/100 Hz (dense-disperse)",
@@ -18177,7 +18226,8 @@
         "sessions_category": "Single session",
         "duration_raw": "30 minutes per session",
         "duration_category": "30 min",
-        "needle_depth": "Surface hydrogel electrode"
+        "needle_depth": "Surface hydrogel electrode",
+        "status": "Unverified (legacy)"
       },
       "population": {
         "total_n": 115,
@@ -18199,7 +18249,7 @@
       "doi": "10.1007/s12282-024-01606-1",
       "country": "China",
       "country_evidence": null,
-      "surgery_procedure": "Elective surgical procedure under general anesthesia",
+      "surgery_procedure": "Not verified",
       "stricta": {
         "acupoints": "PC6 (Neiguan), LI4 (Hegu)",
         "frequency_raw": "2/100 Hz (dense-disperse)",
@@ -18211,7 +18261,8 @@
         "sessions_category": "Single session",
         "duration_raw": "30 minutes per session",
         "duration_category": "30 min",
-        "needle_depth": "Surface hydrogel electrode"
+        "needle_depth": "Surface hydrogel electrode",
+        "status": "Unverified (legacy)"
       },
       "population": {
         "total_n": 138,
@@ -18233,7 +18284,7 @@
       "doi": "10.1016/j.explore.2023.11.004",
       "country": "China",
       "country_evidence": null,
-      "surgery_procedure": "Elective surgical procedure under general anesthesia",
+      "surgery_procedure": "Not verified",
       "stricta": {
         "acupoints": "PC6 (Neiguan), ST36 (Zusanli), ST37 (Shangjuxu)",
         "frequency_raw": "2/100 Hz (dense-disperse)",
@@ -18245,7 +18296,8 @@
         "sessions_category": "Single session",
         "duration_raw": "30 minutes per session",
         "duration_category": "30 min",
-        "needle_depth": "Acupuncture needle (15–25 mm depth)"
+        "needle_depth": "Acupuncture needle (15–25 mm depth)",
+        "status": "Unverified (legacy)"
       },
       "population": {
         "total_n": 180,
@@ -18267,7 +18319,7 @@
       "doi": "10.62347/WNTO7078",
       "country": "China",
       "country_evidence": null,
-      "surgery_procedure": "Elective surgical procedure under general anesthesia",
+      "surgery_procedure": "Not verified",
       "stricta": {
         "acupoints": "ST36 (Zusanli), ST37 (Shangjuxu), ST39 (Xiajuxu)",
         "frequency_raw": "2/100 Hz (dense-disperse)",
@@ -18279,7 +18331,8 @@
         "sessions_category": "Single session",
         "duration_raw": "30 minutes per session",
         "duration_category": "30 min",
-        "needle_depth": "Acupuncture needle (15–25 mm depth)"
+        "needle_depth": "Acupuncture needle (15–25 mm depth)",
+        "status": "Unverified (legacy)"
       },
       "population": {
         "total_n": 88,
@@ -18301,7 +18354,7 @@
       "doi": "10.3389/fneur.2025.1580759",
       "country": "China",
       "country_evidence": null,
-      "surgery_procedure": "Elective surgical procedure under general anesthesia",
+      "surgery_procedure": "Not verified",
       "stricta": {
         "acupoints": "PC6 (Neiguan), SP4 (Gongsun)",
         "frequency_raw": "2/100 Hz (dense-disperse)",
@@ -18313,7 +18366,8 @@
         "sessions_category": "Single session",
         "duration_raw": "30 minutes per session",
         "duration_category": "30 min",
-        "needle_depth": "Acupuncture needle (15–25 mm depth)"
+        "needle_depth": "Acupuncture needle (15–25 mm depth)",
+        "status": "Unverified (legacy)"
       },
       "population": {
         "total_n": 77,
@@ -18335,7 +18389,7 @@
       "doi": "10.1016/j.injury.2025.112660",
       "country": "China",
       "country_evidence": null,
-      "surgery_procedure": "Elective surgical procedure under general anesthesia",
+      "surgery_procedure": "Not verified",
       "stricta": {
         "acupoints": "GV20 (Baihui), PC6 (Neiguan), ST36 (Zusanli), SP6 (Sanyinjiao)",
         "frequency_raw": "2/100 Hz (dense-disperse)",
@@ -18347,7 +18401,8 @@
         "sessions_category": "Single session",
         "duration_raw": "30 minutes per session",
         "duration_category": "30 min",
-        "needle_depth": "Surface hydrogel electrode"
+        "needle_depth": "Surface hydrogel electrode",
+        "status": "Unverified (legacy)"
       },
       "population": {
         "total_n": 53,
@@ -18369,7 +18424,7 @@
       "doi": "10.2147/JPR.S529193",
       "country": "China",
       "country_evidence": null,
-      "surgery_procedure": "Elective surgical procedure under general anesthesia",
+      "surgery_procedure": "Not verified",
       "stricta": {
         "acupoints": "LI4 (Hegu), PC6 (Neiguan)",
         "frequency_raw": "2/100 Hz (dense-disperse)",
@@ -18381,7 +18436,8 @@
         "sessions_category": "Single session",
         "duration_raw": "30 minutes per session",
         "duration_category": "30 min",
-        "needle_depth": "Surface hydrogel electrode"
+        "needle_depth": "Surface hydrogel electrode",
+        "status": "Unverified (legacy)"
       },
       "population": {
         "total_n": 100,
@@ -18403,7 +18459,7 @@
       "doi": "10.2147/JPR.S553932",
       "country": "China",
       "country_evidence": null,
-      "surgery_procedure": "Elective surgical procedure under general anesthesia",
+      "surgery_procedure": "Not verified",
       "stricta": {
         "acupoints": "LI4 (Hegu), PC6 (Neiguan), SP6 (Sanyinjiao), ST36 (Zusanli)",
         "frequency_raw": "2/100 Hz (dense-disperse)",
@@ -18415,7 +18471,8 @@
         "sessions_category": "Single session",
         "duration_raw": "30 minutes per session",
         "duration_category": "30 min",
-        "needle_depth": "Surface hydrogel electrode"
+        "needle_depth": "Surface hydrogel electrode",
+        "status": "Unverified (legacy)"
       },
       "population": {
         "total_n": 93,
@@ -18437,7 +18494,7 @@
       "doi": "10.2147/JPR.S543574",
       "country": "China",
       "country_evidence": null,
-      "surgery_procedure": "Elective surgical procedure under general anesthesia",
+      "surgery_procedure": "Not verified",
       "stricta": {
         "acupoints": "PC6 (Neiguan), ST36 (Zusanli), LI4 (Hegu)",
         "frequency_raw": "2/100 Hz (dense-disperse)",
@@ -18449,7 +18506,8 @@
         "sessions_category": "Single session",
         "duration_raw": "30 minutes per session",
         "duration_category": "30 min",
-        "needle_depth": "Surface hydrogel electrode"
+        "needle_depth": "Surface hydrogel electrode",
+        "status": "Unverified (legacy)"
       },
       "population": {
         "total_n": 85,
@@ -18483,7 +18541,8 @@
         "sessions_category": "Single session",
         "duration_raw": "30 minutes per session",
         "duration_category": "30 min",
-        "needle_depth": "Surface hydrogel electrode"
+        "needle_depth": "Surface hydrogel electrode",
+        "status": "Unverified (legacy)"
       },
       "population": {
         "total_n": 97,
@@ -18505,7 +18564,7 @@
       "doi": "10.5306/wjco.v17.i2.114431",
       "country": "China",
       "country_evidence": null,
-      "surgery_procedure": "Elective surgical procedure under general anesthesia",
+      "surgery_procedure": "Not verified",
       "stricta": {
         "acupoints": "ST36 (Zusanli), SP6 (Sanyinjiao)",
         "frequency_raw": "2/100 Hz (dense-disperse)",
@@ -18517,7 +18576,8 @@
         "sessions_category": "Single session",
         "duration_raw": "30 minutes per session",
         "duration_category": "30 min",
-        "needle_depth": "Acupuncture needle (15–25 mm depth)"
+        "needle_depth": "Acupuncture needle (15–25 mm depth)",
+        "status": "Unverified (legacy)"
       },
       "population": {
         "total_n": 130,
@@ -18539,7 +18599,7 @@
       "doi": "10.1080/08941939.2026.2653912",
       "country": "China",
       "country_evidence": null,
-      "surgery_procedure": "Elective surgical procedure under general anesthesia",
+      "surgery_procedure": "Not verified",
       "stricta": {
         "acupoints": "PC6 (Neiguan)",
         "frequency_raw": "2/100 Hz (dense-disperse)",
@@ -18551,7 +18611,8 @@
         "sessions_category": "Single session",
         "duration_raw": "30 minutes per session",
         "duration_category": "30 min",
-        "needle_depth": "Surface hydrogel electrode"
+        "needle_depth": "Surface hydrogel electrode",
+        "status": "Unverified (legacy)"
       },
       "population": {
         "randomized_arm1_n": 81,
@@ -18576,7 +18637,7 @@
       "doi": "10.1016/j.ctcp.2026.102076",
       "country": "China",
       "country_evidence": null,
-      "surgery_procedure": "Elective surgical procedure under general anesthesia",
+      "surgery_procedure": "Not verified",
       "stricta": {
         "acupoints": "ST36 (Zusanli), PC6 (Neiguan), LI4 (Hegu)",
         "frequency_raw": "2/100 Hz (dense-disperse)",
@@ -18588,7 +18649,8 @@
         "sessions_category": "Single session",
         "duration_raw": "30 minutes per session",
         "duration_category": "30 min",
-        "needle_depth": "Surface hydrogel electrode"
+        "needle_depth": "Surface hydrogel electrode",
+        "status": "Unverified (legacy)"
       },
       "population": {
         "total_n": 587,
@@ -18610,7 +18672,7 @@
       "doi": "10.1186/s13741-026-00656-7",
       "country": "China",
       "country_evidence": null,
-      "surgery_procedure": "Elective surgical procedure under general anesthesia",
+      "surgery_procedure": "Not verified",
       "stricta": {
         "acupoints": "LI4 (Hegu), PC6 (Neiguan), ST36 (Zusanli), SP6 (Sanyinjiao)",
         "frequency_raw": "2/100 Hz (dense-disperse)",
@@ -18622,7 +18684,8 @@
         "sessions_category": "Single session",
         "duration_raw": "30 minutes per session",
         "duration_category": "30 min",
-        "needle_depth": "Surface hydrogel electrode"
+        "needle_depth": "Surface hydrogel electrode",
+        "status": "Unverified (legacy)"
       },
       "population": {
         "total_n": 86,
@@ -18644,7 +18707,7 @@
       "doi": "10.1007/s11655-025-3844-7",
       "country": "China",
       "country_evidence": null,
-      "surgery_procedure": "Elective surgical procedure under general anesthesia",
+      "surgery_procedure": "Not verified",
       "stricta": {
         "acupoints": "LI4 (Hegu), PC6 (Neiguan), ST36 (Zusanli), ST37 (Shangjuxu)",
         "frequency_raw": "2/100 Hz (dense-disperse)",
@@ -18656,7 +18719,8 @@
         "sessions_category": "Single session",
         "duration_raw": "30 minutes per session",
         "duration_category": "30 min",
-        "needle_depth": "Surface hydrogel electrode"
+        "needle_depth": "Surface hydrogel electrode",
+        "status": "Unverified (legacy)"
       },
       "population": {
         "total_n": 120,
@@ -18678,7 +18742,7 @@
       "doi": "10.1186/s12906-026-05357-8",
       "country": "China",
       "country_evidence": null,
-      "surgery_procedure": "Elective surgical procedure under general anesthesia",
+      "surgery_procedure": "Not verified",
       "stricta": {
         "acupoints": "PC6 (Neiguan)",
         "frequency_raw": "2/100 Hz (dense-disperse)",
@@ -18690,7 +18754,8 @@
         "sessions_category": "Single session",
         "duration_raw": "30 minutes per session",
         "duration_category": "30 min",
-        "needle_depth": "Surface hydrogel electrode"
+        "needle_depth": "Surface hydrogel electrode",
+        "status": "Unverified (legacy)"
       },
       "population": {
         "total_n": 277,
@@ -18712,7 +18777,7 @@
       "doi": "10.2147/JPR.S619125",
       "country": "China",
       "country_evidence": null,
-      "surgery_procedure": "Elective surgical procedure under general anesthesia",
+      "surgery_procedure": "Not verified",
       "stricta": {
         "acupoints": "LI4 (Hegu), HT7 (Shenmen), PC6 (Neiguan)",
         "frequency_raw": "2/100 Hz (dense-disperse)",
@@ -18724,7 +18789,8 @@
         "sessions_category": "Single session",
         "duration_raw": "30 minutes per session",
         "duration_category": "30 min",
-        "needle_depth": "Surface hydrogel electrode"
+        "needle_depth": "Surface hydrogel electrode",
+        "status": "Unverified (legacy)"
       },
       "population": {
         "total_n": 33,
@@ -18748,17 +18814,21 @@
       "country_evidence": "Department and Clinic of General, Minimally Invasive and Endocrine Surgery, Wroclaw Medical University, 50-556 Wroclaw, Poland",
       "surgery_procedure": "Elective inguinal hernia repair (source states both laparoscopic mesh repair and Lichtenstein tension-free technique; internally inconsistent, not adjudicated)",
       "stricta": {
-        "acupoints": "LI4 + ipsilateral peri-incisional ashi points",
-        "frequency_raw": "Alternating 2/100 Hz",
+        "acupoints": "Unverified",
+        "frequency_raw": "Unverified",
         "frequency_category": "2/100 Hz (Dense-Disperse)",
-        "intensity": "not reported",
+        "intensity": "Qualitative titration to muscle twitch/De-Qi (50% reduction during sleep), numeric current not reported",
         "intensity_category": "not reported",
-        "timing_raw": "Postoperative only, starting 0.5 h after surgery",
+        "timing_raw": "Unverified",
         "timing_category": "Postoperative only",
         "sessions_category": "Repeated sessions",
-        "duration_raw": "30 min every 2 h through 24 h (0.5, 2, 18, 22, 42, 46 h — 6 sessions)",
+        "duration_raw": "30-minute stimulation at two-hour intervals, starting on PACU arrival",
         "duration_category": "30 min x 6 sessions",
-        "needle_depth": "Surface TEAS electrodes"
+        "needle_depth": "Surface TEAS electrodes",
+        "status": "Verified",
+        "verification_date": "2026-09-26",
+        "source_excerpt": "30-minute stimulation at two-hour intervals, starting on PACU arrival",
+        "source_hash": "c15af01d31dbd49a8bbcb8228709855cbadfa87eacbc7e6759e8cce4debe8ec8"
       },
       "population": {
         "total_n": 48,
@@ -18792,7 +18862,8 @@
         "sessions_category": "Repeated sessions (2)",
         "duration_raw": "30 min per session x 2",
         "duration_category": "30 min x 2 sessions",
-        "needle_depth": "Surface TEAS electrodes"
+        "needle_depth": "Surface TEAS electrodes",
+        "status": "Unverified (legacy)"
       },
       "population": {
         "total_n": 1655,
@@ -18826,7 +18897,8 @@
         "sessions_category": "Repeated sessions (4)",
         "duration_raw": "30-min sessions",
         "duration_category": "30 min x 4 sessions",
-        "needle_depth": "Surface TEAS electrodes"
+        "needle_depth": "Surface TEAS electrodes",
+        "status": "Unverified (legacy)"
       },
       "population": {
         "total_n": 85,
@@ -18860,7 +18932,8 @@
         "sessions_category": "Repeated sessions (6)",
         "duration_raw": "30-min sessions",
         "duration_category": "30 min x 6 sessions",
-        "needle_depth": "Surface TEAS electrodes"
+        "needle_depth": "Surface TEAS electrodes",
+        "status": "Unverified (legacy)"
       },
       "population": {
         "total_n": 54,
@@ -18894,7 +18967,8 @@
         "sessions_category": "Continuous (single continuous application)",
         "duration_raw": "Continuous through surgery",
         "duration_category": "Continuous",
-        "needle_depth": "Surface TEAS electrodes"
+        "needle_depth": "Surface TEAS electrodes",
+        "status": "Unverified (legacy)"
       },
       "population": {
         "total_n": 88,
@@ -18928,7 +19002,8 @@
         "sessions_category": "Repeated sessions (6)",
         "duration_raw": "30-min sessions",
         "duration_category": "30 min x 6 sessions",
-        "needle_depth": "Surface TAES electrodes"
+        "needle_depth": "Surface TAES electrodes",
+        "status": "Unverified (legacy)"
       },
       "population": {
         "total_n": 31,
@@ -18962,7 +19037,8 @@
         "sessions_category": "Repeated sessions (6)",
         "duration_raw": "1 h x 2 sessions/day x 3 days",
         "duration_category": "1 h x 6 sessions",
-        "needle_depth": "Surface TEA electrodes"
+        "needle_depth": "Surface TEA electrodes",
+        "status": "Unverified (legacy)"
       },
       "population": {
         "total_n": 42,
@@ -23532,6 +23608,1733 @@
       }
     ]
   },
+  "e2_inputs": [
+    {
+      "model_id": "E2_opioid24_TEAS_sham",
+      "study": "Szmit 2021",
+      "trial_id": "Szmit_2021",
+      "result_id": "V33-OD-0350",
+      "factor": "1.0",
+      "n_i": "24.0",
+      "mean_i": "7.5",
+      "sd_i": "3.8",
+      "n_c": "24.0",
+      "mean_c": "15.2",
+      "sd_c": "6.24",
+      "yi": "-7.699999999999999",
+      "vi": "2.224066666666667"
+    },
+    {
+      "model_id": "E2_opioid24_TEAS_sham",
+      "study": "Chen 1998",
+      "trial_id": "Chen_1998",
+      "result_id": "V33-OD-0013",
+      "factor": "5",
+      "n_i": "25.0",
+      "mean_i": "32.5",
+      "sd_i": "17.5",
+      "n_c": "25.0",
+      "mean_c": "53.5",
+      "sd_c": "25.0",
+      "yi": "-21.0",
+      "vi": "37.25"
+    },
+    {
+      "model_id": "E2_opioid24_TEAS_sham",
+      "study": "Chen 2020",
+      "trial_id": "Chen_2020",
+      "result_id": "V33-OD-0014",
+      "factor": "0.5",
+      "n_i": "40.0",
+      "mean_i": "36.215",
+      "sd_i": "2.39",
+      "n_c": "40.0",
+      "mean_c": "50.31",
+      "sd_c": "5.1",
+      "yi": "-14.094999999999999",
+      "vi": "0.7930524999999999"
+    },
+    {
+      "model_id": "E2_opioid24_TEAS_sham",
+      "study": "He 2026 (hepatectomy/JIS)",
+      "trial_id": "He_2026_hepatectomy_JIS",
+      "result_id": "V33-OD-0214",
+      "factor": "1.0",
+      "n_i": "80.0",
+      "mean_i": "20.0",
+      "sd_i": "2.5",
+      "n_c": "79.0",
+      "mean_c": "20.6",
+      "sd_c": "4.5",
+      "yi": "-0.6000000000000014",
+      "vi": "0.3344541139240506"
+    },
+    {
+      "model_id": "E2_opioid24_TEAS_sham",
+      "study": "Lee 2011",
+      "trial_id": "Lee_2011",
+      "result_id": "V33-OD-0184+V33-OD-0185",
+      "factor": "1.0",
+      "n_i": "22.0",
+      "mean_i": "30.299090909090907",
+      "sd_i": "8.339820090037863",
+      "n_c": "12.0",
+      "mean_c": "34.2",
+      "sd_c": "6.4",
+      "yi": "-3.9009090909090958",
+      "vi": "6.574815112160568"
+    },
+    {
+      "model_id": "E2_opioid24_TEAS_sham",
+      "study": "Zhang 2025",
+      "trial_id": "Zhang_2025",
+      "result_id": "E2.1-ZHANG2025-POD1",
+      "factor": "0.5",
+      "n_i": "45",
+      "mean_i": "25.265",
+      "sd_i": "2.23",
+      "n_c": "48",
+      "mean_c": "26.895",
+      "sd_c": "2.57",
+      "yi": "-1.629999999999999",
+      "vi": "0.24811097222222223"
+    },
+    {
+      "model_id": "E2_opioid24_TEAS_sham",
+      "study": "Gu 2019",
+      "trial_id": "Gu_2019",
+      "result_id": "E2.1-GU2019-FIG4-T4",
+      "factor": "0.5",
+      "n_i": "58",
+      "mean_i": "27.855",
+      "sd_i": "3.965",
+      "n_c": "59",
+      "mean_c": "29.42",
+      "sd_c": "3.705",
+      "yi": "-1.5650000000000013",
+      "vi": "0.503717044126242"
+    },
+    {
+      "model_id": "E2_TEAS_sham_suf0.25",
+      "study": "Szmit 2021",
+      "trial_id": "Szmit_2021",
+      "result_id": "V33-OD-0350",
+      "factor": "1.0",
+      "n_i": "24.0",
+      "mean_i": "7.5",
+      "sd_i": "3.8",
+      "n_c": "24.0",
+      "mean_c": "15.2",
+      "sd_c": "6.24",
+      "yi": "-7.699999999999999",
+      "vi": "2.224066666666667"
+    },
+    {
+      "model_id": "E2_TEAS_sham_suf0.25",
+      "study": "Chen 1998",
+      "trial_id": "Chen_1998",
+      "result_id": "V33-OD-0013",
+      "factor": "5",
+      "n_i": "25.0",
+      "mean_i": "32.5",
+      "sd_i": "17.5",
+      "n_c": "25.0",
+      "mean_c": "53.5",
+      "sd_c": "25.0",
+      "yi": "-21.0",
+      "vi": "37.25"
+    },
+    {
+      "model_id": "E2_TEAS_sham_suf0.25",
+      "study": "Chen 2020",
+      "trial_id": "Chen_2020",
+      "result_id": "V33-OD-0014",
+      "factor": "0.25",
+      "n_i": "40.0",
+      "mean_i": "18.1075",
+      "sd_i": "1.195",
+      "n_c": "40.0",
+      "mean_c": "25.155",
+      "sd_c": "2.55",
+      "yi": "-7.047499999999999",
+      "vi": "0.19826312499999998"
+    },
+    {
+      "model_id": "E2_TEAS_sham_suf0.25",
+      "study": "He 2026 (hepatectomy/JIS)",
+      "trial_id": "He_2026_hepatectomy_JIS",
+      "result_id": "V33-OD-0214",
+      "factor": "1.0",
+      "n_i": "80.0",
+      "mean_i": "20.0",
+      "sd_i": "2.5",
+      "n_c": "79.0",
+      "mean_c": "20.6",
+      "sd_c": "4.5",
+      "yi": "-0.6000000000000014",
+      "vi": "0.3344541139240506"
+    },
+    {
+      "model_id": "E2_TEAS_sham_suf0.25",
+      "study": "Lee 2011",
+      "trial_id": "Lee_2011",
+      "result_id": "V33-OD-0184+V33-OD-0185",
+      "factor": "1.0",
+      "n_i": "22.0",
+      "mean_i": "30.299090909090907",
+      "sd_i": "8.339820090037863",
+      "n_c": "12.0",
+      "mean_c": "34.2",
+      "sd_c": "6.4",
+      "yi": "-3.9009090909090958",
+      "vi": "6.574815112160568"
+    },
+    {
+      "model_id": "E2_TEAS_sham_suf0.25",
+      "study": "Zhang 2025",
+      "trial_id": "Zhang_2025",
+      "result_id": "E2.1-ZHANG2025-POD1",
+      "factor": "0.25",
+      "n_i": "45",
+      "mean_i": "12.6325",
+      "sd_i": "1.115",
+      "n_c": "48",
+      "mean_c": "13.4475",
+      "sd_c": "1.285",
+      "yi": "-0.8149999999999995",
+      "vi": "0.062027743055555556"
+    },
+    {
+      "model_id": "E2_TEAS_sham_suf0.25",
+      "study": "Gu 2019",
+      "trial_id": "Gu_2019",
+      "result_id": "E2.1-GU2019-FIG4-T4",
+      "factor": "0.25",
+      "n_i": "58",
+      "mean_i": "13.9275",
+      "sd_i": "1.9825",
+      "n_c": "59",
+      "mean_c": "14.71",
+      "sd_c": "1.8525",
+      "yi": "-0.7825000000000006",
+      "vi": "0.1259292610315605"
+    },
+    {
+      "model_id": "E2_TEAS_sham_suf1.0",
+      "study": "Szmit 2021",
+      "trial_id": "Szmit_2021",
+      "result_id": "V33-OD-0350",
+      "factor": "1.0",
+      "n_i": "24.0",
+      "mean_i": "7.5",
+      "sd_i": "3.8",
+      "n_c": "24.0",
+      "mean_c": "15.2",
+      "sd_c": "6.24",
+      "yi": "-7.699999999999999",
+      "vi": "2.224066666666667"
+    },
+    {
+      "model_id": "E2_TEAS_sham_suf1.0",
+      "study": "Chen 1998",
+      "trial_id": "Chen_1998",
+      "result_id": "V33-OD-0013",
+      "factor": "5",
+      "n_i": "25.0",
+      "mean_i": "32.5",
+      "sd_i": "17.5",
+      "n_c": "25.0",
+      "mean_c": "53.5",
+      "sd_c": "25.0",
+      "yi": "-21.0",
+      "vi": "37.25"
+    },
+    {
+      "model_id": "E2_TEAS_sham_suf1.0",
+      "study": "Chen 2020",
+      "trial_id": "Chen_2020",
+      "result_id": "V33-OD-0014",
+      "factor": "1.0",
+      "n_i": "40.0",
+      "mean_i": "72.43",
+      "sd_i": "4.78",
+      "n_c": "40.0",
+      "mean_c": "100.62",
+      "sd_c": "10.2",
+      "yi": "-28.189999999999998",
+      "vi": "3.1722099999999998"
+    },
+    {
+      "model_id": "E2_TEAS_sham_suf1.0",
+      "study": "He 2026 (hepatectomy/JIS)",
+      "trial_id": "He_2026_hepatectomy_JIS",
+      "result_id": "V33-OD-0214",
+      "factor": "1.0",
+      "n_i": "80.0",
+      "mean_i": "20.0",
+      "sd_i": "2.5",
+      "n_c": "79.0",
+      "mean_c": "20.6",
+      "sd_c": "4.5",
+      "yi": "-0.6000000000000014",
+      "vi": "0.3344541139240506"
+    },
+    {
+      "model_id": "E2_TEAS_sham_suf1.0",
+      "study": "Lee 2011",
+      "trial_id": "Lee_2011",
+      "result_id": "V33-OD-0184+V33-OD-0185",
+      "factor": "1.0",
+      "n_i": "22.0",
+      "mean_i": "30.299090909090907",
+      "sd_i": "8.339820090037863",
+      "n_c": "12.0",
+      "mean_c": "34.2",
+      "sd_c": "6.4",
+      "yi": "-3.9009090909090958",
+      "vi": "6.574815112160568"
+    },
+    {
+      "model_id": "E2_TEAS_sham_suf1.0",
+      "study": "Zhang 2025",
+      "trial_id": "Zhang_2025",
+      "result_id": "E2.1-ZHANG2025-POD1",
+      "factor": "1.0",
+      "n_i": "45",
+      "mean_i": "50.53",
+      "sd_i": "4.46",
+      "n_c": "48",
+      "mean_c": "53.79",
+      "sd_c": "5.14",
+      "yi": "-3.259999999999998",
+      "vi": "0.9924438888888889"
+    },
+    {
+      "model_id": "E2_TEAS_sham_suf1.0",
+      "study": "Gu 2019",
+      "trial_id": "Gu_2019",
+      "result_id": "E2.1-GU2019-FIG4-T4",
+      "factor": "1.0",
+      "n_i": "58",
+      "mean_i": "55.71",
+      "sd_i": "7.93",
+      "n_c": "59",
+      "mean_c": "58.84",
+      "sd_c": "7.41",
+      "yi": "-3.1300000000000026",
+      "vi": "2.014868176504968"
+    },
+    {
+      "model_id": "E2_TEAS_sham_excl_E2.1",
+      "study": "Szmit 2021",
+      "trial_id": "Szmit_2021",
+      "result_id": "V33-OD-0350",
+      "factor": "1.0",
+      "n_i": "24.0",
+      "mean_i": "7.5",
+      "sd_i": "3.8",
+      "n_c": "24.0",
+      "mean_c": "15.2",
+      "sd_c": "6.24",
+      "yi": "-7.699999999999999",
+      "vi": "2.224066666666667"
+    },
+    {
+      "model_id": "E2_TEAS_sham_excl_E2.1",
+      "study": "Chen 1998",
+      "trial_id": "Chen_1998",
+      "result_id": "V33-OD-0013",
+      "factor": "5",
+      "n_i": "25.0",
+      "mean_i": "32.5",
+      "sd_i": "17.5",
+      "n_c": "25.0",
+      "mean_c": "53.5",
+      "sd_c": "25.0",
+      "yi": "-21.0",
+      "vi": "37.25"
+    },
+    {
+      "model_id": "E2_TEAS_sham_excl_E2.1",
+      "study": "Chen 2020",
+      "trial_id": "Chen_2020",
+      "result_id": "V33-OD-0014",
+      "factor": "0.5",
+      "n_i": "40.0",
+      "mean_i": "36.215",
+      "sd_i": "2.39",
+      "n_c": "40.0",
+      "mean_c": "50.31",
+      "sd_c": "5.1",
+      "yi": "-14.094999999999999",
+      "vi": "0.7930524999999999"
+    },
+    {
+      "model_id": "E2_TEAS_sham_excl_E2.1",
+      "study": "He 2026 (hepatectomy/JIS)",
+      "trial_id": "He_2026_hepatectomy_JIS",
+      "result_id": "V33-OD-0214",
+      "factor": "1.0",
+      "n_i": "80.0",
+      "mean_i": "20.0",
+      "sd_i": "2.5",
+      "n_c": "79.0",
+      "mean_c": "20.6",
+      "sd_c": "4.5",
+      "yi": "-0.6000000000000014",
+      "vi": "0.3344541139240506"
+    },
+    {
+      "model_id": "E2_TEAS_sham_excl_E2.1",
+      "study": "Lee 2011",
+      "trial_id": "Lee_2011",
+      "result_id": "V33-OD-0184+V33-OD-0185",
+      "factor": "1.0",
+      "n_i": "22.0",
+      "mean_i": "30.299090909090907",
+      "sd_i": "8.339820090037863",
+      "n_c": "12.0",
+      "mean_c": "34.2",
+      "sd_c": "6.4",
+      "yi": "-3.9009090909090958",
+      "vi": "6.574815112160568"
+    },
+    {
+      "model_id": "E2_TEAS_sham_leaveout_Gu2019",
+      "study": "Szmit 2021",
+      "trial_id": "Szmit_2021",
+      "result_id": "V33-OD-0350",
+      "factor": "1.0",
+      "n_i": "24.0",
+      "mean_i": "7.5",
+      "sd_i": "3.8",
+      "n_c": "24.0",
+      "mean_c": "15.2",
+      "sd_c": "6.24",
+      "yi": "-7.699999999999999",
+      "vi": "2.224066666666667"
+    },
+    {
+      "model_id": "E2_TEAS_sham_leaveout_Gu2019",
+      "study": "Chen 1998",
+      "trial_id": "Chen_1998",
+      "result_id": "V33-OD-0013",
+      "factor": "5",
+      "n_i": "25.0",
+      "mean_i": "32.5",
+      "sd_i": "17.5",
+      "n_c": "25.0",
+      "mean_c": "53.5",
+      "sd_c": "25.0",
+      "yi": "-21.0",
+      "vi": "37.25"
+    },
+    {
+      "model_id": "E2_TEAS_sham_leaveout_Gu2019",
+      "study": "Chen 2020",
+      "trial_id": "Chen_2020",
+      "result_id": "V33-OD-0014",
+      "factor": "0.5",
+      "n_i": "40.0",
+      "mean_i": "36.215",
+      "sd_i": "2.39",
+      "n_c": "40.0",
+      "mean_c": "50.31",
+      "sd_c": "5.1",
+      "yi": "-14.094999999999999",
+      "vi": "0.7930524999999999"
+    },
+    {
+      "model_id": "E2_TEAS_sham_leaveout_Gu2019",
+      "study": "He 2026 (hepatectomy/JIS)",
+      "trial_id": "He_2026_hepatectomy_JIS",
+      "result_id": "V33-OD-0214",
+      "factor": "1.0",
+      "n_i": "80.0",
+      "mean_i": "20.0",
+      "sd_i": "2.5",
+      "n_c": "79.0",
+      "mean_c": "20.6",
+      "sd_c": "4.5",
+      "yi": "-0.6000000000000014",
+      "vi": "0.3344541139240506"
+    },
+    {
+      "model_id": "E2_TEAS_sham_leaveout_Gu2019",
+      "study": "Lee 2011",
+      "trial_id": "Lee_2011",
+      "result_id": "V33-OD-0184+V33-OD-0185",
+      "factor": "1.0",
+      "n_i": "22.0",
+      "mean_i": "30.299090909090907",
+      "sd_i": "8.339820090037863",
+      "n_c": "12.0",
+      "mean_c": "34.2",
+      "sd_c": "6.4",
+      "yi": "-3.9009090909090958",
+      "vi": "6.574815112160568"
+    },
+    {
+      "model_id": "E2_TEAS_sham_leaveout_Gu2019",
+      "study": "Zhang 2025",
+      "trial_id": "Zhang_2025",
+      "result_id": "E2.1-ZHANG2025-POD1",
+      "factor": "0.5",
+      "n_i": "45",
+      "mean_i": "25.265",
+      "sd_i": "2.23",
+      "n_c": "48",
+      "mean_c": "26.895",
+      "sd_c": "2.57",
+      "yi": "-1.629999999999999",
+      "vi": "0.24811097222222223"
+    },
+    {
+      "model_id": "E2_TEAS_sham_leaveout_Lee2011",
+      "study": "Szmit 2021",
+      "trial_id": "Szmit_2021",
+      "result_id": "V33-OD-0350",
+      "factor": "1.0",
+      "n_i": "24.0",
+      "mean_i": "7.5",
+      "sd_i": "3.8",
+      "n_c": "24.0",
+      "mean_c": "15.2",
+      "sd_c": "6.24",
+      "yi": "-7.699999999999999",
+      "vi": "2.224066666666667"
+    },
+    {
+      "model_id": "E2_TEAS_sham_leaveout_Lee2011",
+      "study": "Chen 1998",
+      "trial_id": "Chen_1998",
+      "result_id": "V33-OD-0013",
+      "factor": "5",
+      "n_i": "25.0",
+      "mean_i": "32.5",
+      "sd_i": "17.5",
+      "n_c": "25.0",
+      "mean_c": "53.5",
+      "sd_c": "25.0",
+      "yi": "-21.0",
+      "vi": "37.25"
+    },
+    {
+      "model_id": "E2_TEAS_sham_leaveout_Lee2011",
+      "study": "Chen 2020",
+      "trial_id": "Chen_2020",
+      "result_id": "V33-OD-0014",
+      "factor": "0.5",
+      "n_i": "40.0",
+      "mean_i": "36.215",
+      "sd_i": "2.39",
+      "n_c": "40.0",
+      "mean_c": "50.31",
+      "sd_c": "5.1",
+      "yi": "-14.094999999999999",
+      "vi": "0.7930524999999999"
+    },
+    {
+      "model_id": "E2_TEAS_sham_leaveout_Lee2011",
+      "study": "He 2026 (hepatectomy/JIS)",
+      "trial_id": "He_2026_hepatectomy_JIS",
+      "result_id": "V33-OD-0214",
+      "factor": "1.0",
+      "n_i": "80.0",
+      "mean_i": "20.0",
+      "sd_i": "2.5",
+      "n_c": "79.0",
+      "mean_c": "20.6",
+      "sd_c": "4.5",
+      "yi": "-0.6000000000000014",
+      "vi": "0.3344541139240506"
+    },
+    {
+      "model_id": "E2_TEAS_sham_leaveout_Lee2011",
+      "study": "Zhang 2025",
+      "trial_id": "Zhang_2025",
+      "result_id": "E2.1-ZHANG2025-POD1",
+      "factor": "0.5",
+      "n_i": "45",
+      "mean_i": "25.265",
+      "sd_i": "2.23",
+      "n_c": "48",
+      "mean_c": "26.895",
+      "sd_c": "2.57",
+      "yi": "-1.629999999999999",
+      "vi": "0.24811097222222223"
+    },
+    {
+      "model_id": "E2_TEAS_sham_leaveout_Lee2011",
+      "study": "Gu 2019",
+      "trial_id": "Gu_2019",
+      "result_id": "E2.1-GU2019-FIG4-T4",
+      "factor": "0.5",
+      "n_i": "58",
+      "mean_i": "27.855",
+      "sd_i": "3.965",
+      "n_c": "59",
+      "mean_c": "29.42",
+      "sd_c": "3.705",
+      "yi": "-1.5650000000000013",
+      "vi": "0.503717044126242"
+    },
+    {
+      "model_id": "E2_TEAS_sham_excl_unquantified_rescue",
+      "study": "Szmit 2021",
+      "trial_id": "Szmit_2021",
+      "result_id": "V33-OD-0350",
+      "factor": "1.0",
+      "n_i": "24.0",
+      "mean_i": "7.5",
+      "sd_i": "3.8",
+      "n_c": "24.0",
+      "mean_c": "15.2",
+      "sd_c": "6.24",
+      "yi": "-7.699999999999999",
+      "vi": "2.224066666666667"
+    },
+    {
+      "model_id": "E2_TEAS_sham_excl_unquantified_rescue",
+      "study": "Chen 2020",
+      "trial_id": "Chen_2020",
+      "result_id": "V33-OD-0014",
+      "factor": "0.5",
+      "n_i": "40.0",
+      "mean_i": "36.215",
+      "sd_i": "2.39",
+      "n_c": "40.0",
+      "mean_c": "50.31",
+      "sd_c": "5.1",
+      "yi": "-14.094999999999999",
+      "vi": "0.7930524999999999"
+    },
+    {
+      "model_id": "E2_TEAS_sham_excl_unquantified_rescue",
+      "study": "He 2026 (hepatectomy/JIS)",
+      "trial_id": "He_2026_hepatectomy_JIS",
+      "result_id": "V33-OD-0214",
+      "factor": "1.0",
+      "n_i": "80.0",
+      "mean_i": "20.0",
+      "sd_i": "2.5",
+      "n_c": "79.0",
+      "mean_c": "20.6",
+      "sd_c": "4.5",
+      "yi": "-0.6000000000000014",
+      "vi": "0.3344541139240506"
+    },
+    {
+      "model_id": "E2_TEAS_sham_excl_unquantified_rescue",
+      "study": "Zhang 2025",
+      "trial_id": "Zhang_2025",
+      "result_id": "E2.1-ZHANG2025-POD1",
+      "factor": "0.5",
+      "n_i": "45",
+      "mean_i": "25.265",
+      "sd_i": "2.23",
+      "n_c": "48",
+      "mean_c": "26.895",
+      "sd_c": "2.57",
+      "yi": "-1.629999999999999",
+      "vi": "0.24811097222222223"
+    },
+    {
+      "model_id": "E2_TEAS_sham_excl_unquantified_rescue",
+      "study": "Gu 2019",
+      "trial_id": "Gu_2019",
+      "result_id": "E2.1-GU2019-FIG4-T4",
+      "factor": "0.5",
+      "n_i": "58",
+      "mean_i": "27.855",
+      "sd_i": "3.965",
+      "n_c": "59",
+      "mean_c": "29.42",
+      "sd_c": "3.705",
+      "yi": "-1.5650000000000013",
+      "vi": "0.503717044126242"
+    },
+    {
+      "model_id": "E2_TEAS_sham_excl_unstated_route",
+      "study": "Szmit 2021",
+      "trial_id": "Szmit_2021",
+      "result_id": "V33-OD-0350",
+      "factor": "1.0",
+      "n_i": "24.0",
+      "mean_i": "7.5",
+      "sd_i": "3.8",
+      "n_c": "24.0",
+      "mean_c": "15.2",
+      "sd_c": "6.24",
+      "yi": "-7.699999999999999",
+      "vi": "2.224066666666667"
+    },
+    {
+      "model_id": "E2_TEAS_sham_excl_unstated_route",
+      "study": "Chen 1998",
+      "trial_id": "Chen_1998",
+      "result_id": "V33-OD-0013",
+      "factor": "5",
+      "n_i": "25.0",
+      "mean_i": "32.5",
+      "sd_i": "17.5",
+      "n_c": "25.0",
+      "mean_c": "53.5",
+      "sd_c": "25.0",
+      "yi": "-21.0",
+      "vi": "37.25"
+    },
+    {
+      "model_id": "E2_TEAS_sham_excl_unstated_route",
+      "study": "Chen 2020",
+      "trial_id": "Chen_2020",
+      "result_id": "V33-OD-0014",
+      "factor": "0.5",
+      "n_i": "40.0",
+      "mean_i": "36.215",
+      "sd_i": "2.39",
+      "n_c": "40.0",
+      "mean_c": "50.31",
+      "sd_c": "5.1",
+      "yi": "-14.094999999999999",
+      "vi": "0.7930524999999999"
+    },
+    {
+      "model_id": "E2_TEAS_sham_excl_unstated_route",
+      "study": "Lee 2011",
+      "trial_id": "Lee_2011",
+      "result_id": "V33-OD-0184+V33-OD-0185",
+      "factor": "1.0",
+      "n_i": "22.0",
+      "mean_i": "30.299090909090907",
+      "sd_i": "8.339820090037863",
+      "n_c": "12.0",
+      "mean_c": "34.2",
+      "sd_c": "6.4",
+      "yi": "-3.9009090909090958",
+      "vi": "6.574815112160568"
+    },
+    {
+      "model_id": "E2_TEAS_sham_excl_unstated_route",
+      "study": "Zhang 2025",
+      "trial_id": "Zhang_2025",
+      "result_id": "E2.1-ZHANG2025-POD1",
+      "factor": "0.5",
+      "n_i": "45",
+      "mean_i": "25.265",
+      "sd_i": "2.23",
+      "n_c": "48",
+      "mean_c": "26.895",
+      "sd_c": "2.57",
+      "yi": "-1.629999999999999",
+      "vi": "0.24811097222222223"
+    },
+    {
+      "model_id": "E2_TEAS_sham_excl_unstated_route",
+      "study": "Gu 2019",
+      "trial_id": "Gu_2019",
+      "result_id": "E2.1-GU2019-FIG4-T4",
+      "factor": "0.5",
+      "n_i": "58",
+      "mean_i": "27.855",
+      "sd_i": "3.965",
+      "n_c": "59",
+      "mean_c": "29.42",
+      "sd_c": "3.705",
+      "yi": "-1.5650000000000013",
+      "vi": "0.503717044126242"
+    },
+    {
+      "model_id": "E2_TEAS_sham_E1_restriction",
+      "study": "Szmit 2021",
+      "trial_id": "Szmit_2021",
+      "result_id": "V33-OD-0350",
+      "factor": "1.0",
+      "n_i": "24.0",
+      "mean_i": "7.5",
+      "sd_i": "3.8",
+      "n_c": "24.0",
+      "mean_c": "15.2",
+      "sd_c": "6.24",
+      "yi": "-7.699999999999999",
+      "vi": "2.224066666666667"
+    },
+    {
+      "model_id": "E2_TEAS_sham_LOO_Szmit_2021",
+      "study": "Chen 1998",
+      "trial_id": "Chen_1998",
+      "result_id": "V33-OD-0013",
+      "factor": "5",
+      "n_i": "25.0",
+      "mean_i": "32.5",
+      "sd_i": "17.5",
+      "n_c": "25.0",
+      "mean_c": "53.5",
+      "sd_c": "25.0",
+      "yi": "-21.0",
+      "vi": "37.25"
+    },
+    {
+      "model_id": "E2_TEAS_sham_LOO_Szmit_2021",
+      "study": "Chen 2020",
+      "trial_id": "Chen_2020",
+      "result_id": "V33-OD-0014",
+      "factor": "0.5",
+      "n_i": "40.0",
+      "mean_i": "36.215",
+      "sd_i": "2.39",
+      "n_c": "40.0",
+      "mean_c": "50.31",
+      "sd_c": "5.1",
+      "yi": "-14.094999999999999",
+      "vi": "0.7930524999999999"
+    },
+    {
+      "model_id": "E2_TEAS_sham_LOO_Szmit_2021",
+      "study": "He 2026 (hepatectomy/JIS)",
+      "trial_id": "He_2026_hepatectomy_JIS",
+      "result_id": "V33-OD-0214",
+      "factor": "1.0",
+      "n_i": "80.0",
+      "mean_i": "20.0",
+      "sd_i": "2.5",
+      "n_c": "79.0",
+      "mean_c": "20.6",
+      "sd_c": "4.5",
+      "yi": "-0.6000000000000014",
+      "vi": "0.3344541139240506"
+    },
+    {
+      "model_id": "E2_TEAS_sham_LOO_Szmit_2021",
+      "study": "Lee 2011",
+      "trial_id": "Lee_2011",
+      "result_id": "V33-OD-0184+V33-OD-0185",
+      "factor": "1.0",
+      "n_i": "22.0",
+      "mean_i": "30.299090909090907",
+      "sd_i": "8.339820090037863",
+      "n_c": "12.0",
+      "mean_c": "34.2",
+      "sd_c": "6.4",
+      "yi": "-3.9009090909090958",
+      "vi": "6.574815112160568"
+    },
+    {
+      "model_id": "E2_TEAS_sham_LOO_Szmit_2021",
+      "study": "Zhang 2025",
+      "trial_id": "Zhang_2025",
+      "result_id": "E2.1-ZHANG2025-POD1",
+      "factor": "0.5",
+      "n_i": "45",
+      "mean_i": "25.265",
+      "sd_i": "2.23",
+      "n_c": "48",
+      "mean_c": "26.895",
+      "sd_c": "2.57",
+      "yi": "-1.629999999999999",
+      "vi": "0.24811097222222223"
+    },
+    {
+      "model_id": "E2_TEAS_sham_LOO_Szmit_2021",
+      "study": "Gu 2019",
+      "trial_id": "Gu_2019",
+      "result_id": "E2.1-GU2019-FIG4-T4",
+      "factor": "0.5",
+      "n_i": "58",
+      "mean_i": "27.855",
+      "sd_i": "3.965",
+      "n_c": "59",
+      "mean_c": "29.42",
+      "sd_c": "3.705",
+      "yi": "-1.5650000000000013",
+      "vi": "0.503717044126242"
+    },
+    {
+      "model_id": "E2_TEAS_sham_LOO_Chen_1998",
+      "study": "Szmit 2021",
+      "trial_id": "Szmit_2021",
+      "result_id": "V33-OD-0350",
+      "factor": "1.0",
+      "n_i": "24.0",
+      "mean_i": "7.5",
+      "sd_i": "3.8",
+      "n_c": "24.0",
+      "mean_c": "15.2",
+      "sd_c": "6.24",
+      "yi": "-7.699999999999999",
+      "vi": "2.224066666666667"
+    },
+    {
+      "model_id": "E2_TEAS_sham_LOO_Chen_1998",
+      "study": "Chen 2020",
+      "trial_id": "Chen_2020",
+      "result_id": "V33-OD-0014",
+      "factor": "0.5",
+      "n_i": "40.0",
+      "mean_i": "36.215",
+      "sd_i": "2.39",
+      "n_c": "40.0",
+      "mean_c": "50.31",
+      "sd_c": "5.1",
+      "yi": "-14.094999999999999",
+      "vi": "0.7930524999999999"
+    },
+    {
+      "model_id": "E2_TEAS_sham_LOO_Chen_1998",
+      "study": "He 2026 (hepatectomy/JIS)",
+      "trial_id": "He_2026_hepatectomy_JIS",
+      "result_id": "V33-OD-0214",
+      "factor": "1.0",
+      "n_i": "80.0",
+      "mean_i": "20.0",
+      "sd_i": "2.5",
+      "n_c": "79.0",
+      "mean_c": "20.6",
+      "sd_c": "4.5",
+      "yi": "-0.6000000000000014",
+      "vi": "0.3344541139240506"
+    },
+    {
+      "model_id": "E2_TEAS_sham_LOO_Chen_1998",
+      "study": "Lee 2011",
+      "trial_id": "Lee_2011",
+      "result_id": "V33-OD-0184+V33-OD-0185",
+      "factor": "1.0",
+      "n_i": "22.0",
+      "mean_i": "30.299090909090907",
+      "sd_i": "8.339820090037863",
+      "n_c": "12.0",
+      "mean_c": "34.2",
+      "sd_c": "6.4",
+      "yi": "-3.9009090909090958",
+      "vi": "6.574815112160568"
+    },
+    {
+      "model_id": "E2_TEAS_sham_LOO_Chen_1998",
+      "study": "Zhang 2025",
+      "trial_id": "Zhang_2025",
+      "result_id": "E2.1-ZHANG2025-POD1",
+      "factor": "0.5",
+      "n_i": "45",
+      "mean_i": "25.265",
+      "sd_i": "2.23",
+      "n_c": "48",
+      "mean_c": "26.895",
+      "sd_c": "2.57",
+      "yi": "-1.629999999999999",
+      "vi": "0.24811097222222223"
+    },
+    {
+      "model_id": "E2_TEAS_sham_LOO_Chen_1998",
+      "study": "Gu 2019",
+      "trial_id": "Gu_2019",
+      "result_id": "E2.1-GU2019-FIG4-T4",
+      "factor": "0.5",
+      "n_i": "58",
+      "mean_i": "27.855",
+      "sd_i": "3.965",
+      "n_c": "59",
+      "mean_c": "29.42",
+      "sd_c": "3.705",
+      "yi": "-1.5650000000000013",
+      "vi": "0.503717044126242"
+    },
+    {
+      "model_id": "E2_TEAS_sham_LOO_Chen_2020",
+      "study": "Szmit 2021",
+      "trial_id": "Szmit_2021",
+      "result_id": "V33-OD-0350",
+      "factor": "1.0",
+      "n_i": "24.0",
+      "mean_i": "7.5",
+      "sd_i": "3.8",
+      "n_c": "24.0",
+      "mean_c": "15.2",
+      "sd_c": "6.24",
+      "yi": "-7.699999999999999",
+      "vi": "2.224066666666667"
+    },
+    {
+      "model_id": "E2_TEAS_sham_LOO_Chen_2020",
+      "study": "Chen 1998",
+      "trial_id": "Chen_1998",
+      "result_id": "V33-OD-0013",
+      "factor": "5",
+      "n_i": "25.0",
+      "mean_i": "32.5",
+      "sd_i": "17.5",
+      "n_c": "25.0",
+      "mean_c": "53.5",
+      "sd_c": "25.0",
+      "yi": "-21.0",
+      "vi": "37.25"
+    },
+    {
+      "model_id": "E2_TEAS_sham_LOO_Chen_2020",
+      "study": "He 2026 (hepatectomy/JIS)",
+      "trial_id": "He_2026_hepatectomy_JIS",
+      "result_id": "V33-OD-0214",
+      "factor": "1.0",
+      "n_i": "80.0",
+      "mean_i": "20.0",
+      "sd_i": "2.5",
+      "n_c": "79.0",
+      "mean_c": "20.6",
+      "sd_c": "4.5",
+      "yi": "-0.6000000000000014",
+      "vi": "0.3344541139240506"
+    },
+    {
+      "model_id": "E2_TEAS_sham_LOO_Chen_2020",
+      "study": "Lee 2011",
+      "trial_id": "Lee_2011",
+      "result_id": "V33-OD-0184+V33-OD-0185",
+      "factor": "1.0",
+      "n_i": "22.0",
+      "mean_i": "30.299090909090907",
+      "sd_i": "8.339820090037863",
+      "n_c": "12.0",
+      "mean_c": "34.2",
+      "sd_c": "6.4",
+      "yi": "-3.9009090909090958",
+      "vi": "6.574815112160568"
+    },
+    {
+      "model_id": "E2_TEAS_sham_LOO_Chen_2020",
+      "study": "Zhang 2025",
+      "trial_id": "Zhang_2025",
+      "result_id": "E2.1-ZHANG2025-POD1",
+      "factor": "0.5",
+      "n_i": "45",
+      "mean_i": "25.265",
+      "sd_i": "2.23",
+      "n_c": "48",
+      "mean_c": "26.895",
+      "sd_c": "2.57",
+      "yi": "-1.629999999999999",
+      "vi": "0.24811097222222223"
+    },
+    {
+      "model_id": "E2_TEAS_sham_LOO_Chen_2020",
+      "study": "Gu 2019",
+      "trial_id": "Gu_2019",
+      "result_id": "E2.1-GU2019-FIG4-T4",
+      "factor": "0.5",
+      "n_i": "58",
+      "mean_i": "27.855",
+      "sd_i": "3.965",
+      "n_c": "59",
+      "mean_c": "29.42",
+      "sd_c": "3.705",
+      "yi": "-1.5650000000000013",
+      "vi": "0.503717044126242"
+    },
+    {
+      "model_id": "E2_TEAS_sham_LOO_He_2026",
+      "study": "Szmit 2021",
+      "trial_id": "Szmit_2021",
+      "result_id": "V33-OD-0350",
+      "factor": "1.0",
+      "n_i": "24.0",
+      "mean_i": "7.5",
+      "sd_i": "3.8",
+      "n_c": "24.0",
+      "mean_c": "15.2",
+      "sd_c": "6.24",
+      "yi": "-7.699999999999999",
+      "vi": "2.224066666666667"
+    },
+    {
+      "model_id": "E2_TEAS_sham_LOO_He_2026",
+      "study": "Chen 1998",
+      "trial_id": "Chen_1998",
+      "result_id": "V33-OD-0013",
+      "factor": "5",
+      "n_i": "25.0",
+      "mean_i": "32.5",
+      "sd_i": "17.5",
+      "n_c": "25.0",
+      "mean_c": "53.5",
+      "sd_c": "25.0",
+      "yi": "-21.0",
+      "vi": "37.25"
+    },
+    {
+      "model_id": "E2_TEAS_sham_LOO_He_2026",
+      "study": "Chen 2020",
+      "trial_id": "Chen_2020",
+      "result_id": "V33-OD-0014",
+      "factor": "0.5",
+      "n_i": "40.0",
+      "mean_i": "36.215",
+      "sd_i": "2.39",
+      "n_c": "40.0",
+      "mean_c": "50.31",
+      "sd_c": "5.1",
+      "yi": "-14.094999999999999",
+      "vi": "0.7930524999999999"
+    },
+    {
+      "model_id": "E2_TEAS_sham_LOO_He_2026",
+      "study": "Lee 2011",
+      "trial_id": "Lee_2011",
+      "result_id": "V33-OD-0184+V33-OD-0185",
+      "factor": "1.0",
+      "n_i": "22.0",
+      "mean_i": "30.299090909090907",
+      "sd_i": "8.339820090037863",
+      "n_c": "12.0",
+      "mean_c": "34.2",
+      "sd_c": "6.4",
+      "yi": "-3.9009090909090958",
+      "vi": "6.574815112160568"
+    },
+    {
+      "model_id": "E2_TEAS_sham_LOO_He_2026",
+      "study": "Zhang 2025",
+      "trial_id": "Zhang_2025",
+      "result_id": "E2.1-ZHANG2025-POD1",
+      "factor": "0.5",
+      "n_i": "45",
+      "mean_i": "25.265",
+      "sd_i": "2.23",
+      "n_c": "48",
+      "mean_c": "26.895",
+      "sd_c": "2.57",
+      "yi": "-1.629999999999999",
+      "vi": "0.24811097222222223"
+    },
+    {
+      "model_id": "E2_TEAS_sham_LOO_He_2026",
+      "study": "Gu 2019",
+      "trial_id": "Gu_2019",
+      "result_id": "E2.1-GU2019-FIG4-T4",
+      "factor": "0.5",
+      "n_i": "58",
+      "mean_i": "27.855",
+      "sd_i": "3.965",
+      "n_c": "59",
+      "mean_c": "29.42",
+      "sd_c": "3.705",
+      "yi": "-1.5650000000000013",
+      "vi": "0.503717044126242"
+    },
+    {
+      "model_id": "E2_TEAS_sham_LOO_Lee_2011",
+      "study": "Szmit 2021",
+      "trial_id": "Szmit_2021",
+      "result_id": "V33-OD-0350",
+      "factor": "1.0",
+      "n_i": "24.0",
+      "mean_i": "7.5",
+      "sd_i": "3.8",
+      "n_c": "24.0",
+      "mean_c": "15.2",
+      "sd_c": "6.24",
+      "yi": "-7.699999999999999",
+      "vi": "2.224066666666667"
+    },
+    {
+      "model_id": "E2_TEAS_sham_LOO_Lee_2011",
+      "study": "Chen 1998",
+      "trial_id": "Chen_1998",
+      "result_id": "V33-OD-0013",
+      "factor": "5",
+      "n_i": "25.0",
+      "mean_i": "32.5",
+      "sd_i": "17.5",
+      "n_c": "25.0",
+      "mean_c": "53.5",
+      "sd_c": "25.0",
+      "yi": "-21.0",
+      "vi": "37.25"
+    },
+    {
+      "model_id": "E2_TEAS_sham_LOO_Lee_2011",
+      "study": "Chen 2020",
+      "trial_id": "Chen_2020",
+      "result_id": "V33-OD-0014",
+      "factor": "0.5",
+      "n_i": "40.0",
+      "mean_i": "36.215",
+      "sd_i": "2.39",
+      "n_c": "40.0",
+      "mean_c": "50.31",
+      "sd_c": "5.1",
+      "yi": "-14.094999999999999",
+      "vi": "0.7930524999999999"
+    },
+    {
+      "model_id": "E2_TEAS_sham_LOO_Lee_2011",
+      "study": "He 2026 (hepatectomy/JIS)",
+      "trial_id": "He_2026_hepatectomy_JIS",
+      "result_id": "V33-OD-0214",
+      "factor": "1.0",
+      "n_i": "80.0",
+      "mean_i": "20.0",
+      "sd_i": "2.5",
+      "n_c": "79.0",
+      "mean_c": "20.6",
+      "sd_c": "4.5",
+      "yi": "-0.6000000000000014",
+      "vi": "0.3344541139240506"
+    },
+    {
+      "model_id": "E2_TEAS_sham_LOO_Lee_2011",
+      "study": "Zhang 2025",
+      "trial_id": "Zhang_2025",
+      "result_id": "E2.1-ZHANG2025-POD1",
+      "factor": "0.5",
+      "n_i": "45",
+      "mean_i": "25.265",
+      "sd_i": "2.23",
+      "n_c": "48",
+      "mean_c": "26.895",
+      "sd_c": "2.57",
+      "yi": "-1.629999999999999",
+      "vi": "0.24811097222222223"
+    },
+    {
+      "model_id": "E2_TEAS_sham_LOO_Lee_2011",
+      "study": "Gu 2019",
+      "trial_id": "Gu_2019",
+      "result_id": "E2.1-GU2019-FIG4-T4",
+      "factor": "0.5",
+      "n_i": "58",
+      "mean_i": "27.855",
+      "sd_i": "3.965",
+      "n_c": "59",
+      "mean_c": "29.42",
+      "sd_c": "3.705",
+      "yi": "-1.5650000000000013",
+      "vi": "0.503717044126242"
+    },
+    {
+      "model_id": "E2_TEAS_sham_LOO_Zhang_2025",
+      "study": "Szmit 2021",
+      "trial_id": "Szmit_2021",
+      "result_id": "V33-OD-0350",
+      "factor": "1.0",
+      "n_i": "24.0",
+      "mean_i": "7.5",
+      "sd_i": "3.8",
+      "n_c": "24.0",
+      "mean_c": "15.2",
+      "sd_c": "6.24",
+      "yi": "-7.699999999999999",
+      "vi": "2.224066666666667"
+    },
+    {
+      "model_id": "E2_TEAS_sham_LOO_Zhang_2025",
+      "study": "Chen 1998",
+      "trial_id": "Chen_1998",
+      "result_id": "V33-OD-0013",
+      "factor": "5",
+      "n_i": "25.0",
+      "mean_i": "32.5",
+      "sd_i": "17.5",
+      "n_c": "25.0",
+      "mean_c": "53.5",
+      "sd_c": "25.0",
+      "yi": "-21.0",
+      "vi": "37.25"
+    },
+    {
+      "model_id": "E2_TEAS_sham_LOO_Zhang_2025",
+      "study": "Chen 2020",
+      "trial_id": "Chen_2020",
+      "result_id": "V33-OD-0014",
+      "factor": "0.5",
+      "n_i": "40.0",
+      "mean_i": "36.215",
+      "sd_i": "2.39",
+      "n_c": "40.0",
+      "mean_c": "50.31",
+      "sd_c": "5.1",
+      "yi": "-14.094999999999999",
+      "vi": "0.7930524999999999"
+    },
+    {
+      "model_id": "E2_TEAS_sham_LOO_Zhang_2025",
+      "study": "He 2026 (hepatectomy/JIS)",
+      "trial_id": "He_2026_hepatectomy_JIS",
+      "result_id": "V33-OD-0214",
+      "factor": "1.0",
+      "n_i": "80.0",
+      "mean_i": "20.0",
+      "sd_i": "2.5",
+      "n_c": "79.0",
+      "mean_c": "20.6",
+      "sd_c": "4.5",
+      "yi": "-0.6000000000000014",
+      "vi": "0.3344541139240506"
+    },
+    {
+      "model_id": "E2_TEAS_sham_LOO_Zhang_2025",
+      "study": "Lee 2011",
+      "trial_id": "Lee_2011",
+      "result_id": "V33-OD-0184+V33-OD-0185",
+      "factor": "1.0",
+      "n_i": "22.0",
+      "mean_i": "30.299090909090907",
+      "sd_i": "8.339820090037863",
+      "n_c": "12.0",
+      "mean_c": "34.2",
+      "sd_c": "6.4",
+      "yi": "-3.9009090909090958",
+      "vi": "6.574815112160568"
+    },
+    {
+      "model_id": "E2_TEAS_sham_LOO_Zhang_2025",
+      "study": "Gu 2019",
+      "trial_id": "Gu_2019",
+      "result_id": "E2.1-GU2019-FIG4-T4",
+      "factor": "0.5",
+      "n_i": "58",
+      "mean_i": "27.855",
+      "sd_i": "3.965",
+      "n_c": "59",
+      "mean_c": "29.42",
+      "sd_c": "3.705",
+      "yi": "-1.5650000000000013",
+      "vi": "0.503717044126242"
+    },
+    {
+      "model_id": "E2_TEAS_sham_LOO_Gu_2019",
+      "study": "Szmit 2021",
+      "trial_id": "Szmit_2021",
+      "result_id": "V33-OD-0350",
+      "factor": "1.0",
+      "n_i": "24.0",
+      "mean_i": "7.5",
+      "sd_i": "3.8",
+      "n_c": "24.0",
+      "mean_c": "15.2",
+      "sd_c": "6.24",
+      "yi": "-7.699999999999999",
+      "vi": "2.224066666666667"
+    },
+    {
+      "model_id": "E2_TEAS_sham_LOO_Gu_2019",
+      "study": "Chen 1998",
+      "trial_id": "Chen_1998",
+      "result_id": "V33-OD-0013",
+      "factor": "5",
+      "n_i": "25.0",
+      "mean_i": "32.5",
+      "sd_i": "17.5",
+      "n_c": "25.0",
+      "mean_c": "53.5",
+      "sd_c": "25.0",
+      "yi": "-21.0",
+      "vi": "37.25"
+    },
+    {
+      "model_id": "E2_TEAS_sham_LOO_Gu_2019",
+      "study": "Chen 2020",
+      "trial_id": "Chen_2020",
+      "result_id": "V33-OD-0014",
+      "factor": "0.5",
+      "n_i": "40.0",
+      "mean_i": "36.215",
+      "sd_i": "2.39",
+      "n_c": "40.0",
+      "mean_c": "50.31",
+      "sd_c": "5.1",
+      "yi": "-14.094999999999999",
+      "vi": "0.7930524999999999"
+    },
+    {
+      "model_id": "E2_TEAS_sham_LOO_Gu_2019",
+      "study": "He 2026 (hepatectomy/JIS)",
+      "trial_id": "He_2026_hepatectomy_JIS",
+      "result_id": "V33-OD-0214",
+      "factor": "1.0",
+      "n_i": "80.0",
+      "mean_i": "20.0",
+      "sd_i": "2.5",
+      "n_c": "79.0",
+      "mean_c": "20.6",
+      "sd_c": "4.5",
+      "yi": "-0.6000000000000014",
+      "vi": "0.3344541139240506"
+    },
+    {
+      "model_id": "E2_TEAS_sham_LOO_Gu_2019",
+      "study": "Lee 2011",
+      "trial_id": "Lee_2011",
+      "result_id": "V33-OD-0184+V33-OD-0185",
+      "factor": "1.0",
+      "n_i": "22.0",
+      "mean_i": "30.299090909090907",
+      "sd_i": "8.339820090037863",
+      "n_c": "12.0",
+      "mean_c": "34.2",
+      "sd_c": "6.4",
+      "yi": "-3.9009090909090958",
+      "vi": "6.574815112160568"
+    },
+    {
+      "model_id": "E2_TEAS_sham_LOO_Gu_2019",
+      "study": "Zhang 2025",
+      "trial_id": "Zhang_2025",
+      "result_id": "E2.1-ZHANG2025-POD1",
+      "factor": "0.5",
+      "n_i": "45",
+      "mean_i": "25.265",
+      "sd_i": "2.23",
+      "n_c": "48",
+      "mean_c": "26.895",
+      "sd_c": "2.57",
+      "yi": "-1.629999999999999",
+      "vi": "0.24811097222222223"
+    },
+    {
+      "model_id": "E2_opioid24_TEAS_usual",
+      "study": "Szmit 2021",
+      "trial_id": "Szmit_2021",
+      "result_id": "V33-OD-0351",
+      "factor": "1.0",
+      "n_i": "24.0",
+      "mean_i": "7.5",
+      "sd_i": "3.8",
+      "n_c": "23.0",
+      "mean_c": "15.5",
+      "sd_c": "6.1",
+      "yi": "-8.0",
+      "vi": "2.219492753623188"
+    },
+    {
+      "model_id": "E2_opioid24_EA_sham",
+      "study": "Lin 2002",
+      "trial_id": "Lin_2002",
+      "result_id": "V33-OD-0006+V33-OD-0007",
+      "factor": "1.0",
+      "n_i": "50.0",
+      "mean_i": "18.4",
+      "sd_i": "13.1800096001947",
+      "n_c": "25.0",
+      "mean_c": "30.2",
+      "sd_c": "14.4",
+      "yi": "-11.8",
+      "vi": "11.76865306122449"
+    },
+    {
+      "model_id": "E2_opioid24_EA_usual",
+      "study": "El-Rakshy 2009",
+      "trial_id": "El_Rakshy_2009",
+      "result_id": "V33-OD-0252",
+      "factor": "1.0",
+      "n_i": "42.0",
+      "mean_i": "35.3",
+      "sd_i": "18.0",
+      "n_c": "53.0",
+      "mean_c": "36.9",
+      "sd_c": "18.0",
+      "yi": "-1.6000000000000014",
+      "vi": "13.827493261455526"
+    },
+    {
+      "model_id": "E2_opioid24_EA_usual",
+      "study": "Seevaunnamtum 2016",
+      "trial_id": "Seevaunnamtum_2016",
+      "result_id": "V33-OD-0003",
+      "factor": "1.0",
+      "n_i": "32.0",
+      "mean_i": "21.38",
+      "sd_i": "14.38",
+      "n_c": "32.0",
+      "mean_c": "33.94",
+      "sd_c": "20.24",
+      "yi": "-12.559999999999999",
+      "vi": "19.2638125"
+    },
+    {
+      "model_id": "E2_opioid24_EA_usual",
+      "study": "Yang 2024",
+      "trial_id": "Yang_2024",
+      "result_id": "V33-OD-0052",
+      "factor": "1.0",
+      "n_i": "90.0",
+      "mean_i": "43.7",
+      "sd_i": "4.7",
+      "n_c": "90.0",
+      "mean_c": "44.0",
+      "sd_c": "4.9",
+      "yi": "-0.29999999999999716",
+      "vi": "0.5122222222222224"
+    },
+    {
+      "model_id": "E2_opioid24_EA_usual",
+      "study": "Lin 2002",
+      "trial_id": "Lin_2002",
+      "result_id": "V33-OD-0004+V33-OD-0005",
+      "factor": "1.0",
+      "n_i": "50.0",
+      "mean_i": "18.4",
+      "sd_i": "13.1800096001947",
+      "n_c": "25.0",
+      "mean_c": "38.1",
+      "sd_c": "16.0",
+      "yi": "-19.700000000000003",
+      "vi": "13.71425306122449"
+    },
+    {
+      "model_id": "E2_EA_usual_leaveout_ElRakshy",
+      "study": "Seevaunnamtum 2016",
+      "trial_id": "Seevaunnamtum_2016",
+      "result_id": "V33-OD-0003",
+      "factor": "1.0",
+      "n_i": "32.0",
+      "mean_i": "21.38",
+      "sd_i": "14.38",
+      "n_c": "32.0",
+      "mean_c": "33.94",
+      "sd_c": "20.24",
+      "yi": "-12.559999999999999",
+      "vi": "19.2638125"
+    },
+    {
+      "model_id": "E2_EA_usual_leaveout_ElRakshy",
+      "study": "Yang 2024",
+      "trial_id": "Yang_2024",
+      "result_id": "V33-OD-0052",
+      "factor": "1.0",
+      "n_i": "90.0",
+      "mean_i": "43.7",
+      "sd_i": "4.7",
+      "n_c": "90.0",
+      "mean_c": "44.0",
+      "sd_c": "4.9",
+      "yi": "-0.29999999999999716",
+      "vi": "0.5122222222222224"
+    },
+    {
+      "model_id": "E2_EA_usual_leaveout_ElRakshy",
+      "study": "Lin 2002",
+      "trial_id": "Lin_2002",
+      "result_id": "V33-OD-0004+V33-OD-0005",
+      "factor": "1.0",
+      "n_i": "50.0",
+      "mean_i": "18.4",
+      "sd_i": "13.1800096001947",
+      "n_c": "25.0",
+      "mean_c": "38.1",
+      "sd_c": "16.0",
+      "yi": "-19.700000000000003",
+      "vi": "13.71425306122449"
+    },
+    {
+      "model_id": "E2_EA_usual_excl_unquantified_rescue",
+      "study": "El-Rakshy 2009",
+      "trial_id": "El_Rakshy_2009",
+      "result_id": "V33-OD-0252",
+      "factor": "1.0",
+      "n_i": "42.0",
+      "mean_i": "35.3",
+      "sd_i": "18.0",
+      "n_c": "53.0",
+      "mean_c": "36.9",
+      "sd_c": "18.0",
+      "yi": "-1.6000000000000014",
+      "vi": "13.827493261455526"
+    },
+    {
+      "model_id": "E2_EA_usual_excl_unquantified_rescue",
+      "study": "Seevaunnamtum 2016",
+      "trial_id": "Seevaunnamtum_2016",
+      "result_id": "V33-OD-0003",
+      "factor": "1.0",
+      "n_i": "32.0",
+      "mean_i": "21.38",
+      "sd_i": "14.38",
+      "n_c": "32.0",
+      "mean_c": "33.94",
+      "sd_c": "20.24",
+      "yi": "-12.559999999999999",
+      "vi": "19.2638125"
+    },
+    {
+      "model_id": "E2_EA_usual_LOO_El-Rakshy",
+      "study": "Seevaunnamtum 2016",
+      "trial_id": "Seevaunnamtum_2016",
+      "result_id": "V33-OD-0003",
+      "factor": "1.0",
+      "n_i": "32.0",
+      "mean_i": "21.38",
+      "sd_i": "14.38",
+      "n_c": "32.0",
+      "mean_c": "33.94",
+      "sd_c": "20.24",
+      "yi": "-12.559999999999999",
+      "vi": "19.2638125"
+    },
+    {
+      "model_id": "E2_EA_usual_LOO_El-Rakshy",
+      "study": "Yang 2024",
+      "trial_id": "Yang_2024",
+      "result_id": "V33-OD-0052",
+      "factor": "1.0",
+      "n_i": "90.0",
+      "mean_i": "43.7",
+      "sd_i": "4.7",
+      "n_c": "90.0",
+      "mean_c": "44.0",
+      "sd_c": "4.9",
+      "yi": "-0.29999999999999716",
+      "vi": "0.5122222222222224"
+    },
+    {
+      "model_id": "E2_EA_usual_LOO_El-Rakshy",
+      "study": "Lin 2002",
+      "trial_id": "Lin_2002",
+      "result_id": "V33-OD-0004+V33-OD-0005",
+      "factor": "1.0",
+      "n_i": "50.0",
+      "mean_i": "18.4",
+      "sd_i": "13.1800096001947",
+      "n_c": "25.0",
+      "mean_c": "38.1",
+      "sd_c": "16.0",
+      "yi": "-19.700000000000003",
+      "vi": "13.71425306122449"
+    },
+    {
+      "model_id": "E2_EA_usual_LOO_Seevaunnamtum",
+      "study": "El-Rakshy 2009",
+      "trial_id": "El_Rakshy_2009",
+      "result_id": "V33-OD-0252",
+      "factor": "1.0",
+      "n_i": "42.0",
+      "mean_i": "35.3",
+      "sd_i": "18.0",
+      "n_c": "53.0",
+      "mean_c": "36.9",
+      "sd_c": "18.0",
+      "yi": "-1.6000000000000014",
+      "vi": "13.827493261455526"
+    },
+    {
+      "model_id": "E2_EA_usual_LOO_Seevaunnamtum",
+      "study": "Yang 2024",
+      "trial_id": "Yang_2024",
+      "result_id": "V33-OD-0052",
+      "factor": "1.0",
+      "n_i": "90.0",
+      "mean_i": "43.7",
+      "sd_i": "4.7",
+      "n_c": "90.0",
+      "mean_c": "44.0",
+      "sd_c": "4.9",
+      "yi": "-0.29999999999999716",
+      "vi": "0.5122222222222224"
+    },
+    {
+      "model_id": "E2_EA_usual_LOO_Seevaunnamtum",
+      "study": "Lin 2002",
+      "trial_id": "Lin_2002",
+      "result_id": "V33-OD-0004+V33-OD-0005",
+      "factor": "1.0",
+      "n_i": "50.0",
+      "mean_i": "18.4",
+      "sd_i": "13.1800096001947",
+      "n_c": "25.0",
+      "mean_c": "38.1",
+      "sd_c": "16.0",
+      "yi": "-19.700000000000003",
+      "vi": "13.71425306122449"
+    },
+    {
+      "model_id": "E2_EA_usual_LOO_Yang",
+      "study": "El-Rakshy 2009",
+      "trial_id": "El_Rakshy_2009",
+      "result_id": "V33-OD-0252",
+      "factor": "1.0",
+      "n_i": "42.0",
+      "mean_i": "35.3",
+      "sd_i": "18.0",
+      "n_c": "53.0",
+      "mean_c": "36.9",
+      "sd_c": "18.0",
+      "yi": "-1.6000000000000014",
+      "vi": "13.827493261455526"
+    },
+    {
+      "model_id": "E2_EA_usual_LOO_Yang",
+      "study": "Seevaunnamtum 2016",
+      "trial_id": "Seevaunnamtum_2016",
+      "result_id": "V33-OD-0003",
+      "factor": "1.0",
+      "n_i": "32.0",
+      "mean_i": "21.38",
+      "sd_i": "14.38",
+      "n_c": "32.0",
+      "mean_c": "33.94",
+      "sd_c": "20.24",
+      "yi": "-12.559999999999999",
+      "vi": "19.2638125"
+    },
+    {
+      "model_id": "E2_EA_usual_LOO_Yang",
+      "study": "Lin 2002",
+      "trial_id": "Lin_2002",
+      "result_id": "V33-OD-0004+V33-OD-0005",
+      "factor": "1.0",
+      "n_i": "50.0",
+      "mean_i": "18.4",
+      "sd_i": "13.1800096001947",
+      "n_c": "25.0",
+      "mean_c": "38.1",
+      "sd_c": "16.0",
+      "yi": "-19.700000000000003",
+      "vi": "13.71425306122449"
+    },
+    {
+      "model_id": "E2_EA_usual_LOO_Lin",
+      "study": "El-Rakshy 2009",
+      "trial_id": "El_Rakshy_2009",
+      "result_id": "V33-OD-0252",
+      "factor": "1.0",
+      "n_i": "42.0",
+      "mean_i": "35.3",
+      "sd_i": "18.0",
+      "n_c": "53.0",
+      "mean_c": "36.9",
+      "sd_c": "18.0",
+      "yi": "-1.6000000000000014",
+      "vi": "13.827493261455526"
+    },
+    {
+      "model_id": "E2_EA_usual_LOO_Lin",
+      "study": "Seevaunnamtum 2016",
+      "trial_id": "Seevaunnamtum_2016",
+      "result_id": "V33-OD-0003",
+      "factor": "1.0",
+      "n_i": "32.0",
+      "mean_i": "21.38",
+      "sd_i": "14.38",
+      "n_c": "32.0",
+      "mean_c": "33.94",
+      "sd_c": "20.24",
+      "yi": "-12.559999999999999",
+      "vi": "19.2638125"
+    },
+    {
+      "model_id": "E2_EA_usual_LOO_Lin",
+      "study": "Yang 2024",
+      "trial_id": "Yang_2024",
+      "result_id": "V33-OD-0052",
+      "factor": "1.0",
+      "n_i": "90.0",
+      "mean_i": "43.7",
+      "sd_i": "4.7",
+      "n_c": "90.0",
+      "mean_c": "44.0",
+      "sd_c": "4.9",
+      "yi": "-0.29999999999999716",
+      "vi": "0.5122222222222224"
+    }
+  ],
   "outstanding": [
     "GRADE for the four new later-window QoR bodies.",
     "Structured length-of-stay, PACU, extubation and mobilisation tables.",

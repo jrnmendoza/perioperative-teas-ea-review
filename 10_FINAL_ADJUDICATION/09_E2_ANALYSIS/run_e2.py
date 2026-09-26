@@ -3,7 +3,9 @@ Membership: 02_DECISIONS/v38/E2_tierA_reclassification.csv and E2_tierB1_extract
 (committed in 9fa94d6 before this script was run). Estimator copied verbatim from
 code/fit_models.py (REML + safeguarded Hartung-Knapp; k=1 within-study normal CI;
 PI only for k>=5); arm combination copied from code/build_results.py combine_arm.
-Canonical outputs are not modified; results go to 09_E2_ANALYSIS/ only."""
+Canonical outputs are not modified; results go to 09_E2_ANALYSIS/ only.
+2026-09-26: added the per-contrast export e2_model_inputs.csv for the dashboard. Membership, arm values
+and estimator are unchanged; e2_model_outputs.csv/.json are byte-identical to the 2026-09-23 run."""
 import csv, json, math, pathlib, copy
 import numpy as np
 from scipy.optimize import minimize_scalar
@@ -12,12 +14,12 @@ ROOT=pathlib.Path(__file__).resolve().parents[2]; D=ROOT/'10_FINAL_ADJUDICATION'
 R={r['result_id']:r for r in csv.DictReader(open(D/'03_CANONICAL/results.csv',encoding='utf-8-sig'))}
 def arm(rid,f=1.0):
     r=R[rid]; g=lambda k:float(r[k])
-    return dict(trial=r['trial_id'],study=r['study'],rid=rid,n_i=g('n_i'),mean_i=g('mean_i')*f,sd_i=g('sd_i')*f,n_c=g('n_c'),mean_c=g('mean_c')*f,sd_c=g('sd_c')*f)
+    return dict(trial=r['trial_id'],study=r['study'],rid=rid,factor=f,n_i=g('n_i'),mean_i=g('mean_i')*f,sd_i=g('sd_i')*f,n_c=g('n_c'),mean_c=g('mean_c')*f,sd_c=g('sd_c')*f)
 # Tier B1 admissions under E2.1 (values from E2_tierB1_extraction.csv / E2_digitise_gu2019_fig4.json), ug sufentanil
 EXTRA={'ZHANG2025':dict(trial='Zhang_2025',study='Zhang 2025',rid='E2.1-ZHANG2025-POD1',n_i=45,mean_i=50.53,sd_i=4.46,n_c=48,mean_c=53.79,sd_c=5.14),
        'GU2019':dict(trial='Gu_2019',study='Gu 2019',rid='E2.1-GU2019-FIG4-T4',n_i=58,mean_i=55.71,sd_i=7.93,n_c=59,mean_c=58.84,sd_c=7.41)}
 def extra(key,f):
-    x=copy.deepcopy(EXTRA[key])
+    x=copy.deepcopy(EXTRA[key]); x['factor']=f
     for a in ('mean_i','sd_i','mean_c','sd_c'): x[a]*=f
     return x
 def combine(g):  # verbatim logic of build_results.combine_arm for continuous outcomes
@@ -54,9 +56,12 @@ def teas_sham(f=0.5,drop=()):
 def ea_usual(drop=()):
     c={'El-Rakshy 2009':arm('V33-OD-0252'),'Seevaunnamtum 2016':arm('V33-OD-0003'),'Yang 2024':arm('V33-OD-0052'),'Lin 2002':combine([arm('V33-OD-0004'),arm('V33-OD-0005')])}
     return [v for k,v in c.items() if k not in drop]
-M=[]
+M=[]; INPUTS=[]
 def add(mid,body,role,contrasts,note=''):
     r=dict(model_id=mid,body=body,role=role,note=note); r.update(fit(contrasts)); M.append(r)
+    for c in contrasts:  # arm values as analysed (after conversion factor and arm combination)
+        INPUTS.append(dict(model_id=mid,study=c['study'],trial_id=c['trial'],result_id=c['rid'],factor=c['factor'],n_i=c['n_i'],mean_i=c['mean_i'],sd_i=c['sd_i'],n_c=c['n_c'],mean_c=c['mean_c'],sd_c=c['sd_c'],
+                           yi=c['mean_i']-c['mean_c'],vi=c['sd_i']**2/c['n_i']+c['sd_c']**2/c['n_c']))
 # ---- validation against canonical v38 (must reproduce exactly) ----
 canon={r['model_id']:r for r in csv.DictReader(open(D/'04_MODELS/model_outputs.csv'))}
 VAL=[('opioid24_TEAS_sham',[arm('V33-OD-0350')]),
@@ -96,6 +101,7 @@ assert all(r['k']==3 for r in M if r['model_id'].startswith('E2_EA_usual_LOO_'))
 keys=list(dict.fromkeys(k for r in M for k in r))
 with open(OUT/'e2_model_outputs.csv','w',newline='') as fh: w=csv.DictWriter(fh,keys); w.writeheader(); w.writerows(M)
 json.dump(dict(validation=val,models=M),open(OUT/'e2_model_outputs.json','w'),indent=1,default=str)
+with open(OUT/'e2_model_inputs.csv','w',newline='') as fh: w=csv.DictWriter(fh,list(INPUTS[0])); w.writeheader(); w.writerows(INPUTS)
 print('VALIDATION (E2 code vs canonical v38):')
 for v in val: print(f"  {v['model_id']:38s} {v['e2_code']:>11.6f} vs {v['canonical']:>11.6f}  max|diff| {v['max_abs_diff']:.1e}  {'PASS' if v['pass_'] else 'FAIL'}")
 print()

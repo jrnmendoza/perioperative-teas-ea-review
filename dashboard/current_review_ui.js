@@ -45,22 +45,49 @@
     }</div>` : '')+
     `<h3>What changed</h3><ul><li>Wu 2016 recorded as citation-search evidence; full-text dispositions reconciled.</li><li>Risk-of-bias and all 38 certainty decisions adopted; no reviewer approval queue.</li><li>Zheng’s unresolved continuous data held out of main models; original values retained in diagnostics.</li><li>Wu 2025 intraoperative dose preceded treatment and is now diagnostic only.</li><li>The 24-h QoR addendum (3 Very-low-certainty bodies).</li><li>Later-window QoR models, ungraded.</li><li>The E2 post-hoc sensitivity analysis, with E1 retained as primary. <button type="button" class="text-button" data-view="results">See E2 results</button>.</li></ul>`+
     note('The 12-reference import gap and historical outcome-focused exclusion limitation remain disclosed.');}
+  // Drawn only from canonical model_outputs and model_inputs: pooled estimate/CI/PI are never recomputed here.
   function forest(m){
     const rows=d.inputs.filter(r=>r.model_id===m.model_id);if(!rows.length)return '';
-    const pts=rows.map(r=>({name:r.study,y:+r.yi,lo:+r.yi-1.95996398454*Math.sqrt(+r.vi),hi:+r.yi+1.95996398454*Math.sqrt(+r.vi)}));
-    pts.push({name:m.k===1?'Study estimate':'REML / safeguarded HK',y:m.effect,lo:m.ci_low,hi:m.ci_high,total:true});
-    let lo=Math.min(0,...pts.map(p=>p.lo)),hi=Math.max(0,...pts.map(p=>p.hi));const span=hi-lo||1;lo-=span*.07;hi+=span*.07;
-    const x=v=>250+(v-lo)/(hi-lo)*410,ht=50+pts.length*35;
-    const display=v=>num(m.measure==='RR'?Math.exp(v):v);
-    return `<div class="forest-wrap"><svg viewBox="0 0 960 ${ht}" role="img" aria-label="Forest plot for ${esc(m.model_id)}"><line x1="${x(0)}" x2="${x(0)}" y1="12" y2="${ht-27}" stroke="#64748b" stroke-dasharray="4 4"/>${pts.map((p,i)=>{const y=28+i*35;return `<text x="8" y="${y+4}" fill="#dbeafe" font-size="13">${esc(p.name)}</text><line x1="${x(p.lo)}" x2="${x(p.hi)}" y1="${y}" y2="${y}" stroke="${p.total?var(--plot-mark2, #5eead4):var(--plot-mark1, #93c5fd)}" stroke-width="2"/><circle cx="${x(p.y)}" cy="${y}" r="${p.total?6:4}" fill="${p.total?var(--plot-mark2, #5eead4):var(--plot-mark1, #93c5fd)}"/><text x="682" y="${y+4}" fill="#dbeafe" font-size="13">${display(p.y)} [${display(p.lo)}, ${display(p.hi)}]</text>`;}).join('')}<text x="250" y="${ht-5}" fill="#94a3b8" font-size="12">${m.measure==='RR'?'Risk ratio (log axis; null = 1)':'Difference (null = 0)'} · ${esc(unitLabel(m.unit))}</text></svg></div>`;
+    const rr=m.measure==='RR',show=v=>num(rr?Math.exp(v):v),z=1.95996398454,tau2=+m.tau2||0,pooled=m.k>1;
+    const w=rows.map(r=>1/(+r.vi+tau2)),wsum=w.reduce((a,b)=>a+b,0);
+    const pts=rows.map((r,i)=>({name:r.study,y:+r.yi,lo:+r.yi-z*Math.sqrt(+r.vi),hi:+r.yi+z*Math.sqrt(+r.vi),w:w[i]/wsum}));
+    const hasPI=m.pi_low!==null&&m.pi_low!==undefined,thr=m.reaches10mg!==null&&m.reaches10mg!==undefined?-10:null;
+    const vals=[0,...pts.flatMap(p=>[p.lo,p.hi]),m.ci_low,m.ci_high,...(hasPI?[m.pi_low,m.pi_high]:[]),...(thr===null?[]:[thr])];
+    let lo=Math.min(...vals),hi=Math.max(...vals);const pad=(hi-lo||1)*.05;lo-=pad;hi+=pad;
+    const X0=290,X1=640,x=v=>X0+(v-lo)/(hi-lo)*(X1-X0),fmt=v=>String(+v.toFixed(6));
+    let ticks;
+    if(rr){const sets=[[.01,.02,.05,.1,.2,.5,.75,1,1.5,2,4,5,10,20,50,100],[.001,.002,.005,.01,.02,.05,.1,.2,.5,1,2,5,10,20,50,100,200,500,1000],[.001,.01,.1,1,10,100,1000]];
+      ticks=sets.map(s=>s.filter(t=>Math.log(t)>=lo&&Math.log(t)<=hi)).find(s=>s.length<=7).map(t=>({v:Math.log(t),label:fmt(t)}));}
+    else{const raw=(hi-lo)/5,p=10**Math.floor(Math.log10(raw)),step=[1,2,2.5,5,10].map(s=>s*p).find(s=>raw<=s);
+      ticks=[];for(let v=Math.ceil(lo/step)*step;v<=hi;v+=step)ticks.push({v,label:fmt(v)});}
+    const RH=30,top=46,poolY=top+pts.length*RH+(pooled?8:0),piY=poolY+RH,axisY=(pooled?(hasPI?piY:poolY):top+(pts.length-1)*RH)+28,ht=axisY+(m.construct.startsWith('pre_')?46:66);
+    const T=(tx,ty,s,o='')=>`<text x="${tx}" y="${ty}" fill="#dbeafe" font-size="13" ${o}>${s}</text>`;
+    const comp={sham:'sham',usual_care:'usual care',active_electrical:'active electrical control'}[m.comparator]||esc(m.comparator);
+    const summary=pooled?`pooled ${show(m.effect)} [${show(m.ci_low)}, ${show(m.ci_high)}]`:`single study ${show(m.effect)} [${show(m.ci_low)}, ${show(m.ci_high)}], not pooled`;
+    return `<div class="forest-wrap"><svg viewBox="0 0 960 ${ht}" role="img" aria-label="Forest plot for ${esc(m.model_id)}: ${esc(summary)} ${esc(unitLabel(m.unit))}">`+
+      T(8,20,'Study','fill-opacity=".75"')+T(660,20,rr?'Risk ratio [95% CI]':'Estimate [95% CI]','fill-opacity=".75"')+(pooled?T(952,20,'Weight','fill-opacity=".75" text-anchor="end"'):'')+
+      `<line x1="${x(0)}" x2="${x(0)}" y1="30" y2="${axisY}" class="fp-null" stroke="#94a3b8" stroke-dasharray="4 4"/>`+
+      (thr===null?'':`<line x1="${x(thr)}" x2="${x(thr)}" y1="30" y2="${axisY}" class="fp-tl" stroke="#fbbf24" stroke-dasharray="1 4" stroke-width="2"/><text class="fp-tt" x="${x(thr)}" y="${axisY+54}" fill="#fbbf24" font-size="11" text-anchor="middle">−10 mg registered threshold</text>`)+
+      pts.map((p,i)=>{const y=top+i*RH,sz=pooled?5+11*Math.sqrt(p.w):9;return T(8,y+4,esc(p.name))+`<line x1="${x(p.lo)}" x2="${x(p.hi)}" y1="${y}" y2="${y}" class="fp-s" stroke="#93c5fd" stroke-width="1.6"/><rect class="fp-f" x="${x(p.y)-sz/2}" y="${y-sz/2}" width="${sz}" height="${sz}" fill="#93c5fd"/>`+T(660,y+4,`${show(p.y)} [${show(p.lo)}, ${show(p.hi)}]`)+(pooled?T(952,y+4,`${(100*p.w).toFixed(1)}%`,'text-anchor="end"'):'');}).join('')+
+      (pooled?`<line x1="8" x2="952" y1="${poolY-RH/2-4}" y2="${poolY-RH/2-4}" class="fp-sep" stroke="#2a3a52"/>`+T(8,poolY+4,'Pooled · REML, safeguarded HK','font-weight="600"')+
+        `<polygon points="${x(m.ci_low)},${poolY} ${x(m.effect)},${poolY-8} ${x(m.ci_high)},${poolY} ${x(m.effect)},${poolY+8}" class="fp-pf" fill="#5eead4"/>`+T(660,poolY+4,`${show(m.effect)} [${show(m.ci_low)}, ${show(m.ci_high)}]`,'class="fp-pf" font-weight="600" fill="#5eead4"')+T(952,poolY+4,'100%','text-anchor="end"')+
+        (hasPI?T(8,piY+4,'95% prediction interval','fill-opacity=".75"')+`<line x1="${x(m.pi_low)}" x2="${x(m.pi_high)}" y1="${piY}" y2="${piY}" class="fp-ps" stroke="#5eead4" stroke-width="2"/><line x1="${x(m.pi_low)}" x2="${x(m.pi_low)}" y1="${piY-5}" y2="${piY+5}" class="fp-ps" stroke="#5eead4" stroke-width="2"/><line x1="${x(m.pi_high)}" x2="${x(m.pi_high)}" y1="${piY-5}" y2="${piY+5}" class="fp-ps" stroke="#5eead4" stroke-width="2"/>`+T(660,piY+4,`${show(m.pi_low)} to ${show(m.pi_high)}`,'fill-opacity=".75"'):'')
+      :T(660,top+pts.length*RH-6,'Single study · not pooled','class="fp-mut" font-size="12" fill="#94a3b8"'))+
+      `<line x1="${X0}" x2="${X1}" y1="${axisY}" y2="${axisY}" class="fp-axis" stroke="#94a3b8"/>`+
+      ticks.map(t=>`<line x1="${x(t.v)}" x2="${x(t.v)}" y1="${axisY}" y2="${axisY+5}" class="fp-axis" stroke="#94a3b8"/><text class="fp-mut" x="${x(t.v)}" y="${axisY+18}" fill="#94a3b8" font-size="11" text-anchor="middle">${t.label}</text>`).join('')+
+      (m.construct.startsWith('pre_')?'':`<text x="${x(0)-8}" y="${axisY+36}" fill="#cbd5e1" font-size="12" text-anchor="end">← Favours ${esc(m.modality)}</text><text x="${x(0)+8}" y="${axisY+36}" fill="#cbd5e1" font-size="12">Favours ${comp} →</text>`)+
+      T(660,axisY+18,`${rr?'Risk ratio, log scale; null = 1':'Difference; null = 0'} · ${esc(unitLabel(m.unit))}`,'class="fp-mut" font-size="12" fill="#94a3b8"')+
+      `</svg></div>`;
   }
   function modelDetail(mid){
     const m=d.models.find(m=>m.model_id===mid);if(!m)return;
     const s=d.specifications.find(s=>s.model_id===mid),g=grade.get(mid),ins=d.inputs.filter(r=>r.model_id===mid);
-    const panel=$('model-panel');panel.innerHTML=title(esc(mid),`${esc(m.role)} · ${esc(m.status)} · k=${m.k}, N=${m.N}`)+`<p class="estimate">${effect(m)}</p>`+forest(m)+note(esc((s.note||'Separate modality/comparator body. Compatible active arms combined; control counted once.').replace('mg/ug', 'mg/µg')))+
-    (m.k>1?`<p>I² ${num(m.I2,1)}% · τ² ${num(m.tau2,3)} · safeguarded Hartung–Knapp interval.</p>`:'')+
+    const panel=$('model-panel');panel.innerHTML=title(esc(mid),`${esc(m.role)} · ${esc(m.status)} · k=${m.k}, N=${m.N}`)+`<p class="estimate">${effect(m)}</p>`+
+    `<details style="background:var(--bg); margin-bottom:16px"><summary>How to read this plot</summary><p style="font-size:0.9em">Squares are study estimates, sized by random-effects weight; their lines are normal-approximation 95% confidence intervals. The diamond is the canonical pooled estimate with its safeguarded Hartung–Knapp 95% confidence interval, which can be much wider than the study intervals when few studies are pooled. A single study is shown once and is not pooled. The bar under the diamond, where present, is the 95% prediction interval. The dashed line marks no effect (0, or 1 for risk ratios on a log scale); the dotted amber line marks the registered −10 mg IV MME threshold. Direction labels are printed under each axis.</p></details>`+
+    forest(m)+note(esc((s.note||'Separate modality/comparator body. Compatible active arms combined; control counted once.').replace('mg/ug', 'mg/µg')))+
+    (m.k>1?`<p>I² ${num(m.I2,1)}% <span title="I² represents the percentage of variation across studies that is due to heterogeneity rather than chance." style="cursor:help; border-bottom:1px dotted var(--accent); color:var(--accent)">?</span> · τ² ${num(m.tau2,3)} · safeguarded Hartung–Knapp interval.</p>`:'')+
     (m.pi_low!==null&&m.pi_low!==undefined?`<p>Prediction interval: ${num(m.measure==='RR'?Math.exp(m.pi_low):m.pi_low)} to ${num(m.measure==='RR'?Math.exp(m.pi_high):m.pi_high)} ${esc(unitLabel(m.unit))}. Interpret cautiously.</p>`:'')+
-    table(['Contributor / exact result IDs','n intervention / control','Source location'],ins.map(r=>[`${esc(r.study)}<br><small>${esc(r.result_id)}</small>`,`${num(r.n_i,0)} / ${num(r.n_c,0)}`,esc(r.source_location)]))+
+    table(['Contributor / exact result IDs','n intervention / control','Source location'],ins.map(r=>[`<button type="button" class="text-button result-open" data-result="${esc(r.result_id)}" data-result-model="${esc(r.model_id)}">${esc(r.study)}<br><small>${esc(r.result_id)}</small></button>`,`${num(r.n_i,0)} / ${num(r.n_c,0)}`,esc(r.source_location)]))+
     (g?`<h3>GRADE: ${esc(g.certainty)}</h3>${['risk_of_bias','inconsistency','indirectness','imprecision','publication_bias'].map(k=>`<p><strong>${esc(k.replaceAll('_',' '))} (−${g[k+'_downgrades']})</strong> — ${esc(g[k])}</p>`).join('')}`:note('Diagnostic only. Not an independently graded efficacy conclusion.'));
     panel.hidden=false;panel.scrollIntoView({behavior:'smooth',block:'start'});
   }
@@ -114,7 +141,7 @@
     const e2PainConstant = 'As stated in E2_RESULTS.md, digitising Lin 2002 Fig. 1 has not been done and would be a further post-hoc decision.';
     const jointRows = (d.e2_joint || []).map(j => [j.body, j.opioid_limb, j.pain_limb, j.joint_criterion]);
 
-    return `<h3>E2 post-hoc sensitivity analysis</h3>` +
+    return `<h3 id="e2-section" tabindex="-1">E2 post-hoc sensitivity analysis</h3>` +
       note('E1 stays primary. Trial-by-trial accounting: <a href="current/ADDITIONAL_FILE_12.md">Additional file 12</a>. E2 is post-hoc, defined and amended (E2.1) after data were seen, and the decision to keep E1 primary was made after the E2 results were known.') +
       table(['Body', 'E1 k / N', 'E1 Estimate [95% CI]', 'E2 k / N', 'E2 Estimate [95% CI]', 'E2 Certainty'], mainE2.map(m2 => {
         const m1 = primary.find(m => m.model_id === 'opioid24_' + m2.model_id.replace('E2_opioid24_', ''));
@@ -147,10 +174,8 @@
   function evidence(){return title('Certainty of evidence','38 bodies reviewed and adopted under delegation: 34 rated, four empty. No sensitivity is given a standalone efficacy grade.')+table(['Body','Certainty','Downgrades: bias / inconsistency / indirectness / imprecision / publication','Decision'],d.grade.map(g=>[`<button class="text-button model-link" data-model="${esc(g.model_id)}">${esc(g.model_id)}</button>`,tag(g.certainty),['risk_of_bias','inconsistency','indirectness','imprecision','publication_bias'].map(k=>g[k+'_downgrades']).join(' / '),esc(g.decision_status)]))+note('Select an evidence body to inspect all five rationales, its estimate and contributors. Moderate-certainty standalone pain evidence does not establish the joint opioid-and-pain criterion.');}
   function risk(){return title('Result-specific risk of bias','94 fresh assessments cover all 90 current non-sensitivity components plus four held/diagnostic results. No study-overall rating is substituted for an outcome-specific assessment.')+`<label for="risk-search">Find study, outcome, result ID or judgment</label><input id="risk-search" type="search" placeholder="e.g. Luo, nausea, V33-OD-0139"><div id="risk-list"></div>`+note('AI-conducted assessment under user delegation, dated 20 September 2026. Prior human completion is user-reported. Complete domain rationales and source locators are downloadable. Other historical/sensitivity results without fresh assessment are not silently called Low risk.');}
   function riskRows(q=''){$('risk-list').innerHTML=d.rob.filter(r=>`${r.study} ${r.outcome} ${r.result_id} ${r.overall}`.toLowerCase().includes(q.toLowerCase())).map(r=>`<details><summary>${esc(r.study)} · ${esc(r.outcome)} · ${tag(r.overall)}<br><small>${esc(r.result_id)} · ${esc(r.window)} · n=${esc(r.population)}</small></summary><p>${esc(r.comparison)}</p>${[1,2,3,4,5].map(i=>`<p><strong>D${i}: ${esc(r['d'+i])}</strong> — ${esc(r['d'+i+'_rationale'])}</p>`).join('')}<p>${esc(r.overall_rationale)}</p><p class="source">${esc(r.source_pdf)} · ${esc(r.result_location)}</p></details>`).join('');}
-  function studies(){return title('Study explorer','Canonical report inventory, model contribution and article figures. RoB is shown by result, never as a single inherited study label.')+`<label for="study-search">Find a report</label><input id="study-search" type="search" placeholder="Study name or year"><div id="study-list"></div>`;}
-  function studyRows(q=''){$('study-list').innerHTML=d.studies.filter(s=>s.report_id.toLowerCase().includes(q.toLowerCase())).map(s=>{
-    const ms=d.models.filter(m=>m.studies.split(';').map(x=>x.trim()).includes(s.report_id)),rs=d.rob.filter(r=>r.study===s.report_id),fs=window.ARTICLE_FIGURES?.[s.report_id]||[];
-    return `<details><summary>${esc(s.report_id)} · ${esc(s.modality)}<br><small>${esc(s.comparator)} · randomized n=${s.randomized_n_report}; counted n=${s.randomized_n_counted}</small></summary><p>${esc(s.notes)}</p><p class="source">${esc(s.source_pdf)}<br>SHA-256: ${esc(s.source_sha256)}</p><p>Trial family: ${esc(s.trial_id)} · ${esc(s.n_source_excerpt)}</p><h3>Current models (${ms.length})</h3>${ms.length?modelTable(ms):note('No current quantitative contribution; retained inventory/eligibility/source hold is not an efficacy claim.')}<h3>Fresh result-specific assessments (${rs.length})</h3>${rs.length?table(['Result','Outcome','Overall'],rs.map(r=>[esc(r.result_id),esc(r.outcome),tag(r.overall)])):note('No fresh v38 assessment needed for a current non-sensitivity contribution. Historical assessments are not displayed as current study-wide judgments.')}<h3>Article figures (${fs.length})</h3><div class="figure-grid">${fs.map(f=>`<figure><button class="figure-open" data-src="${esc(f.src)}" data-caption="${esc(s.report_id+' · '+f.caption)}"><img src="${esc(f.src)}" loading="lazy" alt="${esc(s.report_id+' '+f.caption)}"></button><figcaption>${esc(f.caption)}</figcaption></figure>`).join('')}</div></details>`;}).join('');}
+  function studies(){return `<div id="rich-explorer-container"></div>`;}
+  function studyRows(q=''){}
   function methods(){
     const e2_html = d.e2_methods_html ? `<h3>Post-hoc E2 sensitivity analysis</h3>` + Object.entries(d.e2_methods_html).map(([h, html]) => {
       return `<details><summary>${esc(h)}</summary>${html}</details>`;
@@ -179,8 +204,8 @@
       note(esc(q.certainty_conclusion))+
       table(['Comparison','k / reported N','MD [95% CI], scale points','I²','Certainty'],q.main_models.map(m=>[esc(m.label),`${m.k} / ${m.N}`,estimate(m),`${num(m.I2,1)}%`,'Very low']))+
       note(esc(q.wu_note))+
-      q.main_models.map(m=>{const g=q.grade.find(g=>g.model_id===m.model_id);return `<section><h3>${esc(m.label)}</h3><img src="current/${esc(m.model_id)}.svg" style="width:100%;height:auto" alt="Forest plot: ${esc(m.label)}"><details><summary>Inputs and all five GRADE rationales</summary>${table(['Study / exact result','n TEAS / control','Mean (SD), TEAS / control','Source'],m.inputs.map(r=>[`${esc(r.study)}<br>${esc(r.result_id)}`,`${r.n_i} / ${r.n_c}`,`${r.mean_i} (${r.sd_i}) / ${r.mean_c} (${r.sd_c})`,esc(r.source_location)]))}${['risk_of_bias','inconsistency','indirectness','imprecision','publication_bias'].map(k=>`<p><strong>${esc(k.replaceAll('_',' '))} (−${g[k+'_downgrades']})</strong>: ${esc(g[k])}</p>`).join('')}</details></section>`;}).join('')+
-      `<h3>Sensitivity analyses</h3>`+note('Eight leave-one-out analyses and one hypothetical Wu denominator-only stress test. Single-study remainders are not pooled. Diagnostics are not independently graded.')+
+      q.main_models.map(m=>{const g=q.grade.find(g=>g.model_id===m.model_id);return `<section id="qor-${esc(m.model_id)}" tabindex="-1"><h3>${esc(m.label)}</h3><img src="current/${esc(m.model_id)}.svg" style="width:100%;height:auto" alt="Forest plot: ${esc(m.label)}"><details><summary>Inputs and all five GRADE rationales</summary>${table(['Study / exact result','n TEAS / control','Mean (SD), TEAS / control','Source'],m.inputs.map(r=>[`${esc(r.study)}<br>${esc(r.result_id)}`,`${r.n_i} / ${r.n_c}`,`${r.mean_i} (${r.sd_i}) / ${r.mean_c} (${r.sd_c})`,esc(r.source_location)]))}${['risk_of_bias','inconsistency','indirectness','imprecision','publication_bias'].map(k=>`<p><strong>${esc(k.replaceAll('_',' '))} (−${g[k+'_downgrades']})</strong>: ${esc(g[k])}</p>`).join('')}</details></section>`;}).join('')+
+      `<h3 id="qor-diagnostics" tabindex="-1">Sensitivity analyses</h3>`+note('Eight leave-one-out analyses and one hypothetical Wu denominator-only stress test. Single-study remainders are not pooled. Diagnostics are not independently graded.')+
       table(['Diagnostic','k / N','MD [95% CI]','Limitation'],q.diagnostics.map(m=>[esc(m.label),`${m.k} / ${m.N}`,estimate(m),esc((m.note||'').replace('mg/ug', 'mg/µg'))]))+
       `<h3>Eight exact-result risk-of-bias assessments</h3>`+renderRob(q.rob)+
       note(esc(q.remaining)) + note(esc(q.core_status)) + note('The later-window models are now shown below, ungraded.') +
@@ -194,24 +219,66 @@
           m.result_ids.map(rid => { const rr = d.qor_later_rob.find(r => r.result_id === rid); return rr ? esc(rr.study) + ': ' + tag(rr.overall) : ''; }).join('<br>'),
           tag('Not graded')
         ])) +
-        d.qor_later_models.map(m => `<details><summary>${esc(m.label)}</summary><img src="current/forest_${esc(m.model_id)}.svg" alt="${esc(m.label)}" style="width:100%;height:auto"><p>Forest plot produced with ${esc(d.qor_later_metafor_manifest.R_version)} / metafor ${esc(d.qor_later_metafor_manifest.metafor_version)} (same specification as the canonical cross-check); script: forest_qor_later.R</p></details>`).join('') +
+        d.qor_later_models.map(m => `<details id="qor-${esc(m.model_id)}" tabindex="-1"><summary>${esc(m.label)}</summary><img src="current/forest_${esc(m.model_id)}.svg" alt="${esc(m.label)}" style="width:100%;height:auto"><p>Forest plot produced with ${esc(d.qor_later_metafor_manifest.R_version)} / metafor ${esc(d.qor_later_metafor_manifest.metafor_version)} (same specification as the canonical cross-check); script: forest_qor_later.R</p></details>`).join('') +
         `<h3>Five exact-result risk-of-bias assessments (later windows)</h3>` + renderRob(d.qor_later_rob) : '') +
       `<p><a href="current/QOR_ANALYSIS_REPORT.md" download>Full QoR report</a> · <a href="current/qor_rob2_signals.csv" download>176 signalling responses</a> · <a href="current/qor_source_locators.csv" download>Source locators</a> · <a href="current/qor_verification.json" download>Independent verification</a></p>`;
   }
   const views={overview,results,qor,coverage,prisma,evidence,risk,studies,methods,downloads};
-  function render(id){if(!views[id])id='overview';$('content').innerHTML=(['results','risk','evidence','studies','methods','downloads'].includes(id)?qorLink():'')+views[id]();document.querySelectorAll('.nav [data-view]').forEach(b=>{b.classList.toggle('active',b.dataset.view===id);b.setAttribute('aria-selected',String(b.dataset.view===id));});if(id==='risk')riskRows();if(id==='studies')studyRows();$('content').focus({preventScroll:true});return id;}
-  function show(id){id=render(id);if(location.hash!=='#'+id)history.pushState(null,'','#'+id);}
-  document.addEventListener('click',e=>{const nav=e.target.closest('[data-view]');if(nav){show(nav.dataset.view);return;}const model=e.target.closest('[data-model]');if(model){show('results');$('model-select').value=model.dataset.model;modelDetail(model.dataset.model);return;}const fig=e.target.closest('.figure-open');if(fig){$('figure-image').src=fig.dataset.src;$('figure-image').alt=fig.dataset.caption;$('figure-caption').textContent=fig.dataset.caption;$('figure-dialog').showModal();}});
+  function render(id){if(!views[id])id='overview';$('content').innerHTML=(['results','risk','evidence','studies','methods','downloads'].includes(id)?qorLink():'')+views[id]();document.querySelectorAll('.nav [data-view]').forEach(b=>{b.classList.toggle('active',b.dataset.view===id);b.setAttribute('aria-selected',String(b.dataset.view===id));});if(id==='risk')riskRows();if(id==='studies'){if(window.renderRichExplorer){window.renderRichExplorer('rich-explorer-container');}else{studyRows();}}$('content').focus({preventScroll:true});return id;}
+  // URL state: #view, #results?model=…&result=…, #qor?model=…; the Study Explorer adds its own filter/study keys.
+  const parseHash=()=>{const [view,q='']=location.hash.slice(1).split('?');return {view,params:new URLSearchParams(q)};};
+  const hashFor=(view,params={})=>{const q=new URLSearchParams(Object.entries(params).filter(([,v])=>v)).toString();return '#'+view+(q?'?'+q:'');};
+  let routed=null;
+  function setHash(h){history.replaceState(null,'',h);routed=location.hash;}
+  function route(force){
+    if(!force&&location.hash===routed)return;routed=location.hash;
+    document.querySelectorAll('dialog[open]').forEach(x=>x.close());
+    const {view,params}=parseHash(),id=render(view),mid=params.get('model');
+    const focus=el=>{if(!el)return;if(el.tagName==='DETAILS')el.open=true;el.scrollIntoView({block:'start'});el.focus({preventScroll:true});};
+    if(id==='results'&&mid){
+      if(d.models.some(m=>m.model_id===mid)){$('model-select').value=mid;modelDetail(mid);if(params.get('result'))openResultDrawer(params.get('result'),mid);}
+      else if((d.e2_analysis?.models||[]).some(m=>m.model_id===mid))focus($('e2-section'));
+    }
+    if(id==='qor'&&mid)focus($('qor-'+mid)||((d.qor_analysis?.diagnostics||[]).some(m=>m.model_id===mid)?$('qor-diagnostics'):null));
+  }
+  function show(id,params){const h=hashFor(id,params);if(location.hash!==h)history.pushState(null,'',h);route(true);}
+  // Route any model ID (core, QoR 24 h, QoR diagnostic, QoR later window, E2) to where it is displayed.
+  function openModel(mid){const qor=[...(d.qor_analysis?.main_models||[]),...(d.qor_analysis?.diagnostics||[]),...(d.qor_later_models||[])].some(m=>m.model_id===mid);show(qor?'qor':'results',{model:mid});}
+  // Result/source inspector for one model input row. A result can feed several models with different
+  // conversion factors, so the row is looked up by result ID and model ID together.
+  // Closing the inspector drops ?result= (called directly too: some browsers defer the close event for hidden pages).
+  function clearResultKey(){const {view,params}=parseHash();if($('result-drawer').open||view!=='results'||!params.get('result'))return;params.delete('result');setHash(hashFor('results',Object.fromEntries(params)));}
+  function openResultDrawer(rid,mid){
+    const r=d.inputs.find(x=>x.result_id===rid&&x.model_id===mid)||d.inputs.find(x=>x.result_id===rid);if(!r)return;
+    const parts=rid.split('+'),rr=r.measure==='RR',val=v=>num(rr?Math.exp(v):v),z=1.95996398454;
+    const panel=(h,body)=>`<div class="panel" style="margin:0 0 16px"><h3 style="margin-top:0">${h}</h3>${body}</div>`;
+    const arms=r.data_type==='Mean/SD'
+      ?table(['Arm','n','Mean','SD'],[[esc(r.intervention||'Intervention'),num(r.n_i,0),esc(r.mean_i),esc(r.sd_i)],[esc(r.comparator||'Comparator'),num(r.n_c,0),esc(r.mean_c),esc(r.sd_c)]])
+      :table(['Arm','Events','n'],[[esc(r.intervention||'Intervention'),esc(r.events_i),num(r.n_i,0)],[esc(r.comparator||'Comparator'),esc(r.events_c),num(r.n_c,0)]]);
+    const uses=d.inputs.filter(x=>x.result_id===rid);
+    const rob=parts.map(p=>{const a=d.rob.find(x=>x.result_id===p);return a?`<details><summary>${esc(p)} · ${esc(a.outcome)} · ${tag(a.overall)}</summary>${[1,2,3,4,5].map(i=>`<p><strong>D${i}: ${esc(a['d'+i])}</strong> — ${esc(a['d'+i+'_rationale'])}</p>`).join('')}<p>${esc(a.overall_rationale)}</p></details>`:`<p>${esc(p)}: no v38 result-specific assessment recorded.</p>`;}).join('');
+    const html=`<h2 style="margin-top:0">${esc(r.study)} · ${esc(rid)}</h2><p class="lede">${esc(r.outcome)} · ${esc(r.window)} · ${esc(r.population)}</p>`+
+      (parts.length>1?note(`Combined-arm input: component results ${parts.map(esc).join(' + ')} were combined into one intervention arm before analysis; the control arm is counted once.`):'')+
+      panel('Source',`<p><strong>${esc(r.source_location)}</strong></p>${r.source_quote?`<blockquote style="border-left:4px solid #64748b;padding-left:16px;margin-left:0">${esc(r.source_quote)}</blockquote>`:''}<p class="source">${esc(r.source_pdf)}<br>SHA-256: ${esc(r.source_sha256)}</p>${r.source_qc&&r.source_qc!=='NOT REPORTED'?`<p><strong>Extraction note:</strong> ${esc(r.source_qc)}</p>`:''}`)+
+      panel(`Extracted data in ${esc(r.model_id)}`,arms+`<p>Reported unit: ${esc(r.unit)} · conversion factor ${esc(r.factor)} · analysed as ${esc(unitLabel(r.analysis_unit||r.measure))}${r.continuity_correction&&r.continuity_correction!=='0'?` · continuity correction ${esc(r.continuity_correction)}`:''}</p><p>Study estimate: <strong>${val(+r.yi)} [${val(+r.yi-z*Math.sqrt(+r.vi))}, ${val(+r.yi+z*Math.sqrt(+r.vi))}]</strong> <small>(yi ${num(r.yi,4)}, vi ${num(r.vi,4)}${rr?'; log scale':''})</small></p>${r.decision?`<p><strong>Decision:</strong> ${esc(r.decision)}${r.rationale?` — ${esc(r.rationale)}`:''}</p>`:''}`)+
+      panel(`Used in ${uses.length} model${uses.length===1?'':'s'}`,`<ul>${uses.map(x=>`<li><button type="button" class="text-button" data-model="${esc(x.model_id)}">${esc(x.model_id)}</button> <small>${esc(x.role)} · factor ${esc(x.factor)}</small></li>`).join('')}</ul>`)+
+      panel('Risk of bias (v38, result-specific)',rob);
+    if(!$('result-drawer')){document.body.insertAdjacentHTML('beforeend',`<dialog id="result-drawer" aria-labelledby="result-drawer-title" style="width:820px;max-width:92vw;max-height:90vh;overflow-y:auto;background:var(--card)"><button type="button" id="close-result-drawer" aria-label="Close result inspector">Close</button><div id="result-drawer-content"></div></dialog>`);
+      $('result-drawer').addEventListener('close',clearResultKey);}
+    $('result-drawer-content').innerHTML=html;$('result-drawer-content').querySelector('h2').id='result-drawer-title';$('result-drawer').showModal();
+    if(parseHash().view==='results')setHash(hashFor('results',{model:r.model_id,result:rid}));
+  }
+  document.addEventListener('click',e=>{const nav=e.target.closest('[data-view]');if(nav){document.querySelectorAll('dialog[open]').forEach(x=>x.close());show(nav.dataset.view);return;}const model=e.target.closest('[data-model]');if(model){openModel(model.dataset.model);return;}const fig=e.target.closest('.figure-open');if(fig){$('figure-image').src=fig.dataset.src;$('figure-image').alt=fig.dataset.caption;$('figure-caption').textContent=fig.dataset.caption;$('figure-dialog').showModal();return;}const res=e.target.closest('.result-open');if(res){openResultDrawer(res.dataset.result,res.dataset.resultModel);return;}if(e.target.id==='close-result-drawer'){$('result-drawer').close();clearResultKey();}});
   document.addEventListener('input',e=>{if(e.target.id==='risk-search')riskRows(e.target.value);if(e.target.id==='study-search')studyRows(e.target.value);});
-  document.addEventListener('change',e=>{if(e.target.id==='model-select')modelDetail(e.target.value);});
+  document.addEventListener('change',e=>{if(e.target.id==='model-select'){history.pushState(null,'',hashFor('results',{model:e.target.value}));routed=location.hash;modelDetail(e.target.value);}});
   $('close-figure').addEventListener('click',()=>$('figure-dialog').close());
-  window.addEventListener('hashchange',()=>render(location.hash.slice(1)));
-  window.addEventListener('popstate',()=>render(location.hash.slice(1)));
+  window.addEventListener('hashchange',()=>route());
+  window.addEventListener('popstate',()=>route());
     document.querySelector('.nav').insertAdjacentHTML('beforeend', '<button type="button" id="theme-toggle" aria-label="Toggle light/dark theme" aria-pressed="false" style="margin-left:auto;padding:8px" title="Toggle theme">🌓</button>');
   $('theme-toggle').addEventListener('click', e => {
     const isDark = document.documentElement.dataset.theme === 'dark' || (!document.documentElement.dataset.theme && window.matchMedia('(prefers-color-scheme: dark)').matches);
     document.documentElement.dataset.theme = isDark ? 'light' : 'dark';
     e.target.setAttribute('aria-pressed', isDark);
   });
-  const initId=render(location.hash.slice(1));history.replaceState(null,'','#'+initId);
+  route();if(!views[parseHash().view])setHash('#overview');
 })();

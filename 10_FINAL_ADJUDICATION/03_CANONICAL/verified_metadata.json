@@ -1,0 +1,28 @@
+{
+  "Hou 2023": {
+    "stricta": {
+      "frequency_raw": "Three treatments: one day before surgery, before induction, and one day after surgery",
+      "intensity": "Generally 6-15 mA",
+      "status": "Verified",
+      "verification_date": "2026-09-26",
+      "source_excerpt": "three treatments: one day before surgery, before induction, and one day after surgery... generally 6-15 mA",
+      "source_hash": "bbe80fd736c7d0e2bd0002b2dd8f8bbb61efdef209046e6fd05b82ae52b8f97f",
+      "acupoints": "Unverified",
+      "timing_raw": "Unverified",
+      "duration_raw": "Unverified"
+    }
+  },
+  "Szmit 2021": {
+    "stricta": {
+      "duration_raw": "30-minute stimulation at two-hour intervals, starting on PACU arrival",
+      "intensity": "Qualitative titration to muscle twitch/De-Qi (50% reduction during sleep), numeric current not reported",
+      "status": "Verified",
+      "verification_date": "2026-09-26",
+      "source_excerpt": "30-minute stimulation at two-hour intervals, starting on PACU arrival",
+      "source_hash": "c15af01d31dbd49a8bbcb8228709855cbadfa87eacbc7e6759e8cce4debe8ec8",
+      "acupoints": "Unverified",
+      "frequency_raw": "Unverified",
+      "timing_raw": "Unverified"
+    }
+  }
+}
