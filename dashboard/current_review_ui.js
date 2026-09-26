@@ -45,21 +45,17 @@
     `<h3>What changed</h3><ul><li>Wu 2016 recorded as citation-search evidence; full-text dispositions reconciled.</li><li>Risk-of-bias and all 38 certainty decisions adopted; no reviewer approval queue.</li><li>Zheng’s unresolved continuous data held out of main models; original values retained in diagnostics.</li><li>Wu 2025 intraoperative dose preceded treatment and is now diagnostic only.</li><li>The 24-h QoR addendum (3 Very-low-certainty bodies).</li><li>Later-window QoR models, ungraded.</li><li>The E2 post-hoc sensitivity analysis, with E1 retained as primary. <button type="button" class="text-button" data-view="results">See E2 results</button>.</li></ul>`+
     note('The 12-reference import gap and historical outcome-focused exclusion limitation remain disclosed.');}
   function forest(m){
-    const rows=d.inputs.filter(r=>r.model_id===m.model_id);if(!rows.length)return '';
-    const pts=rows.map(r=>({name:r.study,y:+r.yi,lo:+r.yi-1.95996398454*Math.sqrt(+r.vi),hi:+r.yi+1.95996398454*Math.sqrt(+r.vi)}));
-    pts.push({name:m.k===1?'Study estimate':'REML / safeguarded HK',y:m.effect,lo:m.ci_low,hi:m.ci_high,total:true});
-    let lo=Math.min(0,...pts.map(p=>p.lo)),hi=Math.max(0,...pts.map(p=>p.hi));const span=hi-lo||1;lo-=span*.07;hi+=span*.07;
-    const x=v=>250+(v-lo)/(hi-lo)*410,ht=50+pts.length*35;
-    const display=v=>num(m.measure==='RR'?Math.exp(v):v);
-    return `<div class="forest-wrap"><svg viewBox="0 0 960 ${ht}" role="img" aria-label="Forest plot for ${esc(m.model_id)}"><line x1="${x(0)}" x2="${x(0)}" y1="12" y2="${ht-27}" stroke="#64748b" stroke-dasharray="4 4"/>${pts.map((p,i)=>{const y=28+i*35;return `<text x="8" y="${y+4}" fill="#dbeafe" font-size="13">${esc(p.name)}</text><line x1="${x(p.lo)}" x2="${x(p.hi)}" y1="${y}" y2="${y}" stroke="${p.total?'#5eead4':'#93c5fd'}" stroke-width="2"/><circle cx="${x(p.y)}" cy="${y}" r="${p.total?6:4}" fill="${p.total?'#5eead4':'#93c5fd'}"/><text x="682" y="${y+4}" fill="#dbeafe" font-size="13">${display(p.y)} [${display(p.lo)}, ${display(p.hi)}]</text>`;}).join('')}<text x="250" y="${ht-5}" fill="#94a3b8" font-size="12">${m.measure==='RR'?'Risk ratio (log axis; null = 1)':'Difference (null = 0)'} · ${esc(m.unit)}</text></svg></div>`;
+    return `<img src="current/${esc(m.model_id)}.svg" style="width:100%;height:auto;max-width:960px" alt="Stata Forest Plot for ${esc(m.model_id)}">`;
   }
   function modelDetail(mid){
     const m=d.models.find(m=>m.model_id===mid);if(!m)return;
     const s=d.specifications.find(s=>s.model_id===mid),g=grade.get(mid),ins=d.inputs.filter(r=>r.model_id===mid);
-    const panel=$('model-panel');panel.innerHTML=title(esc(mid),`${esc(m.role)} · ${esc(m.status)} · k=${m.k}, N=${m.N}`)+`<p class="estimate">${effect(m)}</p>`+forest(m)+note(esc((s.note||'Separate modality/comparator body. Compatible active arms combined; control counted once.').replace('mg/ug', 'mg/µg')))+
-    (m.k>1?`<p>I² ${num(m.I2,1)}% · τ² ${num(m.tau2,3)} · safeguarded Hartung–Knapp interval.</p>`:'')+
+    const panel=$('model-panel');panel.innerHTML=title(esc(mid),`${esc(m.role)} · ${esc(m.status)} · k=${m.k}, N=${m.N}`)+`<p class="estimate">${effect(m)}</p>`+
+    `<details style="background:var(--bg); margin-bottom:16px"><summary>How to read this plot</summary><p style="font-size:0.9em">Each dot represents a study's effect estimate; horizontal lines are 95% confidence intervals. The diamond represents the pooled meta-analytical effect. For continuous outcomes (e.g., MME), values to the left of 0 favor TEAS/EA. A prediction interval (if shown) estimates where 95% of future true study effects would fall.</p></details>`+
+    forest(m)+note(esc((s.note||'Separate modality/comparator body. Compatible active arms combined; control counted once.').replace('mg/ug', 'mg/µg')))+
+    (m.k>1?`<p>I² ${num(m.I2,1)}% <span title="I² represents the percentage of variation across studies that is due to heterogeneity rather than chance." style="cursor:help; border-bottom:1px dotted var(--accent); color:var(--accent)">?</span> · τ² ${num(m.tau2,3)} · safeguarded Hartung–Knapp interval.</p>`:'')+
     (m.pi_low!==null&&m.pi_low!==undefined?`<p>Prediction interval: ${num(m.measure==='RR'?Math.exp(m.pi_low):m.pi_low)} to ${num(m.measure==='RR'?Math.exp(m.pi_high):m.pi_high)} ${esc(m.unit)}. Interpret cautiously.</p>`:'')+
-    table(['Contributor / exact result IDs','n intervention / control','Source location'],ins.map(r=>[`${esc(r.study)}<br><small>${esc(r.result_id)}</small>`,`${num(r.n_i,0)} / ${num(r.n_c,0)}`,esc(r.source_location)]))+
+    table(['Contributor / exact result IDs','n intervention / control','Source location'],ins.map(r=>[`<button type="button" class="text-button result-open" data-result="${esc(r.result_id)}">${esc(r.study)}<br><small>${esc(r.result_id)}</small></button>`,`${num(r.n_i,0)} / ${num(r.n_c,0)}`,esc(r.source_location)]))+
     (g?`<h3>GRADE: ${esc(g.certainty)}</h3>${['risk_of_bias','inconsistency','indirectness','imprecision','publication_bias'].map(k=>`<p><strong>${esc(k.replaceAll('_',' '))} (−${g[k+'_downgrades']})</strong> — ${esc(g[k])}</p>`).join('')}`:note('Diagnostic only. Not an independently graded efficacy conclusion.'));
     panel.hidden=false;panel.scrollIntoView({behavior:'smooth',block:'start'});
   }
@@ -146,10 +142,8 @@
   function evidence(){return title('Certainty of evidence','38 bodies reviewed and adopted under delegation: 34 rated, four empty. No sensitivity is given a standalone efficacy grade.')+table(['Body','Certainty','Downgrades: bias / inconsistency / indirectness / imprecision / publication','Decision'],d.grade.map(g=>[`<button class="text-button model-link" data-model="${esc(g.model_id)}">${esc(g.model_id)}</button>`,tag(g.certainty),['risk_of_bias','inconsistency','indirectness','imprecision','publication_bias'].map(k=>g[k+'_downgrades']).join(' / '),esc(g.decision_status)]))+note('Select an evidence body to inspect all five rationales, its estimate and contributors. Moderate-certainty standalone pain evidence does not establish the joint opioid-and-pain criterion.');}
   function risk(){return title('Result-specific risk of bias','94 fresh assessments cover all 90 current non-sensitivity components plus four held/diagnostic results. No study-overall rating is substituted for an outcome-specific assessment.')+`<label for="risk-search">Find study, outcome, result ID or judgment</label><input id="risk-search" type="search" placeholder="e.g. Luo, nausea, V33-OD-0139"><div id="risk-list"></div>`+note('AI-conducted assessment under user delegation, dated 20 September 2026. Prior human completion is user-reported. Complete domain rationales and source locators are downloadable. Other historical/sensitivity results without fresh assessment are not silently called Low risk.');}
   function riskRows(q=''){$('risk-list').innerHTML=d.rob.filter(r=>`${r.study} ${r.outcome} ${r.result_id} ${r.overall}`.toLowerCase().includes(q.toLowerCase())).map(r=>`<details><summary>${esc(r.study)} · ${esc(r.outcome)} · ${tag(r.overall)}<br><small>${esc(r.result_id)} · ${esc(r.window)} · n=${esc(r.population)}</small></summary><p>${esc(r.comparison)}</p>${[1,2,3,4,5].map(i=>`<p><strong>D${i}: ${esc(r['d'+i])}</strong> — ${esc(r['d'+i+'_rationale'])}</p>`).join('')}<p>${esc(r.overall_rationale)}</p><p class="source">${esc(r.source_pdf)} · ${esc(r.result_location)}</p></details>`).join('');}
-  function studies(){return title('Study explorer','Canonical report inventory, model contribution and article figures. RoB is shown by result, never as a single inherited study label.')+`<label for="study-search">Find a report</label><input id="study-search" type="search" placeholder="Study name or year"><div id="study-list"></div>`;}
-  function studyRows(q=''){$('study-list').innerHTML=d.studies.filter(s=>s.report_id.toLowerCase().includes(q.toLowerCase())).map(s=>{
-    const ms=d.models.filter(m=>m.studies.split(';').map(x=>x.trim()).includes(s.report_id)),rs=d.rob.filter(r=>r.study===s.report_id),fs=window.ARTICLE_FIGURES?.[s.report_id]||[];
-    return `<details><summary>${esc(s.report_id)} · ${esc(s.modality)}<br><small>${esc(s.comparator)} · randomized n=${s.randomized_n_report}; counted n=${s.randomized_n_counted}</small></summary><p>${esc(s.notes)}</p><p class="source">${esc(s.source_pdf)}<br>SHA-256: ${esc(s.source_sha256)}</p><p>Trial family: ${esc(s.trial_id)} · ${esc(s.n_source_excerpt)}</p><h3>Current models (${ms.length})</h3>${ms.length?modelTable(ms):note('No current quantitative contribution; retained inventory/eligibility/source hold is not an efficacy claim.')}<h3>Fresh result-specific assessments (${rs.length})</h3>${rs.length?table(['Result','Outcome','Overall'],rs.map(r=>[esc(r.result_id),esc(r.outcome),tag(r.overall)])):note('No fresh v38 assessment needed for a current non-sensitivity contribution. Historical assessments are not displayed as current study-wide judgments.')}<h3>Article figures (${fs.length})</h3><div class="figure-grid">${fs.map(f=>`<figure><button class="figure-open" data-src="${esc(f.src)}" data-caption="${esc(s.report_id+' · '+f.caption)}"><img src="${esc(f.src)}" loading="lazy" alt="${esc(s.report_id+' '+f.caption)}"></button><figcaption>${esc(f.caption)}</figcaption></figure>`).join('')}</div></details>`;}).join('');}
+  function studies(){return `<div id="rich-explorer-container"></div>`;}
+  function studyRows(q=''){}
   function methods(){
     const e2_html = d.e2_methods_html ? `<h3>Post-hoc E2 sensitivity analysis</h3>` + Object.entries(d.e2_methods_html).map(([h, html]) => {
       return `<details><summary>${esc(h)}</summary>${html}</details>`;
@@ -198,9 +192,63 @@
       `<p><a href="current/QOR_ANALYSIS_REPORT.md" download>Full QoR report</a> · <a href="current/qor_rob2_signals.csv" download>176 signalling responses</a> · <a href="current/qor_source_locators.csv" download>Source locators</a> · <a href="current/qor_verification.json" download>Independent verification</a></p>`;
   }
   const views={overview,results,qor,coverage,prisma,evidence,risk,studies,methods,downloads};
-  function render(id){if(!views[id])id='overview';$('content').innerHTML=(['results','risk','evidence','studies','methods','downloads'].includes(id)?qorLink():'')+views[id]();document.querySelectorAll('.nav [data-view]').forEach(b=>{b.classList.toggle('active',b.dataset.view===id);b.setAttribute('aria-selected',String(b.dataset.view===id));});if(id==='risk')riskRows();if(id==='studies')studyRows();$('content').focus({preventScroll:true});return id;}
+  function render(id){if(!views[id])id='overview';$('content').innerHTML=(['results','risk','evidence','studies','methods','downloads'].includes(id)?qorLink():'')+views[id]();document.querySelectorAll('.nav [data-view]').forEach(b=>{b.classList.toggle('active',b.dataset.view===id);b.setAttribute('aria-selected',String(b.dataset.view===id));});if(id==='risk')riskRows();if(id==='studies'){if(window.renderRichExplorer){window.renderRichExplorer('rich-explorer-container');}else{studyRows();}}$('content').focus({preventScroll:true});return id;}
   function show(id){id=render(id);if(location.hash!=='#'+id)history.pushState(null,'','#'+id);}
-  document.addEventListener('click',e=>{const nav=e.target.closest('[data-view]');if(nav){show(nav.dataset.view);return;}const model=e.target.closest('[data-model]');if(model){show('results');$('model-select').value=model.dataset.model;modelDetail(model.dataset.model);return;}const fig=e.target.closest('.figure-open');if(fig){$('figure-image').src=fig.dataset.src;$('figure-image').alt=fig.dataset.caption;$('figure-caption').textContent=fig.dataset.caption;$('figure-dialog').showModal();}});
+  function openResultDrawer(rid) {
+     const r = d.inputs.find(x => x.result_id === rid);
+     if (!r) return;
+     const rr = d.rob.find(x => x.result_id === rid);
+     const isCont = r.data_type === 'Continuous';
+     const vStatus = r.source_qc === 'Verified' ? '<span class="tag risk-low">Verified</span>' : '<span class="tag risk-high">Unverified</span>';
+     
+     let html = `
+       <h2 style="margin-top:0">${esc(r.study)}: ${esc(r.result_id)}</h2>
+       <p class="lede">${esc(r.outcome)} · ${esc(r.window)}</p>
+       <div class="panel" style="margin-bottom:16px;">
+         <h3 style="margin-top:0">Source data</h3>
+         <p>${vStatus} <strong>${esc(r.source_pdf)}</strong> · ${esc(r.source_location)}</p>
+         ${r.source_quote ? `<blockquote style="border-left:4px solid #64748b; padding-left:16px; font-style:italic; margin-left:0;">${esc(r.source_quote)}</blockquote>` : ''}
+       </div>
+       <div class="panel" style="margin-bottom:16px;">
+         <h3 style="margin-top:0">Extraction & Conversion</h3>
+         ${isCont ? `
+           <p><strong>Treatment:</strong> n=${r.n_i}, mean=${r.mean_i}, SD=${r.sd_i}</p>
+           <p><strong>Control:</strong> n=${r.n_c}, mean=${r.mean_c}, SD=${r.sd_c}</p>
+         ` : `
+           <p><strong>Treatment:</strong> ${r.events_i} / ${r.n_i}</p>
+           <p><strong>Control:</strong> ${r.events_c} / ${r.n_c}</p>
+         `}
+         <p><strong>Reported unit:</strong> ${esc(r.unit)}</p>
+         <p><strong>Conversion factor:</strong> ${esc(r.factor)}</p>
+         <p><strong>Effect (yi, vi):</strong> ${num(r.yi, 4)}, ${num(r.vi, 4)}</p>
+       </div>
+     `;
+     if (rr) {
+       html += `
+         <div class="panel" style="margin-bottom:16px;">
+           <h3 style="margin-top:0">Risk of Bias (v38)</h3>
+           <p><strong>Overall:</strong> ${tag(rr.overall)}</p>
+           ${[1,2,3,4,5].map(i=>`<p style="margin-bottom:4px"><strong>D${i}: ${esc(rr['d'+i])}</strong> — ${esc(rr['d'+i+'_rationale'])}</p>`).join('')}
+         </div>
+       `;
+     }
+     
+     if (!$('result-drawer')) {
+       document.body.insertAdjacentHTML('beforeend', `
+       <style>
+         #result-drawer::backdrop { background: rgba(0,0,0,0.6); backdrop-filter: blur(3px); }
+         #result-drawer { animation: slideInRes 0.2s ease-out forwards; border: 1px solid var(--line); border-radius: 12px; }
+         @keyframes slideInRes { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
+       </style>
+       <dialog id="result-drawer" style="width:800px; max-width:90vw; background:#0d1624; color:var(--ink); padding:24px; max-height:90vh; overflow-y:auto; box-shadow:0 10px 30px rgba(0,0,0,0.5);">
+         <button type="button" onclick="document.getElementById('result-drawer').close()" style="float:right; background:rgba(255,255,255,0.05); border:1px solid var(--line); color:var(--ink); cursor:pointer; font-size:20px; border-radius:50%; width:36px; height:36px; display:flex; align-items:center; justify-content:center; transition:background 0.2s;">&times;</button>
+         <div id="result-drawer-content"></div>
+       </dialog>`);
+     }
+     $('result-drawer-content').innerHTML = html;
+     $('result-drawer').showModal();
+  }
+  document.addEventListener('click',e=>{const nav=e.target.closest('[data-view]');if(nav){show(nav.dataset.view);return;}const model=e.target.closest('[data-model]');if(model){show('results');$('model-select').value=model.dataset.model;modelDetail(model.dataset.model);return;}const fig=e.target.closest('.figure-open');if(fig){$('figure-image').src=fig.dataset.src;$('figure-image').alt=fig.dataset.caption;$('figure-caption').textContent=fig.dataset.caption;$('figure-dialog').showModal();return;}const res=e.target.closest('.result-open');if(res){openResultDrawer(res.dataset.result);return;}});
   document.addEventListener('input',e=>{if(e.target.id==='risk-search')riskRows(e.target.value);if(e.target.id==='study-search')studyRows(e.target.value);});
   document.addEventListener('change',e=>{if(e.target.id==='model-select')modelDetail(e.target.value);});
   $('close-figure').addEventListener('click',()=>$('figure-dialog').close());

@@ -67,6 +67,26 @@ for label,path in files:
  p=ROOT/path;target=OUT/p.name;shutil.copyfile(p,target);downloads.append(dict(label=label,href='current/'+p.name,source=path,sha256=hashlib.sha256(target.read_bytes()).hexdigest()))
 oldtext=(DASH/'data.js').read_text();old=json.JSONDecoder().raw_decode(oldtext.split('window.STUDIES_DATA = ',1)[1])[0]
 background={s['key']:{k:s.get(k) for k in ['citation','doi','country','country_evidence','surgery_procedure','stricta','population']} for s in old}
+verified_path = ROOT/'10_FINAL_ADJUDICATION/03_CANONICAL/verified_metadata.json'
+if verified_path.exists():
+ verified = json.loads(verified_path.read_text())
+ for sid, v_data in verified.items():
+  if sid not in background:
+   background[sid] = {}
+  for k, v in v_data.items():
+   if k == 'stricta' and 'stricta' in background[sid]:
+    background[sid]['stricta'].update(v)
+   else:
+    background[sid][k] = v
+
+for sid, bg in background.items():
+ if 'stricta' in bg and bg['stricta'] and bg['stricta'].get('status') != 'Verified':
+  bg['stricta']['status'] = 'Unverified (legacy)'
+ if not bg.get('surgery_procedure') or bg.get('surgery_procedure') == 'Elective surgical procedure under general anesthesia' or sid == 'Zhou 2025':
+  if 'Zhou 2025' in sid and bg.get('surgery_procedure'):
+   bg['participant_accounting_note'] = bg['surgery_procedure']
+  bg['surgery_procedure'] = 'Not verified'
+
 data=dict(version='v38',date='2026-09-20',registration='CRD420261452908',models=js('10_FINAL_ADJUDICATION/04_MODELS/model_outputs.json'),specifications=js('10_FINAL_ADJUDICATION/02_DECISIONS/model_specifications.json'),inputs=rows('10_FINAL_ADJUDICATION/04_MODELS/model_inputs.csv'),grade=rows('10_FINAL_ADJUDICATION/03_CANONICAL/grade.csv'),rob=rows('10_FINAL_ADJUDICATION/02_DECISIONS/v38/rob2_assessments.csv'),studies=js('10_FINAL_ADJUDICATION/03_CANONICAL/studies.json'),background=background,prisma=js('10_FINAL_ADJUDICATION/02_DECISIONS/v38/prisma_counts.json'),policies=js('10_FINAL_ADJUDICATION/02_DECISIONS/v38/methodological_decisions.json'),downloads=downloads)
 if coverage_path.exists():data['outcome_coverage']=json.loads(coverage_path.read_text())
 if qor_path.exists():
@@ -236,7 +256,7 @@ if meta_path.exists():
 
 page=f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Perioperative TEAS &amp; EA — Evidence Review v38</title><link rel="stylesheet" href="current_review.css"></head>
-<body><a class="skip" href="#content">Skip to evidence</a><div class="shell"><header><span class="eyebrow">Systematic review · Adjudication v38</span><h1>Perioperative electrical acupoint stimulation for postoperative opioid sparing</h1><p class="lede">TEAS and needle EA assessed separately · <a href="https://www.crd.york.ac.uk/PROSPERO/view/CRD420261452908" target="_blank" rel="noopener">PROSPERO CRD420261452908</a></p><nav class="nav" role="tablist" aria-label="Review sections">{nav}</nav></header><main id="content" tabindex="-1" style="padding-top:32px">{static}<noscript><p>JavaScript enables model selection, detailed bias assessments and article figures. <a href="current/FINAL_CURRENT_STATE_REPORT.md">Download the current-state report</a>.</p></noscript></main><footer>v38 core · 20 September 2026 · E2 sensitivity analysis · 23 September 2026{build_date} · Public analytical release (not data-locked). Post-hoc AI-assisted adjudication, with source and selection limitations disclosed. Review displays currently in English. Historical interface and user changes preserved in the project’s v38 baseline.</footer></div><dialog id="figure-dialog"><button type="button" id="close-figure" aria-label="Close article figure">Close</button><p id="figure-caption"></p><img id="figure-image" alt=""></dialog><script src="current_review.js"></script><script src="article_figures.js"></script><script src="search_strategies.js"></script><script src="current_review_ui.js"></script><!--BUILD_BADGE--></body></html>'''
+<body><a class="skip" href="#content">Skip to evidence</a><div class="shell"><header><span class="eyebrow">Systematic review · Adjudication v38</span><h1>Perioperative electrical acupoint stimulation for postoperative opioid sparing</h1><p class="lede">TEAS and needle EA assessed separately · <a href="https://www.crd.york.ac.uk/PROSPERO/view/CRD420261452908" target="_blank" rel="noopener">PROSPERO CRD420261452908</a></p><nav class="nav" role="tablist" aria-label="Review sections">{nav}</nav></header><main id="content" tabindex="-1" style="padding-top:32px">{static}<noscript><p>JavaScript enables model selection, detailed bias assessments and article figures. <a href="current/FINAL_CURRENT_STATE_REPORT.md">Download the current-state report</a>.</p></noscript></main><footer>v38 core · 20 September 2026 · E2 sensitivity analysis · 23 September 2026{build_date} · Public analytical release (not data-locked). Post-hoc AI-assisted adjudication, with source and selection limitations disclosed. Review displays currently in English. Historical interface and user changes preserved in the project’s v38 baseline.</footer></div><dialog id="figure-dialog"><button type="button" id="close-figure" aria-label="Close article figure">Close</button><p id="figure-caption"></p><img id="figure-image" alt=""></dialog><script src="evidence_graph.js?v=2"></script><script src="current_review.js?v=2"></script><script src="article_figures.js?v=2"></script><script src="search_strategies.js?v=2"></script><script src="interactive_explorer.js?v=4"></script><script src="current_review_ui.js?v=4"></script><!--BUILD_BADGE--></body></html>'''
 (DASH/'index.html').write_text(page)
 (OUT/'download_manifest.json').write_text(json.dumps(downloads,indent=2)+'\n')
 print('Dashboard v38:',len(data['models']),'models;',len(downloads),'current downloads; article figures preserved')
