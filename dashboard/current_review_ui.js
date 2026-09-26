@@ -1,11 +1,12 @@
 /* v38 canonical dashboard. No historical pooled or study-overall RoB inference. */
 (() => {
   'use strict';
+  function unitLabel(u){return u==='mg IVMME'?'mg IV MME':u==='assumed mg IVMME'?'assumed mg IV MME':u;}
   const d=window.CURRENT_REVIEW, $=id=>document.getElementById(id);
   const esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const num=(x,n=2)=>x===null||x===undefined||x===''?'—':Number(x).toFixed(n);
   const grade=new Map(d.grade.map(g=>[g.model_id,g]));
-  const effect=m=>m.k?`${num(m.display_effect)} [${num(m.display_ci_low)}, ${num(m.display_ci_high)}] ${esc(m.unit)}`:'No eligible quantitative evidence';
+  const effect=m=>m.k?`${num(m.display_effect)} [${num(m.display_ci_low)}, ${num(m.display_ci_high)}] ${esc(unitLabel(m.unit))}`:'No eligible quantitative evidence';
   const table=(heads,rows)=>`<div class="table-scroll"><table><thead><tr>${heads.map(h=>`<th scope="col">${h}</th>`).join('')}</tr></thead><tbody>${rows.map(row=>`<tr>${row.map(v=>`<td>${v}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
   const tag=x=>`<span class="tag ${x==='High'?'risk-high':x==='Low'?'risk-low':''}">${esc(x)}</span>`;
   const note=t=>`<p class="note">${t}</p>`;
@@ -63,7 +64,7 @@
     const T=(tx,ty,s,o='')=>`<text x="${tx}" y="${ty}" fill="#dbeafe" font-size="13" ${o}>${s}</text>`;
     const comp={sham:'sham',usual_care:'usual care',active_electrical:'active electrical control'}[m.comparator]||esc(m.comparator);
     const summary=pooled?`pooled ${show(m.effect)} [${show(m.ci_low)}, ${show(m.ci_high)}]`:`single study ${show(m.effect)} [${show(m.ci_low)}, ${show(m.ci_high)}], not pooled`;
-    return `<div class="forest-wrap"><svg viewBox="0 0 960 ${ht}" role="img" aria-label="Forest plot for ${esc(m.model_id)}: ${esc(summary)} ${esc(m.unit)}">`+
+    return `<div class="forest-wrap"><svg viewBox="0 0 960 ${ht}" role="img" aria-label="Forest plot for ${esc(m.model_id)}: ${esc(summary)} ${esc(unitLabel(m.unit))}">`+
       T(8,20,'Study','fill-opacity=".75"')+T(660,20,rr?'Risk ratio [95% CI]':'Estimate [95% CI]','fill-opacity=".75"')+(pooled?T(952,20,'Weight','fill-opacity=".75" text-anchor="end"'):'')+
       `<line x1="${x(0)}" x2="${x(0)}" y1="30" y2="${axisY}" stroke="#94a3b8" stroke-dasharray="4 4"/>`+
       (thr===null?'':`<line x1="${x(thr)}" x2="${x(thr)}" y1="30" y2="${axisY}" stroke="#fbbf24" stroke-dasharray="1 4" stroke-width="2"/><text x="${x(thr)}" y="${axisY+54}" fill="#fbbf24" font-size="11" text-anchor="middle">−10 mg registered threshold</text>`)+
@@ -75,7 +76,7 @@
       `<line x1="${X0}" x2="${X1}" y1="${axisY}" y2="${axisY}" stroke="#94a3b8"/>`+
       ticks.map(t=>`<line x1="${x(t.v)}" x2="${x(t.v)}" y1="${axisY}" y2="${axisY+5}" stroke="#94a3b8"/><text x="${x(t.v)}" y="${axisY+18}" fill="#94a3b8" font-size="11" text-anchor="middle">${t.label}</text>`).join('')+
       (m.construct.startsWith('pre_')?'':`<text x="${x(0)-8}" y="${axisY+36}" fill="#cbd5e1" font-size="12" text-anchor="end">← Favours ${esc(m.modality)}</text><text x="${x(0)+8}" y="${axisY+36}" fill="#cbd5e1" font-size="12">Favours ${comp} →</text>`)+
-      T(660,axisY+18,`${rr?'Risk ratio, log scale; null = 1':'Difference; null = 0'} · ${esc(m.unit)}`,'font-size="12" fill="#94a3b8"')+
+      T(660,axisY+18,`${rr?'Risk ratio, log scale; null = 1':'Difference; null = 0'} · ${esc(unitLabel(m.unit))}`,'font-size="12" fill="#94a3b8"')+
       `</svg></div>`;
   }
   function modelDetail(mid){
@@ -85,7 +86,7 @@
     `<details style="background:var(--bg); margin-bottom:16px"><summary>How to read this plot</summary><p style="font-size:0.9em">Squares are study estimates, sized by random-effects weight; their lines are normal-approximation 95% confidence intervals. The diamond is the canonical pooled estimate with its safeguarded Hartung–Knapp 95% confidence interval, which can be much wider than the study intervals when few studies are pooled. A single study is shown once and is not pooled. The bar under the diamond, where present, is the 95% prediction interval. The dashed line marks no effect (0, or 1 for risk ratios on a log scale); the dotted amber line marks the registered −10 mg IV MME threshold. Direction labels are printed under each axis.</p></details>`+
     forest(m)+note(esc((s.note||'Separate modality/comparator body. Compatible active arms combined; control counted once.').replace('mg/ug', 'mg/µg')))+
     (m.k>1?`<p>I² ${num(m.I2,1)}% <span title="I² represents the percentage of variation across studies that is due to heterogeneity rather than chance." style="cursor:help; border-bottom:1px dotted var(--accent); color:var(--accent)">?</span> · τ² ${num(m.tau2,3)} · safeguarded Hartung–Knapp interval.</p>`:'')+
-    (m.pi_low!==null&&m.pi_low!==undefined?`<p>Prediction interval: ${num(m.measure==='RR'?Math.exp(m.pi_low):m.pi_low)} to ${num(m.measure==='RR'?Math.exp(m.pi_high):m.pi_high)} ${esc(m.unit)}. Interpret cautiously.</p>`:'')+
+    (m.pi_low!==null&&m.pi_low!==undefined?`<p>Prediction interval: ${num(m.measure==='RR'?Math.exp(m.pi_low):m.pi_low)} to ${num(m.measure==='RR'?Math.exp(m.pi_high):m.pi_high)} ${esc(unitLabel(m.unit))}. Interpret cautiously.</p>`:'')+
     table(['Contributor / exact result IDs','n intervention / control','Source location'],ins.map(r=>[`<button type="button" class="text-button result-open" data-result="${esc(r.result_id)}" data-result-model="${esc(r.model_id)}">${esc(r.study)}<br><small>${esc(r.result_id)}</small></button>`,`${num(r.n_i,0)} / ${num(r.n_c,0)}`,esc(r.source_location)]))+
     (g?`<h3>GRADE: ${esc(g.certainty)}</h3>${['risk_of_bias','inconsistency','indirectness','imprecision','publication_bias'].map(k=>`<p><strong>${esc(k.replaceAll('_',' '))} (−${g[k+'_downgrades']})</strong> — ${esc(g[k])}</p>`).join('')}`:note('Diagnostic only. Not an independently graded efficacy conclusion.'));
     panel.hidden=false;panel.scrollIntoView({behavior:'smooth',block:'start'});
@@ -273,5 +274,11 @@
   $('close-figure').addEventListener('click',()=>$('figure-dialog').close());
   window.addEventListener('hashchange',()=>route());
   window.addEventListener('popstate',()=>route());
+    document.querySelector('.nav').insertAdjacentHTML('beforeend', '<button type="button" id="theme-toggle" aria-label="Toggle light/dark theme" aria-pressed="false" style="margin-left:auto;padding:8px" title="Toggle theme">🌓</button>');
+  $('theme-toggle').addEventListener('click', e => {
+    const isDark = document.documentElement.dataset.theme === 'dark' || (!document.documentElement.dataset.theme && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    document.documentElement.dataset.theme = isDark ? 'light' : 'dark';
+    e.target.setAttribute('aria-pressed', isDark);
+  });
   route();if(!views[parseHash().view])setHash('#overview');
 })();
