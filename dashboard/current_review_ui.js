@@ -85,6 +85,59 @@
       T(660,axisY+18,`${rr?'Risk ratio, log scale; null = 1':'Difference; null = 0'} · ${esc(unitLabel(m.unit))}`,'class="fp-mut" font-size="12" fill="#94a3b8"')+
       `</svg></div>`;
   }
+  // Evidence cards for writing: fixed, neutral wording generated only from stored fields (no interpretation).
+  const OUTCOME={systemic_opioid_0_24h:'cumulative 0–24 h systemic opioid consumption',device_or_systemic_opioid_0_24h:'0–24 h opioid consumption (device or systemic totals)',
+    device_or_equivalence_uncertain_opioid_0_24h:'0–24 h opioid consumption (expanded: device totals or uncertain equivalence)',PCA_partial_1_to_24h:'PCA opioid consumption from 1 to 24 h',
+    PCA_morphine_0_24h_weight_normalized:'0–24 h PCA morphine per kg',fentanyl_0_24h_weight_normalized:'0–24 h fentanyl per kg',PCA_or_author_equivalent_0_48h:'0–48 h PCA or author-equivalent opioid consumption',
+    PCA_fentanyl_0_48h:'0–48 h PCA fentanyl consumption',PCA_morphine_0_72h:'0–72 h PCA morphine consumption',PCA_tramadol_0_24h:'0–24 h PCA tramadol consumption',rescue_pethidine_0_24h:'0–24 h rescue pethidine',
+    composite_PONV_0_24h:'postoperative nausea and vomiting within 24 h',composite_PONV_0_24h_broad_sham:'postoperative nausea and vomiting within 24 h (broad sham definition)',
+    PONV_24h_including_point_window_uncertain:'postoperative nausea and vomiting at about 24 h (including point-window reports)',composite_PONV_0_48h:'postoperative nausea and vomiting within 48 h',
+    nausea_0_24h:'nausea within 24 h',nausea_0_48h:'nausea within 48 h',nausea_6_24h:'nausea from 6 to 24 h',persistent_nausea_over5min_0_24h:'persistent nausea (over 5 minutes) within 24 h',
+    vomiting_0_24h:'vomiting within 24 h',vomiting_0_48h:'vomiting within 48 h',vomiting_6_24h:'vomiting from 6 to 24 h',
+    pain_rest_approximately24h:'pain at rest at about 24 h (0–10 scale)',pain_movement_approximately24h:'pain on movement at about 24 h (0–10 scale)',
+    pain_setting_unspecified_24h:'pain at about 24 h, rest or movement not stated (0–10 scale)',pain_setting_unspecified_POD1:'pain on postoperative day 1, rest or movement not stated (0–10 scale)',
+    pain_movement_interval6_24h:'pain on movement summarised over 6–24 h (0–10 scale)',time_first_flatus:'time to first flatus',time_first_defecation:'time to first defecation',
+    time_first_bowel_sounds:'time to first bowel sounds',intraop_remifentanil:'intraoperative remifentanil consumption',pre_intervention_intraop_remifentanil:'intraoperative remifentanil given before the intervention started (diagnostic)'};
+  const MEASURE={MD:'mean difference',RR:'risk ratio',SMD:'standardised mean difference (Hedges g)'};
+  const COMP={sham:'sham',usual_care:'usual care',active_electrical:'active electrical control'};
+  const minus=s=>String(s).replace(/-/g,'−');
+  // ctx: {e2:true} for E2 bodies; rows are the contributing trial rows.
+  function evidenceCard(m,rows,ctx={}){
+    const rr=m.measure==='RR',v=x=>minus(num(rr?Math.exp(x):x)),unit=rr||m.measure==='SMD'?'':' '+unitLabel(m.unit).replace(/^0–10 points$/,'points'),g=ctx.e2?null:grade.get(m.model_id),map=(d.sensitivity_map||[]).find(r=>r.model_id===m.model_id);
+    const outcome=OUTCOME[m.construct]||m.construct.replaceAll('_',' '),cmp=`${m.modality} versus ${COMP[m.comparator]||m.comparator}`;
+    const cert=ctx.e2?'not graded':g&&!g.certainty.startsWith('Not rated')?`${g.certainty.toLowerCase()}-certainty evidence`:'not independently graded';
+    const frame=ctx.e2?`In the post-hoc E2 sensitivity synthesis for ${cmp} (defined and amended after the data were seen), `:
+      m.role==='PRINCIPAL'||m.role==='SUPPORTIVE'?`In the ${m.role.toLowerCase()} ${cmp} comparison for ${outcome}, `:
+      map&&map.parent_model_id?`In a sensitivity analysis of ${map.parent_model_id} (${map.relation.replace(/ \((.*)\)$/,', $1')}) for ${outcome} with ${cmp}, `:
+      map?`In a stand-alone diagnostic analysis (${map.relation.replace(/^stand-alone \((.*)\)$/,'$1')}) of ${outcome} with ${cmp}, `:`For ${outcome} with ${cmp}, `;
+    const stats=m.k>1?`${m.k} trials (${m.N} participants) gave a pooled ${MEASURE[m.measure]} of ${v(m.effect)}${unit} (95% CI ${v(m.ci_low)} to ${v(m.ci_high)}; I² ${num(m.I2,1)}%${m.pi_low!==null&&m.pi_low!==undefined?`; 95% prediction interval ${v(m.pi_low)} to ${v(m.pi_high)}`:''}; ${cert}).`:
+      `one trial (${m.N} participants) reported a ${MEASURE[m.measure]} of ${v(m.effect)}${unit} (95% CI ${v(m.ci_low)} to ${v(m.ci_high)}; ${cert}); this is a single-study estimate, not a pooled result.`;
+    const nullTxt=(m.ci_high<0||m.ci_low>0)?'The 95% CI excludes the null (no difference).':'The 95% CI includes the null (no difference).';
+    const extra=ctx.e2?` E1 remains the registered primary analysis.${ctx.joint?` Registered joint criterion: ${ctx.joint.joint_criterion.toLowerCase()}.`:''}`:
+      (m.role==='PRINCIPAL'||m.role==='SUPPORTIVE')&&m.construct==='systemic_opioid_0_24h'?' The registered joint clinical-importance criterion was not established.':'';
+    const sentence=m.k?frame+stats+' '+nullTxt+extra:`No eligible quantitative evidence was identified for ${outcome} with ${cmp}.`;
+    const doms=g?['risk_of_bias','inconsistency','indirectness','imprecision','publication_bias'].filter(k=>+g[k+'_downgrades']>0).map(k=>`${k.replaceAll('_',' ')} (−${g[k+'_downgrades']})`):[];
+    const certLine=ctx.e2?'Not graded: post-hoc sensitivity analysis.':g?`${g.certainty}${doms.length?'; downgraded for '+doms.join(', '):''}.`:'Not independently graded (sensitivity or diagnostic model).';
+    const url=`${location.origin}${location.pathname}#${ctx.e2?'e1e2?body='+encodeURIComponent(ctx.body):'results?model='+encodeURIComponent(m.model_id)}`;
+    const source=`Perioperative TEAS & EA review dashboard ${d.version} (${d.date}); model ${m.model_id}; ${url}`;
+    const trials=rows.map(r=>`${r.study} (${r.result_id}${r.source_location?'; '+r.source_location:''}${r.factor&&+r.factor!==1?'; conversion factor '+r.factor:''})`);
+    const md=`### ${outcome[0].toUpperCase()+outcome.slice(1)}: ${cmp}\n\n${sentence}\n\n| Evidence body | Role | k / N | ${rr?'RR':'Estimate'} [95% CI] | I² | Certainty |\n|---|---|---|---|---|---|\n`+
+      `| ${m.model_id} | ${ctx.e2?'E2 post-hoc':m.role} | ${m.k} / ${m.N} | ${m.k?`${v(m.effect)} [${v(m.ci_low)}, ${v(m.ci_high)}]${unit}`:'—'} | ${m.k>1?num(m.I2,1)+'%':'—'} | ${ctx.e2?'Not graded':g?g.certainty:'Not graded'} |\n\n`+
+      `**Certainty:** ${certLine}\n\n**Trials:** ${trials.length?trials.join('; '):'none'}.\n\n**Source:** ${source}\n`;
+    return {sentence,md};
+  }
+  function cardPanel(card,id){
+    return `<details class="evidence-card" data-card="${esc(id)}"><summary>Evidence card for writing</summary><p class="card-sentence">${esc(card.sentence)}</p>`+
+      `<div class="card-actions"><button type="button" data-card-action="sentence">Copy sentence</button><button type="button" data-card-action="markdown">Copy Markdown</button><button type="button" data-card-action="download">Download .md</button><span class="card-status" role="status"></span></div>`+
+      `<textarea class="card-md" readonly rows="10" aria-label="Evidence card Markdown">${esc(card.md)}</textarea>`+
+      `<p class="source">Generated from stored outputs with fixed wording. Check the sentence against the model before use; certainty applies only to graded bodies.</p></details>`;
+  }
+  function cardAction(btn){
+    const box=btn.closest('.evidence-card'),md=box.querySelector('.card-md').value,sentence=box.querySelector('.card-sentence').textContent,status=box.querySelector('.card-status'),act=btn.dataset.cardAction;
+    if(act==='download'){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([md],{type:'text/markdown'}));a.download=`evidence_card_${box.dataset.card}.md`;a.click();URL.revokeObjectURL(a.href);status.textContent='Downloaded.';return;}
+    const text=act==='sentence'?sentence:md;
+    (navigator.clipboard?navigator.clipboard.writeText(text):Promise.reject()).then(()=>{status.textContent='Copied.';},()=>{const ta=box.querySelector('.card-md');ta.focus();ta.select();status.textContent='Copy blocked by the browser: the Markdown is selected; press Ctrl/Cmd+C.';});
+  }
   // Sensitivity comparison for the Results panel: the baseline body and every mapped sensitivity (sensitivity_map,
   // a proposed display grouping) from stored outputs. Only models on the baseline's scale share its ladder.
   const modelById=id=>d.models.find(x=>x.model_id===id);
@@ -126,6 +179,7 @@
     (m.k>1?`<p>I² ${num(m.I2,1)}% <span title="I² represents the percentage of variation across studies that is due to heterogeneity rather than chance." style="cursor:help; border-bottom:1px dotted var(--accent); color:var(--accent)">?</span> · τ² ${num(m.tau2,3)} · safeguarded Hartung–Knapp interval.</p>`:'')+
     (m.pi_low!==null&&m.pi_low!==undefined?`<p>Prediction interval: ${num(m.measure==='RR'?Math.exp(m.pi_low):m.pi_low)} to ${num(m.measure==='RR'?Math.exp(m.pi_high):m.pi_high)} ${esc(unitLabel(m.unit))}. Interpret cautiously.</p>`:'')+
     table(['Contributor / exact result IDs','n intervention / control','Source location'],ins.map(r=>[`<button type="button" class="text-button result-open" data-result="${esc(r.result_id)}" data-result-model="${esc(r.model_id)}">${esc(r.study)}<br><small>${esc(r.result_id)}</small></button>`,`${num(r.n_i,0)} / ${num(r.n_c,0)}`,esc(r.source_location)]))+
+    cardPanel(evidenceCard(m,ins),m.model_id)+
     sensitivitySection(m)+
     (g?`<h3>GRADE: ${esc(g.certainty)}</h3>${['risk_of_bias','inconsistency','indirectness','imprecision','publication_bias'].map(k=>`<p><strong>${esc(k.replaceAll('_',' '))} (−${g[k+'_downgrades']})</strong> — ${esc(g[k])}</p>`).join('')}`:note('Diagnostic only. Not an independently graded efficacy conclusion.'));
     panel.hidden=false;panel.scrollIntoView({behavior:'smooth',block:'start'});
@@ -358,6 +412,7 @@
       `<div class="body-picker" role="group" aria-label="Comparison">${E2_BODIES.map(([b])=>`<button type="button" class="e1e2-body${b===body?' active':''}" data-body="${esc(b)}" aria-pressed="${b===body}">${esc(b)}</button>`).join('')}</div>`+
       `<h3>${esc(body)}: summary</h3>`+table(['',`E1 · <button class="text-button model-link" data-model="${esc(e1id)}">${esc(e1id)}</button>`,`E2 · <button class="text-button model-link" data-model="${esc(e2id)}">${esc(e2id)}</button>`],cmpRows)+
       (j?note(`Registered joint criterion (≥10 mg sparing with paired ~24 h pain upper CI &lt; +1): opioid limb <strong>${esc(j.opioid_limb)}</strong>; pain limb <strong>${esc(j.pain_limb)}</strong>; joint <strong>${esc(j.joint_criterion)}</strong>.`):'')+
+      (m1.k?cardPanel(evidenceCard(m1,rows1),e1id):'')+cardPanel(evidenceCard(m2plot,rows2,{e2:true,body,joint:j}),e2id)+
       `<h3>Forest plots on a shared axis</h3><h4>E1 · registered primary · ${esc(e1id)}</h4>`+(m1.k?forest(m1,rows1,range):note('No eligible quantitative E1 evidence for this comparison.'))+`<h4>E2 · post-hoc, not graded · ${esc(e2id)}</h4>`+forest(m2plot,rows2,range)+
       note('Both plots use the same horizontal scale. “E2 only” marks trials admitted by E2 that are not in the E1 body. E2 study rows show arm values after the stated conversion factor and arm combination.')+
       `<h3>Trial-by-trial accounting (${acc.length} candidate reports)</h3>`+
@@ -416,7 +471,7 @@
     $('result-drawer-content').innerHTML=html;$('result-drawer-content').querySelector('h2').id='result-drawer-title';$('result-drawer').showModal();
     if(parseHash().view==='results')setHash(hashFor('results',{model:r.model_id,result:rid}));
   }
-  document.addEventListener('click',e=>{const nav=e.target.closest('[data-view]');if(nav){document.querySelectorAll('dialog[open]').forEach(x=>x.close());show(nav.dataset.view);return;}const model=e.target.closest('[data-model]');if(model){openModel(model.dataset.model);return;}const fig=e.target.closest('.figure-open');if(fig){$('figure-image').src=fig.dataset.src;$('figure-image').alt=fig.dataset.caption;$('figure-caption').textContent=fig.dataset.caption;$('figure-dialog').showModal();return;}const bodyBtn=e.target.closest('.e1e2-body');if(bodyBtn){show('e1e2',{body:bodyBtn.dataset.body});return;}const res=e.target.closest('.result-open');if(res){openResultDrawer(res.dataset.result,res.dataset.resultModel);return;}if(e.target.id==='close-result-drawer'){$('result-drawer').close();clearResultKey();}});
+  document.addEventListener('click',e=>{const nav=e.target.closest('[data-view]');if(nav){document.querySelectorAll('dialog[open]').forEach(x=>x.close());show(nav.dataset.view);return;}const model=e.target.closest('[data-model]');if(model){openModel(model.dataset.model);return;}const fig=e.target.closest('.figure-open');if(fig){$('figure-image').src=fig.dataset.src;$('figure-image').alt=fig.dataset.caption;$('figure-caption').textContent=fig.dataset.caption;$('figure-dialog').showModal();return;}const cardBtn=e.target.closest('[data-card-action]');if(cardBtn){cardAction(cardBtn);return;}const bodyBtn=e.target.closest('.e1e2-body');if(bodyBtn){show('e1e2',{body:bodyBtn.dataset.body});return;}const res=e.target.closest('.result-open');if(res){openResultDrawer(res.dataset.result,res.dataset.resultModel);return;}if(e.target.id==='close-result-drawer'){$('result-drawer').close();clearResultKey();}});
   document.addEventListener('input',e=>{if(e.target.id==='risk-search')riskRows(e.target.value);if(e.target.id==='study-search')studyRows(e.target.value);});
   document.addEventListener('change',e=>{if(e.target.id==='model-select'){history.pushState(null,'',hashFor('results',{model:e.target.value}));routed=location.hash;modelDetail(e.target.value);}});
   $('close-figure').addEventListener('click',()=>$('figure-dialog').close());
