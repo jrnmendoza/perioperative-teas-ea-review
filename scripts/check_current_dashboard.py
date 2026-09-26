@@ -4,6 +4,24 @@ import csv,json,pathlib,hashlib,copy,sys,re,subprocess
 ROOT=pathlib.Path(__file__).resolve().parents[1];D=ROOT/'10_FINAL_ADJUDICATION'
 def rows(p):return list(csv.DictReader(open(p,encoding='utf-8-sig')))
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+E2_BODIES=[('TEAS vs sham','opioid24_TEAS_sham','E2_opioid24_TEAS_sham'),('TEAS vs usual care','opioid24_TEAS_usual','E2_opioid24_TEAS_usual'),
+           ('EA vs sham','opioid24_EA_sham','E2_opioid24_EA_sham'),('EA vs usual care','opioid24_EA_usual','E2_opioid24_EA_usual')]
+def e2_accounting_complete(d):
+    """Every E1 principal/supportive input has exactly one INCLUDE row and every E2 main contrast exactly one ADMIT row
+    in the Tier A dispositions (joined on result ID; E2.1 Tier B1 admissions on report). Mirrors the E1 vs E2 workspace."""
+    if 'e2_accounting' not in d:return True
+    A=d['e2_accounting']['tierA']+d['e2_accounting']['tierA_addendum']
+    ids=lambda s:[] if s.startswith('Tier B1') else [x.split(' (')[0].strip() for x in s.split(' / ')]
+    for body,e1,e2 in E2_BODIES:
+        rows=[r for r in A if r['body']==body]
+        match=lambda inp:[r for r in rows if inp['result_id'] in ids(r['result_ids']) or (r['result_ids'].startswith('Tier B1') and r['report']==inp['study'])]
+        for inp in (x for x in d['inputs'] if x['model_id']==e1):
+            m=match(inp)
+            if len(m)!=1 or m[0]['E1_disposition']!='INCLUDE':return False
+        for inp in (x for x in d['e2_inputs'] if x['model_id']==e2):
+            m=match(inp)
+            if len(m)!=1 or m[0]['E2_disposition']!='ADMIT':return False
+    return True
 def e2_inputs_consistent(d):
     """Each E2 model's exported contrasts match its study/contrast order and N, and reproduce its pooled effect from the stored tau2."""
     if 'e2_inputs' not in d:return True
@@ -35,6 +53,8 @@ def checks(d):
       'E2 sensitivity identity':d.get('e2_analysis')==json.load(open(D/'09_E2_ANALYSIS/e2_model_outputs.json')) if (D/'09_E2_ANALYSIS/e2_model_outputs.json').exists() else True,
       'E2 per-contrast input identity':d.get('e2_inputs')==rows(D/'09_E2_ANALYSIS/e2_model_inputs.csv') if (D/'09_E2_ANALYSIS/e2_model_inputs.csv').exists() else True,
       'E2 inputs reproduce E2 membership and pooled effects':e2_inputs_consistent(d),
+      'E2 accounting identity':d.get('e2_accounting')=={k:rows(D/'02_DECISIONS/v38'/f) for k,f in [('tierA','E2_tierA_reclassification.csv'),('tierA_addendum','E2_tierA_reclassification_addendum.csv'),('tierB1','E2_tierB1_extraction.csv'),('tierB2','E2_tierB2_recheck.csv')]} if 'e2_accounting' in d else True,
+      'E2 accounting covers E1 and E2 inputs':e2_accounting_complete(d),
       'QoR later-window identity':d.get('qor_later_models')==json.load(open(D/'08_QOR_ANALYSIS/qor_models_later.json')) if (D/'08_QOR_ANALYSIS/qor_models_later.json').exists() else True,
       'QoR later-window RoB identity': d.get('qor_later_rob') == rows(D/'08_QOR_ANALYSIS/qor_rob2_later.csv') and len(d.get('qor_later_rob', [])) == 5 if 'qor_later_rob' in d else True,
       'E2 methods integrity': d.get('e2_methods', {}).get('Timestamp note', '') == re.search(r'(\*\*Timestamp note[^\n]+(?:\n[^\n]+)+)', (D/'02_DECISIONS/v38/AMENDED_PRIMARY_ESTIMAND_E2.md').read_text(encoding='utf-8')).group(1).strip() if 'e2_methods' in d else True,
@@ -162,7 +182,7 @@ def main(site=None):
     nav_match = re.search(r'<nav class="nav"[^>]*>(.*?)</nav>', page)
     assert nav_match, 'Nav block not found'
     nav_buttons = re.findall(r'data-view="([^"]+)"', nav_match.group(1))
-    assert nav_buttons == ['overview', 'results', 'qor', 'coverage', 'studies', 'risk', 'evidence', 'prisma', 'methods', 'downloads'], f"Wrong nav buttons: {nav_buttons}"
+    assert nav_buttons == ['overview', 'results', 'e1e2', 'qor', 'coverage', 'studies', 'risk', 'evidence', 'prisma', 'methods', 'downloads'], f"Wrong nav buttons: {nav_buttons}"
     footer_match = re.search(r'<footer>(.*?)</footer>', page)
     assert footer_match and '{' not in footer_match.group(1) and '}' not in footer_match.group(1), 'Placeholder found in footer'
     
@@ -277,6 +297,9 @@ def main(site=None):
     if 'e2_inputs' in data:
         mutations.append(('E2 per-contrast input identity',lambda d:d['e2_inputs'][0].__setitem__('yi','0')))
         mutations.append(('E2 inputs reproduce E2 membership and pooled effects',lambda d:d['e2_inputs'].pop()))
+    if 'e2_accounting' in data:
+        mutations.append(('E2 accounting identity',lambda d:d['e2_accounting']['tierB2'].pop()))
+        mutations.append(('E2 accounting covers E1 and E2 inputs',lambda d:[r.__setitem__('E2_disposition','NOT ADMITTED') for r in d['e2_accounting']['tierA'] if r['report']=='Chen 1998']))
     mutations.append(('E2 methods integrity', lambda d: d['e2_methods'].update({'Timestamp note': 'Altered text'})))
     mutations.append(('all downloads tracked by git', lambda d: d['downloads'].append(dict(label='Fake', href='current/fake.txt', source='fake.txt', sha256='hash'))))
     if 'e2_methods_html' in data:

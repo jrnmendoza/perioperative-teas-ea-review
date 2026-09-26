@@ -102,6 +102,8 @@ if e2_path.exists():
 # Per-contrast E2 rows as analysed (after conversion factor and arm combination), exported by run_e2.py.
 if (D/'09_E2_ANALYSIS/e2_model_inputs.csv').exists():
  data['e2_inputs']=rows('10_FINAL_ADJUDICATION/09_E2_ANALYSIS/e2_model_inputs.csv')
+# E2 trial-by-trial dispositions, unchanged from the decision files, for the E1 vs E2 workspace.
+data['e2_accounting']={k:rows('10_FINAL_ADJUDICATION/02_DECISIONS/v38/'+f) for k,f in [('tierA','E2_tierA_reclassification.csv'),('tierA_addendum','E2_tierA_reclassification_addendum.csv'),('tierB1','E2_tierB1_extraction.csv'),('tierB2','E2_tierB2_recheck.csv')]}
 
 report_text = (ROOT/'FINAL_CURRENT_STATE_REPORT.md').read_text(encoding='utf-8')
 section_match = re.search(r'\*\*Not completed — outstanding\*\*(.*?)(?=\n\*\*|\n## |\Z)', report_text, re.DOTALL)
@@ -253,7 +255,7 @@ if 'e2_joint' in data:
  any_met = any('Met' in x['joint_criterion'] and 'Not met' not in x['joint_criterion'] for x in data['e2_joint'])
  met_text = 'in at least one body' if any_met else 'in no body'
  static += f'<p>E2 post-hoc sensitivity analysis: E1 kept as primary, not graded. The joint criterion is met {met_text} (for EA vs sham it {ea_text}).</p>'
-nav=''.join(f'<button type="button" role="tab" data-view="{key}" aria-controls="content" aria-selected="{str(key=="overview").lower()}" class="{"active" if key=="overview" else ""}">{label}</button>' for key,label in [('overview','Overview'),('results','Results'),('qor','QoR analysis'),('coverage','Outcome coverage'),('studies','Studies & figures'),('risk','Risk of bias'),('evidence','GRADE'),('prisma','PRISMA'),('methods','Methods'),('downloads','Downloads')])
+nav=''.join(f'<button type="button" role="tab" data-view="{key}" aria-controls="content" aria-selected="{str(key=="overview").lower()}" class="{"active" if key=="overview" else ""}">{label}</button>' for key,label in [('overview','Overview'),('results','Results'),('e1e2','E1 vs E2'),('qor','QoR analysis'),('coverage','Outcome coverage'),('studies','Studies & figures'),('risk','Risk of bias'),('evidence','GRADE'),('prisma','PRISMA'),('methods','Methods'),('downloads','Downloads')])
 build_date = ""
 meta_path = DASH / 'build-meta.json'
 if meta_path.exists():
