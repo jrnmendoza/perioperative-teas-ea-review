@@ -224,19 +224,29 @@
   }
   const views={overview,results,qor,coverage,prisma,evidence,risk,studies,methods,downloads};
   function render(id){if(!views[id])id='overview';$('content').innerHTML=(['results','risk','evidence','studies','methods','downloads'].includes(id)?qorLink():'')+views[id]();document.querySelectorAll('.nav [data-view]').forEach(b=>{b.classList.toggle('active',b.dataset.view===id);b.setAttribute('aria-selected',String(b.dataset.view===id));});if(id==='risk')riskRows();if(id==='studies'){if(window.renderRichExplorer){window.renderRichExplorer('rich-explorer-container');}else{studyRows();}}$('content').focus({preventScroll:true});return id;}
-  function show(id){id=render(id);if(location.hash!=='#'+id)history.pushState(null,'','#'+id);}
-  // Route any model ID (core, QoR 24 h, QoR diagnostic, QoR later window, E2) to where it is displayed.
-  function openModel(mid){
+  // URL state: #view, #results?model=…&result=…, #qor?model=…; the Study Explorer adds its own filter/study keys.
+  const parseHash=()=>{const [view,q='']=location.hash.slice(1).split('?');return {view,params:new URLSearchParams(q)};};
+  const hashFor=(view,params={})=>{const q=new URLSearchParams(Object.entries(params).filter(([,v])=>v)).toString();return '#'+view+(q?'?'+q:'');};
+  let routed=null;
+  function setHash(h){history.replaceState(null,'',h);routed=location.hash;}
+  function route(force){
+    if(!force&&location.hash===routed)return;routed=location.hash;
     document.querySelectorAll('dialog[open]').forEach(x=>x.close());
-    const focus=el=>{if(!el)return;if(el.tagName==='DETAILS')el.open=true;el.scrollIntoView({block:'start'});el.focus?.({preventScroll:true});};
-    if(d.models.some(m=>m.model_id===mid)){show('results');$('model-select').value=mid;modelDetail(mid);return;}
-    const q=d.qor_analysis||{};
-    if((q.main_models||[]).some(m=>m.model_id===mid)||(d.qor_later_models||[]).some(m=>m.model_id===mid)){show('qor');focus($('qor-'+mid));return;}
-    if((q.diagnostics||[]).some(m=>m.model_id===mid)){show('qor');focus($('qor-diagnostics'));return;}
-    if((d.e2_analysis?.models||[]).some(m=>m.model_id===mid)){show('results');focus($('e2-section'));}
+    const {view,params}=parseHash(),id=render(view),mid=params.get('model');
+    const focus=el=>{if(!el)return;if(el.tagName==='DETAILS')el.open=true;el.scrollIntoView({block:'start'});el.focus({preventScroll:true});};
+    if(id==='results'&&mid){
+      if(d.models.some(m=>m.model_id===mid)){$('model-select').value=mid;modelDetail(mid);if(params.get('result'))openResultDrawer(params.get('result'),mid);}
+      else if((d.e2_analysis?.models||[]).some(m=>m.model_id===mid))focus($('e2-section'));
+    }
+    if(id==='qor'&&mid)focus($('qor-'+mid)||((d.qor_analysis?.diagnostics||[]).some(m=>m.model_id===mid)?$('qor-diagnostics'):null));
   }
+  function show(id,params){const h=hashFor(id,params);if(location.hash!==h)history.pushState(null,'',h);route(true);}
+  // Route any model ID (core, QoR 24 h, QoR diagnostic, QoR later window, E2) to where it is displayed.
+  function openModel(mid){const qor=[...(d.qor_analysis?.main_models||[]),...(d.qor_analysis?.diagnostics||[]),...(d.qor_later_models||[])].some(m=>m.model_id===mid);show(qor?'qor':'results',{model:mid});}
   // Result/source inspector for one model input row. A result can feed several models with different
   // conversion factors, so the row is looked up by result ID and model ID together.
+  // Closing the inspector drops ?result= (called directly too: some browsers defer the close event for hidden pages).
+  function clearResultKey(){const {view,params}=parseHash();if($('result-drawer').open||view!=='results'||!params.get('result'))return;params.delete('result');setHash(hashFor('results',Object.fromEntries(params)));}
   function openResultDrawer(rid,mid){
     const r=d.inputs.find(x=>x.result_id===rid&&x.model_id===mid)||d.inputs.find(x=>x.result_id===rid);if(!r)return;
     const parts=rid.split('+'),rr=r.measure==='RR',val=v=>num(rr?Math.exp(v):v),z=1.95996398454;
@@ -252,14 +262,16 @@
       panel(`Extracted data in ${esc(r.model_id)}`,arms+`<p>Reported unit: ${esc(r.unit)} · conversion factor ${esc(r.factor)} · analysed as ${esc(r.analysis_unit||r.measure)}${r.continuity_correction&&r.continuity_correction!=='0'?` · continuity correction ${esc(r.continuity_correction)}`:''}</p><p>Study estimate: <strong>${val(+r.yi)} [${val(+r.yi-z*Math.sqrt(+r.vi))}, ${val(+r.yi+z*Math.sqrt(+r.vi))}]</strong> <small>(yi ${num(r.yi,4)}, vi ${num(r.vi,4)}${rr?'; log scale':''})</small></p>${r.decision?`<p><strong>Decision:</strong> ${esc(r.decision)}${r.rationale?` — ${esc(r.rationale)}`:''}</p>`:''}`)+
       panel(`Used in ${uses.length} model${uses.length===1?'':'s'}`,`<ul>${uses.map(x=>`<li><button type="button" class="text-button" data-model="${esc(x.model_id)}">${esc(x.model_id)}</button> <small>${esc(x.role)} · factor ${esc(x.factor)}</small></li>`).join('')}</ul>`)+
       panel('Risk of bias (v38, result-specific)',rob);
-    if(!$('result-drawer'))document.body.insertAdjacentHTML('beforeend',`<dialog id="result-drawer" aria-labelledby="result-drawer-title" style="width:820px;max-width:92vw;max-height:90vh;overflow-y:auto;background:#0d1624"><button type="button" id="close-result-drawer" aria-label="Close result inspector">Close</button><div id="result-drawer-content"></div></dialog>`);
+    if(!$('result-drawer')){document.body.insertAdjacentHTML('beforeend',`<dialog id="result-drawer" aria-labelledby="result-drawer-title" style="width:820px;max-width:92vw;max-height:90vh;overflow-y:auto;background:#0d1624"><button type="button" id="close-result-drawer" aria-label="Close result inspector">Close</button><div id="result-drawer-content"></div></dialog>`);
+      $('result-drawer').addEventListener('close',clearResultKey);}
     $('result-drawer-content').innerHTML=html;$('result-drawer-content').querySelector('h2').id='result-drawer-title';$('result-drawer').showModal();
+    if(parseHash().view==='results')setHash(hashFor('results',{model:r.model_id,result:rid}));
   }
-  document.addEventListener('click',e=>{const nav=e.target.closest('[data-view]');if(nav){document.querySelectorAll('dialog[open]').forEach(x=>x.close());show(nav.dataset.view);return;}const model=e.target.closest('[data-model]');if(model){openModel(model.dataset.model);return;}const fig=e.target.closest('.figure-open');if(fig){$('figure-image').src=fig.dataset.src;$('figure-image').alt=fig.dataset.caption;$('figure-caption').textContent=fig.dataset.caption;$('figure-dialog').showModal();return;}const res=e.target.closest('.result-open');if(res){openResultDrawer(res.dataset.result,res.dataset.resultModel);return;}if(e.target.id==='close-result-drawer')$('result-drawer').close();});
+  document.addEventListener('click',e=>{const nav=e.target.closest('[data-view]');if(nav){document.querySelectorAll('dialog[open]').forEach(x=>x.close());show(nav.dataset.view);return;}const model=e.target.closest('[data-model]');if(model){openModel(model.dataset.model);return;}const fig=e.target.closest('.figure-open');if(fig){$('figure-image').src=fig.dataset.src;$('figure-image').alt=fig.dataset.caption;$('figure-caption').textContent=fig.dataset.caption;$('figure-dialog').showModal();return;}const res=e.target.closest('.result-open');if(res){openResultDrawer(res.dataset.result,res.dataset.resultModel);return;}if(e.target.id==='close-result-drawer'){$('result-drawer').close();clearResultKey();}});
   document.addEventListener('input',e=>{if(e.target.id==='risk-search')riskRows(e.target.value);if(e.target.id==='study-search')studyRows(e.target.value);});
-  document.addEventListener('change',e=>{if(e.target.id==='model-select')modelDetail(e.target.value);});
+  document.addEventListener('change',e=>{if(e.target.id==='model-select'){history.pushState(null,'',hashFor('results',{model:e.target.value}));routed=location.hash;modelDetail(e.target.value);}});
   $('close-figure').addEventListener('click',()=>$('figure-dialog').close());
-  window.addEventListener('hashchange',()=>render(location.hash.slice(1)));
-  window.addEventListener('popstate',()=>render(location.hash.slice(1)));
-  const initId=render(location.hash.slice(1));history.replaceState(null,'','#'+initId);
+  window.addEventListener('hashchange',()=>route());
+  window.addEventListener('popstate',()=>route());
+  route();if(!views[parseHash().view])setHash('#overview');
 })();

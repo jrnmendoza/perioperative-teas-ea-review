@@ -27,7 +27,8 @@
         let state = {
             search: '',
             modality: 'all',
-            comparator: 'all'
+            comparator: 'all',
+            study: ''
         };
 
         const hashParts = window.location.hash.split('?');
@@ -36,6 +37,7 @@
             if (qp.has('search')) state.search = qp.get('search');
             if (qp.has('modality')) state.modality = qp.get('modality');
             if (qp.has('comparator')) state.comparator = qp.get('comparator');
+            if (qp.has('study')) state.study = qp.get('study');
         }
 
         const updateUrl = () => {
@@ -43,6 +45,7 @@
             if (state.search) params.set('search', state.search);
             if (state.modality !== 'all') params.set('modality', state.modality);
             if (state.comparator !== 'all') params.set('comparator', state.comparator);
+            if (state.study) params.set('study', state.study);
             const str = params.toString();
             const newHash = window.location.hash.split('?')[0] + (str ? '?' + str : '');
             window.history.replaceState(null, '', newHash);
@@ -291,6 +294,13 @@
             });
         };
 
+        // Also called directly from the close button: some browsers defer the close event for hidden pages.
+        const clearStudyKey = (e) => {
+            const drawer = $('study-drawer');
+            if (e && e.target !== drawer) return;
+            if (!drawer || !drawer.isConnected || drawer.open || !window.location.hash.startsWith('#studies') || !state.study) return;
+            state.study = ''; updateUrl();
+        };
         const openDrawer = (id) => {
             const s = d.studies.find(x => x.report_id === id);
             if (!s) return;
@@ -360,14 +370,18 @@
             $('study-drawer-content').innerHTML = html;
             const drawer = $('study-drawer');
             drawer.showModal();
+            state.study = id; updateUrl();
             
-            $('close-drawer').addEventListener('click', () => drawer.close());
+            $('close-drawer').addEventListener('click', () => { drawer.close(); clearStudyKey(); });
             // Model links (data-model) are routed by current_review_ui.js to core, QoR or E2 displays.
         };
 
         const container = $(containerId);
         container.innerHTML = renderControls();
         renderTable();
+        // Closing the drawer clears the study key, but only while this view still owns the URL.
+        $('study-drawer').addEventListener('close', clearStudyKey);
+        if (state.study) openDrawer(state.study);
         
         $('explorer-search').addEventListener('input', e => { state.search = e.target.value; updateUrl(); renderTable(); });
         $('explorer-modality').addEventListener('change', e => { state.modality = e.target.value; updateUrl(); renderTable(); });
