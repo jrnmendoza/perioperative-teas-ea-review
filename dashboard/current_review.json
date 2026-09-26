@@ -25335,6 +25335,604 @@
       "vi": "0.5122222222222224"
     }
   ],
+  "e2_accounting": {
+    "tierA": [
+      {
+        "body": "TEAS vs sham",
+        "report": "Szmit 2021",
+        "result_ids": "V33-OD-0350",
+        "E1_disposition": "INCLUDE",
+        "E2_disposition": "ADMIT",
+        "E2_basis": "All systemic opioid; meets E1",
+        "flags": "",
+        "mandatory_sensitivity": ""
+      },
+      {
+        "body": "TEAS vs sham",
+        "report": "Chen 1998",
+        "result_ids": "V33-OD-0013",
+        "E1_disposition": "SENSITIVITY",
+        "E2_disposition": "ADMIT",
+        "E2_basis": "A3: hydromorphone PCA 0-24 h with unquantified rescue",
+        "flags": "Unquantified rescue",
+        "mandatory_sensitivity": "Exclude-known-unquantified-rescue"
+      },
+      {
+        "body": "TEAS vs sham",
+        "report": "Chen 2020",
+        "result_ids": "V33-OD-0014",
+        "E1_disposition": "SENSITIVITY",
+        "E2_disposition": "ADMIT",
+        "E2_basis": "A1/DP3: 'sufentanil consumption during postoperative PCIA', 24 h; A4 sufentanil 0.5",
+        "flags": "Delivered vs demanded unstated; sufentanil conversion",
+        "mandatory_sensitivity": "Sufentanil 0.25 and 1.0"
+      },
+      {
+        "body": "TEAS vs sham",
+        "report": "He 2026 (hepatectomy)",
+        "result_ids": "V33-OD-0214",
+        "E1_disposition": "SENSITIVITY",
+        "E2_disposition": "ADMIT",
+        "E2_basis": "DP2: author-reported morphine equivalents of unstated route (IV vs oral)",
+        "flags": "Unit-uncertain equivalents",
+        "mandatory_sensitivity": "Exclude-unstated-route-equivalents"
+      },
+      {
+        "body": "TEAS vs sham",
+        "report": "Lee 2011",
+        "result_ids": "V33-OD-0184+V33-OD-0185 (arms combined; shared sham once)",
+        "E1_disposition": "SENSITIVITY",
+        "E2_disposition": "ADMIT",
+        "E2_basis": "DP1: canonical construct is PCA_partial_1_to_24h (PCA after recovery-room treatment; start time not precisely documented) - admitted on the same boundary reading as Lin 2002; A3: recovery-room doses unquantified",
+        "flags": "Window start not precisely documented (DP1 boundary); unquantified recovery-room doses; source contradiction (sham interval sum differs from Table 8; Table 8 values used)",
+        "mandatory_sensitivity": "Leave-out (source contradiction); exclude-known-unquantified-rescue"
+      },
+      {
+        "body": "TEAS vs sham",
+        "report": "Yeh 2011",
+        "result_ids": "V33-OD-0245",
+        "E1_disposition": "HOLD",
+        "E2_disposition": "HOLD",
+        "E2_basis": "Cohort overlap and route unresolved; E2 does not resolve source questions",
+        "flags": "",
+        "mandatory_sensitivity": ""
+      },
+      {
+        "body": "TEAS vs sham",
+        "report": "Zhang 2025",
+        "result_ids": "Tier B1 extraction",
+        "E1_disposition": "NOT ADMITTED",
+        "E2_disposition": "ADMIT",
+        "E2_basis": "E2.1 Change 1: POD1 taken as first 24 h; sufentanil 0.5",
+        "flags": "Amendment E2.1; PACU rescue sufentanil may be outside total",
+        "mandatory_sensitivity": "Sufentanil 0.25 and 1.0; exclude-E2.1-admissions"
+      },
+      {
+        "body": "TEAS vs sham",
+        "report": "Gu 2019",
+        "result_ids": "Tier B1 extraction",
+        "E1_disposition": "NOT ADMITTED",
+        "E2_disposition": "ADMIT",
+        "E2_basis": "E2.1 Change 2: 24-h value digitised from Fig. 4; mL x 1 ug/mL sufentanil; sufentanil 0.5",
+        "flags": "Amendment E2.1; figure-text contradiction (control bars 1.85-3.90 above text)",
+        "mandatory_sensitivity": "Leave-out (source contradiction); sufentanil 0.25 and 1.0; exclude-E2.1-admissions"
+      },
+      {
+        "body": "TEAS vs usual care",
+        "report": "Szmit 2021",
+        "result_ids": "V33-OD-0351",
+        "E1_disposition": "INCLUDE",
+        "E2_disposition": "ADMIT",
+        "E2_basis": "All systemic opioid; meets E1",
+        "flags": "",
+        "mandatory_sensitivity": ""
+      },
+      {
+        "body": "TEAS vs usual care",
+        "report": "Oztas 2019",
+        "result_ids": "V33-OD-0299 / V33-OD-0303",
+        "E1_disposition": "SENSITIVITY / INCLUDE (rescue construct)",
+        "E2_disposition": "NOT ADMITTED",
+        "E2_basis": "A4: only quantified opioids are tramadol (PCA) and pethidine (rescue); both unfactored",
+        "flags": "",
+        "mandatory_sensitivity": ""
+      },
+      {
+        "body": "TEAS vs active electrical",
+        "report": "Oztas 2019",
+        "result_ids": "V33-OD-0300 / V33-OD-0304",
+        "E1_disposition": "SENSITIVITY / INCLUDE (rescue construct)",
+        "E2_disposition": "NOT ADMITTED",
+        "E2_basis": "A4: tramadol and pethidine unfactored",
+        "flags": "",
+        "mandatory_sensitivity": ""
+      },
+      {
+        "body": "EA vs sham",
+        "report": "Lin 2002",
+        "result_ids": "V33-OD-0006+V33-OD-0007 (arms combined vs Group II sham-EA)",
+        "E1_disposition": "SENSITIVITY",
+        "E2_disposition": "ADMIT",
+        "E2_basis": "DP1: PCA connected at 1 h (boundary of 'within the first hour'), ends 24 h; DP4: IM pethidine 1 mg/kg first-hour rescue unfactored and unquantified",
+        "flags": "Window starts at hour 1 (boundary); unfactored first-hour rescue",
+        "mandatory_sensitivity": "Exclude-known-unquantified-rescue"
+      },
+      {
+        "body": "EA vs sham",
+        "report": "Sim 2002",
+        "result_ids": "V33-OD-0107+V33-OD-0108",
+        "E1_disposition": "SENSITIVITY",
+        "E2_disposition": "NOT ADMITTED",
+        "E2_basis": "X1: mg/kg; never multiplied by mean weight",
+        "flags": "",
+        "mandatory_sensitivity": ""
+      },
+      {
+        "body": "EA vs sham",
+        "report": "Coura 2011",
+        "result_ids": "V33-OD-0016",
+        "E1_disposition": "SENSITIVITY",
+        "E2_disposition": "NOT ADMITTED",
+        "E2_basis": "X1: ug/kg; never multiplied by mean weight",
+        "flags": "",
+        "mandatory_sensitivity": ""
+      },
+      {
+        "body": "EA vs sham",
+        "report": "Jin 2023",
+        "result_ids": "V33-OD-0190 / V33-OD-0191",
+        "E1_disposition": "HOLD",
+        "E2_disposition": "HOLD",
+        "E2_basis": "GA unverified (source question); also X3 mL without verified concentration",
+        "flags": "",
+        "mandatory_sensitivity": ""
+      },
+      {
+        "body": "EA vs sham",
+        "report": "Xie 2014",
+        "result_ids": "V33-OD-0067",
+        "E1_disposition": "HOLD",
+        "E2_disposition": "HOLD",
+        "E2_basis": "Source question unresolved; also A2 window unstated ('study PCA period')",
+        "flags": "",
+        "mandatory_sensitivity": ""
+      },
+      {
+        "body": "EA vs sham",
+        "report": "Ntritsou 2014",
+        "result_ids": "V33-OD-0111",
+        "E1_disposition": "EXCLUDE",
+        "E2_disposition": "NOT ADMITTED",
+        "E2_basis": "A4: tramadol only quantified opioid",
+        "flags": "",
+        "mandatory_sensitivity": ""
+      },
+      {
+        "body": "EA vs sham",
+        "report": "Wong 2006",
+        "result_ids": "V33-OD-0250",
+        "E1_disposition": "INCLUDE (0-72 h construct)",
+        "E2_disposition": "NOT ADMITTED",
+        "E2_basis": "A2: first 3 postoperative days total; no 24-h value",
+        "flags": "",
+        "mandatory_sensitivity": ""
+      },
+      {
+        "body": "EA vs usual care",
+        "report": "El-Rakshy 2009",
+        "result_ids": "V33-OD-0252",
+        "E1_disposition": "INCLUDE",
+        "E2_disposition": "ADMIT",
+        "E2_basis": "All systemic opioid; meets E1",
+        "flags": "High RoB; allocation/label discrepancies (existing)",
+        "mandatory_sensitivity": "Leave-out (existing El-Rakshy diagnostic)"
+      },
+      {
+        "body": "EA vs usual care",
+        "report": "Seevaunnamtum 2016",
+        "result_ids": "V33-OD-0003",
+        "E1_disposition": "INCLUDE",
+        "E2_disposition": "ADMIT",
+        "E2_basis": "All systemic opioid; meets E1",
+        "flags": "",
+        "mandatory_sensitivity": ""
+      },
+      {
+        "body": "EA vs usual care",
+        "report": "Yang 2024",
+        "result_ids": "V33-OD-0052",
+        "E1_disposition": "SENSITIVITY",
+        "E2_disposition": "ADMIT",
+        "E2_basis": "A3: IV PCA morphine 'first 24 h / POD1' with unquantified rescue",
+        "flags": "Unquantified rescue",
+        "mandatory_sensitivity": "Exclude-known-unquantified-rescue"
+      },
+      {
+        "body": "EA vs usual care",
+        "report": "Lin 2002",
+        "result_ids": "V33-OD-0004+V33-OD-0005 (arms combined vs Group I control)",
+        "E1_disposition": "SENSITIVITY",
+        "E2_disposition": "ADMIT",
+        "E2_basis": "As Lin 2002 vs sham (DP1 boundary; DP4 pethidine rescue)",
+        "flags": "Window starts at hour 1 (boundary); unfactored first-hour rescue",
+        "mandatory_sensitivity": "Exclude-known-unquantified-rescue"
+      },
+      {
+        "body": "EA vs usual care",
+        "report": "An 2014",
+        "result_ids": "V33-OD-0254",
+        "E1_disposition": "INCLUDE (0-48 h construct)",
+        "E2_disposition": "NOT ADMITTED",
+        "E2_basis": "A2: 48-h PCIA period only",
+        "flags": "",
+        "mandatory_sensitivity": ""
+      }
+    ],
+    "tierA_addendum": [
+      {
+        "body": "EA vs unresolved control",
+        "report": "Xie 2014",
+        "result_ids": "V33-OD-0068",
+        "E1_disposition": "HOLD",
+        "E2_disposition": "HOLD",
+        "E2_basis": "Comparator class unresolved (arm A described as 'control'; sham vs usual care not established); E2 does not resolve source questions; window also unstated (A2)",
+        "flags": "",
+        "mandatory_sensitivity": "",
+        "addendum_note": "Added 2026-09-24 after the E2 run: omitted from E2_tierA_reclassification.csv (commit 9fa94d6). HOLD under both E1 and E2; enters no model; no E2 result changes."
+      },
+      {
+        "body": "TEAS vs unresolved control",
+        "report": "Yeh 2011",
+        "result_ids": "V33-OD-0246",
+        "E1_disposition": "HOLD",
+        "E2_disposition": "HOLD",
+        "E2_basis": "Comparator class unresolved and Yeh 2010/2011 cohort overlap unresolved; E2 does not resolve source questions",
+        "flags": "",
+        "mandatory_sensitivity": "",
+        "addendum_note": "Added 2026-09-24 after the E2 run: omitted from E2_tierA_reclassification.csv (commit 9fa94d6). HOLD under both E1 and E2; enters no model; no E2 result changes."
+      }
+    ],
+    "tierB1": [
+      {
+        "report": "Zhang 2025",
+        "modality": "TEAS",
+        "comparator": "Sham (subthreshold current at same acupoints; canonical class Sham)",
+        "anaesthesia": "General",
+        "opioid_reported": "Total sufentanil consumption (ug) from PCIA (100 ug/100 mL; basal 2 mL/h; bolus 2 mL; lockout 10 min)",
+        "literal_values": "TEAS 50.53 +/- 4.46 (n=45) vs control 53.79 +/- 5.14 (n=48); MD -3.26 (-5.25 to -1.27)",
+        "window_as_reported": "POD1; report defines POD0 as day of surgery",
+        "source_locator": "p.9 Table 4; protocol p.4",
+        "E2_rule_failed": "A2 (POD1 not defined as first 24 h)",
+        "E2_disposition": "ADMITTED under E2.1 (POD1 taken as first 24 h)",
+        "E1_disposition": "NOT ADMITTED",
+        "resolvable_by": "Author query (window start/end; whether PACU rescue sufentanil is in total)",
+        "notes": "Closest miss. PACU rescue IV sufentanil by anaesthetist; ward rescue rectal indomethacin (non-opioid). Totals arithmetically consistent with ~24 h of 2 ug/h basal, but the rule requires the report to define the window. | E2.1: POD1 accepted as 24 h by amendment. IV MME at 0.5 ug factor: 25.27 (SD 2.23) vs 26.90 (SD 2.57); MD -1.63 (-2.61, -0.65)."
+      },
+      {
+        "report": "Gu 2019",
+        "modality": "TEAS",
+        "comparator": "Sham (stimulator output wires cut)",
+        "anaesthesia": "General",
+        "opioid_reported": "PCIA analgesic consumption (mL of mixed solution: sufentanil 100 ug + dexmedetomidine + flurbiprofen + palonosetron in 100 mL)",
+        "literal_values": "Text: 4 h 10.02 +/- 2.26 vs 13.38 +/- 2.98; 8 h 20.55 +/- 4.59 vs 24.63 +/- 3.94; 36 h 72.64 +/- 9.74 vs 76.01 +/- 10.43 (n=58 vs 59). 24 h: FIGURE ONLY | DIGITISED T4 (24 h): sham 58.84 SD 7.41 (n=59) vs TEAS 55.71 SD 7.93 (n=58) mL = ug sufentanil",
+        "window_as_reported": "Recorded at 4/8/16/24/36 h after operation",
+        "source_locator": "p.1 abstract; p.3 methods; p.4 Fig. 4",
+        "E2_rule_failed": "A5 (24-h value printed only as a plotted point; review has never read values off figures)",
+        "E2_disposition": "ADMITTED under E2.1 (figure digitised) — FLAGGED source contradiction; leave-out sensitivity mandatory",
+        "E1_disposition": "NOT ADMITTED",
+        "resolvable_by": "Author query for 24-h value; or a new post-hoc digitisation method (not adopted)",
+        "notes": "If a 24-h value were printed: mL x 1 ug/mL sufentanil is a valid linear factor (concentration stated in report). | E2.1 digitisation: see E2_digitisation_gu2019.md. Control bars read 1.85-3.90 above printed text at 4/8/36 h. IV MME at 0.5: MD -1.57 (-2.96, -0.17)."
+      },
+      {
+        "report": "Tu 2024",
+        "modality": "TEAS",
+        "comparator": "Sham",
+        "anaesthesia": "General",
+        "opioid_reported": "Tramadol rescue",
+        "literal_values": "6-24 h: 3 (TEAS) vs 6 (sham) patients received tramadol; no dose reported",
+        "window_as_reported": "0-2 / 2-6 / 6-24 h",
+        "source_locator": "p.4",
+        "E2_rule_failed": "A4 (tramadol unfactored) and A5 (count of patients only)",
+        "E2_disposition": "NOT ADMITTED",
+        "E1_disposition": "NOT ADMITTED",
+        "resolvable_by": "None under registered conversion policy",
+        "notes": ""
+      },
+      {
+        "report": "Chen 2015",
+        "modality": "TEAS",
+        "comparator": "Sham",
+        "anaesthesia": "General",
+        "opioid_reported": "Rescue IV morphine 2 mg per dose; no PCA identified",
+        "literal_values": "Cumulative number of rescue analgesia: 1 (1-3) vs 3.5 (2-7), median (IQR); n=41 vs 42",
+        "window_as_reported": "Not stated for the count",
+        "source_locator": "p.2 methods; p.4 table",
+        "E2_rule_failed": "A5 (count; median/IQR not converted per Methods line 317); A2 (window unstated)",
+        "E2_disposition": "NOT ADMITTED",
+        "E1_disposition": "NOT ADMITTED",
+        "resolvable_by": "Author query for mean/SD of total morphine over 0-24 h",
+        "notes": "Count of administered 2 mg doses is a dose multiple but reported only as median (IQR)."
+      },
+      {
+        "report": "Wu 2025",
+        "modality": "TEAS",
+        "comparator": "Sham",
+        "anaesthesia": "General",
+        "opioid_reported": "Oral oxycodone with acetaminophen (tablets); paracetamol; IV parecoxib",
+        "literal_values": "Oxycodone/APAP tablets 0.3 +/- 0.5 vs 0.3 +/- 0.6",
+        "window_as_reported": "Not stated as 0-24 h",
+        "source_locator": "p.5 Table 2; p.6 text",
+        "E2_rule_failed": "A4 (oxycodone unfactored; oral route; tablets)",
+        "E2_disposition": "NOT ADMITTED",
+        "E1_disposition": "NOT ADMITTED",
+        "resolvable_by": "None under registered conversion policy",
+        "notes": ""
+      },
+      {
+        "report": "Yang 2020",
+        "modality": "EA",
+        "comparator": "Usual care",
+        "anaesthesia": "General (with paravertebral block)",
+        "opioid_reported": "IV PCA morphine 1 mg/kg in 100 mL (weight-based concentration); IM bucinnazine rescue",
+        "literal_values": "Rescue medication given: 5 (17.24%) vs 7 (25.00%); no PCA consumption reported",
+        "window_as_reported": "0-24 h and 24-48 h tables (nausea/pain only)",
+        "source_locator": "p.3 methods; p.5 Table 3",
+        "E2_rule_failed": "A5 (no opioid quantity reported); A4 (bucinnazine unfactored)",
+        "E2_disposition": "NOT ADMITTED",
+        "E1_disposition": "NOT ADMITTED",
+        "resolvable_by": "Author query for PCA morphine mg; weight-based concentration means mL alone cannot be converted (X1/X3)",
+        "notes": ""
+      },
+      {
+        "report": "Zhou 2025",
+        "modality": "TEAS",
+        "comparator": "Sham",
+        "anaesthesia": "General",
+        "opioid_reported": "IV tramadol 50-100 mg every 6 h as needed",
+        "literal_values": "Rescue analgesia: 6 (12.5%) vs 13 (26.5%) patients over first three postoperative days",
+        "window_as_reported": "First three postoperative days",
+        "source_locator": "p.3 methods; p.8 Table 3",
+        "E2_rule_failed": "A4 (tramadol unfactored); A5 (proportion only); A2 (72 h)",
+        "E2_disposition": "NOT ADMITTED",
+        "E1_disposition": "NOT ADMITTED",
+        "resolvable_by": "None under registered conversion policy",
+        "notes": ""
+      },
+      {
+        "report": "Zhu 2022",
+        "modality": "EA",
+        "comparator": "Usual care (4-arm: Pre / 30 / Comb / Usual)",
+        "anaesthesia": "General",
+        "opioid_reported": "No postoperative opioid identified; rescue flurbiprofen 100 mg (NSAID); parecoxib at end of surgery",
+        "literal_values": "Analgesics 0-48 h (n): 2 / 3 / 1 / 3",
+        "window_as_reported": "0-48 h",
+        "source_locator": "p.8 Table 3; methods p.3-4",
+        "E2_rule_failed": "A4/A5 (no opioid quantity; non-opioid rescue)",
+        "E2_disposition": "NOT ADMITTED",
+        "E1_disposition": "NOT ADMITTED",
+        "resolvable_by": "Not applicable",
+        "notes": "Intraoperative sufentanil/remifentanil reported but outside the postoperative window."
+      }
+    ],
+    "tierB2": [
+      {
+        "report": "Ao 2021",
+        "modality": "TEAS",
+        "comparator": "Sham",
+        "what_is_reported": "PCA 'consumption of opioids (ml)' 102.8 +/- 7.4 vs 120.6 +/- 9.2; sufentanil 1.5 ug/kg in 150 mL (weight-based concentration); window 48 h",
+        "E2_rule_failed": "A2 (48 h); X1/X3 (mL of weight-based concentration cannot be converted without individual weights)",
+        "E2_disposition": "NOT ADMITTED",
+        "flag": ""
+      },
+      {
+        "report": "Grech 2016",
+        "modality": "EA",
+        "comparator": "Usual care",
+        "what_is_reported": "Analgesic use in mg morphine equivalents, PACU and 3 days after surgery (Fig. 1, mean +/- SE)",
+        "E2_rule_failed": "A2 (PACU-only and 3-day windows; no 24-h value)",
+        "E2_disposition": "NOT ADMITTED",
+        "flag": ""
+      },
+      {
+        "report": "He 2026 (breast/WJCO)",
+        "modality": "EA",
+        "comparator": "Sham",
+        "what_is_reported": "Rescue IV morphine 1-3 mg or paracetamol per protocol; no arm-level total found in text",
+        "E2_rule_failed": "A5 (no quantity reported)",
+        "E2_disposition": "NOT ADMITTED",
+        "flag": ""
+      },
+      {
+        "report": "Hou 2023",
+        "modality": "TEAS",
+        "comparator": "Sham",
+        "what_is_reported": "PCIA sufentanil 1 ug/mL; only 'amount of rescue analgesics' reported, rescue = IV flurbiprofen",
+        "E2_rule_failed": "A4/A5 (non-opioid rescue; no sufentanil total)",
+        "E2_disposition": "NOT ADMITTED",
+        "flag": ""
+      },
+      {
+        "report": "Huang 2017",
+        "modality": "TEAS",
+        "comparator": "Sham",
+        "what_is_reported": "Intraoperative opioid only (remifentanil-equivalent); no postoperative consumption",
+        "E2_rule_failed": "No postoperative quantity",
+        "E2_disposition": "NOT ADMITTED",
+        "flag": ""
+      },
+      {
+        "report": "Huang 2024",
+        "modality": "EA",
+        "comparator": "Sham",
+        "what_is_reported": "'Additional dose released by PCA pump', POD2, median [Q1,Q3] counts; pump contents unclear",
+        "E2_rule_failed": "A5 (median of counts; not converted per Methods line 317)",
+        "E2_disposition": "NOT ADMITTED",
+        "flag": ""
+      },
+      {
+        "report": "Li 2021",
+        "modality": "TEAS",
+        "comparator": "Sham",
+        "what_is_reported": "Sufentanil dosage 48 h after operation",
+        "E2_rule_failed": "A2 (48 h)",
+        "E2_disposition": "NOT ADMITTED",
+        "flag": ""
+      },
+      {
+        "report": "Li 2022",
+        "modality": "EA",
+        "comparator": "Sham",
+        "what_is_reported": "Intraoperative remifentanil/sufentanil; postoperative 'need for rescue analgesics' frequency only",
+        "E2_rule_failed": "A5 (frequency only)",
+        "E2_disposition": "NOT ADMITTED",
+        "flag": ""
+      },
+      {
+        "report": "Liang 2021",
+        "modality": "TEAS",
+        "comparator": "Usual care",
+        "what_is_reported": "'Extra analgesia' 3.8 (1.9) vs 5.0 (2.9), unit and drug unspecified; intraoperative sufentanil in Table 1",
+        "E2_rule_failed": "A4/A5 (drug and unit unidentified)",
+        "E2_disposition": "NOT ADMITTED",
+        "flag": ""
+      },
+      {
+        "report": "Liu 2026 (ESD)",
+        "modality": "TEAS",
+        "comparator": "Sham",
+        "what_is_reported": "Proportion of patients needing morphine",
+        "E2_rule_failed": "A5 (proportion only)",
+        "E2_disposition": "NOT ADMITTED",
+        "flag": ""
+      },
+      {
+        "report": "Liu 2026 (burn)",
+        "modality": "TEAS",
+        "comparator": "Sham",
+        "what_is_reported": "PCIA sufentanil + butorphanol mixed; no PCIA consumption reported; rescue dezocine n (%)",
+        "E2_rule_failed": "A5 (no quantity); A4 (butorphanol co-infused)",
+        "E2_disposition": "NOT ADMITTED",
+        "flag": ""
+      },
+      {
+        "report": "Lu 2021",
+        "modality": "TEAS",
+        "comparator": "Sham",
+        "what_is_reported": "Intraoperative remifentanil only",
+        "E2_rule_failed": "No postoperative quantity",
+        "E2_disposition": "NOT ADMITTED",
+        "flag": ""
+      },
+      {
+        "report": "Lu 2022",
+        "modality": "TEAS",
+        "comparator": "Sham",
+        "what_is_reported": "Recovery parameters only; no opioid quantity",
+        "E2_rule_failed": "No postoperative quantity",
+        "E2_disposition": "NOT ADMITTED",
+        "flag": ""
+      },
+      {
+        "report": "Ma 2026",
+        "modality": "TEAS",
+        "comparator": "Sham",
+        "what_is_reported": "Intraoperative vasopressors only",
+        "E2_rule_failed": "No postoperative quantity",
+        "E2_disposition": "NOT ADMITTED",
+        "flag": ""
+      },
+      {
+        "report": "Ng 2013",
+        "modality": "EA",
+        "comparator": "Sham and no acupuncture",
+        "what_is_reported": "Number of 50-mg pethidine injections 2.7 +/- 2.3 vs 5.2 +/- 4.7 (sham); window not stated",
+        "E2_rule_failed": "A4 (pethidine unfactored); A2 (window unstated)",
+        "E2_disposition": "NOT ADMITTED",
+        "flag": ""
+      },
+      {
+        "report": "Pan 2023",
+        "modality": "TEAS",
+        "comparator": "Usual care",
+        "what_is_reported": "Analgesic drug utilisation rate n (%) within 24 h",
+        "E2_rule_failed": "A5 (proportion only)",
+        "E2_disposition": "NOT ADMITTED",
+        "flag": ""
+      },
+      {
+        "report": "Song 2020",
+        "modality": "TEAS",
+        "comparator": "Active non-acupoint",
+        "what_is_reported": "PCA butorphanol + propacetamol; sufentanil total is intraoperative",
+        "E2_rule_failed": "A4 (butorphanol unfactored)",
+        "E2_disposition": "NOT ADMITTED",
+        "flag": ""
+      },
+      {
+        "report": "Sun 2017",
+        "modality": "TEAS",
+        "comparator": "Sham (4-arm)",
+        "what_is_reported": "Supplemental analgesics (%); intraoperative morphine",
+        "E2_rule_failed": "A5 (proportion only)",
+        "E2_disposition": "NOT ADMITTED",
+        "flag": ""
+      },
+      {
+        "report": "Wu 2022",
+        "modality": "TEAS",
+        "comparator": "Sham",
+        "what_is_reported": "Intraoperative remifentanil; postoperative medication use n (%)",
+        "E2_rule_failed": "A5 (proportion only)",
+        "E2_disposition": "NOT ADMITTED",
+        "flag": ""
+      },
+      {
+        "report": "Xiong 2021",
+        "modality": "TEAS",
+        "comparator": "Sham",
+        "what_is_reported": "PCA sufentanil described; no consumption reported",
+        "E2_rule_failed": "A5 (no quantity)",
+        "E2_disposition": "NOT ADMITTED",
+        "flag": ""
+      },
+      {
+        "report": "Yao 2015",
+        "modality": "TEAS",
+        "comparator": "Sham",
+        "what_is_reported": "Cumulative number of rescue analgesia 1 (1-3) vs 3.5 (2-7.8), median (IQR)",
+        "E2_rule_failed": "A5 (median count)",
+        "E2_disposition": "NOT ADMITTED",
+        "flag": "Rescue statistics nearly identical to Chen 2015 (1 (1-3) vs 3.5 (2-7), P=0.004 in both) despite different surgery (gynaecological vs thyroidectomy) and n (35/36 vs 41/42). Possible data-integrity or related-report concern; for human review, not resolved here."
+      },
+      {
+        "report": "Yeh 2010",
+        "modality": "TEAS",
+        "comparator": "Sham",
+        "what_is_reported": "Part of Yeh 2010/2011 family",
+        "E2_rule_failed": "HOLD persists (cohort overlap; E2 does not resolve source questions)",
+        "E2_disposition": "HOLD",
+        "flag": ""
+      },
+      {
+        "report": "Yu 2020",
+        "modality": "TEAS",
+        "comparator": "Sham",
+        "what_is_reported": "Cases of remedial analgesia n (%)",
+        "E2_rule_failed": "A5 (proportion only)",
+        "E2_disposition": "NOT ADMITTED",
+        "flag": ""
+      },
+      {
+        "report": "Zhang 2023",
+        "modality": "TEAS",
+        "comparator": "Sham",
+        "what_is_reported": "Post-surgery opioid within 48 h in IV MME, median [IQR] 110 (80-110) vs 110 (90-110); n=922/916",
+        "E2_rule_failed": "A2 (48 h); A5 (median)",
+        "E2_disposition": "NOT ADMITTED",
+        "flag": "Largest trial in the review; no admissible 24-h opioid result."
+      }
+    ]
+  },
   "outstanding": [
     "GRADE for the four new later-window QoR bodies.",
     "Structured length-of-stay, PACU, extubation and mobilisation tables.",

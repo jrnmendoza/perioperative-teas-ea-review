@@ -45,21 +45,27 @@
     }</div>` : '')+
     `<h3>What changed</h3><ul><li>Wu 2016 recorded as citation-search evidence; full-text dispositions reconciled.</li><li>Risk-of-bias and all 38 certainty decisions adopted; no reviewer approval queue.</li><li>Zheng’s unresolved continuous data held out of main models; original values retained in diagnostics.</li><li>Wu 2025 intraoperative dose preceded treatment and is now diagnostic only.</li><li>The 24-h QoR addendum (3 Very-low-certainty bodies).</li><li>Later-window QoR models, ungraded.</li><li>The E2 post-hoc sensitivity analysis, with E1 retained as primary. <button type="button" class="text-button" data-view="results">See E2 results</button>.</li></ul>`+
     note('The 12-reference import gap and historical outcome-focused exclusion limitation remain disclosed.');}
-  // Drawn only from canonical model_outputs and model_inputs: pooled estimate/CI/PI are never recomputed here.
-  function forest(m){
-    const rows=d.inputs.filter(r=>r.model_id===m.model_id);if(!rows.length)return '';
-    const rr=m.measure==='RR',show=v=>num(rr?Math.exp(v):v),z=1.95996398454,tau2=+m.tau2||0,pooled=m.k>1;
-    const w=rows.map(r=>1/(+r.vi+tau2)),wsum=w.reduce((a,b)=>a+b,0);
-    const pts=rows.map((r,i)=>({name:r.study,y:+r.yi,lo:+r.yi-z*Math.sqrt(+r.vi),hi:+r.yi+z*Math.sqrt(+r.vi),w:w[i]/wsum}));
-    const hasPI=m.pi_low!==null&&m.pi_low!==undefined,thr=m.reaches10mg!==null&&m.reaches10mg!==undefined?-10:null;
-    const vals=[0,...pts.flatMap(p=>[p.lo,p.hi]),m.ci_low,m.ci_high,...(hasPI?[m.pi_low,m.pi_high]:[]),...(thr===null?[]:[thr])];
-    let lo=Math.min(...vals),hi=Math.max(...vals);const pad=(hi-lo||1)*.05;lo-=pad;hi+=pad;
-    const X0=290,X1=640,x=v=>X0+(v-lo)/(hi-lo)*(X1-X0),fmt=v=>String(+v.toFixed(6));
-    let ticks;
+  // Plot extent: study CIs, stored pooled CI/PI, the null and (where recorded) the -10 mg threshold, padded 5%.
+  const Z95=1.95996398454;
+  const plotVals=(m,rows)=>[0,...rows.flatMap(r=>[+r.yi-Z95*Math.sqrt(+r.vi),+r.yi+Z95*Math.sqrt(+r.vi)]),...(m.k?[m.ci_low,m.ci_high]:[]),...(m.pi_low!==null&&m.pi_low!==undefined?[m.pi_low,m.pi_high]:[]),...(m.reaches10mg!==null&&m.reaches10mg!==undefined?[-10]:[])];
+  const padRange=vals=>{const lo=Math.min(...vals),hi=Math.max(...vals),pad=(hi-lo||1)*.05;return [lo-pad,hi+pad];};
+  function axisTicks(lo,hi,rr){
+    const fmt=v=>String(+v.toFixed(6));
     if(rr){const sets=[[.01,.02,.05,.1,.2,.5,.75,1,1.5,2,4,5,10,20,50,100],[.001,.002,.005,.01,.02,.05,.1,.2,.5,1,2,5,10,20,50,100,200,500,1000],[.001,.01,.1,1,10,100,1000]];
-      ticks=sets.map(s=>s.filter(t=>Math.log(t)>=lo&&Math.log(t)<=hi)).find(s=>s.length<=7).map(t=>({v:Math.log(t),label:fmt(t)}));}
-    else{const raw=(hi-lo)/5,p=10**Math.floor(Math.log10(raw)),step=[1,2,2.5,5,10].map(s=>s*p).find(s=>raw<=s);
-      ticks=[];for(let v=Math.ceil(lo/step)*step;v<=hi;v+=step)ticks.push({v,label:fmt(v)});}
+      return sets.map(s=>s.filter(t=>Math.log(t)>=lo&&Math.log(t)<=hi)).find(s=>s.length<=7).map(t=>({v:Math.log(t),label:fmt(t)}));}
+    const raw=(hi-lo)/5,p=10**Math.floor(Math.log10(raw)),step=[1,2,2.5,5,10].map(s=>s*p).find(s=>raw<=s),ticks=[];
+    for(let v=Math.ceil(lo/step)*step;v<=hi;v+=step)ticks.push({v,label:fmt(v)});return ticks;
+  }
+  // Drawn only from canonical outputs and inputs: pooled estimate/CI/PI are never recomputed here.
+  // rows defaults to the model's core inputs; range lets several plots share one axis.
+  function forest(m,rows=d.inputs.filter(r=>r.model_id===m.model_id),range){
+    if(!rows.length)return '';
+    const rr=m.measure==='RR',show=v=>num(rr?Math.exp(v):v),z=Z95,tau2=+m.tau2||0,pooled=m.k>1;
+    const w=rows.map(r=>1/(+r.vi+tau2)),wsum=w.reduce((a,b)=>a+b,0);
+    const pts=rows.map((r,i)=>({name:r.study,mark:r.mark,y:+r.yi,lo:+r.yi-z*Math.sqrt(+r.vi),hi:+r.yi+z*Math.sqrt(+r.vi),w:w[i]/wsum}));
+    const hasPI=m.pi_low!==null&&m.pi_low!==undefined,thr=m.reaches10mg!==null&&m.reaches10mg!==undefined?-10:null;
+    const [lo,hi]=range||padRange(plotVals(m,rows));
+    const X0=290,X1=640,x=v=>X0+(v-lo)/(hi-lo)*(X1-X0),ticks=axisTicks(lo,hi,rr);
     const RH=30,top=46,poolY=top+pts.length*RH+(pooled?8:0),piY=poolY+RH,axisY=(pooled?(hasPI?piY:poolY):top+(pts.length-1)*RH)+28,ht=axisY+(m.construct.startsWith('pre_')?46:66);
     const T=(tx,ty,s,o='')=>`<text x="${tx}" y="${ty}" fill="#dbeafe" font-size="13" ${o}>${s}</text>`;
     const comp={sham:'sham',usual_care:'usual care',active_electrical:'active electrical control'}[m.comparator]||esc(m.comparator);
@@ -68,7 +74,7 @@
       T(8,20,'Study','fill-opacity=".75"')+T(660,20,rr?'Risk ratio [95% CI]':'Estimate [95% CI]','fill-opacity=".75"')+(pooled?T(952,20,'Weight','fill-opacity=".75" text-anchor="end"'):'')+
       `<line x1="${x(0)}" x2="${x(0)}" y1="30" y2="${axisY}" class="fp-null" stroke="#94a3b8" stroke-dasharray="4 4"/>`+
       (thr===null?'':`<line x1="${x(thr)}" x2="${x(thr)}" y1="30" y2="${axisY}" class="fp-tl" stroke="#fbbf24" stroke-dasharray="1 4" stroke-width="2"/><text class="fp-tt" x="${x(thr)}" y="${axisY+54}" fill="#fbbf24" font-size="11" text-anchor="middle">−10 mg registered threshold</text>`)+
-      pts.map((p,i)=>{const y=top+i*RH,sz=pooled?5+11*Math.sqrt(p.w):9;return T(8,y+4,esc(p.name))+`<line x1="${x(p.lo)}" x2="${x(p.hi)}" y1="${y}" y2="${y}" class="fp-s" stroke="#93c5fd" stroke-width="1.6"/><rect class="fp-f" x="${x(p.y)-sz/2}" y="${y-sz/2}" width="${sz}" height="${sz}" fill="#93c5fd"/>`+T(660,y+4,`${show(p.y)} [${show(p.lo)}, ${show(p.hi)}]`)+(pooled?T(952,y+4,`${(100*p.w).toFixed(1)}%`,'text-anchor="end"'):'');}).join('')+
+      pts.map((p,i)=>{const y=top+i*RH,sz=pooled?5+11*Math.sqrt(p.w):9;return T(8,y+4,esc(p.name)+(p.mark?` <tspan class="fp-mut" fill="#94a3b8">${esc(p.mark)}</tspan>`:''))+`<line x1="${x(p.lo)}" x2="${x(p.hi)}" y1="${y}" y2="${y}" class="fp-s" stroke="#93c5fd" stroke-width="1.6"/><rect class="fp-f" x="${x(p.y)-sz/2}" y="${y-sz/2}" width="${sz}" height="${sz}" fill="#93c5fd"/>`+T(660,y+4,`${show(p.y)} [${show(p.lo)}, ${show(p.hi)}]`)+(pooled?T(952,y+4,`${(100*p.w).toFixed(1)}%`,'text-anchor="end"'):'');}).join('')+
       (pooled?`<line x1="8" x2="952" y1="${poolY-RH/2-4}" y2="${poolY-RH/2-4}" class="fp-sep" stroke="#2a3a52"/>`+T(8,poolY+4,'Pooled · REML, safeguarded HK','font-weight="600"')+
         `<polygon points="${x(m.ci_low)},${poolY} ${x(m.effect)},${poolY-8} ${x(m.ci_high)},${poolY} ${x(m.effect)},${poolY+8}" class="fp-pf" fill="#5eead4"/>`+T(660,poolY+4,`${show(m.effect)} [${show(m.ci_low)}, ${show(m.ci_high)}]`,'class="fp-pf" font-weight="600" fill="#5eead4"')+T(952,poolY+4,'100%','text-anchor="end"')+
         (hasPI?T(8,piY+4,'95% prediction interval','fill-opacity=".75"')+`<line x1="${x(m.pi_low)}" x2="${x(m.pi_high)}" y1="${piY}" y2="${piY}" class="fp-ps" stroke="#5eead4" stroke-width="2"/><line x1="${x(m.pi_low)}" x2="${x(m.pi_low)}" y1="${piY-5}" y2="${piY+5}" class="fp-ps" stroke="#5eead4" stroke-width="2"/><line x1="${x(m.pi_high)}" x2="${x(m.pi_high)}" y1="${piY-5}" y2="${piY+5}" class="fp-ps" stroke="#5eead4" stroke-width="2"/>`+T(660,piY+4,`${show(m.pi_low)} to ${show(m.pi_high)}`,'fill-opacity=".75"'):'')
@@ -223,7 +229,77 @@
         `<h3>Five exact-result risk-of-bias assessments (later windows)</h3>` + renderRob(d.qor_later_rob) : '') +
       `<p><a href="current/QOR_ANALYSIS_REPORT.md" download>Full QoR report</a> · <a href="current/qor_rob2_signals.csv" download>176 signalling responses</a> · <a href="current/qor_source_locators.csv" download>Source locators</a> · <a href="current/qor_verification.json" download>Independent verification</a></p>`;
   }
-  const views={overview,results,qor,coverage,prisma,evidence,risk,studies,methods,downloads};
+  // E1 vs E2 workspace: canonical E1 and post-hoc E2 bodies side by side, from stored outputs and decision files only.
+  const E2_BODIES=[['TEAS vs sham','opioid24_TEAS_sham','E2_opioid24_TEAS_sham'],['TEAS vs usual care','opioid24_TEAS_usual','E2_opioid24_TEAS_usual'],['EA vs sham','opioid24_EA_sham','E2_opioid24_EA_sham'],['EA vs usual care','opioid24_EA_usual','E2_opioid24_EA_usual']];
+  const resultIds=s=>s.startsWith('Tier B1')?[]:s.split(' / ').map(x=>x.split(' (')[0].trim());
+  const bodyOf=r=>`${r.modality} vs ${/^sham/i.test(r.comparator)?'sham':/usual/i.test(r.comparator)?'usual care':r.comparator}`;
+  // Same join as the CI contract: result ID, or report name for the E2.1 Tier B1 admissions.
+  const accountingRows=(body,e1id,e2id)=>{
+    const acc=d.e2_accounting,modality=body.split(' vs ')[0];
+    const rows=[...acc.tierA.filter(r=>r.body===body),...acc.tierA_addendum.filter(r=>r.body.startsWith(modality+' vs unresolved'))].map(r=>({...r,tier:r.addendum_note?'A (addendum)':'A'}));
+    const named=new Set(rows.map(r=>r.report));
+    for(const [tier,list] of [['B1',acc.tierB1],['B2',acc.tierB2]])for(const r of list){
+      if(bodyOf(r)!==body)continue;
+      const a=rows.find(x=>x.report===r.report);
+      if(a){a.detail=r;continue;}
+      if(!named.has(r.report))rows.push({report:r.report,E1_disposition:r.E1_disposition||'—',E2_disposition:r.E2_disposition,E2_basis:r.E2_rule_failed,flags:r.flag||r.notes||'',mandatory_sensitivity:'',tier,detail:r});
+    }
+    const hit=(list,mid,r)=>list.find(x=>x.model_id===mid&&(resultIds(r.result_ids||'').includes(x.result_id)||((r.result_ids||'').startsWith('Tier B1')&&x.study===r.report)));
+    return rows.map(r=>({...r,e1:hit(d.inputs,e1id,r),e2:hit(d.e2_inputs,e2id,r)}));
+  };
+  // Model ladder: stored estimate and CI per model on one axis (no recomputation).
+  function ladder(items,range){
+    const [lo,hi]=range,X0=400,X1=700,x=v=>X0+(v-lo)/(hi-lo)*(X1-X0),RH=26,top=36,axisY=top+items.length*RH,ticks=axisTicks(lo,hi,false);
+    const T=(tx,ty,s,o='')=>`<text x="${tx}" y="${ty}" fill="#dbeafe" font-size="12" ${o}>${s}</text>`;
+    return `<div class="forest-wrap"><svg viewBox="0 0 960 ${axisY+34}" role="img" aria-label="Sensitivity ladder: ${items.length} stored model estimates on a shared axis">`+
+      T(8,18,'Model','fill-opacity=".75"')+T(716,18,'MD [95% CI] · k','fill-opacity=".75"')+
+      `<line x1="${x(0)}" x2="${x(0)}" y1="24" y2="${axisY}" class="fp-null" stroke="#94a3b8" stroke-dasharray="4 4"/><line x1="${x(-10)}" x2="${x(-10)}" y1="24" y2="${axisY}" class="fp-tl" stroke="#fbbf24" stroke-dasharray="1 4" stroke-width="2"/>`+
+      items.map((it,i)=>{const y=top+i*RH,cls=it.e2?'fp-ps':'fp-s',fcls=it.e2?'fp-pf':'fp-f',col=it.e2?'#5eead4':'#93c5fd';
+        return T(8,y+4,esc(it.label),it.main?'font-weight="600"':'class="fp-mut" fill="#94a3b8"')+`<line x1="${x(it.lo)}" x2="${x(it.hi)}" y1="${y}" y2="${y}" class="${cls}" stroke="${col}" stroke-width="${it.main?2.5:1.5}"/>`+
+          (it.main?`<polygon points="${x(it.lo)},${y} ${x(it.effect)},${y-6} ${x(it.hi)},${y} ${x(it.effect)},${y+6}" class="${fcls}" fill="${col}"/>`:`<circle cx="${x(it.effect)}" cy="${y}" r="4" class="${fcls}" fill="${col}"/>`)+
+          T(716,y+4,`${num(it.effect)} [${num(it.lo)}, ${num(it.hi)}] · ${it.k}`,it.main?'font-weight="600"':'');}).join('')+
+      `<line x1="${X0}" x2="${X1}" y1="${axisY}" y2="${axisY}" class="fp-axis" stroke="#94a3b8"/>`+ticks.map(t=>`<line x1="${x(t.v)}" x2="${x(t.v)}" y1="${axisY}" y2="${axisY+5}" class="fp-axis" stroke="#94a3b8"/><text class="fp-mut" x="${x(t.v)}" y="${axisY+18}" fill="#94a3b8" font-size="11" text-anchor="middle">${t.label}</text>`).join('')+
+      T(716,axisY+18,'mg IV MME · dotted line −10 mg','class="fp-mut" font-size="11" fill="#94a3b8"')+`</svg></div>`;
+  }
+  function e1e2(){
+    if(!d.e2_accounting||!d.e2_inputs)return title('E1 vs E2')+note('E2 inputs or accounting not loaded.');
+    const want=parseHash().params.get('body'),[body,e1id,e2id]=E2_BODIES.find(b=>b[0]===want)||E2_BODIES[0];
+    const m1=d.models.find(m=>m.model_id===e1id),m2=d.e2_analysis.models.find(m=>m.model_id===e2id),g=grade.get(e1id),j=(d.e2_joint||[]).find(x=>x.body===body);
+    const [modality,cmp]=body.split(' vs ');
+    const m2plot={...m2,measure:'MD',unit:m1.unit,construct:m1.construct,modality,comparator:m1.comparator};
+    const rows1=d.inputs.filter(r=>r.model_id===e1id),e1ids=new Set(rows1.map(r=>r.study));
+    const rows2=d.e2_inputs.filter(r=>r.model_id===e2id).map(r=>({...r,mark:e1ids.has(r.study)?'':'E2 only'}));
+    const range=padRange([...plotVals(m1,rows1),...plotVals(m2plot,rows2)]);
+    const est=m=>m.k?`${num(m.effect)} [${num(m.ci_low)}, ${num(m.ci_high)}]`:'No eligible evidence';
+    const cmpRows=[['Role','Registered primary','Post-hoc sensitivity (defined and amended after data were seen)'],['k / N',`${m1.k} / ${m1.N}`,`${m2.k} / ${m2.N}`],['MD, mg IV MME [95% CI]',est(m1),est(m2)],
+      ['I² · τ²',m1.k>1?`${num(m1.I2,1)}% · ${num(m1.tau2,3)}`:'—',m2.k>1?`${num(m2.I2,1)}% · ${num(m2.tau2,3)}`:'—'],
+      ['Prediction interval',m1.pi_low!=null?`${num(m1.pi_low)} to ${num(m1.pi_high)}`:'—',m2.pi_low!=null?`${num(m2.pi_low)} to ${num(m2.pi_high)}`:'—'],
+      ['Point estimate ≤ −10 mg',m1.k?(m1.reaches10mg?'Yes':'No'):'—',m2.reaches10mg?'Yes':'No'],['Certainty',tag(g?.certainty||'—'),tag('Not graded')]];
+    const sens=[...(m1.k?[{label:'E1 · registered primary',effect:m1.effect,lo:m1.ci_low,hi:m1.ci_high,k:m1.k,main:true}]:[]),
+      ...d.models.filter(m=>m.model_id.startsWith(e1id+'_')&&m.role==='SENSITIVITY'&&/mg IVMME$/.test(m.unit)&&m.k).map(m=>({label:'E1 sens · '+m.model_id.slice(e1id.length+1).replaceAll('_',' ')+(m.unit.startsWith('assumed')?' (assumed MME)':''),effect:m.effect,lo:m.ci_low,hi:m.ci_high,k:m.k})),
+      {label:'E2 · post-hoc main',effect:m2.effect,lo:m2.ci_low,hi:m2.ci_high,k:m2.k,main:true,e2:true},
+      ...d.e2_analysis.models.filter(m=>m.body===body&&m.model_id!==e2id).map(m=>({label:'E2 '+(m.role==='LEAVE-ONE-OUT'?'LOO':'sens')+' · '+((d.e2_labels||{})[m.model_id]||m.note||m.model_id).replace(/<[^>]+>/g,''),effect:m.effect,lo:m.ci_low,hi:m.ci_high,k:m.k,e2:true}))];
+    const lrange=padRange([0,-10,...sens.flatMap(s=>[s.lo,s.hi])]);
+    const acc=accountingRows(body,e1id,e2id).sort((a,b)=>(!!b.e2-!!a.e2)||(!!b.e1-!!a.e1)||a.report.localeCompare(b.report));
+    const trial=r=>r?`<span style="white-space:nowrap">${num(+r.yi)} [${num(+r.yi-Z95*Math.sqrt(+r.vi))}, ${num(+r.yi+Z95*Math.sqrt(+r.vi))}]</span>${r.factor&&+r.factor!==1?`<br><small>factor ${esc(r.factor)}</small>`:''}`:'—';
+    return title('E1 vs E2','Why the estimate changes between the registered primary (E1) and the post-hoc E2 synthesis: membership, trial-level estimates and sensitivity, from stored outputs only.')+
+      note('<strong>E2 is post-hoc.</strong> It was defined, and amended (E2.1), after the data were seen; the decision to keep E1 as primary was made after E2 results were known. E1 remains the registered primary analysis. E2 is not graded and must not be reported as primary efficacy evidence.')+
+      `<div class="body-picker" role="group" aria-label="Comparison">${E2_BODIES.map(([b])=>`<button type="button" class="e1e2-body${b===body?' active':''}" data-body="${esc(b)}" aria-pressed="${b===body}">${esc(b)}</button>`).join('')}</div>`+
+      `<h3>${esc(body)}: summary</h3>`+table(['',`E1 · <button class="text-button model-link" data-model="${esc(e1id)}">${esc(e1id)}</button>`,`E2 · <button class="text-button model-link" data-model="${esc(e2id)}">${esc(e2id)}</button>`],cmpRows)+
+      (j?note(`Registered joint criterion (≥10 mg sparing with paired ~24 h pain upper CI &lt; +1): opioid limb <strong>${esc(j.opioid_limb)}</strong>; pain limb <strong>${esc(j.pain_limb)}</strong>; joint <strong>${esc(j.joint_criterion)}</strong>.`):'')+
+      `<h3>Forest plots on a shared axis</h3><h4>E1 · registered primary · ${esc(e1id)}</h4>`+(m1.k?forest(m1,rows1,range):note('No eligible quantitative E1 evidence for this comparison.'))+`<h4>E2 · post-hoc, not graded · ${esc(e2id)}</h4>`+forest(m2plot,rows2,range)+
+      note('Both plots use the same horizontal scale. “E2 only” marks trials admitted by E2 that are not in the E1 body. E2 study rows show arm values after the stated conversion factor and arm combination.')+
+      `<h3>Trial-by-trial accounting (${acc.length} candidate reports)</h3>`+
+      table(['Report','E1','E2','Rule / basis','In E1 model','In E2 model: MD [95% CI]','Flags · required sensitivity'],acc.map(r=>[
+        `${esc(r.report)}<br><small>Tier ${esc(r.tier)}${r.result_ids&&!r.result_ids.startsWith('Tier')?' · '+esc(r.result_ids):''}</small>`,esc(r.E1_disposition),`<strong>${esc(r.E2_disposition)}</strong>`,
+        esc(r.E2_basis)+(r.detail?.source_locator?`<br><small>${esc(r.detail.source_locator)}${r.detail.resolvable_by?' · resolvable by: '+esc(r.detail.resolvable_by):''}</small>`:''),
+        r.e1?'✓':'—',trial(r.e2),[r.flags,r.mandatory_sensitivity].filter(Boolean).map(esc).join('<br>')||'—']))+
+      note('Dispositions are the committed E2 decision files (Tier A reclassification and addendum; Tier B1 extraction; Tier B2 re-check), unchanged. Reports held for unresolved source or comparator questions stay out of both analyses.')+
+      `<h3>Sensitivity ladder</h3>`+ladder(sens,lrange)+
+      note('Stored estimates only; nothing is re-fitted in the browser. E1 sensitivities with assumed MME conversions are labelled. A different estimate under a sensitivity is not evidence of effect modification.')+
+      `<p><a href="current/ADDITIONAL_FILE_12.md" download>Additional file 12 (trial-by-trial accounting)</a> · <a href="current/AMENDED_PRIMARY_ESTIMAND_E2.md" download>E2 estimand and amendment</a> · <a href="current/e2_model_outputs.csv" download>E2 estimates</a></p>`;
+  }
+  const views={overview,results,e1e2,qor,coverage,prisma,evidence,risk,studies,methods,downloads};
   function render(id){if(!views[id])id='overview';$('content').innerHTML=(['results','risk','evidence','studies','methods','downloads'].includes(id)?qorLink():'')+views[id]();document.querySelectorAll('.nav [data-view]').forEach(b=>{b.classList.toggle('active',b.dataset.view===id);b.setAttribute('aria-selected',String(b.dataset.view===id));});if(id==='risk')riskRows();if(id==='studies'){if(window.renderRichExplorer){window.renderRichExplorer('rich-explorer-container');}else{studyRows();}}$('content').focus({preventScroll:true});return id;}
   // URL state: #view, #results?model=…&result=…, #qor?model=…; the Study Explorer adds its own filter/study keys.
   const parseHash=()=>{const [view,q='']=location.hash.slice(1).split('?');return {view,params:new URLSearchParams(q)};};
@@ -268,7 +344,7 @@
     $('result-drawer-content').innerHTML=html;$('result-drawer-content').querySelector('h2').id='result-drawer-title';$('result-drawer').showModal();
     if(parseHash().view==='results')setHash(hashFor('results',{model:r.model_id,result:rid}));
   }
-  document.addEventListener('click',e=>{const nav=e.target.closest('[data-view]');if(nav){document.querySelectorAll('dialog[open]').forEach(x=>x.close());show(nav.dataset.view);return;}const model=e.target.closest('[data-model]');if(model){openModel(model.dataset.model);return;}const fig=e.target.closest('.figure-open');if(fig){$('figure-image').src=fig.dataset.src;$('figure-image').alt=fig.dataset.caption;$('figure-caption').textContent=fig.dataset.caption;$('figure-dialog').showModal();return;}const res=e.target.closest('.result-open');if(res){openResultDrawer(res.dataset.result,res.dataset.resultModel);return;}if(e.target.id==='close-result-drawer'){$('result-drawer').close();clearResultKey();}});
+  document.addEventListener('click',e=>{const nav=e.target.closest('[data-view]');if(nav){document.querySelectorAll('dialog[open]').forEach(x=>x.close());show(nav.dataset.view);return;}const model=e.target.closest('[data-model]');if(model){openModel(model.dataset.model);return;}const fig=e.target.closest('.figure-open');if(fig){$('figure-image').src=fig.dataset.src;$('figure-image').alt=fig.dataset.caption;$('figure-caption').textContent=fig.dataset.caption;$('figure-dialog').showModal();return;}const bodyBtn=e.target.closest('.e1e2-body');if(bodyBtn){show('e1e2',{body:bodyBtn.dataset.body});return;}const res=e.target.closest('.result-open');if(res){openResultDrawer(res.dataset.result,res.dataset.resultModel);return;}if(e.target.id==='close-result-drawer'){$('result-drawer').close();clearResultKey();}});
   document.addEventListener('input',e=>{if(e.target.id==='risk-search')riskRows(e.target.value);if(e.target.id==='study-search')studyRows(e.target.value);});
   document.addEventListener('change',e=>{if(e.target.id==='model-select'){history.pushState(null,'',hashFor('results',{model:e.target.value}));routed=location.hash;modelDetail(e.target.value);}});
   $('close-figure').addEventListener('click',()=>$('figure-dialog').close());
