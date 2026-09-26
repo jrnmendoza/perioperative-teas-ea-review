@@ -99,6 +99,9 @@ if qor_path.exists():
 e2_path=D/'09_E2_ANALYSIS/e2_model_outputs.json'
 if e2_path.exists():
  data['e2_analysis']=json.loads(e2_path.read_text())
+# Per-contrast E2 rows as analysed (after conversion factor and arm combination), exported by run_e2.py.
+if (D/'09_E2_ANALYSIS/e2_model_inputs.csv').exists():
+ data['e2_inputs']=rows('10_FINAL_ADJUDICATION/09_E2_ANALYSIS/e2_model_inputs.csv')
 
 report_text = (ROOT/'FINAL_CURRENT_STATE_REPORT.md').read_text(encoding='utf-8')
 section_match = re.search(r'\*\*Not completed — outstanding\*\*(.*?)(?=\n\*\*|\n## |\Z)', report_text, re.DOTALL)
