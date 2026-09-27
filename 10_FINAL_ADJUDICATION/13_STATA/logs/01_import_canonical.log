@@ -1,0 +1,63 @@
+------------------------------------------------------------------------------------------------------------------------
+      name:  imp
+       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/logs/01_import_canon
+> ical.log
+  log type:  text
+ opened on:  27 Sep 2026, 10:33:01
+
+. import delimited using "$STATA/input/stata_models.csv", clear varnames(1) bindquote(strict) stringcols(_all)
+(encoding automatically selected: UTF-8)
+(7 vars, 117 obs)
+
+. destring k, replace
+k: all characters numeric; replaced as byte
+
+. gen int model_order = _n
+
+. save "$STATA/work/models.dta", replace
+file /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/work/models.dta saved
+
+. import delimited using "$STATA/input/stata_model_inputs.csv", clear varnames(1) bindquote(strict) stringcols(_all)
+(encoding automatically selected: ISO-8859-1)
+(16 vars, 327 obs)
+
+. destring row n_i mean_i sd_i events_i n_c mean_c sd_c events_c canonical_yi canonical_vi, replace
+row: all characters numeric; replaced as byte
+n_i: all characters numeric; replaced as int
+mean_i: all characters numeric; replaced as double
+(51 missing values generated)
+sd_i: all characters numeric; replaced as double
+(51 missing values generated)
+events_i: all characters numeric; replaced as int
+(276 missing values generated)
+n_c: all characters numeric; replaced as int
+mean_c: all characters numeric; replaced as double
+(51 missing values generated)
+sd_c: all characters numeric; replaced as double
+(51 missing values generated)
+events_c: all characters numeric; replaced as int
+(276 missing values generated)
+canonical_yi: all characters numeric; replaced as double
+canonical_vi: all characters numeric; replaced as double
+
+. merge m:1 analysis_set model_id using "$STATA/work/models.dta", keepusing(measure) assert(match using) keep(match) nog
+> enerate
+
+    Result                      Number of obs
+    -----------------------------------------
+    Not matched                             0
+    Matched                               327  
+    -----------------------------------------
+
+. sort analysis_set model_id row
+
+. save "$STATA/work/inputs.dta", replace
+file /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/work/inputs.dta saved
+
+. log close imp
+      name:  imp
+       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/logs/01_import_canon
+> ical.log
+  log type:  text
+ closed on:  27 Sep 2026, 10:33:01
+------------------------------------------------------------------------------------------------------------------------

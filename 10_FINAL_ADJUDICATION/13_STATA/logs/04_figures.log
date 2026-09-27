@@ -1,0 +1,1215 @@
+------------------------------------------------------------------------------------------------------------------------
+      name:  fig
+       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/logs/04_figures.log
+  log type:  text
+ opened on:  27 Sep 2026, 10:33:02
+
+. 
+. capture program drop fmtnum
+
+. program define fmtnum, rclass
+  1.     * Trimmed number with a leading zero ("0.034", "-0.9").
+.     args x fmt
+  2.     local s = strtrim(string(`x', "`fmt'"))
+  3.     if substr("`s'", 1, 1) == "." local s "0`s'"
+  4.     if substr("`s'", 1, 2) == "-." local s = "-0" + substr("`s'", 2, .)
+  5.     return local s "`s'"
+  6. end
+
+. 
+. capture program drop niceaxis
+
+. program define niceaxis, rclass
+  1.     * Axis range and labels for [lo, hi] (log scale when ef == 1; values then exponentiated for -eform- plots).
+.     args lo hi ef
+  2.     local pad = (`hi' - `lo')*.05
+  3.     local lo = `lo' - `pad'
+  4.     local hi = `hi' + `pad'
+  5.     if "`ef'" == "1" {
+  6.         foreach set in ".1 .2 .25 .5 .75 1 1.5 2 4" ".01 .02 .05 .1 .2 .5 1 2 5 10 20 50 100" ".001 .01 .1 1 10 100
+>  1000" {
+  7.             local labs ""
+  8.             local n = 0
+  9.             foreach c of local set {
+ 10.                 if ln(`c') >= `lo' & ln(`c') <= `hi' {
+ 11.                     fmtnum `c' %9.0g
+ 12.                     local labs `"`labs' `c' "`r(s)'""'
+ 13.                     local ++n
+ 14.                 }
+ 15.             }
+ 16.             if `n' <= 8 & `n' >= 2 continue, break
+ 17.         }
+ 18.         return local range = "`=exp(`lo')' `=exp(`hi')'"
+ 19.         return local labels `"`labs'"'
+ 20.     }
+ 21.     else {
+ 22.         local raw = (`hi' - `lo')/5
+ 23.         local p = 10^floor(log10(`raw'))
+ 24.         local step ""
+ 25.         foreach m in 1 2 2.5 5 10 {
+ 26.             if "`step'" == "" & `m'*`p' >= `raw' local step = `m'*`p'
+ 27.         }
+ 28.         local a = floor(`lo'/`step')*`step'
+ 29.         local b = ceil(`hi'/`step')*`step'
+ 30.         return local range "`a' `b'"
+ 31.         return local labels "`a'(`step')`b'"
+ 32.     }
+ 33. end
+
+. 
+. import delimited using "$STATA/input/figure_specs.csv", clear varnames(1) bindquote(strict) stringcols(_all)
+(encoding automatically selected: UTF-8)
+(11 vars, 27 obs)
+
+. local nf = _N
+
+. foreach v in figure_id kind analysis_set model_id title subtitle xtitle eform threshold {
+  2.     forvalues j = 1/`nf' {
+  3.         local `v'`j' = `v'[`j']
+  4.     }
+  5. }
+
+. tempname reg sst
+
+. postfile `reg' str60 figure_id str8 kind str16 analysis_set str80 model_id int k long N double(theta ci_lb ci_ub tau2 
+> I2 pi_lb pi_ub) ///
+>     using "$STATA/work/figure_values.dta", replace
+
+. postfile `sst' str80 model_id int k str20 test double(stat p) using "$STATA/work/small_study.dta", replace
+
+. local opt se(khartung, truncated) tolerance(1e-14) nrtolerance(1e-14) iterate(1000)
+
+. forvalues j = 1/`nf' {
+  2.     use "$STATA/work/inputs_es.dta", clear
+  3.     keep if analysis_set == "`analysis_set`j''" & model_id == "`model_id`j''"
+  4.     local k = _N
+  5.     assert `k' >= 1
+  6.     quietly summarize n_i
+  7.     local N = r(sum)
+  8.     quietly summarize n_c
+  9.     local N = `N' + r(sum)
+ 10.     local isrr = "`eform`j''" == "1"
+ 11.     local ef = cond(`isrr', "eform", "")
+ 12.     local xl = cond("`threshold`j''" != "", "xline(`threshold`j'', lpattern(shortdash) lcolor(orange) lwidth(medthi
+> ck))", "")
+ 13.     local esname = cond(`isrr', "Risk ratio", "Mean difference")
+ 14.     meta set s_yi s_se, studylabel(study) random(reml)
+ 15.     local th = s_yi[1]
+ 16.     local lb = s_yi[1] - invnormal(.975)*s_se[1]
+ 17.     local ub = s_yi[1] + invnormal(.975)*s_se[1]
+ 18.     local t2 = 0
+ 19.     local i2 = .
+ 20.     local pl = .
+ 21.     local pu = .
+ 22.     if `k' >= 2 {
+ 23.         quietly meta summarize, `opt'
+ 24.         local th = r(theta)
+ 25.         local lb = r(ci_lb)
+ 26.         local ub = r(ci_ub)
+ 27.         local t2 = r(tau2)
+ 28.         local i2 = r(I2)
+ 29.         if `k' >= 5 {
+ 30.             local pl = r(theta) - invttail(`k'-1, .025)*sqrt(r(tau2) + r(se)^2)
+ 31.             local pu = r(theta) + invttail(`k'-1, .025)*sqrt(r(tau2) + r(se)^2)
+ 32.         }
+ 33.     }
+ 34.     post `reg' ("`figure_id`j''") ("`kind`j''") ("`analysis_set`j''") ("`model_id`j''") (`k') (`N') (`th') (`lb') (
+> `ub') (`t2') (`i2') (`pl') (`pu')
+ 35.     * Axis extent (log scale for risk ratios).
+.     tempvar sl su
+ 36.     quietly gen double `sl' = s_yi - invnormal(.975)*s_se
+ 37.     quietly gen double `su' = s_yi + invnormal(.975)*s_se
+ 38.     quietly summarize `sl'
+ 39.     local xlo = min(r(min), `lb', 0)
+ 40.     quietly summarize `su'
+ 41.     local xhi = max(r(max), `ub', 0)
+ 42.     if `pl' < . local xlo = min(`xlo', `pl')
+ 43.     if `pu' < . local xhi = max(`xhi', `pu')
+ 44.     if "`threshold`j''" != "" {
+ 45.         local xlo = min(`xlo', `threshold`j'')
+ 46.         local xhi = max(`xhi', `threshold`j'')
+ 47.     }
+ 48.     if "`kind`j''" == "loo" {
+ 49.         quietly meta summarize, leaveoneout `opt'
+ 50.         matrix L = r(leaveoneout)
+ 51.         forvalues r = 1/`=rowsof(L)' {
+ 52.             local xlo = min(`xlo', L[`r', "ci_lb"])
+ 53.             local xhi = max(`xhi', L[`r', "ci_ub"])
+ 54.         }
+ 55.     }
+ 56.     niceaxis `xlo' `xhi' `isrr'
+ 57.     local axis `"xscale(range(`r(range)')) xlabel(`r(labels)')"'
+ 58.     * Notes: what was fitted, with the values Stata computed.
+.     local tr = cond(`isrr', "exp", "")
+ 59.     fmtnum `t2' %9.3g
+ 60.     local t2s "`r(s)'"
+ 61.     local L1 "k = `k' trial(s); N = `N' participants."
+ 62.     if `k' == 1 local L1 "`L1' Single study: estimate with normal 95% CI; not pooled."
+ 63.     else local L1 "`L1' Random effects: REML {&tau}{superscript:2} = `t2s'; I{superscript:2} = `: display %4.1f `i2
+> ''%; truncated Knapp-Hartung 95% CI (t, k-1 df)."
+ 64.     local L2 ""
+ 65.     if `pl' < . {
+ 66.         fmtnum `tr'(`pl') %9.3f
+ 67.         local a "`r(s)'"
+ 68.         fmtnum `tr'(`pu') %9.3f
+ 69.         local L2 "95% prediction interval (t, k-1 df): `a' to `r(s)'."
+ 70.     }
+ 71.     if "`threshold`j''" != "" local L2 = strtrim("`L2' Dotted line: -10 mg IV MME registered clinical-importance th
+> reshold.")
+ 72.     local L3 "Model `model_id`j'' (`analysis_set`j''). StataNow/SE `c(stata_version)', 13_STATA/do/04_figures.do."
+ 73.     local ys = max(3.6, 2.4 + 0.34*`k')
+ 74.     local base title("`title`j''", size(medium)) subtitle("`subtitle`j''", size(small)) xtitle("`xtitle`j''") xsize
+> (9) ysize(`ys') name(g, replace)
+ 75.     if "`kind`j''" == "funnel" {
+ 76.         gen double a = events_i
+ 77.         gen double b = n_i - events_i
+ 78.         gen double c = events_c
+ 79.         gen double dd = n_c - events_c
+ 80.         meta clear
+ 81.         meta esize a b c dd, esize(lnrratio) studylabel(study) random(reml)
+ 82.         quietly meta bias, harbord
+ 83.         local hz = r(z)
+ 84.         local hp = r(p)
+ 85.         post `sst' ("`model_id`j''") (`k') ("Harbord") (`hz') (`hp')
+ 86.         local F1 "k = `k' trials; contours mark two-sided p-value regions around no effect; vertical line: inverse-
+> variance (common-effect) estimate."
+ 87.         local F2 "Harbord test for small-study effects: z = `: display %5.2f `hz'', p = `: display %5.3f `hp''. Low
+>  power at k = 10; exploratory, not used for GRADE."
+ 88.         meta funnelplot, contours(1 5 10) `base' note(`"`F1'"' `"`F2'"' `"`L3'"', size(vsmall))
+ 89.     }
+ 90.     else {
+ 91.         if "`L2'" == "" local notes note(`"`L1'"' `"`L3'"', size(vsmall))
+ 92.         else            local notes note(`"`L1'"' `"`L2'"' `"`L3'"', size(vsmall))
+ 93.         if "`kind`j''" == "loo" {
+ 94.             meta forestplot, leaveoneout `opt' nullrefline `ef' `xl' `axis' columnopts(_esci, supertitle("`esname'"
+> )) `base' `notes'
+ 95.             preserve
+ 96.             clear
+ 97.             svmat double L, names(col)
+ 98.             gen str80 model_id = "`model_id`j''"
+ 99.             quietly ds, has(type numeric)
+100.             format `r(varlist)' %21.16g
+101.             export delimited using "$STATA/output/leaveoneout_`model_id`j''.csv", replace datafmt
+102.             restore
+103.         }
+104.         else if `k' == 1 meta forestplot _id _plot _esci, nooverall nullrefline `ef' `xl' `axis' columnopts(_esci, 
+> supertitle("`esname'")) `base' `notes'
+105.         else             meta forestplot _id _plot _esci _weight, `opt' nullrefline `ef' `xl' `axis' columnopts(_es
+> ci, supertitle("`esname'")) `base' `notes'
+106.     }
+107.     graph export "$STATA/figures/`figure_id`j''.svg", replace
+108.     graph export "$STATA/figures/`figure_id`j''.pdf", replace
+109.     graph export "$STATA/figures/`figure_id`j''.png", replace width(2400)
+110.     meta clear
+111. }
+(326 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 1
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+  Effect-size label: Effect size
+        Effect size: s_yi
+          Std. err.: s_se
+        Study label: study
+file
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/figures/fig_e1_opioid24_tea
+    > s_sham.svg saved as SVG format
+file
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/figures/fig_e1_opioid24_tea
+    > s_sham.pdf saved as PDF format
+file /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/figures/fig_e1_opioid24_teas
+> _sham.png written in PNG format
+(320 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 7
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+  Effect-size label: Effect size
+        Effect size: s_yi
+          Std. err.: s_se
+        Study label: study
+file
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/figures/fig_e2_opioid24_tea
+    > s_sham.svg saved as SVG format
+file
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/figures/fig_e2_opioid24_tea
+    > s_sham.pdf saved as PDF format
+file /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/figures/fig_e2_opioid24_teas
+> _sham.png written in PNG format
+(326 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 1
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+  Effect-size label: Effect size
+        Effect size: s_yi
+          Std. err.: s_se
+        Study label: study
+file
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/figures/fig_e1_opioid24_tea
+    > s_usual.svg saved as SVG format
+file
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/figures/fig_e1_opioid24_tea
+    > s_usual.pdf saved as PDF format
+file /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/figures/fig_e1_opioid24_teas
+> _usual.png written in PNG format
+(326 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 1
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+  Effect-size label: Effect size
+        Effect size: s_yi
+          Std. err.: s_se
+        Study label: study
+file
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/figures/fig_e2_opioid24_tea
+    > s_usual.svg saved as SVG format
+file
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/figures/fig_e2_opioid24_tea
+    > s_usual.pdf saved as PDF format
+file /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/figures/fig_e2_opioid24_teas
+> _usual.png written in PNG format
+(326 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 1
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+  Effect-size label: Effect size
+        Effect size: s_yi
+          Std. err.: s_se
+        Study label: study
+file
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/figures/fig_e2_opioid24_ea_
+    > sham.svg saved as SVG format
+file
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/figures/fig_e2_opioid24_ea_
+    > sham.pdf saved as PDF format
+file /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/figures/fig_e2_opioid24_ea_s
+> ham.png written in PNG format
+(325 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 2
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+  Effect-size label: Effect size
+        Effect size: s_yi
+          Std. err.: s_se
+        Study label: study
+file
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/figures/fig_e1_opioid24_ea_
+    > usual.svg saved as SVG format
+file
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/figures/fig_e1_opioid24_ea_
+    > usual.pdf saved as PDF format
+file /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/figures/fig_e1_opioid24_ea_u
+> sual.png written in PNG format
+(323 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 4
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+  Effect-size label: Effect size
+        Effect size: s_yi
+          Std. err.: s_se
+        Study label: study
+file
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/figures/fig_e2_opioid24_ea_
+    > usual.svg saved as SVG format
+file
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/figures/fig_e2_opioid24_ea_
+    > usual.pdf saved as PDF format
+file /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/figures/fig_e2_opioid24_ea_u
+> sual.png written in PNG format
+(317 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 10
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+  Effect-size label: Effect size
+        Effect size: s_yi
+          Std. err.: s_se
+        Study label: study
+file
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/figures/fig_sec_ponv24_teas
+    > _sham.svg saved as SVG format
+file
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/figures/fig_sec_ponv24_teas
+    > _sham.pdf saved as PDF format
+file /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/figures/fig_sec_ponv24_teas_
+> sham.png written in PNG format
+(325 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 2
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+  Effect-size label: Effect size
+        Effect size: s_yi
+          Std. err.: s_se
+        Study label: study
+file
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/figures/fig_sec_nausea24_ea
+    > _usual.svg saved as SVG format
+file
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/figures/fig_sec_nausea24_ea
+    > _usual.pdf saved as PDF format
+file /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/figures/fig_sec_nausea24_ea_
+> usual.png written in PNG format
+(325 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 2
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+  Effect-size label: Effect size
+        Effect size: s_yi
+          Std. err.: s_se
+        Study label: study
+file
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/figures/fig_sec_vomiting24_
+    > ea_usual.svg saved as SVG format
+file
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/figures/fig_sec_vomiting24_
+    > ea_usual.pdf saved as PDF format
+file /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/figures/fig_sec_vomiting24_e
+> a_usual.png written in PNG format
+(324 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 3
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+  Effect-size label: Effect size
+        Effect size: s_yi
+          Std. err.: s_se
+        Study label: study
+file
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/figures/fig_sec_nausea24_te
+    > as_sham.svg saved as SVG format
+file
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/figures/fig_sec_nausea24_te
+    > as_sham.pdf saved as PDF format
+file /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/figures/fig_sec_nausea24_tea
+> s_sham.png written in PNG format
+(323 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 4
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+  Effect-size label: Effect size
+        Effect size: s_yi
+          Std. err.: s_se
+        Study label: study
+file
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/figures/fig_sec_vomiting24_
+    > teas_sham.svg saved as SVG format
+file
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/figures/fig_sec_vomiting24_
+    > teas_sham.pdf saved as PDF format
+file /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/figures/fig_sec_vomiting24_t
+> eas_sham.png written in PNG format
+(324 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 3
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+  Effect-size label: Effect size
+        Effect size: s_yi
+          Std. err.: s_se
+        Study label: study
+file
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/figures/fig_sec_pain24_rest
+    > _teas_sham.svg saved as SVG format
+file
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/figures/fig_sec_pain24_rest
+    > _teas_sham.pdf saved as PDF format
+file /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/figures/fig_sec_pain24_rest_
+> teas_sham.png written in PNG format
+(320 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 7
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+  Effect-size label: Effect size
+        Effect size: s_yi
+          Std. err.: s_se
+        Study label: study
+file
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/figures/fig_sec_flatus_teas
+    > _sham.svg saved as SVG format
+file
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/figures/fig_sec_flatus_teas
+    > _sham.pdf saved as PDF format
+file /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/figures/fig_sec_flatus_teas_
+> sham.png written in PNG format
+(323 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 4
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+  Effect-size label: Effect size
+        Effect size: s_yi
+          Std. err.: s_se
+        Study label: study
+file
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/figures/fig_sec_flatus_ea_u
+    > sual.svg saved as SVG format
+file
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/figures/fig_sec_flatus_ea_u
+    > sual.pdf saved as PDF format
+file /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/figures/fig_sec_flatus_ea_us
+> ual.png written in PNG format
+(325 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 2
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+  Effect-size label: Effect size
+        Effect size: s_yi
+          Std. err.: s_se
+        Study label: study
+file
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/figures/fig_sec_bowelsounds
+    > _teas_sham.svg saved as SVG format
+file
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/figures/fig_sec_bowelsounds
+    > _teas_sham.pdf saved as PDF format
+file /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/figures/fig_sec_bowelsounds_
+> teas_sham.png written in PNG format
+(323 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 4
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+  Effect-size label: Effect size
+        Effect size: s_yi
+          Std. err.: s_se
+        Study label: study
+file
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/figures/fig_sec_defecation_
+    > teas_sham.svg saved as SVG format
+file
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/figures/fig_sec_defecation_
+    > teas_sham.pdf saved as PDF format
+file /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/figures/fig_sec_defecation_t
+> eas_sham.png written in PNG format
+(323 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 4
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+  Effect-size label: Effect size
+        Effect size: s_yi
+          Std. err.: s_se
+        Study label: study
+file
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/figures/fig_sec_defecation_
+    > ea_usual.svg saved as SVG format
+file
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/figures/fig_sec_defecation_
+    > ea_usual.pdf saved as PDF format
+file /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/figures/fig_sec_defecation_e
+> a_usual.png written in PNG format
+(323 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 4
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+  Effect-size label: Effect size
+        Effect size: s_yi
+          Std. err.: s_se
+        Study label: study
+file
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/figures/fig_sec_intraop_rem
+    > ifentanil_teas_sham.svg saved as SVG format
+file
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/figures/fig_sec_intraop_rem
+    > ifentanil_teas_sham.pdf saved as PDF format
+file /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/figures/fig_sec_intraop_remi
+> fentanil_teas_sham.png written in PNG format
+(325 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 2
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+  Effect-size label: Effect size
+        Effect size: s_yi
+          Std. err.: s_se
+        Study label: study
+file
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/figures/fig_sec_intraop_rem
+    > ifentanil_teas_usual.svg saved as SVG format
+file
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/figures/fig_sec_intraop_rem
+    > ifentanil_teas_usual.pdf saved as PDF format
+file /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/figures/fig_sec_intraop_remi
+> fentanil_teas_usual.png written in PNG format
+(325 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 2
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+  Effect-size label: Effect size
+        Effect size: s_yi
+          Std. err.: s_se
+        Study label: study
+file
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/figures/fig_qor_qor40_sham_
+    > 24h.svg saved as SVG format
+file
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/figures/fig_qor_qor40_sham_
+    > 24h.pdf saved as PDF format
+file /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/figures/fig_qor_qor40_sham_2
+> 4h.png written in PNG format
+(325 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 2
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+  Effect-size label: Effect size
+        Effect size: s_yi
+          Std. err.: s_se
+        Study label: study
+file
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/figures/fig_qor_qor40_usual
+    > _24h.svg saved as SVG format
+file
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/figures/fig_qor_qor40_usual
+    > _24h.pdf saved as PDF format
+file /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/figures/fig_qor_qor40_usual_
+> 24h.png written in PNG format
+(323 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 4
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+  Effect-size label: Effect size
+        Effect size: s_yi
+          Std. err.: s_se
+        Study label: study
+file
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/figures/fig_qor_qor15_sham_
+    > 24h.svg saved as SVG format
+file
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/figures/fig_qor_qor15_sham_
+    > 24h.pdf saved as PDF format
+file /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/figures/fig_qor_qor15_sham_2
+> 4h.png written in PNG format
+(317 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 10
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+  Effect-size label: Effect size
+        Effect size: s_yi
+          Std. err.: s_se
+        Study label: study
+number of observations will be reset to 11
+Press any key to continue, or Break to abort
+Number of observations (_N) was 0, now 11.
+file /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/output/leaveoneout_ponv24_TE
+> AS_sham.csv saved
+file
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/figures/fig_loo_ponv24_teas
+    > _sham.svg saved as SVG format
+file
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/figures/fig_loo_ponv24_teas
+    > _sham.pdf saved as PDF format
+file /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/figures/fig_loo_ponv24_teas_
+> sham.png written in PNG format
+(320 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 7
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+  Effect-size label: Effect size
+        Effect size: s_yi
+          Std. err.: s_se
+        Study label: study
+number of observations will be reset to 8
+Press any key to continue, or Break to abort
+Number of observations (_N) was 0, now 8.
+file /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/output/leaveoneout_flatus_TE
+> AS_sham.csv saved
+file
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/figures/fig_loo_flatus_teas
+    > _sham.svg saved as SVG format
+file
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/figures/fig_loo_flatus_teas
+    > _sham.pdf saved as PDF format
+file /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/figures/fig_loo_flatus_teas_
+> sham.png written in PNG format
+(320 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 7
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+  Effect-size label: Effect size
+        Effect size: s_yi
+          Std. err.: s_se
+        Study label: study
+number of observations will be reset to 8
+Press any key to continue, or Break to abort
+Number of observations (_N) was 0, now 8.
+file /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/output/leaveoneout_E2_opioid
+> 24_TEAS_sham.csv saved
+file
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/figures/fig_loo_e2_opioid24
+    > _teas_sham.svg saved as SVG format
+file
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/figures/fig_loo_e2_opioid24
+    > _teas_sham.pdf saved as PDF format
+file /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/figures/fig_loo_e2_opioid24_
+> teas_sham.png written in PNG format
+(317 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 10
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 10
+       Study label: study
+        Study size: _meta_studysize
+      Summary data: a b c dd
+
+       Effect size
+              Type: lnrratio
+             Label: Log risk-ratio
+          Variable: _meta_es
+   Zero-cells adj.: None; no zero cells
+
+         Precision
+         Std. err.: _meta_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+  Effect-size label: Log risk-ratio
+        Effect size: _meta_es
+          Std. err.: _meta_se
+              Model: Common effect
+             Method: Inverse-variance
+file
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/figures/fig_funnel_ponv24_t
+    > eas_sham.svg saved as SVG format
+file
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/figures/fig_funnel_ponv24_t
+    > eas_sham.pdf saved as PDF format
+file /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/figures/fig_funnel_ponv24_te
+> as_sham.png written in PNG format
+
+. postclose `reg'
+
+. postclose `sst'
+
+. use "$STATA/work/figure_values.dta", clear
+
+. format theta-pi_ub %21.16g
+
+. export delimited using "$STATA/output/figure_values.csv", replace datafmt
+file /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/output/figure_values.csv sav
+> ed
+
+. use "$STATA/work/small_study.dta", clear
+
+. format stat p %21.16g
+
+. export delimited using "$STATA/output/small_study_tests.csv", replace datafmt
+file /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/output/small_study_tests.csv
+>  saved
+
+. log close fig
+      name:  fig
+       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/logs/04_figures.log
+  log type:  text
+ closed on:  27 Sep 2026, 10:33:15
+------------------------------------------------------------------------------------------------------------------------
