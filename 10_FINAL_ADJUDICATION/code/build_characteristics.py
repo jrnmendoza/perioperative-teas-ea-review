@@ -9,11 +9,17 @@ used in a fixed order of provenance and nothing is inferred to fill a gap:
   Canonical result register           03_CANONICAL/results.csv arm descriptions (intervention / comparator)
   Source-traced (extraction record)   dashboard/study_characteristics.js (extraction-record file + line)
   Legacy (v26, not re-verified)       dashboard/data.js (v26 master workbook import)
+  Extracted (PDF quote, single extractor)
+                                      14_CHARACTERISTICS/regimen_extraction.csv: postoperative analgesia, PCA regimen,
+                                      rescue analgesia and cumulative stimulation time, each with a verbatim quote checked
+                                      against the report's text layer (code/verify_regimen_extraction.py); one extractor,
+                                      second review pending
+  Not reported in source              regimen field searched in the full text and not reported there
   Not verified                        registry value explicitly marked NOT VERIFIED and no other source
   Not extracted                       no structured source exists for this field
 
-Outputs: 14_CHARACTERISTICS/report_characteristics.csv (long) and report_characteristics_wide.csv (values only,
-for Stata) plus a hash manifest.
+Outputs: 14_CHARACTERISTICS/report_characteristics.csv (long; the note column carries the verbatim quote for extracted
+regimen fields) and report_characteristics_wide.csv (values only, for Stata) plus a hash manifest.
 """
 import csv, hashlib, json, pathlib
 
@@ -28,12 +34,14 @@ traced = fix(js('study_characteristics.js', 'window.STUDY_CHARACTERISTICS'))
 legacy = {LEGACY_KEY.get(s['key'], s['key']): s for s in js('data.js', 'window.STUDIES_DATA')}
 overlay = json.load(open(D / '03_CANONICAL/verified_metadata.json'))
 results = list(csv.DictReader(open(D / '03_CANONICAL/results.csv', encoding='utf-8-sig')))
+REGIMEN = OUT / 'regimen_extraction.csv'
+regimen = {(r['report_id'], r['field']): r for r in csv.DictReader(open(REGIMEN, encoding='utf-8'))} if REGIMEN.exists() else {}
 
 def ok(v): return v not in (None, '') and 'NOT VERIFIED' not in str(v)
 COMPARATOR_CLASS = lambda s: 'sham' if s.lower().startswith('sham') else 'usual care' if s.lower().startswith('usual') else 'active control' if s.lower().startswith('active') else 'unclear'
 out = []
-def put(rid, field, value, status, source=''):
-    out.append(dict(report_id=rid, field=field, value='' if value is None else str(value).strip(), status=status, source=source))
+def put(rid, field, value, status, source='', note=''):
+    out.append(dict(report_id=rid, field=field, value='' if value is None else str(value).strip(), status=status, source=source, note=note))
 
 for s in registry:
     rid = s['report_id']; lg = legacy.get(rid, {}); pe = pdf.get(rid, {}); tr = traced.get(rid, {}); ov = overlay.get(rid, {}).get('stricta', {})
@@ -75,7 +83,16 @@ for s in registry:
         elif any(st.get(k) for k in lkeys): put(rid, field, next(st[k] for k in lkeys if st.get(k)), 'Legacy (v26, not re-verified)', 'dashboard/data.js stricta')
         else: put(rid, field, '', 'Not extracted')
     for field in ('postoperative_analgesia', 'pca_regimen', 'rescue_analgesia', 'cumulative_duration'):
-        put(rid, field, '', 'Not extracted')
+        x = regimen.get((rid, field))
+        if not x:
+            put(rid, field, '', 'Not extracted')
+        elif x['status'] == 'Extracted (PDF quote)':
+            pages = f"p.{x['page']}" + (f", p.{x['page2']}" if x['quote2'] else '')
+            quote = f"p.{x['page']}: “{x['quote']}”" + (f" p.{x['page2']}: “{x['quote2']}”" if x['quote2'] else '')
+            put(rid, field, x['value'], 'Extracted (PDF quote, single extractor)', f"{x['source_pdf']} {pages} (regimen_extraction.csv)",
+                quote + (f" Note: {x['note']}" if x['note'] else ''))
+        else:
+            put(rid, field, '', 'Not reported in source', f"{x['source_pdf']} (full text checked; regimen_extraction.csv)", x['note'])
 
 OUT.mkdir(exist_ok=True)
 with open(OUT / 'report_characteristics.csv', 'w', newline='') as fh:
@@ -85,6 +102,7 @@ for r in out: wide.setdefault(r['report_id'], {'report_id': r['report_id']})[r['
 with open(OUT / 'report_characteristics_wide.csv', 'w', newline='') as fh:
     w = csv.DictWriter(fh, ['report_id'] + fields); w.writeheader(); w.writerows(wide.values())
 srcs = ['10_FINAL_ADJUDICATION/03_CANONICAL/studies.json', '10_FINAL_ADJUDICATION/03_CANONICAL/verified_metadata.json', '10_FINAL_ADJUDICATION/03_CANONICAL/results.csv',
+        '10_FINAL_ADJUDICATION/14_CHARACTERISTICS/regimen_extraction.csv',
         'dashboard/pdf_extracted.js', 'dashboard/study_characteristics.js', 'dashboard/data.js', 'dashboard/../10_FINAL_ADJUDICATION/code/build_characteristics.py',
         '10_FINAL_ADJUDICATION/14_CHARACTERISTICS/report_characteristics.csv', '10_FINAL_ADJUDICATION/14_CHARACTERISTICS/report_characteristics_wide.csv']
 with open(OUT / 'characteristics.sha256', 'w') as fh:

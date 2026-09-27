@@ -46,7 +46,7 @@ def sensitivity_map_complete(d):
             seen.add(m);m=par[m]
     return True
 CHAR_STATUS={'Verified (registry)','Verified (PDF quote)','Partly verified (source excerpt)','Canonical result register','Source-traced (extraction record)',
-             'Legacy (v26, not re-verified)','Not verified','Not extracted'}
+             'Legacy (v26, not re-verified)','Extracted (PDF quote, single extractor)','Not reported in source','Not verified','Not extracted'}
 def characteristics_complete(d):
     """Every report has the same harmonised fields; statuses come from the declared vocabulary; values never fill unsourced gaps."""
     if 'characteristics' not in d:return True
@@ -54,7 +54,18 @@ def characteristics_complete(d):
     fields={}
     for r in C:fields.setdefault(r['report_id'],[]).append(r['field'])
     if set(fields)!=ids or len({tuple(v) for v in fields.values()})!=1:return False
-    return all(r['status'] in CHAR_STATUS and (r['value']=='' if r['status'] in ('Not extracted','Not verified') else True) for r in C)
+    return all(r['status'] in CHAR_STATUS and (r['value']=='' if r['status'] in ('Not extracted','Not verified','Not reported in source') else True) for r in C)
+def regimen_verified(d):
+    """Regimen fields shown in the explorer equal the extraction record, and every extracted value's verbatim quote is found
+    on its stated page of the report's tracked text layer (code/verify_regimen_extraction.py, without the PDF hash step)."""
+    rec=D/'14_CHARACTERISTICS/regimen_extraction.csv'
+    if not rec.exists() or 'characteristics' not in d:return True
+    sys.path.insert(0,str(D/'code'));import verify_regimen_extraction as V
+    R={(r['report_id'],r['field']):r for r in rows(rec)}
+    if any(V.check_row(r) for r in R.values()):return False
+    C={(c['report_id'],c['field']):c for c in d['characteristics'] if c['field'] in V.FIELDS}
+    ok=lambda c,r:c['value']==r['value'] and (r['quote'] in c.get('note','') if r['status']=='Extracted (PDF quote)' else c['status']=='Not reported in source')
+    return set(C)==set(R) and all(ok(C[k],R[k]) for k in R)
 def stata_reproduces_canonical(d):
     """The shipped Stata estimates still reproduce the current canonical models (catches a stale Stata run)."""
     if 'stata' not in d:return True
@@ -111,6 +122,7 @@ def checks(d):
       'Results register identity':d.get('results_register')==[{k:r[k] for k in ['result_id','study','trial_id','comparison_id','outcome','window','data_type','n_i','n_c','comparator_class','decision','rationale','models','source_location']} for r in rows(D/'03_CANONICAL/results.csv')] if 'results_register' in d else True,
       'Characteristics identity':d.get('characteristics')==rows(D/'14_CHARACTERISTICS/report_characteristics.csv') if (D/'14_CHARACTERISTICS/report_characteristics.csv').exists() else True,
       'Characteristics complete with declared statuses':characteristics_complete(d),
+      'Regimen extraction matches record and source quotes':regimen_verified(d),
       'Stata verification identity':d['stata']['summary']==rows(D/'13_STATA/output/stata_verification_summary.csv') and d['stata']['results']==rows(D/'13_STATA/output/stata_model_results.csv') if 'stata' in d else True,
       'Stata reproduces current canonical results':stata_reproduces_canonical(d),
       'QoR later-window identity':d.get('qor_later_models')==json.load(open(D/'08_QOR_ANALYSIS/qor_models_later.json')) if (D/'08_QOR_ANALYSIS/qor_models_later.json').exists() else True,
@@ -365,6 +377,8 @@ def main(site=None):
     if 'characteristics' in data:
         mutations.append(('Characteristics identity',lambda d:d['characteristics'][0].__setitem__('value','changed')))
         mutations.append(('Characteristics complete with declared statuses',lambda d:d['characteristics'][0].__setitem__('status','Confirmed')))
+        if (D/'14_CHARACTERISTICS/regimen_extraction.csv').exists():
+            mutations.append(('Regimen extraction matches record and source quotes',lambda d:next(c for c in d['characteristics'] if c['status']=='Extracted (PDF quote, single extractor)').__setitem__('note','p.1: “quote not in source”')))
     if 'stata' in data:
         mutations.append(('Stata verification identity',lambda d:d['stata']['summary'][0].__setitem__('status','changed')))
         mutations.append(('Stata reproduces current canonical results',lambda d:next(r for r in d['stata']['results'] if r['model_id']=='opioid24_EA_usual').__setitem__('ci_lb','-17.56')))

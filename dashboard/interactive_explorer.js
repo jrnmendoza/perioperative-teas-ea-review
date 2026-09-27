@@ -57,6 +57,7 @@
     const DEFAULT_COLS = ['surgical_category', 'randomized_n', 'analysed_n'];
     const VS = { 'Verified (registry)': ['V', 'vs-ok'], 'Verified (PDF quote)': ['PDF', 'vs-ok'], 'Partly verified (source excerpt)': ['SX', 'vs-ok'],
         'Canonical result register': ['REG', 'vs-ok'], 'Source-traced (extraction record)': ['TR', 'vs-mid'], 'Legacy (v26, not re-verified)': ['L', 'vs-warn'],
+        'Extracted (PDF quote, single extractor)': ['PQ', 'vs-mid'], 'Not reported in source': ['NR', 'vs-none'],
         'Not verified': ['NV', 'vs-none'], 'Not extracted': ['NE', 'vs-none'] };
     const PRESETS = [['All', {}], ['TEAS', { modality: 'TEAS' }], ['EA', { modality: 'EA' }], ['Sham controlled', { comparator: 'Sham' }], ['Usual care', { comparator: 'Usual' }],
         ['E1 contributors', { status: 'e1' }], ['E2 contributors', { status: 'e2' }], ['E2 only', { status: 'e2only' }], ['Pain evidence', { family: 'pain' }],
@@ -173,8 +174,10 @@
 
         // ---- Rendering helpers.
         const vs = c => { if (!c) return ''; const [ab, cls] = VS[c.status] || ['?', 'vs-none']; return `<span class="vs ${cls}" title="${esc(c.status)}${c.source ? ': ' + esc(c.source) : ''}"><span class="sr-only">${esc(c.status)}: </span>${ab}</span>`; };
-        const charCell = (r, f) => { const c = r.ch[f]; if (!c) return '<small>Not extracted</small>'; const v = c.value || (c.status === 'Not verified' ? 'Not verified' : 'Not extracted');
-            return `${c.value ? esc(v) : `<small>${esc(v)}</small>`} ${vs(c)}`; };
+        // detail (study drawer): also show the verbatim source quote or extraction note carried in the note field.
+        const charCell = (r, f, detail) => { const c = r.ch[f]; if (!c) return '<small>Not extracted</small>';
+            const v = c.value || ({ 'Not verified': 'Not verified', 'Not reported in source': 'Not reported in source' }[c.status] || 'Not extracted');
+            return `${c.value ? esc(v) : `<small>${esc(v)}</small>`} ${vs(c)}${detail && c.note ? `<br><small class="char-quote">${esc(c.note)}</small>` : ''}`; };
         const cellBtn = (r, key, label, cell) => {
             if (!cell) return `<button type="button" class="matrix-cell none" data-cell="${key}" data-id="${esc(r.id)}" aria-label="${esc(r.id)} ${esc(label)}: no current model contribution; show extracted results">–</button>`;
             const lab = `${r.id} ${label}: ${STATE[cell.tier]}${cell.models.length ? '. Models: ' + cell.models.join(', ') : ''}`;
@@ -223,7 +226,7 @@
             <div id="explorer-glance"></div>
             <details class="colchooser"><summary>Columns and characteristics</summary>
                 <fieldset><legend class="sr-only">Characteristic columns</legend>${CHARS.map(([f, l]) => `<label class="chk"><input type="checkbox" data-col="${f}"${state.cols.includes(f) ? ' checked' : ''}> ${esc(l)}</label>`).join('')}</fieldset>
-                <p class="source">Status badges: ${Object.entries(VS).map(([k, [ab, cls]]) => `<span class="vs ${cls}">${ab}</span> ${esc(k)}`).join(' · ')}. Legacy values were imported from the v26 workbook and have not been re-checked against the PDF; do not use them for subgrouping or characteristics text without checking.</p></details>
+                <p class="source">Status badges: ${Object.entries(VS).map(([k, [ab, cls]]) => `<span class="vs ${cls}">${ab}</span> ${esc(k)}`).join(' · ')}. Legacy values were imported from the v26 workbook and have not been re-checked against the PDF; do not use them for subgrouping or characteristics text without checking. PQ values (analgesia, PCA, rescue and cumulative stimulation time) were extracted by one extractor with a verbatim quote that is machine-checked against the report text; second review is pending. NR means the full text was searched and the item is not reported, which is not the same as absent.</p></details>
             <div class="matrix-bar">
                 <div class="matrix-legend" aria-label="Contribution legend">
                     <span><span class="matrix-cell e1">E1</span> E1 primary opioid body</span><span><span class="matrix-cell e2">E2</span> E2 post-hoc body only</span>
@@ -314,7 +317,7 @@
             const r = byId.get(id); if (!r) return;
             if ($('cell-dialog').open) $('cell-dialog').close();
             const s = r.s, g = graph.studies[id] || {}, bg = g.background || {}, ch = r.ch;
-            const row = (label, f) => `<tr><th scope="row">${esc(label)}</th><td>${charCell(r, f)}</td></tr>`;
+            const row = (label, f) => `<tr><th scope="row">${esc(label)}</th><td>${charCell(r, f, true)}</td></tr>`;
             const tbl = rowsHtml => `<div class="table-scroll"><table><tbody>${rowsHtml}</tbody></table></div>`;
             const acc = [...(d.e2_accounting?.tierA || []), ...(d.e2_accounting?.tierA_addendum || [])].filter(x => x.report === id || (id.startsWith(x.report + ' (') && x.report.includes(' ')));
             const b12 = [...(d.e2_accounting?.tierB1 || []), ...(d.e2_accounting?.tierB2 || [])].filter(x => x.report === id);
