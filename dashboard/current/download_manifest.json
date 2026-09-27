@@ -370,5 +370,59 @@
     "href": "current/additional_file_12_tierB_no_candidate_result.csv",
     "source": "manuscript/additional_files/additional_file_12_tierB_no_candidate_result.csv",
     "sha256": "6c1135e0ca2dc3059fb6ceb6d2ff7d599ad9ca83dceb36088506deb01c5d29c5"
+  },
+  {
+    "label": "Stata reproduction and reconciliation report",
+    "href": "current/STATA_RECONCILIATION.md",
+    "source": "10_FINAL_ADJUDICATION/13_STATA/STATA_RECONCILIATION.md",
+    "sha256": "1e2543f8066e2a40641a7d99e6167618e731b268085f4733793b578542195050"
+  },
+  {
+    "label": "Methods statement generated from the Stata run",
+    "href": "current/METHODS_STATEMENT.md",
+    "source": "10_FINAL_ADJUDICATION/13_STATA/METHODS_STATEMENT.md",
+    "sha256": "33d863e65f968a89c84c672e98a49ebd5faab419a4ae7c2974f88aeb1d39044e"
+  },
+  {
+    "label": "Stata verification: one status per model",
+    "href": "current/stata_verification_summary.csv",
+    "source": "10_FINAL_ADJUDICATION/13_STATA/output/stata_verification_summary.csv",
+    "sha256": "453e6c261e11b9f68bbf95cc8061f0c92cf4503361066f17249a7b1d7a6a6215"
+  },
+  {
+    "label": "Stata vs canonical vs R/metafor: every compared field",
+    "href": "current/stata_canonical_comparison.csv",
+    "source": "10_FINAL_ADJUDICATION/13_STATA/output/stata_canonical_comparison.csv",
+    "sha256": "5f9642f7f2ce700a8af3efaf548dc45538139233cbedc89f57897af3f055f88e"
+  },
+  {
+    "label": "Stata analysis manifest",
+    "href": "current/stata_manifest.csv",
+    "source": "10_FINAL_ADJUDICATION/13_STATA/output/stata_manifest.csv",
+    "sha256": "949b03c3170a818ce3c6997b560f8c2194469e51d71bc271dff376534f50dad8"
+  },
+  {
+    "label": "Stata figure register",
+    "href": "current/figure_register.csv",
+    "source": "10_FINAL_ADJUDICATION/13_STATA/output/figure_register.csv",
+    "sha256": "be8077336dd0abe0939dc1565f119f5d6c4ffb5f5fb0145b3220ac446a726413"
+  },
+  {
+    "label": "Stata estimates for all models",
+    "href": "current/stata_model_results.csv",
+    "source": "10_FINAL_ADJUDICATION/13_STATA/output/stata_model_results.csv",
+    "sha256": "048a81b3eef5d8291e08dc01fc189c7ff6f14948d136d362923e7435b84fd347"
+  },
+  {
+    "label": "Stata analysis layer README",
+    "href": "current/README.md",
+    "source": "10_FINAL_ADJUDICATION/13_STATA/README.md",
+    "sha256": "d2a04d5bb08331d8fabf03797521648fa29b7ccf9fc2ad37afe2bfb96f270d4b"
+  },
+  {
+    "label": "Harmonised report characteristics with verification status",
+    "href": "current/report_characteristics.csv",
+    "source": "10_FINAL_ADJUDICATION/14_CHARACTERISTICS/report_characteristics.csv",
+    "sha256": "7aaf23f5131186ec5afa914e63a545ee01854ae7d6103d449a269afb9982ec47"
   }
 ]

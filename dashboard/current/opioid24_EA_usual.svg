@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- This is a Stata 19.5 generated SVG file (http://www.stata.com) -->
+
+<svg version="1.1" width="8.328in" height="2.974in" viewBox="0 0 5996 2141" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>Stata Graph - g1</desc>
+	<rect x="0" y="0" width="5996" height="2141" style="fill:#FFFFFF;stroke:none"/>
+	<rect x="0.00" y="0.00" width="5996.00" height="2141.00" style="fill:#FFFFFF"/>
+	<rect x="2.88" y="2.88" width="5990.24" height="2135.24" style="fill:none;stroke:#FFFFFF;stroke-width:5.76"/>
+	<rect x="39.91" y="39.91" width="5915.99" height="2061.18" style="fill:#FFFFFF"/>
+	<rect x="42.79" y="42.79" width="5910.23" height="2055.42" style="fill:none;stroke:#FFFFFF;stroke-width:5.76"/>
+	<rect x="39.91" y="214.53" width="5915.99" height="1776.58" style="fill:#FFFFFF"/>
+	<rect x="42.79" y="217.41" width="5910.23" height="1770.82" style="fill:none;stroke:#FFFFFF;stroke-width:5.76"/>
+	<rect x="80.01" y="254.44" width="5835.98" height="1696.57" style="fill:#FFFFFF"/>
+	<rect x="82.89" y="257.32" width="5830.22" height="1690.81" style="fill:none;stroke:#FFFFFF;stroke-width:5.76"/>
+	<text x="100.06" y="746.96" style="font-family:'Helvetica';font-size:109.99px;fill:#000000">El-Rakshy 2009</text>
+	<text x="100.06" y="923.27" style="font-family:'Helvetica';font-size:109.99px;fill:#000000">Seevaunnamtum 2016</text>
+	<text x="100.06" y="1136.49" style="font-family:'Helvetica';font-weight:bold;font-size:109.99px;fill:#000000">Overall</text>
+	<text x="100.06" y="1312.80" style="fill:#000000">
+		<tspan style="font-family:'Helvetica';font-size:109.99px">Heterogeneity: τ</tspan>
+		<tspan dy="-57.61px" style="font-family:'Helvetica';font-size:64.12px">2</tspan>
+		<tspan dy="57.61px" style="font-family:'Helvetica';font-size:109.99px"> = 43.52, I</tspan>
+		<tspan dy="-57.61px" style="font-family:'Helvetica';font-size:64.12px">2</tspan>
+		<tspan dy="57.61px" style="font-family:'Helvetica';font-size:109.99px"> = 72.45%, H</tspan>
+		<tspan dy="-57.61px" style="font-family:'Helvetica';font-size:64.12px">2</tspan>
+		<tspan dy="57.61px" style="font-family:'Helvetica';font-size:109.99px"> = 3.63</tspan>
+	</text>
+	<text x="100.06" y="1489.11" style="fill:#000000">
+		<tspan style="font-family:'Helvetica';font-size:109.99px">Test of θ</tspan>
+		<tspan dy="15.71px" style="font-family:'Helvetica';font-size:64.12px">i</tspan>
+		<tspan dy="-15.71px" style="font-family:'Helvetica';font-size:109.99px"> = θ</tspan>
+		<tspan dy="15.71px" style="font-family:'Helvetica';font-size:64.12px">j</tspan>
+		<tspan dy="-15.71px" style="font-family:'Helvetica';font-size:109.99px">: Q(1) = 3.63, p = 0.06</tspan>
+	</text>
+	<text x="100.06" y="1665.42" style="font-family:'Helvetica';font-size:109.99px;fill:#000000">Test of θ = 0: z = -1.25, p = 0.21</text>
+	<text x="100.06" y="501.46" style="font-family:'Helvetica';font-size:109.99px;fill:#000000">Study</text>
+	<line x1="3694.10" y1="708.42" x2="3306.04" y2="708.42" style="stroke:#1A85FF;stroke-width:8.64"/>
+	<line x1="3110.43" y1="884.73" x2="2652.11" y2="884.73" style="stroke:#1A85FF;stroke-width:8.64"/>
+	<line x1="3306.04" y1="708.42" x2="3306.04" y2="708.42" stroke-linecap="round" style="stroke:#1A85FF;stroke-width:8.64"/>
+	<line x1="3306.04" y1="708.42" x2="3306.04" y2="708.42" stroke-linecap="round" style="stroke:#1A85FF;stroke-width:8.64"/>
+	<line x1="2652.11" y1="884.73" x2="2652.11" y2="884.73" stroke-linecap="round" style="stroke:#1A85FF;stroke-width:8.64"/>
+	<line x1="2652.11" y1="884.73" x2="2652.11" y2="884.73" stroke-linecap="round" style="stroke:#1A85FF;stroke-width:8.64"/>
+	<line x1="3694.10" y1="708.42" x2="4082.34" y2="708.42" style="stroke:#1A85FF;stroke-width:8.64"/>
+	<line x1="3110.43" y1="884.73" x2="3568.56" y2="884.73" style="stroke:#1A85FF;stroke-width:8.64"/>
+	<line x1="4082.34" y1="708.42" x2="4082.34" y2="708.42" stroke-linecap="round" style="stroke:#1A85FF;stroke-width:8.64"/>
+	<line x1="4082.34" y1="708.42" x2="4082.34" y2="708.42" stroke-linecap="round" style="stroke:#1A85FF;stroke-width:8.64"/>
+	<line x1="3568.56" y1="884.73" x2="3568.56" y2="884.73" stroke-linecap="round" style="stroke:#1A85FF;stroke-width:8.64"/>
+	<line x1="3568.56" y1="884.73" x2="3568.56" y2="884.73" stroke-linecap="round" style="stroke:#1A85FF;stroke-width:8.64"/>
+	<rect x="3634.69" y="649.02" width="118.82" height="118.81" style="fill:#1A85FF"/>
+	<rect x="3639.01" y="653.34" width="110.18" height="110.17" style="fill:none;stroke:#1A85FF;stroke-width:8.64"/>
+	<rect x="3053.27" y="827.76" width="113.94" height="113.94" style="fill:#1A85FF"/>
+	<rect x="3057.59" y="832.08" width="105.30" height="105.30" style="fill:none;stroke:#1A85FF;stroke-width:8.64"/>
+	<defs>
+		<path id="path_XgCublJp" d="M3110.24 884.73 M2843.98 1097.95 L3415.47 1149.10 L3986.97 1097.95 L3415.47 1046.99 Z" stroke-linejoin="round"/>
+	</defs>
+	<defs>
+		<clipPath id="clipPath_bnSXdPPU">
+			<use xlink:href="#path_XgCublJp"/>
+		</clipPath>
+	</defs>
+	<use xlink:href="#path_XgCublJp" style="stroke:none;fill:#00BF7F"/>
+	<use xlink:href="#path_XgCublJp" style="fill:none;stroke:#00BF7F;stroke-width:17.28" clip-path="url(#clipPath_bnSXdPPU)"/>
+	<line x1="2652.11" y1="1721.12" x2="4312.06" y2="1721.12" style="stroke:#000000;stroke-width:5.76"/>
+	<line x1="2714.13" y1="1721.12" x2="2714.13" y2="1761.03" style="stroke:#000000;stroke-width:5.76"/>
+	<text x="2714.13" y="1857.97" style="font-family:'Helvetica';font-size:109.99px;fill:#000000" text-anchor="middle">-20</text>
+	<line x1="3246.83" y1="1721.12" x2="3246.83" y2="1761.03" style="stroke:#000000;stroke-width:5.76"/>
+	<text x="3246.83" y="1857.97" style="font-family:'Helvetica';font-size:109.99px;fill:#000000" text-anchor="middle">-10</text>
+	<line x1="3779.35" y1="1721.12" x2="3779.35" y2="1761.03" style="stroke:#000000;stroke-width:5.76"/>
+	<text x="3779.35" y="1857.97" style="font-family:'Helvetica';font-size:109.99px;fill:#000000" text-anchor="middle">0</text>
+	<line x1="4312.06" y1="1721.12" x2="4312.06" y2="1761.03" style="stroke:#000000;stroke-width:5.76"/>
+	<text x="4312.06" y="1857.97" style="font-family:'Helvetica';font-size:109.99px;fill:#000000" text-anchor="middle">10</text>
+	<text x="4895.36" y="501.46" style="font-family:'Helvetica';font-size:109.99px;fill:#000000" text-anchor="middle">with 95% CI</text>
+	<text x="4895.36" y="351.38" style="font-family:'Helvetica';font-size:109.99px;fill:#000000" text-anchor="middle">Effect size</text>
+	<text x="4723.72" y="746.96" style="font-family:'Helvetica';font-size:109.99px;fill:#000000" text-anchor="end">-1.60 [</text>
+	<text x="4723.72" y="923.27" style="font-family:'Helvetica';font-size:109.99px;fill:#000000" text-anchor="end">-12.56 [</text>
+	<text x="4723.72" y="1136.49" style="font-family:'Helvetica';font-size:109.99px;fill:#000000" text-anchor="end">-6.83 [</text>
+	<text x="5103.16" y="746.96" style="font-family:'Helvetica';font-size:109.99px;fill:#000000" text-anchor="end">-8.89,</text>
+	<text x="5103.16" y="923.27" style="font-family:'Helvetica';font-size:109.99px;fill:#000000" text-anchor="end">-21.16,</text>
+	<text x="5103.16" y="1136.49" style="font-family:'Helvetica';font-size:109.99px;fill:#000000" text-anchor="end">-17.56,</text>
+	<text x="5438.56" y="746.96" style="font-family:'Helvetica';font-size:109.99px;fill:#000000" text-anchor="end">5.69]</text>
+	<text x="5438.56" y="923.27" style="font-family:'Helvetica';font-size:109.99px;fill:#000000" text-anchor="end">-3.96]</text>
+	<text x="5438.56" y="1136.49" style="font-family:'Helvetica';font-size:109.99px;fill:#000000" text-anchor="end">3.90]</text>
+	<text x="5821.74" y="746.96" style="font-family:'Helvetica';font-size:109.99px;fill:#000000" text-anchor="end">52.26</text>
+	<text x="5821.74" y="923.27" style="font-family:'Helvetica';font-size:109.99px;fill:#000000" text-anchor="end">47.74</text>
+	<text x="5697.32" y="501.46" style="font-family:'Helvetica';font-size:109.99px;fill:#000000" text-anchor="middle">(%)</text>
+	<text x="5697.32" y="351.38" style="font-family:'Helvetica';font-size:109.99px;fill:#000000" text-anchor="middle">Weight</text>
+	<line x1="80.01" y1="558.72" x2="5915.99" y2="558.72" style="stroke:#000000;stroke-width:8.64"/>
+	<text x="39.91" y="2084.55" style="font-family:'Helvetica';font-size:109.99px;fill:#000000">Random-effects REML model</text>
+	<text x="2998.00" y="155.21" style="font-family:'Helvetica';font-size:139.97px;fill:#000000" text-anchor="middle">opioid24_EA_usual</text>
+</svg>

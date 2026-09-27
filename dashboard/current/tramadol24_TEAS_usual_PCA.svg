@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- This is a Stata 19.5 generated SVG file (http://www.stata.com) -->
+
+<svg version="1.1" width="7.882in" height="2.710in" viewBox="0 0 5675 1951" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>Stata Graph - g1</desc>
+	<rect x="0" y="0" width="5675" height="1951" style="fill:#FFFFFF;stroke:none"/>
+	<rect x="0.00" y="0.00" width="5674.82" height="1951.00" style="fill:#FFFFFF"/>
+	<rect x="2.88" y="2.88" width="5669.06" height="1945.24" style="fill:none;stroke:#FFFFFF;stroke-width:5.76"/>
+	<rect x="40.08" y="40.08" width="5594.66" height="1870.85" style="fill:#FFFFFF"/>
+	<rect x="42.96" y="42.96" width="5588.90" height="1865.09" style="fill:none;stroke:#FFFFFF;stroke-width:5.76"/>
+	<rect x="40.08" y="214.57" width="5594.66" height="1586.41" style="fill:#FFFFFF"/>
+	<rect x="42.96" y="217.45" width="5588.90" height="1580.65" style="fill:none;stroke:#FFFFFF;stroke-width:5.76"/>
+	<rect x="79.98" y="254.47" width="5514.86" height="1506.61" style="fill:#FFFFFF"/>
+	<rect x="82.86" y="257.35" width="5509.10" height="1500.85" style="fill:none;stroke:#FFFFFF;stroke-width:5.76"/>
+	<text x="100.02" y="745.01" style="font-family:'Helvetica';font-size:109.95px;fill:#000000">Oztas 2019</text>
+	<text x="100.02" y="955.33" style="font-family:'Helvetica';font-weight:bold;font-size:109.95px;fill:#000000">Overall</text>
+	<text x="100.02" y="1129.11" style="fill:#000000">
+		<tspan style="font-family:'Helvetica';font-size:109.95px">Heterogeneity: τ</tspan>
+		<tspan dy="-57.59px" style="font-family:'Helvetica';font-size:64.10px">2</tspan>
+		<tspan dy="57.59px" style="font-family:'Helvetica';font-size:109.95px"> = 0.00, I</tspan>
+		<tspan dy="-57.59px" style="font-family:'Helvetica';font-size:64.10px">2</tspan>
+		<tspan dy="57.59px" style="font-family:'Helvetica';font-size:109.95px"> = .%, H</tspan>
+		<tspan dy="-57.59px" style="font-family:'Helvetica';font-size:64.10px">2</tspan>
+		<tspan dy="57.59px" style="font-family:'Helvetica';font-size:109.95px"> = .</tspan>
+	</text>
+	<text x="100.02" y="1302.72" style="fill:#000000">
+		<tspan style="font-family:'Helvetica';font-size:109.95px">Test of θ</tspan>
+		<tspan dy="15.71px" style="font-family:'Helvetica';font-size:64.10px">i</tspan>
+		<tspan dy="-15.71px" style="font-family:'Helvetica';font-size:109.95px"> = θ</tspan>
+		<tspan dy="15.71px" style="font-family:'Helvetica';font-size:64.10px">j</tspan>
+		<tspan dy="-15.71px" style="font-family:'Helvetica';font-size:109.95px">: Q(0) = 0.00, p = .</tspan>
+	</text>
+	<text x="100.02" y="1476.51" style="font-family:'Helvetica';font-size:109.95px;fill:#000000">Test of θ = 0: z = -3.37, p = 0.00</text>
+	<text x="100.02" y="501.40" style="font-family:'Helvetica';font-size:109.95px;fill:#000000">Study</text>
+	<line x1="2945.50" y1="706.49" x2="2138.41" y2="706.49" style="stroke:#1A85FF;stroke-width:8.64"/>
+	<line x1="2138.41" y1="706.49" x2="2138.41" y2="706.49" stroke-linecap="round" style="stroke:#1A85FF;stroke-width:8.64"/>
+	<line x1="2138.41" y1="706.49" x2="2138.41" y2="706.49" stroke-linecap="round" style="stroke:#1A85FF;stroke-width:8.64"/>
+	<line x1="2945.50" y1="706.49" x2="3752.77" y2="706.49" style="stroke:#1A85FF;stroke-width:8.64"/>
+	<line x1="3752.77" y1="706.49" x2="3752.77" y2="706.49" stroke-linecap="round" style="stroke:#1A85FF;stroke-width:8.64"/>
+	<line x1="3752.77" y1="706.49" x2="3752.77" y2="706.49" stroke-linecap="round" style="stroke:#1A85FF;stroke-width:8.64"/>
+	<rect x="2886.21" y="647.37" width="118.59" height="118.58" style="fill:#1A85FF"/>
+	<rect x="2890.53" y="651.69" width="109.95" height="109.95" style="fill:none;stroke:#1A85FF;stroke-width:8.64"/>
+	<defs>
+		<path id="path_vrtAmDtd" d="M2945.50 706.67 M2138.41 916.80 L2945.50 967.17 L3752.77 916.80 L2945.50 866.44 Z" stroke-linejoin="round"/>
+	</defs>
+	<defs>
+		<clipPath id="clipPath_zHMpPUSQ">
+			<use xlink:href="#path_vrtAmDtd"/>
+		</clipPath>
+	</defs>
+	<use xlink:href="#path_vrtAmDtd" style="stroke:none;fill:#00BF7F"/>
+	<use xlink:href="#path_vrtAmDtd" style="fill:none;stroke:#00BF7F;stroke-width:17.28" clip-path="url(#clipPath_zHMpPUSQ)"/>
+	<line x1="2138.41" y1="1531.08" x2="3798.17" y2="1531.08" style="stroke:#000000;stroke-width:5.76"/>
+	<line x1="2187.54" y1="1531.08" x2="2187.54" y2="1570.98" style="stroke:#000000;stroke-width:5.76"/>
+	<text x="2187.54" y="1667.89" style="font-family:'Helvetica';font-size:109.95px;fill:#000000" text-anchor="middle">-200</text>
+	<line x1="2724.53" y1="1531.08" x2="2724.53" y2="1570.98" style="stroke:#000000;stroke-width:5.76"/>
+	<text x="2724.53" y="1667.89" style="font-family:'Helvetica';font-size:109.95px;fill:#000000" text-anchor="middle">-150</text>
+	<line x1="3261.35" y1="1531.08" x2="3261.35" y2="1570.98" style="stroke:#000000;stroke-width:5.76"/>
+	<text x="3261.35" y="1667.89" style="font-family:'Helvetica';font-size:109.95px;fill:#000000" text-anchor="middle">-100</text>
+	<line x1="3798.17" y1="1531.08" x2="3798.17" y2="1570.98" style="stroke:#000000;stroke-width:5.76"/>
+	<text x="3798.17" y="1667.89" style="font-family:'Helvetica';font-size:109.95px;fill:#000000" text-anchor="middle">-50</text>
+	<text x="4477.75" y="501.40" style="font-family:'Helvetica';font-size:109.95px;fill:#000000" text-anchor="middle">with 95% CI</text>
+	<text x="4477.75" y="351.38" style="font-family:'Helvetica';font-size:109.95px;fill:#000000" text-anchor="middle">Effect size</text>
+	<text x="4273.98" y="745.01" style="font-family:'Helvetica';font-size:109.95px;fill:#000000" text-anchor="end">-129.41 [</text>
+	<text x="4273.98" y="955.33" style="font-family:'Helvetica';font-size:109.95px;fill:#000000" text-anchor="end">-129.41 [</text>
+	<text x="4717.88" y="745.01" style="font-family:'Helvetica';font-size:109.95px;fill:#000000" text-anchor="end">-204.59,</text>
+	<text x="4717.88" y="955.33" style="font-family:'Helvetica';font-size:109.95px;fill:#000000" text-anchor="end">-204.59,</text>
+	<text x="5117.43" y="745.01" style="font-family:'Helvetica';font-size:109.95px;fill:#000000" text-anchor="end">-54.23]</text>
+	<text x="5117.43" y="955.33" style="font-family:'Helvetica';font-size:109.95px;fill:#000000" text-anchor="end">-54.23]</text>
+	<text x="5532.77" y="745.01" style="font-family:'Helvetica';font-size:109.95px;fill:#000000" text-anchor="end">100.00</text>
+	<text x="5376.00" y="501.40" style="font-family:'Helvetica';font-size:109.95px;fill:#000000" text-anchor="middle">(%)</text>
+	<text x="5376.00" y="351.38" style="font-family:'Helvetica';font-size:109.95px;fill:#000000" text-anchor="middle">Weight</text>
+	<line x1="79.98" y1="558.77" x2="5594.84" y2="558.77" style="stroke:#000000;stroke-width:8.64"/>
+	<text x="40.08" y="1894.48" style="font-family:'Helvetica';font-size:109.95px;fill:#000000">Random-effects REML model</text>
+	<text x="2837.32" y="155.13" style="font-family:'Helvetica';font-size:139.92px;fill:#000000" text-anchor="middle">tramadol24_TEAS_usual_PCA</text>
+</svg>

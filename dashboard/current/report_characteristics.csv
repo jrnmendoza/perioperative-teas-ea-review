@@ -1,0 +1,1961 @@
+report_id,field,value,status,source
+Zhou 2025,year,2025,Verified (registry),03_CANONICAL/studies.json
+Zhou 2025,trial_family,Zhou_2025,Verified (registry),03_CANONICAL/studies.json
+Zhou 2025,modality,TEAS,Verified (registry),03_CANONICAL/studies.json
+Zhou 2025,comparator,Sham-Controlled (no current output),Verified (registry),03_CANONICAL/studies.json
+Zhou 2025,comparator_class,sham,Verified (registry),03_CANONICAL/studies.json (study-level label; result-level class governs models)
+Zhou 2025,randomized_n,100,Verified (registry),03_CANONICAL/studies.json; source page 5
+Zhou 2025,randomized_n_counted,100,Verified (registry),03_CANONICAL/studies.json (operational family count)
+Zhou 2025,analysed_n,48 vs 49,Verified (registry),03_CANONICAL/studies.json (report-level text; outcome-specific n differs)
+Zhou 2025,country,China,Verified (PDF quote),105119.pdf p.1
+Zhou 2025,anaesthesia,General anaesthesia,Verified (PDF quote),105119.pdf p.2
+Zhou 2025,surgical_category,Gynecologic & Breast,Source-traced (extraction record),TEAS EA Verification/ChatGPT Sol Extraction/zhou_2025_pacu_teas_gynecologic_laparoscopy_full_data_extraction.md:117
+Zhou 2025,procedure,Patients undergoing elective gynecological laparoscopic surgery under general anesthesia,Source-traced (extraction record),TEAS EA Verification/ChatGPT Sol Extraction/zhou_2025_pacu_teas_gynecologic_laparoscopy_full_data_extraction.md:117
+Zhou 2025,age,43.92 ± 8.84 vs 40.98 ± 7.90,"Legacy (v26, not re-verified)",dashboard/data.js population
+Zhou 2025,female,48/48 (100%) vs 49/49 (100%),"Legacy (v26, not re-verified)",dashboard/data.js population
+Zhou 2025,bmi,not reported vs not reported,"Legacy (v26, not re-verified)",dashboard/data.js population
+Zhou 2025,asa,"ASA I: 19 (39.6%), ASA II: 26 (54.2%), ASA III: 3 (6.2%)","Legacy (v26, not re-verified)",dashboard/data.js population
+Zhou 2025,intervention_arms,PACU TEAS,Canonical result register,03_CANONICAL/results.csv
+Zhou 2025,control_arms,Sham/no current,Canonical result register,03_CANONICAL/results.csv
+Zhou 2025,acupoints,"PC6 (Neiguan), ST36 (Zusanli)","Legacy (v26, not re-verified)",dashboard/data.js stricta
+Zhou 2025,frequency,2/100 Hz (dense-disperse),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Zhou 2025,intensity,5–15 mA (to patient tolerance),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Zhou 2025,timing,PACU (applied during post-anesthesia recovery period),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Zhou 2025,sessions,Single session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Zhou 2025,session_duration,30 minutes per session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Zhou 2025,postoperative_analgesia,,Not extracted,
+Zhou 2025,pca_regimen,,Not extracted,
+Zhou 2025,rescue_analgesia,,Not extracted,
+Zhou 2025,cumulative_duration,,Not extracted,
+An 2014,year,2014,Verified (registry),03_CANONICAL/studies.json
+An 2014,trial_family,An_2014,Verified (registry),03_CANONICAL/studies.json
+An 2014,modality,EA,Verified (registry),03_CANONICAL/studies.json
+An 2014,comparator,Usual Care (Open-Label Control),Verified (registry),03_CANONICAL/studies.json
+An 2014,comparator_class,usual care,Verified (registry),03_CANONICAL/studies.json (study-level label; result-level class governs models)
+An 2014,randomized_n,88,Verified (registry),03_CANONICAL/studies.json; source page 2
+An 2014,randomized_n_counted,88,Verified (registry),03_CANONICAL/studies.json (operational family count)
+An 2014,analysed_n,41 vs 40,Verified (registry),03_CANONICAL/studies.json (report-level text; outcome-specific n differs)
+An 2014,country,China,Verified (registry),03_CANONICAL/studies.json
+An 2014,anaesthesia,General anesthesia,Verified (registry),03_CANONICAL/studies.json
+An 2014,surgical_category,Neurosurgery,Source-traced (extraction record),TEAS EA Verification/ChatGPT Sol Extraction/covidence_study_698_full_data_extraction.md:67
+An 2014,procedure,Adults undergoing supratentorial tumor resection / supratentorial craniotomy under general anesthesia,Verified (registry),03_CANONICAL/studies.json
+An 2014,age,40.7 ± 12.1 vs 39.1 ± 10.9,"Legacy (v26, not re-verified)",dashboard/data.js population
+An 2014,female,24/41 (58.5%) vs 19/40 (47.5%),"Legacy (v26, not re-verified)",dashboard/data.js population
+An 2014,bmi,not reported vs not reported,"Legacy (v26, not re-verified)",dashboard/data.js population
+An 2014,asa,100% ASA I–II,"Legacy (v26, not re-verified)",dashboard/data.js population
+An 2014,intervention_arms,Intraoperative electroacupuncture,Canonical result register,03_CANONICAL/results.csv
+An 2014,control_arms,No acupuncture control,Canonical result register,03_CANONICAL/results.csv
+An 2014,acupoints,"LI4 (Hegu), SJ5 (Waiguan), BL63 (Jinmen), LR3 (Taichong), ST36 (Zusanli), GB40 (Qiuxu)","Legacy (v26, not re-verified)",dashboard/data.js stricta
+An 2014,frequency,2/100 Hz (dense-disperse),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+An 2014,intensity,5–15 mA (to patient tolerance),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+An 2014,timing,Preoperative (30 min before anesthesia induction),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+An 2014,sessions,Single session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+An 2014,session_duration,30 minutes per session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+An 2014,postoperative_analgesia,,Not extracted,
+An 2014,pca_regimen,,Not extracted,
+An 2014,rescue_analgesia,,Not extracted,
+An 2014,cumulative_duration,,Not extracted,
+Ao 2021,year,2021,Verified (registry),03_CANONICAL/studies.json
+Ao 2021,trial_family,Ao_2021,Verified (registry),03_CANONICAL/studies.json
+Ao 2021,modality,TEAS,Verified (registry),03_CANONICAL/studies.json
+Ao 2021,comparator,Sham-Controlled (Placebo Double-Blind),Verified (registry),03_CANONICAL/studies.json
+Ao 2021,comparator_class,sham,Verified (registry),03_CANONICAL/studies.json (study-level label; result-level class governs models)
+Ao 2021,randomized_n,70,Verified (registry),03_CANONICAL/studies.json; source page 2
+Ao 2021,randomized_n_counted,70,Verified (registry),03_CANONICAL/studies.json (operational family count)
+Ao 2021,analysed_n,32 vs 33,Verified (registry),03_CANONICAL/studies.json (report-level text; outcome-specific n differs)
+Ao 2021,country,China,Verified (registry),03_CANONICAL/studies.json
+Ao 2021,anaesthesia,General anesthesia,Verified (registry),03_CANONICAL/studies.json
+Ao 2021,surgical_category,Gynecologic & Breast,Source-traced (extraction record),TEAS EA Verification/ChatGPT Sol Extraction/ao_2021_full_data_extraction.md:148
+Ao 2021,procedure,Elective radical mastectomy for breast cancer,Verified (registry),03_CANONICAL/studies.json
+Ao 2021,age,45.6 ± 9.8 vs 46.9 ± 8.6,"Legacy (v26, not re-verified)",dashboard/data.js population
+Ao 2021,female,32/32 (100%) vs 33/33 (100%),"Legacy (v26, not re-verified)",dashboard/data.js population
+Ao 2021,bmi,23.4 ± 4.2 vs 22.6 ± 3.3,"Legacy (v26, not re-verified)",dashboard/data.js population
+Ao 2021,asa,"ASA I: 26/32 (81.3%), ASA II: 6/32 (18.8%)","Legacy (v26, not re-verified)",dashboard/data.js population
+Ao 2021,intervention_arms,Repeated perioperative TEAS | TEAS,Canonical result register,03_CANONICAL/results.csv
+Ao 2021,control_arms,Sham/no current,Canonical result register,03_CANONICAL/results.csv
+Ao 2021,acupoints,"LI4 (Hegu), PC6 (Neiguan), ST36 (Zusanli)","Legacy (v26, not re-verified)",dashboard/data.js stricta
+Ao 2021,frequency,2/100 Hz (dense-disperse),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Ao 2021,intensity,5–15 mA (to patient tolerance),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Ao 2021,timing,Preoperative (30 min before anesthesia induction),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Ao 2021,sessions,Single session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Ao 2021,session_duration,30 minutes per session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Ao 2021,postoperative_analgesia,,Not extracted,
+Ao 2021,pca_regimen,,Not extracted,
+Ao 2021,rescue_analgesia,,Not extracted,
+Ao 2021,cumulative_duration,,Not extracted,
+Chen 1998,year,1998,Verified (registry),03_CANONICAL/studies.json
+Chen 1998,trial_family,Chen_1998,Verified (registry),03_CANONICAL/studies.json
+Chen 1998,modality,TEAS,Verified (registry),03_CANONICAL/studies.json
+Chen 1998,comparator,Sham-Controlled (Placebo Double-Blind),Verified (registry),03_CANONICAL/studies.json
+Chen 1998,comparator_class,sham,Verified (registry),03_CANONICAL/studies.json (study-level label; result-level class governs models)
+Chen 1998,randomized_n,100,Verified (registry),03_CANONICAL/studies.json; source page 2
+Chen 1998,randomized_n_counted,100,Verified (registry),03_CANONICAL/studies.json (operational family count)
+Chen 1998,analysed_n,25 vs 25,Verified (registry),03_CANONICAL/studies.json (report-level text; outcome-specific n differs)
+Chen 1998,country,USA,Verified (registry),03_CANONICAL/studies.json
+Chen 1998,anaesthesia,General anaesthesia,Verified (registry),03_CANONICAL/studies.json
+Chen 1998,surgical_category,Gynecologic & Breast,Source-traced (extraction record),TEAS EA Verification/ChatGPT Sol Extraction/chen_1998_covidence_969_full_data_extraction.md:88
+Chen 1998,procedure,Elective total abdominal hysterectomy or myomectomy,Verified (registry),03_CANONICAL/studies.json
+Chen 1998,age,43 ± 13 vs 45 ± 12,"Legacy (v26, not re-verified)",dashboard/data.js population
+Chen 1998,female,25/25 (100%) vs 25/25 (100%),"Legacy (v26, not re-verified)",dashboard/data.js population
+Chen 1998,bmi,not reported vs not reported,"Legacy (v26, not re-verified)",dashboard/data.js population
+Chen 1998,asa,not reported,"Legacy (v26, not re-verified)",dashboard/data.js population
+Chen 1998,intervention_arms,Active ST36 acupoint TENS | Active dermatomal/peri-incisional TENS | Active nonacupoint shoulder TENS,Canonical result register,03_CANONICAL/results.csv
+Chen 1998,control_arms,Sham ST36 TENS (0 mA),Canonical result register,03_CANONICAL/results.csv
+Chen 1998,acupoints,ST36 (Zusanli),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Chen 1998,frequency,2/100 Hz (dense-disperse),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Chen 1998,intensity,5–15 mA (to patient tolerance),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Chen 1998,timing,Preoperative (30 min before anesthesia induction),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Chen 1998,sessions,Single session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Chen 1998,session_duration,30 minutes per session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Chen 1998,postoperative_analgesia,,Not extracted,
+Chen 1998,pca_regimen,,Not extracted,
+Chen 1998,rescue_analgesia,,Not extracted,
+Chen 1998,cumulative_duration,,Not extracted,
+Chen 2015,year,2015,Verified (registry),03_CANONICAL/studies.json
+Chen 2015,trial_family,Chen_2015,Verified (registry),03_CANONICAL/studies.json
+Chen 2015,modality,TEAS,Verified (registry),03_CANONICAL/studies.json
+Chen 2015,comparator,Sham-Controlled (Placebo Double-Blind),Verified (registry),03_CANONICAL/studies.json
+Chen 2015,comparator_class,sham,Verified (registry),03_CANONICAL/studies.json (study-level label; result-level class governs models)
+Chen 2015,randomized_n,84,Verified (registry),03_CANONICAL/studies.json; source page 3
+Chen 2015,randomized_n_counted,84,Verified (registry),03_CANONICAL/studies.json (operational family count)
+Chen 2015,analysed_n,41 vs 42,Verified (registry),03_CANONICAL/studies.json (report-level text; outcome-specific n differs)
+Chen 2015,country,China,Verified (registry),03_CANONICAL/studies.json
+Chen 2015,anaesthesia,General anaesthesia,Verified (PDF quote),037_chen_2015_thyroidectomy_lund.pdf p.2
+Chen 2015,surgical_category,"Head, Neck & ENT",Source-traced (extraction record),TEAS EA Verification/astra_audit/source_text/037_chen_2015_thyroidectomy_lund.txt:23
+Chen 2015,procedure,Elective thyroidectomy,Verified (registry),03_CANONICAL/studies.json
+Chen 2015,age,37.5 ± 8.5 vs 40.2 ± 7.8,"Legacy (v26, not re-verified)",dashboard/data.js population
+Chen 2015,female,41/41 (100%) vs 42/42 (100%),"Legacy (v26, not re-verified)",dashboard/data.js population
+Chen 2015,bmi,not reported vs not reported,"Legacy (v26, not re-verified)",dashboard/data.js population
+Chen 2015,asa,"ASA I: 38/41 (92.7%), ASA II: 3/41 (7.3%)","Legacy (v26, not re-verified)",dashboard/data.js population
+Chen 2015,intervention_arms,Preoperative TEAS,Canonical result register,03_CANONICAL/results.csv
+Chen 2015,control_arms,Electrodes/device with no stimulation,Canonical result register,03_CANONICAL/results.csv
+Chen 2015,acupoints,"LI4 (Hegu), PC6 (Neiguan)","Legacy (v26, not re-verified)",dashboard/data.js stricta
+Chen 2015,frequency,2/100 Hz (dense-disperse),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Chen 2015,intensity,5–15 mA (to patient tolerance),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Chen 2015,timing,Preoperative (30 min before anesthesia induction),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Chen 2015,sessions,Single session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Chen 2015,session_duration,30 minutes per session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Chen 2015,postoperative_analgesia,,Not extracted,
+Chen 2015,pca_regimen,,Not extracted,
+Chen 2015,rescue_analgesia,,Not extracted,
+Chen 2015,cumulative_duration,,Not extracted,
+Chen 2015 (Hyperalgesia),year,2015,Verified (registry),03_CANONICAL/studies.json
+Chen 2015 (Hyperalgesia),trial_family,Chen_2015_Hyperalgesia,Verified (registry),03_CANONICAL/studies.json
+Chen 2015 (Hyperalgesia),modality,TEAS,Verified (registry),03_CANONICAL/studies.json
+Chen 2015 (Hyperalgesia),comparator,Sham-Controlled (Placebo Double-Blind),Verified (registry),03_CANONICAL/studies.json
+Chen 2015 (Hyperalgesia),comparator_class,sham,Verified (registry),03_CANONICAL/studies.json (study-level label; result-level class governs models)
+Chen 2015 (Hyperalgesia),randomized_n,60,Verified (registry),03_CANONICAL/studies.json; source page 4
+Chen 2015 (Hyperalgesia),randomized_n_counted,60,Verified (registry),03_CANONICAL/studies.json (operational family count)
+Chen 2015 (Hyperalgesia),analysed_n,29 vs 30,Verified (registry),03_CANONICAL/studies.json (report-level text; outcome-specific n differs)
+Chen 2015 (Hyperalgesia),country,China,Verified (registry),03_CANONICAL/studies.json
+Chen 2015 (Hyperalgesia),anaesthesia,General anaesthesia,Verified (PDF quote),040_chen_2015_hyperalgesia_lund.pdf p.2
+Chen 2015 (Hyperalgesia),surgical_category,"Head, Neck & ENT",Source-traced (extraction record),TEAS EA Verification/astra_audit/source_text/040_chen_2015_hyperalgesia_lund.txt:8
+Chen 2015 (Hyperalgesia),procedure,Elective thyroidectomy,Verified (registry),03_CANONICAL/studies.json
+Chen 2015 (Hyperalgesia),age,41.9 ± 9.9 vs 41.4 ± 9.8,"Legacy (v26, not re-verified)",dashboard/data.js population
+Chen 2015 (Hyperalgesia),female,29/29 (100%) vs 30/30 (100%),"Legacy (v26, not re-verified)",dashboard/data.js population
+Chen 2015 (Hyperalgesia),bmi,not reported vs not reported,"Legacy (v26, not re-verified)",dashboard/data.js population
+Chen 2015 (Hyperalgesia),asa,"ASA I: 26/29 (89.7%), ASA II: 3/29 (10.3%)","Legacy (v26, not re-verified)",dashboard/data.js population
+Chen 2015 (Hyperalgesia),intervention_arms,Preoperative TEAS,Canonical result register,03_CANONICAL/results.csv
+Chen 2015 (Hyperalgesia),control_arms,Electrodes/no-current sham,Canonical result register,03_CANONICAL/results.csv
+Chen 2015 (Hyperalgesia),acupoints,"LI4 (Hegu), PC6 (Neiguan)","Legacy (v26, not re-verified)",dashboard/data.js stricta
+Chen 2015 (Hyperalgesia),frequency,2/100 Hz (dense-disperse),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Chen 2015 (Hyperalgesia),intensity,5–15 mA (to patient tolerance),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Chen 2015 (Hyperalgesia),timing,Preoperative (30 min before anesthesia induction),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Chen 2015 (Hyperalgesia),sessions,Single session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Chen 2015 (Hyperalgesia),session_duration,30 minutes per session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Chen 2015 (Hyperalgesia),postoperative_analgesia,,Not extracted,
+Chen 2015 (Hyperalgesia),pca_regimen,,Not extracted,
+Chen 2015 (Hyperalgesia),rescue_analgesia,,Not extracted,
+Chen 2015 (Hyperalgesia),cumulative_duration,,Not extracted,
+Chen 2020,year,2020,Verified (registry),03_CANONICAL/studies.json
+Chen 2020,trial_family,Chen_2020,Verified (registry),03_CANONICAL/studies.json
+Chen 2020,modality,TEAS,Verified (registry),03_CANONICAL/studies.json
+Chen 2020,comparator,Sham-Controlled (Placebo Double-Blind),Verified (registry),03_CANONICAL/studies.json
+Chen 2020,comparator_class,sham,Verified (registry),03_CANONICAL/studies.json (study-level label; result-level class governs models)
+Chen 2020,randomized_n,80,Verified (registry),03_CANONICAL/studies.json; source page 4
+Chen 2020,randomized_n_counted,80,Verified (registry),03_CANONICAL/studies.json (operational family count)
+Chen 2020,analysed_n,40 vs 40,Verified (registry),03_CANONICAL/studies.json (report-level text; outcome-specific n differs)
+Chen 2020,country,China,Verified (registry),03_CANONICAL/studies.json
+Chen 2020,anaesthesia,General anaesthesia,Verified (registry),03_CANONICAL/studies.json
+Chen 2020,surgical_category,Thoracic & Cardiac,Source-traced (extraction record),TEAS EA Verification/ChatGPT Sol Extraction/chen_2020_full_data_extraction.md:103
+Chen 2020,procedure,Video-assisted thoracoscopic surgery (VATS) pulmonary resection,Verified (registry),03_CANONICAL/studies.json
+Chen 2020,age,56.0 ± 3.7 vs 55.8 ± 3.2,"Legacy (v26, not re-verified)",dashboard/data.js population
+Chen 2020,female,17/40 (42.5%) vs 18/40 (45.0%),"Legacy (v26, not re-verified)",dashboard/data.js population
+Chen 2020,bmi,23.5 ± 0.9 vs 23.4 ± 1.0,"Legacy (v26, not re-verified)",dashboard/data.js population
+Chen 2020,asa,100% ASA I–II,"Legacy (v26, not re-verified)",dashboard/data.js population
+Chen 2020,intervention_arms,Perioperative TEAS,Canonical result register,03_CANONICAL/results.csv
+Chen 2020,control_arms,Sham low/zero-current protocol,Canonical result register,03_CANONICAL/results.csv
+Chen 2020,acupoints,"LI4 (Hegu), PC6 (Neiguan), SI3 (Houxi), TE6 (Zhigou)","Legacy (v26, not re-verified)",dashboard/data.js stricta
+Chen 2020,frequency,2/100 Hz (dense-disperse),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Chen 2020,intensity,5–15 mA (to patient tolerance),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Chen 2020,timing,Preoperative (30 min before anesthesia induction),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Chen 2020,sessions,Single session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Chen 2020,session_duration,30 minutes per session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Chen 2020,postoperative_analgesia,,Not extracted,
+Chen 2020,pca_regimen,,Not extracted,
+Chen 2020,rescue_analgesia,,Not extracted,
+Chen 2020,cumulative_duration,,Not extracted,
+Coura 2011,year,2011,Verified (registry),03_CANONICAL/studies.json
+Coura 2011,trial_family,Coura_2011,Verified (registry),03_CANONICAL/studies.json
+Coura 2011,modality,EA,Verified (registry),03_CANONICAL/studies.json
+Coura 2011,comparator,Sham-Controlled (Placebo Double-Blind),Verified (registry),03_CANONICAL/studies.json
+Coura 2011,comparator_class,sham,Verified (registry),03_CANONICAL/studies.json (study-level label; result-level class governs models)
+Coura 2011,randomized_n,32,Verified (registry),03_CANONICAL/studies.json; source page 3
+Coura 2011,randomized_n_counted,32,Verified (registry),03_CANONICAL/studies.json (operational family count)
+Coura 2011,analysed_n,13 vs 9,Verified (registry),03_CANONICAL/studies.json (report-level text; outcome-specific n differs)
+Coura 2011,country,Brazil,Verified (registry),03_CANONICAL/studies.json
+Coura 2011,anaesthesia,"General anesthesia implied by conventional cardiac surgery, but the anesthetic procedure was not standardized",Verified (registry),03_CANONICAL/studies.json
+Coura 2011,surgical_category,Thoracic & Cardiac,Source-traced (extraction record),TEAS EA Verification/ChatGPT Sol Extraction/coura_2011_covidence_819_full_data_extraction.md:98
+Coura 2011,procedure,Adults undergoing elective conventional cardiac surgery,Verified (registry),03_CANONICAL/studies.json
+Coura 2011,age,58.8 ± 11.2 vs 62.5 ± 10.8,"Legacy (v26, not re-verified)",dashboard/data.js population
+Coura 2011,female,3/13 (23.1%) vs 5/9 (55.6%),"Legacy (v26, not re-verified)",dashboard/data.js population
+Coura 2011,bmi,not reported vs not reported,"Legacy (v26, not re-verified)",dashboard/data.js population
+Coura 2011,asa,not reported,"Legacy (v26, not re-verified)",dashboard/data.js population
+Coura 2011,intervention_arms,Preoperative EA,Canonical result register,03_CANONICAL/results.csv
+Coura 2011,control_arms,Sham stimulation,Canonical result register,03_CANONICAL/results.csv
+Coura 2011,acupoints,"PC6 (Neiguan), LI4 (Hegu), EX-HN3 (Yintang), ST36 (Zusanli)","Legacy (v26, not re-verified)",dashboard/data.js stricta
+Coura 2011,frequency,2/100 Hz (dense-disperse),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Coura 2011,intensity,5–15 mA (to patient tolerance),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Coura 2011,timing,Preoperative (30 min before anesthesia induction),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Coura 2011,sessions,Single session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Coura 2011,session_duration,30 minutes per session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Coura 2011,postoperative_analgesia,,Not extracted,
+Coura 2011,pca_regimen,,Not extracted,
+Coura 2011,rescue_analgesia,,Not extracted,
+Coura 2011,cumulative_duration,,Not extracted,
+El-Rakshy 2009,year,2009,Verified (registry),03_CANONICAL/studies.json
+El-Rakshy 2009,trial_family,El_Rakshy_2009,Verified (registry),03_CANONICAL/studies.json
+El-Rakshy 2009,modality,EA,Verified (registry),03_CANONICAL/studies.json
+El-Rakshy 2009,comparator,Usual Care (Open-Label Control),Verified (registry),03_CANONICAL/studies.json
+El-Rakshy 2009,comparator_class,usual care,Verified (registry),03_CANONICAL/studies.json (study-level label; result-level class governs models)
+El-Rakshy 2009,randomized_n,107,Verified (registry),03_CANONICAL/studies.json; source page 3
+El-Rakshy 2009,randomized_n_counted,107,Verified (registry),03_CANONICAL/studies.json (operational family count)
+El-Rakshy 2009,analysed_n,42 EA vs 53 control for this outcome,Verified (registry),03_CANONICAL/studies.json (report-level text; outcome-specific n differs)
+El-Rakshy 2009,country,UK,Verified (registry),03_CANONICAL/studies.json
+El-Rakshy 2009,anaesthesia,General anaesthesia,Verified (registry),03_CANONICAL/studies.json
+El-Rakshy 2009,surgical_category,Mixed specialties,Source-traced (extraction record),TEAS EA Verification/ChatGPT Sol Extraction/el_rakshy_2009_covidence_868_full_data_extraction.md:121
+El-Rakshy 2009,procedure,Elective abdominal hysterectomy or laparoscopic cholecystectomy,Verified (registry),03_CANONICAL/studies.json
+El-Rakshy 2009,age,not reported vs not reported,"Legacy (v26, not re-verified)",dashboard/data.js population
+El-Rakshy 2009,female,42/44 (95.5%) vs 50/58 (86.2%),"Legacy (v26, not re-verified)",dashboard/data.js population
+El-Rakshy 2009,bmi,not reported vs not reported,"Legacy (v26, not re-verified)",dashboard/data.js population
+El-Rakshy 2009,asa,100% ASA I–II,"Legacy (v26, not re-verified)",dashboard/data.js population
+El-Rakshy 2009,intervention_arms,Intraoperative EA + PCA,Canonical result register,03_CANONICAL/results.csv
+El-Rakshy 2009,control_arms,PCA alone/no acupuncture,Canonical result register,03_CANONICAL/results.csv
+El-Rakshy 2009,acupoints,"GV2 (Yaoshu), BL32 (Ciliao), GV4 (Mingmen), BL23 (Shenshu), LI4 (Hegu), PC6 (Neiguan), LR3 (Taichong), SP6 (Sanyinjiao)","Legacy (v26, not re-verified)",dashboard/data.js stricta
+El-Rakshy 2009,frequency,2/100 Hz (dense-disperse),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+El-Rakshy 2009,intensity,5–15 mA (to patient tolerance),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+El-Rakshy 2009,timing,Preoperative (30 min before anesthesia induction),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+El-Rakshy 2009,sessions,Single session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+El-Rakshy 2009,session_duration,30 minutes per session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+El-Rakshy 2009,postoperative_analgesia,,Not extracted,
+El-Rakshy 2009,pca_regimen,,Not extracted,
+El-Rakshy 2009,rescue_analgesia,,Not extracted,
+El-Rakshy 2009,cumulative_duration,,Not extracted,
+Gao 2021,year,2021,Verified (registry),03_CANONICAL/studies.json
+Gao 2021,trial_family,Gao_2021,Verified (registry),03_CANONICAL/studies.json
+Gao 2021,modality,TEAS,Verified (registry),03_CANONICAL/studies.json
+Gao 2021,comparator,Sham-Controlled (Placebo Double-Blind),Verified (registry),03_CANONICAL/studies.json
+Gao 2021,comparator_class,sham,Verified (registry),03_CANONICAL/studies.json (study-level label; result-level class governs models)
+Gao 2021,randomized_n,610,Verified (registry),03_CANONICAL/studies.json; source page 3
+Gao 2021,randomized_n_counted,610,Verified (registry),03_CANONICAL/studies.json (operational family count)
+Gao 2021,analysed_n,303 vs 307,Verified (registry),03_CANONICAL/studies.json (report-level text; outcome-specific n differs)
+Gao 2021,country,China,Verified (registry),03_CANONICAL/studies.json
+Gao 2021,anaesthesia,General anesthesia required,Verified (registry),03_CANONICAL/studies.json
+Gao 2021,surgical_category,Abdominal & Gastrointestinal,Source-traced (extraction record),TEAS EA Verification/ChatGPT Sol Extraction/gao_2021_covidence_400_full_data_extraction.md:107
+Gao 2021,procedure,Patients undergoing colorectal cancer surgery,Verified (registry),03_CANONICAL/studies.json
+Gao 2021,age,62.0 (53–69) vs 63.0 (54–70),"Legacy (v26, not re-verified)",dashboard/data.js population
+Gao 2021,female,127/303 (41.9%) vs 151/307 (49.2%),"Legacy (v26, not re-verified)",dashboard/data.js population
+Gao 2021,bmi,22.5 (20.4–24.7) vs 22.7 (20.7–24.4),"Legacy (v26, not re-verified)",dashboard/data.js population
+Gao 2021,asa,"ASA I: 24 (7.9%), ASA II: 243 (80.2%), ASA III: 36 (11.9%)","Legacy (v26, not re-verified)",dashboard/data.js population
+Gao 2021,intervention_arms,Postoperative TEAS | TEAS,Canonical result register,03_CANONICAL/results.csv
+Gao 2021,control_arms,Sham | Sham/no-current TEAS,Canonical result register,03_CANONICAL/results.csv
+Gao 2021,acupoints,"ST36 (Zusanli), ST37 (Shangjuxu), SP6 (Sanyinjiao)","Legacy (v26, not re-verified)",dashboard/data.js stricta
+Gao 2021,frequency,2/100 Hz (dense-disperse),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Gao 2021,intensity,5–15 mA (to patient tolerance),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Gao 2021,timing,Preoperative (30 min before anesthesia induction),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Gao 2021,sessions,Single session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Gao 2021,session_duration,30 minutes per session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Gao 2021,postoperative_analgesia,,Not extracted,
+Gao 2021,pca_regimen,,Not extracted,
+Gao 2021,rescue_analgesia,,Not extracted,
+Gao 2021,cumulative_duration,,Not extracted,
+Gao 2022,year,2022,Verified (registry),03_CANONICAL/studies.json
+Gao 2022,trial_family,Gao_2022,Verified (registry),03_CANONICAL/studies.json
+Gao 2022,modality,TEAS,Verified (registry),03_CANONICAL/studies.json
+Gao 2022,comparator,Sham-Controlled (Placebo Double-Blind),Verified (registry),03_CANONICAL/studies.json
+Gao 2022,comparator_class,sham,Verified (registry),03_CANONICAL/studies.json (study-level label; result-level class governs models)
+Gao 2022,randomized_n,1655,Verified (registry),03_CANONICAL/studies.json; source page 4
+Gao 2022,randomized_n_counted,1655,Verified (registry),03_CANONICAL/studies.json (operational family count)
+Gao 2022,analysed_n,827 / 828,Verified (registry),03_CANONICAL/studies.json (report-level text; outcome-specific n differs)
+Gao 2022,country,China,Verified (registry),03_CANONICAL/studies.json
+Gao 2022,anaesthesia,General anaesthesia,Verified (PDF quote),pdf-2.pdf p.1
+Gao 2022,surgical_category,Mixed or unspecified surgery,Source-traced (extraction record),dashboard/data.js:None
+Gao 2022,procedure,High-risk laparoscopic non-gastrointestinal surgery (12-center trial),Verified (registry),03_CANONICAL/studies.json
+Gao 2022,age,not reported vs not reported,"Legacy (v26, not re-verified)",dashboard/data.js population
+Gao 2022,female,not reported vs not reported,"Legacy (v26, not re-verified)",dashboard/data.js population
+Gao 2022,bmi,not reported vs not reported,"Legacy (v26, not re-verified)",dashboard/data.js population
+Gao 2022,asa,not reported,"Legacy (v26, not re-verified)",dashboard/data.js population
+Gao 2022,intervention_arms,"Postoperative TEAS at bilateral P6/ST36 (2/10 Hz, 30 min ×2)",Canonical result register,03_CANONICAL/results.csv
+Gao 2022,control_arms,No-current sham with identical electrode/device setup,Canonical result register,03_CANONICAL/results.csv
+Gao 2022,acupoints,"P6, ST36 (bilateral)","Legacy (v26, not re-verified)",dashboard/data.js stricta
+Gao 2022,frequency,2/10 Hz,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Gao 2022,intensity,not reported,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Gao 2022,timing,"Postoperative, in PACU after recovery and again the next morning","Legacy (v26, not re-verified)",dashboard/data.js stricta
+Gao 2022,sessions,Repeated sessions (2),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Gao 2022,session_duration,30 min per session x 2,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Gao 2022,postoperative_analgesia,,Not extracted,
+Gao 2022,pca_regimen,,Not extracted,
+Gao 2022,rescue_analgesia,,Not extracted,
+Gao 2022,cumulative_duration,,Not extracted,
+Grech 2016,year,2016,Verified (registry),03_CANONICAL/studies.json
+Grech 2016,trial_family,Grech_2016,Verified (registry),03_CANONICAL/studies.json
+Grech 2016,modality,EA,Verified (registry),03_CANONICAL/studies.json
+Grech 2016,comparator,Usual Care (Open-Label Control),Verified (registry),03_CANONICAL/studies.json
+Grech 2016,comparator_class,usual care,Verified (registry),03_CANONICAL/studies.json (study-level label; result-level class governs models)
+Grech 2016,randomized_n,20,Verified (registry),03_CANONICAL/studies.json; source page 2
+Grech 2016,randomized_n_counted,20,Verified (registry),03_CANONICAL/studies.json (operational family count)
+Grech 2016,analysed_n,9 women vs 9 women subgroup,Verified (registry),03_CANONICAL/studies.json (report-level text; outcome-specific n differs)
+Grech 2016,country,USA,Verified (registry),03_CANONICAL/studies.json
+Grech 2016,anaesthesia,General anesthesia,Verified (registry),03_CANONICAL/studies.json
+Grech 2016,surgical_category,"Head, Neck & ENT",Source-traced (extraction record),TEAS EA Verification/ChatGPT Sol Extraction/grech_2016_full_data_extraction.md:51
+Grech 2016,procedure,Thyroid or parathyroid surgery,Verified (registry),03_CANONICAL/studies.json
+Grech 2016,age,44.73 ± 8.89 vs 52.33 ± 12.24,"Legacy (v26, not re-verified)",dashboard/data.js population
+Grech 2016,female,9/11 (81.8%) vs 9/9 (100%),"Legacy (v26, not re-verified)",dashboard/data.js population
+Grech 2016,bmi,not reported vs not reported,"Legacy (v26, not re-verified)",dashboard/data.js population
+Grech 2016,asa,not reported,"Legacy (v26, not re-verified)",dashboard/data.js population
+Grech 2016,intervention_arms,Intraoperative low-frequency EA,Canonical result register,03_CANONICAL/results.csv
+Grech 2016,control_arms,Sham/control,Canonical result register,03_CANONICAL/results.csv
+Grech 2016,acupoints,"LI4 (Hegu), LI11 (Quchi), ST36 (Zusanli)","Legacy (v26, not re-verified)",dashboard/data.js stricta
+Grech 2016,frequency,2/100 Hz (dense-disperse),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Grech 2016,intensity,5–15 mA (to patient tolerance),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Grech 2016,timing,Preoperative (30 min before anesthesia induction),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Grech 2016,sessions,Single session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Grech 2016,session_duration,30 minutes per session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Grech 2016,postoperative_analgesia,,Not extracted,
+Grech 2016,pca_regimen,,Not extracted,
+Grech 2016,rescue_analgesia,,Not extracted,
+Grech 2016,cumulative_duration,,Not extracted,
+Gu 2019,year,2019,Verified (registry),03_CANONICAL/studies.json
+Gu 2019,trial_family,Gu_2019,Verified (registry),03_CANONICAL/studies.json
+Gu 2019,modality,TEAS,Verified (registry),03_CANONICAL/studies.json
+Gu 2019,comparator,Sham-Controlled (Placebo Double-Blind),Verified (registry),03_CANONICAL/studies.json
+Gu 2019,comparator_class,sham,Verified (registry),03_CANONICAL/studies.json (study-level label; result-level class governs models)
+Gu 2019,randomized_n,120,Verified (registry),03_CANONICAL/studies.json; source page 3
+Gu 2019,randomized_n_counted,120,Verified (registry),03_CANONICAL/studies.json (operational family count)
+Gu 2019,analysed_n,58 vs 59,Verified (registry),03_CANONICAL/studies.json (report-level text; outcome-specific n differs)
+Gu 2019,country,China,Verified (registry),03_CANONICAL/studies.json
+Gu 2019,anaesthesia,General anesthesia,Verified (registry),03_CANONICAL/studies.json
+Gu 2019,surgical_category,Abdominal & Gastrointestinal,Source-traced (extraction record),TEAS EA Verification/ChatGPT Sol Extraction/gu_2019_covidence_1471_full_data_extraction.md:101
+Gu 2019,procedure,Laparoscopic radical gastrectomy,Verified (registry),03_CANONICAL/studies.json
+Gu 2019,age,57.59 ± 7.32 vs 56.67 ± 6.23,"Legacy (v26, not re-verified)",dashboard/data.js population
+Gu 2019,female,27/58 (46.6%) vs 30/59 (50.8%),"Legacy (v26, not re-verified)",dashboard/data.js population
+Gu 2019,bmi,22.71 ± 2.54 vs 21.84 ± 2.78,"Legacy (v26, not re-verified)",dashboard/data.js population
+Gu 2019,asa,"TEAS arm — ASA I: 23/58 (39.7%), ASA II: 35/58 (60.3%); Sham arm — ASA I: 20/59 (33.9%), ASA II: 39/59 (66.1%)","Legacy (v26, not re-verified)",dashboard/data.js population
+Gu 2019,intervention_arms,Long-duration TEAS | Long-duration TEAS (L-TEAS),Canonical result register,03_CANONICAL/results.csv
+Gu 2019,control_arms,Placebo/no-current TEAS (C-TEAS) | Sham/no-current TEAS,Canonical result register,03_CANONICAL/results.csv
+Gu 2019,acupoints,"PC6 (Neiguan), ST36 (Zusanli)","Legacy (v26, not re-verified)",dashboard/data.js stricta
+Gu 2019,frequency,2/100 Hz (dense-disperse),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Gu 2019,intensity,5–15 mA (to patient tolerance),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Gu 2019,timing,Preoperative (30 min before anesthesia induction),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Gu 2019,sessions,Single session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Gu 2019,session_duration,30 minutes per session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Gu 2019,postoperative_analgesia,,Not extracted,
+Gu 2019,pca_regimen,,Not extracted,
+Gu 2019,rescue_analgesia,,Not extracted,
+Gu 2019,cumulative_duration,,Not extracted,
+Guo 2023,year,2023,Verified (registry),03_CANONICAL/studies.json
+Guo 2023,trial_family,Guo_2023,Verified (registry),03_CANONICAL/studies.json
+Guo 2023,modality,TEAS,Verified (registry),03_CANONICAL/studies.json
+Guo 2023,comparator,Sham-Controlled (Placebo Double-Blind),Verified (registry),03_CANONICAL/studies.json
+Guo 2023,comparator_class,sham,Verified (registry),03_CANONICAL/studies.json (study-level label; result-level class governs models)
+Guo 2023,randomized_n,128,Verified (registry),03_CANONICAL/studies.json; source page 2
+Guo 2023,randomized_n_counted,128,Verified (registry),03_CANONICAL/studies.json (operational family count)
+Guo 2023,analysed_n,55 vs 55,Verified (registry),03_CANONICAL/studies.json (report-level text; outcome-specific n differs)
+Guo 2023,country,China,Verified (registry),03_CANONICAL/studies.json
+Guo 2023,anaesthesia,General anesthesia,Verified (registry),03_CANONICAL/studies.json
+Guo 2023,surgical_category,Thoracic & Cardiac,Source-traced (extraction record),TEAS EA Verification/ChatGPT Sol Extraction/guo_2023_full_data_extraction.md:126
+Guo 2023,procedure,Older adults undergoing thoracoscopic pulmonary resection for suspected lung cancer,Verified (registry),03_CANONICAL/studies.json
+Guo 2023,age,70.09 ± 3.95 vs 70.56 ± 4.59,"Legacy (v26, not re-verified)",dashboard/data.js population
+Guo 2023,female,20/55 (36.4%) vs 27/55 (49.1%),"Legacy (v26, not re-verified)",dashboard/data.js population
+Guo 2023,bmi,24.09 ± 2.78 vs 23.63 ± 2.85,"Legacy (v26, not re-verified)",dashboard/data.js population
+Guo 2023,asa,not reported,"Legacy (v26, not re-verified)",dashboard/data.js population
+Guo 2023,intervention_arms,Perioperative TEAS,Canonical result register,03_CANONICAL/results.csv
+Guo 2023,control_arms,Sham/no-current TEAS,Canonical result register,03_CANONICAL/results.csv
+Guo 2023,acupoints,"GV20 (Baihui), PC6 (Neiguan), LI4 (Hegu), ST36 (Zusanli)","Legacy (v26, not re-verified)",dashboard/data.js stricta
+Guo 2023,frequency,2/100 Hz (dense-disperse),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Guo 2023,intensity,5–15 mA (to patient tolerance),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Guo 2023,timing,Preoperative (30 min before anesthesia induction),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Guo 2023,sessions,Single session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Guo 2023,session_duration,30 minutes per session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Guo 2023,postoperative_analgesia,,Not extracted,
+Guo 2023,pca_regimen,,Not extracted,
+Guo 2023,rescue_analgesia,,Not extracted,
+Guo 2023,cumulative_duration,,Not extracted,
+He 2026 (breast/WJCO),year,2026,Verified (registry),03_CANONICAL/studies.json
+He 2026 (breast/WJCO),trial_family,He_2026_breast_WJCO,Verified (registry),03_CANONICAL/studies.json
+He 2026 (breast/WJCO),modality,EA,Verified (registry),03_CANONICAL/studies.json
+He 2026 (breast/WJCO),comparator,Sham-Controlled (Placebo Double-Blind),Verified (registry),03_CANONICAL/studies.json
+He 2026 (breast/WJCO),comparator_class,sham,Verified (registry),03_CANONICAL/studies.json (study-level label; result-level class governs models)
+He 2026 (breast/WJCO),randomized_n,130,Verified (registry),03_CANONICAL/studies.json; source page 4
+He 2026 (breast/WJCO),randomized_n_counted,130,Verified (registry),03_CANONICAL/studies.json (operational family count)
+He 2026 (breast/WJCO),analysed_n,65 vs 65,Verified (registry),03_CANONICAL/studies.json (report-level text; outcome-specific n differs)
+He 2026 (breast/WJCO),country,China,Verified (registry),03_CANONICAL/studies.json
+He 2026 (breast/WJCO),anaesthesia,General anesthesia,Verified (registry),03_CANONICAL/studies.json
+He 2026 (breast/WJCO),surgical_category,Gynecologic & Breast,Source-traced (extraction record),TEAS EA Verification/ChatGPT Sol Extraction/he_2026_covidence_41_full_data_extraction.md:83
+He 2026 (breast/WJCO),procedure,Adults undergoing elective breast cancer surgery,Verified (registry),03_CANONICAL/studies.json
+He 2026 (breast/WJCO),age,52 (43.5–61.5) vs 52 (43.5–61),"Legacy (v26, not re-verified)",dashboard/data.js population
+He 2026 (breast/WJCO),female,65/65 (100%) vs 65/65 (100%),"Legacy (v26, not re-verified)",dashboard/data.js population
+He 2026 (breast/WJCO),bmi,not reported vs not reported,"Legacy (v26, not re-verified)",dashboard/data.js population
+He 2026 (breast/WJCO),asa,not reported,"Legacy (v26, not re-verified)",dashboard/data.js population
+He 2026 (breast/WJCO),intervention_arms,Perioperative EA + flurbiprofen,Canonical result register,03_CANONICAL/results.csv
+He 2026 (breast/WJCO),control_arms,Sham acupuncture + flurbiprofen,Canonical result register,03_CANONICAL/results.csv
+He 2026 (breast/WJCO),acupoints,"ST36 (Zusanli), SP6 (Sanyinjiao)","Legacy (v26, not re-verified)",dashboard/data.js stricta
+He 2026 (breast/WJCO),frequency,2/100 Hz (dense-disperse),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+He 2026 (breast/WJCO),intensity,5–15 mA (to patient tolerance),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+He 2026 (breast/WJCO),timing,Preoperative (30 min before anesthesia induction),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+He 2026 (breast/WJCO),sessions,Single session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+He 2026 (breast/WJCO),session_duration,30 minutes per session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+He 2026 (breast/WJCO),postoperative_analgesia,,Not extracted,
+He 2026 (breast/WJCO),pca_regimen,,Not extracted,
+He 2026 (breast/WJCO),rescue_analgesia,,Not extracted,
+He 2026 (breast/WJCO),cumulative_duration,,Not extracted,
+He 2026 (hepatectomy/JIS),year,2026,Verified (registry),03_CANONICAL/studies.json
+He 2026 (hepatectomy/JIS),trial_family,He_2026_hepatectomy_JIS,Verified (registry),03_CANONICAL/studies.json
+He 2026 (hepatectomy/JIS),modality,TEAS,Verified (registry),03_CANONICAL/studies.json
+He 2026 (hepatectomy/JIS),comparator,Sham-Controlled (Placebo Double-Blind),Verified (registry),03_CANONICAL/studies.json
+He 2026 (hepatectomy/JIS),comparator_class,sham,Verified (registry),03_CANONICAL/studies.json (study-level label; result-level class governs models)
+He 2026 (hepatectomy/JIS),randomized_n,161,Verified (registry),03_CANONICAL/studies.json; source page 2
+He 2026 (hepatectomy/JIS),randomized_n_counted,161,Verified (registry),03_CANONICAL/studies.json (operational family count)
+He 2026 (hepatectomy/JIS),analysed_n,80 vs 79,Verified (registry),03_CANONICAL/studies.json (report-level text; outcome-specific n differs)
+He 2026 (hepatectomy/JIS),country,China,Verified (registry),03_CANONICAL/studies.json
+He 2026 (hepatectomy/JIS),anaesthesia,General anaesthesia,Verified (registry),03_CANONICAL/studies.json
+He 2026 (hepatectomy/JIS),surgical_category,Abdominal & Gastrointestinal,Source-traced (extraction record),TEAS EA Verification/ChatGPT Sol Extraction/he_2026_covidence_25_full_data_extraction_REVISED_with_supplements.md:114
+He 2026 (hepatectomy/JIS),procedure,Adults scheduled for elective hepatectomy under general anesthesia,Verified (registry),03_CANONICAL/studies.json
+He 2026 (hepatectomy/JIS),age,52.3 ± 9.1 vs 54.3 ± 10.9,"Legacy (v26, not re-verified)",dashboard/data.js population
+He 2026 (hepatectomy/JIS),female,28/80 (35.0%) vs 26/79 (32.9%),"Legacy (v26, not re-verified)",dashboard/data.js population
+He 2026 (hepatectomy/JIS),bmi,23.4 ± 3.3 vs 23.7 ± 4.9,"Legacy (v26, not re-verified)",dashboard/data.js population
+He 2026 (hepatectomy/JIS),asa,"TEAS arm — ASA I: 2/80 (2.5%), ASA II: 74/80 (92.5%), ASA III: 4/80 (5.0%); Sham arm — ASA I: 1/79 (1.3%), ASA II: 72/79 (91.1%), ASA III: 6/79 (7.6%)","Legacy (v26, not re-verified)",dashboard/data.js population
+He 2026 (hepatectomy/JIS),intervention_arms,Intraoperative PC6 TEAS,Canonical result register,03_CANONICAL/results.csv
+He 2026 (hepatectomy/JIS),control_arms,No-current PC6 control,Canonical result register,03_CANONICAL/results.csv
+He 2026 (hepatectomy/JIS),acupoints,PC6 (Neiguan),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+He 2026 (hepatectomy/JIS),frequency,2/100 Hz (dense-disperse),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+He 2026 (hepatectomy/JIS),intensity,5–15 mA (to patient tolerance),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+He 2026 (hepatectomy/JIS),timing,Preoperative (30 min before anesthesia induction),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+He 2026 (hepatectomy/JIS),sessions,Single session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+He 2026 (hepatectomy/JIS),session_duration,30 minutes per session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+He 2026 (hepatectomy/JIS),postoperative_analgesia,,Not extracted,
+He 2026 (hepatectomy/JIS),pca_regimen,,Not extracted,
+He 2026 (hepatectomy/JIS),rescue_analgesia,,Not extracted,
+He 2026 (hepatectomy/JIS),cumulative_duration,,Not extracted,
+Hou 2023,year,2023,Verified (registry),03_CANONICAL/studies.json
+Hou 2023,trial_family,Hou_2023,Verified (registry),03_CANONICAL/studies.json
+Hou 2023,modality,TEAS,Verified (registry),03_CANONICAL/studies.json
+Hou 2023,comparator,Sham-Controlled (Placebo Double-Blind),Verified (registry),03_CANONICAL/studies.json
+Hou 2023,comparator_class,sham,Verified (registry),03_CANONICAL/studies.json (study-level label; result-level class governs models)
+Hou 2023,randomized_n,74,Verified (registry),03_CANONICAL/studies.json; source page 4
+Hou 2023,randomized_n_counted,74,Verified (registry),03_CANONICAL/studies.json (operational family count)
+Hou 2023,analysed_n,36 vs 36,Verified (registry),03_CANONICAL/studies.json (report-level text; outcome-specific n differs)
+Hou 2023,country,China,Verified (registry),03_CANONICAL/studies.json
+Hou 2023,anaesthesia,General anesthesia,Verified (registry),03_CANONICAL/studies.json
+Hou 2023,surgical_category,Urologic,Source-traced (extraction record),TEAS EA Verification/ChatGPT Sol Extraction/hou_2023_covidence_7_full_data_extraction.md:106
+Hou 2023,procedure,Living kidney donors (LKDs) undergoing nephrectomy,Verified (registry),03_CANONICAL/studies.json
+Hou 2023,age,54.0 ± 5.8 vs 54.6 ± 8.0,"Legacy (v26, not re-verified)",dashboard/data.js population
+Hou 2023,female,23/36 (63.9%) vs 27/36 (75.0%),"Legacy (v26, not re-verified)",dashboard/data.js population
+Hou 2023,bmi,24.1 ± 2.0 vs 24.0 ± 3.2,"Legacy (v26, not re-verified)",dashboard/data.js population
+Hou 2023,asa,"ASA I: 20 (55.6%), ASA II: 16 (44.4%)","Legacy (v26, not re-verified)",dashboard/data.js population
+Hou 2023,intervention_arms,Perioperative TEAS,Canonical result register,03_CANONICAL/results.csv
+Hou 2023,control_arms,Sham/no-current TEAS,Canonical result register,03_CANONICAL/results.csv
+Hou 2023,acupoints,"EX-HN3 (Yintang), LR3 (Taichong), PC6 (Neiguan)","Legacy (v26, not re-verified)",dashboard/data.js stricta
+Hou 2023,frequency,2/100 Hz (dense-disperse),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Hou 2023,intensity,Generally 6-15 mA,Partly verified (source excerpt),03_CANONICAL/verified_metadata.json (2026-09-26)
+Hou 2023,timing,"Three sessions: one day before surgery, before induction, and one day after surgery",Partly verified (source excerpt),03_CANONICAL/verified_metadata.json (2026-09-26)
+Hou 2023,sessions,3,Partly verified (source excerpt),03_CANONICAL/verified_metadata.json (2026-09-26)
+Hou 2023,session_duration,30 minutes per session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Hou 2023,postoperative_analgesia,,Not extracted,
+Hou 2023,pca_regimen,,Not extracted,
+Hou 2023,rescue_analgesia,,Not extracted,
+Hou 2023,cumulative_duration,,Not extracted,
+Huang 2017,year,2017,Verified (registry),03_CANONICAL/studies.json
+Huang 2017,trial_family,Huang_2017,Verified (registry),03_CANONICAL/studies.json
+Huang 2017,modality,TEAS,Verified (registry),03_CANONICAL/studies.json
+Huang 2017,comparator,Sham-Controlled (Placebo Double-Blind),Verified (registry),03_CANONICAL/studies.json
+Huang 2017,comparator_class,sham,Verified (registry),03_CANONICAL/studies.json (study-level label; result-level class governs models)
+Huang 2017,randomized_n,80,Verified (registry),03_CANONICAL/studies.json; source page 4
+Huang 2017,randomized_n_counted,80,Verified (registry),03_CANONICAL/studies.json (operational family count)
+Huang 2017,analysed_n,20 vs 20,Verified (registry),03_CANONICAL/studies.json (report-level text; outcome-specific n differs)
+Huang 2017,country,China,Verified (registry),03_CANONICAL/studies.json
+Huang 2017,anaesthesia,General anesthesia,Verified (registry),03_CANONICAL/studies.json
+Huang 2017,surgical_category,Thoracic & Cardiac,Source-traced (extraction record),TEAS EA Verification/ChatGPT Sol Extraction/huang_2017_covidence_666_full_data_extraction.md:126
+Huang 2017,procedure,VATS lobectomy,Verified (registry),03_CANONICAL/studies.json
+Huang 2017,age,57.3 ± 11.6 vs 57.2 ± 15.7,"Legacy (v26, not re-verified)",dashboard/data.js population
+Huang 2017,female,10/20 (50.0%) vs 11/20 (55.0%),"Legacy (v26, not re-verified)",dashboard/data.js population
+Huang 2017,bmi,24.7 ± 2.2 vs 22.8 ± 2.6,"Legacy (v26, not re-verified)",dashboard/data.js population
+Huang 2017,asa,"ASA I: 6 (30.0%), ASA II: 14 (70.0%), ASA III: 0 (0%)","Legacy (v26, not re-verified)",dashboard/data.js population
+Huang 2017,intervention_arms,100-Hz TEAS | 2-Hz TEAS | 2/100-Hz TEAS | Active TEAS frequency arms,Canonical result register,03_CANONICAL/results.csv
+Huang 2017,control_arms,Placebo TEAS/no current,Canonical result register,03_CANONICAL/results.csv
+Huang 2017,acupoints,"LI4 (Hegu), PC6 (Neiguan)","Legacy (v26, not re-verified)",dashboard/data.js stricta
+Huang 2017,frequency,2/100 Hz (dense-disperse),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Huang 2017,intensity,5–15 mA (to patient tolerance),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Huang 2017,timing,Preoperative (30 min before anesthesia induction),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Huang 2017,sessions,Single session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Huang 2017,session_duration,30 minutes per session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Huang 2017,postoperative_analgesia,,Not extracted,
+Huang 2017,pca_regimen,,Not extracted,
+Huang 2017,rescue_analgesia,,Not extracted,
+Huang 2017,cumulative_duration,,Not extracted,
+Huang 2024,year,2024,Verified (registry),03_CANONICAL/studies.json
+Huang 2024,trial_family,Huang_2024,Verified (registry),03_CANONICAL/studies.json
+Huang 2024,modality,EA,Verified (registry),03_CANONICAL/studies.json
+Huang 2024,comparator,Sham-Controlled (Placebo Double-Blind),Verified (registry),03_CANONICAL/studies.json
+Huang 2024,comparator_class,sham,Verified (registry),03_CANONICAL/studies.json (study-level label; result-level class governs models)
+Huang 2024,randomized_n,114,Verified (registry),03_CANONICAL/studies.json; source page 1
+Huang 2024,randomized_n_counted,114,Verified (registry),03_CANONICAL/studies.json (operational family count)
+Huang 2024,analysed_n,38 vs 38,Verified (registry),03_CANONICAL/studies.json (report-level text; outcome-specific n differs)
+Huang 2024,country,China,Verified (registry),03_CANONICAL/studies.json
+Huang 2024,anaesthesia,General anaesthesia,Verified (registry),03_CANONICAL/studies.json
+Huang 2024,surgical_category,Orthopedic & Spine,Source-traced (extraction record),TEAS EA Verification/ChatGPT Sol Extraction/huang_2024_covidence_245_full_data_extraction.md:104
+Huang 2024,procedure,Unilateral TKA,Verified (registry),03_CANONICAL/studies.json
+Huang 2024,age,67.29 ± 4.78 vs 67.58 ± 4.95,"Legacy (v26, not re-verified)",dashboard/data.js population
+Huang 2024,female,33/38 (86.8%) vs 31/38 (81.6%),"Legacy (v26, not re-verified)",dashboard/data.js population
+Huang 2024,bmi,24.43 ± 3.60 vs 23.34 ± 2.92,"Legacy (v26, not re-verified)",dashboard/data.js population
+Huang 2024,asa,not reported,"Legacy (v26, not re-verified)",dashboard/data.js population
+Huang 2024,intervention_arms,Contralateral EA | Ipsilateral EA | True-EA arms,Canonical result register,03_CANONICAL/results.csv
+Huang 2024,control_arms,Bilateral sham EA,Canonical result register,03_CANONICAL/results.csv
+Huang 2024,acupoints,"ST32 (Futu), ST36 (Zusanli), SP9 (Yinlingquan), GB34 (Yanglingquan)","Legacy (v26, not re-verified)",dashboard/data.js stricta
+Huang 2024,frequency,2/100 Hz (dense-disperse),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Huang 2024,intensity,5–15 mA (to patient tolerance),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Huang 2024,timing,Preoperative (30 min before anesthesia induction),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Huang 2024,sessions,Single session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Huang 2024,session_duration,30 minutes per session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Huang 2024,postoperative_analgesia,,Not extracted,
+Huang 2024,pca_regimen,,Not extracted,
+Huang 2024,rescue_analgesia,,Not extracted,
+Huang 2024,cumulative_duration,,Not extracted,
+Huang 2025,year,2025,Verified (registry),03_CANONICAL/studies.json
+Huang 2025,trial_family,Huang_2025,Verified (registry),03_CANONICAL/studies.json
+Huang 2025,modality,EA,Verified (registry),03_CANONICAL/studies.json
+Huang 2025,comparator,Usual care / standard care,Verified (registry),03_CANONICAL/studies.json
+Huang 2025,comparator_class,usual care,Verified (registry),03_CANONICAL/studies.json (study-level label; result-level class governs models)
+Huang 2025,randomized_n,101,Verified (registry),03_CANONICAL/studies.json; source page 4
+Huang 2025,randomized_n_counted,101,Verified (registry),03_CANONICAL/studies.json (operational family count)
+Huang 2025,analysed_n,43 vs 45,Verified (registry),03_CANONICAL/studies.json (report-level text; outcome-specific n differs)
+Huang 2025,country,China,Verified (registry),03_CANONICAL/studies.json
+Huang 2025,anaesthesia,General anesthesia required,Verified (registry),03_CANONICAL/studies.json
+Huang 2025,surgical_category,Gynecologic & Breast,Source-traced (extraction record),TEAS EA Verification/ChatGPT Sol Extraction/huang_2025_covidence_131_full_data_extraction.md:127
+Huang 2025,procedure,Laparoscopic hysterectomy with or without salpingo-oophorectomy or salpingectomy,Verified (registry),03_CANONICAL/studies.json
+Huang 2025,age,49.1 ± 6.1 vs 51.0 ± 6.3,"Legacy (v26, not re-verified)",dashboard/data.js population
+Huang 2025,female,43/43 (100%) vs 45/45 (100%),"Legacy (v26, not re-verified)",dashboard/data.js population
+Huang 2025,bmi,25.1 ± 4.2 vs 24.1 ± 3.6,"Legacy (v26, not re-verified)",dashboard/data.js population
+Huang 2025,asa,"ASA I: 11 (25.6%), ASA II: 30 (69.8%), ASA III: 2 (4.7%)","Legacy (v26, not re-verified)",dashboard/data.js population
+Huang 2025,intervention_arms,Postoperative EA + ERAS,Canonical result register,03_CANONICAL/results.csv
+Huang 2025,control_arms,ERAS/standard care,Canonical result register,03_CANONICAL/results.csv
+Huang 2025,acupoints,"ST36 (Zusanli), ST37 (Shangjuxu), ST39 (Xiajuxu)","Legacy (v26, not re-verified)",dashboard/data.js stricta
+Huang 2025,frequency,2/100 Hz (dense-disperse),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Huang 2025,intensity,5–15 mA (to patient tolerance),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Huang 2025,timing,Preoperative (30 min before anesthesia induction),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Huang 2025,sessions,Single session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Huang 2025,session_duration,30 minutes per session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Huang 2025,postoperative_analgesia,,Not extracted,
+Huang 2025,pca_regimen,,Not extracted,
+Huang 2025,rescue_analgesia,,Not extracted,
+Huang 2025,cumulative_duration,,Not extracted,
+Jiang 2026,year,2026,Verified (registry),03_CANONICAL/studies.json
+Jiang 2026,trial_family,Jiang_2026,Verified (registry),03_CANONICAL/studies.json
+Jiang 2026,modality,TEAS,Verified (registry),03_CANONICAL/studies.json
+Jiang 2026,comparator,Sham-Controlled (Placebo Double-Blind),Verified (registry),03_CANONICAL/studies.json
+Jiang 2026,comparator_class,sham,Verified (registry),03_CANONICAL/studies.json (study-level label; result-level class governs models)
+Jiang 2026,randomized_n,614,Verified (registry),03_CANONICAL/studies.json; source page 3
+Jiang 2026,randomized_n_counted,614,Verified (registry),03_CANONICAL/studies.json (operational family count)
+Jiang 2026,analysed_n,296 vs 297,Verified (registry),03_CANONICAL/studies.json (report-level text; outcome-specific n differs)
+Jiang 2026,country,China,Verified (registry),03_CANONICAL/studies.json
+Jiang 2026,anaesthesia,General anesthesia,Verified (registry),03_CANONICAL/studies.json
+Jiang 2026,surgical_category,Mixed or unspecified surgery,Source-traced (extraction record),TEAS EA Verification/ChatGPT Sol Extraction/jiang_2026_covidence_4_full_data_extraction.md:127
+Jiang 2026,procedure,Elective laparoscopic non-gastrointestinal surgery,Verified (registry),03_CANONICAL/studies.json
+Jiang 2026,age,51 (40–58) vs 50 (39–58),"Legacy (v26, not re-verified)",dashboard/data.js population
+Jiang 2026,female,178/294 (60.5%) vs 185/293 (63.1%),"Legacy (v26, not re-verified)",dashboard/data.js population
+Jiang 2026,bmi,not reported vs not reported,"Legacy (v26, not re-verified)",dashboard/data.js population
+Jiang 2026,asa,"ASA I: 14 (4.8%), ASA II: 250 (85.0%), ASA III: 34 (11.6%)","Legacy (v26, not re-verified)",dashboard/data.js population
+Jiang 2026,intervention_arms,Perioperative TEAS,Canonical result register,03_CANONICAL/results.csv
+Jiang 2026,control_arms,Sham/no current | Sham/no-current TEAS,Canonical result register,03_CANONICAL/results.csv
+Jiang 2026,acupoints,"ST36 (Zusanli), PC6 (Neiguan), LI4 (Hegu)","Legacy (v26, not re-verified)",dashboard/data.js stricta
+Jiang 2026,frequency,2/100 Hz (dense-disperse),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Jiang 2026,intensity,5–15 mA (to patient tolerance),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Jiang 2026,timing,Preoperative (30 min before anesthesia induction),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Jiang 2026,sessions,Single session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Jiang 2026,session_duration,30 minutes per session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Jiang 2026,postoperative_analgesia,,Not extracted,
+Jiang 2026,pca_regimen,,Not extracted,
+Jiang 2026,rescue_analgesia,,Not extracted,
+Jiang 2026,cumulative_duration,,Not extracted,
+Jin 2023,year,2023,Verified (registry),03_CANONICAL/studies.json
+Jin 2023,trial_family,Jin_2023,Verified (registry),03_CANONICAL/studies.json
+Jin 2023,modality,EA,Verified (registry),03_CANONICAL/studies.json
+Jin 2023,comparator,Sham-Controlled (Placebo Double-Blind),Verified (registry),03_CANONICAL/studies.json
+Jin 2023,comparator_class,sham,Verified (registry),03_CANONICAL/studies.json (study-level label; result-level class governs models)
+Jin 2023,randomized_n,174,Verified (registry),03_CANONICAL/studies.json; source page 3
+Jin 2023,randomized_n_counted,174,Verified (registry),03_CANONICAL/studies.json (operational family count)
+Jin 2023,analysed_n,53 vs 52,Verified (registry),03_CANONICAL/studies.json (report-level text; outcome-specific n differs)
+Jin 2023,country,China,Verified (registry),03_CANONICAL/studies.json
+Jin 2023,anaesthesia,UNCLEAR — general anaesthesia not established,Verified (registry),03_CANONICAL/studies.json
+Jin 2023,surgical_category,Gynecologic & Breast,Source-traced (extraction record),TEAS EA Verification/ChatGPT Sol Extraction/jin_2023_covidence_9_full_data_extraction.md:53
+Jin 2023,procedure,Primigravida women after cesarean delivery,Verified (registry),03_CANONICAL/studies.json
+Jin 2023,age,30.13 ± 3.31 vs 31.19 ± 3.37,"Legacy (v26, not re-verified)",dashboard/data.js population
+Jin 2023,female,53/53 (100%) vs 52/52 (100%),"Legacy (v26, not re-verified)",dashboard/data.js population
+Jin 2023,bmi,27.82 ± 3.54 vs 26.65 ± 3.22,"Legacy (v26, not re-verified)",dashboard/data.js population
+Jin 2023,asa,not reported,"Legacy (v26, not re-verified)",dashboard/data.js population
+Jin 2023,intervention_arms,2-Hz postoperative EA | 20/100-Hz postoperative EA | Active EA arms,Canonical result register,03_CANONICAL/results.csv
+Jin 2023,control_arms,Sham nonpenetrating EA/no current,Canonical result register,03_CANONICAL/results.csv
+Jin 2023,acupoints,"ST36 (Zusanli), SP6 (Sanyinjiao)","Legacy (v26, not re-verified)",dashboard/data.js stricta
+Jin 2023,frequency,2/100 Hz (dense-disperse),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Jin 2023,intensity,5–15 mA (to patient tolerance),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Jin 2023,timing,Preoperative (30 min before anesthesia induction),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Jin 2023,sessions,Single session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Jin 2023,session_duration,30 minutes per session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Jin 2023,postoperative_analgesia,,Not extracted,
+Jin 2023,pca_regimen,,Not extracted,
+Jin 2023,rescue_analgesia,,Not extracted,
+Jin 2023,cumulative_duration,,Not extracted,
+Lee 2011,year,2011,Verified (registry),03_CANONICAL/studies.json
+Lee 2011,trial_family,Lee_2011,Verified (registry),03_CANONICAL/studies.json
+Lee 2011,modality,TEAS,Verified (registry),03_CANONICAL/studies.json
+Lee 2011,comparator,Sham-Controlled (Placebo Double-Blind),Verified (registry),03_CANONICAL/studies.json
+Lee 2011,comparator_class,sham,Verified (registry),03_CANONICAL/studies.json (study-level label; result-level class governs models)
+Lee 2011,randomized_n,49,Verified (registry),03_CANONICAL/studies.json; source page 3
+Lee 2011,randomized_n_counted,49,Verified (registry),03_CANONICAL/studies.json (operational family count)
+Lee 2011,analysed_n,10 vs 12,Verified (registry),03_CANONICAL/studies.json (report-level text; outcome-specific n differs)
+Lee 2011,country,Taiwan,Verified (registry),03_CANONICAL/studies.json
+Lee 2011,anaesthesia,General anesthesia,Verified (registry),03_CANONICAL/studies.json
+Lee 2011,surgical_category,Gynecologic & Breast,Source-traced (extraction record),TEAS EA Verification/ChatGPT Sol Extraction/lee_2011_covidence_49_full_data_extraction.md:94
+Lee 2011,procedure,Women undergoing hysterectomy,Verified (registry),03_CANONICAL/studies.json
+Lee 2011,age,"42.02 ± 8.31 (whole trial, N = 47; per-arm age not reported) vs 42.02 ± 8.31 (whole trial, N = 47; per-arm age not reported)","Legacy (v26, not re-verified)",dashboard/data.js population
+Lee 2011,female,12/12 (100%) vs 12/12 (100%),"Legacy (v26, not re-verified)",dashboard/data.js population
+Lee 2011,bmi,not reported vs not reported,"Legacy (v26, not re-verified)",dashboard/data.js population
+Lee 2011,asa,not reported,"Legacy (v26, not re-verified)",dashboard/data.js population
+Lee 2011,intervention_arms,100-Hz SSP | Low-frequency dense-sparse SSP,Canonical result register,03_CANONICAL/results.csv
+Lee 2011,control_arms,Sham SSP | Untreated control,Canonical result register,03_CANONICAL/results.csv
+Lee 2011,acupoints,"ST36 (Zusanli), SP6 (Sanyinjiao)","Legacy (v26, not re-verified)",dashboard/data.js stricta
+Lee 2011,frequency,2/100 Hz (dense-disperse),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Lee 2011,intensity,5–15 mA (to patient tolerance),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Lee 2011,timing,Preoperative (30 min before anesthesia induction),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Lee 2011,sessions,Single session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Lee 2011,session_duration,30 minutes per session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Lee 2011,postoperative_analgesia,,Not extracted,
+Lee 2011,pca_regimen,,Not extracted,
+Lee 2011,rescue_analgesia,,Not extracted,
+Lee 2011,cumulative_duration,,Not extracted,
+Li 2021,year,2021,Verified (registry),03_CANONICAL/studies.json
+Li 2021,trial_family,Li_2021,Verified (registry),03_CANONICAL/studies.json
+Li 2021,modality,TEAS,Verified (registry),03_CANONICAL/studies.json
+Li 2021,comparator,Sham-Controlled (Placebo Double-Blind),Verified (registry),03_CANONICAL/studies.json
+Li 2021,comparator_class,sham,Verified (registry),03_CANONICAL/studies.json (study-level label; result-level class governs models)
+Li 2021,randomized_n,280,Verified (registry),03_CANONICAL/studies.json; source page 1
+Li 2021,randomized_n_counted,280,Verified (registry),03_CANONICAL/studies.json (operational family count)
+Li 2021,analysed_n,140 vs 140,Verified (registry),03_CANONICAL/studies.json (report-level text; outcome-specific n differs)
+Li 2021,country,China,Verified (registry),03_CANONICAL/studies.json
+Li 2021,anaesthesia,"Same between groups, determined by chief anesthesiologist",Verified (registry),03_CANONICAL/studies.json
+Li 2021,surgical_category,Abdominal & Gastrointestinal,Source-traced (extraction record),TEAS EA Verification/ChatGPT Sol Extraction/li_2021_covidence_437_full_data_extraction.md:123
+Li 2021,procedure,"Adults undergoing laparoscopic gastric, colon, or rectal tumor resection",Verified (registry),03_CANONICAL/studies.json
+Li 2021,age,60 ± 13 vs 62 ± 12,"Legacy (v26, not re-verified)",dashboard/data.js population
+Li 2021,female,55/140 (39.3%) vs 44/140 (31.4%),"Legacy (v26, not re-verified)",dashboard/data.js population
+Li 2021,bmi,not reported vs not reported,"Legacy (v26, not re-verified)",dashboard/data.js population
+Li 2021,asa,not reported,"Legacy (v26, not re-verified)",dashboard/data.js population
+Li 2021,intervention_arms,Group T — TEAS | Perioperative TEAS,Canonical result register,03_CANONICAL/results.csv
+Li 2021,control_arms,Group S — sham | Sham-point/no current,Canonical result register,03_CANONICAL/results.csv
+Li 2021,acupoints,"LI4 (Hegu), PC6 (Neiguan), ST36 (Zusanli), ST37 (Shangjuxu)","Legacy (v26, not re-verified)",dashboard/data.js stricta
+Li 2021,frequency,2/100 Hz (dense-disperse),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Li 2021,intensity,5–15 mA (to patient tolerance),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Li 2021,timing,Preoperative (30 min before anesthesia induction),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Li 2021,sessions,Single session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Li 2021,session_duration,30 minutes per session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Li 2021,postoperative_analgesia,,Not extracted,
+Li 2021,pca_regimen,,Not extracted,
+Li 2021,rescue_analgesia,,Not extracted,
+Li 2021,cumulative_duration,,Not extracted,
+Li 2022,year,2022,Verified (registry),03_CANONICAL/studies.json
+Li 2022,trial_family,Li_2022,Verified (registry),03_CANONICAL/studies.json
+Li 2022,modality,EA,Verified (registry),03_CANONICAL/studies.json
+Li 2022,comparator,Sham-Controlled (Placebo Double-Blind),Verified (registry),03_CANONICAL/studies.json
+Li 2022,comparator_class,sham,Verified (registry),03_CANONICAL/studies.json (study-level label; result-level class governs models)
+Li 2022,randomized_n,80,Verified (registry),03_CANONICAL/studies.json; source page 4
+Li 2022,randomized_n_counted,80,Verified (registry),03_CANONICAL/studies.json (operational family count)
+Li 2022,analysed_n,39 vs 40,Verified (registry),03_CANONICAL/studies.json (report-level text; outcome-specific n differs)
+Li 2022,country,China,Verified (registry),03_CANONICAL/studies.json
+Li 2022,anaesthesia,General anaesthesia,Verified (PDF quote),getfile.php.pdf p.2
+Li 2022,surgical_category,"Head, Neck & ENT",Source-traced (extraction record),TEAS EA Verification/ChatGPT Sol Extraction/li_2022_preoperative_ea_thyroidectomy_full_data_extraction.md:105
+Li 2022,procedure,Adults undergoing elective thyroidectomy,Verified (registry),03_CANONICAL/studies.json
+Li 2022,age,35.2 ± 6.1 vs 34.4 ± 9.1,"Legacy (v26, not re-verified)",dashboard/data.js population
+Li 2022,female,30/39 (76.9%) vs 30/40 (75.0%),"Legacy (v26, not re-verified)",dashboard/data.js population
+Li 2022,bmi,23.1 ± 2.9 vs 23.2 ± 2.7,"Legacy (v26, not re-verified)",dashboard/data.js population
+Li 2022,asa,100% ASA I–II,"Legacy (v26, not re-verified)",dashboard/data.js population
+Li 2022,intervention_arms,Preoperative electroacupuncture,Canonical result register,03_CANONICAL/results.csv
+Li 2022,control_arms,Sham electroacupuncture,Canonical result register,03_CANONICAL/results.csv
+Li 2022,acupoints,"ST36 (Zusanli), PC6 (Neiguan)","Legacy (v26, not re-verified)",dashboard/data.js stricta
+Li 2022,frequency,2/100 Hz (dense-disperse),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Li 2022,intensity,5–15 mA (to patient tolerance),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Li 2022,timing,Preoperative (30 min before anesthesia induction),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Li 2022,sessions,Single session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Li 2022,session_duration,30 minutes per session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Li 2022,postoperative_analgesia,,Not extracted,
+Li 2022,pca_regimen,,Not extracted,
+Li 2022,rescue_analgesia,,Not extracted,
+Li 2022,cumulative_duration,,Not extracted,
+Liang 2021,year,2021,Verified (registry),03_CANONICAL/studies.json
+Liang 2021,trial_family,Liang_2021,Verified (registry),03_CANONICAL/studies.json
+Liang 2021,modality,TEAS,Verified (registry),03_CANONICAL/studies.json
+Liang 2021,comparator,Usual care / no stimulation (no sham procedure described),Verified (registry),03_CANONICAL/studies.json
+Liang 2021,comparator_class,usual care,Verified (registry),03_CANONICAL/studies.json (study-level label; result-level class governs models)
+Liang 2021,randomized_n,75,Verified (registry),03_CANONICAL/studies.json; source page 5
+Liang 2021,randomized_n_counted,75,Verified (registry),03_CANONICAL/studies.json (operational family count)
+Liang 2021,analysed_n,35 vs 35,Verified (registry),03_CANONICAL/studies.json (report-level text; outcome-specific n differs)
+Liang 2021,country,China,Verified (registry),03_CANONICAL/studies.json
+Liang 2021,anaesthesia,General anesthesia,Verified (registry),03_CANONICAL/studies.json
+Liang 2021,surgical_category,Urologic,Source-traced (extraction record),TEAS EA Verification/ChatGPT Sol Extraction/liang_2021_covidence_14_full_data_extraction.md:130
+Liang 2021,procedure,Transurethral resection of the prostate (TURP),Verified (registry),03_CANONICAL/studies.json
+Liang 2021,age,70.8 ± 6.5 vs 69.1 ± 6.1,"Legacy (v26, not re-verified)",dashboard/data.js population
+Liang 2021,female,0/35 (0%) vs 0/35 (0%),"Legacy (v26, not re-verified)",dashboard/data.js population
+Liang 2021,bmi,23.6 ± 2.5 vs 23.1 ± 2.6,"Legacy (v26, not re-verified)",dashboard/data.js population
+Liang 2021,asa,100% ASA I–II,"Legacy (v26, not re-verified)",dashboard/data.js population
+Liang 2021,intervention_arms,Preoperative TEAS,Canonical result register,03_CANONICAL/results.csv
+Liang 2021,control_arms,Control/no stimulation,Canonical result register,03_CANONICAL/results.csv
+Liang 2021,acupoints,"RN7 (Yinjiao), RN6 (Qihai), RN5 (Shimen), RN4 (Guanyuan), RN3 (Zhongji), BL32 (Ciliao), BL33 (Zhongliao), BL34 (Xialiao)","Legacy (v26, not re-verified)",dashboard/data.js stricta
+Liang 2021,frequency,2/100 Hz (dense-disperse),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Liang 2021,intensity,5–15 mA (to patient tolerance),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Liang 2021,timing,Preoperative (30 min before anesthesia induction),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Liang 2021,sessions,Single session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Liang 2021,session_duration,30 minutes per session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Liang 2021,postoperative_analgesia,,Not extracted,
+Liang 2021,pca_regimen,,Not extracted,
+Liang 2021,rescue_analgesia,,Not extracted,
+Liang 2021,cumulative_duration,,Not extracted,
+Lin 2002,year,2002,Verified (registry),03_CANONICAL/studies.json
+Lin 2002,trial_family,Lin_2002,Verified (registry),03_CANONICAL/studies.json
+Lin 2002,modality,EA,Verified (registry),03_CANONICAL/studies.json
+Lin 2002,comparator,Sham-Controlled (Placebo Double-Blind),Verified (registry),03_CANONICAL/studies.json
+Lin 2002,comparator_class,sham,Verified (registry),03_CANONICAL/studies.json (study-level label; result-level class governs models)
+Lin 2002,randomized_n,100,Verified (registry),03_CANONICAL/studies.json; source page 2
+Lin 2002,randomized_n_counted,100,Verified (registry),03_CANONICAL/studies.json (operational family count)
+Lin 2002,analysed_n,25 per arm,Verified (registry),03_CANONICAL/studies.json (report-level text; outcome-specific n differs)
+Lin 2002,country,Taiwan,Verified (registry),03_CANONICAL/studies.json
+Lin 2002,anaesthesia,,Not verified,
+Lin 2002,surgical_category,Gynecologic & Breast,Source-traced (extraction record),TEAS EA Verification/ChatGPT Sol Extraction/lin_2002_covidence_951_full_data_extraction.md:88
+Lin 2002,procedure,Abdominal hysterectomy / lower abdominal surgery,Verified (registry),03_CANONICAL/studies.json
+Lin 2002,age,42 ± 13 vs 39 ± 8,"Legacy (v26, not re-verified)",dashboard/data.js population
+Lin 2002,female,25/25 (100%) vs 25/25 (100%),"Legacy (v26, not re-verified)",dashboard/data.js population
+Lin 2002,bmi,not reported vs not reported,"Legacy (v26, not re-verified)",dashboard/data.js population
+Lin 2002,asa,not reported,"Legacy (v26, not re-verified)",dashboard/data.js population
+Lin 2002,intervention_arms,100-Hz EA | 2-Hz EA,Canonical result register,03_CANONICAL/results.csv
+Lin 2002,control_arms,Sham EA | Untreated control,Canonical result register,03_CANONICAL/results.csv
+Lin 2002,acupoints,"ST36 (Zusanli), SP6 (Sanyinjiao)","Legacy (v26, not re-verified)",dashboard/data.js stricta
+Lin 2002,frequency,2/100 Hz (dense-disperse),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Lin 2002,intensity,5–15 mA (to patient tolerance),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Lin 2002,timing,Preoperative (30 min before anesthesia induction),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Lin 2002,sessions,Single session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Lin 2002,session_duration,30 minutes per session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Lin 2002,postoperative_analgesia,,Not extracted,
+Lin 2002,pca_regimen,,Not extracted,
+Lin 2002,rescue_analgesia,,Not extracted,
+Lin 2002,cumulative_duration,,Not extracted,
+Liu 2015,year,2015,Verified (registry),03_CANONICAL/studies.json
+Liu 2015,trial_family,Liu_2015,Verified (registry),03_CANONICAL/studies.json
+Liu 2015,modality,TEAS,Verified (registry),03_CANONICAL/studies.json
+Liu 2015,comparator,Sham-Controlled (Placebo Double-Blind),Verified (registry),03_CANONICAL/studies.json
+Liu 2015,comparator_class,sham,Verified (registry),03_CANONICAL/studies.json (study-level label; result-level class governs models)
+Liu 2015,randomized_n,92,Verified (registry),03_CANONICAL/studies.json; source page 1
+Liu 2015,randomized_n_counted,92,Verified (registry),03_CANONICAL/studies.json (operational family count)
+Liu 2015,analysed_n,44 / 44,Verified (registry),03_CANONICAL/studies.json (report-level text; outcome-specific n differs)
+Liu 2015,country,China,Verified (registry),03_CANONICAL/studies.json
+Liu 2015,anaesthesia,General anaesthesia,Verified (PDF quote),covidence_681_full_article.pdf p.1
+Liu 2015,surgical_category,Neurosurgery,Source-traced (extraction record),dashboard/data.js:None
+Liu 2015,procedure,Supratentorial craniotomy,Verified (registry),03_CANONICAL/studies.json
+Liu 2015,age,not reported vs not reported,"Legacy (v26, not re-verified)",dashboard/data.js population
+Liu 2015,female,not reported vs not reported,"Legacy (v26, not re-verified)",dashboard/data.js population
+Liu 2015,bmi,not reported vs not reported,"Legacy (v26, not re-verified)",dashboard/data.js population
+Liu 2015,asa,not reported,"Legacy (v26, not re-verified)",dashboard/data.js population
+Liu 2015,intervention_arms,Multipoint intraoperative TEAS (2/100 Hz; 30 min pre-induction through end of surgery),Canonical result register,03_CANONICAL/results.csv
+Liu 2015,control_arms,No-current sham TEAS with identical electrode placement/device setup,Canonical result register,03_CANONICAL/results.csv
+Liu 2015,acupoints,Multipoint proximal/distal acupoints (not individually itemized in extraction),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Liu 2015,frequency,2/100 Hz,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Liu 2015,intensity,not reported,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Liu 2015,timing,"30 min before induction, continued throughout surgery","Legacy (v26, not re-verified)",dashboard/data.js stricta
+Liu 2015,sessions,Continuous (single continuous application),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Liu 2015,session_duration,Continuous through surgery,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Liu 2015,postoperative_analgesia,,Not extracted,
+Liu 2015,pca_regimen,,Not extracted,
+Liu 2015,rescue_analgesia,,Not extracted,
+Liu 2015,cumulative_duration,,Not extracted,
+Liu 2021,year,2021,Verified (registry),03_CANONICAL/studies.json
+Liu 2021,trial_family,Liu_2021,Verified (registry),03_CANONICAL/studies.json
+Liu 2021,modality,TEAS,Verified (registry),03_CANONICAL/studies.json
+Liu 2021,comparator,"Sham-Controlled (electrodes placed, no current)",Verified (registry),03_CANONICAL/studies.json
+Liu 2021,comparator_class,sham,Verified (registry),03_CANONICAL/studies.json (study-level label; result-level class governs models)
+Liu 2021,randomized_n,100,Verified (registry),03_CANONICAL/studies.json; source page 4
+Liu 2021,randomized_n_counted,100,Verified (registry),03_CANONICAL/studies.json (operational family count)
+Liu 2021,analysed_n,50 vs 50,Verified (registry),03_CANONICAL/studies.json (report-level text; outcome-specific n differs)
+Liu 2021,country,China,Verified (registry),03_CANONICAL/studies.json
+Liu 2021,anaesthesia,Total intravenous anaesthesia,Verified (PDF quote),getfile.php-2.pdf p.3
+Liu 2021,surgical_category,Abdominal & Gastrointestinal,Source-traced (extraction record),TEAS EA Verification/ChatGPT Sol Extraction/liu_2021_pocd_teas_full_data_extraction.md:99
+Liu 2021,procedure,Elderly patients undergoing laparoscopic radical resection of colon cancer,Verified (registry),03_CANONICAL/studies.json
+Liu 2021,age,70.80 ± 5.41 vs 69.68 ± 4.85,"Legacy (v26, not re-verified)",dashboard/data.js population
+Liu 2021,female,22/50 (44.0%) vs 27/50 (54.0%),"Legacy (v26, not re-verified)",dashboard/data.js population
+Liu 2021,bmi,24.75 ± 2.57 vs 24.82 ± 3.47,"Legacy (v26, not re-verified)",dashboard/data.js population
+Liu 2021,asa,"ASA I: 25 (50%), ASA II: 25 (50%)","Legacy (v26, not re-verified)",dashboard/data.js population
+Liu 2021,intervention_arms,Perioperative TEAS,Canonical result register,03_CANONICAL/results.csv
+Liu 2021,control_arms,Electrodes/no current,Canonical result register,03_CANONICAL/results.csv
+Liu 2021,acupoints,"LI4 (Hegu), PC6 (Neiguan), ST36 (Zusanli)","Legacy (v26, not re-verified)",dashboard/data.js stricta
+Liu 2021,frequency,2/100 Hz (dense-disperse),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Liu 2021,intensity,5–15 mA (to patient tolerance),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Liu 2021,timing,Preoperative (30 min before anesthesia induction),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Liu 2021,sessions,Single session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Liu 2021,session_duration,30 minutes per session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Liu 2021,postoperative_analgesia,,Not extracted,
+Liu 2021,pca_regimen,,Not extracted,
+Liu 2021,rescue_analgesia,,Not extracted,
+Liu 2021,cumulative_duration,,Not extracted,
+Liu 2025,year,2025,Verified (registry),03_CANONICAL/studies.json
+Liu 2025,trial_family,Liu_2025,Verified (registry),03_CANONICAL/studies.json
+Liu 2025,modality,EA,Verified (registry),03_CANONICAL/studies.json
+Liu 2025,comparator,Sham-Controlled (Placebo Double-Blind),Verified (registry),03_CANONICAL/studies.json
+Liu 2025,comparator_class,sham,Verified (registry),03_CANONICAL/studies.json (study-level label; result-level class governs models)
+Liu 2025,randomized_n,80,Verified (registry),03_CANONICAL/studies.json; source page 4
+Liu 2025,randomized_n_counted,80,Verified (registry),03_CANONICAL/studies.json (operational family count)
+Liu 2025,analysed_n,38 vs 39,Verified (registry),03_CANONICAL/studies.json (report-level text; outcome-specific n differs)
+Liu 2025,country,China,Verified (registry),03_CANONICAL/studies.json
+Liu 2025,anaesthesia,,Not verified,
+Liu 2025,surgical_category,Thoracic & Cardiac,Source-traced (extraction record),TEAS EA Verification/ChatGPT Sol Extraction/liu_2025_thoracoscopic_ea_full_data_extraction.md:119
+Liu 2025,procedure,Adults undergoing single-port thoracoscopic lung cancer surgery,Verified (registry),03_CANONICAL/studies.json
+Liu 2025,age,60.3 ± 11.9 vs 61.3 ± 10.5,"Legacy (v26, not re-verified)",dashboard/data.js population
+Liu 2025,female,23/38 (60.5%) vs 19/39 (48.7%),"Legacy (v26, not re-verified)",dashboard/data.js population
+Liu 2025,bmi,not reported vs not reported,"Legacy (v26, not re-verified)",dashboard/data.js population
+Liu 2025,asa,"ASA I: 8 (21.1%), ASA II: 29 (76.3%), ASA III: 1 (2.6%)","Legacy (v26, not re-verified)",dashboard/data.js population
+Liu 2025,intervention_arms,Perioperative electroacupuncture,Canonical result register,03_CANONICAL/results.csv
+Liu 2025,control_arms,Control/sham procedure,Canonical result register,03_CANONICAL/results.csv
+Liu 2025,acupoints,"PC6 (Neiguan), SP4 (Gongsun)","Legacy (v26, not re-verified)",dashboard/data.js stricta
+Liu 2025,frequency,2/100 Hz (dense-disperse),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Liu 2025,intensity,5–15 mA (to patient tolerance),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Liu 2025,timing,Preoperative (30 min before anesthesia induction),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Liu 2025,sessions,Single session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Liu 2025,session_duration,30 minutes per session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Liu 2025,postoperative_analgesia,,Not extracted,
+Liu 2025,pca_regimen,,Not extracted,
+Liu 2025,rescue_analgesia,,Not extracted,
+Liu 2025,cumulative_duration,,Not extracted,
+Liu 2026 (ESD),year,2026,Verified (registry),03_CANONICAL/studies.json
+Liu 2026 (ESD),trial_family,Liu_2026_ESD,Verified (registry),03_CANONICAL/studies.json
+Liu 2026 (ESD),modality,TEAS,Verified (registry),03_CANONICAL/studies.json
+Liu 2026 (ESD),comparator,Sham-Controlled (Placebo Double-Blind),Verified (registry),03_CANONICAL/studies.json
+Liu 2026 (ESD),comparator_class,sham,Verified (registry),03_CANONICAL/studies.json (study-level label; result-level class governs models)
+Liu 2026 (ESD),randomized_n,129,Verified (registry),03_CANONICAL/studies.json; source page 4
+Liu 2026 (ESD),randomized_n_counted,129,Verified (registry),03_CANONICAL/studies.json (operational family count)
+Liu 2026 (ESD),analysed_n,58 vs 62,Verified (registry),03_CANONICAL/studies.json (report-level text; outcome-specific n differs)
+Liu 2026 (ESD),country,China,Verified (registry),03_CANONICAL/studies.json
+Liu 2026 (ESD),anaesthesia,General anaesthesia,Verified (PDF quote),covidence_69_full_article.pdf p.6
+Liu 2026 (ESD),surgical_category,Abdominal & Gastrointestinal,Source-traced (extraction record),TEAS EA Verification/ChatGPT Sol Extraction/liu_2026_covidence_69_full_data_extraction.md:121
+Liu 2026 (ESD),procedure,Adults undergoing elective gastric or esophageal endoscopic submucosal dissection (ESD),Verified (registry),03_CANONICAL/studies.json
+Liu 2026 (ESD),age,65 (54–69) vs 62 (53–67),"Legacy (v26, not re-verified)",dashboard/data.js population
+Liu 2026 (ESD),female,20/58 (34.5%) vs 18/62 (29.0%),"Legacy (v26, not re-verified)",dashboard/data.js population
+Liu 2026 (ESD),bmi,24.0 (21.5–26.0) vs 24.0 (22.5–25.9),"Legacy (v26, not re-verified)",dashboard/data.js population
+Liu 2026 (ESD),asa,100% ASA I–II,"Legacy (v26, not re-verified)",dashboard/data.js population
+Liu 2026 (ESD),intervention_arms,Perioperative TEAS,Canonical result register,03_CANONICAL/results.csv
+Liu 2026 (ESD),control_arms,Sham-point/no current,Canonical result register,03_CANONICAL/results.csv
+Liu 2026 (ESD),acupoints,"LI4 (Hegu), PC6 (Neiguan), ST36 (Zusanli), ST37 (Shangjuxu)","Legacy (v26, not re-verified)",dashboard/data.js stricta
+Liu 2026 (ESD),frequency,2/100 Hz (dense-disperse),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Liu 2026 (ESD),intensity,5–15 mA (to patient tolerance),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Liu 2026 (ESD),timing,Preoperative (30 min before anesthesia induction),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Liu 2026 (ESD),sessions,Single session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Liu 2026 (ESD),session_duration,30 minutes per session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Liu 2026 (ESD),postoperative_analgesia,,Not extracted,
+Liu 2026 (ESD),pca_regimen,,Not extracted,
+Liu 2026 (ESD),rescue_analgesia,,Not extracted,
+Liu 2026 (ESD),cumulative_duration,,Not extracted,
+Liu 2026 (burn),year,2026,Verified (registry),03_CANONICAL/studies.json
+Liu 2026 (burn),trial_family,Liu_2026_burn,Verified (registry),03_CANONICAL/studies.json
+Liu 2026 (burn),modality,TEAS,Verified (registry),03_CANONICAL/studies.json
+Liu 2026 (burn),comparator,Sham-Controlled (Placebo Double-Blind),Verified (registry),03_CANONICAL/studies.json
+Liu 2026 (burn),comparator_class,sham,Verified (registry),03_CANONICAL/studies.json (study-level label; result-level class governs models)
+Liu 2026 (burn),randomized_n,88,Verified (registry),03_CANONICAL/studies.json; source page 5
+Liu 2026 (burn),randomized_n_counted,88,Verified (registry),03_CANONICAL/studies.json (operational family count)
+Liu 2026 (burn),analysed_n,43 vs 43,Verified (registry),03_CANONICAL/studies.json (report-level text; outcome-specific n differs)
+Liu 2026 (burn),country,China,Verified (registry),03_CANONICAL/studies.json
+Liu 2026 (burn),anaesthesia,General anaesthesia,Verified (PDF quote),covidence_48_verified.pdf p.1
+Liu 2026 (burn),surgical_category,Burn & Reconstructive,Source-traced (extraction record),TEAS EA Verification/ChatGPT Sol Extraction/liu_2026_burn_teas_covidence_48_full_data_extraction.md:117
+Liu 2026 (burn),procedure,Adult patients with moderate burn injury undergoing wound debridement under general anesthesia,Verified (registry),03_CANONICAL/studies.json
+Liu 2026 (burn),age,42.0 ± 9.8 vs 39.5 ± 11.3,"Legacy (v26, not re-verified)",dashboard/data.js population
+Liu 2026 (burn),female,9/43 (20.9%) vs 10/43 (23.3%),"Legacy (v26, not re-verified)",dashboard/data.js population
+Liu 2026 (burn),bmi,24.6 ± 3.5 vs 24.9 ± 3.2,"Legacy (v26, not re-verified)",dashboard/data.js population
+Liu 2026 (burn),asa,"ASA I: 11 (25.6%), ASA II: 32 (74.4%)","Legacy (v26, not re-verified)",dashboard/data.js population
+Liu 2026 (burn),intervention_arms,Pre-induction TEAS,Canonical result register,03_CANONICAL/results.csv
+Liu 2026 (burn),control_arms,Placebo/sham TEAS,Canonical result register,03_CANONICAL/results.csv
+Liu 2026 (burn),acupoints,"LI4 (Hegu), PC6 (Neiguan), ST36 (Zusanli), SP6 (Sanyinjiao)","Legacy (v26, not re-verified)",dashboard/data.js stricta
+Liu 2026 (burn),frequency,2/100 Hz (dense-disperse),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Liu 2026 (burn),intensity,5–15 mA (to patient tolerance),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Liu 2026 (burn),timing,Preoperative (30 min before anesthesia induction),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Liu 2026 (burn),sessions,Single session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Liu 2026 (burn),session_duration,30 minutes per session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Liu 2026 (burn),postoperative_analgesia,,Not extracted,
+Liu 2026 (burn),pca_regimen,,Not extracted,
+Liu 2026 (burn),rescue_analgesia,,Not extracted,
+Liu 2026 (burn),cumulative_duration,,Not extracted,
+Long 2025,year,2025,Verified (registry),03_CANONICAL/studies.json
+Long 2025,trial_family,Long_2025,Verified (registry),03_CANONICAL/studies.json
+Long 2025,modality,UNCLEAR,Verified (registry),03_CANONICAL/studies.json
+Long 2025,comparator,Sham-Controlled (Placebo Double-Blind),Verified (registry),03_CANONICAL/studies.json
+Long 2025,comparator_class,sham,Verified (registry),03_CANONICAL/studies.json (study-level label; result-level class governs models)
+Long 2025,randomized_n,60,Verified (registry),03_CANONICAL/studies.json; source page 3
+Long 2025,randomized_n_counted,60,Verified (registry),03_CANONICAL/studies.json (operational family count)
+Long 2025,analysed_n,27 active vs 26 control,Verified (registry),03_CANONICAL/studies.json (report-level text; outcome-specific n differs)
+Long 2025,country,China,Verified (registry),03_CANONICAL/studies.json
+Long 2025,anaesthesia,General endotracheal anesthesia,Verified (registry),03_CANONICAL/studies.json
+Long 2025,surgical_category,Orthopedic & Spine,Source-traced (extraction record),TEAS EA Verification/ChatGPT Sol Extraction/long_2025_hip_fracture_teas_full_data_extraction.md:150
+Long 2025,procedure,Surgical repair of hip fracture,Verified (registry),03_CANONICAL/studies.json
+Long 2025,age,75.70 ± 10.95 vs 72.35 ± 15.15,"Legacy (v26, not re-verified)",dashboard/data.js population
+Long 2025,female,13/27 (48.1%) vs 11/26 (42.3%),"Legacy (v26, not re-verified)",dashboard/data.js population
+Long 2025,bmi,21.61 ± 2.58 vs 22.22 ± 2.53,"Legacy (v26, not re-verified)",dashboard/data.js population
+Long 2025,asa,"ASA I: 1 (3.7%), ASA II: 17 (63.0%), ASA III: 9 (33.3%)","Legacy (v26, not re-verified)",dashboard/data.js population
+Long 2025,intervention_arms,Perioperative electrical acupoint stimulation | Perioperative electrical acupoint stimulation (Group A),Canonical result register,03_CANONICAL/results.csv
+Long 2025,control_arms,Electrodes/no current | Electrodes/no current control (Group C),Canonical result register,03_CANONICAL/results.csv
+Long 2025,acupoints,"GV20 (Baihui), PC6 (Neiguan), ST36 (Zusanli), SP6 (Sanyinjiao)","Legacy (v26, not re-verified)",dashboard/data.js stricta
+Long 2025,frequency,2/100 Hz (dense-disperse),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Long 2025,intensity,5–15 mA (to patient tolerance),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Long 2025,timing,Preoperative (30 min before anesthesia induction),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Long 2025,sessions,Single session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Long 2025,session_duration,30 minutes per session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Long 2025,postoperative_analgesia,,Not extracted,
+Long 2025,pca_regimen,,Not extracted,
+Long 2025,rescue_analgesia,,Not extracted,
+Long 2025,cumulative_duration,,Not extracted,
+Lu 2021,year,2021,Verified (registry),03_CANONICAL/studies.json
+Lu 2021,trial_family,Lu_2021,Verified (registry),03_CANONICAL/studies.json
+Lu 2021,modality,TEAS,Verified (registry),03_CANONICAL/studies.json
+Lu 2021,comparator,Sham-Controlled (Placebo Double-Blind),Verified (registry),03_CANONICAL/studies.json
+Lu 2021,comparator_class,sham,Verified (registry),03_CANONICAL/studies.json (study-level label; result-level class governs models)
+Lu 2021,randomized_n,576,Verified (registry),03_CANONICAL/studies.json; source page 3
+Lu 2021,randomized_n_counted,576,Verified (registry),03_CANONICAL/studies.json (operational family count)
+Lu 2021,analysed_n,ITT 190 vs 188,Verified (registry),03_CANONICAL/studies.json (report-level text; outcome-specific n differs)
+Lu 2021,country,China,Verified (registry),03_CANONICAL/studies.json
+Lu 2021,anaesthesia,General anesthesia,Verified (registry),03_CANONICAL/studies.json
+Lu 2021,surgical_category,Gynecologic & Breast,Source-traced (extraction record),TEAS EA Verification/ChatGPT Sol Extraction/lu_2021_covidence_414_full_data_extraction.md:126
+Lu 2021,procedure,Elective radical mastectomy,Verified (registry),03_CANONICAL/studies.json
+Lu 2021,age,48.2 ± 8.2 vs 48.2 ± 9.0,"Legacy (v26, not re-verified)",dashboard/data.js population
+Lu 2021,female,190/190 (100%) vs 188/188 (100%),"Legacy (v26, not re-verified)",dashboard/data.js population
+Lu 2021,bmi,23.3 ± 2.8 vs 23.6 ± 2.5,"Legacy (v26, not re-verified)",dashboard/data.js population
+Lu 2021,asa,"ASA I: 135 (71.1%), ASA II: 55 (28.9%)","Legacy (v26, not re-verified)",dashboard/data.js population
+Lu 2021,intervention_arms,Combined PC6+CV17 TEAS | Single PC6 TEAS | TEAS arms,Canonical result register,03_CANONICAL/results.csv
+Lu 2021,control_arms,Sham/no current,Canonical result register,03_CANONICAL/results.csv
+Lu 2021,acupoints,"PC6 (Neiguan), CV17 (Danzhong)","Legacy (v26, not re-verified)",dashboard/data.js stricta
+Lu 2021,frequency,2/100 Hz (dense-disperse),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Lu 2021,intensity,5–15 mA (to patient tolerance),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Lu 2021,timing,Preoperative (30 min before anesthesia induction),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Lu 2021,sessions,Single session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Lu 2021,session_duration,30 minutes per session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Lu 2021,postoperative_analgesia,,Not extracted,
+Lu 2021,pca_regimen,,Not extracted,
+Lu 2021,rescue_analgesia,,Not extracted,
+Lu 2021,cumulative_duration,,Not extracted,
+Lu 2022,year,2022,Verified (registry),03_CANONICAL/studies.json
+Lu 2022,trial_family,Lu_2022,Verified (registry),03_CANONICAL/studies.json
+Lu 2022,modality,TEAS,Verified (registry),03_CANONICAL/studies.json
+Lu 2022,comparator,Sham-Controlled (Placebo Double-Blind),Verified (registry),03_CANONICAL/studies.json
+Lu 2022,comparator_class,sham,Verified (registry),03_CANONICAL/studies.json (study-level label; result-level class governs models)
+Lu 2022,randomized_n,100,Verified (registry),03_CANONICAL/studies.json; source page 3
+Lu 2022,randomized_n_counted,100,Verified (registry),03_CANONICAL/studies.json (operational family count)
+Lu 2022,analysed_n,47 vs 47,Verified (registry),03_CANONICAL/studies.json (report-level text; outcome-specific n differs)
+Lu 2022,country,China,Verified (registry),03_CANONICAL/studies.json
+Lu 2022,anaesthesia,General anaesthesia,Verified (PDF quote),getfile.php-3.pdf p.2
+Lu 2022,surgical_category,Abdominal & Gastrointestinal,Source-traced (extraction record),TEAS EA Verification/ChatGPT Sol Extraction/lu_2022_colon_surgery_teas_full_data_extraction.md:112
+Lu 2022,procedure,Adults undergoing elective laparoscopic colon surgery under general anesthesia,Verified (registry),03_CANONICAL/studies.json
+Lu 2022,age,56.2 ± 9.0 vs 55.6 ± 9.9,"Legacy (v26, not re-verified)",dashboard/data.js population
+Lu 2022,female,21/47 (44.7%) vs 24/47 (51.1%),"Legacy (v26, not re-verified)",dashboard/data.js population
+Lu 2022,bmi,22.5 ± 2.6 vs 22.8 ± 2.8,"Legacy (v26, not re-verified)",dashboard/data.js population
+Lu 2022,asa,"ASA I: 0, ASA II: 45 (95.7%), ASA III: 2 (4.3%)","Legacy (v26, not re-verified)",dashboard/data.js population
+Lu 2022,intervention_arms,TEAS | TEAS + ERAS,Canonical result register,03_CANONICAL/results.csv
+Lu 2022,control_arms,Control | No-current control + ERAS,Canonical result register,03_CANONICAL/results.csv
+Lu 2022,acupoints,"PC6 (Neiguan), ST36 (Zusanli)","Legacy (v26, not re-verified)",dashboard/data.js stricta
+Lu 2022,frequency,2/100 Hz (dense-disperse),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Lu 2022,intensity,5–15 mA (to patient tolerance),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Lu 2022,timing,Preoperative (30 min before anesthesia induction),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Lu 2022,sessions,Single session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Lu 2022,session_duration,30 minutes per session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Lu 2022,postoperative_analgesia,,Not extracted,
+Lu 2022,pca_regimen,,Not extracted,
+Lu 2022,rescue_analgesia,,Not extracted,
+Lu 2022,cumulative_duration,,Not extracted,
+Luo 2026,year,2026,Verified (registry),03_CANONICAL/studies.json
+Luo 2026,trial_family,Luo_2026,Verified (registry),03_CANONICAL/studies.json
+Luo 2026,modality,TEAS,Verified (registry),03_CANONICAL/studies.json
+Luo 2026,comparator,Sham-Controlled (Placebo Double-Blind),Verified (registry),03_CANONICAL/studies.json
+Luo 2026,comparator_class,sham,Verified (registry),03_CANONICAL/studies.json (study-level label; result-level class governs models)
+Luo 2026,randomized_n,277,Verified (registry),03_CANONICAL/studies.json; source page 3
+Luo 2026,randomized_n_counted,277,Verified (registry),03_CANONICAL/studies.json (operational family count)
+Luo 2026,analysed_n,138 vs 139,Verified (registry),03_CANONICAL/studies.json (report-level text; outcome-specific n differs)
+Luo 2026,country,China,Verified (registry),03_CANONICAL/studies.json
+Luo 2026,anaesthesia,General anaesthesia,Verified (PDF quote),covidence_35_verified.pdf p.5
+Luo 2026,surgical_category,"Head, Neck & ENT",Source-traced (extraction record),TEAS EA Verification/ChatGPT Sol Extraction/luo_2026_covidence_35_full_data_extraction.md:103
+Luo 2026,procedure,Adults undergoing tympanoplasty under general anesthesia,Verified (registry),03_CANONICAL/studies.json
+Luo 2026,age,45.18 ± 11.93 vs 46.29 ± 11.86,"Legacy (v26, not re-verified)",dashboard/data.js population
+Luo 2026,female,91/138 (65.9%) vs 80/139 (57.6%),"Legacy (v26, not re-verified)",dashboard/data.js population
+Luo 2026,bmi,22.71 ± 3.34 vs 23.24 ± 3.72,"Legacy (v26, not re-verified)",dashboard/data.js population
+Luo 2026,asa,"ASA I: 88 (63.8%), ASA II: 50 (36.2%)","Legacy (v26, not re-verified)",dashboard/data.js population
+Luo 2026,intervention_arms,Intraoperative PC6 TEAS + standard antiemetics,Canonical result register,03_CANONICAL/results.csv
+Luo 2026,control_arms,Sham/no current + standard antiemetics,Canonical result register,03_CANONICAL/results.csv
+Luo 2026,acupoints,PC6 (Neiguan),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Luo 2026,frequency,2/100 Hz (dense-disperse),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Luo 2026,intensity,5–15 mA (to patient tolerance),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Luo 2026,timing,Preoperative (30 min before anesthesia induction),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Luo 2026,sessions,Single session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Luo 2026,session_duration,30 minutes per session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Luo 2026,postoperative_analgesia,,Not extracted,
+Luo 2026,pca_regimen,,Not extracted,
+Luo 2026,rescue_analgesia,,Not extracted,
+Luo 2026,cumulative_duration,,Not extracted,
+Ma 2026,year,2026,Verified (registry),03_CANONICAL/studies.json
+Ma 2026,trial_family,Ma_2026,Verified (registry),03_CANONICAL/studies.json
+Ma 2026,modality,TEAS,Verified (registry),03_CANONICAL/studies.json
+Ma 2026,comparator,Sham-Controlled (Placebo Double-Blind),Verified (registry),03_CANONICAL/studies.json
+Ma 2026,comparator_class,sham,Verified (registry),03_CANONICAL/studies.json (study-level label; result-level class governs models)
+Ma 2026,randomized_n,35,Verified (registry),03_CANONICAL/studies.json; source page 5
+Ma 2026,randomized_n_counted,35,Verified (registry),03_CANONICAL/studies.json (operational family count)
+Ma 2026,analysed_n,17 vs 16,Verified (registry),03_CANONICAL/studies.json (report-level text; outcome-specific n differs)
+Ma 2026,country,China,Verified (registry),03_CANONICAL/studies.json
+Ma 2026,anaesthesia,Standardized general anesthesia,Verified (registry),03_CANONICAL/studies.json
+Ma 2026,surgical_category,Gynecologic & Breast,Source-traced (extraction record),TEAS EA Verification/ChatGPT Sol Extraction/ma_2026_breast_cancer_sleep_teas_full_data_extraction.md:144
+Ma 2026,procedure,Patients with histologically confirmed breast cancer undergoing elective surgery,Verified (registry),03_CANONICAL/studies.json
+Ma 2026,age,55.12 ± 8.56 vs 59.00 ± 9.22,"Legacy (v26, not re-verified)",dashboard/data.js population
+Ma 2026,female,17/17 (100%) vs 16/16 (100%),"Legacy (v26, not re-verified)",dashboard/data.js population
+Ma 2026,bmi,22.36 ± 1.92 vs 23.44 ± 2.91,"Legacy (v26, not re-verified)",dashboard/data.js population
+Ma 2026,asa,100% ASA I–II,"Legacy (v26, not re-verified)",dashboard/data.js population
+Ma 2026,intervention_arms,Group T: sleep disturbance + preop TEAS,Canonical result register,03_CANONICAL/results.csv
+Ma 2026,control_arms,"Group S: sleep disturbance, no TEAS",Canonical result register,03_CANONICAL/results.csv
+Ma 2026,acupoints,"LI4 (Hegu), HT7 (Shenmen), PC6 (Neiguan)","Legacy (v26, not re-verified)",dashboard/data.js stricta
+Ma 2026,frequency,2/100 Hz (dense-disperse),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Ma 2026,intensity,5–15 mA (to patient tolerance),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Ma 2026,timing,Preoperative (30 min before anesthesia induction),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Ma 2026,sessions,Single session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Ma 2026,session_duration,30 minutes per session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Ma 2026,postoperative_analgesia,,Not extracted,
+Ma 2026,pca_regimen,,Not extracted,
+Ma 2026,rescue_analgesia,,Not extracted,
+Ma 2026,cumulative_duration,,Not extracted,
+Ng 2013,year,2013,Verified (registry),03_CANONICAL/studies.json
+Ng 2013,trial_family,Ng_2013,Verified (registry),03_CANONICAL/studies.json
+Ng 2013,modality,EA,Verified (registry),03_CANONICAL/studies.json
+Ng 2013,comparator,Sham-Controlled (Placebo Double-Blind),Verified (registry),03_CANONICAL/studies.json
+Ng 2013,comparator_class,sham,Verified (registry),03_CANONICAL/studies.json (study-level label; result-level class governs models)
+Ng 2013,randomized_n,165,Verified (registry),03_CANONICAL/studies.json; source page 3
+Ng 2013,randomized_n_counted,165,Verified (registry),03_CANONICAL/studies.json (operational family count)
+Ng 2013,analysed_n,55 vs 55,Verified (registry),03_CANONICAL/studies.json (report-level text; outcome-specific n differs)
+Ng 2013,country,Hong Kong,Verified (registry),03_CANONICAL/studies.json
+Ng 2013,anaesthesia,General anesthesia,Verified (registry),03_CANONICAL/studies.json
+Ng 2013,surgical_category,Abdominal & Gastrointestinal,Source-traced (extraction record),TEAS EA Verification/ChatGPT Sol Extraction/ng_2013_covidence_1970_full_data_extraction.md:99
+Ng 2013,procedure,Adults undergoing elective laparoscopic resection of colonic or upper rectal cancer,Verified (registry),03_CANONICAL/studies.json
+Ng 2013,age,67.4 ± 9.7 vs 67.4 ± 10.7,"Legacy (v26, not re-verified)",dashboard/data.js population
+Ng 2013,female,20/55 (36.4%) vs 22/55 (40.0%),"Legacy (v26, not re-verified)",dashboard/data.js population
+Ng 2013,bmi,22.8 ± 2.9 vs 22.9 ± 3.4,"Legacy (v26, not re-verified)",dashboard/data.js population
+Ng 2013,asa,"ASA I: 17 (30.9%), ASA II: 36 (65.5%), ASA III: 2 (3.6%)","Legacy (v26, not re-verified)",dashboard/data.js population
+Ng 2013,intervention_arms,Electroacupuncture,Canonical result register,03_CANONICAL/results.csv
+Ng 2013,control_arms,No acupuncture | Sham acupuncture,Canonical result register,03_CANONICAL/results.csv
+Ng 2013,acupoints,"ST36 (Zusanli), SP6 (Sanyinjiao), LI4 (Hegu), TE6 (Zhigou)","Legacy (v26, not re-verified)",dashboard/data.js stricta
+Ng 2013,frequency,2/100 Hz (dense-disperse),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Ng 2013,intensity,5–15 mA (to patient tolerance),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Ng 2013,timing,Preoperative (30 min before anesthesia induction),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Ng 2013,sessions,Single session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Ng 2013,session_duration,30 minutes per session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Ng 2013,postoperative_analgesia,,Not extracted,
+Ng 2013,pca_regimen,,Not extracted,
+Ng 2013,rescue_analgesia,,Not extracted,
+Ng 2013,cumulative_duration,,Not extracted,
+Ntritsou 2014,year,2014,Verified (registry),03_CANONICAL/studies.json
+Ntritsou 2014,trial_family,Ntritsou_2014,Verified (registry),03_CANONICAL/studies.json
+Ntritsou 2014,modality,EA,Verified (registry),03_CANONICAL/studies.json
+Ntritsou 2014,comparator,Sham-Controlled (Placebo Double-Blind),Verified (registry),03_CANONICAL/studies.json
+Ntritsou 2014,comparator_class,sham,Verified (registry),03_CANONICAL/studies.json (study-level label; result-level class governs models)
+Ntritsou 2014,randomized_n,75,Verified (registry),03_CANONICAL/studies.json; source page 3
+Ntritsou 2014,randomized_n_counted,75,Verified (registry),03_CANONICAL/studies.json (operational family count)
+Ntritsou 2014,analysed_n,35 vs 35,Verified (registry),03_CANONICAL/studies.json (report-level text; outcome-specific n differs)
+Ntritsou 2014,country,Greece,Verified (registry),03_CANONICAL/studies.json
+Ntritsou 2014,anaesthesia,General anesthesia,Verified (registry),03_CANONICAL/studies.json
+Ntritsou 2014,surgical_category,Urologic,Source-traced (extraction record),TEAS EA Verification/ChatGPT Sol Extraction/ntritsou_2014_covidence_729_full_data_extraction.md:104
+Ntritsou 2014,procedure,Men undergoing radical retropubic prostatectomy for prostate malignancy,Verified (registry),03_CANONICAL/studies.json
+Ntritsou 2014,age,67.3 ± 6.3 vs 65.5 ± 5.6,"Legacy (v26, not re-verified)",dashboard/data.js population
+Ntritsou 2014,female,not reported vs not reported,"Legacy (v26, not re-verified)",dashboard/data.js population
+Ntritsou 2014,bmi,28.7 ± 3.8 vs 27.9 ± 3.8,"Legacy (v26, not re-verified)",dashboard/data.js population
+Ntritsou 2014,asa,"ASA I: 5 (14.3%), ASA II: 28 (80.0%), ASA III: 2 (5.7%)","Legacy (v26, not re-verified)",dashboard/data.js population
+Ntritsou 2014,intervention_arms,Perioperative EA + tramadol/ketamine,Canonical result register,03_CANONICAL/results.csv
+Ntritsou 2014,control_arms,Sham + tramadol/ketamine,Canonical result register,03_CANONICAL/results.csv
+Ntritsou 2014,acupoints,"LI4 (Hegu), ST36 (Zusanli)","Legacy (v26, not re-verified)",dashboard/data.js stricta
+Ntritsou 2014,frequency,2/100 Hz (dense-disperse),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Ntritsou 2014,intensity,5–15 mA (to patient tolerance),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Ntritsou 2014,timing,Preoperative (30 min before anesthesia induction),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Ntritsou 2014,sessions,Single session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Ntritsou 2014,session_duration,30 minutes per session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Ntritsou 2014,postoperative_analgesia,,Not extracted,
+Ntritsou 2014,pca_regimen,,Not extracted,
+Ntritsou 2014,rescue_analgesia,,Not extracted,
+Ntritsou 2014,cumulative_duration,,Not extracted,
+Oztas 2019,year,2019,Verified (registry),03_CANONICAL/studies.json
+Oztas 2019,trial_family,Oztas_2019,Verified (registry),03_CANONICAL/studies.json
+Oztas 2019,modality,TEAS,Verified (registry),03_CANONICAL/studies.json
+Oztas 2019,comparator,Usual Care (Open-Label Control),Verified (registry),03_CANONICAL/studies.json
+Oztas 2019,comparator_class,usual care,Verified (registry),03_CANONICAL/studies.json (study-level label; result-level class governs models)
+Oztas 2019,randomized_n,48,Verified (registry),03_CANONICAL/studies.json; source page 1
+Oztas 2019,randomized_n_counted,48,Verified (registry),03_CANONICAL/studies.json (operational family count)
+Oztas 2019,analysed_n,TAES 15 / Control 16,Verified (registry),03_CANONICAL/studies.json (report-level text; outcome-specific n differs)
+Oztas 2019,country,Turkey,Verified (registry),03_CANONICAL/studies.json
+Oztas 2019,anaesthesia,,Not verified,
+Oztas 2019,surgical_category,Abdominal & Gastrointestinal,Source-traced (extraction record),dashboard/data.js:None
+Oztas 2019,procedure,"Elective abdominal surgery (three-arm: TAES, incision-periphery TENS, no-intervention control)",Verified (registry),03_CANONICAL/studies.json
+Oztas 2019,age,not reported vs not reported,"Legacy (v26, not re-verified)",dashboard/data.js population
+Oztas 2019,female,not reported vs not reported,"Legacy (v26, not re-verified)",dashboard/data.js population
+Oztas 2019,bmi,not reported vs not reported,"Legacy (v26, not re-verified)",dashboard/data.js population
+Oztas 2019,asa,not reported,"Legacy (v26, not re-verified)",dashboard/data.js population
+Oztas 2019,intervention_arms,"Postoperative TAES at ST25, P6, ST36 and LI4 (2–100 Hz; max 12 mA; 30 min ×6)",Canonical result register,03_CANONICAL/results.csv
+Oztas 2019,control_arms,Incision-periphery TENS (2–100 Hz; max 12 mA; 30 min ×6) | No electrical-stimulation intervention + standard PCA analgesia,Canonical result register,03_CANONICAL/results.csv
+Oztas 2019,acupoints,"ST25, P6, ST36, LI4","Legacy (v26, not re-verified)",dashboard/data.js stricta
+Oztas 2019,frequency,2-100 Hz,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Oztas 2019,intensity,up to 12 mA,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Oztas 2019,timing,"0.5, 2, 18, 22, 42, 46 h postoperatively","Legacy (v26, not re-verified)",dashboard/data.js stricta
+Oztas 2019,sessions,Repeated sessions (6),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Oztas 2019,session_duration,30-min sessions,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Oztas 2019,postoperative_analgesia,,Not extracted,
+Oztas 2019,pca_regimen,,Not extracted,
+Oztas 2019,rescue_analgesia,,Not extracted,
+Oztas 2019,cumulative_duration,,Not extracted,
+Pan 2023,year,2023,Verified (registry),03_CANONICAL/studies.json
+Pan 2023,trial_family,Pan_2023,Verified (registry),03_CANONICAL/studies.json
+Pan 2023,modality,TEAS,Verified (registry),03_CANONICAL/studies.json
+Pan 2023,comparator,Usual care / no stimulation (no sham procedure described),Verified (registry),03_CANONICAL/studies.json
+Pan 2023,comparator_class,usual care,Verified (registry),03_CANONICAL/studies.json (study-level label; result-level class governs models)
+Pan 2023,randomized_n,120,Verified (registry),03_CANONICAL/studies.json; source page 2
+Pan 2023,randomized_n_counted,120,Verified (registry),03_CANONICAL/studies.json (operational family count)
+Pan 2023,analysed_n,52 / 53,Verified (registry),03_CANONICAL/studies.json (report-level text; outcome-specific n differs)
+Pan 2023,country,China,Verified (registry),03_CANONICAL/studies.json
+Pan 2023,anaesthesia,,Not verified,
+Pan 2023,surgical_category,Gynecologic & Breast,Source-traced (extraction record),TEAS EA Verification/ChatGPT Sol Extraction/pan_2023_laparoscopic_myomectomy_teas_full_data_extraction.md:139
+Pan 2023,procedure,Women undergoing laparoscopic myomectomy / hysteromyomectomy,Verified (registry),03_CANONICAL/studies.json
+Pan 2023,age,42.2 ± 5.5 vs 43.2 ± 6.3,"Legacy (v26, not re-verified)",dashboard/data.js population
+Pan 2023,female,52/52 (100%) vs 53/53 (100%),"Legacy (v26, not re-verified)",dashboard/data.js population
+Pan 2023,bmi,23.2 ± 2.8 vs 22.2 ± 2.5,"Legacy (v26, not re-verified)",dashboard/data.js population
+Pan 2023,asa,"ASA I: 34 (65.4%), ASA II: 18 (34.6%)","Legacy (v26, not re-verified)",dashboard/data.js population
+Pan 2023,intervention_arms,Group T — TEAS | TEAS,Canonical result register,03_CANONICAL/results.csv
+Pan 2023,control_arms,Control/usual care | Group C — control,Canonical result register,03_CANONICAL/results.csv
+Pan 2023,acupoints,"LI4 (Hegu), PC6 (Neiguan), ST36 (Zusanli), SP6 (Sanyinjiao)","Legacy (v26, not re-verified)",dashboard/data.js stricta
+Pan 2023,frequency,2/100 Hz (dense-disperse),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Pan 2023,intensity,5–15 mA (to patient tolerance),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Pan 2023,timing,Preoperative (30 min before anesthesia induction),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Pan 2023,sessions,Single session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Pan 2023,session_duration,30 minutes per session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Pan 2023,postoperative_analgesia,,Not extracted,
+Pan 2023,pca_regimen,,Not extracted,
+Pan 2023,rescue_analgesia,,Not extracted,
+Pan 2023,cumulative_duration,,Not extracted,
+Seevaunnamtum 2016,year,2016,Verified (registry),03_CANONICAL/studies.json
+Seevaunnamtum 2016,trial_family,Seevaunnamtum_2016,Verified (registry),03_CANONICAL/studies.json
+Seevaunnamtum 2016,modality,EA,Verified (registry),03_CANONICAL/studies.json
+Seevaunnamtum 2016,comparator,Usual Care (Open-Label Control),Verified (registry),03_CANONICAL/studies.json
+Seevaunnamtum 2016,comparator_class,usual care,Verified (registry),03_CANONICAL/studies.json (study-level label; result-level class governs models)
+Seevaunnamtum 2016,randomized_n,64,Verified (registry),03_CANONICAL/studies.json; source page 5
+Seevaunnamtum 2016,randomized_n_counted,64,Verified (registry),03_CANONICAL/studies.json (operational family count)
+Seevaunnamtum 2016,analysed_n,32 / 32,Verified (registry),03_CANONICAL/studies.json (report-level text; outcome-specific n differs)
+Seevaunnamtum 2016,country,Malaysia,Verified (registry),03_CANONICAL/studies.json
+Seevaunnamtum 2016,anaesthesia,General anaesthesia,Verified (registry),03_CANONICAL/studies.json
+Seevaunnamtum 2016,surgical_category,Gynecologic & Breast,Source-traced (extraction record),TEAS EA Verification/ChatGPT Sol Extraction/seevaunnamtum_2016_covidence_596_full_data_extraction.md:135
+Seevaunnamtum 2016,procedure,Total abdominal hysterectomy,Verified (registry),03_CANONICAL/studies.json
+Seevaunnamtum 2016,age,47.50 ± 7.94 vs 48.72 ± 6.72,"Legacy (v26, not re-verified)",dashboard/data.js population
+Seevaunnamtum 2016,female,32/32 (100%) vs 32/32 (100%),"Legacy (v26, not re-verified)",dashboard/data.js population
+Seevaunnamtum 2016,bmi,24.28 ± 2.97 vs 23.71 ± 3.16,"Legacy (v26, not re-verified)",dashboard/data.js population
+Seevaunnamtum 2016,asa,not reported,"Legacy (v26, not re-verified)",dashboard/data.js population
+Seevaunnamtum 2016,intervention_arms,Intraoperative EA,Canonical result register,03_CANONICAL/results.csv
+Seevaunnamtum 2016,control_arms,Standard care,Canonical result register,03_CANONICAL/results.csv
+Seevaunnamtum 2016,acupoints,"PC6 (Neiguan), LI4 (Hegu)","Legacy (v26, not re-verified)",dashboard/data.js stricta
+Seevaunnamtum 2016,frequency,2/100 Hz (dense-disperse),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Seevaunnamtum 2016,intensity,5–15 mA (to patient tolerance),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Seevaunnamtum 2016,timing,Preoperative (30 min before anesthesia induction),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Seevaunnamtum 2016,sessions,Single session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Seevaunnamtum 2016,session_duration,30 minutes per session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Seevaunnamtum 2016,postoperative_analgesia,,Not extracted,
+Seevaunnamtum 2016,pca_regimen,,Not extracted,
+Seevaunnamtum 2016,rescue_analgesia,,Not extracted,
+Seevaunnamtum 2016,cumulative_duration,,Not extracted,
+Sim 2002,year,2002,Verified (registry),03_CANONICAL/studies.json
+Sim 2002,trial_family,Sim_2002,Verified (registry),03_CANONICAL/studies.json
+Sim 2002,modality,EA,Verified (registry),03_CANONICAL/studies.json
+Sim 2002,comparator,Sham-Controlled (Placebo Double-Blind),Verified (registry),03_CANONICAL/studies.json
+Sim 2002,comparator_class,sham,Verified (registry),03_CANONICAL/studies.json (study-level label; result-level class governs models)
+Sim 2002,randomized_n,90,Verified (registry),03_CANONICAL/studies.json; source page 2
+Sim 2002,randomized_n_counted,90,Verified (registry),03_CANONICAL/studies.json (operational family count)
+Sim 2002,analysed_n,30 vs 30,Verified (registry),03_CANONICAL/studies.json (report-level text; outcome-specific n differs)
+Sim 2002,country,Singapore,Verified (registry),03_CANONICAL/studies.json
+Sim 2002,anaesthesia,General anaesthesia,Verified (PDF quote),covidence_952_full_article.pdf p.2
+Sim 2002,surgical_category,Gynecologic & Breast,Source-traced (extraction record),TEAS EA Verification/ChatGPT Sol Extraction/sim_2002_covidence_952_full_data_extraction.md:86
+Sim 2002,procedure,Women undergoing elective total abdominal hysterectomy with or without bilateral salpingo-oophorectomy,Verified (registry),03_CANONICAL/studies.json
+Sim 2002,age,46 ± 5 vs 47 ± 6,"Legacy (v26, not re-verified)",dashboard/data.js population
+Sim 2002,female,30/30 (100%) vs 30/30 (100%),"Legacy (v26, not re-verified)",dashboard/data.js population
+Sim 2002,bmi,not reported vs not reported,"Legacy (v26, not re-verified)",dashboard/data.js population
+Sim 2002,asa,not reported,"Legacy (v26, not re-verified)",dashboard/data.js population
+Sim 2002,intervention_arms,Postoperative EA | Postoperative EA (Group III) | Preoperative EA | Preoperative EA (Group II),Canonical result register,03_CANONICAL/results.csv
+Sim 2002,control_arms,Placebo EA | Placebo EA (Group I),Canonical result register,03_CANONICAL/results.csv
+Sim 2002,acupoints,"ST36 (Zusanli), SP6 (Sanyinjiao), LR3 (Taichong)","Legacy (v26, not re-verified)",dashboard/data.js stricta
+Sim 2002,frequency,2/100 Hz (dense-disperse),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Sim 2002,intensity,5–15 mA (to patient tolerance),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Sim 2002,timing,Preoperative (30 min before anesthesia induction),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Sim 2002,sessions,Single session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Sim 2002,session_duration,30 minutes per session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Sim 2002,postoperative_analgesia,,Not extracted,
+Sim 2002,pca_regimen,,Not extracted,
+Sim 2002,rescue_analgesia,,Not extracted,
+Sim 2002,cumulative_duration,,Not extracted,
+Song 2020,year,2020,Verified (registry),03_CANONICAL/studies.json
+Song 2020,trial_family,Song_2020,Verified (registry),03_CANONICAL/studies.json
+Song 2020,modality,TEAS,Verified (registry),03_CANONICAL/studies.json
+Song 2020,comparator,Active non-acupoint electrical stimulation (separate active-control class),Verified (registry),03_CANONICAL/studies.json
+Song 2020,comparator_class,active control,Verified (registry),03_CANONICAL/studies.json (study-level label; result-level class governs models)
+Song 2020,randomized_n,85,Verified (registry),03_CANONICAL/studies.json; source page 4
+Song 2020,randomized_n_counted,85,Verified (registry),03_CANONICAL/studies.json (operational family count)
+Song 2020,analysed_n,ITT TEAS 42 / Control 43 (PP 38 / 40 reported separately),Verified (registry),03_CANONICAL/studies.json (report-level text; outcome-specific n differs)
+Song 2020,country,China,Verified (registry),03_CANONICAL/studies.json
+Song 2020,anaesthesia,General anaesthesia,Verified (PDF quote),getfile.php-6.pdf p.2
+Song 2020,surgical_category,Thoracic & Cardiac,Source-traced (extraction record),dashboard/data.js:None
+Song 2020,procedure,Elective video-assisted thoracoscopic surgery (VATS),Verified (registry),03_CANONICAL/studies.json
+Song 2020,age,not reported vs not reported,"Legacy (v26, not re-verified)",dashboard/data.js population
+Song 2020,female,not reported vs not reported,"Legacy (v26, not re-verified)",dashboard/data.js population
+Song 2020,bmi,not reported vs not reported,"Legacy (v26, not re-verified)",dashboard/data.js population
+Song 2020,asa,not reported,"Legacy (v26, not re-verified)",dashboard/data.js population
+Song 2020,intervention_arms,Perioperative TEAS: PC6/HT7 preoperatively; PC6/HT7/ST36/LI4 postoperatively (2/10 Hz; 30-min sessions),Canonical result register,03_CANONICAL/results.csv
+Song 2020,control_arms,Active nonacupoint electrical stimulation with matched timing/frequency,Canonical result register,03_CANONICAL/results.csv
+Song 2020,acupoints,"PC6, HT7 (preoperative); PC6, HT7, ST36, LI4 (postoperative)","Legacy (v26, not re-verified)",dashboard/data.js stricta
+Song 2020,frequency,2/10 Hz,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Song 2020,intensity,not reported,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Song 2020,timing,"Night before surgery, end of surgery, and before sleep on postoperative nights 2 and 3","Legacy (v26, not re-verified)",dashboard/data.js stricta
+Song 2020,sessions,Repeated sessions (4),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Song 2020,session_duration,30-min sessions,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Song 2020,postoperative_analgesia,,Not extracted,
+Song 2020,pca_regimen,,Not extracted,
+Song 2020,rescue_analgesia,,Not extracted,
+Song 2020,cumulative_duration,,Not extracted,
+Sun 2017,year,2017,Verified (registry),03_CANONICAL/studies.json
+Sun 2017,trial_family,Sun_2017,Verified (registry),03_CANONICAL/studies.json
+Sun 2017,modality,TEAS,Verified (registry),03_CANONICAL/studies.json
+Sun 2017,comparator,Sham-Controlled (Placebo Double-Blind),Verified (registry),03_CANONICAL/studies.json
+Sun 2017,comparator_class,sham,Verified (registry),03_CANONICAL/studies.json (study-level label; result-level class governs models)
+Sun 2017,randomized_n,380,Verified (registry),03_CANONICAL/studies.json; source page 3
+Sun 2017,randomized_n_counted,380,Verified (registry),03_CANONICAL/studies.json (operational family count)
+Sun 2017,analysed_n,89 vs 90,Verified (registry),03_CANONICAL/studies.json (report-level text; outcome-specific n differs)
+Sun 2017,country,China,Verified (registry),03_CANONICAL/studies.json
+Sun 2017,anaesthesia,General anaesthesia,Verified (PDF quote),sun2017-2.pdf p.1
+Sun 2017,surgical_category,Mixed specialties,Source-traced (extraction record),TEAS EA Verification/ChatGPT Sol Extraction/sun_2017_covidence_632_full_data_extraction.md:145
+Sun 2017,procedure,Adults undergoing laparoscopic cholecystectomy or laparoscopic gynecological surgery,Verified (registry),03_CANONICAL/studies.json
+Sun 2017,age,44.8 ± 11.5 vs 46.5 ± 13.6,"Legacy (v26, not re-verified)",dashboard/data.js population
+Sun 2017,female,71/89 (79.8%) vs 72/90 (80.0%),"Legacy (v26, not re-verified)",dashboard/data.js population
+Sun 2017,bmi,23.3 ± 3.2 vs 22.7 ± 3.1,"Legacy (v26, not re-verified)",dashboard/data.js population
+Sun 2017,asa,"ASA I: 29 (32.6%), ASA II: 60 (67.4%)","Legacy (v26, not re-verified)",dashboard/data.js population
+Sun 2017,intervention_arms,Pre/intraoperative TEAS timing arms | Preoperative + intraoperative true TEAS | Preoperative + intraoperative true TEAS (TTS) | Preoperative + postoperative true TEAS | Preoperative + postoperative true TEAS (TST) | Preoperative true TEAS only | Preoperative true TEAS only (TSS) | True TEAS timing arms,Canonical result register,03_CANONICAL/results.csv
+Sun 2017,control_arms,All-period sham TEAS | All-period sham TEAS (SSS),Canonical result register,03_CANONICAL/results.csv
+Sun 2017,acupoints,"LI4 (Hegu), ST36 (Zusanli)","Legacy (v26, not re-verified)",dashboard/data.js stricta
+Sun 2017,frequency,2/100 Hz (dense-disperse),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Sun 2017,intensity,5–15 mA (to patient tolerance),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Sun 2017,timing,Preoperative (30 min before anesthesia induction),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Sun 2017,sessions,Single session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Sun 2017,session_duration,30 minutes per session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Sun 2017,postoperative_analgesia,,Not extracted,
+Sun 2017,pca_regimen,,Not extracted,
+Sun 2017,rescue_analgesia,,Not extracted,
+Sun 2017,cumulative_duration,,Not extracted,
+Szmit 2021,year,2021,Verified (registry),03_CANONICAL/studies.json
+Szmit 2021,trial_family,Szmit_2021,Verified (registry),03_CANONICAL/studies.json
+Szmit 2021,modality,TEAS,Verified (registry),03_CANONICAL/studies.json
+Szmit 2021,comparator,Sham-Controlled (Placebo Double-Blind),Verified (registry),03_CANONICAL/studies.json
+Szmit 2021,comparator_class,sham,Verified (registry),03_CANONICAL/studies.json (study-level label; result-level class governs models)
+Szmit 2021,randomized_n,71,Verified (registry),03_CANONICAL/studies.json; source page 7
+Szmit 2021,randomized_n_counted,71,Verified (registry),03_CANONICAL/studies.json (operational family count)
+Szmit 2021,analysed_n,24 / 24,Verified (registry),03_CANONICAL/studies.json (report-level text; outcome-specific n differs)
+Szmit 2021,country,Poland,Verified (registry),03_CANONICAL/studies.json
+Szmit 2021,anaesthesia,General anaesthesia,Verified (registry),03_CANONICAL/studies.json
+Szmit 2021,surgical_category,Abdominal & Gastrointestinal,Source-traced (extraction record),dashboard/data.js:None
+Szmit 2021,procedure,"Elective inguinal hernia repair (source states both laparoscopic mesh repair and Lichtenstein tension-free technique; internally inconsistent, not adjudicated)",Verified (registry),03_CANONICAL/studies.json
+Szmit 2021,age,not reported vs not reported,"Legacy (v26, not re-verified)",dashboard/data.js population
+Szmit 2021,female,not reported vs not reported,"Legacy (v26, not re-verified)",dashboard/data.js population
+Szmit 2021,bmi,not reported vs not reported,"Legacy (v26, not re-verified)",dashboard/data.js population
+Szmit 2021,asa,not reported,"Legacy (v26, not re-verified)",dashboard/data.js population
+Szmit 2021,intervention_arms,Postoperative TEAS: bilateral LI4 + ipsilateral peri-incisional ashi points; alternating 2/100 Hz; 30 min every 2 h through 24 h,Canonical result register,03_CANONICAL/results.csv
+Szmit 2021,control_arms,PCA only / no TEAS | Sham TEAS: identical devices/placement with no electrical stimulation + PCA,Canonical result register,03_CANONICAL/results.csv
+Szmit 2021,acupoints,LI4 + ipsilateral peri-incisional ashi points,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Szmit 2021,frequency,Alternating 2/100 Hz,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Szmit 2021,intensity,"Qualitative titration to muscle twitch/De-Qi (50% reduction during sleep), numeric current not reported",Partly verified (source excerpt),03_CANONICAL/verified_metadata.json (2026-09-26)
+Szmit 2021,timing,"Postoperative only, starting 0.5 h after surgery","Legacy (v26, not re-verified)",dashboard/data.js stricta
+Szmit 2021,sessions,Repeated sessions,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Szmit 2021,session_duration,"30-minute stimulation at two-hour intervals, starting on PACU arrival",Partly verified (source excerpt),03_CANONICAL/verified_metadata.json (2026-09-26)
+Szmit 2021,postoperative_analgesia,,Not extracted,
+Szmit 2021,pca_regimen,,Not extracted,
+Szmit 2021,rescue_analgesia,,Not extracted,
+Szmit 2021,cumulative_duration,,Not extracted,
+Tu 2024,year,2024,Verified (registry),03_CANONICAL/studies.json
+Tu 2024,trial_family,Tu_2024,Verified (registry),03_CANONICAL/studies.json
+Tu 2024,modality,TEAS,Verified (registry),03_CANONICAL/studies.json
+Tu 2024,comparator,Sham-Controlled (Placebo Double-Blind),Verified (registry),03_CANONICAL/studies.json
+Tu 2024,comparator_class,sham,Verified (registry),03_CANONICAL/studies.json (study-level label; result-level class governs models)
+Tu 2024,randomized_n,120,Verified (registry),03_CANONICAL/studies.json; source page 1
+Tu 2024,randomized_n_counted,120,Verified (registry),03_CANONICAL/studies.json (operational family count)
+Tu 2024,analysed_n,57 vs 58,Verified (registry),03_CANONICAL/studies.json (report-level text; outcome-specific n differs)
+Tu 2024,country,China,Verified (registry),03_CANONICAL/studies.json
+Tu 2024,anaesthesia,,Not verified,
+Tu 2024,surgical_category,Neurosurgery,Source-traced (extraction record),TEAS EA Verification/ChatGPT Sol Extraction/tu_2024_covidence_244_full_data_extraction.md:125
+Tu 2024,procedure,Adults undergoing craniotomy requiring opening of the cranium and dura,Verified (registry),03_CANONICAL/studies.json
+Tu 2024,age,44.77 ± 15.74 vs 49.24 ± 14.02,"Legacy (v26, not re-verified)",dashboard/data.js population
+Tu 2024,female,31/57 (54.4%) vs 31/58 (53.4%),"Legacy (v26, not re-verified)",dashboard/data.js population
+Tu 2024,bmi,not reported vs not reported,"Legacy (v26, not re-verified)",dashboard/data.js population
+Tu 2024,asa,not reported,"Legacy (v26, not re-verified)",dashboard/data.js population
+Tu 2024,intervention_arms,Postoperative TEAS | Postoperative TEAS at bilateral P6,Canonical result register,03_CANONICAL/results.csv
+Tu 2024,control_arms,Sham TEAS / no current at bilateral P6 | Sham/no current,Canonical result register,03_CANONICAL/results.csv
+Tu 2024,acupoints,PC6 (Neiguan),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Tu 2024,frequency,2/100 Hz (dense-disperse),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Tu 2024,intensity,5–15 mA (to patient tolerance),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Tu 2024,timing,Preoperative (30 min before anesthesia induction),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Tu 2024,sessions,Single session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Tu 2024,session_duration,30 minutes per session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Tu 2024,postoperative_analgesia,,Not extracted,
+Tu 2024,pca_regimen,,Not extracted,
+Tu 2024,rescue_analgesia,,Not extracted,
+Tu 2024,cumulative_duration,,Not extracted,
+Wang 2023,year,2023,Verified (registry),03_CANONICAL/studies.json
+Wang 2023,trial_family,Wang_2023,Verified (registry),03_CANONICAL/studies.json
+Wang 2023,modality,TEAS,Verified (registry),03_CANONICAL/studies.json
+Wang 2023,comparator,Sham-Controlled (Placebo Double-Blind),Verified (registry),03_CANONICAL/studies.json
+Wang 2023,comparator_class,sham,Verified (registry),03_CANONICAL/studies.json (study-level label; result-level class governs models)
+Wang 2023,randomized_n,88,Verified (registry),03_CANONICAL/studies.json; source page 5
+Wang 2023,randomized_n_counted,88,Verified (registry),03_CANONICAL/studies.json (operational family count)
+Wang 2023,analysed_n,40 vs 43,Verified (registry),03_CANONICAL/studies.json (report-level text; outcome-specific n differs)
+Wang 2023,country,China,Verified (registry),03_CANONICAL/studies.json
+Wang 2023,anaesthesia,,Not verified,
+Wang 2023,surgical_category,Abdominal & Gastrointestinal,Source-traced (extraction record),TEAS EA Verification/ChatGPT Sol Extraction/wang_2023_gi_tumor_sleep_teas_full_data_extraction.md:110
+Wang 2023,procedure,Laparoscopic radical gastrectomy for gastric cancer or laparoscopic radical colorectal cancer resection,Verified (registry),03_CANONICAL/studies.json
+Wang 2023,age,58.20 ± 7.90 vs 60.44 ± 9.64,"Legacy (v26, not re-verified)",dashboard/data.js population
+Wang 2023,female,not reported vs not reported,"Legacy (v26, not re-verified)",dashboard/data.js population
+Wang 2023,bmi,23.87 ± 2.85 vs 23.73 ± 2.37,"Legacy (v26, not re-verified)",dashboard/data.js population
+Wang 2023,asa,"ASA I: 0 (0%), ASA II: 34 (85.0%), ASA III: 6 (15.0%)","Legacy (v26, not re-verified)",dashboard/data.js population
+Wang 2023,intervention_arms,Nighttime TEAS,Canonical result register,03_CANONICAL/results.csv
+Wang 2023,control_arms,Sham/no current | Sham/no-current TEAS,Canonical result register,03_CANONICAL/results.csv
+Wang 2023,acupoints,"HT7 (Shenmen), PC6 (Neiguan), ST36 (Zusanli)","Legacy (v26, not re-verified)",dashboard/data.js stricta
+Wang 2023,frequency,2/100 Hz (dense-disperse),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Wang 2023,intensity,5–15 mA (to patient tolerance),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Wang 2023,timing,Preoperative (30 min before anesthesia induction),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Wang 2023,sessions,Single session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Wang 2023,session_duration,30 minutes per session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Wang 2023,postoperative_analgesia,,Not extracted,
+Wang 2023,pca_regimen,,Not extracted,
+Wang 2023,rescue_analgesia,,Not extracted,
+Wang 2023,cumulative_duration,,Not extracted,
+Wang 2024,year,2024,Verified (registry),03_CANONICAL/studies.json
+Wang 2024,trial_family,Wang_2024,Verified (registry),03_CANONICAL/studies.json
+Wang 2024,modality,TEAS,Verified (registry),03_CANONICAL/studies.json
+Wang 2024,comparator,Sham-Controlled (Placebo Double-Blind),Verified (registry),03_CANONICAL/studies.json
+Wang 2024,comparator_class,sham,Verified (registry),03_CANONICAL/studies.json (study-level label; result-level class governs models)
+Wang 2024,randomized_n,140,Verified (registry),03_CANONICAL/studies.json; source page 3
+Wang 2024,randomized_n_counted,140,Verified (registry),03_CANONICAL/studies.json (operational family count)
+Wang 2024,analysed_n,33 vs 35,Verified (registry),03_CANONICAL/studies.json (report-level text; outcome-specific n differs)
+Wang 2024,country,China,Verified (registry),03_CANONICAL/studies.json
+Wang 2024,anaesthesia,General anaesthesia,Verified (PDF quote),covidence_212_full_article.pdf p.3
+Wang 2024,surgical_category,Gynecologic & Breast,Source-traced (extraction record),TEAS EA Verification/ChatGPT Sol Extraction/wang_2024_covidence_212_full_data_extraction.md:135
+Wang 2024,procedure,Women undergoing unilateral breast cancer surgery,Verified (registry),03_CANONICAL/studies.json
+Wang 2024,age,48.2 ± 8.4 vs 49.6 ± 9.7,"Legacy (v26, not re-verified)",dashboard/data.js population
+Wang 2024,female,All female; two risk strata,Verified (registry),03_CANONICAL/studies.json
+Wang 2024,bmi,24.1 ± 3.2 vs 24.5 ± 3.8,"Legacy (v26, not re-verified)",dashboard/data.js population
+Wang 2024,asa,not reported,"Legacy (v26, not re-verified)",dashboard/data.js population
+Wang 2024,intervention_arms,MNVP: ondansetron+dexamethasone+TEAS | MNVP: ondansetron+dexamethasone+TEAS (MNVP-ODT) | SNVP: ondansetron+dexamethasone+TEAS | SNVP: ondansetron+dexamethasone+TEAS (SNVP-ODT) | TEAS within risk strata,Canonical result register,03_CANONICAL/results.csv
+Wang 2024,control_arms,MNVP: ondansetron+dexamethasone | MNVP: ondansetron+dexamethasone (MNVP-OD) | OD within risk strata | SNVP: ondansetron+dexamethasone | SNVP: ondansetron+dexamethasone (SNVP-OD),Canonical result register,03_CANONICAL/results.csv
+Wang 2024,acupoints,"PC6 (Neiguan), LI4 (Hegu)","Legacy (v26, not re-verified)",dashboard/data.js stricta
+Wang 2024,frequency,2/100 Hz (dense-disperse),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Wang 2024,intensity,5–15 mA (to patient tolerance),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Wang 2024,timing,Preoperative (30 min before anesthesia induction),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Wang 2024,sessions,Single session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Wang 2024,session_duration,30 minutes per session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Wang 2024,postoperative_analgesia,,Not extracted,
+Wang 2024,pca_regimen,,Not extracted,
+Wang 2024,rescue_analgesia,,Not extracted,
+Wang 2024,cumulative_duration,,Not extracted,
+Wong 2006,year,2006,Verified (registry),03_CANONICAL/studies.json
+Wong 2006,trial_family,Wong_2006,Verified (registry),03_CANONICAL/studies.json
+Wong 2006,modality,EA,Verified (registry),03_CANONICAL/studies.json
+Wong 2006,comparator,Sham-Controlled (Placebo Double-Blind),Verified (registry),03_CANONICAL/studies.json
+Wong 2006,comparator_class,sham,Verified (registry),03_CANONICAL/studies.json (study-level label; result-level class governs models)
+Wong 2006,randomized_n,27,Verified (registry),03_CANONICAL/studies.json; source page 3
+Wong 2006,randomized_n_counted,27,Verified (registry),03_CANONICAL/studies.json (operational family count)
+Wong 2006,analysed_n,13 vs 12,Verified (registry),03_CANONICAL/studies.json (report-level text; outcome-specific n differs)
+Wong 2006,country,Hong Kong,Verified (registry),03_CANONICAL/studies.json
+Wong 2006,anaesthesia,,Not verified,
+Wong 2006,surgical_category,Thoracic & Cardiac,Source-traced (extraction record),TEAS EA Verification/ChatGPT Sol Extraction/wong_2006_covidence_912_full_data_extraction.md:95
+Wong 2006,procedure,Anatomic lung resection with curative intent through thoracotomy,Verified (registry),03_CANONICAL/studies.json
+Wong 2006,age,64.6 ± 8.0 vs 64.5 ± 8.5,"Legacy (v26, not re-verified)",dashboard/data.js population
+Wong 2006,female,4/13 (30.8%) vs 2/12 (16.7%),"Legacy (v26, not re-verified)",dashboard/data.js population
+Wong 2006,bmi,not reported vs not reported,"Legacy (v26, not re-verified)",dashboard/data.js population
+Wong 2006,asa,not reported,"Legacy (v26, not re-verified)",dashboard/data.js population
+Wong 2006,intervention_arms,Postoperative electroacupuncture,Canonical result register,03_CANONICAL/results.csv
+Wong 2006,control_arms,Nonpenetrating sham acupuncture,Canonical result register,03_CANONICAL/results.csv
+Wong 2006,acupoints,"LI4 (Hegu), ST36 (Zusanli), SP6 (Sanyinjiao), TE6 (Zhigou)","Legacy (v26, not re-verified)",dashboard/data.js stricta
+Wong 2006,frequency,2/100 Hz (dense-disperse),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Wong 2006,intensity,5–15 mA (to patient tolerance),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Wong 2006,timing,Preoperative (30 min before anesthesia induction),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Wong 2006,sessions,Single session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Wong 2006,session_duration,30 minutes per session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Wong 2006,postoperative_analgesia,,Not extracted,
+Wong 2006,pca_regimen,,Not extracted,
+Wong 2006,rescue_analgesia,,Not extracted,
+Wong 2006,cumulative_duration,,Not extracted,
+Wu 2016,year,2016,Verified (registry),03_CANONICAL/studies.json
+Wu 2016,trial_family,Wu_2016,Verified (registry),03_CANONICAL/studies.json
+Wu 2016,modality,TEAS,Verified (registry),03_CANONICAL/studies.json
+Wu 2016,comparator,Sham-Controlled (Placebo Double-Blind),Verified (registry),03_CANONICAL/studies.json
+Wu 2016,comparator_class,sham,Verified (registry),03_CANONICAL/studies.json (study-level label; result-level class governs models)
+Wu 2016,randomized_n,90,Verified (registry),03_CANONICAL/studies.json; source page 5
+Wu 2016,randomized_n_counted,90,Verified (registry),03_CANONICAL/studies.json (operational family count)
+Wu 2016,analysed_n,27 / 27,Verified (registry),03_CANONICAL/studies.json (report-level text; outcome-specific n differs)
+Wu 2016,country,China,Verified (registry),03_CANONICAL/studies.json
+Wu 2016,anaesthesia,,Not verified,
+Wu 2016,surgical_category,Not documented,Source-traced (extraction record),dashboard/data.js:None
+Wu 2016,procedure,Surgical procedure not documented in the available characteristics record.,Verified (registry),03_CANONICAL/studies.json
+Wu 2016,age,not reported vs not reported,"Legacy (v26, not re-verified)",dashboard/data.js population
+Wu 2016,female,not reported vs not reported,"Legacy (v26, not re-verified)",dashboard/data.js population
+Wu 2016,bmi,not reported vs not reported,"Legacy (v26, not re-verified)",dashboard/data.js population
+Wu 2016,asa,not reported,"Legacy (v26, not re-verified)",dashboard/data.js population
+Wu 2016,intervention_arms,Perioperative true-acupoint TAES (LI4/PC6/SI3/SJ6),Canonical result register,03_CANONICAL/results.csv
+Wu 2016,control_arms,Active nonacupoint electrical stimulation (identical 2/100-Hz current) | No-TAES thoracotomy control,Canonical result register,03_CANONICAL/results.csv
+Wu 2016,acupoints,"LI4, PC6, SI3, SJ6 (bilateral)","Legacy (v26, not re-verified)",dashboard/data.js stricta
+Wu 2016,frequency,2/100 Hz,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Wu 2016,intensity,4-12 mA,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Wu 2016,timing,"30 min pre-incision and at 20, 44, 68, 92, 116 h postoperatively","Legacy (v26, not re-verified)",dashboard/data.js stricta
+Wu 2016,sessions,Repeated sessions (6),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Wu 2016,session_duration,30-min sessions,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Wu 2016,postoperative_analgesia,,Not extracted,
+Wu 2016,pca_regimen,,Not extracted,
+Wu 2016,rescue_analgesia,,Not extracted,
+Wu 2016,cumulative_duration,,Not extracted,
+Wu 2022,year,2022,Verified (registry),03_CANONICAL/studies.json
+Wu 2022,trial_family,Wu_2022,Verified (registry),03_CANONICAL/studies.json
+Wu 2022,modality,TEAS,Verified (registry),03_CANONICAL/studies.json
+Wu 2022,comparator,Sham-Controlled (Placebo Double-Blind),Verified (registry),03_CANONICAL/studies.json
+Wu 2022,comparator_class,sham,Verified (registry),03_CANONICAL/studies.json (study-level label; result-level class governs models)
+Wu 2022,randomized_n,90,Verified (registry),03_CANONICAL/studies.json; source page 2
+Wu 2022,randomized_n_counted,90,Verified (registry),03_CANONICAL/studies.json (operational family count)
+Wu 2022,analysed_n,44 vs 40,Verified (registry),03_CANONICAL/studies.json (report-level text; outcome-specific n differs)
+Wu 2022,country,China,Verified (registry),03_CANONICAL/studies.json
+Wu 2022,anaesthesia,General anaesthesia,Verified (PDF quote),s12871-022-01875-3.pdf p.2
+Wu 2022,surgical_category,Orthopedic & Spine,Source-traced (extraction record),TEAS EA Verification/ChatGPT Sol Extraction/wu_2022_spinal_surgery_pteas_full_data_extraction.md:106
+Wu 2022,procedure,Posterior lumbar decompression + bone-graft fusion + internal fixation,Verified (registry),03_CANONICAL/studies.json
+Wu 2022,age,57.58 ± 7.81 vs 56.02 ± 8.48,"Legacy (v26, not re-verified)",dashboard/data.js population
+Wu 2022,female,34/44 (77.3%) vs 24/40 (60.0%),"Legacy (v26, not re-verified)",dashboard/data.js population
+Wu 2022,bmi,24.25 ± 3.27 vs 23.55 ± 2.49,"Legacy (v26, not re-verified)",dashboard/data.js population
+Wu 2022,asa,not reported,"Legacy (v26, not re-verified)",dashboard/data.js population
+Wu 2022,intervention_arms,Perioperative pTEAS,Canonical result register,03_CANONICAL/results.csv
+Wu 2022,control_arms,No-current control,Canonical result register,03_CANONICAL/results.csv
+Wu 2022,acupoints,"ST36 (Zusanli), SP6 (Sanyinjiao), LR3 (Taichong), EX-B2 (Jiaji)","Legacy (v26, not re-verified)",dashboard/data.js stricta
+Wu 2022,frequency,2/100 Hz (dense-disperse),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Wu 2022,intensity,5–15 mA (to patient tolerance),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Wu 2022,timing,Preoperative (30 min before anesthesia induction),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Wu 2022,sessions,Single session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Wu 2022,session_duration,30 minutes per session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Wu 2022,postoperative_analgesia,,Not extracted,
+Wu 2022,pca_regimen,,Not extracted,
+Wu 2022,rescue_analgesia,,Not extracted,
+Wu 2022,cumulative_duration,,Not extracted,
+Wu 2025,year,2025,Verified (registry),03_CANONICAL/studies.json
+Wu 2025,trial_family,Wu_2025,Verified (registry),03_CANONICAL/studies.json
+Wu 2025,modality,TEAS,Verified (registry),03_CANONICAL/studies.json
+Wu 2025,comparator,Sham-Controlled (Placebo Double-Blind),Verified (registry),03_CANONICAL/studies.json
+Wu 2025,comparator_class,sham,Verified (registry),03_CANONICAL/studies.json (study-level label; result-level class governs models)
+Wu 2025,randomized_n,100,Verified (registry),03_CANONICAL/studies.json; source page 4
+Wu 2025,randomized_n_counted,100,Verified (registry),03_CANONICAL/studies.json (operational family count)
+Wu 2025,analysed_n,ITT 50 vs 50; 3 unavailable at 24 h,Verified (registry),03_CANONICAL/studies.json (report-level text; outcome-specific n differs)
+Wu 2025,country,China,Verified (registry),03_CANONICAL/studies.json
+Wu 2025,anaesthesia,General anaesthesia,Verified (PDF quote),103940.pdf p.2
+Wu 2025,surgical_category,Thoracic & Cardiac,Source-traced (extraction record),TEAS EA Verification/ChatGPT Sol Extraction/wu_2025_day_lung_cancer_teas_full_data_extraction.md:116
+Wu 2025,procedure,VATS pulmonary wedge resection,Verified (registry),03_CANONICAL/studies.json
+Wu 2025,age,49.3 ± 11.5 vs 50.1 ± 11.4,"Legacy (v26, not re-verified)",dashboard/data.js population
+Wu 2025,female,35/50 (70.0%) vs 35/50 (70.0%),"Legacy (v26, not re-verified)",dashboard/data.js population
+Wu 2025,bmi,23.8 ± 3.1 vs 22.9 ± 3.2,"Legacy (v26, not re-verified)",dashboard/data.js population
+Wu 2025,asa,"ASA I: 30 (60.0%), ASA II: 20 (40.0%)","Legacy (v26, not re-verified)",dashboard/data.js population
+Wu 2025,intervention_arms,PACU TEAS,Canonical result register,03_CANONICAL/results.csv
+Wu 2025,control_arms,Sham/no current,Canonical result register,03_CANONICAL/results.csv
+Wu 2025,acupoints,"LI4 (Hegu), PC6 (Neiguan)","Legacy (v26, not re-verified)",dashboard/data.js stricta
+Wu 2025,frequency,2/100 Hz (dense-disperse),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Wu 2025,intensity,5–15 mA (to patient tolerance),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Wu 2025,timing,Preoperative (30 min before anesthesia induction),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Wu 2025,sessions,Single session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Wu 2025,session_duration,30 minutes per session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Wu 2025,postoperative_analgesia,,Not extracted,
+Wu 2025,pca_regimen,,Not extracted,
+Wu 2025,rescue_analgesia,,Not extracted,
+Wu 2025,cumulative_duration,,Not extracted,
+Xie 2014,year,2014,Verified (registry),03_CANONICAL/studies.json
+Xie 2014,trial_family,Xie_2014,Verified (registry),03_CANONICAL/studies.json
+Xie 2014,modality,EA,Verified (registry),03_CANONICAL/studies.json
+Xie 2014,comparator,Sham-Controlled (Placebo Double-Blind),Verified (registry),03_CANONICAL/studies.json
+Xie 2014,comparator_class,sham,Verified (registry),03_CANONICAL/studies.json (study-level label; result-level class governs models)
+Xie 2014,randomized_n,60,Verified (registry),03_CANONICAL/studies.json; source page 1
+Xie 2014,randomized_n_counted,60,Verified (registry),03_CANONICAL/studies.json (operational family count)
+Xie 2014,analysed_n,20 vs 20,Verified (registry),03_CANONICAL/studies.json (report-level text; outcome-specific n differs)
+Xie 2014,country,China,Verified (registry),03_CANONICAL/studies.json
+Xie 2014,anaesthesia,General anaesthesia,Verified (PDF quote),covidence_701_full_article.pdf p.2
+Xie 2014,surgical_category,Thoracic & Cardiac,Source-traced (extraction record),TEAS EA Verification/ChatGPT Sol Extraction/xie_2014_covidence_701_full_data_extraction.md:94
+Xie 2014,procedure,Patients undergoing elective radical esophagectomy for cancer,Verified (registry),03_CANONICAL/studies.json
+Xie 2014,age,53 ± 8 vs 54 ± 7,"Legacy (v26, not re-verified)",dashboard/data.js population
+Xie 2014,female,6/20 (30.0%) vs 6/20 (30.0%),"Legacy (v26, not re-verified)",dashboard/data.js population
+Xie 2014,bmi,not reported vs not reported,"Legacy (v26, not re-verified)",dashboard/data.js population
+Xie 2014,asa,not reported,"Legacy (v26, not re-verified)",dashboard/data.js population
+Xie 2014,intervention_arms,Active EAS PC4/PC6,Canonical result register,03_CANONICAL/results.csv
+Xie 2014,control_arms,General-anesthesia control | Sham needling PC4/PC6,Canonical result register,03_CANONICAL/results.csv
+Xie 2014,acupoints,"PC4 (Ximen), PC6 (Neiguan)","Legacy (v26, not re-verified)",dashboard/data.js stricta
+Xie 2014,frequency,2/100 Hz (dense-disperse),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Xie 2014,intensity,5–15 mA (to patient tolerance),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Xie 2014,timing,Preoperative (30 min before anesthesia induction),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Xie 2014,sessions,Single session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Xie 2014,session_duration,30 minutes per session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Xie 2014,postoperative_analgesia,,Not extracted,
+Xie 2014,pca_regimen,,Not extracted,
+Xie 2014,rescue_analgesia,,Not extracted,
+Xie 2014,cumulative_duration,,Not extracted,
+Xing 2022,year,2022,Verified (registry),03_CANONICAL/studies.json
+Xing 2022,trial_family,Xing_2022,Verified (registry),03_CANONICAL/studies.json
+Xing 2022,modality,TEAS,Verified (registry),03_CANONICAL/studies.json
+Xing 2022,comparator,Sham-Controlled (Placebo Double-Blind),Verified (registry),03_CANONICAL/studies.json
+Xing 2022,comparator_class,sham,Verified (registry),03_CANONICAL/studies.json (study-level label; result-level class governs models)
+Xing 2022,randomized_n,90,Verified (registry),03_CANONICAL/studies.json; source page 1
+Xing 2022,randomized_n_counted,90,Verified (registry),03_CANONICAL/studies.json (operational family count)
+Xing 2022,analysed_n,29 vs 29,Verified (registry),03_CANONICAL/studies.json (report-level text; outcome-specific n differs)
+Xing 2022,country,China,Verified (registry),03_CANONICAL/studies.json
+Xing 2022,anaesthesia,,Not verified,
+Xing 2022,surgical_category,Abdominal & Gastrointestinal,Source-traced (extraction record),TEAS EA Verification/ChatGPT Sol Extraction/xing_2022_gastric_cancer_teas_tapb_full_data_extraction.md:137
+Xing 2022,procedure,Elderly adults undergoing elective laparoscopic gastric cancer surgery,Verified (registry),03_CANONICAL/studies.json
+Xing 2022,age,70.41 ± 5.62 vs 68.48 ± 5.37,"Legacy (v26, not re-verified)",dashboard/data.js population
+Xing 2022,female,9/29 (31.0%) vs 7/29 (24.1%),"Legacy (v26, not re-verified)",dashboard/data.js population
+Xing 2022,bmi,22.71 ± 3.03 vs 22.99 ± 1.81,"Legacy (v26, not re-verified)",dashboard/data.js population
+Xing 2022,asa,"ASA II: 7 (24.1%), ASA III: 22 (75.9%)","Legacy (v26, not re-verified)",dashboard/data.js population
+Xing 2022,intervention_arms,TEAS + active TAPB,Canonical result register,03_CANONICAL/results.csv
+Xing 2022,control_arms,Sham TEAS + active TAPB,Canonical result register,03_CANONICAL/results.csv
+Xing 2022,acupoints,"LI4 (Hegu), PC6 (Neiguan), ST36 (Zusanli)","Legacy (v26, not re-verified)",dashboard/data.js stricta
+Xing 2022,frequency,2/100 Hz (dense-disperse),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Xing 2022,intensity,5–15 mA (to patient tolerance),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Xing 2022,timing,Preoperative (30 min before anesthesia induction),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Xing 2022,sessions,Single session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Xing 2022,session_duration,30 minutes per session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Xing 2022,postoperative_analgesia,,Not extracted,
+Xing 2022,pca_regimen,,Not extracted,
+Xing 2022,rescue_analgesia,,Not extracted,
+Xing 2022,cumulative_duration,,Not extracted,
+Xiong 2021,year,2021,Verified (registry),03_CANONICAL/studies.json
+Xiong 2021,trial_family,Xiong_2021,Verified (registry),03_CANONICAL/studies.json
+Xiong 2021,modality,TEAS,Verified (registry),03_CANONICAL/studies.json
+Xiong 2021,comparator,"Sham-Controlled (electrodes placed, no current)",Verified (registry),03_CANONICAL/studies.json
+Xiong 2021,comparator_class,sham,Verified (registry),03_CANONICAL/studies.json (study-level label; result-level class governs models)
+Xiong 2021,randomized_n,62,Verified (registry),03_CANONICAL/studies.json; source page 5
+Xiong 2021,randomized_n_counted,62,Verified (registry),03_CANONICAL/studies.json (operational family count)
+Xiong 2021,analysed_n,31 vs 31,Verified (registry),03_CANONICAL/studies.json (report-level text; outcome-specific n differs)
+Xiong 2021,country,China,Verified (registry),03_CANONICAL/studies.json
+Xiong 2021,anaesthesia,General anaesthesia,Verified (PDF quote),covidence_431_full_article.pdf p.2
+Xiong 2021,surgical_category,Abdominal & Gastrointestinal,Source-traced (extraction record),TEAS EA Verification/ChatGPT Sol Extraction/xiong_2021_covidence_431_full_data_extraction.md:108
+Xiong 2021,procedure,Laparoscopic sleeve gastrectomy,Verified (registry),03_CANONICAL/studies.json
+Xiong 2021,age,27.5 ± 8.0 vs 27.3 ± 8.3,"Legacy (v26, not re-verified)",dashboard/data.js population
+Xiong 2021,female,30/31 (96.8%) vs 30/31 (96.8%),"Legacy (v26, not re-verified)",dashboard/data.js population
+Xiong 2021,bmi,39.1 ± 6.5 vs 39.9 ± 5.8,"Legacy (v26, not re-verified)",dashboard/data.js population
+Xiong 2021,asa,"ASA II: 16 (51.6%), ASA III: 14 (45.2%), ASA IV: 1 (3.2%)","Legacy (v26, not re-verified)",dashboard/data.js population
+Xiong 2021,intervention_arms,TEAS + dexamethasone + tropisetron,Canonical result register,03_CANONICAL/results.csv
+Xiong 2021,control_arms,Dexamethasone + tropisetron,Canonical result register,03_CANONICAL/results.csv
+Xiong 2021,acupoints,"PC6 (Neiguan), ST36 (Zusanli)","Legacy (v26, not re-verified)",dashboard/data.js stricta
+Xiong 2021,frequency,2/100 Hz (dense-disperse),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Xiong 2021,intensity,5–15 mA (to patient tolerance),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Xiong 2021,timing,Preoperative (30 min before anesthesia induction),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Xiong 2021,sessions,Single session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Xiong 2021,session_duration,30 minutes per session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Xiong 2021,postoperative_analgesia,,Not extracted,
+Xiong 2021,pca_regimen,,Not extracted,
+Xiong 2021,rescue_analgesia,,Not extracted,
+Xiong 2021,cumulative_duration,,Not extracted,
+Yang 2020,year,2020,Verified (registry),03_CANONICAL/studies.json
+Yang 2020,trial_family,Yang_2020,Verified (registry),03_CANONICAL/studies.json
+Yang 2020,modality,EA,Verified (registry),03_CANONICAL/studies.json
+Yang 2020,comparator,Usual Care (Open-Label Control),Verified (registry),03_CANONICAL/studies.json
+Yang 2020,comparator_class,usual care,Verified (registry),03_CANONICAL/studies.json (study-level label; result-level class governs models)
+Yang 2020,randomized_n,59,Verified (registry),03_CANONICAL/studies.json; source page 4
+Yang 2020,randomized_n_counted,59,Verified (registry),03_CANONICAL/studies.json (operational family count)
+Yang 2020,analysed_n,EA 29 / UC 28,Verified (registry),03_CANONICAL/studies.json (report-level text; outcome-specific n differs)
+Yang 2020,country,China,Verified (registry),03_CANONICAL/studies.json
+Yang 2020,anaesthesia,,Not verified,
+Yang 2020,surgical_category,Thoracic & Cardiac,Source-traced (extraction record),TEAS EA Verification/ChatGPT Sol Extraction/yang_2020_covidence_464_full_data_extraction.md:111
+Yang 2020,procedure,Adults undergoing VATS segmentectomy or lobectomy,Verified (registry),03_CANONICAL/studies.json
+Yang 2020,age,58.93 ± 11.77 vs 56.39 ± 9.34,"Legacy (v26, not re-verified)",dashboard/data.js population
+Yang 2020,female,16/29 (55.2%) vs 10/28 (35.7%),"Legacy (v26, not re-verified)",dashboard/data.js population
+Yang 2020,bmi,not reported vs not reported,"Legacy (v26, not re-verified)",dashboard/data.js population
+Yang 2020,asa,not reported,"Legacy (v26, not re-verified)",dashboard/data.js population
+Yang 2020,intervention_arms,EA + usual care | EA group,Canonical result register,03_CANONICAL/results.csv
+Yang 2020,control_arms,UC group | Usual care,Canonical result register,03_CANONICAL/results.csv
+Yang 2020,acupoints,"PC6 (Neiguan), ST36 (Zusanli), ST37 (Shangjuxu)","Legacy (v26, not re-verified)",dashboard/data.js stricta
+Yang 2020,frequency,2/100 Hz (dense-disperse),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Yang 2020,intensity,5–15 mA (to patient tolerance),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Yang 2020,timing,Preoperative (30 min before anesthesia induction),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Yang 2020,sessions,Single session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Yang 2020,session_duration,30 minutes per session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Yang 2020,postoperative_analgesia,,Not extracted,
+Yang 2020,pca_regimen,,Not extracted,
+Yang 2020,rescue_analgesia,,Not extracted,
+Yang 2020,cumulative_duration,,Not extracted,
+Yang 2024,year,2024,Verified (registry),03_CANONICAL/studies.json
+Yang 2024,trial_family,Yang_2024,Verified (registry),03_CANONICAL/studies.json
+Yang 2024,modality,EA,Verified (registry),03_CANONICAL/studies.json
+Yang 2024,comparator,Usual Care (Open-Label Control),Verified (registry),03_CANONICAL/studies.json
+Yang 2024,comparator_class,usual care,Verified (registry),03_CANONICAL/studies.json (study-level label; result-level class governs models)
+Yang 2024,randomized_n,180,Verified (registry),03_CANONICAL/studies.json; source page 1
+Yang 2024,randomized_n_counted,180,Verified (registry),03_CANONICAL/studies.json (operational family count)
+Yang 2024,analysed_n,90 vs 90,Verified (registry),03_CANONICAL/studies.json (report-level text; outcome-specific n differs)
+Yang 2024,country,China,Verified (registry),03_CANONICAL/studies.json
+Yang 2024,anaesthesia,General anaesthesia + paravertebral block,Verified (registry),03_CANONICAL/studies.json
+Yang 2024,surgical_category,Thoracic & Cardiac,Source-traced (extraction record),TEAS EA Verification/ChatGPT Sol Extraction/yang_2024_covidence_1930_full_data_extraction.md:114
+Yang 2024,procedure,VATS lobectomy or segmentectomy,Verified (registry),03_CANONICAL/studies.json
+Yang 2024,age,52.7 ±11.0 / 55.8 ±11.6 years,Verified (registry),03_CANONICAL/studies.json
+Yang 2024,female,Female66/90 /56/90,Verified (registry),03_CANONICAL/studies.json
+Yang 2024,bmi,not reported vs not reported,"Legacy (v26, not re-verified)",dashboard/data.js population
+Yang 2024,asa,not reported,"Legacy (v26, not re-verified)",dashboard/data.js population
+Yang 2024,intervention_arms,Perioperative EA + usual care,Canonical result register,03_CANONICAL/results.csv
+Yang 2024,control_arms,Usual care,Canonical result register,03_CANONICAL/results.csv
+Yang 2024,acupoints,"PC6 (Neiguan), ST36 (Zusanli), ST37 (Shangjuxu)","Legacy (v26, not re-verified)",dashboard/data.js stricta
+Yang 2024,frequency,2/100 Hz (dense-disperse),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Yang 2024,intensity,5–15 mA (to patient tolerance),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Yang 2024,timing,Preoperative (30 min before anesthesia induction),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Yang 2024,sessions,Single session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Yang 2024,session_duration,30 minutes per session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Yang 2024,postoperative_analgesia,,Not extracted,
+Yang 2024,pca_regimen,,Not extracted,
+Yang 2024,rescue_analgesia,,Not extracted,
+Yang 2024,cumulative_duration,,Not extracted,
+Yao 2015,year,2015,Verified (registry),03_CANONICAL/studies.json
+Yao 2015,trial_family,Yao_2015,Verified (registry),03_CANONICAL/studies.json
+Yao 2015,modality,TEAS,Verified (registry),03_CANONICAL/studies.json
+Yao 2015,comparator,Sham-Controlled (Placebo Double-Blind),Verified (registry),03_CANONICAL/studies.json
+Yao 2015,comparator_class,sham,Verified (registry),03_CANONICAL/studies.json (study-level label; result-level class governs models)
+Yao 2015,randomized_n,74,Verified (registry),03_CANONICAL/studies.json; source page 3
+Yao 2015,randomized_n_counted,74,Verified (registry),03_CANONICAL/studies.json (operational family count)
+Yao 2015,analysed_n,35 / 36,Verified (registry),03_CANONICAL/studies.json (report-level text; outcome-specific n differs)
+Yao 2015,country,China,Verified (registry),03_CANONICAL/studies.json
+Yao 2015,anaesthesia,General anaesthesia,Verified (PDF quote),039_yao_2015.pdf p.2
+Yao 2015,surgical_category,Gynecologic & Breast,Source-traced (extraction record),TEAS EA Verification/ChatGPT Sol Extraction/yao_2015_full_data_extraction.md:105
+Yao 2015,procedure,Ovarian cystectomy or myomectomy,Verified (registry),03_CANONICAL/studies.json
+Yao 2015,age,34.2 ± 7.2 vs 35.6 ± 8.7,"Legacy (v26, not re-verified)",dashboard/data.js population
+Yao 2015,female,35/35 (100%) vs 36/36 (100%),"Legacy (v26, not re-verified)",dashboard/data.js population
+Yao 2015,bmi,not reported vs not reported,"Legacy (v26, not re-verified)",dashboard/data.js population
+Yao 2015,asa,"ASA I: 34 (97.1%), ASA II: 1 (2.9%)","Legacy (v26, not re-verified)",dashboard/data.js population
+Yao 2015,intervention_arms,Preoperative TEAS,Canonical result register,03_CANONICAL/results.csv
+Yao 2015,control_arms,Control/no current,Canonical result register,03_CANONICAL/results.csv
+Yao 2015,acupoints,"LI4 (Hegu), PC6 (Neiguan), ST36 (Zusanli), SP6 (Sanyinjiao)","Legacy (v26, not re-verified)",dashboard/data.js stricta
+Yao 2015,frequency,2/100 Hz (dense-disperse),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Yao 2015,intensity,5–15 mA (to patient tolerance),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Yao 2015,timing,Preoperative (30 min before anesthesia induction),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Yao 2015,sessions,Single session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Yao 2015,session_duration,30 minutes per session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Yao 2015,postoperative_analgesia,,Not extracted,
+Yao 2015,pca_regimen,,Not extracted,
+Yao 2015,rescue_analgesia,,Not extracted,
+Yao 2015,cumulative_duration,,Not extracted,
+Yeh 2010,year,2010,Verified (registry),03_CANONICAL/studies.json
+Yeh 2010,trial_family,Yeh_probable_family,Verified (registry),03_CANONICAL/studies.json
+Yeh 2010,modality,TEAS,Verified (registry),03_CANONICAL/studies.json
+Yeh 2010,comparator,Sham-Controlled (Placebo Double-Blind),Verified (registry),03_CANONICAL/studies.json
+Yeh 2010,comparator_class,sham,Verified (registry),03_CANONICAL/studies.json (study-level label; result-level class governs models)
+Yeh 2010,randomized_n,99,Verified (registry),03_CANONICAL/studies.json; source page 6
+Yeh 2010,randomized_n_counted,99,Verified (registry),03_CANONICAL/studies.json (operational family count)
+Yeh 2010,analysed_n,33 vs 30 analyzed,Verified (registry),03_CANONICAL/studies.json (report-level text; outcome-specific n differs)
+Yeh 2010,country,Taiwan,Verified (registry),03_CANONICAL/studies.json
+Yeh 2010,anaesthesia,General anaesthesia,Verified (PDF quote),015_PainATHM-2.pdf p.2
+Yeh 2010,surgical_category,Orthopedic & Spine,Source-traced (extraction record),TEAS EA Verification/ChatGPT Sol Extraction/yeh_2010_spinal_aes_full_data_extraction.md:97
+Yeh 2010,procedure,Patients undergoing surgery for nontraumatic lumbar spine injury/disorders,Verified (registry),03_CANONICAL/studies.json
+Yeh 2010,age,60.7 ± 12.0 vs 57.2 ± 15.7,"Legacy (v26, not re-verified)",dashboard/data.js population
+Yeh 2010,female,22/33 (66.7%) vs 21/30 (70.0%),"Legacy (v26, not re-verified)",dashboard/data.js population
+Yeh 2010,bmi,not reported vs not reported,"Legacy (v26, not re-verified)",dashboard/data.js population
+Yeh 2010,asa,not reported,"Legacy (v26, not re-verified)",dashboard/data.js population
+Yeh 2010,intervention_arms,True-acupoint AES,Canonical result register,03_CANONICAL/results.csv
+Yeh 2010,control_arms,Electrical sham/nonmeridian AES | No-AES control,Canonical result register,03_CANONICAL/results.csv
+Yeh 2010,acupoints,"LI4 (Hegu), PC6 (Neiguan), ST36 (Zusanli), SP6 (Sanyinjiao)","Legacy (v26, not re-verified)",dashboard/data.js stricta
+Yeh 2010,frequency,2/100 Hz (dense-disperse),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Yeh 2010,intensity,5–15 mA (to patient tolerance),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Yeh 2010,timing,Preoperative (30 min before anesthesia induction),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Yeh 2010,sessions,Single session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Yeh 2010,session_duration,30 minutes per session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Yeh 2010,postoperative_analgesia,,Not extracted,
+Yeh 2010,pca_regimen,,Not extracted,
+Yeh 2010,rescue_analgesia,,Not extracted,
+Yeh 2010,cumulative_duration,,Not extracted,
+Yeh 2011,year,2011,Verified (registry),03_CANONICAL/studies.json
+Yeh 2011,trial_family,Yeh_probable_family,Verified (registry),03_CANONICAL/studies.json
+Yeh 2011,modality,TEAS,Verified (registry),03_CANONICAL/studies.json
+Yeh 2011,comparator,Sham-Controlled (Placebo Double-Blind),Verified (registry),03_CANONICAL/studies.json
+Yeh 2011,comparator_class,sham,Verified (registry),03_CANONICAL/studies.json (study-level label; result-level class governs models)
+Yeh 2011,randomized_n,90,Verified (registry),03_CANONICAL/studies.json; source page 2
+Yeh 2011,randomized_n_counted,0,Verified (registry),03_CANONICAL/studies.json (operational family count)
+Yeh 2011,analysed_n,30 vs 30,Verified (registry),03_CANONICAL/studies.json (report-level text; outcome-specific n differs)
+Yeh 2011,country,Taiwan,Verified (registry),03_CANONICAL/studies.json
+Yeh 2011,anaesthesia,General anaesthesia,Verified (PDF quote),covidence_828_full_article.pdf p.4
+Yeh 2011,surgical_category,Orthopedic & Spine,Source-traced (extraction record),TEAS EA Verification/ChatGPT Sol Extraction/yeh_2011_covidence_828_full_data_extraction.md:94
+Yeh 2011,procedure,Patients undergoing surgery for non-traumatic lumbar spine disorders,Verified (registry),03_CANONICAL/studies.json
+Yeh 2011,age,60.7 ± 12.0 vs 57.2 ± 15.7,"Legacy (v26, not re-verified)",dashboard/data.js population
+Yeh 2011,female,20/30 (66.7%) vs 21/30 (70.0%),"Legacy (v26, not re-verified)",dashboard/data.js population
+Yeh 2011,bmi,not reported vs not reported,"Legacy (v26, not re-verified)",dashboard/data.js population
+Yeh 2011,asa,not reported,"Legacy (v26, not re-verified)",dashboard/data.js population
+Yeh 2011,intervention_arms,True-acupoint AES,Canonical result register,03_CANONICAL/results.csv
+Yeh 2011,control_arms,Electrical sham/nonacupoint AES | No-AES control,Canonical result register,03_CANONICAL/results.csv
+Yeh 2011,acupoints,"LI4 (Hegu), PC6 (Neiguan), ST36 (Zusanli), SP6 (Sanyinjiao)","Legacy (v26, not re-verified)",dashboard/data.js stricta
+Yeh 2011,frequency,2/100 Hz (dense-disperse),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Yeh 2011,intensity,5–15 mA (to patient tolerance),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Yeh 2011,timing,Preoperative (30 min before anesthesia induction),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Yeh 2011,sessions,Single session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Yeh 2011,session_duration,30 minutes per session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Yeh 2011,postoperative_analgesia,,Not extracted,
+Yeh 2011,pca_regimen,,Not extracted,
+Yeh 2011,rescue_analgesia,,Not extracted,
+Yeh 2011,cumulative_duration,,Not extracted,
+Yu 2020,year,2020,Verified (registry),03_CANONICAL/studies.json
+Yu 2020,trial_family,Yu_2020,Verified (registry),03_CANONICAL/studies.json
+Yu 2020,modality,TEAS,Verified (registry),03_CANONICAL/studies.json
+Yu 2020,comparator,Sham-Controlled (Placebo Double-Blind),Verified (registry),03_CANONICAL/studies.json
+Yu 2020,comparator_class,sham,Verified (registry),03_CANONICAL/studies.json (study-level label; result-level class governs models)
+Yu 2020,randomized_n,60,Verified (registry),03_CANONICAL/studies.json; source page 3
+Yu 2020,randomized_n_counted,60,Verified (registry),03_CANONICAL/studies.json (operational family count)
+Yu 2020,analysed_n,30 / 30,Verified (registry),03_CANONICAL/studies.json (report-level text; outcome-specific n differs)
+Yu 2020,country,China,Verified (registry),03_CANONICAL/studies.json
+Yu 2020,anaesthesia,,Not verified,
+Yu 2020,surgical_category,Gynecologic & Breast,Source-traced (extraction record),TEAS EA Verification/ChatGPT Sol Extraction/yu_2020_gynecological_laparoscopy_teas_full_data_extraction.md:103
+Yu 2020,procedure,Adults undergoing elective gynecological laparoscopic surgery,Verified (registry),03_CANONICAL/studies.json
+Yu 2020,age,48.5 ± 16.2 vs 45.9 ± 17.5,"Legacy (v26, not re-verified)",dashboard/data.js population
+Yu 2020,female,30/30 (100%) vs 30/30 (100%),"Legacy (v26, not re-verified)",dashboard/data.js population
+Yu 2020,bmi,22.0 ± 3.4 vs 22.1 ± 4.5,"Legacy (v26, not re-verified)",dashboard/data.js population
+Yu 2020,asa,"ASA I: 22 (73.3%), ASA II: 8 (26.7%)","Legacy (v26, not re-verified)",dashboard/data.js population
+Yu 2020,intervention_arms,Preoperative TEAS,Canonical result register,03_CANONICAL/results.csv
+Yu 2020,control_arms,Control/no current | Control/no current (electrodes applied),Canonical result register,03_CANONICAL/results.csv
+Yu 2020,acupoints,"GV20 (Baihui), EX-HN3 (Yingtang), ST36 (Zusanli), PC6 (Neiguan)","Legacy (v26, not re-verified)",dashboard/data.js stricta
+Yu 2020,frequency,2/100 Hz (dense-disperse),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Yu 2020,intensity,5–15 mA (to patient tolerance),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Yu 2020,timing,Preoperative (30 min before anesthesia induction),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Yu 2020,sessions,Single session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Yu 2020,session_duration,30 minutes per session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Yu 2020,postoperative_analgesia,,Not extracted,
+Yu 2020,pca_regimen,,Not extracted,
+Yu 2020,rescue_analgesia,,Not extracted,
+Yu 2020,cumulative_duration,,Not extracted,
+Zhan 2020,year,2020,Verified (registry),03_CANONICAL/studies.json
+Zhan 2020,trial_family,Zhan_2020,Verified (registry),03_CANONICAL/studies.json
+Zhan 2020,modality,TEAS,Verified (registry),03_CANONICAL/studies.json
+Zhan 2020,comparator,Usual Care (Open-Label Control),Verified (registry),03_CANONICAL/studies.json
+Zhan 2020,comparator_class,usual care,Verified (registry),03_CANONICAL/studies.json (study-level label; result-level class governs models)
+Zhan 2020,randomized_n,90,Verified (registry),03_CANONICAL/studies.json; source page 2
+Zhan 2020,randomized_n_counted,90,Verified (registry),03_CANONICAL/studies.json (operational family count)
+Zhan 2020,analysed_n,30 vs 30,Verified (registry),03_CANONICAL/studies.json (report-level text; outcome-specific n differs)
+Zhan 2020,country,China,Verified (registry),03_CANONICAL/studies.json
+Zhan 2020,anaesthesia,,Not verified,
+Zhan 2020,surgical_category,Abdominal & Gastrointestinal,Source-traced (extraction record),TEAS EA Verification/ChatGPT Sol Extraction/zhan_2020_covidence_1389_full_data_extraction.md:102
+Zhan 2020,procedure,"Total gastrectomy, partial gastrectomy, radical colectomy",Verified (registry),03_CANONICAL/studies.json
+Zhan 2020,age,64.6 ± 14.6 vs 58.4 ± 13.8,"Legacy (v26, not re-verified)",dashboard/data.js population
+Zhan 2020,female,15/30 (50.0%) vs 15/30 (50.0%),"Legacy (v26, not re-verified)",dashboard/data.js population
+Zhan 2020,bmi,23.1 ± 2.9 vs 22.9 ± 4.0,"Legacy (v26, not re-verified)",dashboard/data.js population
+Zhan 2020,asa,100% ASA I–II,"Legacy (v26, not re-verified)",dashboard/data.js population
+Zhan 2020,intervention_arms,TAP block + postoperative TEAS,Canonical result register,03_CANONICAL/results.csv
+Zhan 2020,control_arms,TAP block,Canonical result register,03_CANONICAL/results.csv
+Zhan 2020,acupoints,"ST36 (Zusanli), SP6 (Sanyinjiao), LI4 (Hegu), LR3 (Taichong)","Legacy (v26, not re-verified)",dashboard/data.js stricta
+Zhan 2020,frequency,2/100 Hz (dense-disperse),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Zhan 2020,intensity,5–15 mA (to patient tolerance),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Zhan 2020,timing,Preoperative (30 min before anesthesia induction),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Zhan 2020,sessions,Single session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Zhan 2020,session_duration,30 minutes per session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Zhan 2020,postoperative_analgesia,,Not extracted,
+Zhan 2020,pca_regimen,,Not extracted,
+Zhan 2020,rescue_analgesia,,Not extracted,
+Zhan 2020,cumulative_duration,,Not extracted,
+Zhang 2014,year,2014,Verified (registry),03_CANONICAL/studies.json
+Zhang 2014,trial_family,Zhang_2014,Verified (registry),03_CANONICAL/studies.json
+Zhang 2014,modality,TEAS,Verified (registry),03_CANONICAL/studies.json
+Zhang 2014,comparator,Sham-Controlled (Placebo Double-Blind),Verified (registry),03_CANONICAL/studies.json
+Zhang 2014,comparator_class,sham,Verified (registry),03_CANONICAL/studies.json (study-level label; result-level class governs models)
+Zhang 2014,randomized_n,72,Verified (registry),03_CANONICAL/studies.json; source page 4
+Zhang 2014,randomized_n_counted,72,Verified (registry),03_CANONICAL/studies.json (operational family count)
+Zhang 2014,analysed_n,33 vs 32,Verified (registry),03_CANONICAL/studies.json (report-level text; outcome-specific n differs)
+Zhang 2014,country,China,Verified (registry),03_CANONICAL/studies.json
+Zhang 2014,anaesthesia,,Not verified,
+Zhang 2014,surgical_category,Gynecologic & Breast,Source-traced (extraction record),TEAS EA Verification/ChatGPT Sol Extraction/zhang_2014_breast_surgery_teas_full_data_extraction.md:106
+Zhang 2014,procedure,Women undergoing elective cosmetic breast surgery,Verified (registry),03_CANONICAL/studies.json
+Zhang 2014,age,35.0 ± 7.6 vs 34.3 ± 9.1,"Legacy (v26, not re-verified)",dashboard/data.js population
+Zhang 2014,female,33/33 (100%) vs 32/32 (100%),"Legacy (v26, not re-verified)",dashboard/data.js population
+Zhang 2014,bmi,22.5 ± 1.2 vs 22.2 ± 1.1,"Legacy (v26, not re-verified)",dashboard/data.js population
+Zhang 2014,asa,100% ASA I–II,"Legacy (v26, not re-verified)",dashboard/data.js population
+Zhang 2014,intervention_arms,Preoperative TEAS,Canonical result register,03_CANONICAL/results.csv
+Zhang 2014,control_arms,Sham/no current,Canonical result register,03_CANONICAL/results.csv
+Zhang 2014,acupoints,"LI4 (Hegu), PC6 (Neiguan), ST36 (Zusanli), SP6 (Sanyinjiao)","Legacy (v26, not re-verified)",dashboard/data.js stricta
+Zhang 2014,frequency,2/100 Hz (dense-disperse),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Zhang 2014,intensity,5–15 mA (to patient tolerance),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Zhang 2014,timing,Preoperative (30 min before anesthesia induction),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Zhang 2014,sessions,Single session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Zhang 2014,session_duration,30 minutes per session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Zhang 2014,postoperative_analgesia,,Not extracted,
+Zhang 2014,pca_regimen,,Not extracted,
+Zhang 2014,rescue_analgesia,,Not extracted,
+Zhang 2014,cumulative_duration,,Not extracted,
+Zhang 2018,year,2018,Verified (registry),03_CANONICAL/studies.json
+Zhang 2018,trial_family,Zhang_2018,Verified (registry),03_CANONICAL/studies.json
+Zhang 2018,modality,TEAS,Verified (registry),03_CANONICAL/studies.json
+Zhang 2018,comparator,Sham-Controlled (Placebo Double-Blind),Verified (registry),03_CANONICAL/studies.json
+Zhang 2018,comparator_class,sham,Verified (registry),03_CANONICAL/studies.json (study-level label; result-level class governs models)
+Zhang 2018,randomized_n,42,Verified (registry),03_CANONICAL/studies.json; source page 3
+Zhang 2018,randomized_n_counted,42,Verified (registry),03_CANONICAL/studies.json (operational family count)
+Zhang 2018,analysed_n,21 / 21,Verified (registry),03_CANONICAL/studies.json (report-level text; outcome-specific n differs)
+Zhang 2018,country,China,Verified (registry),03_CANONICAL/studies.json
+Zhang 2018,anaesthesia,,Not verified,
+Zhang 2018,surgical_category,Abdominal & Gastrointestinal,Source-traced (extraction record),dashboard/data.js:None
+Zhang 2018,procedure,Open abdominal GI-cancer surgery,Verified (registry),03_CANONICAL/studies.json
+Zhang 2018,age,not reported vs not reported,"Legacy (v26, not re-verified)",dashboard/data.js population
+Zhang 2018,female,not reported vs not reported,"Legacy (v26, not re-verified)",dashboard/data.js population
+Zhang 2018,bmi,not reported vs not reported,"Legacy (v26, not re-verified)",dashboard/data.js population
+Zhang 2018,asa,not reported,"Legacy (v26, not re-verified)",dashboard/data.js population
+Zhang 2018,intervention_arms,"Postoperative needleless TEA at bilateral ST36 and PC6; 25 Hz, 0.5-ms pulse width, 2–10 mA; 1 h twice daily on POD1–3",Canonical result register,03_CANONICAL/results.csv
+Zhang 2018,control_arms,Active electrical stimulation at non-acupoints with the same stimulation method,Canonical result register,03_CANONICAL/results.csv
+Zhang 2018,acupoints,"ST36, PC6 (bilateral)","Legacy (v26, not re-verified)",dashboard/data.js stricta
+Zhang 2018,frequency,"25 Hz, 0.5-ms pulse width","Legacy (v26, not re-verified)",dashboard/data.js stricta
+Zhang 2018,intensity,2-10 mA,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Zhang 2018,timing,1 h twice daily on postoperative days 1-3,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Zhang 2018,sessions,Repeated sessions (6),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Zhang 2018,session_duration,1 h x 2 sessions/day x 3 days,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Zhang 2018,postoperative_analgesia,,Not extracted,
+Zhang 2018,pca_regimen,,Not extracted,
+Zhang 2018,rescue_analgesia,,Not extracted,
+Zhang 2018,cumulative_duration,,Not extracted,
+Zhang 2023,year,2023,Verified (registry),03_CANONICAL/studies.json
+Zhang 2023,trial_family,Zhang_2023,Verified (registry),03_CANONICAL/studies.json
+Zhang 2023,modality,TEAS,Verified (registry),03_CANONICAL/studies.json
+Zhang 2023,comparator,Sham-Controlled (Placebo Double-Blind),Verified (registry),03_CANONICAL/studies.json
+Zhang 2023,comparator_class,sham,Verified (registry),03_CANONICAL/studies.json (study-level label; result-level class governs models)
+Zhang 2023,randomized_n,1948,Verified (registry),03_CANONICAL/studies.json; source page 5
+Zhang 2023,randomized_n_counted,1948,Verified (registry),03_CANONICAL/studies.json (operational family count)
+Zhang 2023,analysed_n,922 vs 916,Verified (registry),03_CANONICAL/studies.json (report-level text; outcome-specific n differs)
+Zhang 2023,country,China,Verified (registry),03_CANONICAL/studies.json
+Zhang 2023,anaesthesia,,Not verified,
+Zhang 2023,surgical_category,Abdominal & Gastrointestinal,Source-traced (extraction record),TEAS EA Verification/ChatGPT Sol Extraction/zhang_2023_covidence_308_full_data_extraction.md:78
+Zhang 2023,procedure,Elective laparoscopic cholecystectomy,Verified (registry),03_CANONICAL/studies.json
+Zhang 2023,age,58.9 ± 8.6 vs 59.1 ± 8.4,"Legacy (v26, not re-verified)",dashboard/data.js population
+Zhang 2023,female,562/922 (61.0%) vs 533/916 (58.2%),"Legacy (v26, not re-verified)",dashboard/data.js population
+Zhang 2023,bmi,25.2 ± 3.3 vs 25.2 ± 3.4,"Legacy (v26, not re-verified)",dashboard/data.js population
+Zhang 2023,asa,not reported,"Legacy (v26, not re-verified)",dashboard/data.js population
+Zhang 2023,intervention_arms,TEAS,Canonical result register,03_CANONICAL/results.csv
+Zhang 2023,control_arms,Sham/no current,Canonical result register,03_CANONICAL/results.csv
+Zhang 2023,acupoints,"BL32 (Ciliao), CV3 (Zhongji), CV4 (Guanyuan), SP6 (Sanyinjiao)","Legacy (v26, not re-verified)",dashboard/data.js stricta
+Zhang 2023,frequency,2/100 Hz (dense-disperse),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Zhang 2023,intensity,5–15 mA (to patient tolerance),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Zhang 2023,timing,Preoperative (30 min before anesthesia induction),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Zhang 2023,sessions,Single session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Zhang 2023,session_duration,30 minutes per session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Zhang 2023,postoperative_analgesia,,Not extracted,
+Zhang 2023,pca_regimen,,Not extracted,
+Zhang 2023,rescue_analgesia,,Not extracted,
+Zhang 2023,cumulative_duration,,Not extracted,
+Zhang 2025,year,2025,Verified (registry),03_CANONICAL/studies.json
+Zhang 2025,trial_family,Zhang_2025,Verified (registry),03_CANONICAL/studies.json
+Zhang 2025,modality,TEAS,Verified (registry),03_CANONICAL/studies.json
+Zhang 2025,comparator,Sham-Controlled (Placebo Double-Blind),Verified (registry),03_CANONICAL/studies.json
+Zhang 2025,comparator_class,sham,Verified (registry),03_CANONICAL/studies.json (study-level label; result-level class governs models)
+Zhang 2025,randomized_n,108,Verified (registry),03_CANONICAL/studies.json; source page 5
+Zhang 2025,randomized_n_counted,108,Verified (registry),03_CANONICAL/studies.json (operational family count)
+Zhang 2025,analysed_n,45 vs 48,Verified (registry),03_CANONICAL/studies.json (report-level text; outcome-specific n differs)
+Zhang 2025,country,China,Verified (registry),03_CANONICAL/studies.json
+Zhang 2025,anaesthesia,General anaesthesia,Verified (PDF quote),109551.pdf p.4
+Zhang 2025,surgical_category,Gynecologic & Breast,Source-traced (extraction record),TEAS EA Verification/ChatGPT Sol Extraction/zhang_2025_laparoscopic_hysterectomy_teas_full_data_extraction.md:130
+Zhang 2025,procedure,Patients undergoing elective laparoscopic hysterectomy,Verified (registry),03_CANONICAL/studies.json
+Zhang 2025,age,51.91 ± 7.37 vs 50.31 ± 6.46,"Legacy (v26, not re-verified)",dashboard/data.js population
+Zhang 2025,female,45/45 (100%) vs 48/48 (100%),"Legacy (v26, not re-verified)",dashboard/data.js population
+Zhang 2025,bmi,23.63 ± 2.72 vs 24.52 ± 3.09,"Legacy (v26, not re-verified)",dashboard/data.js population
+Zhang 2025,asa,100% ASA I–II,"Legacy (v26, not re-verified)",dashboard/data.js population
+Zhang 2025,intervention_arms,Perioperative TEAS,Canonical result register,03_CANONICAL/results.csv
+Zhang 2025,control_arms,Sub-sensory sham,Canonical result register,03_CANONICAL/results.csv
+Zhang 2025,acupoints,"LI4 (Hegu), PC6 (Neiguan), SP6 (Sanyinjiao), ST36 (Zusanli)","Legacy (v26, not re-verified)",dashboard/data.js stricta
+Zhang 2025,frequency,2/100 Hz (dense-disperse),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Zhang 2025,intensity,5–15 mA (to patient tolerance),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Zhang 2025,timing,Preoperative (30 min before anesthesia induction),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Zhang 2025,sessions,Single session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Zhang 2025,session_duration,30 minutes per session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Zhang 2025,postoperative_analgesia,,Not extracted,
+Zhang 2025,pca_regimen,,Not extracted,
+Zhang 2025,rescue_analgesia,,Not extracted,
+Zhang 2025,cumulative_duration,,Not extracted,
+Zheng 2025,year,2025,Verified (registry),03_CANONICAL/studies.json
+Zheng 2025,trial_family,Zheng_2025,Verified (registry),03_CANONICAL/studies.json
+Zheng 2025,modality,TEAS,Verified (registry),03_CANONICAL/studies.json
+Zheng 2025,comparator,Sham-Controlled (Placebo Double-Blind),Verified (registry),03_CANONICAL/studies.json
+Zheng 2025,comparator_class,sham,Verified (registry),03_CANONICAL/studies.json (study-level label; result-level class governs models)
+Zheng 2025,randomized_n,88,Verified (registry),03_CANONICAL/studies.json; source page 5
+Zheng 2025,randomized_n_counted,88,Verified (registry),03_CANONICAL/studies.json (operational family count)
+Zheng 2025,analysed_n,42 vs 43,Verified (registry),03_CANONICAL/studies.json (report-level text; outcome-specific n differs)
+Zheng 2025,country,China,Verified (registry),03_CANONICAL/studies.json
+Zheng 2025,anaesthesia,General anaesthesia,Verified (PDF quote),109499.pdf p.1
+Zheng 2025,surgical_category,Gynecologic & Breast,Source-traced (extraction record),TEAS EA Verification/ChatGPT Sol Extraction/zheng_2025_gynecological_laparoscopy_teas_full_data_extraction.md:116
+Zheng 2025,procedure,Patients undergoing gynecological laparoscopic surgery under general anesthesia,Verified (registry),03_CANONICAL/studies.json
+Zheng 2025,age,42.1 ± 16.3 vs 44.9 ± 12.6,"Legacy (v26, not re-verified)",dashboard/data.js population
+Zheng 2025,female,42/42 (100%) vs 43/43 (100%),"Legacy (v26, not re-verified)",dashboard/data.js population
+Zheng 2025,bmi,24.7 ± 2.2 vs 25.1 ± 2.3,"Legacy (v26, not re-verified)",dashboard/data.js population
+Zheng 2025,asa,"ASA I: 12 (27.9%), ASA II: 30 (71.4%)","Legacy (v26, not re-verified)",dashboard/data.js population
+Zheng 2025,intervention_arms,Perioperative TEAS,Canonical result register,03_CANONICAL/results.csv
+Zheng 2025,control_arms,Sham/no current,Canonical result register,03_CANONICAL/results.csv
+Zheng 2025,acupoints,"PC6 (Neiguan), ST36 (Zusanli), LI4 (Hegu)","Legacy (v26, not re-verified)",dashboard/data.js stricta
+Zheng 2025,frequency,2/100 Hz (dense-disperse),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Zheng 2025,intensity,5–15 mA (to patient tolerance),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Zheng 2025,timing,Preoperative (30 min before anesthesia induction),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Zheng 2025,sessions,Single session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Zheng 2025,session_duration,30 minutes per session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Zheng 2025,postoperative_analgesia,,Not extracted,
+Zheng 2025,pca_regimen,,Not extracted,
+Zheng 2025,rescue_analgesia,,Not extracted,
+Zheng 2025,cumulative_duration,,Not extracted,
+Zhou 2021,year,2021,Verified (registry),03_CANONICAL/studies.json
+Zhou 2021,trial_family,Zhou_2021,Verified (registry),03_CANONICAL/studies.json
+Zhou 2021,modality,TEAS,Verified (registry),03_CANONICAL/studies.json
+Zhou 2021,comparator,Usual Care (Open-Label Control),Verified (registry),03_CANONICAL/studies.json
+Zhou 2021,comparator_class,usual care,Verified (registry),03_CANONICAL/studies.json (study-level label; result-level class governs models)
+Zhou 2021,randomized_n,82,Verified (registry),03_CANONICAL/studies.json; source page 4
+Zhou 2021,randomized_n_counted,82,Verified (registry),03_CANONICAL/studies.json (operational family count)
+Zhou 2021,analysed_n,41 vs 40,Verified (registry),03_CANONICAL/studies.json (report-level text; outcome-specific n differs)
+Zhou 2021,country,China,Verified (registry),03_CANONICAL/studies.json
+Zhou 2021,anaesthesia,Epidural-assisted general anesthesia required by eligibility criteria,Verified (registry),03_CANONICAL/studies.json
+Zhou 2021,surgical_category,Abdominal & Gastrointestinal,Source-traced (extraction record),TEAS EA Verification/ChatGPT Sol Extraction/zhou_2021_gastric_cancer_teas_full_data_extraction.md:112
+Zhou 2021,procedure,Patients undergoing radical gastrectomy for gastric cancer,Verified (registry),03_CANONICAL/studies.json
+Zhou 2021,age,58.71 ± 9.27 vs 60.83 ± 9.14,"Legacy (v26, not re-verified)",dashboard/data.js population
+Zhou 2021,female,14/41 (34.1%) vs 12/40 (30.0%),"Legacy (v26, not re-verified)",dashboard/data.js population
+Zhou 2021,bmi,23.93 ± 2.82 vs 23.93 ± 2.70,"Legacy (v26, not re-verified)",dashboard/data.js population
+Zhou 2021,asa,"ASA I: 0, ASA II: 35 (85.4%), ASA III: 6 (14.6%)","Legacy (v26, not re-verified)",dashboard/data.js population
+Zhou 2021,intervention_arms,Postoperative TEAS + ERAS,Canonical result register,03_CANONICAL/results.csv
+Zhou 2021,control_arms,ERAS/usual care,Canonical result register,03_CANONICAL/results.csv
+Zhou 2021,acupoints,"LI4 (Hegu), PC6 (Neiguan), BL21 (Weishu), BL27 (Xiaochangshu), ST36 (Zusanli), ST37 (Shangjuxu)","Legacy (v26, not re-verified)",dashboard/data.js stricta
+Zhou 2021,frequency,2/100 Hz (dense-disperse),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Zhou 2021,intensity,5–15 mA (to patient tolerance),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Zhou 2021,timing,Preoperative (30 min before anesthesia induction),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Zhou 2021,sessions,Single session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Zhou 2021,session_duration,30 minutes per session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Zhou 2021,postoperative_analgesia,,Not extracted,
+Zhou 2021,pca_regimen,,Not extracted,
+Zhou 2021,rescue_analgesia,,Not extracted,
+Zhou 2021,cumulative_duration,,Not extracted,
+Zhu 2022,year,2022,Verified (registry),03_CANONICAL/studies.json
+Zhu 2022,trial_family,Zhu_2022,Verified (registry),03_CANONICAL/studies.json
+Zhu 2022,modality,EA,Verified (registry),03_CANONICAL/studies.json
+Zhu 2022,comparator,Usual Care (Open-Label Control),Verified (registry),03_CANONICAL/studies.json
+Zhu 2022,comparator_class,usual care,Verified (registry),03_CANONICAL/studies.json (study-level label; result-level class governs models)
+Zhu 2022,randomized_n,413,Verified (registry),03_CANONICAL/studies.json; source page 4
+Zhu 2022,randomized_n_counted,413,Verified (registry),03_CANONICAL/studies.json (operational family count)
+Zhu 2022,analysed_n,Pre 101; usual care 101,Verified (registry),03_CANONICAL/studies.json (report-level text; outcome-specific n differs)
+Zhu 2022,country,China,Verified (registry),03_CANONICAL/studies.json
+Zhu 2022,anaesthesia,,Not verified,
+Zhu 2022,surgical_category,Gynecologic & Breast,Source-traced (extraction record),TEAS EA Verification/ChatGPT Sol Extraction/zhu_2022_covidence_381_full_data_extraction.md:121
+Zhu 2022,procedure,"Laparoscopic hysterectomy, myomectomy, oophorectomy, salpingo-oophorectomy, ovarian cystectomy",Verified (registry),03_CANONICAL/studies.json
+Zhu 2022,age,35.6 ± 8.1 vs 35.7 ± 8.0,"Legacy (v26, not re-verified)",dashboard/data.js population
+Zhu 2022,female,101/101 (100%) vs 101/101 (100%),"Legacy (v26, not re-verified)",dashboard/data.js population
+Zhu 2022,bmi,22.9 ± 3.13 vs 22.97 ± 3.43,"Legacy (v26, not re-verified)",dashboard/data.js population
+Zhu 2022,asa,"ASA I: 21 (20.8%), ASA II: 80 (79.2%)","Legacy (v26, not re-verified)",dashboard/data.js population
+Zhu 2022,intervention_arms,EA 30 min before surgery | EA day before + 30 min before | EA day before surgery | Group 30 — EA 30 min before surgery | Group Comb — EA day before + 30 min before surgery | Group Pre — EA day before surgery,Canonical result register,03_CANONICAL/results.csv
+Zhu 2022,control_arms,Group Usual — usual care alone | Usual care alone,Canonical result register,03_CANONICAL/results.csv
+Zhu 2022,acupoints,"ST36 (Zusanli), SP6 (Sanyinjiao)","Legacy (v26, not re-verified)",dashboard/data.js stricta
+Zhu 2022,frequency,2/100 Hz (dense-disperse),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Zhu 2022,intensity,5–15 mA (to patient tolerance),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Zhu 2022,timing,Preoperative (30 min before anesthesia induction),"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Zhu 2022,sessions,Single session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Zhu 2022,session_duration,30 minutes per session,"Legacy (v26, not re-verified)",dashboard/data.js stricta
+Zhu 2022,postoperative_analgesia,,Not extracted,
+Zhu 2022,pca_regimen,,Not extracted,
+Zhu 2022,rescue_analgesia,,Not extracted,
+Zhu 2022,cumulative_duration,,Not extracted,

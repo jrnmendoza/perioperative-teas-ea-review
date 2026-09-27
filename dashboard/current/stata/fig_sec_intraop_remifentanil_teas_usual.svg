@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- This is a Stata 19.5 generated SVG file (http://www.stata.com) -->
+
+<svg version="1.1" width="9.000in" height="3.600in" viewBox="0 0 6480 2592" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>Stata Graph - g</desc>
+	<rect x="0" y="0" width="6480" height="2592" style="fill:#FFFFFF;stroke:none"/>
+	<rect x="0.00" y="0.00" width="6480.00" height="2592.00" style="fill:#FFFFFF"/>
+	<rect x="2.88" y="2.88" width="6474.24" height="2586.24" style="fill:none;stroke:#FFFFFF;stroke-width:5.76"/>
+	<rect x="40.10" y="40.09" width="6399.81" height="2511.81" style="fill:#FFFFFF"/>
+	<rect x="42.98" y="42.97" width="6394.05" height="2506.05" style="fill:none;stroke:#FFFFFF;stroke-width:5.76"/>
+	<rect x="40.10" y="299.09" width="6399.81" height="2132.93" style="fill:#FFFFFF"/>
+	<rect x="42.98" y="301.97" width="6394.05" height="2127.17" style="fill:none;stroke:#FFFFFF;stroke-width:5.76"/>
+	<rect x="79.99" y="339.19" width="6320.03" height="2052.74" style="fill:#FFFFFF"/>
+	<rect x="82.87" y="342.07" width="6314.27" height="2046.98" style="fill:none;stroke:#FFFFFF;stroke-width:5.76"/>
+	<text x="100.04" y="860.28" style="font-family:'Helvetica';font-size:109.96px;fill:#000000">Pan 2023</text>
+	<text x="100.04" y="1076.96" style="font-family:'Helvetica';font-size:109.96px;fill:#000000">Liang 2021</text>
+	<text x="100.04" y="1339.19" style="font-family:'Helvetica';font-weight:bold;font-size:109.96px;fill:#000000">Overall</text>
+	<text x="100.04" y="1555.87" style="fill:#000000">
+		<tspan style="font-family:'Helvetica';font-size:109.96px">Heterogeneity: τ</tspan>
+		<tspan dy="-57.60px" style="font-family:'Helvetica';font-size:64.11px">2</tspan>
+		<tspan dy="57.60px" style="font-family:'Helvetica';font-size:109.96px"> = 12093.62, I</tspan>
+		<tspan dy="-57.60px" style="font-family:'Helvetica';font-size:64.11px">2</tspan>
+		<tspan dy="57.60px" style="font-family:'Helvetica';font-size:109.96px"> = 83.01%, H</tspan>
+		<tspan dy="-57.60px" style="font-family:'Helvetica';font-size:64.11px">2</tspan>
+		<tspan dy="57.60px" style="font-family:'Helvetica';font-size:109.96px"> = 5.89</tspan>
+	</text>
+	<text x="100.04" y="1772.54" style="fill:#000000">
+		<tspan style="font-family:'Helvetica';font-size:109.96px">Test of θ</tspan>
+		<tspan dy="15.71px" style="font-family:'Helvetica';font-size:64.11px">i</tspan>
+		<tspan dy="-15.71px" style="font-family:'Helvetica';font-size:109.96px"> = θ</tspan>
+		<tspan dy="15.71px" style="font-family:'Helvetica';font-size:64.11px">j</tspan>
+		<tspan dy="-15.71px" style="font-family:'Helvetica';font-size:109.96px">: Q(1) = 5.89, p = 0.02</tspan>
+	</text>
+	<text x="100.04" y="1989.22" style="font-family:'Helvetica';font-size:109.96px;fill:#000000">Test of θ = 0: t(1) = -0.30, p = 0.82</text>
+	<text x="100.04" y="585.95" style="font-family:'Helvetica';font-size:109.96px;fill:#000000">Study</text>
+	<line x1="3797.48" y1="2062.06" x2="3797.48" y2="647.80" style="stroke:#808080;stroke-width:5.76"/>
+	<line x1="3770.35" y1="821.74" x2="3744.63" y2="821.74" style="stroke:#1A85FF;stroke-width:8.64"/>
+	<line x1="3811.05" y1="1038.42" x2="3790.60" y2="1038.42" style="stroke:#1A85FF;stroke-width:8.64"/>
+	<line x1="3744.63" y1="821.74" x2="3744.63" y2="821.74" stroke-linecap="round" style="stroke:#1A85FF;stroke-width:8.64"/>
+	<line x1="3744.63" y1="821.74" x2="3744.63" y2="821.74" stroke-linecap="round" style="stroke:#1A85FF;stroke-width:8.64"/>
+	<line x1="3790.60" y1="1038.42" x2="3790.60" y2="1038.42" stroke-linecap="round" style="stroke:#1A85FF;stroke-width:8.64"/>
+	<line x1="3790.60" y1="1038.42" x2="3790.60" y2="1038.42" stroke-linecap="round" style="stroke:#1A85FF;stroke-width:8.64"/>
+	<line x1="3770.35" y1="821.74" x2="3796.07" y2="821.74" style="stroke:#1A85FF;stroke-width:8.64"/>
+	<line x1="3811.05" y1="1038.42" x2="3831.71" y2="1038.42" style="stroke:#1A85FF;stroke-width:8.64"/>
+	<line x1="3796.07" y1="821.74" x2="3796.07" y2="821.74" stroke-linecap="round" style="stroke:#1A85FF;stroke-width:8.64"/>
+	<line x1="3796.07" y1="821.74" x2="3796.07" y2="821.74" stroke-linecap="round" style="stroke:#1A85FF;stroke-width:8.64"/>
+	<line x1="3831.71" y1="1038.42" x2="3831.71" y2="1038.42" stroke-linecap="round" style="stroke:#1A85FF;stroke-width:8.64"/>
+	<line x1="3831.71" y1="1038.42" x2="3831.71" y2="1038.42" stroke-linecap="round" style="stroke:#1A85FF;stroke-width:8.64"/>
+	<rect x="3712.97" y="764.37" width="114.75" height="114.75" style="fill:#1A85FF"/>
+	<rect x="3717.29" y="768.69" width="106.11" height="106.11" style="fill:none;stroke:#1A85FF;stroke-width:8.64"/>
+	<rect x="3751.65" y="979.02" width="118.80" height="118.80" style="fill:#1A85FF"/>
+	<rect x="3755.97" y="983.34" width="110.16" height="110.16" style="fill:none;stroke:#1A85FF;stroke-width:8.64"/>
+	<defs>
+		<path id="path_vDiNIGgp" d="M3811.05 1038.42 M3532.61 1300.66 L3791.61 1353.92 L4050.41 1300.66 L3791.61 1247.40 Z" stroke-linejoin="round"/>
+	</defs>
+	<defs>
+		<clipPath id="clipPath_jhErMPbq">
+			<use xlink:href="#path_vDiNIGgp"/>
+		</clipPath>
+	</defs>
+	<use xlink:href="#path_vDiNIGgp" style="stroke:none;fill:#00BF7F"/>
+	<use xlink:href="#path_vDiNIGgp" style="fill:none;stroke:#00BF7F;stroke-width:17.28" clip-path="url(#clipPath_jhErMPbq)"/>
+	<line x1="3439.26" y1="2062.06" x2="4155.91" y2="2062.06" style="stroke:#000000;stroke-width:5.76"/>
+	<line x1="3439.26" y1="2062.06" x2="3439.26" y2="2101.95" style="stroke:#000000;stroke-width:5.76"/>
+	<text x="3439.26" y="2198.87" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="middle">-1500</text>
+	<line x1="3558.74" y1="2062.06" x2="3558.74" y2="2101.95" style="stroke:#000000;stroke-width:5.76"/>
+	<text x="3558.74" y="2198.87" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="middle">-1000</text>
+	<line x1="3678.21" y1="2062.06" x2="3678.21" y2="2101.95" style="stroke:#000000;stroke-width:5.76"/>
+	<text x="3678.21" y="2198.87" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="middle">-500</text>
+	<line x1="3797.48" y1="2062.06" x2="3797.48" y2="2101.95" style="stroke:#000000;stroke-width:5.76"/>
+	<text x="3797.48" y="2198.87" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="middle">0</text>
+	<line x1="3916.96" y1="2062.06" x2="3916.96" y2="2101.95" style="stroke:#000000;stroke-width:5.76"/>
+	<text x="3916.96" y="2198.87" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="middle">500</text>
+	<line x1="4036.43" y1="2062.06" x2="4036.43" y2="2101.95" style="stroke:#000000;stroke-width:5.76"/>
+	<text x="4036.43" y="2198.87" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="middle">1000</text>
+	<line x1="4155.91" y1="2062.06" x2="4155.91" y2="2101.95" style="stroke:#000000;stroke-width:5.76"/>
+	<text x="4155.91" y="2198.87" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="middle">1500</text>
+	<text x="3797.48" y="2341.97" style="font-family:'Helvetica';font-size:100.04px;fill:#000000" text-anchor="middle">Mean difference, µg remifentanil; negative favours TEAS</text>
+	<text x="5027.06" y="585.95" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="middle">with 95% CI</text>
+	<text x="5027.06" y="436.10" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="middle">Mean difference</text>
+	<text x="4704.89" y="860.28" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="end">-113.90 [</text>
+	<text x="4704.89" y="1076.96" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="end">56.80 [</text>
+	<text x="4704.89" y="1339.19" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="end">-25.28 [</text>
+	<text x="5292.74" y="860.28" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="end">-221.86,</text>
+	<text x="5292.74" y="1076.96" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="end">-29.02,</text>
+	<text x="5292.74" y="1339.19" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="end">-1108.96,</text>
+	<text x="5854.48" y="860.28" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="end">-5.94]</text>
+	<text x="5854.48" y="1076.96" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="end">142.62]</text>
+	<text x="5854.48" y="1339.19" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="end">1058.40]</text>
+	<text x="6292.08" y="860.28" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="end">48.08</text>
+	<text x="6292.08" y="1076.96" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="end">51.92</text>
+	<text x="6149.12" y="585.95" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="middle">(%)</text>
+	<text x="6149.12" y="436.10" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="middle">Weight</text>
+	<line x1="79.99" y1="643.34" x2="6400.01" y2="643.34" style="stroke:#000000;stroke-width:8.64"/>
+	<text x="40.10" y="2483.02" style="fill:#000000">
+		<tspan style="font-family:'Helvetica';font-size:59.94px">k = 2 trial(s); N = 175 participants. Random effects: REML τ</tspan>
+		<tspan dy="-31.40px" style="font-family:'Helvetica';font-size:34.95px">2</tspan>
+		<tspan dy="31.40px" style="font-family:'Helvetica';font-size:59.94px"> = 12094; I</tspan>
+		<tspan dy="-31.40px" style="font-family:'Helvetica';font-size:34.95px">2</tspan>
+		<tspan dy="31.40px" style="font-family:'Helvetica';font-size:59.94px"> = 83.0%; truncated Knapp-Hartung 95% CI (t, k-1 df).</tspan>
+	</text>
+	<text x="40.10" y="2542.96" style="font-family:'Helvetica';font-size:59.94px;fill:#000000">Model intraop_remifentanil_TEAS_usual (core). StataNow/SE 19.5, 13_STATA/do/04_figures.do.</text>
+	<text x="3240.00" y="269.83" style="font-family:'Helvetica';font-size:79.99px;fill:#000000" text-anchor="middle">Secondary outcome</text>
+	<text x="3240.00" y="134.18" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="middle">Intraoperative remifentanil consumption: TEAS versus usual care</text>
+</svg>

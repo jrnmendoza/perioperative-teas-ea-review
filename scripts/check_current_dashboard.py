@@ -45,6 +45,32 @@ def sensitivity_map_complete(d):
             if m in seen or par[m] not in models:return False
             seen.add(m);m=par[m]
     return True
+CHAR_STATUS={'Verified (registry)','Verified (PDF quote)','Partly verified (source excerpt)','Canonical result register','Source-traced (extraction record)',
+             'Legacy (v26, not re-verified)','Not verified','Not extracted'}
+def characteristics_complete(d):
+    """Every report has the same harmonised fields; statuses come from the declared vocabulary; values never fill unsourced gaps."""
+    if 'characteristics' not in d:return True
+    C=d['characteristics'];ids={s['report_id'] for s in d['studies']}
+    fields={}
+    for r in C:fields.setdefault(r['report_id'],[]).append(r['field'])
+    if set(fields)!=ids or len({tuple(v) for v in fields.values()})!=1:return False
+    return all(r['status'] in CHAR_STATUS and (r['value']=='' if r['status'] in ('Not extracted','Not verified') else True) for r in C)
+def stata_reproduces_canonical(d):
+    """The shipped Stata estimates still reproduce the current canonical models (catches a stale Stata run)."""
+    if 'stata' not in d:return True
+    canon={('core',m['model_id']):m for m in d['models']}
+    canon.update({('E2',m['model_id']):m for m in d['e2_analysis']['models']})
+    canon.update({('QoR 24h',m['model_id']):m for m in d['qor_analysis']['main_models']+d['qor_analysis']['diagnostics']})
+    canon.update({('QoR later',m['model_id']):m for m in d.get('qor_later_models',[])})
+    res={(r['analysis_set'],r['model_id']):r for r in d['stata']['results']}
+    if set(res)!=set(canon) or any(s['status'].startswith('DISCREPANCY') for s in d['stata']['summary']):return False
+    for key,m in canon.items():
+        r=res[key]
+        if int(r['k'])!=int(m['k']):return False
+        if int(m['k'])==0:continue
+        for a,b in [('theta','effect'),('ci_lb','ci_low'),('ci_ub','ci_high')]:
+            if abs(float(r[a])-float(m[b]))>1e-6*max(1,abs(float(m[b]))):return False
+    return True
 def e2_inputs_consistent(d):
     """Each E2 model's exported contrasts match its study/contrast order and N, and reproduce its pooled effect from the stored tau2."""
     if 'e2_inputs' not in d:return True
@@ -82,6 +108,10 @@ def checks(d):
       'Paired pain registry covers contrasts and agrees with decisions':paired_pain_consistent(d),
       'Sensitivity map identity':d.get('sensitivity_map')==rows(D/'12_SENSITIVITY_MAP/sensitivity_parent_map.csv') if (D/'12_SENSITIVITY_MAP/sensitivity_parent_map.csv').exists() else True,
       'Sensitivity map covers every sensitivity model':sensitivity_map_complete(d),
+      'Characteristics identity':d.get('characteristics')==rows(D/'14_CHARACTERISTICS/report_characteristics.csv') if (D/'14_CHARACTERISTICS/report_characteristics.csv').exists() else True,
+      'Characteristics complete with declared statuses':characteristics_complete(d),
+      'Stata verification identity':d['stata']['summary']==rows(D/'13_STATA/output/stata_verification_summary.csv') and d['stata']['results']==rows(D/'13_STATA/output/stata_model_results.csv') if 'stata' in d else True,
+      'Stata reproduces current canonical results':stata_reproduces_canonical(d),
       'QoR later-window identity':d.get('qor_later_models')==json.load(open(D/'08_QOR_ANALYSIS/qor_models_later.json')) if (D/'08_QOR_ANALYSIS/qor_models_later.json').exists() else True,
       'QoR later-window RoB identity': d.get('qor_later_rob') == rows(D/'08_QOR_ANALYSIS/qor_rob2_later.csv') and len(d.get('qor_later_rob', [])) == 5 if 'qor_later_rob' in d else True,
       'E2 methods integrity': d.get('e2_methods', {}).get('Timestamp note', '') == re.search(r'(\*\*Timestamp note[^\n]+(?:\n[^\n]+)+)', (D/'02_DECISIONS/v38/AMENDED_PRIMARY_ESTIMAND_E2.md').read_text(encoding='utf-8')).group(1).strip() if 'e2_methods' in d else True,
@@ -187,6 +217,11 @@ def main(site=None):
     if not all(c.values()):return 1
     js=(site/'current_review.js').read_text();loaded=json.JSONDecoder().raw_decode(js.split('window.CURRENT_REVIEW = ',1)[1])[0]
     assert loaded==data,'JS/JSON bundle mismatch'
+    # Every Stata figure ships in the site with its registered hash; model figures print canonical values.
+    for f in data.get('stata',{}).get('figures',[]):
+        for ext in ('svg','pdf','png'):
+            assert sha(site/f[ext+'_href'])==f[ext+'_sha256']==sha(ROOT/f[ext+'_file']),f[ext+'_href']
+        assert f['kind']=='descriptive' or f['verification_status']=='values equal canonical',f['figure_id']
     # The Study Explorer graph must be exactly what the payload implies (catches a stale or hand-edited graph).
     from build_evidence_graph import graph_from
     shipped=json.JSONDecoder().raw_decode((site/'evidence_graph.js').read_text().split('window.EVIDENCE_GRAPH = ',1)[1])[0]
@@ -324,6 +359,12 @@ def main(site=None):
     if 'e2_inputs' in data:
         mutations.append(('E2 per-contrast input identity',lambda d:d['e2_inputs'][0].__setitem__('yi','0')))
         mutations.append(('E2 inputs reproduce E2 membership and pooled effects',lambda d:d['e2_inputs'].pop()))
+    if 'characteristics' in data:
+        mutations.append(('Characteristics identity',lambda d:d['characteristics'][0].__setitem__('value','changed')))
+        mutations.append(('Characteristics complete with declared statuses',lambda d:d['characteristics'][0].__setitem__('status','Confirmed')))
+    if 'stata' in data:
+        mutations.append(('Stata verification identity',lambda d:d['stata']['summary'][0].__setitem__('status','changed')))
+        mutations.append(('Stata reproduces current canonical results',lambda d:next(r for r in d['stata']['results'] if r['model_id']=='opioid24_EA_usual').__setitem__('ci_lb','-17.56')))
     if 'sensitivity_map' in data:
         mutations.append(('Sensitivity map identity',lambda d:d['sensitivity_map'][0].__setitem__('relation','changed')))
         mutations.append(('Sensitivity map covers every sensitivity model',lambda d:d['sensitivity_map'].pop()))
