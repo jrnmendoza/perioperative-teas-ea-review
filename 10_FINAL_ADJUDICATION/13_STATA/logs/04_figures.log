@@ -2,7 +2,7 @@
       name:  fig
        log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/logs/04_figures.log
   log type:  text
- opened on:  27 Sep 2026, 10:33:02
+ opened on:  27 Sep 2026, 10:59:43
 
 . 
 . capture program drop fmtnum
@@ -17,6 +17,19 @@
   6. end
 
 . 
+. capture program drop fmtp
+
+. program define fmtp, rclass
+  1.     * "p < 0.001" or "p = 0.034" (three decimals, leading zero).
+.     args x
+  2.     if `x' < .001 return local s "p < 0.001"
+  3.     else {
+  4.         fmtnum `x' %5.3f
+  5.         return local s "p = `r(s)'"
+  6.     }
+  7. end
+
+. 
 . capture program drop niceaxis
 
 . program define niceaxis, rclass
@@ -26,35 +39,40 @@
   3.     local lo = `lo' - `pad'
   4.     local hi = `hi' + `pad'
   5.     if "`ef'" == "1" {
-  6.         foreach set in ".1 .2 .25 .5 .75 1 1.5 2 4" ".01 .02 .05 .1 .2 .5 1 2 5 10 20 50 100" ".001 .01 .1 1 10 100
->  1000" {
+  6.         * First label set with 2-8 labels that spans at least half the axis (no crowded or bunched labels).
+.         foreach set in ".25 .5 .75 1 1.5 2 3" ".1 .2 .5 1 2 5 10" ".05 .1 .2 .5 1 2 5 10 20" ".01 .1 1 10 100" ".001 .
+> 01 .1 1 10 100 1000" {
   7.             local labs ""
   8.             local n = 0
-  9.             foreach c of local set {
- 10.                 if ln(`c') >= `lo' & ln(`c') <= `hi' {
- 11.                     fmtnum `c' %9.0g
- 12.                     local labs `"`labs' `c' "`r(s)'""'
- 13.                     local ++n
- 14.                 }
- 15.             }
- 16.             if `n' <= 8 & `n' >= 2 continue, break
- 17.         }
- 18.         return local range = "`=exp(`lo')' `=exp(`hi')'"
- 19.         return local labels `"`labs'"'
- 20.     }
- 21.     else {
- 22.         local raw = (`hi' - `lo')/5
- 23.         local p = 10^floor(log10(`raw'))
- 24.         local step ""
- 25.         foreach m in 1 2 2.5 5 10 {
- 26.             if "`step'" == "" & `m'*`p' >= `raw' local step = `m'*`p'
- 27.         }
- 28.         local a = floor(`lo'/`step')*`step'
- 29.         local b = ceil(`hi'/`step')*`step'
- 30.         return local range "`a' `b'"
- 31.         return local labels "`a'(`step')`b'"
- 32.     }
- 33. end
+  9.             local cmin = .
+ 10.             local cmax = 0
+ 11.             foreach c of local set {
+ 12.                 if ln(`c') >= `lo' & ln(`c') <= `hi' {
+ 13.                     fmtnum `c' %9.0g
+ 14.                     local labs `"`labs' `c' "`r(s)'""'
+ 15.                     local ++n
+ 16.                     local cmin = min(`cmin', `c')
+ 17.                     local cmax = max(`cmax', `c')
+ 18.                 }
+ 19.             }
+ 20.             if `n' <= 8 & `n' >= 2 & ln(`cmax') - ln(`cmin') >= .5*(`hi' - `lo') continue, break
+ 21.         }
+ 22.         return local range = "`=exp(`lo')' `=exp(`hi')'"
+ 23.         return local labels `"`labs'"'
+ 24.     }
+ 25.     else {
+ 26.         local raw = (`hi' - `lo')/5
+ 27.         local p = 10^floor(log10(`raw'))
+ 28.         local step ""
+ 29.         foreach m in 1 2 2.5 5 10 {
+ 30.             if "`step'" == "" & `m'*`p' >= `raw' local step = `m'*`p'
+ 31.         }
+ 32.         local a = floor(`lo'/`step')*`step'
+ 33.         local b = ceil(`hi'/`step')*`step'
+ 34.         return local range "`a' `b'"
+ 35.         return local labels "`a'(`step')`b'"
+ 36.     }
+ 37. end
 
 . 
 . import delimited using "$STATA/input/figure_specs.csv", clear varnames(1) bindquote(strict) stringcols(_all)
@@ -108,100 +126,135 @@
  26.         local ub = r(ci_ub)
  27.         local t2 = r(tau2)
  28.         local i2 = r(I2)
- 29.         if `k' >= 5 {
- 30.             local pl = r(theta) - invttail(`k'-1, .025)*sqrt(r(tau2) + r(se)^2)
- 31.             local pu = r(theta) + invttail(`k'-1, .025)*sqrt(r(tau2) + r(se)^2)
- 32.         }
- 33.     }
- 34.     post `reg' ("`figure_id`j''") ("`kind`j''") ("`analysis_set`j''") ("`model_id`j''") (`k') (`N') (`th') (`lb') (
+ 29.         local q = r(Q)
+ 30.         local qdf = r(df_Q)
+ 31.         local qp = r(p_Q)
+ 32.         if `k' >= 5 {
+ 33.             local pl = r(theta) - invttail(`k'-1, .025)*sqrt(r(tau2) + r(se)^2)
+ 34.             local pu = r(theta) + invttail(`k'-1, .025)*sqrt(r(tau2) + r(se)^2)
+ 35.         }
+ 36.     }
+ 37.     post `reg' ("`figure_id`j''") ("`kind`j''") ("`analysis_set`j''") ("`model_id`j''") (`k') (`N') (`th') (`lb') (
 > `ub') (`t2') (`i2') (`pl') (`pu')
- 35.     * Axis extent (log scale for risk ratios).
+ 38.     * Axis extent (log scale for risk ratios).
 .     tempvar sl su
- 36.     quietly gen double `sl' = s_yi - invnormal(.975)*s_se
- 37.     quietly gen double `su' = s_yi + invnormal(.975)*s_se
- 38.     quietly summarize `sl'
- 39.     local xlo = min(r(min), `lb', 0)
- 40.     quietly summarize `su'
- 41.     local xhi = max(r(max), `ub', 0)
- 42.     if `pl' < . local xlo = min(`xlo', `pl')
- 43.     if `pu' < . local xhi = max(`xhi', `pu')
- 44.     if "`threshold`j''" != "" {
- 45.         local xlo = min(`xlo', `threshold`j'')
- 46.         local xhi = max(`xhi', `threshold`j'')
- 47.     }
- 48.     if "`kind`j''" == "loo" {
- 49.         quietly meta summarize, leaveoneout `opt'
- 50.         matrix L = r(leaveoneout)
- 51.         forvalues r = 1/`=rowsof(L)' {
- 52.             local xlo = min(`xlo', L[`r', "ci_lb"])
- 53.             local xhi = max(`xhi', L[`r', "ci_ub"])
- 54.         }
- 55.     }
- 56.     niceaxis `xlo' `xhi' `isrr'
- 57.     local axis `"xscale(range(`r(range)')) xlabel(`r(labels)')"'
- 58.     * Notes: what was fitted, with the values Stata computed.
+ 39.     quietly gen double `sl' = s_yi - invnormal(.975)*s_se
+ 40.     quietly gen double `su' = s_yi + invnormal(.975)*s_se
+ 41.     quietly summarize `sl'
+ 42.     local xlo = min(r(min), `lb', 0)
+ 43.     quietly summarize `su'
+ 44.     local xhi = max(r(max), `ub', 0)
+ 45.     if `pl' < . local xlo = min(`xlo', `pl')
+ 46.     if `pu' < . local xhi = max(`xhi', `pu')
+ 47.     if "`threshold`j''" != "" {
+ 48.         local xlo = min(`xlo', `threshold`j'')
+ 49.         local xhi = max(`xhi', `threshold`j'')
+ 50.     }
+ 51.     if "`kind`j''" == "loo" {
+ 52.         quietly meta summarize, leaveoneout `opt'
+ 53.         matrix L = r(leaveoneout)
+ 54.         forvalues r = 1/`=rowsof(L)' {
+ 55.             local xlo = min(`xlo', L[`r', "ci_lb"])
+ 56.             local xhi = max(`xhi', L[`r', "ci_ub"])
+ 57.         }
+ 58.     }
+ 59.     niceaxis `xlo' `xhi' `isrr'
+ 60.     local axis `"xscale(range(`r(range)')) xlabel(`r(labels)')"'
+ 61.     * Notes: what was fitted, with the values Stata computed.
+.     * Summary rows under the pooled estimate replace Stata's defaults: heterogeneity with Q and a formatted p,
+.     * and the prediction interval in the canonical t(k-1) convention (Stata's own PI uses k-2). No test of theta = 0.
 .     local tr = cond(`isrr', "exp", "")
- 59.     fmtnum `t2' %9.3g
- 60.     local t2s "`r(s)'"
- 61.     local L1 "k = `k' trial(s); N = `N' participants."
- 62.     if `k' == 1 local L1 "`L1' Single study: estimate with normal 95% CI; not pooled."
- 63.     else local L1 "`L1' Random effects: REML {&tau}{superscript:2} = `t2s'; I{superscript:2} = `: display %4.1f `i2
-> ''%; truncated Knapp-Hartung 95% CI (t, k-1 df)."
- 64.     local L2 ""
- 65.     if `pl' < . {
- 66.         fmtnum `tr'(`pl') %9.3f
- 67.         local a "`r(s)'"
- 68.         fmtnum `tr'(`pu') %9.3f
- 69.         local L2 "95% prediction interval (t, k-1 df): `a' to `r(s)'."
- 70.     }
- 71.     if "`threshold`j''" != "" local L2 = strtrim("`L2' Dotted line: -10 mg IV MME registered clinical-importance th
-> reshold.")
- 72.     local L3 "Model `model_id`j'' (`analysis_set`j''). StataNow/SE `c(stata_version)', 13_STATA/do/04_figures.do."
- 73.     local ys = max(3.6, 2.4 + 0.34*`k')
- 74.     local base title("`title`j''", size(medium)) subtitle("`subtitle`j''", size(small)) xtitle("`xtitle`j''") xsize
+ 62.     fmtnum `t2' %9.3g
+ 63.     local t2s "`r(s)'"
+ 64.     local studies = cond(`k' == 1, "1 study", "`k' studies")
+ 65.     local PIs ""
+ 66.     if `pl' < . {
+ 67.         fmtnum `tr'(`pl') %9.2f
+ 68.         local a "`r(s)'"
+ 69.         fmtnum `tr'(`pu') %9.2f
+ 70.         local PIs "95% prediction interval: `a' to `r(s)'"
+ 71.     }
+ 72.     * Short lines (Stata sizes the label column to its widest text).
+.     local HET ""
+ 73.     local HOM ""
+ 74.     if `k' >= 2 {
+ 75.         fmtp `qp'
+ 76.         local HET "Heterogeneity: {&tau}{superscript:2} = `t2s', I{superscript:2} = `: display %4.1f `i2''%"
+ 77.         local HOM "Test of homogeneity: Q(`qdf') = `: display %4.2f `q'', `r(s)'"
+ 78.     }
+ 79.     local THR ""
+ 80.     if "`threshold`j''" != "" local THR "Dotted line: -10 mg IV MME registered clinical-importance threshold."
+ 81.     if `k' == 1 local L1 "k = 1 study; N = `N' participants. Single study: estimate with normal 95% CI; not pooled.
+> "
+ 82.     else        local L1 "k = `studies'; N = `N' participants. Random effects: REML, truncated Knapp-Hartung 95% CI
+>  (t, k-1 df)`=cond(`pl' < ., "; prediction interval t, k-1 df", "")'."
+ 83.     local L2 "`THR'"
+ 84.     local summ noosigtest
+ 85.     if `k' == 1 local summ noohetstats noohomtest noosigtest
+ 86.     else if "`PIs'" == "" local summ ohetstatstext("`HET'") ohomtesttext("`HOM'") noosigtest
+ 87.     else local summ ohetstatstext("`HET'") ohomtesttext("`HOM'") osigtesttext("`PIs'")
+ 88.     local esci columnopts(_esci, supertitle("`esname'"))
+ 89.     local L3 "Model `model_id`j'' (`analysis_set`j''). StataNow/SE `c(stata_version)', 13_STATA/do/04_figures.do."
+ 90.     local ys = max(3.6, 2.4 + 0.34*`k')
+ 91.     local base title("`title`j''", size(medium)) subtitle("`subtitle`j''", size(small)) xtitle("`xtitle`j''") xsize
 > (9) ysize(`ys') name(g, replace)
- 75.     if "`kind`j''" == "funnel" {
- 76.         gen double a = events_i
- 77.         gen double b = n_i - events_i
- 78.         gen double c = events_c
- 79.         gen double dd = n_c - events_c
- 80.         meta clear
- 81.         meta esize a b c dd, esize(lnrratio) studylabel(study) random(reml)
- 82.         quietly meta bias, harbord
- 83.         local hz = r(z)
- 84.         local hp = r(p)
- 85.         post `sst' ("`model_id`j''") (`k') ("Harbord") (`hz') (`hp')
- 86.         local F1 "k = `k' trials; contours mark two-sided p-value regions around no effect; vertical line: inverse-
-> variance (common-effect) estimate."
- 87.         local F2 "Harbord test for small-study effects: z = `: display %5.2f `hz'', p = `: display %5.3f `hp''. Low
->  power at k = 10; exploratory, not used for GRADE."
- 88.         meta funnelplot, contours(1 5 10) `base' note(`"`F1'"' `"`F2'"' `"`L3'"', size(vsmall))
- 89.     }
- 90.     else {
- 91.         if "`L2'" == "" local notes note(`"`L1'"' `"`L3'"', size(vsmall))
- 92.         else            local notes note(`"`L1'"' `"`L2'"' `"`L3'"', size(vsmall))
- 93.         if "`kind`j''" == "loo" {
- 94.             meta forestplot, leaveoneout `opt' nullrefline `ef' `xl' `axis' columnopts(_esci, supertitle("`esname'"
-> )) `base' `notes'
- 95.             preserve
- 96.             clear
- 97.             svmat double L, names(col)
- 98.             gen str80 model_id = "`model_id`j''"
- 99.             quietly ds, has(type numeric)
-100.             format `r(varlist)' %21.16g
-101.             export delimited using "$STATA/output/leaveoneout_`model_id`j''.csv", replace datafmt
-102.             restore
-103.         }
-104.         else if `k' == 1 meta forestplot _id _plot _esci, nooverall nullrefline `ef' `xl' `axis' columnopts(_esci, 
-> supertitle("`esname'")) `base' `notes'
-105.         else             meta forestplot _id _plot _esci _weight, `opt' nullrefline `ef' `xl' `axis' columnopts(_es
-> ci, supertitle("`esname'")) `base' `notes'
-106.     }
-107.     graph export "$STATA/figures/`figure_id`j''.svg", replace
-108.     graph export "$STATA/figures/`figure_id`j''.pdf", replace
-109.     graph export "$STATA/figures/`figure_id`j''.png", replace width(2400)
-110.     meta clear
-111. }
+ 92.     if "`kind`j''" == "funnel" {
+ 93.         gen double a = events_i
+ 94.         gen double b = n_i - events_i
+ 95.         gen double c = events_c
+ 96.         gen double dd = n_c - events_c
+ 97.         meta clear
+ 98.         meta esize a b c dd, esize(lnrratio) studylabel(study) random(reml)
+ 99.         quietly meta bias, harbord
+100.         local hz = r(z)
+101.         local hp = r(p)
+102.         post `sst' ("`model_id`j''") (`k') ("Harbord") (`hz') (`hp')
+103.         local F1 "k = `k' studies; contours mark two-sided p-value regions around no effect; vertical line: inverse
+> -variance (common-effect) estimate."
+104.         fmtp `hp'
+105.         local F2 "Harbord test for small-study effects: z = `: display %5.2f `hz'', `r(s)'. Low power at k = 10; ex
+> ploratory, not used for GRADE."
+106.         meta funnelplot, contours(1 5 10) `base' note(`"`F1'"' `"`F2'"' `"`L3'"', size(vsmall))
+107.     }
+108.     else {
+109.         if "`L2'" == "" local notes note(`"`L1'"' `"`L3'"', size(vsmall))
+110.         else            local notes note(`"`L1'"' `"`L2'"' `"`L3'"', size(vsmall))
+111.         if "`kind`j''" == "loo" {
+112.             * Leave-one-out: no p-value column; the solid line is the estimate with all k studies (stated in the no
+> tes).
+.             fmtnum `tr'(`th') %9.2f
+113.             local e0 "`r(s)'"
+114.             fmtnum `tr'(`lb') %9.2f
+115.             local e1 "`r(s)'"
+116.             fmtnum `tr'(`ub') %9.2f
+117.             local LA "Each row re-fits the random-effects model (REML, truncated Knapp-Hartung) without the named s
+> tudy."
+118.             local LB "Solid line: estimate with all `k' studies, `e0' [`e1', `r(s)']. `HET'; `HOM'."
+119.             local LC = cond("`PIs'" == "", "", "`PIs' (t, k-1 df)")
+120.             if "`THR'" != "" & "`LC'" != "" local LC "`LC'. `THR'"
+121.             else if "`THR'" != "" local LC "`THR'"
+122.             if "`LC'" == "" local notes note(`"`LA'"' `"`LB'"' `"`L3'"', size(vsmall))
+123.             else            local notes note(`"`LA'"' `"`LB'"' `"`LC'"' `"`L3'"', size(vsmall))
+124.             meta forestplot _id _plot _esci, leaveoneout `opt' nullrefline `ef' `xl' `axis' `esci' `base' `notes'
+125.             preserve
+126.             clear
+127.             svmat double L, names(col)
+128.             gen str80 model_id = "`model_id`j''"
+129.             quietly ds, has(type numeric)
+130.             format `r(varlist)' %21.16g
+131.             export delimited using "$STATA/output/leaveoneout_`model_id`j''.csv", replace datafmt
+132.             restore
+133.         }
+134.         else if `k' == 1 meta forestplot _id _plot _esci, nooverall `summ' nullrefline `ef' `xl' `axis' `esci' `bas
+> e' `notes'
+135.         else             meta forestplot _id _plot _esci _weight, `opt' `summ' nullrefline `ef' `xl' `axis' `esci' 
+> `base' `notes'
+136.     }
+137.     graph export "$STATA/figures/`figure_id`j''.svg", replace
+138.     graph export "$STATA/figures/`figure_id`j''.pdf", replace
+139.     graph export "$STATA/figures/`figure_id`j''.png", replace width(2400)
+140.     meta clear
+141. }
 (326 observations deleted)
 
 Meta-analysis setting information
@@ -1211,5 +1264,5 @@ file /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATI
       name:  fig
        log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/logs/04_figures.log
   log type:  text
- closed on:  27 Sep 2026, 10:33:15
+ closed on:  27 Sep 2026, 10:59:57
 ------------------------------------------------------------------------------------------------------------------------

@@ -108,6 +108,7 @@ def checks(d):
       'Paired pain registry covers contrasts and agrees with decisions':paired_pain_consistent(d),
       'Sensitivity map identity':d.get('sensitivity_map')==rows(D/'12_SENSITIVITY_MAP/sensitivity_parent_map.csv') if (D/'12_SENSITIVITY_MAP/sensitivity_parent_map.csv').exists() else True,
       'Sensitivity map covers every sensitivity model':sensitivity_map_complete(d),
+      'Results register identity':d.get('results_register')==[{k:r[k] for k in ['result_id','study','trial_id','comparison_id','outcome','window','data_type','n_i','n_c','comparator_class','decision','rationale','models','source_location']} for r in rows(D/'03_CANONICAL/results.csv')] if 'results_register' in d else True,
       'Characteristics identity':d.get('characteristics')==rows(D/'14_CHARACTERISTICS/report_characteristics.csv') if (D/'14_CHARACTERISTICS/report_characteristics.csv').exists() else True,
       'Characteristics complete with declared statuses':characteristics_complete(d),
       'Stata verification identity':d['stata']['summary']==rows(D/'13_STATA/output/stata_verification_summary.csv') and d['stata']['results']==rows(D/'13_STATA/output/stata_model_results.csv') if 'stata' in d else True,
@@ -359,6 +360,8 @@ def main(site=None):
     if 'e2_inputs' in data:
         mutations.append(('E2 per-contrast input identity',lambda d:d['e2_inputs'][0].__setitem__('yi','0')))
         mutations.append(('E2 inputs reproduce E2 membership and pooled effects',lambda d:d['e2_inputs'].pop()))
+    if 'results_register' in data:
+        mutations.append(('Results register identity',lambda d:d['results_register'][0].__setitem__('decision','INCLUDE?')))
     if 'characteristics' in data:
         mutations.append(('Characteristics identity',lambda d:d['characteristics'][0].__setitem__('value','changed')))
         mutations.append(('Characteristics complete with declared statuses',lambda d:d['characteristics'][0].__setitem__('status','Confirmed')))

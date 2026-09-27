@@ -116,6 +116,9 @@ data['e2_accounting']={k:rows('10_FINAL_ADJUDICATION/02_DECISIONS/v38/'+f) for k
 # Proposed parent links for the core sensitivity models (display grouping, not an analysis decision).
 if (D/'12_SENSITIVITY_MAP/sensitivity_parent_map.csv').exists():
  data['sensitivity_map']=rows('10_FINAL_ADJUDICATION/12_SENSITIVITY_MAP/sensitivity_parent_map.csv')
+# Slim copy of the canonical results register (every extracted result with its decision) for the outcome inventory.
+REGISTER_FIELDS=['result_id','study','trial_id','comparison_id','outcome','window','data_type','n_i','n_c','comparator_class','decision','rationale','models','source_location']
+data['results_register']=[{k:r[k] for k in REGISTER_FIELDS} for r in rows('10_FINAL_ADJUDICATION/03_CANONICAL/results.csv')]
 # Harmonised report characteristics (code/build_characteristics.py): value, status and source per report and field.
 if (D/'14_CHARACTERISTICS/report_characteristics.csv').exists():
  data['characteristics']=rows('10_FINAL_ADJUDICATION/14_CHARACTERISTICS/report_characteristics.csv')

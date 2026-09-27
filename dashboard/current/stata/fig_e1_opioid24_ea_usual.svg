@@ -12,124 +12,109 @@
 	<rect x="42.98" y="301.97" width="6394.05" height="2067.23" style="fill:none;stroke:#FFFFFF;stroke-width:5.76"/>
 	<rect x="79.99" y="339.19" width="6320.03" height="1992.80" style="fill:#FFFFFF"/>
 	<rect x="82.87" y="342.07" width="6314.27" height="1987.04" style="fill:none;stroke:#FFFFFF;stroke-width:5.76"/>
-	<text x="100.04" y="853.60" style="font-family:'Helvetica';font-size:109.96px;fill:#000000">El-Rakshy 2009</text>
-	<text x="100.04" y="1060.76" style="font-family:'Helvetica';font-size:109.96px;fill:#000000">Seevaunnamtum 2016</text>
-	<text x="100.04" y="1311.65" style="font-family:'Helvetica';font-weight:bold;font-size:109.96px;fill:#000000">Overall</text>
-	<text x="100.04" y="1518.81" style="fill:#000000">
+	<text x="100.04" y="881.14" style="font-family:'Helvetica';font-size:109.96px;fill:#000000">El-Rakshy 2009</text>
+	<text x="100.04" y="1127.18" style="font-family:'Helvetica';font-size:109.96px;fill:#000000">Seevaunnamtum 2016</text>
+	<text x="100.04" y="1424.85" style="font-family:'Helvetica';font-weight:bold;font-size:109.96px;fill:#000000">Overall</text>
+	<text x="100.04" y="1670.89" style="fill:#000000">
 		<tspan style="font-family:'Helvetica';font-size:109.96px">Heterogeneity: τ</tspan>
 		<tspan dy="-57.60px" style="font-family:'Helvetica';font-size:64.11px">2</tspan>
-		<tspan dy="57.60px" style="font-family:'Helvetica';font-size:109.96px"> = 43.52, I</tspan>
+		<tspan dy="57.60px" style="font-family:'Helvetica';font-size:109.96px"> = 43.5, I</tspan>
 		<tspan dy="-57.60px" style="font-family:'Helvetica';font-size:64.11px">2</tspan>
-		<tspan dy="57.60px" style="font-family:'Helvetica';font-size:109.96px"> = 72.45%, H</tspan>
-		<tspan dy="-57.60px" style="font-family:'Helvetica';font-size:64.11px">2</tspan>
-		<tspan dy="57.60px" style="font-family:'Helvetica';font-size:109.96px"> = 3.63</tspan>
+		<tspan dy="57.60px" style="font-family:'Helvetica';font-size:109.96px"> = 72.5%</tspan>
 	</text>
-	<text x="100.04" y="1725.97" style="fill:#000000">
-		<tspan style="font-family:'Helvetica';font-size:109.96px">Test of θ</tspan>
-		<tspan dy="15.71px" style="font-family:'Helvetica';font-size:64.11px">i</tspan>
-		<tspan dy="-15.71px" style="font-family:'Helvetica';font-size:109.96px"> = θ</tspan>
-		<tspan dy="15.71px" style="font-family:'Helvetica';font-size:64.11px">j</tspan>
-		<tspan dy="-15.71px" style="font-family:'Helvetica';font-size:109.96px">: Q(1) = 3.63, p = 0.06</tspan>
-	</text>
-	<text x="100.04" y="1933.33" style="font-family:'Helvetica';font-size:109.96px;fill:#000000">Test of θ = 0: t(1) = -1.25, p = 0.43</text>
+	<text x="100.04" y="1916.93" style="font-family:'Helvetica';font-size:109.96px;fill:#000000">Test of homogeneity: Q(1) = 3.63, p = 0.057</text>
 	<text x="100.04" y="585.95" style="font-family:'Helvetica';font-size:109.96px;fill:#000000">Study</text>
-	<line x1="3853.37" y1="2001.92" x2="3853.37" y2="647.80" style="stroke:#808080;stroke-width:5.76"/>
-	<line x1="3781.69" y1="2001.92" x2="3781.69" y2="1981.26" style="stroke:#FF7F00;stroke-width:12.96"/>
-	<line x1="3781.69" y1="1963.04" x2="3781.69" y2="1942.38" style="stroke:#FF7F00;stroke-width:12.96"/>
-	<line x1="3781.69" y1="1924.16" x2="3781.69" y2="1903.50" style="stroke:#FF7F00;stroke-width:12.96"/>
-	<line x1="3781.69" y1="1885.28" x2="3781.69" y2="1864.62" style="stroke:#FF7F00;stroke-width:12.96"/>
-	<line x1="3781.69" y1="1846.40" x2="3781.69" y2="1825.74" style="stroke:#FF7F00;stroke-width:12.96"/>
-	<line x1="3781.69" y1="1807.52" x2="3781.69" y2="1786.86" style="stroke:#FF7F00;stroke-width:12.96"/>
-	<line x1="3781.69" y1="1768.64" x2="3781.69" y2="1747.98" style="stroke:#FF7F00;stroke-width:12.96"/>
-	<line x1="3781.69" y1="1729.76" x2="3781.69" y2="1709.10" style="stroke:#FF7F00;stroke-width:12.96"/>
-	<line x1="3781.69" y1="1690.88" x2="3781.69" y2="1670.22" style="stroke:#FF7F00;stroke-width:12.96"/>
-	<line x1="3781.69" y1="1652.00" x2="3781.69" y2="1631.34" style="stroke:#FF7F00;stroke-width:12.96"/>
-	<line x1="3781.69" y1="1613.12" x2="3781.69" y2="1592.46" style="stroke:#FF7F00;stroke-width:12.96"/>
-	<line x1="3781.69" y1="1574.24" x2="3781.69" y2="1553.58" style="stroke:#FF7F00;stroke-width:12.96"/>
-	<line x1="3781.69" y1="1535.36" x2="3781.69" y2="1514.70" style="stroke:#FF7F00;stroke-width:12.96"/>
-	<line x1="3781.69" y1="1496.48" x2="3781.69" y2="1475.82" style="stroke:#FF7F00;stroke-width:12.96"/>
-	<line x1="3781.69" y1="1457.60" x2="3781.69" y2="1436.94" style="stroke:#FF7F00;stroke-width:12.96"/>
-	<line x1="3781.69" y1="1418.72" x2="3781.69" y2="1398.06" style="stroke:#FF7F00;stroke-width:12.96"/>
-	<line x1="3781.69" y1="1379.84" x2="3781.69" y2="1359.18" style="stroke:#FF7F00;stroke-width:12.96"/>
-	<line x1="3781.69" y1="1340.96" x2="3781.69" y2="1320.30" style="stroke:#FF7F00;stroke-width:12.96"/>
-	<line x1="3781.69" y1="1302.08" x2="3781.69" y2="1281.42" style="stroke:#FF7F00;stroke-width:12.96"/>
-	<line x1="3781.69" y1="1263.20" x2="3781.69" y2="1242.54" style="stroke:#FF7F00;stroke-width:12.96"/>
-	<line x1="3781.69" y1="1224.32" x2="3781.69" y2="1203.66" style="stroke:#FF7F00;stroke-width:12.96"/>
-	<line x1="3781.69" y1="1185.44" x2="3781.69" y2="1164.78" style="stroke:#FF7F00;stroke-width:12.96"/>
-	<line x1="3781.69" y1="1146.56" x2="3781.69" y2="1125.90" style="stroke:#FF7F00;stroke-width:12.96"/>
-	<line x1="3781.69" y1="1107.68" x2="3781.69" y2="1087.02" style="stroke:#FF7F00;stroke-width:12.96"/>
-	<line x1="3781.69" y1="1068.80" x2="3781.69" y2="1048.14" style="stroke:#FF7F00;stroke-width:12.96"/>
-	<line x1="3781.69" y1="1029.92" x2="3781.69" y2="1009.26" style="stroke:#FF7F00;stroke-width:12.96"/>
-	<line x1="3781.69" y1="991.04" x2="3781.69" y2="970.38" style="stroke:#FF7F00;stroke-width:12.96"/>
-	<line x1="3781.69" y1="952.16" x2="3781.69" y2="931.50" style="stroke:#FF7F00;stroke-width:12.96"/>
-	<line x1="3781.69" y1="913.28" x2="3781.69" y2="892.62" style="stroke:#FF7F00;stroke-width:12.96"/>
-	<line x1="3781.69" y1="874.40" x2="3781.69" y2="853.74" style="stroke:#FF7F00;stroke-width:12.96"/>
-	<line x1="3781.69" y1="835.52" x2="3781.69" y2="814.86" style="stroke:#FF7F00;stroke-width:12.96"/>
-	<line x1="3781.69" y1="796.64" x2="3781.69" y2="775.98" style="stroke:#FF7F00;stroke-width:12.96"/>
-	<line x1="3781.69" y1="757.76" x2="3781.69" y2="737.10" style="stroke:#FF7F00;stroke-width:12.96"/>
-	<line x1="3781.69" y1="718.88" x2="3781.69" y2="698.22" style="stroke:#FF7F00;stroke-width:12.96"/>
-	<line x1="3781.69" y1="679.99" x2="3781.69" y2="659.34" style="stroke:#FF7F00;stroke-width:12.96"/>
-	<line x1="3842.03" y1="815.06" x2="3789.79" y2="815.06" style="stroke:#1A85FF;stroke-width:8.64"/>
-	<line x1="3763.46" y1="1022.22" x2="3701.70" y2="1022.22" style="stroke:#1A85FF;stroke-width:8.64"/>
-	<line x1="3789.79" y1="815.06" x2="3789.79" y2="815.06" stroke-linecap="round" style="stroke:#1A85FF;stroke-width:8.64"/>
-	<line x1="3789.79" y1="815.06" x2="3789.79" y2="815.06" stroke-linecap="round" style="stroke:#1A85FF;stroke-width:8.64"/>
-	<line x1="3701.70" y1="1022.22" x2="3701.70" y2="1022.22" stroke-linecap="round" style="stroke:#1A85FF;stroke-width:8.64"/>
-	<line x1="3701.70" y1="1022.22" x2="3701.70" y2="1022.22" stroke-linecap="round" style="stroke:#1A85FF;stroke-width:8.64"/>
-	<line x1="3842.03" y1="815.06" x2="3894.28" y2="815.06" style="stroke:#1A85FF;stroke-width:8.64"/>
-	<line x1="3763.46" y1="1022.22" x2="3825.02" y2="1022.22" style="stroke:#1A85FF;stroke-width:8.64"/>
-	<line x1="3894.28" y1="815.06" x2="3894.28" y2="815.06" stroke-linecap="round" style="stroke:#1A85FF;stroke-width:8.64"/>
-	<line x1="3894.28" y1="815.06" x2="3894.28" y2="815.06" stroke-linecap="round" style="stroke:#1A85FF;stroke-width:8.64"/>
-	<line x1="3825.02" y1="1022.22" x2="3825.02" y2="1022.22" stroke-linecap="round" style="stroke:#1A85FF;stroke-width:8.64"/>
-	<line x1="3825.02" y1="1022.22" x2="3825.02" y2="1022.22" stroke-linecap="round" style="stroke:#1A85FF;stroke-width:8.64"/>
-	<rect x="3782.43" y="755.66" width="118.80" height="118.80" style="fill:#1A85FF"/>
-	<rect x="3786.75" y="759.98" width="110.16" height="110.16" style="fill:none;stroke:#1A85FF;stroke-width:8.64"/>
-	<rect x="3706.29" y="965.25" width="113.94" height="113.94" style="fill:#1A85FF"/>
-	<rect x="3710.61" y="969.57" width="105.30" height="105.30" style="fill:none;stroke:#1A85FF;stroke-width:8.64"/>
+	<line x1="3679.83" y1="2001.92" x2="3679.83" y2="647.80" style="stroke:#808080;stroke-width:5.76"/>
+	<line x1="3606.53" y1="2001.92" x2="3606.53" y2="1981.26" style="stroke:#FF7F00;stroke-width:12.96"/>
+	<line x1="3606.53" y1="1963.04" x2="3606.53" y2="1942.38" style="stroke:#FF7F00;stroke-width:12.96"/>
+	<line x1="3606.53" y1="1924.16" x2="3606.53" y2="1903.50" style="stroke:#FF7F00;stroke-width:12.96"/>
+	<line x1="3606.53" y1="1885.28" x2="3606.53" y2="1864.62" style="stroke:#FF7F00;stroke-width:12.96"/>
+	<line x1="3606.53" y1="1846.40" x2="3606.53" y2="1825.74" style="stroke:#FF7F00;stroke-width:12.96"/>
+	<line x1="3606.53" y1="1807.52" x2="3606.53" y2="1786.86" style="stroke:#FF7F00;stroke-width:12.96"/>
+	<line x1="3606.53" y1="1768.64" x2="3606.53" y2="1747.98" style="stroke:#FF7F00;stroke-width:12.96"/>
+	<line x1="3606.53" y1="1729.76" x2="3606.53" y2="1709.10" style="stroke:#FF7F00;stroke-width:12.96"/>
+	<line x1="3606.53" y1="1690.88" x2="3606.53" y2="1670.22" style="stroke:#FF7F00;stroke-width:12.96"/>
+	<line x1="3606.53" y1="1652.00" x2="3606.53" y2="1631.34" style="stroke:#FF7F00;stroke-width:12.96"/>
+	<line x1="3606.53" y1="1613.12" x2="3606.53" y2="1592.46" style="stroke:#FF7F00;stroke-width:12.96"/>
+	<line x1="3606.53" y1="1574.24" x2="3606.53" y2="1553.58" style="stroke:#FF7F00;stroke-width:12.96"/>
+	<line x1="3606.53" y1="1535.36" x2="3606.53" y2="1514.70" style="stroke:#FF7F00;stroke-width:12.96"/>
+	<line x1="3606.53" y1="1496.48" x2="3606.53" y2="1475.82" style="stroke:#FF7F00;stroke-width:12.96"/>
+	<line x1="3606.53" y1="1457.60" x2="3606.53" y2="1436.94" style="stroke:#FF7F00;stroke-width:12.96"/>
+	<line x1="3606.53" y1="1418.72" x2="3606.53" y2="1398.06" style="stroke:#FF7F00;stroke-width:12.96"/>
+	<line x1="3606.53" y1="1379.84" x2="3606.53" y2="1359.18" style="stroke:#FF7F00;stroke-width:12.96"/>
+	<line x1="3606.53" y1="1340.96" x2="3606.53" y2="1320.30" style="stroke:#FF7F00;stroke-width:12.96"/>
+	<line x1="3606.53" y1="1302.08" x2="3606.53" y2="1281.42" style="stroke:#FF7F00;stroke-width:12.96"/>
+	<line x1="3606.53" y1="1263.20" x2="3606.53" y2="1242.54" style="stroke:#FF7F00;stroke-width:12.96"/>
+	<line x1="3606.53" y1="1224.32" x2="3606.53" y2="1203.66" style="stroke:#FF7F00;stroke-width:12.96"/>
+	<line x1="3606.53" y1="1185.44" x2="3606.53" y2="1164.78" style="stroke:#FF7F00;stroke-width:12.96"/>
+	<line x1="3606.53" y1="1146.56" x2="3606.53" y2="1125.90" style="stroke:#FF7F00;stroke-width:12.96"/>
+	<line x1="3606.53" y1="1107.68" x2="3606.53" y2="1087.02" style="stroke:#FF7F00;stroke-width:12.96"/>
+	<line x1="3606.53" y1="1068.80" x2="3606.53" y2="1048.14" style="stroke:#FF7F00;stroke-width:12.96"/>
+	<line x1="3606.53" y1="1029.92" x2="3606.53" y2="1009.26" style="stroke:#FF7F00;stroke-width:12.96"/>
+	<line x1="3606.53" y1="991.04" x2="3606.53" y2="970.38" style="stroke:#FF7F00;stroke-width:12.96"/>
+	<line x1="3606.53" y1="952.16" x2="3606.53" y2="931.50" style="stroke:#FF7F00;stroke-width:12.96"/>
+	<line x1="3606.53" y1="913.28" x2="3606.53" y2="892.62" style="stroke:#FF7F00;stroke-width:12.96"/>
+	<line x1="3606.53" y1="874.40" x2="3606.53" y2="853.74" style="stroke:#FF7F00;stroke-width:12.96"/>
+	<line x1="3606.53" y1="835.52" x2="3606.53" y2="814.86" style="stroke:#FF7F00;stroke-width:12.96"/>
+	<line x1="3606.53" y1="796.64" x2="3606.53" y2="775.98" style="stroke:#FF7F00;stroke-width:12.96"/>
+	<line x1="3606.53" y1="757.76" x2="3606.53" y2="737.10" style="stroke:#FF7F00;stroke-width:12.96"/>
+	<line x1="3606.53" y1="718.88" x2="3606.53" y2="698.22" style="stroke:#FF7F00;stroke-width:12.96"/>
+	<line x1="3606.53" y1="679.99" x2="3606.53" y2="659.34" style="stroke:#FF7F00;stroke-width:12.96"/>
+	<line x1="3668.09" y1="842.60" x2="3614.83" y2="842.60" style="stroke:#1A85FF;stroke-width:8.64"/>
+	<line x1="3587.90" y1="1088.64" x2="3524.92" y2="1088.64" style="stroke:#1A85FF;stroke-width:8.64"/>
+	<line x1="3614.83" y1="842.60" x2="3614.83" y2="842.60" stroke-linecap="round" style="stroke:#1A85FF;stroke-width:8.64"/>
+	<line x1="3614.83" y1="842.60" x2="3614.83" y2="842.60" stroke-linecap="round" style="stroke:#1A85FF;stroke-width:8.64"/>
+	<line x1="3524.92" y1="1088.64" x2="3524.92" y2="1088.64" stroke-linecap="round" style="stroke:#1A85FF;stroke-width:8.64"/>
+	<line x1="3524.92" y1="1088.64" x2="3524.92" y2="1088.64" stroke-linecap="round" style="stroke:#1A85FF;stroke-width:8.64"/>
+	<line x1="3668.09" y1="842.60" x2="3721.34" y2="842.60" style="stroke:#1A85FF;stroke-width:8.64"/>
+	<line x1="3587.90" y1="1088.64" x2="3650.87" y2="1088.64" style="stroke:#1A85FF;stroke-width:8.64"/>
+	<line x1="3721.34" y1="842.60" x2="3721.34" y2="842.60" stroke-linecap="round" style="stroke:#1A85FF;stroke-width:8.64"/>
+	<line x1="3721.34" y1="842.60" x2="3721.34" y2="842.60" stroke-linecap="round" style="stroke:#1A85FF;stroke-width:8.64"/>
+	<line x1="3650.87" y1="1088.64" x2="3650.87" y2="1088.64" stroke-linecap="round" style="stroke:#1A85FF;stroke-width:8.64"/>
+	<line x1="3650.87" y1="1088.64" x2="3650.87" y2="1088.64" stroke-linecap="round" style="stroke:#1A85FF;stroke-width:8.64"/>
+	<rect x="3608.48" y="783.20" width="118.80" height="118.80" style="fill:#1A85FF"/>
+	<rect x="3612.80" y="787.52" width="110.16" height="110.16" style="fill:none;stroke:#1A85FF;stroke-width:8.64"/>
+	<rect x="3530.72" y="1031.67" width="113.94" height="113.94" style="fill:#1A85FF"/>
+	<rect x="3535.04" y="1035.99" width="105.30" height="105.30" style="fill:none;stroke:#1A85FF;stroke-width:8.64"/>
 	<defs>
-		<path id="path_IbLcTyvx" d="M3763.26 1022.22 M3306.02 1273.12 L3804.57 1325.36 L4303.13 1273.12 L3804.57 1220.67 Z" stroke-linejoin="round"/>
+		<path id="path_zTkVYiSE" d="M3587.69 1088.64 M3120.73 1386.32 L3629.81 1443.22 L4138.70 1386.32 L3629.81 1329.41 Z" stroke-linejoin="round"/>
 	</defs>
 	<defs>
-		<clipPath id="clipPath_xMKXyGPb">
-			<use xlink:href="#path_IbLcTyvx"/>
+		<clipPath id="clipPath_vxpWotdF">
+			<use xlink:href="#path_zTkVYiSE"/>
 		</clipPath>
 	</defs>
-	<use xlink:href="#path_IbLcTyvx" style="stroke:none;fill:#00BF7F"/>
-	<use xlink:href="#path_IbLcTyvx" style="fill:none;stroke:#00BF7F;stroke-width:17.28" clip-path="url(#clipPath_xMKXyGPb)"/>
-	<line x1="3136.73" y1="2001.92" x2="4570.22" y2="2001.92" style="stroke:#000000;stroke-width:5.76"/>
-	<line x1="3136.73" y1="2001.92" x2="3136.73" y2="2042.01" style="stroke:#000000;stroke-width:5.76"/>
-	<text x="3136.73" y="2138.93" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="middle">-100</text>
-	<line x1="3495.15" y1="2001.92" x2="3495.15" y2="2042.01" style="stroke:#000000;stroke-width:5.76"/>
-	<text x="3495.15" y="2138.93" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="middle">-50</text>
-	<line x1="3853.37" y1="2001.92" x2="3853.37" y2="2042.01" style="stroke:#000000;stroke-width:5.76"/>
-	<text x="3853.37" y="2138.93" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="middle">0</text>
-	<line x1="4211.80" y1="2001.92" x2="4211.80" y2="2042.01" style="stroke:#000000;stroke-width:5.76"/>
-	<text x="4211.80" y="2138.93" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="middle">50</text>
-	<line x1="4570.22" y1="2001.92" x2="4570.22" y2="2042.01" style="stroke:#000000;stroke-width:5.76"/>
-	<text x="4570.22" y="2138.93" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="middle">100</text>
-	<text x="3853.37" y="2281.83" style="font-family:'Helvetica';font-size:100.04px;fill:#000000" text-anchor="middle">Mean difference, mg IV MME; negative favours EA</text>
-	<text x="5240.30" y="585.95" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="middle">with 95% CI</text>
-	<text x="5240.30" y="436.10" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="middle">Mean difference</text>
-	<text x="5033.75" y="853.60" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="end">-1.60 [</text>
-	<text x="5033.75" y="1060.76" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="end">-12.56 [</text>
-	<text x="5033.75" y="1311.65" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="end">-6.83 [</text>
-	<text x="5463.05" y="853.60" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="end">-8.89,</text>
-	<text x="5463.05" y="1060.76" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="end">-21.16,</text>
-	<text x="5463.05" y="1311.65" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="end">-76.39,</text>
-	<text x="5867.44" y="853.60" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="end">5.69]</text>
-	<text x="5867.44" y="1060.76" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="end">-3.96]</text>
-	<text x="5867.44" y="1311.65" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="end">62.73]</text>
-	<text x="6294.51" y="853.60" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="end">52.26</text>
-	<text x="6294.51" y="1060.76" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="end">47.74</text>
-	<text x="6155.19" y="585.95" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="middle">(%)</text>
-	<text x="6155.19" y="436.10" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="middle">Weight</text>
+	<use xlink:href="#path_zTkVYiSE" style="stroke:none;fill:#00BF7F"/>
+	<use xlink:href="#path_zTkVYiSE" style="fill:none;stroke:#00BF7F;stroke-width:17.28" clip-path="url(#clipPath_vxpWotdF)"/>
+	<line x1="2948.00" y1="2001.92" x2="4411.46" y2="2001.92" style="stroke:#000000;stroke-width:5.76"/>
+	<line x1="2948.00" y1="2001.92" x2="2948.00" y2="2042.01" style="stroke:#000000;stroke-width:5.76"/>
+	<text x="2948.00" y="2138.93" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="middle">-100</text>
+	<line x1="3313.91" y1="2001.92" x2="3313.91" y2="2042.01" style="stroke:#000000;stroke-width:5.76"/>
+	<text x="3313.91" y="2138.93" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="middle">-50</text>
+	<line x1="3679.83" y1="2001.92" x2="3679.83" y2="2042.01" style="stroke:#000000;stroke-width:5.76"/>
+	<text x="3679.83" y="2138.93" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="middle">0</text>
+	<line x1="4045.75" y1="2001.92" x2="4045.75" y2="2042.01" style="stroke:#000000;stroke-width:5.76"/>
+	<text x="4045.75" y="2138.93" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="middle">50</text>
+	<line x1="4411.46" y1="2001.92" x2="4411.46" y2="2042.01" style="stroke:#000000;stroke-width:5.76"/>
+	<text x="4411.46" y="2138.93" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="middle">100</text>
+	<text x="3679.83" y="2281.83" style="font-family:'Helvetica';font-size:100.04px;fill:#000000" text-anchor="middle">Mean difference, mg IV MME; negative favours EA</text>
+	<text x="5140.26" y="585.95" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="middle">with 95% CI</text>
+	<text x="5140.26" y="436.10" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="middle">Mean difference</text>
+	<text x="4915.69" y="881.14" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="end">-1.60 [</text>
+	<text x="4915.69" y="1127.18" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="end">-12.56 [</text>
+	<text x="4915.69" y="1424.85" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="end">-6.83 [</text>
+	<text x="5384.48" y="881.14" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="end">-8.89,</text>
+	<text x="5384.48" y="1127.18" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="end">-21.16,</text>
+	<text x="5384.48" y="1424.85" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="end">-76.39,</text>
+	<text x="5824.10" y="881.14" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="end">5.69]</text>
+	<text x="5824.10" y="1127.18" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="end">-3.96]</text>
+	<text x="5824.10" y="1424.85" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="end">62.73]</text>
+	<text x="6286.61" y="881.14" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="end">52.26</text>
+	<text x="6286.61" y="1127.18" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="end">47.74</text>
+	<text x="6134.54" y="585.95" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="middle">(%)</text>
+	<text x="6134.54" y="436.10" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="middle">Weight</text>
 	<line x1="79.99" y1="643.34" x2="6400.01" y2="643.34" style="stroke:#000000;stroke-width:8.64"/>
-	<text x="40.10" y="2423.08" style="fill:#000000">
-		<tspan style="font-family:'Helvetica';font-size:59.94px">k = 2 trial(s); N = 159 participants. Random effects: REML τ</tspan>
-		<tspan dy="-31.40px" style="font-family:'Helvetica';font-size:34.95px">2</tspan>
-		<tspan dy="31.40px" style="font-family:'Helvetica';font-size:59.94px"> = 43.5; I</tspan>
-		<tspan dy="-31.40px" style="font-family:'Helvetica';font-size:34.95px">2</tspan>
-		<tspan dy="31.40px" style="font-family:'Helvetica';font-size:59.94px"> = 72.5%; truncated Knapp-Hartung 95% CI (t, k-1 df).</tspan>
-	</text>
+	<text x="40.10" y="2423.08" style="font-family:'Helvetica';font-size:59.94px;fill:#000000">k = 2 studies; N = 159 participants. Random effects: REML, truncated Knapp-Hartung 95% CI (t, k-1 df).</text>
 	<text x="40.10" y="2483.02" style="font-family:'Helvetica';font-size:59.94px;fill:#000000">Dotted line: -10 mg IV MME registered clinical-importance threshold.</text>
 	<text x="40.10" y="2542.96" style="font-family:'Helvetica';font-size:59.94px;fill:#000000">Model opioid24_EA_usual (core). StataNow/SE 19.5, 13_STATA/do/04_figures.do.</text>
 	<text x="3240.00" y="269.83" style="font-family:'Helvetica';font-size:79.99px;fill:#000000" text-anchor="middle">Cumulative 0-24 h systemic opioid consumption</text>

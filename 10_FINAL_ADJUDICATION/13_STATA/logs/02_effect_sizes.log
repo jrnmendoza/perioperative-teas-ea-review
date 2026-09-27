@@ -3,7 +3,7 @@
        log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/logs/02_effect_sizes
 > .log
   log type:  text
- opened on:  27 Sep 2026, 10:33:01
+ opened on:  27 Sep 2026, 10:59:43
 
 . use "$STATA/work/inputs.dta", clear
 
@@ -168,5 +168,5 @@ file /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATI
        log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/logs/02_effect_sizes
 > .log
   log type:  text
- closed on:  27 Sep 2026, 10:33:02
+ closed on:  27 Sep 2026, 10:59:43
 ------------------------------------------------------------------------------------------------------------------------

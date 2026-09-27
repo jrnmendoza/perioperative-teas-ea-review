@@ -405,7 +405,7 @@
     "label": "Stata figure register",
     "href": "current/figure_register.csv",
     "source": "10_FINAL_ADJUDICATION/13_STATA/output/figure_register.csv",
-    "sha256": "be8077336dd0abe0939dc1565f119f5d6c4ffb5f5fb0145b3220ac446a726413"
+    "sha256": "4114f6602c92f88b35dd373fe27361af9723bf03d4848af29519357fba6c29ff"
   },
   {
     "label": "Stata estimates for all models",

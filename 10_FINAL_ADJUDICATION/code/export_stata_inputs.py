@@ -70,7 +70,7 @@ for m in json.load(open(D / '08_QOR_ANALYSIS/qor_summary.json'))['main_models']:
     spec(f"fig_qor_{m['model_id'].lower()}", 'forest', 'QoR 24h', m['model_id'], m['label'].replace('~', 'about '), 'Quality of recovery at about 24 h',
          xtitle('MD', m['unit'], higher_better=True, mod='TEAS'), 0, '', 'supplement candidate')
 # Influence and small-study diagnostics only where k is large enough to be informative.
-spec('fig_loo_ponv24_teas_sham', 'loo', 'core', 'ponv24_TEAS_sham', 'Leave-one-out: PONV within 24 h, TEAS versus sham', 'Influence diagnostic, not a new evidence body', xtitle('RR', ''), 1, '', 'supplement candidate')
+spec('fig_loo_ponv24_teas_sham', 'loo', 'core', 'ponv24_TEAS_sham', 'Leave-one-out: PONV within 24 h, TEAS versus sham', 'Influence diagnostic, not a new evidence body', xtitle('RR', '', mod='TEAS'), 1, '', 'supplement candidate')
 spec('fig_loo_flatus_teas_sham', 'loo', 'core', 'flatus_TEAS_sham', 'Leave-one-out: time to first flatus, TEAS versus sham', 'Influence diagnostic, not a new evidence body', xtitle('MD', 'hours', mod='TEAS'), 0, '', 'supplement candidate')
 spec('fig_loo_e2_opioid24_teas_sham', 'loo', 'E2', 'E2_opioid24_TEAS_sham', 'Leave-one-out: E2 TEAS versus sham (post-hoc)', 'Matches the canonical E2 leave-one-out models', xtitle('MD', 'mg IVMME', mod='TEAS'), 0, -10, 'supplement candidate')
 spec('fig_funnel_ponv24_teas_sham', 'funnel', 'core', 'ponv24_TEAS_sham', 'Contour-enhanced funnel plot: PONV within 24 h, TEAS versus sham',

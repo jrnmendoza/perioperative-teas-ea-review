@@ -14,6 +14,17 @@ program define fmtnum, rclass
     return local s "`s'"
 end
 
+capture program drop fmtp
+program define fmtp, rclass
+    * "p < 0.001" or "p = 0.034" (three decimals, leading zero).
+    args x
+    if `x' < .001 return local s "p < 0.001"
+    else {
+        fmtnum `x' %5.3f
+        return local s "p = `r(s)'"
+    }
+end
+
 capture program drop niceaxis
 program define niceaxis, rclass
     * Axis range and labels for [lo, hi] (log scale when ef == 1; values then exponentiated for -eform- plots).
@@ -22,17 +33,22 @@ program define niceaxis, rclass
     local lo = `lo' - `pad'
     local hi = `hi' + `pad'
     if "`ef'" == "1" {
-        foreach set in ".1 .2 .25 .5 .75 1 1.5 2 4" ".01 .02 .05 .1 .2 .5 1 2 5 10 20 50 100" ".001 .01 .1 1 10 100 1000" {
+        * First label set with 2-8 labels that spans at least half the axis (no crowded or bunched labels).
+        foreach set in ".25 .5 .75 1 1.5 2 3" ".1 .2 .5 1 2 5 10" ".05 .1 .2 .5 1 2 5 10 20" ".01 .1 1 10 100" ".001 .01 .1 1 10 100 1000" {
             local labs ""
             local n = 0
+            local cmin = .
+            local cmax = 0
             foreach c of local set {
                 if ln(`c') >= `lo' & ln(`c') <= `hi' {
                     fmtnum `c' %9.0g
                     local labs `"`labs' `c' "`r(s)'""'
                     local ++n
+                    local cmin = min(`cmin', `c')
+                    local cmax = max(`cmax', `c')
                 }
             }
-            if `n' <= 8 & `n' >= 2 continue, break
+            if `n' <= 8 & `n' >= 2 & ln(`cmax') - ln(`cmin') >= .5*(`hi' - `lo') continue, break
         }
         return local range = "`=exp(`lo')' `=exp(`hi')'"
         return local labels `"`labs'"'
@@ -91,6 +107,9 @@ forvalues j = 1/`nf' {
         local ub = r(ci_ub)
         local t2 = r(tau2)
         local i2 = r(I2)
+        local q = r(Q)
+        local qdf = r(df_Q)
+        local qp = r(p_Q)
         if `k' >= 5 {
             local pl = r(theta) - invttail(`k'-1, .025)*sqrt(r(tau2) + r(se)^2)
             local pu = r(theta) + invttail(`k'-1, .025)*sqrt(r(tau2) + r(se)^2)
@@ -122,20 +141,37 @@ forvalues j = 1/`nf' {
     niceaxis `xlo' `xhi' `isrr'
     local axis `"xscale(range(`r(range)')) xlabel(`r(labels)')"'
     * Notes: what was fitted, with the values Stata computed.
+    * Summary rows under the pooled estimate replace Stata's defaults: heterogeneity with Q and a formatted p,
+    * and the prediction interval in the canonical t(k-1) convention (Stata's own PI uses k-2). No test of theta = 0.
     local tr = cond(`isrr', "exp", "")
     fmtnum `t2' %9.3g
     local t2s "`r(s)'"
-    local L1 "k = `k' trial(s); N = `N' participants."
-    if `k' == 1 local L1 "`L1' Single study: estimate with normal 95% CI; not pooled."
-    else local L1 "`L1' Random effects: REML {&tau}{superscript:2} = `t2s'; I{superscript:2} = `: display %4.1f `i2''%; truncated Knapp-Hartung 95% CI (t, k-1 df)."
-    local L2 ""
+    local studies = cond(`k' == 1, "1 study", "`k' studies")
+    local PIs ""
     if `pl' < . {
-        fmtnum `tr'(`pl') %9.3f
+        fmtnum `tr'(`pl') %9.2f
         local a "`r(s)'"
-        fmtnum `tr'(`pu') %9.3f
-        local L2 "95% prediction interval (t, k-1 df): `a' to `r(s)'."
+        fmtnum `tr'(`pu') %9.2f
+        local PIs "95% prediction interval: `a' to `r(s)'"
     }
-    if "`threshold`j''" != "" local L2 = strtrim("`L2' Dotted line: -10 mg IV MME registered clinical-importance threshold.")
+    * Short lines (Stata sizes the label column to its widest text).
+    local HET ""
+    local HOM ""
+    if `k' >= 2 {
+        fmtp `qp'
+        local HET "Heterogeneity: {&tau}{superscript:2} = `t2s', I{superscript:2} = `: display %4.1f `i2''%"
+        local HOM "Test of homogeneity: Q(`qdf') = `: display %4.2f `q'', `r(s)'"
+    }
+    local THR ""
+    if "`threshold`j''" != "" local THR "Dotted line: -10 mg IV MME registered clinical-importance threshold."
+    if `k' == 1 local L1 "k = 1 study; N = `N' participants. Single study: estimate with normal 95% CI; not pooled."
+    else        local L1 "k = `studies'; N = `N' participants. Random effects: REML, truncated Knapp-Hartung 95% CI (t, k-1 df)`=cond(`pl' < ., "; prediction interval t, k-1 df", "")'."
+    local L2 "`THR'"
+    local summ noosigtest
+    if `k' == 1 local summ noohetstats noohomtest noosigtest
+    else if "`PIs'" == "" local summ ohetstatstext("`HET'") ohomtesttext("`HOM'") noosigtest
+    else local summ ohetstatstext("`HET'") ohomtesttext("`HOM'") osigtesttext("`PIs'")
+    local esci columnopts(_esci, supertitle("`esname'"))
     local L3 "Model `model_id`j'' (`analysis_set`j''). StataNow/SE `c(stata_version)', 13_STATA/do/04_figures.do."
     local ys = max(3.6, 2.4 + 0.34*`k')
     local base title("`title`j''", size(medium)) subtitle("`subtitle`j''", size(small)) xtitle("`xtitle`j''") xsize(9) ysize(`ys') name(g, replace)
@@ -150,15 +186,29 @@ forvalues j = 1/`nf' {
         local hz = r(z)
         local hp = r(p)
         post `sst' ("`model_id`j''") (`k') ("Harbord") (`hz') (`hp')
-        local F1 "k = `k' trials; contours mark two-sided p-value regions around no effect; vertical line: inverse-variance (common-effect) estimate."
-        local F2 "Harbord test for small-study effects: z = `: display %5.2f `hz'', p = `: display %5.3f `hp''. Low power at k = 10; exploratory, not used for GRADE."
+        local F1 "k = `k' studies; contours mark two-sided p-value regions around no effect; vertical line: inverse-variance (common-effect) estimate."
+        fmtp `hp'
+        local F2 "Harbord test for small-study effects: z = `: display %5.2f `hz'', `r(s)'. Low power at k = 10; exploratory, not used for GRADE."
         meta funnelplot, contours(1 5 10) `base' note(`"`F1'"' `"`F2'"' `"`L3'"', size(vsmall))
     }
     else {
         if "`L2'" == "" local notes note(`"`L1'"' `"`L3'"', size(vsmall))
         else            local notes note(`"`L1'"' `"`L2'"' `"`L3'"', size(vsmall))
         if "`kind`j''" == "loo" {
-            meta forestplot, leaveoneout `opt' nullrefline `ef' `xl' `axis' columnopts(_esci, supertitle("`esname'")) `base' `notes'
+            * Leave-one-out: no p-value column; the solid line is the estimate with all k studies (stated in the notes).
+            fmtnum `tr'(`th') %9.2f
+            local e0 "`r(s)'"
+            fmtnum `tr'(`lb') %9.2f
+            local e1 "`r(s)'"
+            fmtnum `tr'(`ub') %9.2f
+            local LA "Each row re-fits the random-effects model (REML, truncated Knapp-Hartung) without the named study."
+            local LB "Solid line: estimate with all `k' studies, `e0' [`e1', `r(s)']. `HET'; `HOM'."
+            local LC = cond("`PIs'" == "", "", "`PIs' (t, k-1 df)")
+            if "`THR'" != "" & "`LC'" != "" local LC "`LC'. `THR'"
+            else if "`THR'" != "" local LC "`THR'"
+            if "`LC'" == "" local notes note(`"`LA'"' `"`LB'"' `"`L3'"', size(vsmall))
+            else            local notes note(`"`LA'"' `"`LB'"' `"`LC'"' `"`L3'"', size(vsmall))
+            meta forestplot _id _plot _esci, leaveoneout `opt' nullrefline `ef' `xl' `axis' `esci' `base' `notes'
             preserve
             clear
             svmat double L, names(col)
@@ -168,8 +218,8 @@ forvalues j = 1/`nf' {
             export delimited using "$STATA/output/leaveoneout_`model_id`j''.csv", replace datafmt
             restore
         }
-        else if `k' == 1 meta forestplot _id _plot _esci, nooverall nullrefline `ef' `xl' `axis' columnopts(_esci, supertitle("`esname'")) `base' `notes'
-        else             meta forestplot _id _plot _esci _weight, `opt' nullrefline `ef' `xl' `axis' columnopts(_esci, supertitle("`esname'")) `base' `notes'
+        else if `k' == 1 meta forestplot _id _plot _esci, nooverall `summ' nullrefline `ef' `xl' `axis' `esci' `base' `notes'
+        else             meta forestplot _id _plot _esci _weight, `opt' `summ' nullrefline `ef' `xl' `axis' `esci' `base' `notes'
     }
     graph export "$STATA/figures/`figure_id`j''.svg", replace
     graph export "$STATA/figures/`figure_id`j''.pdf", replace

@@ -3,7 +3,7 @@
        log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/logs/05_descriptives
 > .log
   log type:  text
- opened on:  27 Sep 2026, 10:33:15
+ opened on:  27 Sep 2026, 10:59:57
 
 . import delimited using "$ROOT/10_FINAL_ADJUDICATION/14_CHARACTERISTICS/report_characteristics_wide.csv", clear varname
 > s(1) bindquote(strict) stringcols(_all)
@@ -190,5 +190,5 @@ file /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATI
        log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/logs/05_descriptives
 > .log
   log type:  text
- closed on:  27 Sep 2026, 10:33:19
+ closed on:  27 Sep 2026, 11:00:00
 ------------------------------------------------------------------------------------------------------------------------
