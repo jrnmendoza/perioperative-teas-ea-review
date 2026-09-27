@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- This is a Stata 19.5 generated SVG file (http://www.stata.com) -->
+
+<svg version="1.1" width="9.000in" height="3.600in" viewBox="0 0 6480 2592" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>Stata Graph - g</desc>
+	<rect x="0" y="0" width="6480" height="2592" style="fill:#FFFFFF;stroke:none"/>
+	<rect x="0.00" y="0.00" width="6480.00" height="2592.00" style="fill:#FFFFFF"/>
+	<rect x="2.88" y="2.88" width="6474.24" height="2586.24" style="fill:none;stroke:#FFFFFF;stroke-width:5.76"/>
+	<rect x="40.10" y="40.09" width="6399.81" height="2511.81" style="fill:#FFFFFF"/>
+	<rect x="42.98" y="42.97" width="6394.05" height="2506.05" style="fill:none;stroke:#FFFFFF;stroke-width:5.76"/>
+	<rect x="40.10" y="299.09" width="6399.81" height="2132.93" style="fill:#FFFFFF"/>
+	<rect x="42.98" y="301.97" width="6394.05" height="2127.17" style="fill:none;stroke:#FFFFFF;stroke-width:5.76"/>
+	<rect x="79.99" y="339.19" width="6320.03" height="2052.74" style="fill:#FFFFFF"/>
+	<rect x="82.87" y="342.07" width="6314.27" height="2046.98" style="fill:none;stroke:#FFFFFF;stroke-width:5.76"/>
+	<text x="100.04" y="889.04" style="font-family:'Helvetica';font-size:109.96px;fill:#000000">Yang 2024</text>
+	<text x="100.04" y="1146.21" style="font-family:'Helvetica';font-size:109.96px;fill:#000000">Yang 2020</text>
+	<text x="100.04" y="1457.66" style="font-family:'Helvetica';font-weight:bold;font-size:109.96px;fill:#000000">Overall</text>
+	<text x="100.04" y="1715.03" style="fill:#000000">
+		<tspan style="font-family:'Helvetica';font-size:109.96px">Heterogeneity: τ</tspan>
+		<tspan dy="-57.60px" style="font-family:'Helvetica';font-size:64.11px">2</tspan>
+		<tspan dy="57.60px" style="font-family:'Helvetica';font-size:109.96px"> = 1.24e-15, I</tspan>
+		<tspan dy="-57.60px" style="font-family:'Helvetica';font-size:64.11px">2</tspan>
+		<tspan dy="57.60px" style="font-family:'Helvetica';font-size:109.96px"> =  0.0%</tspan>
+	</text>
+	<text x="100.04" y="1972.21" style="font-family:'Helvetica';font-size:109.96px;fill:#000000">Test of homogeneity: Q(1) = 0.35, p = 0.553</text>
+	<text x="100.04" y="585.95" style="font-family:'Helvetica';font-size:109.96px;fill:#000000">Study</text>
+	<line x1="3955.84" y1="2062.06" x2="3955.84" y2="647.80" style="stroke:#808080;stroke-width:5.76"/>
+	<line x1="3802.95" y1="850.50" x2="3672.95" y2="850.50" style="stroke:#1A85FF;stroke-width:8.64"/>
+	<line x1="3878.28" y1="1107.68" x2="3665.05" y2="1107.68" style="stroke:#1A85FF;stroke-width:8.64"/>
+	<line x1="3672.95" y1="850.50" x2="3672.95" y2="850.50" stroke-linecap="round" style="stroke:#1A85FF;stroke-width:8.64"/>
+	<line x1="3672.95" y1="850.50" x2="3672.95" y2="850.50" stroke-linecap="round" style="stroke:#1A85FF;stroke-width:8.64"/>
+	<line x1="3665.05" y1="1107.68" x2="3665.05" y2="1107.68" stroke-linecap="round" style="stroke:#1A85FF;stroke-width:8.64"/>
+	<line x1="3665.05" y1="1107.68" x2="3665.05" y2="1107.68" stroke-linecap="round" style="stroke:#1A85FF;stroke-width:8.64"/>
+	<line x1="3802.95" y1="850.50" x2="3932.75" y2="850.50" style="stroke:#1A85FF;stroke-width:8.64"/>
+	<line x1="3878.28" y1="1107.68" x2="4091.51" y2="1107.68" style="stroke:#1A85FF;stroke-width:8.64"/>
+	<line x1="3932.75" y1="850.50" x2="3932.75" y2="850.50" stroke-linecap="round" style="stroke:#1A85FF;stroke-width:8.64"/>
+	<line x1="3932.75" y1="850.50" x2="3932.75" y2="850.50" stroke-linecap="round" style="stroke:#1A85FF;stroke-width:8.64"/>
+	<line x1="4091.51" y1="1107.68" x2="4091.51" y2="1107.68" stroke-linecap="round" style="stroke:#1A85FF;stroke-width:8.64"/>
+	<line x1="4091.51" y1="1107.68" x2="4091.51" y2="1107.68" stroke-linecap="round" style="stroke:#1A85FF;stroke-width:8.64"/>
+	<rect x="3743.35" y="791.30" width="118.80" height="118.80" style="fill:#1A85FF"/>
+	<rect x="3747.67" y="795.62" width="110.16" height="110.16" style="fill:none;stroke:#1A85FF;stroke-width:8.64"/>
+	<rect x="3840.35" y="1069.94" width="75.87" height="75.87" style="fill:#1A85FF"/>
+	<rect x="3844.67" y="1074.26" width="67.23" height="67.23" style="fill:none;stroke:#1A85FF;stroke-width:8.64"/>
+	<defs>
+		<path id="path_RMGRyRXQ" d="M3878.28 1107.88 M3104.33 1419.12 L3823.20 1477.04 L4542.28 1419.12 L3823.20 1361.41 Z" stroke-linejoin="round"/>
+	</defs>
+	<defs>
+		<clipPath id="clipPath_rNfxrCwW">
+			<use xlink:href="#path_RMGRyRXQ"/>
+		</clipPath>
+	</defs>
+	<use xlink:href="#path_RMGRyRXQ" style="stroke:none;fill:#00BF7F"/>
+	<use xlink:href="#path_RMGRyRXQ" style="fill:none;stroke:#00BF7F;stroke-width:17.28" clip-path="url(#clipPath_rNfxrCwW)"/>
+	<line x1="3032.44" y1="2062.06" x2="4614.17" y2="2062.06" style="stroke:#000000;stroke-width:5.76"/>
+	<line x1="3476.12" y1="2062.06" x2="3476.12" y2="2101.95" style="stroke:#000000;stroke-width:5.76"/>
+	<text x="3476.12" y="2198.87" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="middle">0.1</text>
+	<line x1="3620.50" y1="2062.06" x2="3620.50" y2="2101.95" style="stroke:#000000;stroke-width:5.76"/>
+	<text x="3620.50" y="2198.87" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="middle">0.2</text>
+	<line x1="3811.46" y1="2062.06" x2="3811.46" y2="2101.95" style="stroke:#000000;stroke-width:5.76"/>
+	<text x="3811.46" y="2198.87" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="middle">0.5</text>
+	<line x1="3955.84" y1="2062.06" x2="3955.84" y2="2101.95" style="stroke:#000000;stroke-width:5.76"/>
+	<text x="3955.84" y="2198.87" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="middle">1</text>
+	<line x1="4100.22" y1="2062.06" x2="4100.22" y2="2101.95" style="stroke:#000000;stroke-width:5.76"/>
+	<text x="4100.22" y="2198.87" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="middle">2</text>
+	<line x1="4291.18" y1="2062.06" x2="4291.18" y2="2101.95" style="stroke:#000000;stroke-width:5.76"/>
+	<text x="4291.18" y="2198.87" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="middle">5</text>
+	<line x1="4435.56" y1="2062.06" x2="4435.56" y2="2101.95" style="stroke:#000000;stroke-width:5.76"/>
+	<text x="4435.56" y="2198.87" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="middle">10</text>
+	<text x="3823.20" y="2341.97" style="font-family:'Helvetica';font-size:100.04px;fill:#000000" text-anchor="middle">Risk ratio (log scale); below 1 favours EA</text>
+	<text x="5234.42" y="585.95" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="middle">with 95% CI</text>
+	<text x="5234.42" y="436.10" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="middle">Risk ratio</text>
+	<text x="5003.37" y="889.04" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="end">0.48 [</text>
+	<text x="5003.37" y="1146.21" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="end">0.69 [</text>
+	<text x="5003.37" y="1457.66" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="end">0.53 [</text>
+	<text x="5356.53" y="889.04" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="end">0.26,</text>
+	<text x="5356.53" y="1146.21" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="end">0.25,</text>
+	<text x="5356.53" y="1457.66" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="end">0.02,</text>
+	<text x="5808.71" y="889.04" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="end">0.90]</text>
+	<text x="5808.71" y="1146.21" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="end">1.92]</text>
+	<text x="5808.71" y="1457.66" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="end">16.69]</text>
+	<text x="6283.78" y="889.04" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="end">72.95</text>
+	<text x="6283.78" y="1146.21" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="end">27.05</text>
+	<text x="6127.25" y="585.95" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="middle">(%)</text>
+	<text x="6127.25" y="436.10" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="middle">Weight</text>
+	<line x1="79.99" y1="643.34" x2="6400.01" y2="643.34" style="stroke:#000000;stroke-width:8.64"/>
+	<text x="40.10" y="2483.02" style="font-family:'Helvetica';font-size:59.94px;fill:#000000">k = 2 studies; N = 237 participants. Random effects: REML, truncated Knapp-Hartung 95% CI (t, k-1 df).</text>
+	<text x="40.10" y="2542.96" style="font-family:'Helvetica';font-size:59.94px;fill:#000000">Model vomiting24_EA_usual (core). StataNow/SE 19.5, 13_STATA/do/04_figures.do.</text>
+	<text x="3240.00" y="269.83" style="font-family:'Helvetica';font-size:79.99px;fill:#000000" text-anchor="middle">Secondary outcome</text>
+	<text x="3240.00" y="134.18" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="middle">Vomiting within 24 h: EA versus usual care</text>
+</svg>

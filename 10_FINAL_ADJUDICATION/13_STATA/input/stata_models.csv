@@ -1,0 +1,118 @@
+analysis_set,model_id,role,measure,unit,k,label
+core,opioid24_TEAS_sham,PRINCIPAL,MD,mg IVMME,1,opioid24_TEAS_sham
+core,opioid24_EA_sham,PRINCIPAL,MD,mg IVMME,0,opioid24_EA_sham
+core,opioid24_TEAS_usual,SUPPORTIVE,MD,mg IVMME,1,opioid24_TEAS_usual
+core,opioid24_EA_usual,SUPPORTIVE,MD,mg IVMME,2,opioid24_EA_usual
+core,opioid24_EA_usual_without_ElRakshy,SENSITIVITY,MD,mg IVMME,1,opioid24_EA_usual_without_ElRakshy
+core,opioid24_TEAS_sham_expanded_suf0.25,SENSITIVITY,MD,assumed mg IVMME,4,opioid24_TEAS_sham_expanded_suf0.25
+core,opioid24_TEAS_sham_expanded_suf0.25_without_Chen2020,SENSITIVITY,MD,assumed mg IVMME,3,opioid24_TEAS_sham_expanded_suf0.25_without_Chen2020
+core,opioid24_TEAS_sham_expanded_suf0.5,SENSITIVITY,MD,assumed mg IVMME,4,opioid24_TEAS_sham_expanded_suf0.5
+core,opioid24_TEAS_sham_expanded_suf0.5_without_Chen2020,SENSITIVITY,MD,assumed mg IVMME,3,opioid24_TEAS_sham_expanded_suf0.5_without_Chen2020
+core,opioid24_TEAS_sham_expanded_suf1,SENSITIVITY,MD,assumed mg IVMME,4,opioid24_TEAS_sham_expanded_suf1
+core,opioid24_TEAS_sham_expanded_suf1_without_Chen2020,SENSITIVITY,MD,assumed mg IVMME,3,opioid24_TEAS_sham_expanded_suf1_without_Chen2020
+core,opioid24_EA_usual_expanded,SENSITIVITY,MD,mg IVMME,3,opioid24_EA_usual_expanded
+core,opioid_partial_EA_sham,SENSITIVITY,MD,mg IV morphine,1,opioid_partial_EA_sham
+core,opioid_partial_EA_usual,SENSITIVITY,MD,mg IV morphine,1,opioid_partial_EA_usual
+core,opioid_partial_TEAS_sham,SENSITIVITY,MD,mg IV morphine,1,opioid_partial_TEAS_sham
+core,opioid24_EA_sham_weight_normalized,SENSITIVITY,MD,mg/kg IV morphine,1,opioid24_EA_sham_weight_normalized
+core,opioid24_EA_sham_fentanyl_per_kg,SENSITIVITY,MD,µg/kg fentanyl,1,opioid24_EA_sham_fentanyl_per_kg
+core,ponv24_TEAS_sham,ADDITIONAL,RR,risk ratio,10,ponv24_TEAS_sham
+core,ponv24_TEAS_sham_point_window_sensitivity,SENSITIVITY,RR,risk ratio,11,ponv24_TEAS_sham_point_window_sensitivity
+core,nausea24_EA_usual,ADDITIONAL,RR,risk ratio,2,nausea24_EA_usual
+core,vomiting24_EA_usual,ADDITIONAL,RR,risk ratio,2,vomiting24_EA_usual
+core,nausea24_TEAS_sham,ADDITIONAL,RR,risk ratio,3,nausea24_TEAS_sham
+core,vomiting24_TEAS_sham,ADDITIONAL,RR,risk ratio,4,vomiting24_TEAS_sham
+core,vomiting24_TEAS_usual,ADDITIONAL,RR,risk ratio,1,vomiting24_TEAS_usual
+core,persistent_nausea24_TEAS_sham,ADDITIONAL,RR,risk ratio,1,persistent_nausea24_TEAS_sham
+core,nausea48_TEAS_sham,ADDITIONAL,RR,risk ratio,1,nausea48_TEAS_sham
+core,vomiting48_TEAS_sham,ADDITIONAL,RR,risk ratio,1,vomiting48_TEAS_sham
+core,ponv48_TEAS_sham,ADDITIONAL,RR,risk ratio,1,ponv48_TEAS_sham
+core,nausea6to24_EA_usual,ADDITIONAL,RR,risk ratio,1,nausea6to24_EA_usual
+core,vomiting6to24_EA_usual,ADDITIONAL,RR,risk ratio,1,vomiting6to24_EA_usual
+core,pain24_rest_TEAS_sham,ADDITIONAL,MD,0–10 points,3,pain24_rest_TEAS_sham
+core,pain24_movement_TEAS_sham,ADDITIONAL,MD,0–10 points,1,pain24_movement_TEAS_sham
+core,pain24_rest_TEAS_usual,ADDITIONAL,MD,0–10 points,0,pain24_rest_TEAS_usual
+core,pain24_movement_EA_sham,ADDITIONAL,MD,0–10 points,1,pain24_movement_EA_sham
+core,pain24_rest_EA_sham,ADDITIONAL,MD,0–10 points,0,pain24_rest_EA_sham
+core,pain24_movement_EA_sham_with_He,SENSITIVITY,MD,0–10 points,2,pain24_movement_EA_sham_with_He
+core,pain24_rest_EA_sham_He_reported_SD,SENSITIVITY,MD,0–10 points,1,pain24_rest_EA_sham_He_reported_SD
+core,pain24_unclassified_TEAS_sham,SENSITIVITY,MD,0–10 points,7,pain24_unclassified_TEAS_sham
+core,pain24_Lee_low_arm_only,SENSITIVITY,MD,0–10 points,1,pain24_Lee_low_arm_only
+core,pain24_Ng_unspecified,SENSITIVITY,MD,0–10 points,1,pain24_Ng_unspecified
+core,pain6to24_movement_EA_usual,SENSITIVITY,MD,0–10 points,1,pain6to24_movement_EA_usual
+core,flatus_TEAS_sham,ADDITIONAL,MD,hours,7,flatus_TEAS_sham
+core,flatus_TEAS_usual,ADDITIONAL,MD,hours,0,flatus_TEAS_usual
+core,flatus_EA_sham,ADDITIONAL,MD,hours,1,flatus_EA_sham
+core,flatus_EA_usual,ADDITIONAL,MD,hours,4,flatus_EA_usual
+core,bowelsounds_TEAS_sham,ADDITIONAL,MD,hours,2,bowelsounds_TEAS_sham
+core,defecation_TEAS_sham,ADDITIONAL,MD,hours,4,defecation_TEAS_sham
+core,defecation_EA_sham,ADDITIONAL,MD,hours,1,defecation_EA_sham
+core,defecation_EA_usual,ADDITIONAL,MD,hours,4,defecation_EA_usual
+core,opioid48_EA_usual_PCA,ADDITIONAL,MD,mg IVMME,1,opioid48_EA_usual_PCA
+core,opioid72_EA_usual_PCA,SENSITIVITY,MD,mg IV morphine,1,opioid72_EA_usual_PCA
+core,opioid72_EA_sham_PCA,ADDITIONAL,MD,mg IV morphine,1,opioid72_EA_sham_PCA
+core,opioid48_TEAS_sham_uncertain_suf0.25,SENSITIVITY,MD,assumed mg IVMME,2,opioid48_TEAS_sham_uncertain_suf0.25
+core,opioid48_TEAS_sham_uncertain_suf0.5,SENSITIVITY,MD,assumed mg IVMME,2,opioid48_TEAS_sham_uncertain_suf0.5
+core,opioid48_TEAS_sham_uncertain_suf1,SENSITIVITY,MD,assumed mg IVMME,2,opioid48_TEAS_sham_uncertain_suf1
+core,intraop_remifentanil_TEAS_sham,ADDITIONAL,MD,µg remifentanil,4,intraop_remifentanil_TEAS_sham
+core,intraop_remifentanil_TEAS_usual,ADDITIONAL,MD,µg remifentanil,2,intraop_remifentanil_TEAS_usual
+core,intraop_remifentanil_EA_usual,ADDITIONAL,MD,µg remifentanil,1,intraop_remifentanil_EA_usual
+core,intraop_remifentanil_EA_sham,ADDITIONAL,MD,µg remifentanil,1,intraop_remifentanil_EA_sham
+core,tramadol24_TEAS_usual_PCA,SENSITIVITY,MD,mg IV tramadol,1,tramadol24_TEAS_usual_PCA
+core,tramadol24_TEAS_active_PCA,SENSITIVITY,MD,mg IV tramadol,1,tramadol24_TEAS_active_PCA
+core,pethidine24_TEAS_usual_rescue,ADDITIONAL,MD,mg IM pethidine,1,pethidine24_TEAS_usual_rescue
+core,pethidine24_TEAS_active_rescue,ADDITIONAL,MD,mg IM pethidine,1,pethidine24_TEAS_active_rescue
+core,ponv24_TEAS_active,ADDITIONAL,RR,risk ratio,1,ponv24_TEAS_active
+core,pain24_TEAS_active_unspecified,SENSITIVITY,MD,0–10 points,1,pain24_TEAS_active_unspecified
+core,ponv24_TEAS_broad_sham_sensitivity,SENSITIVITY,RR,risk ratio,11,ponv24_TEAS_broad_sham_sensitivity
+core,flatus_TEAS_sham_SMD_sensitivity,SENSITIVITY,SMD,Hedges g,7,flatus_TEAS_sham_SMD_sensitivity
+core,flatus_TEAS_usual_SMD_sensitivity,SENSITIVITY,SMD,Hedges g,0,flatus_TEAS_usual_SMD_sensitivity
+core,flatus_EA_sham_SMD_sensitivity,SENSITIVITY,SMD,Hedges g,1,flatus_EA_sham_SMD_sensitivity
+core,flatus_EA_usual_SMD_sensitivity,SENSITIVITY,SMD,Hedges g,4,flatus_EA_usual_SMD_sensitivity
+core,flatus_TEAS_sham_with_Zheng2025_as_printed,SENSITIVITY,MD,hours,8,flatus_TEAS_sham_with_Zheng2025_as_printed
+core,bowelsounds_TEAS_sham_with_Zheng2025_as_printed,SENSITIVITY,MD,hours,3,bowelsounds_TEAS_sham_with_Zheng2025_as_printed
+core,intraop_remifentanil_TEAS_sham_with_Zheng2025_as_printed,SENSITIVITY,MD,µg remifentanil,5,intraop_remifentanil_TEAS_sham_with_Zheng2025_as_printed
+core,intraop_remifentanil_Wu2025_preintervention_diagnostic,SENSITIVITY,MD,µg remifentanil,1,intraop_remifentanil_Wu2025_preintervention_diagnostic
+E2,E2_opioid24_TEAS_sham,E2 POST-HOC SENSITIVITY (main),MD,mg IVMME,7,E2_opioid24_TEAS_sham
+E2,E2_TEAS_sham_suf0.25,SENSITIVITY,MD,mg IVMME,7,sufentanil 0.25 mg/ug
+E2,E2_TEAS_sham_suf1.0,SENSITIVITY,MD,mg IVMME,7,sufentanil 1.0 mg/ug
+E2,E2_TEAS_sham_excl_E2.1,SENSITIVITY,MD,mg IVMME,5,without Amendment E2.1 admissions
+E2,E2_TEAS_sham_leaveout_Gu2019,SENSITIVITY,MD,mg IVMME,6,source contradiction (figure vs text)
+E2,E2_TEAS_sham_leaveout_Lee2011,SENSITIVITY,MD,mg IVMME,6,source contradiction (Table 8)
+E2,E2_TEAS_sham_excl_unquantified_rescue,SENSITIVITY,MD,mg IVMME,5,known unquantified rescue removed
+E2,E2_TEAS_sham_excl_unstated_route,SENSITIVITY,MD,mg IVMME,6,author equivalents of unstated route removed
+E2,E2_TEAS_sham_E1_restriction,SENSITIVITY,MD,mg IVMME,1,restricted to E1-eligible = registered primary
+E2,E2_TEAS_sham_LOO_Szmit_2021,LEAVE-ONE-OUT,MD,mg IVMME,6,without Szmit 2021
+E2,E2_TEAS_sham_LOO_Chen_1998,LEAVE-ONE-OUT,MD,mg IVMME,6,without Chen 1998
+E2,E2_TEAS_sham_LOO_Chen_2020,LEAVE-ONE-OUT,MD,mg IVMME,6,without Chen 2020
+E2,E2_TEAS_sham_LOO_He_2026,LEAVE-ONE-OUT,MD,mg IVMME,6,without He 2026 (hepatectomy)
+E2,E2_TEAS_sham_LOO_Lee_2011,LEAVE-ONE-OUT,MD,mg IVMME,6,without Lee 2011
+E2,E2_TEAS_sham_LOO_Zhang_2025,LEAVE-ONE-OUT,MD,mg IVMME,6,without Zhang 2025
+E2,E2_TEAS_sham_LOO_Gu_2019,LEAVE-ONE-OUT,MD,mg IVMME,6,without Gu 2019
+E2,E2_opioid24_TEAS_usual,E2 POST-HOC SENSITIVITY (main),MD,mg IVMME,1,E2_opioid24_TEAS_usual
+E2,E2_opioid24_EA_sham,E2 POST-HOC SENSITIVITY (main),MD,mg IVMME,1,Lin 2002 only; DP1 boundary; DP4 rescue
+E2,E2_opioid24_EA_usual,E2 POST-HOC SENSITIVITY (main),MD,mg IVMME,4,E2_opioid24_EA_usual
+E2,E2_EA_usual_leaveout_ElRakshy,SENSITIVITY,MD,mg IVMME,3,existing El-Rakshy diagnostic
+E2,E2_EA_usual_excl_unquantified_rescue,SENSITIVITY,MD,mg IVMME,2,known unquantified rescue removed (= E1 body)
+E2,E2_EA_usual_LOO_El-Rakshy,LEAVE-ONE-OUT,MD,mg IVMME,3,without El-Rakshy 2009
+E2,E2_EA_usual_LOO_Seevaunnamtum,LEAVE-ONE-OUT,MD,mg IVMME,3,without Seevaunnamtum 2016
+E2,E2_EA_usual_LOO_Yang,LEAVE-ONE-OUT,MD,mg IVMME,3,without Yang 2024
+E2,E2_EA_usual_LOO_Lin,LEAVE-ONE-OUT,MD,mg IVMME,3,without Lin 2002
+QoR 24h,QOR40_SHAM_24H,ADDITIONAL,MD,QoR-40 points,2,"QoR-40: TEAS versus sham, ~24 h"
+QoR 24h,QOR40_USUAL_24H,ADDITIONAL,MD,QoR-40 points,2,"QoR-40: TEAS versus usual care, 24 h"
+QoR 24h,QOR15_SHAM_24H,ADDITIONAL,MD,QoR-15 points,4,"QoR-15: TEAS versus sham, ~24 h"
+QoR 24h,QOR40_SHAM_24H_WITHOUT_YAO_2015,SENSITIVITY,MD,QoR-40 points,1,"QoR-40: TEAS versus sham, ~24 h; omit Yao 2015"
+QoR 24h,QOR40_SHAM_24H_WITHOUT_YU_2020,SENSITIVITY,MD,QoR-40 points,1,"QoR-40: TEAS versus sham, ~24 h; omit Yu 2020"
+QoR 24h,QOR40_USUAL_24H_WITHOUT_LIANG_2021,SENSITIVITY,MD,QoR-40 points,1,"QoR-40: TEAS versus usual care, 24 h; omit Liang 2021"
+QoR 24h,QOR40_USUAL_24H_WITHOUT_PAN_2023,SENSITIVITY,MD,QoR-40 points,1,"QoR-40: TEAS versus usual care, 24 h; omit Pan 2023"
+QoR 24h,QOR15_SHAM_24H_WITHOUT_HOU_2023,SENSITIVITY,MD,QoR-15 points,3,"QoR-15: TEAS versus sham, ~24 h; omit Hou 2023"
+QoR 24h,QOR15_SHAM_24H_WITHOUT_WU_2025,SENSITIVITY,MD,QoR-15 points,3,"QoR-15: TEAS versus sham, ~24 h; omit Wu 2025"
+QoR 24h,QOR15_SHAM_24H_WITHOUT_XING_2022,SENSITIVITY,MD,QoR-15 points,3,"QoR-15: TEAS versus sham, ~24 h; omit Xing 2022"
+QoR 24h,QOR15_SHAM_24H_WITHOUT_ZHOU_2025,SENSITIVITY,MD,QoR-15 points,3,"QoR-15: TEAS versus sham, ~24 h; omit Zhou 2025"
+QoR 24h,QOR15_WU_DENOMINATOR_STRESS,SENSITIVITY,MD,QoR-15 points,4,QoR-15: Wu denominator-only stress test
+QoR later,QOR40_SHAM_POD2,ADDITIONAL,MD,QoR-40 points,1,"QoR-40: TEAS versus sham, POD2 (~48 h)"
+QoR later,QOR40_USUAL_48H,ADDITIONAL,MD,QoR-40 points,1,"QoR-40: TEAS versus usual care, 48 h"
+QoR later,QOR15_SHAM_POD2,ADDITIONAL,MD,QoR-15 points,1,"QoR-15: TEAS versus sham, POD2 (~48 h)"
+QoR later,QOR15_SHAM_POD3,ADDITIONAL,MD,QoR-15 points,2,"QoR-15: TEAS versus sham, POD3"
+QoR later,QOR15_SHAM_POD3_WITHOUT_HOU_2023,SENSITIVITY,MD,QoR-15 points,1,"QoR-15: TEAS versus sham, POD3; omit Hou 2023"
+QoR later,QOR15_SHAM_POD3_WITHOUT_XING_2022,SENSITIVITY,MD,QoR-15 points,1,"QoR-15: TEAS versus sham, POD3; omit Xing 2022"

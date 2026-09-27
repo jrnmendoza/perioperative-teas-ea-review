@@ -1,0 +1,11 @@
+figure_id,omitted,canonical_model,max_abs_diff,passed
+fig_loo_e2_opioid24_teas_sham,Szmit 2021,E2_TEAS_sham_LOO_Szmit_2021,5.812896120005462e-08,True
+fig_loo_e2_opioid24_teas_sham,Chen 1998,E2_TEAS_sham_LOO_Chen_1998,7.844049143557186e-08,True
+fig_loo_e2_opioid24_teas_sham,Chen 2020,E2_TEAS_sham_LOO_Chen_2020,2.871048465635795e-08,True
+fig_loo_e2_opioid24_teas_sham,He 2026 (hepatectomy/JIS),E2_TEAS_sham_excl_unstated_route,3.684106175683155e-08,True
+fig_loo_e2_opioid24_teas_sham,He 2026 (hepatectomy/JIS),E2_TEAS_sham_LOO_He_2026,3.684106175683155e-08,True
+fig_loo_e2_opioid24_teas_sham,Lee 2011,E2_TEAS_sham_leaveout_Lee2011,8.872618195709947e-10,True
+fig_loo_e2_opioid24_teas_sham,Lee 2011,E2_TEAS_sham_LOO_Lee_2011,8.872618195709947e-10,True
+fig_loo_e2_opioid24_teas_sham,Zhang 2025,E2_TEAS_sham_LOO_Zhang_2025,1.7294215837182492e-08,True
+fig_loo_e2_opioid24_teas_sham,Gu 2019,E2_TEAS_sham_leaveout_Gu2019,1.6782674805426723e-08,True
+fig_loo_e2_opioid24_teas_sham,Gu 2019,E2_TEAS_sham_LOO_Gu_2019,1.6782674805426723e-08,True

@@ -1,0 +1,35 @@
+characteristic,category,reports
+modality,"EA",20
+modality,"TEAS",49
+modality,"UNCLEAR",1
+comparator_class,"active control",1
+comparator_class,"sham",56
+comparator_class,"usual care",13
+surgical_category,"Abdominal & Gastrointestinal",17
+surgical_category,"Burn & Reconstructive",1
+surgical_category,"Gynecologic & Breast",20
+surgical_category,"Head, Neck & ENT",5
+surgical_category,"Mixed or unspecified surgery",2
+surgical_category,"Mixed specialties",2
+surgical_category,"Neurosurgery",3
+surgical_category,"Not documented",1
+surgical_category,"Orthopedic & Spine",5
+surgical_category,"Thoracic & Cardiac",11
+surgical_category,"Urologic",3
+country,"Brazil",1
+country,"China",55
+country,"Greece",1
+country,"Hong Kong",2
+country,"Malaysia",1
+country,"Poland",1
+country,"Singapore",1
+country,"Taiwan",4
+country,"Turkey",1
+country,"UK",1
+country,"USA",2
+randomized_n,median,90
+randomized_n,p25,74
+randomized_n,p75,120
+randomized_n,total (reported),12193
+randomized_n_counted,total (operational count),12103
+trial_family,distinct,69

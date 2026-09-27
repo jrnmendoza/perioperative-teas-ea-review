@@ -60,6 +60,15 @@ files.append(('Additional file 12: trial-by-trial accounting for the primary opi
 files.append(('Additional file 12 A1 primary construct','manuscript/additional_files/additional_file_12_A1_primary_construct.csv'))
 files.append(('Additional file 12 A2 other windows','manuscript/additional_files/additional_file_12_A2_other_windows.csv'))
 files.append(('Additional file 12 tierB no candidate result','manuscript/additional_files/additional_file_12_tierB_no_candidate_result.csv'))
+# Stata analysis layer (13_STATA) and harmonised characteristics (14_CHARACTERISTICS).
+if (D/'13_STATA/output/stata_verification_summary.csv').exists():
+ for label,path in [('Stata reproduction and reconciliation report','13_STATA/STATA_RECONCILIATION.md'),('Methods statement generated from the Stata run','13_STATA/METHODS_STATEMENT.md'),
+                    ('Stata verification: one status per model','13_STATA/output/stata_verification_summary.csv'),('Stata vs canonical vs R/metafor: every compared field','13_STATA/output/stata_canonical_comparison.csv'),
+                    ('Stata analysis manifest','13_STATA/output/stata_manifest.csv'),('Stata figure register','13_STATA/output/figure_register.csv'),
+                    ('Stata estimates for all models','13_STATA/output/stata_model_results.csv'),('Stata analysis layer README','13_STATA/README.md')]:
+  files.append((label,'10_FINAL_ADJUDICATION/'+path))
+if (D/'14_CHARACTERISTICS/report_characteristics.csv').exists():
+ files.append(('Harmonised report characteristics with verification status','10_FINAL_ADJUDICATION/14_CHARACTERISTICS/report_characteristics.csv'))
 filenames=set()
 for label,path in files:
  if pathlib.Path(path).name in filenames: raise ValueError('Filename collision: ' + pathlib.Path(path).name)
@@ -107,6 +116,23 @@ data['e2_accounting']={k:rows('10_FINAL_ADJUDICATION/02_DECISIONS/v38/'+f) for k
 # Proposed parent links for the core sensitivity models (display grouping, not an analysis decision).
 if (D/'12_SENSITIVITY_MAP/sensitivity_parent_map.csv').exists():
  data['sensitivity_map']=rows('10_FINAL_ADJUDICATION/12_SENSITIVITY_MAP/sensitivity_parent_map.csv')
+# Slim copy of the canonical results register (every extracted result with its decision) for the outcome inventory.
+REGISTER_FIELDS=['result_id','study','trial_id','comparison_id','outcome','window','data_type','n_i','n_c','comparator_class','decision','rationale','models','source_location']
+data['results_register']=[{k:r[k] for k in REGISTER_FIELDS} for r in rows('10_FINAL_ADJUDICATION/03_CANONICAL/results.csv')]
+# Harmonised report characteristics (code/build_characteristics.py): value, status and source per report and field.
+if (D/'14_CHARACTERISTICS/report_characteristics.csv').exists():
+ data['characteristics']=rows('10_FINAL_ADJUDICATION/14_CHARACTERISTICS/report_characteristics.csv')
+# Stata reproduction (13_STATA): verification per model, Stata estimates, figure register; figures copied into the site.
+if (D/'13_STATA/output/stata_verification_summary.csv').exists():
+ (OUT/'stata').mkdir(exist_ok=True)
+ figs=rows('10_FINAL_ADJUDICATION/13_STATA/output/figure_register.csv')
+ for f in figs:
+  for ext in ('svg','pdf','png'):
+   shutil.copyfile(ROOT/f[ext+'_file'],OUT/'stata'/pathlib.Path(f[ext+'_file']).name)
+   f[ext+'_href']='current/stata/'+pathlib.Path(f[ext+'_file']).name
+ data['stata']=dict(run_info=rows('10_FINAL_ADJUDICATION/13_STATA/output/stata_run_info.csv')[0],summary=rows('10_FINAL_ADJUDICATION/13_STATA/output/stata_verification_summary.csv'),
+                    results=rows('10_FINAL_ADJUDICATION/13_STATA/output/stata_model_results.csv'),figures=figs,small_study=rows('10_FINAL_ADJUDICATION/13_STATA/output/small_study_tests.csv'),
+                    methods=(D/'13_STATA/METHODS_STATEMENT.md').read_text(),code_url='https://github.com/jrnmendoza/perioperative-teas-ea-review/tree/main/10_FINAL_ADJUDICATION/13_STATA')
 # Paired opioid-pain registry (code/build_paired_pain.py): same-trial pain for every E1/E2 opioid contrast.
 if (D/'10_PAIRED_PAIN/paired_pain_registry.csv').exists():
  data['paired_pain']=rows('10_FINAL_ADJUDICATION/10_PAIRED_PAIN/paired_pain_registry.csv')

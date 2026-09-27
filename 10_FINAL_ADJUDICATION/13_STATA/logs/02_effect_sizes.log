@@ -1,0 +1,172 @@
+------------------------------------------------------------------------------------------------------------------------
+      name:  es
+       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/logs/02_effect_sizes
+> .log
+  log type:  text
+ opened on:  27 Sep 2026, 10:59:43
+
+. use "$STATA/work/inputs.dta", clear
+
+. gen double s_yi = .
+(327 missing values generated)
+
+. gen double s_se = .
+(327 missing values generated)
+
+. foreach spec in "MD|mdiff, unequal" "SMD|hedgesg, exact" {
+  2.     gettoken meas es : spec, parse("|")
+  3.     local es = substr("`es'", 2, .)
+  4.     count if measure == "`meas'"
+  5.     if r(N) {
+  6.         meta esize n_i mean_i sd_i n_c mean_c sd_c if measure == "`meas'", esize(`es')
+  7.         replace s_yi = _meta_es if measure == "`meas'"
+  8.         replace s_se = _meta_se if measure == "`meas'"
+  9.         meta clear
+ 10.         capture drop _meta_*
+ 11.     }
+ 12. }
+  264
+(63 missing values generated)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 264
+       Study label: Generic
+        Study size: _meta_studysize
+      Summary data: n_i mean_i sd_i n_c mean_c sd_c
+
+       Effect size
+              Type: mdiff
+             Label: Mean diff.
+          Variable: _meta_es
+
+         Precision
+         Std. err.: _meta_se
+    Std. err. adj.: Unequal
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+(264 real changes made)
+(264 real changes made)
+  12
+(315 missing values generated)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 12
+       Study label: Generic
+        Study size: _meta_studysize
+      Summary data: n_i mean_i sd_i n_c mean_c sd_c
+
+       Effect size
+              Type: hedgesg
+             Label: Hedges's g
+          Variable: _meta_es
+   Bias correction: Exact
+
+         Precision
+         Std. err.: _meta_se
+    Std. err. adj.: None
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+(12 real changes made)
+(12 real changes made)
+
+. gen double a = events_i
+(276 missing values generated)
+
+. gen double b = n_i - events_i
+(276 missing values generated)
+
+. gen double c = events_c
+(276 missing values generated)
+
+. gen double dd = n_c - events_c
+(276 missing values generated)
+
+. assert a > 0 & b > 0 & c > 0 & dd > 0 if measure == "RR"
+
+. meta esize a b c dd if measure == "RR", esize(lnrratio)
+(276 missing values generated)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 51
+       Study label: Generic
+        Study size: _meta_studysize
+      Summary data: a b c dd
+
+       Effect size
+              Type: lnrratio
+             Label: Log risk-ratio
+          Variable: _meta_es
+   Zero-cells adj.: None; no zero cells
+
+         Precision
+         Std. err.: _meta_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+. replace s_yi = _meta_es if measure == "RR"
+(51 real changes made)
+
+. replace s_se = _meta_se if measure == "RR"
+(51 real changes made)
+
+. meta clear
+
+. capture drop _meta_*
+
+. drop a b c dd
+
+. gen double s_se_default = s_se if measure == "SMD"
+(315 missing values generated)
+
+. replace s_se = sqrt((n_i + n_c)/(n_i*n_c) + s_yi^2/(2*(n_i + n_c))) if measure == "SMD"
+(12 real changes made)
+
+. assert !missing(s_yi, s_se)
+
+. gen double diff_yi = s_yi - canonical_yi
+
+. gen double diff_se = s_se - sqrt(canonical_vi)
+
+. summarize diff_yi diff_se
+
+    Variable |        Obs        Mean    Std. dev.       Min        Max
+-------------+---------------------------------------------------------
+     diff_yi |        327    1.56e-16    2.28e-15  -1.11e-14   2.98e-14
+     diff_se |        327   -2.72e-18    3.95e-17  -5.27e-16   1.11e-16
+
+. save "$STATA/work/inputs_es.dta", replace
+file /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/work/inputs_es.dta saved
+
+. format canonical_yi s_yi diff_yi canonical_vi s_se diff_se %21.16g
+
+. export delimited analysis_set model_id row study result_id measure canonical_yi s_yi diff_yi canonical_vi s_se diff_se
+>  ///
+>     using "$STATA/output/stata_effect_size_check.csv", replace datafmt
+file /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/output/stata_effect_size_che
+> ck.csv saved
+
+. log close es
+      name:  es
+       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/logs/02_effect_sizes
+> .log
+  log type:  text
+ closed on:  27 Sep 2026, 10:59:43
+------------------------------------------------------------------------------------------------------------------------

@@ -1,0 +1,1601 @@
+------------------------------------------------------------------------------------------------------------------------
+      name:  mod
+       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/logs/03_models.log
+  log type:  text
+ opened on:  27 Sep 2026, 10:59:43
+
+. use "$STATA/work/models.dta", clear
+
+. local nm = _N
+
+. forvalues i = 1/`nm' {
+  2.     local set`i' = analysis_set[`i']
+  3.     local mid`i' = model_id[`i']
+  4. }
+
+. tempname post
+
+. postfile `post' str16 analysis_set str80 model_id int k long N double(theta se ci_lb ci_ub tau2 I2 Q hk_q ///
+>     pi_lb_stata pi_ub_stata pi_lb_k1 pi_ub_k1 alt_theta alt_ci_lb alt_ci_ub) str40 status using "$STATA/work/results.d
+> ta", replace
+
+. forvalues i = 1/`nm' {
+  2.     use "$STATA/work/inputs_es.dta", clear
+  3.     keep if analysis_set == "`set`i''" & model_id == "`mid`i''"
+  4.     local k = _N
+  5.     if `k' == 0 {
+  6.         post `post' ("`set`i''") ("`mid`i''") (0) (0) (.) (.) (.) (.) (.) (.) (.) (.) (.) (.) (.) (.) (.) (.) (.) (
+> "no eligible data")
+  7.         continue
+  8.     }
+  9.     quietly summarize n_i
+ 10.     local ni = r(sum)
+ 11.     quietly summarize n_c
+ 12.     local N = `ni' + r(sum)
+ 13.     if `k' == 1 {
+ 14.         local th = s_yi[1]
+ 15.         local se = s_se[1]
+ 16.         post `post' ("`set`i''") ("`mid`i''") (1) (`N') (`th') (`se') (`th' - invnormal(.975)*`se') (`th' + invnorm
+> al(.975)*`se') ///
+>             (0) (.) (.) (.) (.) (.) (.) (.) (.) (.) (.) ("single study - not pooled")
+ 17.         continue
+ 18.     }
+ 19.     meta set s_yi s_se, studylabel(study) random(reml)
+ 20.     local opt se(khartung, truncated) tolerance(1e-14) nrtolerance(1e-14) iterate(1000)
+ 21.     if `k' >= 3 quietly meta summarize, `opt' predinterval
+ 22.     else        quietly meta summarize, `opt'
+ 23.     assert r(converged) == 1
+ 24.     local th = r(theta)
+ 25.     local se = r(se)
+ 26.     local lb = r(ci_lb)
+ 27.     local ub = r(ci_ub)
+ 28.     local t2 = r(tau2)
+ 29.     local i2 = r(I2)
+ 30.     local q  = r(Q)
+ 31.     local pl = cond(`k' >= 3, r(pi_lb), .)
+ 32.     local pu = cond(`k' >= 3, r(pi_ub), .)
+ 33.     * Knapp-Hartung scale q = sum w(y - theta)^2 / (k - 1), w = 1/(v + tau^2); the truncated SE uses max(1, q).
+.     tempvar w r2
+ 34.     quietly gen double `w' = 1/(s_se^2 + `t2')
+ 35.     quietly gen double `r2' = `w'*(s_yi - `th')^2
+ 36.     quietly summarize `r2'
+ 37.     local hq = r(sum)/(`k' - 1)
+ 38.     * Canonical-convention PI (t with k-1 df, only when k >= 5).
+.     local p1l = cond(`k' >= 5, `th' - invttail(`k'-1, .025)*sqrt(`t2' + `se'^2), .)
+ 39.     local p1u = cond(`k' >= 5, `th' + invttail(`k'-1, .025)*sqrt(`t2' + `se'^2), .)
+ 40.     * SMD models only: refit with Stata's default hedgesg SE to report the size of that convention difference.
+.     local at = .
+ 41.     local al = .
+ 42.     local au = .
+ 43.     if measure[1] == "SMD" {
+ 44.         meta clear
+ 45.         meta set s_yi s_se_default, studylabel(study) random(reml)
+ 46.         quietly meta summarize, `opt'
+ 47.         local at = r(theta)
+ 48.         local al = r(ci_lb)
+ 49.         local au = r(ci_ub)
+ 50.     }
+ 51.     post `post' ("`set`i''") ("`mid`i''") (`k') (`N') (`th') (`se') (`lb') (`ub') (`t2') (`i2') (`q') (`hq') ///
+>         (`pl') (`pu') (`p1l') (`p1u') (`at') (`al') (`au') ("REML + truncated Knapp-Hartung")
+ 52.     meta clear
+ 53. }
+(326 observations deleted)
+(327 observations deleted)
+(326 observations deleted)
+(325 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 2
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+(326 observations deleted)
+(323 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 4
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+(324 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 3
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+(323 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 4
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+(324 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 3
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+(323 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 4
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+(324 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 3
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+(324 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 3
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+(326 observations deleted)
+(326 observations deleted)
+(326 observations deleted)
+(326 observations deleted)
+(326 observations deleted)
+(317 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 10
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+(316 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 11
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+(325 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 2
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+(325 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 2
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+(324 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 3
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+(323 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 4
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+(326 observations deleted)
+(326 observations deleted)
+(326 observations deleted)
+(326 observations deleted)
+(326 observations deleted)
+(326 observations deleted)
+(326 observations deleted)
+(324 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 3
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+(326 observations deleted)
+(327 observations deleted)
+(326 observations deleted)
+(327 observations deleted)
+(325 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 2
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+(326 observations deleted)
+(320 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 7
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+(326 observations deleted)
+(326 observations deleted)
+(326 observations deleted)
+(320 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 7
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+(327 observations deleted)
+(326 observations deleted)
+(323 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 4
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+(325 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 2
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+(323 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 4
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+(326 observations deleted)
+(323 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 4
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+(326 observations deleted)
+(326 observations deleted)
+(326 observations deleted)
+(325 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 2
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+(325 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 2
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+(325 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 2
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+(323 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 4
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+(325 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 2
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+(326 observations deleted)
+(326 observations deleted)
+(326 observations deleted)
+(326 observations deleted)
+(326 observations deleted)
+(326 observations deleted)
+(326 observations deleted)
+(326 observations deleted)
+(316 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 11
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+(320 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 7
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 7
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se_default
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+(327 observations deleted)
+(326 observations deleted)
+(323 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 4
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 4
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se_default
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+(319 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 8
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+(324 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 3
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+(322 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 5
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+(326 observations deleted)
+(320 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 7
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+(320 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 7
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+(320 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 7
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+(322 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 5
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+(321 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 6
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+(321 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 6
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+(322 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 5
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+(321 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 6
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+(326 observations deleted)
+(321 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 6
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+(321 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 6
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+(321 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 6
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+(321 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 6
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+(321 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 6
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+(321 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 6
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+(321 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 6
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+(326 observations deleted)
+(326 observations deleted)
+(323 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 4
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+(324 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 3
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+(325 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 2
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+(324 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 3
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+(324 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 3
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+(324 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 3
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+(324 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 3
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+(325 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 2
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+(325 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 2
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+(323 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 4
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+(326 observations deleted)
+(326 observations deleted)
+(326 observations deleted)
+(326 observations deleted)
+(324 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 3
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+(324 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 3
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+(324 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 3
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+(324 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 3
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+(323 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 4
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+(326 observations deleted)
+(326 observations deleted)
+(326 observations deleted)
+(325 observations deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 2
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: s_yi
+
+         Precision
+         Std. err.: s_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+(326 observations deleted)
+(326 observations deleted)
+
+. postclose `post'
+
+. use "$STATA/work/results.dta", clear
+
+. format theta-alt_ci_ub %21.16g
+
+. export delimited using "$STATA/output/stata_model_results.csv", replace datafmt
+file /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/output/stata_model_results.c
+> sv saved
+
+. log close mod
+      name:  mod
+       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/10_FINAL_ADJUDICATION/13_STATA/logs/03_models.log
+  log type:  text
+ closed on:  27 Sep 2026, 10:59:43
+------------------------------------------------------------------------------------------------------------------------

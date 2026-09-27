@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- This is a Stata 19.5 generated SVG file (http://www.stata.com) -->
+
+<svg version="1.1" width="9.000in" height="3.600in" viewBox="0 0 6480 2592" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>Stata Graph - g</desc>
+	<rect x="0" y="0" width="6480" height="2592" style="fill:#FFFFFF;stroke:none"/>
+	<rect x="0.00" y="0.00" width="6480.00" height="2592.00" style="fill:#FFFFFF"/>
+	<rect x="2.88" y="2.88" width="6474.24" height="2586.24" style="fill:none;stroke:#FFFFFF;stroke-width:5.76"/>
+	<rect x="40.10" y="40.09" width="6399.81" height="2511.81" style="fill:#FFFFFF"/>
+	<rect x="42.98" y="42.97" width="6394.05" height="2506.05" style="fill:none;stroke:#FFFFFF;stroke-width:5.76"/>
+	<rect x="40.10" y="299.09" width="6399.81" height="2072.99" style="fill:#FFFFFF"/>
+	<rect x="42.98" y="301.97" width="6394.05" height="2067.23" style="fill:none;stroke:#FFFFFF;stroke-width:5.76"/>
+	<rect x="79.99" y="339.19" width="6320.03" height="1992.80" style="fill:#FFFFFF"/>
+	<rect x="82.87" y="342.07" width="6314.27" height="1987.04" style="fill:none;stroke:#FFFFFF;stroke-width:5.76"/>
+	<text x="100.04" y="1061.16" style="font-family:'Helvetica';font-size:109.96px;fill:#000000">Szmit 2021</text>
+	<text x="100.04" y="1665.62" style="font-family:'Helvetica';font-weight:bold;font-size:109.96px;fill:#000000"> </text>
+	<text x="100.04" y="585.95" style="font-family:'Helvetica';font-size:109.96px;fill:#000000">Study</text>
+	<line x1="4041.29" y1="2001.92" x2="4041.29" y2="647.80" style="stroke:#808080;stroke-width:5.76"/>
+	<line x1="1710.11" y1="2001.92" x2="1710.11" y2="1981.26" style="stroke:#FF7F00;stroke-width:12.96"/>
+	<line x1="1710.11" y1="1963.04" x2="1710.11" y2="1942.38" style="stroke:#FF7F00;stroke-width:12.96"/>
+	<line x1="1710.11" y1="1924.16" x2="1710.11" y2="1903.50" style="stroke:#FF7F00;stroke-width:12.96"/>
+	<line x1="1710.11" y1="1885.28" x2="1710.11" y2="1864.62" style="stroke:#FF7F00;stroke-width:12.96"/>
+	<line x1="1710.11" y1="1846.40" x2="1710.11" y2="1825.74" style="stroke:#FF7F00;stroke-width:12.96"/>
+	<line x1="1710.11" y1="1807.52" x2="1710.11" y2="1786.86" style="stroke:#FF7F00;stroke-width:12.96"/>
+	<line x1="1710.11" y1="1768.64" x2="1710.11" y2="1747.98" style="stroke:#FF7F00;stroke-width:12.96"/>
+	<line x1="1710.11" y1="1729.76" x2="1710.11" y2="1709.10" style="stroke:#FF7F00;stroke-width:12.96"/>
+	<line x1="1710.11" y1="1690.88" x2="1710.11" y2="1670.22" style="stroke:#FF7F00;stroke-width:12.96"/>
+	<line x1="1710.11" y1="1652.00" x2="1710.11" y2="1631.34" style="stroke:#FF7F00;stroke-width:12.96"/>
+	<line x1="1710.11" y1="1613.12" x2="1710.11" y2="1592.46" style="stroke:#FF7F00;stroke-width:12.96"/>
+	<line x1="1710.11" y1="1574.24" x2="1710.11" y2="1553.58" style="stroke:#FF7F00;stroke-width:12.96"/>
+	<line x1="1710.11" y1="1535.36" x2="1710.11" y2="1514.70" style="stroke:#FF7F00;stroke-width:12.96"/>
+	<line x1="1710.11" y1="1496.48" x2="1710.11" y2="1475.82" style="stroke:#FF7F00;stroke-width:12.96"/>
+	<line x1="1710.11" y1="1457.60" x2="1710.11" y2="1436.94" style="stroke:#FF7F00;stroke-width:12.96"/>
+	<line x1="1710.11" y1="1418.72" x2="1710.11" y2="1398.06" style="stroke:#FF7F00;stroke-width:12.96"/>
+	<line x1="1710.11" y1="1379.84" x2="1710.11" y2="1359.18" style="stroke:#FF7F00;stroke-width:12.96"/>
+	<line x1="1710.11" y1="1340.96" x2="1710.11" y2="1320.30" style="stroke:#FF7F00;stroke-width:12.96"/>
+	<line x1="1710.11" y1="1302.08" x2="1710.11" y2="1281.42" style="stroke:#FF7F00;stroke-width:12.96"/>
+	<line x1="1710.11" y1="1263.20" x2="1710.11" y2="1242.54" style="stroke:#FF7F00;stroke-width:12.96"/>
+	<line x1="1710.11" y1="1224.32" x2="1710.11" y2="1203.66" style="stroke:#FF7F00;stroke-width:12.96"/>
+	<line x1="1710.11" y1="1185.44" x2="1710.11" y2="1164.78" style="stroke:#FF7F00;stroke-width:12.96"/>
+	<line x1="1710.11" y1="1146.56" x2="1710.11" y2="1125.90" style="stroke:#FF7F00;stroke-width:12.96"/>
+	<line x1="1710.11" y1="1107.68" x2="1710.11" y2="1087.02" style="stroke:#FF7F00;stroke-width:12.96"/>
+	<line x1="1710.11" y1="1068.80" x2="1710.11" y2="1048.14" style="stroke:#FF7F00;stroke-width:12.96"/>
+	<line x1="1710.11" y1="1029.92" x2="1710.11" y2="1009.26" style="stroke:#FF7F00;stroke-width:12.96"/>
+	<line x1="1710.11" y1="991.04" x2="1710.11" y2="970.38" style="stroke:#FF7F00;stroke-width:12.96"/>
+	<line x1="1710.11" y1="952.16" x2="1710.11" y2="931.50" style="stroke:#FF7F00;stroke-width:12.96"/>
+	<line x1="1710.11" y1="913.28" x2="1710.11" y2="892.62" style="stroke:#FF7F00;stroke-width:12.96"/>
+	<line x1="1710.11" y1="874.40" x2="1710.11" y2="853.74" style="stroke:#FF7F00;stroke-width:12.96"/>
+	<line x1="1710.11" y1="835.52" x2="1710.11" y2="814.86" style="stroke:#FF7F00;stroke-width:12.96"/>
+	<line x1="1710.11" y1="796.64" x2="1710.11" y2="775.98" style="stroke:#FF7F00;stroke-width:12.96"/>
+	<line x1="1710.11" y1="757.76" x2="1710.11" y2="737.10" style="stroke:#FF7F00;stroke-width:12.96"/>
+	<line x1="1710.11" y1="718.88" x2="1710.11" y2="698.22" style="stroke:#FF7F00;stroke-width:12.96"/>
+	<line x1="1710.11" y1="679.99" x2="1710.11" y2="659.34" style="stroke:#FF7F00;stroke-width:12.96"/>
+	<line x1="2176.27" y1="1022.63" x2="1495.67" y2="1022.63" style="stroke:#1A85FF;stroke-width:8.64"/>
+	<line x1="1495.67" y1="1022.63" x2="1495.67" y2="1022.63" stroke-linecap="round" style="stroke:#1A85FF;stroke-width:8.64"/>
+	<line x1="1495.67" y1="1022.63" x2="1495.67" y2="1022.63" stroke-linecap="round" style="stroke:#1A85FF;stroke-width:8.64"/>
+	<line x1="2176.27" y1="1022.63" x2="2857.07" y2="1022.63" style="stroke:#1A85FF;stroke-width:8.64"/>
+	<line x1="2857.07" y1="1022.63" x2="2857.07" y2="1022.63" stroke-linecap="round" style="stroke:#1A85FF;stroke-width:8.64"/>
+	<line x1="2857.07" y1="1022.63" x2="2857.07" y2="1022.63" stroke-linecap="round" style="stroke:#1A85FF;stroke-width:8.64"/>
+	<rect x="2116.87" y="963.23" width="118.80" height="118.80" style="fill:#1A85FF"/>
+	<rect x="2121.19" y="967.55" width="110.16" height="110.16" style="fill:none;stroke:#1A85FF;stroke-width:8.64"/>
+	<defs>
+		<path id="path_CLZwCPRB" d="M2176.27 1022.63 Z" stroke-linejoin="round"/>
+	</defs>
+	<defs>
+		<clipPath id="clipPath_teOzkPla">
+			<use xlink:href="#path_CLZwCPRB"/>
+		</clipPath>
+	</defs>
+	<use xlink:href="#path_CLZwCPRB" style="stroke:none;fill:#00BF7F"/>
+	<use xlink:href="#path_CLZwCPRB" style="fill:none;stroke:#00BF7F;stroke-width:17.28" clip-path="url(#clipPath_teOzkPla)"/>
+	<line x1="1127.32" y1="2001.92" x2="4624.29" y2="2001.92" style="stroke:#000000;stroke-width:5.76"/>
+	<line x1="1127.32" y1="2001.92" x2="1127.32" y2="2042.01" style="stroke:#000000;stroke-width:5.76"/>
+	<text x="1127.32" y="2138.93" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="middle">-12.5</text>
+	<line x1="1710.11" y1="2001.92" x2="1710.11" y2="2042.01" style="stroke:#000000;stroke-width:5.76"/>
+	<text x="1710.11" y="2138.93" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="middle">-10</text>
+	<line x1="2292.91" y1="2001.92" x2="2292.91" y2="2042.01" style="stroke:#000000;stroke-width:5.76"/>
+	<text x="2292.91" y="2138.93" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="middle">-7.5</text>
+	<line x1="2875.70" y1="2001.92" x2="2875.70" y2="2042.01" style="stroke:#000000;stroke-width:5.76"/>
+	<text x="2875.70" y="2138.93" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="middle">-5</text>
+	<line x1="3458.50" y1="2001.92" x2="3458.50" y2="2042.01" style="stroke:#000000;stroke-width:5.76"/>
+	<text x="3458.50" y="2138.93" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="middle">-2.5</text>
+	<line x1="4041.29" y1="2001.92" x2="4041.29" y2="2042.01" style="stroke:#000000;stroke-width:5.76"/>
+	<text x="4041.29" y="2138.93" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="middle">0</text>
+	<line x1="4624.29" y1="2001.92" x2="4624.29" y2="2042.01" style="stroke:#000000;stroke-width:5.76"/>
+	<text x="4624.29" y="2138.93" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="middle">2.5</text>
+	<text x="2875.70" y="2281.83" style="font-family:'Helvetica';font-size:100.04px;fill:#000000" text-anchor="middle">Mean difference, mg IV MME; negative favours TEAS</text>
+	<text x="5512.05" y="585.95" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="middle">with 95% CI</text>
+	<text x="5512.05" y="436.10" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="middle">Mean difference</text>
+	<text x="5184.81" y="1061.16" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="end">-8.00 [</text>
+	<text x="5808.71" y="1061.16" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="end">-10.92,</text>
+	<text x="6346.76" y="1061.16" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="end">-5.08]</text>
+	<line x1="79.99" y1="643.34" x2="6400.01" y2="643.34" style="stroke:#000000;stroke-width:8.64"/>
+	<text x="40.10" y="2423.08" style="font-family:'Helvetica';font-size:59.94px;fill:#000000">k = 1 study; N = 47 participants. Single study: estimate with normal 95% CI; not pooled.</text>
+	<text x="40.10" y="2483.02" style="font-family:'Helvetica';font-size:59.94px;fill:#000000">Dotted line: -10 mg IV MME registered clinical-importance threshold.</text>
+	<text x="40.10" y="2542.96" style="font-family:'Helvetica';font-size:59.94px;fill:#000000">Model E2_opioid24_TEAS_usual (E2). StataNow/SE 19.5, 13_STATA/do/04_figures.do.</text>
+	<text x="3240.00" y="269.83" style="font-family:'Helvetica';font-size:79.99px;fill:#000000" text-anchor="middle">Not graded; E1 remains the registered primary analysis</text>
+	<text x="3240.00" y="134.18" style="font-family:'Helvetica';font-size:109.96px;fill:#000000" text-anchor="middle">E2 post-hoc sensitivity synthesis: TEAS versus usual care</text>
+</svg>

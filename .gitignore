@@ -58,3 +58,8 @@ reports/previous_manuscript/extracted_text/
 # This repository is PUBLIC. Kept locally as the audit record only. Never commit.
 10_FINAL_ADJUDICATION/02_DECISIONS/v38/author_query_log.csv
 10_FINAL_ADJUDICATION/02_DECISIONS/v38/sent_messages/
+
+# Stata analysis layer (10_FINAL_ADJUDICATION/13_STATA): logs are provenance and ship; .dta work files are regenerated.
+!10_FINAL_ADJUDICATION/13_STATA/logs/
+!10_FINAL_ADJUDICATION/13_STATA/logs/*.log
+10_FINAL_ADJUDICATION/13_STATA/work/
