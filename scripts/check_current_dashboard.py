@@ -250,6 +250,8 @@ def checks(d):
       'Results register identity':d.get('results_register')==[{k:r[k] for k in ['result_id','study','trial_id','comparison_id','outcome','window','data_type','n_i','n_c','comparator_class','decision','rationale','models','source_location']} for r in rows(D/'03_CANONICAL/results.csv')] if 'results_register' in d else True,
       'Characteristics identity':d.get('characteristics')==rows(D/'14_CHARACTERISTICS/report_characteristics.csv') if (D/'14_CHARACTERISTICS/report_characteristics.csv').exists() else True,
       'Characteristics complete with declared statuses':characteristics_complete(d),
+      # A value shown as quoted from a PDF (any extractor or review state) must name the PDF page it came from.
+      'Quoted characteristic values carry a page locator':all(re.search(r'p\.\s?\d',c['source']) for c in d.get('characteristics',[]) if c['status'] in ('Verified (PDF quote)','Extracted (PDF quote, single extractor)','Verified (PDF quote, second reviewer)')),
       'Regimen extraction matches record and source quotes':regimen_verified(d),
       'Baseline/protocol extraction matches record and source quotes':baseline_verified(d),
       'Second-review worksheet current and unreviewed':worksheet_ok(d),
@@ -519,6 +521,7 @@ def main(site=None):
         mutations.append(('Results register identity',lambda d:d['results_register'][0].__setitem__('decision','INCLUDE?')))
     if 'characteristics' in data:
         mutations.append(('Characteristics identity',lambda d:d['characteristics'][0].__setitem__('value','changed')))
+        mutations.append(('Quoted characteristic values carry a page locator',lambda d:next(c for c in d['characteristics'] if c['status']=='Verified (PDF quote)').__setitem__('source','dashboard/pdf_extracted.js')))
         mutations.append(('Characteristics complete with declared statuses',lambda d:d['characteristics'][0].__setitem__('status','Confirmed')))
         if (D/'14_CHARACTERISTICS/regimen_extraction.csv').exists():
             REG=('postoperative_analgesia','pca_regimen','rescue_analgesia','cumulative_duration')
