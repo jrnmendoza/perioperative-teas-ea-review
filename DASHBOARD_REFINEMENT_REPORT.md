@@ -62,8 +62,10 @@ pre-edit audit is in `DASHBOARD_REFINEMENT_AUDIT.md`.
   adopted workflow…", counts computed from the payload); and "Outstanding", which lists the current-state
   report's outstanding items from `d.outstanding` (not re-typed). Nothing says reviewer approval is awaited.
 - An always-open "Limitations that stay in view" list covers: the 12-reference import mapping gap, historical
-  selection, reports versus trial families, randomised versus analysed N, source holds, E2 as post hoc, AI-assisted
-  adjudication, and reproduction versus source truth. It is computed from PRISMA counts and the results
+  selection, reports versus trial families, randomised versus analysed N, source holds, E2 as post hoc, and reproduction
+  versus source truth. (A separate AI-assisted adjudication item was removed from this list on the user's
+  instruction on 28 September 2026; the AI-conducted RoB 2/GRADE disclosure remains in the "Complete · v38
+  core" card, the Risk of bias view and the footer.) It is computed from PRISMA counts and the results
   register (e.g. 261 held results in 58 reports, none in any model).
 
 **Build and analysis provenance**
@@ -226,8 +228,9 @@ By field:
 - The four regimen fields remain single-extractor. The anaesthesia, age, sex, BMI, ASA and STRICTA fields are
   still mostly legacy or not verified.
 - The sensitivity parent map remains a proposed display grouping.
-- The 12-reference import gap, historical exclusion labels, post-hoc E2 timing, AI-assisted adjudication and
-  source holds are unchanged and remain disclosed on the Overview.
+- The 12-reference import gap, historical exclusion labels, post-hoc E2 timing and source holds are unchanged
+  and remain disclosed on the Overview; AI-assisted adjudication remains disclosed in the core-status card,
+  the Risk of bias view and the footer.
 - The contrast test covers the main text classes, not every pixel. SVG forest text relies on theme variables
   and was checked visually in both themes. The Stata PNG previews sit on white in both themes, by design.
 - The repository `venv/` lost scipy on its Python upgrade; the validator ran in a scratch environment.

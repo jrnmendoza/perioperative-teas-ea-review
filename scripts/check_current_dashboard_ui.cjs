@@ -67,7 +67,7 @@ let passed=0;const ok=(name)=>{passed++;console.log('PASS '+name);};
     done:document.querySelector('.status-done').textContent,limits:document.querySelector('.limits').textContent}));
   assert.deepEqual(ov.items,ov.want.map(x=>x.replace(/\.$/,'')));
   assert.ok(/Core v38 RoB 2 and GRADE are complete under the adopted workflow/.test(ov.done));
-  for(const needle of ['Import mapping gap','Historical selection','Reports and trials','Randomised and analysed N','Source holds','E2 is post hoc','AI-assisted adjudication','Reproduction is not source truth'])
+  for(const needle of ['Import mapping gap','Historical selection','Reports and trials','Randomised and analysed N','Source holds','E2 is post hoc','Reproduction is not source truth'])
     assert.ok(ov.limits.includes(needle),'Limitation missing: '+needle);
   ok('Overview separates the complete v38 core from outstanding work and keeps the limitations');
 

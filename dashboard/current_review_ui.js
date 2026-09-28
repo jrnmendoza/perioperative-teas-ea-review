@@ -75,7 +75,6 @@
       `<li><strong>Randomised and analysed N:</strong> the operational randomised count is not the analysed population; each model states its own N.</li>`+
       `<li><strong>Source holds:</strong> ${holds.length} extracted results in ${new Set(holds.map(r=>r.study)).size} reports are held for unresolved source, comparator or construct questions and enter no model.</li>`+
       `<li><strong>E2 is post hoc:</strong> defined and amended after the data were seen; E1 remains the registered primary analysis and E2 is not graded.</li>`+
-      `<li><strong>AI-assisted adjudication:</strong> post-hoc adjudication with results known; new RoB 2 and GRADE judgements are AI-conducted under user delegation.</li>`+
       `<li><strong>Reproduction is not source truth:</strong> Stata, R and Python agreement shows computational consistency, not that extracted values match the reports or that selection was complete.</li></ul></details>`+
     qorLink()+`<h3>Primary question</h3>${modelTable(primary)}${note('No body establishes ≥10mg opioid sparing together with paired ~24h pain upper CI &lt;+1. Separate pain evidence cannot supply Szmit’s missing paired fixed-24h measurement. A one-study estimate is not a pooled meta-analysis.')}`+
     (d.e2_joint ? `<div class="panel"><h4>E2 post-hoc sensitivity analysis</h4>${
