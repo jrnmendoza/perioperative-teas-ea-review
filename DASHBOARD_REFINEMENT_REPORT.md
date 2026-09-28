@@ -243,6 +243,28 @@ By field:
 - `scripts/check_current_dashboard_ui.cjs` (new)
 - `.github/workflows/deploy-pages.yml`, `.github/workflows/dashboard-checks.yml` (new)
 
-## 8. Deployment
+## 8. Deployment (28 September 2026)
 
-Recorded after deployment; see the section appended below.
+| Item | Value |
+|---|---|
+| Pull request | #51 (`dashboard-refinement`), PR check `Dashboard checks (no deploy)` run 36440707735: success, including the 18 browser checks on the GitHub runner |
+| Merge commit (deployed) | `2971096` (`2971096bd6d405a683f3c4f833b39ffaed9327de`); tree identical to the tested branch head `d7ced44` |
+| Deployment branch | `claude-v26-dashboard-final` fast-forwarded `6619e2a` → `2971096` |
+| Pages workflow | run 36443711226: build (all gates plus the new browser test), deploy and live verify all `success` |
+| Live build record | `build-meta.json`: `git_commit` `2971096…`, `build_timestamp_utc` 2026-09-28T15:27:36Z, `content_fingerprint` `9dffc2d6eddd` |
+| Live URL | https://jrnmendoza.github.io/perioperative-teas-ea-review/ |
+| Cache-busting URL | https://jrnmendoza.github.io/perioperative-teas-ea-review/?build=2971096 |
+
+Live post-deployment verification:
+- `scripts/verify_deployment.py` (workflow verify job): passed.
+- All 71 live downloads and all 99 live Stata figure files (33 × SVG/PDF/PNG) are SHA-256 identical to the
+  repository sources and the figure register.
+- Live `index.html`, `current_review.js`, `current_review_ui.js`, `interactive_explorer.js`,
+  `current_review.css` and `theme.js` are byte-identical to the locally tested build.
+- `scripts/check_current_dashboard_ui.cjs` against the live site: 18/18 checks pass. These include no
+  whole-page overflow at 1440/1024/768/430/390 px, dark and light contrast, and no page or console errors.
+  The Overview and footer show commit `2971096` from the live build record.
+- Screenshots checked at 1440 px (Overview) and 390 px (Studies & figures).
+
+This report commit changes only this file, which is outside the workflow's path filter, so pushing it does not
+redeploy; the site content is that of `2971096`.
