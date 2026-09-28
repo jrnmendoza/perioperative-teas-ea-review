@@ -55,7 +55,9 @@ qor_section=D/'08_QOR_ANALYSIS/CURRENT_STATE_SECTION.md'
 if qor_section.exists():
  summary=[s.replace('New QoR models and their exact-result RoB/GRADE are **not yet fitted or adopted**.', 'The subsequent QoR analytical addendum below completes three approximately-24-hour bodies and their exact-result RoB/GRADE; the coverage report preserves its earlier audit status.') for s in summary]
  summary+=['',qor_section.read_text().strip()]
-(ROOT/'FINAL_CURRENT_STATE_REPORT.md').write_text('\n'.join(summary)+'\n')
+# FINAL_CURRENT_STATE_REPORT.md is now written by code/build_current_state_report.py from the current records (28 Sep 2026);
+# this 20 September v38 summary is kept as a dated snapshot instead of overwriting it.
+(R/'CURRENT_STATE_v38_20SEP2026.md').write_text('\n'.join(summary)+'\n')
 (R/'UNRESOLVED_HUMAN_DECISIONS.md').write_text('# Decision status — v38\n\nNo further reviewer approval is awaited: the user delegated RoB, all 38 GRADE bodies and methodological decisions, and reported prior human review complete. New decisions are AI-conducted. Re-screening package is withdrawn.\n\nResidual evidence limits, not undecided policies: 12-reference import mapping absent; historical exclusion completeness uncertain; publication/source ambiguities remain held or diagnostic. Author correspondence remains unsent; external database edits and public deployment were not performed. See current-state report and v38 decision register.\n')
 (R/'CHANGELOG_v38.md').write_text('# v38 change record\n\n'+'\n'.join('- '+a+': '+c for a,b,c in policy)+'\n\nBaseline and hashes: `05_REPRODUCTION/v38`. All source values preserved. Primary four numerical estimates unchanged. Before/after models and GRADE: `model_comparison_v38.csv`.\n')
 print('v38 reports; active component results',len(active),'GRADE changes',len(changes))
