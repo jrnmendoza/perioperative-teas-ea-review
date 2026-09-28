@@ -66,6 +66,28 @@ def regimen_verified(d):
     C={(c['report_id'],c['field']):c for c in d['characteristics'] if c['field'] in V.FIELDS}
     ok=lambda c,r:c['value']==r['value'] and (r['quote'] in c.get('note','') if r['status']=='Extracted (PDF quote)' else c['status']=='Not reported in source')
     return set(C)==set(R) and all(ok(C[k],R[k]) for k in R)
+V38_SCRIPTS=['theme.js','evidence_graph.js','current_review.js','article_figures.js','search_strategies.js','interactive_explorer.js','current_review_ui.js']
+NAV_GROUPS=[('Evidence',['overview','results','e1e2','qor']),('Explore studies',['studies','coverage','risk','evidence']),('Review process',['prisma','methods','downloads'])]
+def nav_ok(nav):
+    """Route navigation: every route once, in reader groups, as links (#view) with aria-current (not ARIA tabs)."""
+    groups=re.findall(r'<span class="nav-group-label"[^>]*>([^<]+)</span><div class="nav-links">(.*?)</div>',nav)
+    got=[(g,re.findall(r'<a href="#([a-z0-9]+)" data-view="\1"',links)) for g,links in groups]
+    return got==NAV_GROUPS and 'role="tab' not in nav and nav.count('aria-current="page"')==1 and len(re.findall(r'data-view=',nav))==11
+def theme_ok(js):
+    """theme.js is the only script that uses browser storage: one fixed key, no network."""
+    keys=set(re.findall(r"KEY\s*=\s*'([^']+)'",js))
+    calls=re.findall(r'localStorage\.(\w+)\(([^,)]*)',js)
+    return keys=={'teas-ea-review-theme'} and calls and all(c[1].strip()=='KEY' for c in calls) and not re.search(r'fetch\(|XMLHttpRequest|sendBeacon|document\.cookie',js)
+def legend_ok(js):
+    """The explorer legend explains exactly the statuses the characteristics use (one entry each, with help text)."""
+    entries=re.findall(r"^\s+'([^']+)': \['(\w+)', 'vs-(?:ok|mid|warn|none)', '([^']+)',\s*\n\s*'([^']{40,})'\]",js,re.M)
+    return {e[0] for e in entries}==CHAR_STATUS and len(entries)==len(CHAR_STATUS) and 'provenanceLegend()' in js and 'Characteristics do not all have the same verification level.' in js
+def release_ok(d):
+    """Release dates shown in the page come from the payload date and the dated E2 decision heading."""
+    r=d.get('release');h=[k for k in d.get('e2_methods',{}) if k.startswith('Decision after the E2 run')]
+    if not r or len(h)!=1:return False
+    from datetime import datetime
+    return r['core_version']==d['version'] and r['core_date']==d['date'] and r['e2_date']==datetime.strptime(re.search(r'\d{1,2} \w+ \d{4}',h[0]).group(0),'%d %B %Y').strftime('%Y-%m-%d')
 def stata_reproduces_canonical(d):
     """The shipped Stata estimates still reproduce the current canonical models (catches a stale Stata run)."""
     if 'stata' not in d:return True
@@ -127,6 +149,7 @@ def checks(d):
       'Stata reproduces current canonical results':stata_reproduces_canonical(d),
       'QoR later-window identity':d.get('qor_later_models')==json.load(open(D/'08_QOR_ANALYSIS/qor_models_later.json')) if (D/'08_QOR_ANALYSIS/qor_models_later.json').exists() else True,
       'QoR later-window RoB identity': d.get('qor_later_rob') == rows(D/'08_QOR_ANALYSIS/qor_rob2_later.csv') and len(d.get('qor_later_rob', [])) == 5 if 'qor_later_rob' in d else True,
+      'Release dates derived from payload and E2 decision':release_ok(d),
       'E2 methods integrity': d.get('e2_methods', {}).get('Timestamp note', '') == re.search(r'(\*\*Timestamp note[^\n]+(?:\n[^\n]+)+)', (D/'02_DECISIONS/v38/AMENDED_PRIMARY_ESTIMAND_E2.md').read_text(encoding='utf-8')).group(1).strip() if 'e2_methods' in d else True,
 
     }
@@ -256,8 +279,21 @@ def main(site=None):
     assert not re.search(r'\{[a-z_]+\}', html_without_scripts), 'Unfilled placeholder found in index.html outside scripts/styles'
     nav_match = re.search(r'<nav class="nav"[^>]*>(.*?)</nav>', page)
     assert nav_match, 'Nav block not found'
-    nav_buttons = re.findall(r'data-view="([^"]+)"', nav_match.group(1))
-    assert nav_buttons == ['overview', 'results', 'e1e2', 'qor', 'coverage', 'studies', 'risk', 'evidence', 'prisma', 'methods', 'downloads'], f"Wrong nav buttons: {nav_buttons}"
+    assert nav_ok(nav_match.group(0)), 'Navigation: wrong routes, groups or semantics'
+    assert not nav_ok(nav_match.group(0).replace('data-view="studies"','data-view="study"')), 'Nav mutation escaped'
+    assert not nav_ok(nav_match.group(0).replace('<a href="#results"','<a role="tab" href="#results"')), 'Nav role=tab mutation escaped'
+    # Exactly the v38 assets are loaded (app.js and the other legacy bundles are not), theme.js in <head> before the CSS.
+    loaded=[x.split('?')[0] for x in re.findall(r'<script src="([^"]+)"',page)]
+    assert loaded==V38_SCRIPTS,f'Unexpected scripts loaded: {loaded}'
+    head=page.split('</head>')[0]
+    assert re.findall(r'<link rel="stylesheet" href="([^"?]+)',page)==['current_review.css'] and head.index('theme.js')<head.index('current_review.css'),'theme.js must load in <head> before the stylesheet'
+    assert theme_ok((site/'theme.js').read_text()),'theme.js stores more than the one theme key or reaches the network'
+    assert not theme_ok((site/'theme.js').read_text()+"localStorage.setItem('other','x')"),'Theme storage mutation escaped'
+    explorer_js=(site/'interactive_explorer.js').read_text()
+    assert legend_ok(explorer_js),'Study Explorer provenance legend is missing or its statuses differ from the characteristics vocabulary'
+    assert not legend_ok(explorer_js.replace("'Legacy (v26, not re-verified)': ['L'","'Legacy': ['L'")),'Legend vocabulary mutation escaped'
+    for js_name in ('interactive_explorer.js','current_review_ui.js'):
+        assert 'localStorage' not in (site/js_name).read_text(),f'{js_name} must not use browser storage (theme.js alone keeps the theme choice)'
     footer_match = re.search(r'<footer>(.*?)</footer>', page)
     assert footer_match and '{' not in footer_match.group(1) and '}' not in footer_match.group(1), 'Placeholder found in footer'
     
@@ -392,6 +428,7 @@ def main(site=None):
         mutations.append(('E2 accounting identity',lambda d:d['e2_accounting']['tierB2'].pop()))
         mutations.append(('E2 accounting covers E1 and E2 inputs',lambda d:[r.__setitem__('E2_disposition','NOT ADMITTED') for r in d['e2_accounting']['tierA'] if r['report']=='Chen 1998']))
     mutations.append(('E2 methods integrity', lambda d: d['e2_methods'].update({'Timestamp note': 'Altered text'})))
+    mutations.append(('Release dates derived from payload and E2 decision', lambda d: d['release'].__setitem__('e2_date', '2026-09-20')))
     mutations.append(('all downloads tracked by git', lambda d: d['downloads'].append(dict(label='Fake', href='current/fake.txt', source='fake.txt', sha256='hash'))))
     if 'e2_methods_html' in data:
         def drop_line(d):
@@ -415,6 +452,12 @@ def main(site=None):
 
     if (site/'build-meta.json').exists():
         meta=json.load(open(site/'build-meta.json'));assert meta['master_version']=='v38' and meta['strict_primary_opioid_k']==1 and meta['canonical_reports']==70 and meta['included_studies']==69
+        # The page shows its commit and build time from an inline copy of build-meta.json (no hard-coded SHA).
+        inline=re.findall(r'<script id="build-meta" type="application/json">(.*?)</script>',page.split('</head>')[0])
+        assert len(inline)==1 and json.loads(inline[0])==meta,'Inline build metadata missing or differs from build-meta.json'
+    else:
+        assert 'id="build-meta"' not in page,'Source page must not carry a build record (only built sites do)'
+    assert not re.search(r'\b(?:6619e2a|eeb6821)\b',ui_js+explorer_js),'Hard-coded commit SHA in dashboard scripts'
     print(f'PASS v38 + addenda: {len(c)} contracts, {len(mutations)} isolated mutations, {len(data["downloads"])} download hashes, {len(images)} original figure files. Legacy v26 contract not applied.')
     return 0
 if __name__=='__main__':

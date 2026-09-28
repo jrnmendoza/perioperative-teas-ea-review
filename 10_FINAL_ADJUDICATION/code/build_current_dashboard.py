@@ -267,6 +267,12 @@ if 'e2_analysis' in data:
      raise AssertionError(f"{b}: opioid limb reaches 10 mg but no pain-limb disposition is recorded")
 
    data['e2_joint'].append({'body': b, 'opioid_limb': op_limb, 'pain_limb': pain_limb, 'joint_criterion': joint_crit})
+from datetime import datetime
+_e2_heading=next(h for h in e2_methods_data if h.startswith('Decision after the E2 run'))
+data['release']=dict(core_version=data['version'],core_date=data['date'],
+                     e2_date=datetime.strptime(re.search(r'\d{1,2} \w+ \d{4}',_e2_heading).group(0),'%d %B %Y').strftime('%Y-%m-%d'),
+                     qor_date=data['qor_analysis']['date'] if 'qor_analysis' in data else '')
+long_date=lambda iso:datetime.strptime(iso,'%Y-%m-%d').strftime('%-d %B %Y')
 (DASH/'current_review.json').write_text(json.dumps(data,ensure_ascii=False,indent=2,allow_nan=False)+'\n')
 (DASH/'current_review.js').write_text('/* Generated from canonical v38 data; do not edit. */\nwindow.CURRENT_REVIEW = '+json.dumps(data,ensure_ascii=False,allow_nan=False)+';\n')
 # The Study Explorer's evidence graph is derived from the payload just written; rebuild it here so it cannot go stale.
@@ -287,7 +293,13 @@ if 'e2_joint' in data:
  any_met = any('Met' in x['joint_criterion'] and 'Not met' not in x['joint_criterion'] for x in data['e2_joint'])
  met_text = 'in at least one body' if any_met else 'in no body'
  static += f'<p>E2 post-hoc sensitivity analysis: E1 kept as primary, not graded. The joint criterion is met {met_text} (for EA vs sham it {ea_text}).</p>'
-nav=''.join(f'<button type="button" role="tab" data-view="{key}" aria-controls="content" aria-selected="{str(key=="overview").lower()}" class="{"active" if key=="overview" else ""}">{label}</button>' for key,label in [('overview','Overview'),('results','Results'),('e1e2','E1 vs E2'),('qor','QoR analysis'),('coverage','Outcome coverage'),('studies','Studies & figures'),('risk','Risk of bias'),('evidence','GRADE'),('prisma','PRISMA'),('methods','Methods'),('downloads','Downloads')])
+# Route navigation, grouped for readers. Links (not tabs): each one is a shareable #view URL; order and route names are fixed.
+NAV=[('Evidence',[('overview','Overview'),('results','Results'),('e1e2','E1 vs E2'),('qor','QoR analysis')]),
+     ('Explore studies',[('studies','Studies & figures'),('coverage','Outcome coverage'),('risk','Risk of bias'),('evidence','GRADE')]),
+     ('Review process',[('prisma','PRISMA'),('methods','Methods'),('downloads','Downloads')])]
+nav=''.join(f'<div class="nav-group" role="group" aria-labelledby="nav-group-{i}"><span class="nav-group-label" id="nav-group-{i}">{e(group)}</span><div class="nav-links">'+
+            ''.join(f'<a href="#{key}" data-view="{key}"'+(' class="active" aria-current="page"' if key=='overview' else '')+f'>{e(label)}</a>' for key,label in links)+'</div></div>'
+            for i,(group,links) in enumerate(NAV))
 build_date = ""
 meta_path = DASH / 'build-meta.json'
 if meta_path.exists():
@@ -296,8 +308,8 @@ if meta_path.exists():
         build_date = f" · Build {meta['build_date']}"
 
 page=f'''<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Perioperative TEAS &amp; EA — Evidence Review v38</title><link rel="stylesheet" href="current_review.css"></head>
-<body><a class="skip" href="#content">Skip to evidence</a><div class="shell"><header><span class="eyebrow">Systematic review · Adjudication v38</span><h1>Perioperative electrical acupoint stimulation for postoperative opioid sparing</h1><p class="lede">TEAS and needle EA assessed separately · <a href="https://www.crd.york.ac.uk/PROSPERO/view/CRD420261452908" target="_blank" rel="noopener">PROSPERO CRD420261452908</a></p><nav class="nav" role="tablist" aria-label="Review sections">{nav}</nav></header><main id="content" tabindex="-1" style="padding-top:32px">{static}<noscript><p>JavaScript enables model selection, detailed bias assessments and article figures. <a href="current/FINAL_CURRENT_STATE_REPORT.md">Download the current-state report</a>.</p></noscript></main><footer>v38 core · 20 September 2026 · E2 sensitivity analysis · 23 September 2026{build_date} · Public analytical release (not data-locked). Post-hoc AI-assisted adjudication, with source and selection limitations disclosed. Review displays currently in English. Historical interface and user changes preserved in the project’s v38 baseline.</footer></div><dialog id="figure-dialog"><button type="button" id="close-figure" aria-label="Close article figure">Close</button><p id="figure-caption"></p><img id="figure-image" alt=""></dialog><script src="evidence_graph.js"></script><script src="current_review.js"></script><script src="article_figures.js"></script><script src="search_strategies.js"></script><script src="interactive_explorer.js"></script><script src="current_review_ui.js"></script><!--BUILD_BADGE--></body></html>'''
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Perioperative TEAS &amp; EA — Evidence Review v38</title><script src="theme.js"></script><link rel="stylesheet" href="current_review.css"></head>
+<body><a class="skip" href="#content">Skip to evidence</a><div class="shell"><header><span class="eyebrow">Systematic review · Adjudication v38</span><h1>Perioperative electrical acupoint stimulation for postoperative opioid sparing</h1><p class="lede">TEAS and needle EA assessed separately · <a href="https://www.crd.york.ac.uk/PROSPERO/view/CRD420261452908" target="_blank" rel="noopener">PROSPERO CRD420261452908</a></p><nav class="nav" aria-label="Review sections">{nav}</nav></header><main id="content" tabindex="-1" style="padding-top:32px">{static}<noscript><p>JavaScript enables model selection, detailed bias assessments and article figures. <a href="current/FINAL_CURRENT_STATE_REPORT.md">Download the current-state report</a>.</p></noscript></main><footer><p id="provenance-line">Analytical core {e(data['version'])} · {long_date(data['release']['core_date'])} · E2 post-hoc sensitivity analysis · {long_date(data['release']['e2_date'])}{build_date}</p><p>Public analytical release (not data-locked). Post-hoc AI-assisted adjudication, with source and selection limitations disclosed. Review displays currently in English. Historical interface and user changes preserved in the project’s v38 baseline.</p></footer></div><dialog id="figure-dialog" aria-labelledby="figure-caption"><button type="button" id="close-figure" aria-label="Close figure">Close</button><p id="figure-caption"></p><img id="figure-image" alt=""></dialog><script src="evidence_graph.js"></script><script src="current_review.js"></script><script src="article_figures.js"></script><script src="search_strategies.js"></script><script src="interactive_explorer.js"></script><script src="current_review_ui.js"></script><!--BUILD_BADGE--></body></html>'''
 (DASH/'index.html').write_text(page)
 (OUT/'download_manifest.json').write_text(json.dumps(downloads,indent=2)+'\n')
 print('Dashboard v38:',len(data['models']),'models;',len(downloads),'current downloads; article figures preserved')

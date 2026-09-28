@@ -46,6 +46,9 @@ name: Deploy dashboard to GitHub Pages
       - "scripts/check_generated_artifacts.py"
       - "scripts/check_tabs_ui.cjs"
       - "scripts/check_navigation_ui.cjs"
+      - "scripts/check_current_dashboard_ui.cjs"
+      - "package.json"
+      - "package-lock.json"
       - "09_V34_INTAKE/**"
       - "01_search_strategy/**"
       - "08_V33_MASTER/**"
@@ -101,6 +104,18 @@ jobs:
       # --fast skips the PDF extractor, which reads all 70 source PDFs.
       - name: Generated artifacts match their generators
         run: python3 scripts/check_generated_artifacts.py --fast
+
+      # Browser regression test of the built v38 site: navigation, Study Explorer filters and drawer, result
+      # inspector cross-links, downloads, theme, contrast and phone widths. Uses the runner's installed Chrome.
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Browser regression checks of the built dashboard
+        run: |
+          npm ci --no-audit --no-fund
+          node scripts/check_current_dashboard_ui.cjs --site _site
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
