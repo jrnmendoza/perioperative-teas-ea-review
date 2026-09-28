@@ -54,6 +54,12 @@
   const BUILD=(()=>{try{const el=document.getElementById('build-meta');const m=el?JSON.parse(el.textContent):null;return m&&m.git_commit?m:null;}catch(e){return null;}})();
   const REPO=(d.stata?.code_url||'').split('/tree/')[0];
   const fmtDate=iso=>{const t=new Date(String(iso).slice(0,10)+'T00:00:00Z');return isNaN(t)?esc(iso):t.toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric',timeZone:'UTC'});};
+  // Second review (02_DECISIONS/v38/second_review.csv): reviewer, date and outcome per reviewed scope, as recorded.
+  function reviewLine(test){
+    const rs=(d.second_review||[]).filter(r=>test(r.scope));if(!rs.length)return '';
+    const who=[...new Set(rs.map(r=>`${esc(r.reviewer)}, ${fmtDate(r.review_date)}`))].join('; ');
+    return `<span class="second-review">Second review (${who}): ${rs.map(r=>`${esc(r.items)} ${esc(r.unit)} (${esc(r.scope)}) ${esc(r.outcome)}${r.changes==='none'?', no changes':''}`).join('; ')}.</span>`;
+  }
   function provenance(){
     const r=d.release||{},sha=BUILD&&/^[0-9a-f]{7,40}$/.test(BUILD.git_commit)?BUILD.git_commit:'';
     return [`Analytical core: ${esc(r.core_version||d.version)} · ${fmtDate(r.core_date||d.date)}`,r.e2_date?`E2 (post hoc): ${fmtDate(r.e2_date)}`:'',
@@ -66,7 +72,7 @@
     return title('Evidence, with its limits',`Registered in PROSPERO as ${esc(d.registration)} · public analytical release, not data-locked`)+
     `<p class="provenance" id="overview-provenance">${provenance()}</p>`+
     `<div class="summary-grid status-grid"><article><span class="eyebrow">Evidence inventory</span><strong>${nRep} reports · ${nFam} trial families</strong><p>${nRand.toLocaleString('en-GB')} randomised participants, operational count. This is not an analysed efficacy population: analysed N is outcome-specific. Yeh probable overlap counted once and held out of models.</p></article>`+
-    `<article class="status-done"><span class="eyebrow">Complete · v38 core</span><strong>${d.rob.length} RoB 2 assessments · ${d.grade.length} GRADE bodies</strong><p>Core v38 RoB 2 and GRADE are complete under the adopted workflow: all ${comps} current non-sensitivity component results are assessed; ${empty} empty bodies are not rated. New judgements are AI-conducted under user delegation; prior human completion is user-reported.${q?` The ~24 h QoR addendum adds ${q.rob.length} assessments and ${q.grade.length} GRADE bodies.`:''}</p></article>`+
+    `<article class="status-done"><span class="eyebrow">Complete · v38 core</span><strong>${d.rob.length} RoB 2 assessments · ${d.grade.length} GRADE bodies</strong><p>Core v38 RoB 2 and GRADE are complete under the adopted workflow: all ${comps} current non-sensitivity component results are assessed; ${empty} empty bodies are not rated. ${reviewLine(x=>x.endsWith('core v38'))}${q?` The ~24 h QoR addendum adds ${q.rob.length} assessments and ${q.grade.length} GRADE bodies.`:''}</p></article>`+
     `<article class="status-open" id="overview-outstanding"><span class="eyebrow">Outstanding</span><strong>${d.outstanding.length} review deliverables not complete</strong><ul>${d.outstanding.map(x=>`<li>${esc(x).replace(/\.$/,'')}</li>`).join('')}</ul><p>As recorded in the <a href="current/FINAL_CURRENT_STATE_REPORT.md">current-state report</a>. Later-window QoR results are shown ungraded.</p></article></div>`+
     `<details class="limits" open><summary>Limitations that stay in view</summary><ul>`+
       `<li><strong>Import mapping gap:</strong> ${p.references} raw references against ${p.reported_import_records} reported imports; the ${p.unmapped_import_difference}-reference difference cannot be mapped to records.</li>`+
@@ -75,7 +81,6 @@
       `<li><strong>Randomised and analysed N:</strong> the operational randomised count is not the analysed population; each model states its own N.</li>`+
       `<li><strong>Source holds:</strong> ${holds.length} extracted results in ${new Set(holds.map(r=>r.study)).size} reports are held for unresolved source, comparator or construct questions and enter no model.</li>`+
       `<li><strong>E2 is post hoc:</strong> defined and amended after the data were seen; E1 remains the registered primary analysis and E2 is not graded.</li>`+
-      `<li><strong>AI-assisted adjudication:</strong> post-hoc adjudication with results known; new RoB 2 and GRADE judgements are AI-conducted under user delegation.</li>`+
       `<li><strong>Reproduction is not source truth:</strong> Stata, R and Python agreement shows computational consistency, not that extracted values match the reports or that selection was complete.</li></ul></details>`+
     qorLink()+`<h3>Primary question</h3>${modelTable(primary)}${note('No body establishes ≥10mg opioid sparing together with paired ~24h pain upper CI &lt;+1. Separate pain evidence cannot supply Szmit’s missing paired fixed-24h measurement. A one-study estimate is not a pooled meta-analysis.')}`+
     (d.e2_joint ? `<div class="panel"><h4>E2 post-hoc sensitivity analysis</h4>${
@@ -358,6 +363,7 @@
     table(['Full-text exclusion reason','Records'],Object.entries(p.exclusion_reasons).map(([r,n])=>[esc(r),n]))+
     note('147 substantive report exclusions are separate from six exact DOI/title duplicate records removed late. Zhang’s distinct conference abstract remains Abstract only. Six formerly excluded reports reinstated locally; original Covidence decisions are preserved in the downloadable ledger.')+p.caveats.map(c=>note(esc(c))).join('');}
   function evidence(){return title('Certainty of evidence','38 bodies reviewed and adopted under delegation: 34 rated, four empty. No sensitivity is given a standalone efficacy grade.')+
+    (reviewLine(x=>x.startsWith('GRADE'))?note(reviewLine(x=>x.startsWith('GRADE'))):'')+
     howTo('this table',`<p>Each row is one evidence body: one outcome, one modality and one comparator. ${term('GRADE')} certainty starts High for randomised evidence and is rated down one or two levels for each of five domains. The Downgrades column lists the levels removed in the order risk of bias / inconsistency / indirectness / imprecision / publication bias. Bodies without eligible data are listed but not rated; ${term('sensitivity')} and ${term('diagnostic')} analyses are never graded on their own.</p><p>Select a body for its forest plot and all five rationales. <em>Risk of bias</em> opens the result-specific ${term('RoB 2')} assessments that fed the risk-of-bias domain. Nothing here is re-graded.</p>`)+
     table(['Body',term('Certainty','GRADE'),'Downgrades: bias / inconsistency / indirectness / imprecision / publication','Decision','Risk of bias'],d.grade.map(g=>[modelName(g.model_id),tag(g.certainty),['risk_of_bias','inconsistency','indirectness','imprecision','publication_bias'].map(k=>g[k+'_downgrades']).join(' / '),esc(g.decision_status),
       bodyResults(g.model_id).length?`<button type="button" class="text-button" data-risk-model="${esc(g.model_id)}">Risk of bias →</button>`:'—']))+note('Select an evidence body to inspect all five rationales, its estimate and contributors. Moderate-certainty standalone pain evidence does not establish the joint opioid-and-pain criterion.');}
@@ -378,7 +384,7 @@
       `<div><label for="risk-search">Find study, outcome, result ID or judgement</label><input id="risk-search" type="search" placeholder="e.g. Luo, nausea, V33-OD-0139" value="${esc(q)}"></div></div>`+
       howTo('the risk-of-bias matrix',`<p>Each row is one result-specific ${term('RoB 2')} assessment: one result from one report, for one outcome and time point. It is not a study-level rating, and a study can be judged differently for different outcomes. Columns are the five RoB 2 domains and the overall judgement.</p><p>Symbols carry the judgement as well as colour: <strong>+</strong> Low, <strong>!</strong> Some concerns, <strong>×</strong> High. The overall judgement follows the RoB 2 algorithm: High if any domain is High (or several have some concerns), Some concerns if any domain has some concerns, otherwise Low. Select a symbol for that domain’s rationale and the models the result feeds; select a study name for its profile.</p>`)+
       `<div id="risk-summary"></div><div id="risk-matrix"></div><h3>Assessment details</h3><div id="risk-list"></div>`+
-      note('AI-conducted assessment under user delegation, dated 20 September 2026 (QoR addenda dated with their analyses). Prior human completion is user-reported. Symbols: + Low, ! Some concerns, × High. Select a cell for that domain’s rationale. Other historical/sensitivity results without a fresh assessment are not silently called Low risk.')+
+      note('Assessments dated 20 September 2026 (QoR addenda dated with their analyses). '+reviewLine(x=>x.startsWith('RoB 2'))+' Symbols: + Low, ! Some concerns, × High. Select a cell for that domain’s rationale. Other historical/sensitivity results without a fresh assessment are not silently called Low risk.')+
       `<dialog id="rob-dialog" aria-labelledby="rob-dialog-title"><button type="button" id="close-rob-dialog">Close</button><div id="rob-dialog-content"></div></dialog>`;
   }
   function riskFiltered(){
@@ -465,11 +471,11 @@
     ['stata','Stata reproduction',/13_STATA\//],['chars','Study characteristics',/14_CHARACTERISTICS\//],['coverage','Outcome coverage (harms, recovery, satisfaction)',/07_OUTCOME_COVERAGE\//],
     ['prisma','PRISMA and screening',/prisma|late_duplicate/i],['rob','Risk of bias (RoB 2)',/rob2/i],['grade','GRADE certainty',/grade/i],
     ['repro','Independent reproduction (Python, R)',/05_REPRODUCTION\//],['models','Model data and results',/04_MODELS\/|MEMBERSHIP_MATRIX|03_CANONICAL\/results\.csv$|PARTICIPANT_LEDGER|model_comparison/],
-    ['status','Review status and decisions',/FINAL_CURRENT_STATE_REPORT|METHODOLOGICAL_DECISIONS|primary_evidence_table/]];
+    ['status','Review status and decisions',/FINAL_CURRENT_STATE_REPORT|METHODOLOGICAL_DECISIONS|primary_evidence_table|second_review/]];
   const DL_ORDER=['status','models','grade','rob','e1e2','qor','stata','chars','coverage','prisma','repro','other'];
   const PRIMARY_FILES=new Set(['FINAL_CURRENT_STATE_REPORT.md','METHODOLOGICAL_DECISIONS.md','primary_evidence_table.csv','model_outputs.csv','model_inputs.csv','results.csv',
     'FINAL_MODEL_MEMBERSHIP_MATRIX.csv','grade.csv','rob2_assessments.csv','e2_model_outputs.csv','AMENDED_PRIMARY_ESTIMAND_E2.md','qor_models.csv','qor_grade.csv','qor_rob2.csv',
-    'stata_verification_summary.csv','figure_register.csv','report_characteristics.csv','prisma_record_ledger.csv','prisma_counts.json']);
+    'stata_verification_summary.csv','figure_register.csv','report_characteristics.csv','prisma_record_ledger.csv','prisma_counts.json','second_review.csv']);
   const dlGroup=x=>(DL_RULES.find(r=>r[2].test(x.source))||['other','Other supporting files'])[0];
   const DL_NAMES=Object.fromEntries([...DL_RULES.map(r=>[r[0],r[1]]),['other','Other supporting files']]);
   function downloads(){
@@ -508,7 +514,7 @@
     const estimate=m=>`${num(m.effect)} [${num(m.ci_low)}, ${num(m.ci_high)}]`;
     const renderRob=robList=>robList.map(r=>`<details><summary>${esc(r.study)} · ${esc(r.outcome)} · ${tag(r.overall)}</summary><p>${esc(r.window)} · ${esc(r.comparison)}</p>${[1,2,3,4,5].map(i=>`<p><strong>D${i}: ${esc(r['d'+i])}</strong> — ${esc(r['d'+i+'_rationale'])}</p>`).join('')}<p>${esc(r.overall_rationale)}</p><p class="source">${esc(r.source_pdf)} · ${esc(r.result_location)}</p></details>`).join('');
     return title('Quality of recovery at approximately 24 hours','Three separate TEAS comparisons · Eight reports · Positive differences favor TEAS')+
-      note(esc(q.certainty_conclusion))+
+      note(esc(q.certainty_conclusion))+(reviewLine(x=>x.includes('QoR'))?note(reviewLine(x=>x.includes('QoR'))):'')+
       table(['Comparison','k / reported N','MD [95% CI], scale points','I²','Certainty'],q.main_models.map(m=>[esc(m.label),`${m.k} / ${m.N}`,estimate(m),`${num(m.I2,1)}%`,'Very low']))+
       note(esc(q.wu_note))+
       q.main_models.map(m=>{const g=q.grade.find(g=>g.model_id===m.model_id);return `<section id="qor-${esc(m.model_id)}" tabindex="-1"><h3>${esc(m.label)}</h3>${stataLine('QoR 24h',m.model_id)}<img src="current/${esc(m.model_id)}.svg" style="width:100%;height:auto" alt="Forest plot: ${esc(m.label)}">${stataFigs(m.model_id)}<details><summary>Inputs and all five GRADE rationales</summary>${table(['Study / exact result','n TEAS / control','Mean (SD), TEAS / control','Source'],m.inputs.map(r=>[`${esc(r.study)}<br>${esc(r.result_id)}`,`${r.n_i} / ${r.n_c}`,`${r.mean_i} (${r.sd_i}) / ${r.mean_c} (${r.sd_c})`,esc(r.source_location)]))}${['risk_of_bias','inconsistency','indirectness','imprecision','publication_bias'].map(k=>`<p><strong>${esc(k.replaceAll('_',' '))} (−${g[k+'_downgrades']})</strong>: ${esc(g[k])}</p>`).join('')}</details></section>`;}).join('')+

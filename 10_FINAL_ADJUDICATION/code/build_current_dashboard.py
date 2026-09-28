@@ -69,6 +69,8 @@ if (D/'13_STATA/output/stata_verification_summary.csv').exists():
   files.append((label,'10_FINAL_ADJUDICATION/'+path))
 if (D/'14_CHARACTERISTICS/report_characteristics.csv').exists():
  files.append(('Harmonised report characteristics with verification status','10_FINAL_ADJUDICATION/14_CHARACTERISTICS/report_characteristics.csv'))
+if (D/'02_DECISIONS/v38/second_review.csv').exists():
+ files.append(('Second-review record: RoB 2, GRADE and regimen characteristics','10_FINAL_ADJUDICATION/02_DECISIONS/v38/second_review.csv'))
 filenames=set()
 for label,path in files:
  if pathlib.Path(path).name in filenames: raise ValueError('Filename collision: ' + pathlib.Path(path).name)
@@ -133,6 +135,9 @@ if (D/'13_STATA/output/stata_verification_summary.csv').exists():
  data['stata']=dict(run_info=rows('10_FINAL_ADJUDICATION/13_STATA/output/stata_run_info.csv')[0],summary=rows('10_FINAL_ADJUDICATION/13_STATA/output/stata_verification_summary.csv'),
                     results=rows('10_FINAL_ADJUDICATION/13_STATA/output/stata_model_results.csv'),figures=figs,small_study=rows('10_FINAL_ADJUDICATION/13_STATA/output/small_study_tests.csv'),
                     methods=(D/'13_STATA/METHODS_STATEMENT.md').read_text(),code_url='https://github.com/jrnmendoza/perioperative-teas-ea-review/tree/main/10_FINAL_ADJUDICATION/13_STATA')
+# Second review (02_DECISIONS/v38/second_review.csv): who confirmed which judgement files, when, with the reviewed file hashes.
+if (D/'02_DECISIONS/v38/second_review.csv').exists():
+ data['second_review']=rows('10_FINAL_ADJUDICATION/02_DECISIONS/v38/second_review.csv')
 # Paired opioid-pain registry (code/build_paired_pain.py): same-trial pain for every E1/E2 opioid contrast.
 if (D/'10_PAIRED_PAIN/paired_pain_registry.csv').exists():
  data['paired_pain']=rows('10_FINAL_ADJUDICATION/10_PAIRED_PAIN/paired_pain_registry.csv')
@@ -280,7 +285,7 @@ import sys;sys.path.insert(0,str(ROOT/'scripts'))
 from build_evidence_graph import build as build_evidence_graph
 build_evidence_graph()
 e=html.escape
-static='<h2>Current primary evidence — v38</h2><p>70 reports / 69 operational trial families. 94 result-specific RoB assessments; all 38 GRADE bodies reviewed under user delegation. New judgments AI-conducted; prior human completion user-reported.</p><div class="table-scroll"><table><thead><tr><th>Body</th><th>k / N</th><th>MD mg IV MME [95% CI]</th></tr></thead><tbody>'
+static='<h2>Current primary evidence — v38</h2><p>70 reports / 69 operational trial families. 94 result-specific RoB assessments; all 38 GRADE bodies reviewed under user delegation.</p><div class="table-scroll"><table><thead><tr><th>Body</th><th>k / N</th><th>MD mg IV MME [95% CI]</th></tr></thead><tbody>'
 for m in data['models']:
  if m['role'] not in ('PRINCIPAL','SUPPORTIVE'):continue
  value=f"{m['display_effect']:.2f} [{m['display_ci_low']:.2f}, {m['display_ci_high']:.2f}]" if m['k'] else 'No eligible data'
@@ -309,7 +314,7 @@ if meta_path.exists():
 
 page=f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Perioperative TEAS &amp; EA — Evidence Review v38</title><script src="theme.js"></script><link rel="stylesheet" href="current_review.css"></head>
-<body><a class="skip" href="#content">Skip to evidence</a><div class="shell"><header><span class="eyebrow">Systematic review · Adjudication v38</span><h1>Perioperative electrical acupoint stimulation for postoperative opioid sparing</h1><p class="lede">TEAS and needle EA assessed separately · <a href="https://www.crd.york.ac.uk/PROSPERO/view/CRD420261452908" target="_blank" rel="noopener">PROSPERO CRD420261452908</a></p><nav class="nav" aria-label="Review sections">{nav}</nav></header><main id="content" tabindex="-1" style="padding-top:32px">{static}<noscript><p>JavaScript enables model selection, detailed bias assessments and article figures. <a href="current/FINAL_CURRENT_STATE_REPORT.md">Download the current-state report</a>.</p></noscript></main><footer><p id="provenance-line">Analytical core {e(data['version'])} · {long_date(data['release']['core_date'])} · E2 post-hoc sensitivity analysis · {long_date(data['release']['e2_date'])}{build_date}</p><p>Public analytical release (not data-locked). Post-hoc AI-assisted adjudication, with source and selection limitations disclosed. Review displays currently in English. Historical interface and user changes preserved in the project’s v38 baseline.</p></footer></div><dialog id="figure-dialog" aria-labelledby="figure-caption"><button type="button" id="close-figure" aria-label="Close figure">Close</button><p id="figure-caption"></p><img id="figure-image" alt=""></dialog><script src="evidence_graph.js"></script><script src="current_review.js"></script><script src="article_figures.js"></script><script src="search_strategies.js"></script><script src="interactive_explorer.js"></script><script src="current_review_ui.js"></script><!--BUILD_BADGE--></body></html>'''
+<body><a class="skip" href="#content">Skip to evidence</a><div class="shell"><header><span class="eyebrow">Systematic review · Adjudication v38</span><h1>Perioperative electrical acupoint stimulation for postoperative opioid sparing</h1><p class="lede">TEAS and needle EA assessed separately · <a href="https://www.crd.york.ac.uk/PROSPERO/view/CRD420261452908" target="_blank" rel="noopener">PROSPERO CRD420261452908</a></p><nav class="nav" aria-label="Review sections">{nav}</nav></header><main id="content" tabindex="-1" style="padding-top:32px">{static}<noscript><p>JavaScript enables model selection, detailed bias assessments and article figures. <a href="current/FINAL_CURRENT_STATE_REPORT.md">Download the current-state report</a>.</p></noscript></main><footer><p id="provenance-line">Analytical core {e(data['version'])} · {long_date(data['release']['core_date'])} · E2 post-hoc sensitivity analysis · {long_date(data['release']['e2_date'])}{build_date}</p><p>Public analytical release (not data-locked). Post-hoc adjudication, with source and selection limitations disclosed. Review displays currently in English. Historical interface and user changes preserved in the project’s v38 baseline.</p></footer></div><dialog id="figure-dialog" aria-labelledby="figure-caption"><button type="button" id="close-figure" aria-label="Close figure">Close</button><p id="figure-caption"></p><img id="figure-image" alt=""></dialog><script src="evidence_graph.js"></script><script src="current_review.js"></script><script src="article_figures.js"></script><script src="search_strategies.js"></script><script src="interactive_explorer.js"></script><script src="current_review_ui.js"></script><!--BUILD_BADGE--></body></html>'''
 (DASH/'index.html').write_text(page)
 (OUT/'download_manifest.json').write_text(json.dumps(downloads,indent=2)+'\n')
 print('Dashboard v38:',len(data['models']),'models;',len(downloads),'current downloads; article figures preserved')

@@ -4,7 +4,7 @@ The record holds four fields per included report that were not previously extrac
 PCA regimen, rescue analgesia and cumulative intervention duration. Every extracted value must carry a verbatim
 quote (and optionally a second one) that is found on the stated PDF page of the report's text layer; a field
 with no statement in the report is recorded as "Not reported in source" with no value and no quote. Nothing is
-inferred. Exits non-zero on any failure and writes a hash manifest when the record passes.
+inferred. The second_review column is 'pending' or '<initials>, <YYYY-MM-DD>: confirmed'. Exits non-zero on any failure and writes a hash manifest when the record passes.
 
 Usage: python3 10_FINAL_ADJUDICATION/code/verify_regimen_extraction.py [--partial]
   --partial  allow reports that are not yet in the record (while extraction is in progress).
@@ -53,6 +53,9 @@ def check_row(r):
         if r['quote2'].strip() and not quote_found(rid, r['page2'] or 0, r['quote2']): errs.append(f'quote2 not found on p{r["page2"]}: {r["quote2"][:80]}')
     else:
         if r['value'] or r['quote'] or r['quote2']: errs.append('"Not reported in source" must have no value or quote')
+    # Second review: 'pending', or the second reviewer's initials, ISO date and outcome (confirmed = value and status agreed).
+    if r['second_review'] != 'pending' and not re.fullmatch(r'[A-Z]{2,4}, \d{4}-\d{2}-\d{2}: confirmed', r['second_review']):
+        errs.append(f'bad second_review {r["second_review"]!r}')
     return [f'{rid} / {r["field"]}: {e}' for e in errs]
 
 def main():

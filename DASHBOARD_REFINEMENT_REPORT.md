@@ -62,8 +62,10 @@ pre-edit audit is in `DASHBOARD_REFINEMENT_AUDIT.md`.
   adopted workflow…", counts computed from the payload); and "Outstanding", which lists the current-state
   report's outstanding items from `d.outstanding` (not re-typed). Nothing says reviewer approval is awaited.
 - An always-open "Limitations that stay in view" list covers: the 12-reference import mapping gap, historical
-  selection, reports versus trial families, randomised versus analysed N, source holds, E2 as post hoc, AI-assisted
-  adjudication, and reproduction versus source truth. It is computed from PRISMA counts and the results
+  selection, reports versus trial families, randomised versus analysed N, source holds, E2 as post hoc, and reproduction
+  versus source truth. (On the user's instruction on 28 September 2026, the statements that RoB 2/GRADE
+  judgements were AI-conducted were removed from this list, the "Complete · v38 core" card, the Risk of bias
+  note, the footer and the no-JavaScript summary.) It is computed from PRISMA counts and the results
   register (e.g. 261 held results in 58 reports, none in any model).
 
 **Build and analysis provenance**
@@ -191,7 +193,7 @@ The contract "Stata reproduces current canonical results" passes, and dashboard 
 |---|---|
 | Verified — registry | 731 |
 | Legacy extraction — not re-verified (v26) | 692 |
-| Extracted from PDF quotation — single extractor | 208 |
+| Extracted from PDF quotation (at deployment: single extractor; since 28 Sep 2026: Verified — PDF quotation, second reviewer, see §9) | 208 |
 | Canonical result register (arm descriptions) | 140 |
 | Not reported in source | 72 |
 | Source-traced (extraction record) | 71 |
@@ -212,7 +214,7 @@ By field:
 - **Intensity:** 68 legacy, 2 partly verified. **Timing, sessions, session duration:** 69 legacy and
   1 partly verified each.
 - **Intervention and control arms:** 70 canonical result register each.
-- **Single-extractor PDF quotations (second review pending):**
+- **Regimen PDF quotations (second review by SP on 28 Sep 2026 confirmed all 280; see §9):**
   - postoperative analgesia: 60 extracted, 10 not reported;
   - PCA regimen: 43 extracted, 27 not reported;
   - rescue analgesia: 35 extracted, 35 not reported;
@@ -223,11 +225,12 @@ By field:
 - Outstanding review deliverables (from `FINAL_CURRENT_STATE_REPORT.md`, unchanged): GRADE for the four
   later-window QoR bodies; structured LOS/PACU/extubation/mobilisation tables; finalised harms and
   satisfaction tables; the reference registry and claim-citation audit extension. None was completed at HEAD.
-- The four regimen fields remain single-extractor. The anaesthesia, age, sex, BMI, ASA and STRICTA fields are
+- The anaesthesia, age, sex, BMI, ASA and STRICTA fields are
   still mostly legacy or not verified.
 - The sensitivity parent map remains a proposed display grouping.
-- The 12-reference import gap, historical exclusion labels, post-hoc E2 timing, AI-assisted adjudication and
-  source holds are unchanged and remain disclosed on the Overview.
+- The 12-reference import gap, historical exclusion labels, post-hoc E2 timing and source holds are unchanged
+  and remain disclosed on the Overview. The dashboard no longer states that RoB 2/GRADE judgements were
+  AI-conducted, or that the regimen extraction was AI-assisted (both removed on user instruction).
 - The contrast test covers the main text classes, not every pixel. SVG forest text relies on theme variables
   and was checked visually in both themes. The Stata PNG previews sit on white in both themes, by design.
 - The repository `venv/` lost scipy on its Python upgrade; the validator ran in a scratch environment.
@@ -268,3 +271,36 @@ Live post-deployment verification:
 
 This report commit changes only this file, which is outside the workflow's path filter, so pushing it does not
 redeploy; the site content is that of `2971096`.
+
+## 9. Second review (28 September 2026)
+
+The user reported that a second reviewer, SP, reviewed the RoB 2 assessments, the GRADE bodies and the
+regimen characteristics on 28 September 2026, and that every item was confirmed with no changes. No judgement,
+value or estimate changed.
+
+- **Record:** `10_FINAL_ADJUDICATION/02_DECISIONS/v38/second_review.csv` (new, downloadable). It has one row
+  per reviewed file: RoB 2 core (94), QoR ~24 h (8) and QoR later windows (5); GRADE core (38) and QoR ~24 h (3);
+  regimen fields (280). Each row gives the reviewer, date, outcome ("all confirmed"), changes ("none") and the
+  reviewed file's SHA-256. The canonical RoB 2 and GRADE files were not edited; their first-assessor fields are
+  unchanged.
+- **Regimen record:** `14_CHARACTERISTICS/regimen_extraction.csv`, `second_review` column changed from
+  `pending` to `SP, 2026-09-28: confirmed` for all 280 rows (no other column changed).
+  `verify_regimen_extraction.py` now validates that column. `build_characteristics.py` gives confirmed
+  extracted values the status "Verified (PDF quote, second reviewer)" (208 values) and adds the review to each
+  regimen value's source; "Not reported in source" (72) keeps its status. The Stata input
+  `report_characteristics_wide.csv` is unchanged.
+- **Dashboard:**
+  - The second review, with reviewer and date, is stated in the Overview core card, the Risk of bias note, the
+    GRADE view and the QoR view.
+  - The explorer legend gains the badge "PQ2 · Verified — PDF quotation, second reviewer".
+  - The regimen sentences in the legend and the study drawer are now generated from the data, and name the
+    review.
+- **Contract (now 38 contracts, 32 mutations):**
+  - The record must match its file.
+  - Each item count and SHA-256 must match the reviewed file as it is now, so a later change to a reviewed
+    file fails until the review is renewed.
+  - The regimen record must agree row by row.
+  - Characteristic statuses must follow the `second_review` column.
+- **Browser test:** checks the review statement in each view and the data-driven legend and drawer wording.
+- **Scope assumption:** the review is recorded as covering all RoB 2 assessments (core and QoR) and all
+  GRADE bodies (core and QoR ~24 h). If SP reviewed only part of them, the record should be narrowed.
