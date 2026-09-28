@@ -73,6 +73,16 @@ if (D/'14_CHARACTERISTICS/report_characteristics.csv').exists():
  files.append(('Harmonised report characteristics with verification status','10_FINAL_ADJUDICATION/14_CHARACTERISTICS/report_characteristics.csv'))
 if (D/'02_DECISIONS/v38/second_review.csv').exists():
  files.append(('Second-review record: RoB 2, GRADE and regimen characteristics','10_FINAL_ADJUDICATION/02_DECISIONS/v38/second_review.csv'))
+if (D/'14_CHARACTERISTICS/baseline_protocol_extraction.csv').exists():
+ files.append(('Baseline and protocol characteristics: PDF page and verbatim quotation per value (single extractor)','10_FINAL_ADJUDICATION/14_CHARACTERISTICS/baseline_protocol_extraction.csv'))
+if (D/'15_NARRATIVE_OUTCOMES/recovery_milestones.csv').exists():
+ for label,path in [('Narrative outcomes report: recovery milestones, harms, satisfaction','15_NARRATIVE_OUTCOMES/NARRATIVE_OUTCOMES_REPORT.md'),
+                    ('Recovery milestones (LOS, PACU, extubation, emergence, mobilisation): quoted values per report','15_NARRATIVE_OUTCOMES/recovery_milestones.csv'),
+                    ('Harms by separate category, all 70 reports (unreported is not zero)','15_NARRATIVE_OUTCOMES/harms_structured.csv'),
+                    ('Satisfaction, acceptability and quality of life: quoted values per report','15_NARRATIVE_OUTCOMES/satisfaction_acceptability.csv')]:
+  files.append((label,'10_FINAL_ADJUDICATION/'+path))
+if (D/'02_DECISIONS/v38/second_review_worksheet.csv').exists():
+ files.append(('Second-review worksheet: items with one assessor (reviewer columns blank)','10_FINAL_ADJUDICATION/02_DECISIONS/v38/second_review_worksheet.csv'))
 filenames=set()
 for label,path in files:
  if pathlib.Path(path).name in filenames: raise ValueError('Filename collision: ' + pathlib.Path(path).name)
@@ -143,6 +153,13 @@ if (D/'13_STATA/output/stata_verification_summary.csv').exists():
 # Second review (02_DECISIONS/v38/second_review.csv): who confirmed which judgement files, when, with the reviewed file hashes.
 if (D/'02_DECISIONS/v38/second_review.csv').exists():
  data['second_review']=rows('10_FINAL_ADJUDICATION/02_DECISIONS/v38/second_review.csv')
+# Structured narrative outcomes (15_NARRATIVE_OUTCOMES, checked by code/verify_narrative_outcomes.py): descriptive only.
+if (D/'15_NARRATIVE_OUTCOMES/recovery_milestones.csv').exists():
+ data['narrative_outcomes']={k:rows('10_FINAL_ADJUDICATION/15_NARRATIVE_OUTCOMES/'+f) for k,f in [('milestones','recovery_milestones.csv'),('harms','harms_structured.csv'),('satisfaction','satisfaction_acceptability.csv')]}
+# Items still awaiting a second review (code/build_second_review_worksheet.py): counts per item type and record.
+if (D/'02_DECISIONS/v38/second_review_worksheet.csv').exists():
+ from collections import Counter as _C
+ data['second_review_pending']=[dict(item_type=t,record=r,items=n) for (t,r),n in sorted(_C((w['item_type'],w['record']) for w in rows('10_FINAL_ADJUDICATION/02_DECISIONS/v38/second_review_worksheet.csv')).items())]
 # Paired opioid-pain registry (code/build_paired_pain.py): same-trial pain for every E1/E2 opioid contrast.
 if (D/'10_PAIRED_PAIN/paired_pain_registry.csv').exists():
  data['paired_pain']=rows('10_FINAL_ADJUDICATION/10_PAIRED_PAIN/paired_pain_registry.csv')

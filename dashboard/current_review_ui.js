@@ -472,14 +472,14 @@
   // "Other supporting files"), so a new download is always listed. PRIMARY_FILES are the files needed to reproduce and
   // audit the analyses; the rest are supplementary audit records.
   const DL_RULES=[['qor','QoR analysis',/08_QOR_ANALYSIS\//],['e1e2','E1 / E2 primary-outcome analyses',/09_E2_ANALYSIS\/|E2\.md$|ADDITIONAL_FILE_12|additional_file_12/i],
-    ['stata','Stata reproduction',/13_STATA\//],['chars','Study characteristics',/14_CHARACTERISTICS\//],['coverage','Outcome coverage (harms, recovery, satisfaction)',/07_OUTCOME_COVERAGE\//],
+    ['stata','Stata reproduction',/13_STATA\//],['chars','Study characteristics',/14_CHARACTERISTICS\//],['coverage','Outcome coverage and narrative outcomes (harms, recovery, satisfaction)',/07_OUTCOME_COVERAGE\/|15_NARRATIVE_OUTCOMES\//],
     ['prisma','PRISMA and screening',/prisma|late_duplicate/i],['rob','Risk of bias (RoB 2)',/rob2/i],['grade','GRADE certainty',/grade/i],
     ['repro','Independent reproduction (Python, R)',/05_REPRODUCTION\//],['models','Model data and results',/04_MODELS\/|MEMBERSHIP_MATRIX|03_CANONICAL\/results\.csv$|PARTICIPANT_LEDGER|model_comparison/],
     ['status','Review status and decisions',/FINAL_CURRENT_STATE_REPORT|METHODOLOGICAL_DECISIONS|primary_evidence_table|second_review/]];
   const DL_ORDER=['status','models','grade','rob','e1e2','qor','stata','chars','coverage','prisma','repro','other'];
   const PRIMARY_FILES=new Set(['FINAL_CURRENT_STATE_REPORT.md','METHODOLOGICAL_DECISIONS.md','primary_evidence_table.csv','model_outputs.csv','model_inputs.csv','results.csv',
     'FINAL_MODEL_MEMBERSHIP_MATRIX.csv','grade.csv','rob2_assessments.csv','e2_model_outputs.csv','AMENDED_PRIMARY_ESTIMAND_E2.md','qor_models.csv','qor_grade.csv','qor_rob2.csv',
-    'stata_verification_summary.csv','figure_register.csv','report_characteristics.csv','prisma_record_ledger.csv','prisma_counts.json','second_review.csv']);
+    'stata_verification_summary.csv','figure_register.csv','report_characteristics.csv','prisma_record_ledger.csv','prisma_counts.json','second_review.csv','baseline_protocol_extraction.csv','recovery_milestones.csv','harms_structured.csv','satisfaction_acceptability.csv']);
   const dlGroup=x=>(DL_RULES.find(r=>r[2].test(x.source))||['other','Other supporting files'])[0];
   const DL_NAMES=Object.fromEntries([...DL_RULES.map(r=>[r[0],r[1]]),['other','Other supporting files']]);
   function downloads(){
@@ -489,7 +489,7 @@
       `<div class="dl-tools"><div><label for="dl-search">Find a file</label><input id="dl-search" type="search" placeholder="e.g. GRADE, QoR, model inputs, .csv"></div>`+
       `<div><label for="dl-group">Category</label><select id="dl-group"><option value="">All categories (${d.downloads.length})</option>${groups.map(([k,xs])=>`<option value="${k}">${esc(DL_NAMES[k])} (${xs.length})</option>`).join('')}</select></div>`+
       `<label class="chk dl-primary"><input type="checkbox" id="dl-primary"> Primary files only (${nPrim})</label><p class="dl-count" id="dl-count" role="status">${d.downloads.length} of ${d.downloads.length} files shown</p></div>`+
-      note('<span class="dl-badge dl-badge-primary">Primary</span> files reproduce and audit the analyses (canonical results, model inputs and outputs, membership, RoB 2, GRADE, E2, QoR, Stata verification, characteristics, PRISMA ledger). <span class="dl-badge">Audit</span> files are supplementary records behind them. Every file is hash-checked against its repository source at each deployment.')+
+      note('<span class="dl-badge dl-badge-primary">Primary</span> files reproduce and audit the analyses (canonical results, model inputs and outputs, membership, RoB 2, GRADE, E2, QoR, Stata verification, characteristics, narrative outcome tables, PRISMA ledger). <span class="dl-badge">Audit</span> files are supplementary records behind them. Every file is hash-checked against its repository source at each deployment.')+
       groups.map(([k,xs])=>`<section class="dl-section" data-dl-section="${k}"><h3>${esc(DL_NAMES[k])} <small>(${xs.length})</small></h3><div class="download-grid">${xs.map(x=>{const prim=PRIMARY_FILES.has(file(x));
         return `<a class="download" href="${esc(x.href)}" download data-dl-group="${k}" data-dl-primary="${prim}" data-dl-text="${esc((x.label+' '+file(x)+' '+DL_NAMES[k]).toLowerCase())}"><span class="dl-badge${prim?' dl-badge-primary':''}">${prim?'Primary':'Audit'}</span> ${esc(x.label)}<small>${esc(file(x))}</small></a>`;}).join('')}</div></section>`).join('')+
       `<p class="note" id="dl-none" hidden>No file matches these filters.</p>`;
@@ -500,12 +500,38 @@
     document.querySelectorAll('[data-dl-section]').forEach(s=>{s.hidden=!s.querySelector('a.download:not([hidden])');});
     $('dl-count').textContent=`${shown} of ${d.downloads.length} files shown`;$('dl-none').hidden=shown>0;
   }
+  // Structured narrative tables (15_NARRATIVE_OUTCOMES): one row per report, outcome and comparison, each with a quoted
+  // PDF page. Descriptive only: nothing is pooled or tallied, and a report with no harms result is "not located", not zero.
+  function narrativeTables(){
+    const n=d.narrative_outcomes;if(!n)return '';
+    const q=r=>`<small class="char-quote">p.${esc(r.page)}: “${esc(r.quote)}”${r.quote2?` p.${esc(r.page2)}: “${esc(r.quote2)}”`:''}${r.note?` Note: ${esc(r.note)}`:''}</small>`;
+    const armv=(v,k)=>`${esc(v||'—')}${k&&k!=='not stated'?` <small>(n=${esc(k)})</small>`:''}`;
+    const group=(rows,key)=>{const m=new Map();rows.forEach(r=>{if(!m.has(r[key]))m.set(r[key],[]);m.get(r[key]).push(r);});return [...m.entries()];};
+    const reports=rows=>new Set(rows.map(r=>r.report_id)).size;
+    const all=[...n.milestones,...n.harms,...n.satisfaction],pending=all.filter(r=>r.second_review==='pending'&&r.quote).length;
+    const located=n.harms.filter(r=>r.reporting!=='Not located (not a zero)'),none=n.harms.filter(r=>r.reporting==='Not located (not a zero)');
+    const dlink=(f,l)=>{const h=dl(f);return h?`<a href="${esc(h)}" download>${l}</a>`:'';};
+    return `<section class="narrative" aria-labelledby="narr-title"><h3 id="narr-title">Structured narrative tables</h3>`+
+      note(`Every value was extracted by a single extractor with a page-located verbatim quotation (machine-checked against the report’s text); ${pending} rows await second review. Length of stay, functional recovery, time to mobilisation, satisfaction and adverse events are registered additional outcomes. The review defined no quantitative estimand for them, and definitions, units, reporting formats and care pathways differ, so <strong>nothing is pooled</strong> (a disclosed deviation from the registered synthesis plan) and significance is not tallied across reports. Multi-arm trials appear once per comparison with the shared control repeated.`)+
+      `<h4>Recovery milestones <small>(${n.milestones.length} rows, ${reports(n.milestones)} reports)</small></h4>`+
+      group(n.milestones,'domain').map(([k,rs])=>`<details class="narr-group" data-narr="milestone"><summary>${esc(k)} <small>(${reports(rs)} reports, ${rs.length} rows)</small></summary>`+
+        table(['Report / comparison','Outcome','Intervention','Control','Reported P','Direction as reported'],rs.map(r=>[`<strong>${esc(r.report_id)}</strong><br><small>${esc(r.comparison)}</small>`,`${esc(r.outcome)}<br><small>${esc(r.statistic)}${r.unit?' · '+esc(r.unit):''}${r.register_result_id?` · register ${esc(r.register_result_id)} (${esc(r.register_decision)})`:''}</small>${q(r)}`,armv(r.value_i,r.n_i),armv(r.value_c,r.n_c),esc(r.reported_p||'—'),esc(r.direction)]))+`</details>`).join('')+
+      `<h4>Harms by category <small>(${located.length} rows from ${reports(located)} reports; ${none.length} reports with no harms result located)</small></h4>`+
+      note('Categories are kept separate and attribution is as the report states it. “Explicit zero” means the report says no such event occurred in that window, not that none could occur. Event types are not summed into patients, and counts are not pooled or added across reports.')+
+      group(located,'category').map(([k,rs])=>`<details class="narr-group" data-narr="harm"><summary>${esc(k)} <small>(${reports(rs)} reports, ${rs.length} rows)</small></summary>`+
+        table(['Report','Event','Attribution / reporting','Intervention','Control','Window'],rs.map(r=>[`<strong>${esc(r.report_id)}</strong>`,`${esc(r.event)}${q(r)}`,`${esc(r.attribution)}<br><small>${esc(r.reporting)}</small>`,`${esc(r.arm_i)}: ${esc(r.events_i)}/${esc(r.n_i)}`,`${esc(r.arm_c)}: ${esc(r.events_c)}/${esc(r.n_c)}`,esc(r.window)]))+`</details>`).join('')+
+      `<details class="narr-group" data-narr="harm-none"><summary>No intervention-harm result located <small>(${none.length} reports; not a zero)</small></summary><p>${none.map(r=>esc(r.report_id)).join(', ')}.</p></details>`+
+      `<h4>Satisfaction, acceptability and quality of life <small>(${n.satisfaction.length} rows, ${reports(n.satisfaction)} reports)</small></h4>`+
+      group(n.satisfaction,'construct').map(([k,rs])=>`<details class="narr-group" data-narr="satisfaction"><summary>${esc(k)} <small>(${reports(rs)} reports, ${rs.length} rows)</small></summary>`+
+        table(['Report / comparison','Instrument and time point','Intervention','Control','Reported P','Use'],rs.map(r=>[`<strong>${esc(r.report_id)}</strong><br><small>${esc(r.comparison)}</small>`,`${esc(r.instrument)}<br><small>${esc(r.time_point)} · ${esc(r.statistic)}</small>${q(r)}`,armv(r.value_i,r.n_i),armv(r.value_c,r.n_c),esc(r.reported_p||'—'),`<small>${esc(r.synthesis)}</small>`]))+`</details>`).join('')+
+      `<p>${[dlink('NARRATIVE_OUTCOMES_REPORT.md','Narrative outcomes report'),dlink('recovery_milestones.csv','Recovery milestones'),dlink('harms_structured.csv','Harms'),dlink('satisfaction_acceptability.csv','Satisfaction and acceptability'),dlink('second_review_worksheet.csv','Second-review worksheet')].filter(Boolean).join(' · ')}</p></section>`;
+  }
   function coverage(){
     const c=d.outcome_coverage;
     if(!c)return title('Outcome coverage')+note('No coverage addendum loaded.');
-    return title('Harms and patient-reported recovery','Coverage addendum · 20 September 2026 · All 70 included report texts checked')+
+    return title('Harms and patient-reported recovery',d.narrative_outcomes?'Structured narrative tables · 28 September 2026 · on the coverage addendum of 20 September 2026 · All 70 included report texts checked':'Coverage addendum · 20 September 2026 · All 70 included report texts checked')+
       `<div class="summary-grid"><article><span class="eyebrow">Recovery evidence exists</span><strong>${c.qor_reports} QoR reports</strong><p>${c.satisfaction_reports} satisfaction/willingness reports; ${c.quality_of_life_reports} additional quality-of-life reports; ${c.acceptability_reports} additional acceptability reports. Categories can overlap.</p></article><article><span class="eyebrow">Reporting limits</span><strong>No eligible persistent-opioid-use result located</strong><p>Registered window: beyond 30 days. Long-term pain follow-up is not opioid-use follow-up. Missing reporting is not zero events.</p></article></div>`+
-      (d.qor_analysis?qorLink()+note('The table below preserves the original coverage-audit dispositions. Its candidate / awaiting-assessment labels describe that earlier audit, not the current status of the eight ~24-hour results now assessed in the QoR analysis tab. Other windows and source holds remain separate.'):note('Coverage and descriptive extraction are complete within available-source scope. New QoR meta-analyses and exact-result RoB/GRADE remain to be done.'))+
+      narrativeTables()+(d.narrative_outcomes?`<h3>Coverage audit records (20 September 2026)</h3>`:'')+(d.qor_analysis?qorLink()+note('The table below preserves the original coverage-audit dispositions. Its candidate / awaiting-assessment labels describe that earlier audit, not the current status of the eight ~24-hour results now assessed in the QoR analysis tab. Other windows and source holds remain separate.'):note('Coverage and descriptive extraction are complete within available-source scope. New QoR meta-analyses and exact-result RoB/GRADE remain to be done.'))+
       `<h3>Recovery, satisfaction and acceptability</h3>`+
       table(['Report / instrument','Timing / population','Source values','Synthesis decision'],c.recovery.map(r=>[`${esc(r.study)}<br><strong>${esc(r.instrument)}</strong><br><small>PDF p${esc(r.pdf_pages)}</small>`,`${esc(r.window)}<br>${esc(r.population)}`,esc(r.source_values),esc(r.synthesis_disposition)]))+
       `<h3>Safety findings (${c.safety_records} report entries)</h3>`+

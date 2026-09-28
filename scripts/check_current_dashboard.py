@@ -55,6 +55,10 @@ def characteristics_complete(d):
     for r in C:fields.setdefault(r['report_id'],[]).append(r['field'])
     if set(fields)!=ids or len({tuple(v) for v in fields.values()})!=1:return False
     return all(r['status'] in CHAR_STATUS and (r['value']=='' if r['status'] in ('Not extracted','Not verified','Not reported in source') else True) for r in C)
+def _extracted_ok(c,r):
+    """A characteristic shown from an extraction-record row: same value, verbatim quote in the note, status from the review state."""
+    extracted='Verified (PDF quote, second reviewer)' if r['second_review'].endswith(': confirmed') else 'Extracted (PDF quote, single extractor)'
+    return c['value']==r['value'] and (r['quote'] in c.get('note','') and c['status']==extracted if r['status']=='Extracted (PDF quote)' else c['status']=='Not reported in source')
 def regimen_verified(d):
     """Regimen fields shown in the explorer equal the extraction record, and every extracted value's verbatim quote is found
     on its stated page of the report's tracked text layer (code/verify_regimen_extraction.py, without the PDF hash step)."""
@@ -64,9 +68,26 @@ def regimen_verified(d):
     R={(r['report_id'],r['field']):r for r in rows(rec)}
     if any(V.check_row(r) for r in R.values()):return False
     C={(c['report_id'],c['field']):c for c in d['characteristics'] if c['field'] in V.FIELDS}
-    extracted=lambda r:'Verified (PDF quote, second reviewer)' if r['second_review'].endswith(': confirmed') else 'Extracted (PDF quote, single extractor)'
-    ok=lambda c,r:c['value']==r['value'] and (r['quote'] in c.get('note','') and c['status']==extracted(r) if r['status']=='Extracted (PDF quote)' else c['status']=='Not reported in source')
-    return set(C)==set(R) and all(ok(C[k],R[k]) for k in R)
+    return set(C)==set(R) and all(_extracted_ok(C[k],R[k]) for k in R)
+def baseline_verified(d):
+    """Baseline/protocol fields (age ... session duration): every record row's quote is found on its stated page; each field
+    shown in the explorer comes from the record unless a registry value (or, for anaesthesia, an earlier PDF quote) takes
+    precedence; no value is shown as extracted or second-reviewed without a record row and a page locator, and no row is
+    marked second-reviewed unless second_review.csv covers the record (code/verify_baseline_extraction.py, without hashes)."""
+    rec=D/'14_CHARACTERISTICS/baseline_protocol_extraction.csv'
+    if not rec.exists() or 'characteristics' not in d:return True
+    sys.path.insert(0,str(D/'code'));import verify_baseline_extraction as B
+    R={(r['report_id'],r['field']):r for r in rows(rec)}
+    if any(B.V.check_row(r,B.FIELDS) for r in R.values()):return False
+    covered=any(x['file'].endswith('baseline_protocol_extraction.csv') for x in d.get('second_review',[]))
+    if not covered and any(r['second_review']!='pending' for r in R.values()):return False
+    for c in d['characteristics']:
+        if c['field'] not in B.FIELDS:continue
+        r=R.get((c['report_id'],c['field']))
+        if c['status'] in ('Verified (registry)','Verified (PDF quote)'):continue
+        if not r or not _extracted_ok(c,r):return False
+        if r['status']=='Extracted (PDF quote)' and not re.search(r' p\.\d',c['source']):return False
+    return True
 V38_SCRIPTS=['theme.js','evidence_graph.js','current_review.js','article_figures.js','search_strategies.js','interactive_explorer.js','current_review_ui.js']
 NAV_GROUPS=[('Evidence',['overview','results','e1e2','qor']),('Explore studies',['studies','coverage','risk','evidence']),('Review process',['prisma','methods','downloads'])]
 def nav_ok(nav):
@@ -107,6 +128,34 @@ def qor_later_grade_consistent(d):
         if any(len(g[k])<40 for k in dom):return False
         if ('second review pending' in g['decision_status'])==reviewed:return False
     return len({g['model_id'] for g in d['qor_later_grade']})==len(d['qor_later_grade'])
+NARR_FILES={'milestones':'recovery_milestones.csv','harms':'harms_structured.csv','satisfaction':'satisfaction_acceptability.csv'}
+def narrative_verified(d):
+    """Structured narrative outcomes shown in Coverage pass every row check of code/verify_narrative_outcomes.py (quote on the
+    stated page, registry source, closed vocabularies, register links, no pooling, no unrecorded second review, every
+    report in the harms table) and cover the same rows as the files."""
+    n=d.get('narrative_outcomes')
+    if n is None:return not (D/'15_NARRATIVE_OUTCOMES/recovery_milestones.csv').exists()
+    sys.path.insert(0,str(D/'code'));import verify_narrative_outcomes as N
+    reviewed={r['file'] for r in d.get('second_review',[])}
+    return set(n)==set(NARR_FILES) and not any(N.check_table(f,reviewed,n[k])[0] for k,f in NARR_FILES.items())
+import functools
+@functools.lru_cache(maxsize=None)  # git's index does not change during one run; each mutation re-runs every contract
+def is_tracked(path):
+    try:
+        subprocess.run(['git', 'ls-files', '--error-unmatch', str(path)], cwd=ROOT, capture_output=True, check=True)
+        return True
+    except subprocess.CalledProcessError:
+        return False
+def worksheet_ok(d):
+    """The second-review worksheet is what its generator produces from the current records (every pending item, nothing
+    else), its reviewer columns are blank (the worksheet never records a review), and the payload counts match it."""
+    w=D/'02_DECISIONS/v38/second_review_worksheet.csv'
+    if not w.exists():return 'second_review_pending' not in d
+    sys.path.insert(0,str(D/'code'));import build_second_review_worksheet as W
+    got=rows(w);want=[{k:str(v) for k,v in r.items()} for r in W.build()]
+    if got!=want or any(r[k] for r in got for k in W.REVIEW_BLANK):return False
+    from collections import Counter
+    return d.get('second_review_pending')==[dict(item_type=t,record=r,items=n) for (t,r),n in sorted(Counter((x['item_type'],x['record']) for x in got).items())]
 def second_review_consistent(d):
     """Each second-review row names a reviewer and date, counts the rows of the file it covers and carries that file's
     current SHA-256 (a judgement file changed after review invalidates the record); the regimen record agrees row by row."""
@@ -175,6 +224,10 @@ def checks(d):
       'Characteristics identity':d.get('characteristics')==rows(D/'14_CHARACTERISTICS/report_characteristics.csv') if (D/'14_CHARACTERISTICS/report_characteristics.csv').exists() else True,
       'Characteristics complete with declared statuses':characteristics_complete(d),
       'Regimen extraction matches record and source quotes':regimen_verified(d),
+      'Baseline/protocol extraction matches record and source quotes':baseline_verified(d),
+      'Second-review worksheet current and unreviewed':worksheet_ok(d),
+      'Narrative outcomes identity':d.get('narrative_outcomes')=={k:rows(D/'15_NARRATIVE_OUTCOMES'/f) for k,f in NARR_FILES.items()} if (D/'15_NARRATIVE_OUTCOMES/recovery_milestones.csv').exists() else 'narrative_outcomes' not in d,
+      'Narrative outcomes verified against sources':narrative_verified(d),
       'Stata verification identity':d['stata']['summary']==rows(D/'13_STATA/output/stata_verification_summary.csv') and d['stata']['results']==rows(D/'13_STATA/output/stata_model_results.csv') if 'stata' in d else True,
       'Stata reproduces current canonical results':stata_reproduces_canonical(d),
       'QoR later-window identity':d.get('qor_later_models')==json.load(open(D/'08_QOR_ANALYSIS/qor_models_later.json')) if (D/'08_QOR_ANALYSIS/qor_models_later.json').exists() else True,
@@ -189,14 +242,6 @@ def checks(d):
     }
     
 
-    import subprocess
-    def is_tracked(path):
-        try:
-            subprocess.run(['git', 'ls-files', '--error-unmatch', str(path)], cwd=ROOT, capture_output=True, check=True)
-            return True
-        except subprocess.CalledProcessError:
-            return False
-    
     for item in d['downloads']:
         if not is_tracked(ROOT / item['source']):
             ret['all downloads tracked by git'] = False
@@ -448,8 +493,35 @@ def main(site=None):
         mutations.append(('Characteristics identity',lambda d:d['characteristics'][0].__setitem__('value','changed')))
         mutations.append(('Characteristics complete with declared statuses',lambda d:d['characteristics'][0].__setitem__('status','Confirmed')))
         if (D/'14_CHARACTERISTICS/regimen_extraction.csv').exists():
-            mutations.append(('Regimen extraction matches record and source quotes',lambda d:next(c for c in d['characteristics'] if c['status'] in ('Extracted (PDF quote, single extractor)','Verified (PDF quote, second reviewer)')).__setitem__('note','p.1: “quote not in source”')))
+            REG=('postoperative_analgesia','pca_regimen','rescue_analgesia','cumulative_duration')
+            mutations.append(('Regimen extraction matches record and source quotes',lambda d:next(c for c in d['characteristics'] if c['field'] in REG and c['status'] in ('Extracted (PDF quote, single extractor)','Verified (PDF quote, second reviewer)')).__setitem__('note','p.1: “quote not in source”')))
             mutations.append(('Regimen extraction matches record and source quotes',lambda d:[c.__setitem__('status','Extracted (PDF quote, single extractor)') for c in d['characteristics'] if c['status']=='Verified (PDF quote, second reviewer)'][:1]))
+        if 'narrative_outcomes' in data:
+            NV='Narrative outcomes verified against sources'
+            first=lambda d,k,f=lambda r:True:next(r for r in d['narrative_outcomes'][k] if f(r))
+            mutations.append(('Narrative outcomes identity',lambda d:first(d,'milestones').__setitem__('value_i','changed')))
+            # a quote not in the source, an unreported harm turned into a zero, a pooled claim, a claimed second review,
+            # a register link to another report's result, a report dropped from the harms table
+            mutations.append((NV,lambda d:first(d,'milestones').__setitem__('quote','a quotation that is not in the report')))
+            mutations.append((NV,lambda d:first(d,'harms',lambda r:r['reporting']=='Not located (not a zero)').update(events_i='0',events_c='0')))
+            mutations.append((NV,lambda d:first(d,'satisfaction').__setitem__('synthesis','Pooled by random-effects meta-analysis.')))
+            mutations.append((NV,lambda d:first(d,'harms',lambda r:r['quote']).__setitem__('second_review','SP, 2026-09-28: confirmed')))
+            mutations.append((NV,lambda d:first(d,'milestones',lambda r:r['register_result_id']).__setitem__('register_result_id','V33-OD-0001')))
+            mutations.append((NV,lambda d:d['narrative_outcomes']['harms'].__setitem__(slice(None),[r for r in d['narrative_outcomes']['harms'] if r['report_id']!=d['narrative_outcomes']['harms'][0]['report_id']])))
+        if 'second_review_pending' in data:
+            mutations.append(('Second-review worksheet current and unreviewed',lambda d:d['second_review_pending'][0].__setitem__('items',0)))
+            mutations.append(('Second-review worksheet current and unreviewed',lambda d:d['second_review_pending'].pop()))
+        if (D/'14_CHARACTERISTICS/baseline_protocol_extraction.csv').exists():
+            BAS=('age','female','bmi','asa','anaesthesia','acupoints','frequency','intensity','timing','sessions','session_duration')
+            first_bas=lambda d,st:next(c for c in d['characteristics'] if c['field'] in BAS and c['status']==st)
+            # a changed value, a quote that is not in the record, a claimed second review, a value with no page locator,
+            # and a legacy value brought back where the record now governs
+            mutations.append(('Baseline/protocol extraction matches record and source quotes',lambda d:first_bas(d,'Extracted (PDF quote, single extractor)').__setitem__('value','changed')))
+            mutations.append(('Baseline/protocol extraction matches record and source quotes',lambda d:first_bas(d,'Extracted (PDF quote, single extractor)').__setitem__('note','p.1: “quote not in source”')))
+            mutations.append(('Baseline/protocol extraction matches record and source quotes',lambda d:first_bas(d,'Extracted (PDF quote, single extractor)').__setitem__('status','Verified (PDF quote, second reviewer)')))
+            mutations.append(('Baseline/protocol extraction matches record and source quotes',lambda d:(lambda c:c.__setitem__('source',c['source'].split(' p.')[0]))(first_bas(d,'Extracted (PDF quote, single extractor)'))))
+            mutations.append(('Baseline/protocol extraction matches record and source quotes',lambda d:first_bas(d,'Extracted (PDF quote, single extractor)').update(status='Legacy (v26, not re-verified)',source='dashboard/data.js')))
+            mutations.append(('Baseline/protocol extraction matches record and source quotes',lambda d:first_bas(d,'Not reported in source').update(value='5–15 mA',status='Legacy (v26, not re-verified)')))
     if 'stata' in data:
         mutations.append(('Stata verification identity',lambda d:d['stata']['summary'][0].__setitem__('status','changed')))
         mutations.append(('Stata reproduces current canonical results',lambda d:next(r for r in d['stata']['results'] if r['model_id']=='opioid24_EA_usual').__setitem__('ci_lb','-17.56')))

@@ -261,7 +261,7 @@
     "label": "QoR later-window GRADE (four bodies)",
     "href": "current/qor_grade_later.csv",
     "source": "10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/qor_grade_later.csv",
-    "sha256": "6255f2a521213e67a03b2ce23ad97c12544bea6a339606d66f9f70608046403f"
+    "sha256": "f7dd7d21401c0b9f5d3d2a381325591c04298a352f77e1e82256217d3808a5a0"
   },
   {
     "label": "QoR later-window source locators",
@@ -429,12 +429,48 @@
     "label": "Harmonised report characteristics with verification status",
     "href": "current/report_characteristics.csv",
     "source": "10_FINAL_ADJUDICATION/14_CHARACTERISTICS/report_characteristics.csv",
-    "sha256": "00610204431971768c98c5f408164f0621991cb1870796f126a9884f5c0fec23"
+    "sha256": "39098fa3fc461451e238533fcfd990c33217a6a5c4617f17afc3ef85061be8df"
   },
   {
     "label": "Second-review record: RoB 2, GRADE and regimen characteristics",
     "href": "current/second_review.csv",
     "source": "10_FINAL_ADJUDICATION/02_DECISIONS/v38/second_review.csv",
     "sha256": "966b397889410a933480fcb4e4d1ab5d8d31ea0dce4215d25a79be9289d0e26d"
+  },
+  {
+    "label": "Baseline and protocol characteristics: PDF page and verbatim quotation per value (single extractor)",
+    "href": "current/baseline_protocol_extraction.csv",
+    "source": "10_FINAL_ADJUDICATION/14_CHARACTERISTICS/baseline_protocol_extraction.csv",
+    "sha256": "4dfbb0cb6523c4c7a9c0dee1eeb27121f1f69f0f32a464c31687b22a459285fe"
+  },
+  {
+    "label": "Narrative outcomes report: recovery milestones, harms, satisfaction",
+    "href": "current/NARRATIVE_OUTCOMES_REPORT.md",
+    "source": "10_FINAL_ADJUDICATION/15_NARRATIVE_OUTCOMES/NARRATIVE_OUTCOMES_REPORT.md",
+    "sha256": "2b66dc24c7c06b0b6652b6316399664347c1737b06eb11499ccdc45fbf3604d2"
+  },
+  {
+    "label": "Recovery milestones (LOS, PACU, extubation, emergence, mobilisation): quoted values per report",
+    "href": "current/recovery_milestones.csv",
+    "source": "10_FINAL_ADJUDICATION/15_NARRATIVE_OUTCOMES/recovery_milestones.csv",
+    "sha256": "8312e2db7f6be43ef6bb1a175b593778ab4554cead6bedc6af0566543b612bf3"
+  },
+  {
+    "label": "Harms by separate category, all 70 reports (unreported is not zero)",
+    "href": "current/harms_structured.csv",
+    "source": "10_FINAL_ADJUDICATION/15_NARRATIVE_OUTCOMES/harms_structured.csv",
+    "sha256": "70f5102d1aef5a68c90aaee7d11bedbe224182cc6eca9986aa404a49e530f6aa"
+  },
+  {
+    "label": "Satisfaction, acceptability and quality of life: quoted values per report",
+    "href": "current/satisfaction_acceptability.csv",
+    "source": "10_FINAL_ADJUDICATION/15_NARRATIVE_OUTCOMES/satisfaction_acceptability.csv",
+    "sha256": "cd4c4273a826d3f69c1d53c0dba77360378e60a61f0820d38881bc6cc89a47ca"
+  },
+  {
+    "label": "Second-review worksheet: items with one assessor (reviewer columns blank)",
+    "href": "current/second_review_worksheet.csv",
+    "source": "10_FINAL_ADJUDICATION/02_DECISIONS/v38/second_review_worksheet.csv",
+    "sha256": "bf5f8201ed3ec8ff4f97e0a2070cdf641f5e780c7e24e30560b383f632c1fde4"
   }
 ]
