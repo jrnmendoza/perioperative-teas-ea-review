@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """v38 data/asset contract replacing the legacy v26 seven-trial UI contract."""
 import csv,json,pathlib,hashlib,copy,sys,re,subprocess
+from collections import Counter
 ROOT=pathlib.Path(__file__).resolve().parents[1];D=ROOT/'10_FINAL_ADJUDICATION'
 def rows(p):return list(csv.DictReader(open(p,encoding='utf-8-sig')))
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
@@ -128,6 +129,32 @@ def qor_later_grade_consistent(d):
         if any(len(g[k])<40 for k in dom):return False
         if ('second review pending' in g['decision_status'])==reviewed:return False
     return len({g['model_id'] for g in d['qor_later_grade']})==len(d['qor_later_grade'])
+def current_state_ok(d):
+    """FINAL_CURRENT_STATE_REPORT.md is what its generator writes from the current records, every inventory value in it
+    equals the same count recomputed from the payload, and it is dated no earlier than any date the payload carries
+    (release, reviews, extractions) — so the dashboard never shows a later or different state than the report."""
+    text=(ROOT/'FINAL_CURRENT_STATE_REPORT.md').read_text(encoding='utf-8')
+    sys.path.insert(0,str(D/'code'));import build_current_state_report as B
+    if text!=B.build():return False
+    inv={k:int(v.replace(',','')) for k,v in re.findall(r'^\| ([^|]+?) \| ([\d,]+) \|$',text.split('## Inventory')[1].split('\n## ')[0],re.M)}
+    C=Counter(c['status'] for c in d.get('characteristics',[]));N=d.get('narrative_outcomes',{});S=d.get('stata',{}).get('summary',[])
+    got={'Included reports':len(d['studies']),'Operational trial families':len({s['trial_id'] for s in d['studies']}),'Canonical results':len(d['results_register']),
+         'Core models (defined)':len(d['models']),'Core models with data':sum(int(m['k'])>0 for m in d['models']),'Core model inputs':len(d['inputs']),
+         'Core RoB 2 assessments (result-specific)':len(d['rob']),'Core GRADE bodies':len(d['grade']),
+         'QoR ~24 h main models':len(d['qor_analysis']['main_models']),'QoR ~24 h diagnostics':len(d['qor_analysis']['diagnostics']),
+         'QoR ~24 h RoB 2 assessments':len(d['qor_analysis']['rob']),'QoR ~24 h GRADE bodies':len(d['qor_analysis']['grade']),
+         'QoR later-window models':len(d.get('qor_later_models',[])),'QoR later-window RoB 2 assessments':len(d.get('qor_later_rob',[])),'QoR later-window GRADE bodies':len(d.get('qor_later_grade',[])),
+         'Characteristic values (reports × fields)':sum(C.values()),'Characteristic values: legacy, not re-verified':C['Legacy (v26, not re-verified)'],
+         'Characteristic values: single extractor, second review pending':C['Extracted (PDF quote, single extractor)'],'Characteristic values: second-reviewed PDF quotation':C['Verified (PDF quote, second reviewer)'],
+         'Recovery-milestone rows':len(N.get('milestones',[])),'Harms rows (including not-located reports)':len(N.get('harms',[])),'Satisfaction/acceptability rows':len(N.get('satisfaction',[])),
+         'Second-review record entries':len(d.get('second_review',[])),'Items awaiting second review':sum(int(x['items']) for x in d.get('second_review_pending',[])),
+         'Stata-verified models':len(S),'Stata discrepancies':sum(r['status'].startswith('DISCREPANCY') for r in S)}
+    if inv!=got:return False
+    m=re.search(r'^(\d{1,2}) (\w+) (\d{4}) · ',text.splitlines()[2]);from datetime import datetime
+    rdate=datetime.strptime(' '.join(m.groups()),'%d %B %Y').strftime('%Y-%m-%d') if m else ''
+    payload_dates=list(d.get('release',{}).values())+[r['review_date'] for r in d.get('second_review',[])+d.get('qor_later_grade',[])]
+    payload_dates+=re.findall(r'\d{4}-\d{2}-\d{2}',' '.join(r.get('extracted_by','') for k in N for r in N[k]))
+    return bool(rdate) and all(x<=rdate for x in payload_dates if re.fullmatch(r'\d{4}-\d{2}-\d{2}',str(x)))
 NARR_FILES={'milestones':'recovery_milestones.csv','harms':'harms_structured.csv','satisfaction':'satisfaction_acceptability.csv'}
 def narrative_verified(d):
     """Structured narrative outcomes shown in Coverage pass every row check of code/verify_narrative_outcomes.py (quote on the
@@ -226,6 +253,7 @@ def checks(d):
       'Regimen extraction matches record and source quotes':regimen_verified(d),
       'Baseline/protocol extraction matches record and source quotes':baseline_verified(d),
       'Second-review worksheet current and unreviewed':worksheet_ok(d),
+      'Current-state report is current and matches the payload':current_state_ok(d),
       'Narrative outcomes identity':d.get('narrative_outcomes')=={k:rows(D/'15_NARRATIVE_OUTCOMES'/f) for k,f in NARR_FILES.items()} if (D/'15_NARRATIVE_OUTCOMES/recovery_milestones.csv').exists() else 'narrative_outcomes' not in d,
       'Narrative outcomes verified against sources':narrative_verified(d),
       'Stata verification identity':d['stata']['summary']==rows(D/'13_STATA/output/stata_verification_summary.csv') and d['stata']['results']==rows(D/'13_STATA/output/stata_model_results.csv') if 'stata' in d else True,
@@ -508,6 +536,11 @@ def main(site=None):
             mutations.append((NV,lambda d:first(d,'harms',lambda r:r['quote']).__setitem__('second_review','SP, 2026-09-28: confirmed')))
             mutations.append((NV,lambda d:first(d,'milestones',lambda r:r['register_result_id']).__setitem__('register_result_id','V33-OD-0001')))
             mutations.append((NV,lambda d:d['narrative_outcomes']['harms'].__setitem__(slice(None),[r for r in d['narrative_outcomes']['harms'] if r['report_id']!=d['narrative_outcomes']['harms'][0]['report_id']])))
+        CS='Current-state report is current and matches the payload'
+        mutations.append((CS,lambda d:d['qor_later_grade'].pop()))
+        mutations.append((CS,lambda d:d['second_review_pending'][0].__setitem__('items',int(d['second_review_pending'][0]['items'])+1)))
+        mutations.append((CS,lambda d:d['release'].__setitem__('e2_date','2026-12-31')))
+        mutations.append((CS,lambda d:d['characteristics'][0].__setitem__('status','Legacy (v26, not re-verified)')))
         if 'second_review_pending' in data:
             mutations.append(('Second-review worksheet current and unreviewed',lambda d:d['second_review_pending'][0].__setitem__('items',0)))
             mutations.append(('Second-review worksheet current and unreviewed',lambda d:d['second_review_pending'].pop()))

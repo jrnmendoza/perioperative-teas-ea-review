@@ -19244,7 +19244,7 @@
       "label": "Current-state report",
       "href": "current/FINAL_CURRENT_STATE_REPORT.md",
       "source": "FINAL_CURRENT_STATE_REPORT.md",
-      "sha256": "93e7c9e920fc3a8e43f6dfc0ccce53fb7c17488598a8d1fb1c927bd255dedf29"
+      "sha256": "111df553c25f7dea1c281570e109ce732f490fd9879a9872c6cd7f42ac13290b"
     },
     {
       "label": "GRADE: all 38 reviewed bodies",
@@ -65302,10 +65302,11 @@
     }
   ],
   "outstanding": [
-    "GRADE for the four new later-window QoR bodies.",
-    "Structured length-of-stay, PACU, extubation and mobilisation tables.",
-    "Finalised harms and satisfaction tables.",
-    "Reference registry and claim-citation audit extension."
+    "Second review of single-assessor items.",
+    "Author decisions in the manuscript.",
+    "Author query replies.",
+    "Submission sections not yet written.",
+    "Data lock."
   ],
   "e2_methods": {
     "Timestamp note": "**Timestamp note (23 September 2026).** The review author chose not to send the hashes to a\nthird party. The only timestamp is local git commit `95fcf66` (2026-09-23 20:58 +0200), which\nthe review team controls. This is recorded so the strength of the pre-registration claim is not\noverstated.",
