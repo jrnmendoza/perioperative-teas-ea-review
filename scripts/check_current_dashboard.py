@@ -46,7 +46,7 @@ def sensitivity_map_complete(d):
             seen.add(m);m=par[m]
     return True
 CHAR_STATUS={'Verified (registry)','Verified (PDF quote)','Partly verified (source excerpt)','Canonical result register','Source-traced (extraction record)',
-             'Legacy (v26, not re-verified)','Extracted (PDF quote, single extractor)','Not reported in source','Not verified','Not extracted'}
+             'Legacy (v26, not re-verified)','Extracted (PDF quote, single extractor)','Verified (PDF quote, second reviewer)','Not reported in source','Not verified','Not extracted'}
 def characteristics_complete(d):
     """Every report has the same harmonised fields; statuses come from the declared vocabulary; values never fill unsourced gaps."""
     if 'characteristics' not in d:return True
@@ -64,7 +64,8 @@ def regimen_verified(d):
     R={(r['report_id'],r['field']):r for r in rows(rec)}
     if any(V.check_row(r) for r in R.values()):return False
     C={(c['report_id'],c['field']):c for c in d['characteristics'] if c['field'] in V.FIELDS}
-    ok=lambda c,r:c['value']==r['value'] and (r['quote'] in c.get('note','') if r['status']=='Extracted (PDF quote)' else c['status']=='Not reported in source')
+    extracted=lambda r:'Verified (PDF quote, second reviewer)' if r['second_review'].endswith(': confirmed') else 'Extracted (PDF quote, single extractor)'
+    ok=lambda c,r:c['value']==r['value'] and (r['quote'] in c.get('note','') and c['status']==extracted(r) if r['status']=='Extracted (PDF quote)' else c['status']=='Not reported in source')
     return set(C)==set(R) and all(ok(C[k],R[k]) for k in R)
 V38_SCRIPTS=['theme.js','evidence_graph.js','current_review.js','article_figures.js','search_strategies.js','interactive_explorer.js','current_review_ui.js']
 NAV_GROUPS=[('Evidence',['overview','results','e1e2','qor']),('Explore studies',['studies','coverage','risk','evidence']),('Review process',['prisma','methods','downloads'])]
@@ -88,6 +89,17 @@ def release_ok(d):
     if not r or len(h)!=1:return False
     from datetime import datetime
     return r['core_version']==d['version'] and r['core_date']==d['date'] and r['e2_date']==datetime.strptime(re.search(r'\d{1,2} \w+ \d{4}',h[0]).group(0),'%d %B %Y').strftime('%Y-%m-%d')
+def second_review_consistent(d):
+    """Each second-review row names a reviewer and date, counts the rows of the file it covers and carries that file's
+    current SHA-256 (a judgement file changed after review invalidates the record); the regimen record agrees row by row."""
+    if 'second_review' not in d:return True
+    for r in d['second_review']:
+        f=ROOT/r['file']
+        if not (r['reviewer'] and re.fullmatch(r'\d{4}-\d{2}-\d{2}',r['review_date']) and f.is_file()):return False
+        if int(r['items'])!=len(rows(f)) or sha(f)!=r['file_sha256']:return False
+        if r['file'].endswith('regimen_extraction.csv') and r['outcome']=='all confirmed':
+            if any(x['second_review']!=f"{r['reviewer']}, {r['review_date']}: confirmed" for x in rows(f)):return False
+    return True
 def stata_reproduces_canonical(d):
     """The shipped Stata estimates still reproduce the current canonical models (catches a stale Stata run)."""
     if 'stata' not in d:return True
@@ -150,6 +162,8 @@ def checks(d):
       'QoR later-window identity':d.get('qor_later_models')==json.load(open(D/'08_QOR_ANALYSIS/qor_models_later.json')) if (D/'08_QOR_ANALYSIS/qor_models_later.json').exists() else True,
       'QoR later-window RoB identity': d.get('qor_later_rob') == rows(D/'08_QOR_ANALYSIS/qor_rob2_later.csv') and len(d.get('qor_later_rob', [])) == 5 if 'qor_later_rob' in d else True,
       'Release dates derived from payload and E2 decision':release_ok(d),
+      'Second-review record identity':d.get('second_review')==rows(D/'02_DECISIONS/v38/second_review.csv') if (D/'02_DECISIONS/v38/second_review.csv').exists() else True,
+      'Second review covers current judgement files':second_review_consistent(d),
       'E2 methods integrity': d.get('e2_methods', {}).get('Timestamp note', '') == re.search(r'(\*\*Timestamp note[^\n]+(?:\n[^\n]+)+)', (D/'02_DECISIONS/v38/AMENDED_PRIMARY_ESTIMAND_E2.md').read_text(encoding='utf-8')).group(1).strip() if 'e2_methods' in d else True,
 
     }
@@ -414,7 +428,8 @@ def main(site=None):
         mutations.append(('Characteristics identity',lambda d:d['characteristics'][0].__setitem__('value','changed')))
         mutations.append(('Characteristics complete with declared statuses',lambda d:d['characteristics'][0].__setitem__('status','Confirmed')))
         if (D/'14_CHARACTERISTICS/regimen_extraction.csv').exists():
-            mutations.append(('Regimen extraction matches record and source quotes',lambda d:next(c for c in d['characteristics'] if c['status']=='Extracted (PDF quote, single extractor)').__setitem__('note','p.1: “quote not in source”')))
+            mutations.append(('Regimen extraction matches record and source quotes',lambda d:next(c for c in d['characteristics'] if c['status'] in ('Extracted (PDF quote, single extractor)','Verified (PDF quote, second reviewer)')).__setitem__('note','p.1: “quote not in source”')))
+            mutations.append(('Regimen extraction matches record and source quotes',lambda d:[c.__setitem__('status','Extracted (PDF quote, single extractor)') for c in d['characteristics'] if c['status']=='Verified (PDF quote, second reviewer)'][:1]))
     if 'stata' in data:
         mutations.append(('Stata verification identity',lambda d:d['stata']['summary'][0].__setitem__('status','changed')))
         mutations.append(('Stata reproduces current canonical results',lambda d:next(r for r in d['stata']['results'] if r['model_id']=='opioid24_EA_usual').__setitem__('ci_lb','-17.56')))
@@ -428,6 +443,10 @@ def main(site=None):
         mutations.append(('E2 accounting identity',lambda d:d['e2_accounting']['tierB2'].pop()))
         mutations.append(('E2 accounting covers E1 and E2 inputs',lambda d:[r.__setitem__('E2_disposition','NOT ADMITTED') for r in d['e2_accounting']['tierA'] if r['report']=='Chen 1998']))
     mutations.append(('E2 methods integrity', lambda d: d['e2_methods'].update({'Timestamp note': 'Altered text'})))
+    if 'second_review' in data:
+        mutations.append(('Second-review record identity',lambda d:d['second_review'][0].__setitem__('outcome','changed')))
+        mutations.append(('Second review covers current judgement files',lambda d:d['second_review'][0].__setitem__('items','93')))
+        mutations.append(('Second review covers current judgement files',lambda d:d['second_review'][3].__setitem__('file_sha256','0'*64)))
     mutations.append(('Release dates derived from payload and E2 decision', lambda d: d['release'].__setitem__('e2_date', '2026-09-20')))
     mutations.append(('all downloads tracked by git', lambda d: d['downloads'].append(dict(label='Fake', href='current/fake.txt', source='fake.txt', sha256='hash'))))
     if 'e2_methods_html' in data:

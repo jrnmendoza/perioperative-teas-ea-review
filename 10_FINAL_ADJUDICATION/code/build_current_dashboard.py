@@ -69,6 +69,8 @@ if (D/'13_STATA/output/stata_verification_summary.csv').exists():
   files.append((label,'10_FINAL_ADJUDICATION/'+path))
 if (D/'14_CHARACTERISTICS/report_characteristics.csv').exists():
  files.append(('Harmonised report characteristics with verification status','10_FINAL_ADJUDICATION/14_CHARACTERISTICS/report_characteristics.csv'))
+if (D/'02_DECISIONS/v38/second_review.csv').exists():
+ files.append(('Second-review record: RoB 2, GRADE and regimen characteristics','10_FINAL_ADJUDICATION/02_DECISIONS/v38/second_review.csv'))
 filenames=set()
 for label,path in files:
  if pathlib.Path(path).name in filenames: raise ValueError('Filename collision: ' + pathlib.Path(path).name)
@@ -133,6 +135,9 @@ if (D/'13_STATA/output/stata_verification_summary.csv').exists():
  data['stata']=dict(run_info=rows('10_FINAL_ADJUDICATION/13_STATA/output/stata_run_info.csv')[0],summary=rows('10_FINAL_ADJUDICATION/13_STATA/output/stata_verification_summary.csv'),
                     results=rows('10_FINAL_ADJUDICATION/13_STATA/output/stata_model_results.csv'),figures=figs,small_study=rows('10_FINAL_ADJUDICATION/13_STATA/output/small_study_tests.csv'),
                     methods=(D/'13_STATA/METHODS_STATEMENT.md').read_text(),code_url='https://github.com/jrnmendoza/perioperative-teas-ea-review/tree/main/10_FINAL_ADJUDICATION/13_STATA')
+# Second review (02_DECISIONS/v38/second_review.csv): who confirmed which judgement files, when, with the reviewed file hashes.
+if (D/'02_DECISIONS/v38/second_review.csv').exists():
+ data['second_review']=rows('10_FINAL_ADJUDICATION/02_DECISIONS/v38/second_review.csv')
 # Paired opioid-pain registry (code/build_paired_pain.py): same-trial pain for every E1/E2 opioid contrast.
 if (D/'10_PAIRED_PAIN/paired_pain_registry.csv').exists():
  data['paired_pain']=rows('10_FINAL_ADJUDICATION/10_PAIRED_PAIN/paired_pain_registry.csv')

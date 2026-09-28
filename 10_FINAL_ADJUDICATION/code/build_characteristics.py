@@ -14,6 +14,9 @@ used in a fixed order of provenance and nothing is inferred to fill a gap:
                                       rescue analgesia and cumulative stimulation time, each with a verbatim quote checked
                                       against the report's text layer (code/verify_regimen_extraction.py); one extractor,
                                       second review pending
+  Verified (PDF quote, second reviewer)
+                                      the same regimen fields once a second reviewer has confirmed value and quote
+                                      (regimen_extraction.csv second_review '<initials>, <date>: confirmed')
   Not reported in source              regimen field searched in the full text and not reported there
   Not verified                        registry value explicitly marked NOT VERIFIED and no other source
   Not extracted                       no structured source exists for this field
@@ -38,6 +41,9 @@ REGIMEN = OUT / 'regimen_extraction.csv'
 regimen = {(r['report_id'], r['field']): r for r in csv.DictReader(open(REGIMEN, encoding='utf-8'))} if REGIMEN.exists() else {}
 
 def ok(v): return v not in (None, '') and 'NOT VERIFIED' not in str(v)
+# A regimen row is second-reviewed when its second_review reads '<initials>, <date>: confirmed' (verify_regimen_extraction.py).
+reviewed = lambda x: x.get('second_review', 'pending').endswith(': confirmed')
+review_note = lambda x: f"; second review {x['second_review'].replace(': ', ' ')}" if reviewed(x) else ''
 COMPARATOR_CLASS = lambda s: 'sham' if s.lower().startswith('sham') else 'usual care' if s.lower().startswith('usual') else 'active control' if s.lower().startswith('active') else 'unclear'
 out = []
 def put(rid, field, value, status, source='', note=''):
@@ -89,10 +95,10 @@ for s in registry:
         elif x['status'] == 'Extracted (PDF quote)':
             pages = f"p.{x['page']}" + (f", p.{x['page2']}" if x['quote2'] else '')
             quote = f"p.{x['page']}: “{x['quote']}”" + (f" p.{x['page2']}: “{x['quote2']}”" if x['quote2'] else '')
-            put(rid, field, x['value'], 'Extracted (PDF quote, single extractor)', f"{x['source_pdf']} {pages} (regimen_extraction.csv)",
-                quote + (f" Note: {x['note']}" if x['note'] else ''))
+            put(rid, field, x['value'], 'Verified (PDF quote, second reviewer)' if reviewed(x) else 'Extracted (PDF quote, single extractor)',
+                f"{x['source_pdf']} {pages} (regimen_extraction.csv{review_note(x)})", quote + (f" Note: {x['note']}" if x['note'] else ''))
         else:
-            put(rid, field, '', 'Not reported in source', f"{x['source_pdf']} (full text checked; regimen_extraction.csv)", x['note'])
+            put(rid, field, '', 'Not reported in source', f"{x['source_pdf']} (full text checked; regimen_extraction.csv{review_note(x)})", x['note'])
 
 OUT.mkdir(exist_ok=True)
 with open(OUT / 'report_characteristics.csv', 'w', newline='') as fh:

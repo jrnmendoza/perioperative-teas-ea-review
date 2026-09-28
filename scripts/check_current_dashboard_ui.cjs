@@ -69,7 +69,10 @@ let passed=0;const ok=(name)=>{passed++;console.log('PASS '+name);};
   assert.ok(/Core v38 RoB 2 and GRADE are complete under the adopted workflow/.test(ov.done));
   for(const needle of ['Import mapping gap','Historical selection','Reports and trials','Randomised and analysed N','Source holds','E2 is post hoc','Reproduction is not source truth'])
     assert.ok(ov.limits.includes(needle),'Limitation missing: '+needle);
-  ok('Overview separates the complete v38 core from outstanding work and keeps the limitations');
+  // Second review, where recorded, is stated with reviewer and date in the Overview, RoB, GRADE and QoR views.
+  const sr=await page.evaluate(()=>(window.CURRENT_REVIEW.second_review||[]).map(r=>r.reviewer));
+  if(sr.length){for(const h of ['#overview','#risk','#evidence','#qor']){await go(page,h);assert.ok((await page.locator('#content').innerText()).includes(`Second review (${sr[0]},`),`${h} must state the second review`);}await go(page,'#overview');}
+  ok('Overview separates the complete v38 core from outstanding work and keeps the limitations; second review stated where recorded');
 
   // ---------- 3. Model labels: one deterministic, injective mapping ----------
   const labels=await page.evaluate(()=>{const d=window.CURRENT_REVIEW,ids=[...d.models.map(m=>m.model_id),...d.e2_analysis.models.map(m=>m.model_id),
@@ -104,11 +107,14 @@ let passed=0;const ok=(name)=>{passed++;console.log('PASS '+name);};
 
   // ---------- 5. Provenance legend and characteristic statuses ----------
   const leg=await page.evaluate(()=>{const d=window.CURRENT_REVIEW,used=[...new Set(d.characteristics.map(c=>c.status))];
-    return {used:used.length,btns:[...document.querySelectorAll('.prov-legend .prov-list button.term')].map(b=>b.getAttribute('aria-label')),text:document.querySelector('.prov-legend').textContent};});
+    return {used:used.length,single:used.includes('Extracted (PDF quote, single extractor)'),reviewed:used.includes('Verified (PDF quote, second reviewer)'),btns:[...document.querySelectorAll('.prov-legend .prov-list button.term')].map(b=>b.getAttribute('aria-label')),text:document.querySelector('.prov-legend').textContent};});
   assert.equal(leg.btns.length,leg.used);
   assert.ok(leg.text.includes('Characteristics do not all have the same verification level.')&&leg.text.includes('Missing values are not inferred.'));
-  assert.ok(leg.text.includes('single extractor'),'Legend must say the regimen fields are single-extractor');
-  for(const lab of ['Verified — registry','Verified — PDF quotation','Source-traced','Partly verified — source excerpt','Extracted from PDF quotation — single extractor','Legacy extraction — not re-verified','Not verified','Not reported in source'])
+  // The regimen-field sentence follows the data: single-extractor values say so; second-reviewed values name the review.
+  if(leg.single)assert.ok(leg.text.includes('single extractor'),'Legend must say the regimen fields are single-extractor');
+  if(leg.reviewed)assert.ok(/confirmed by a second reviewer \(SP, 2026-09-28/.test(leg.text)||/confirmed by a second reviewer \([A-Z]{2,4}, \d{4}-\d{2}-\d{2}/.test(leg.text),'Legend must name the second review');
+  const regimenLabel=leg.reviewed?'Verified — PDF quotation, second reviewer':'Extracted from PDF quotation — single extractor';
+  for(const lab of ['Verified — registry','Verified — PDF quotation','Source-traced','Partly verified — source excerpt',regimenLabel,'Legacy extraction — not re-verified','Not verified','Not reported in source'])
     assert.ok(leg.btns.some(b=>b.startsWith(lab+':')),'Legend entry missing: '+lab);
   const nr=leg.btns.find(b=>b.startsWith('Not reported in source:'));assert.ok(/not a failed extraction/.test(nr));
   await page.locator('.prov-legend .prov-list button.term').first().focus();
@@ -121,13 +127,13 @@ let passed=0;const ok=(name)=>{passed++;console.log('PASS '+name);};
   ok('provenance legend: every status explained, keyboard tooltips, per-field counts cover all rows');
 
   // Study drawer keeps statuses, quotes, sources and links.
-  const pqReport=await page.evaluate(()=>window.CURRENT_REVIEW.characteristics.find(c=>c.field==='pca_regimen'&&c.status==='Extracted (PDF quote, single extractor)').report_id);
+  const pqReport=await page.evaluate(()=>window.CURRENT_REVIEW.characteristics.find(c=>c.field==='pca_regimen'&&/^(Extracted \(PDF quote, single extractor\)|Verified \(PDF quote, second reviewer\))$/.test(c.status)).report_id);
   await page.locator(`.study-open[data-id="${pqReport}"]`).first().click();
   await page.waitForSelector('#study-drawer[open]');
   const dr=await page.evaluate(()=>{const t=document.querySelector('#study-drawer').innerText;return {t,q:document.querySelectorAll('#study-drawer .char-quote').length,sr:[...document.querySelectorAll('#study-drawer .vs .sr-only')].map(s=>s.textContent)};});
   assert.ok(dr.q>0,'Drawer must show source quotations');
-  assert.ok(dr.sr.some(s=>s.includes('Extracted from PDF quotation — single extractor'))&&dr.sr.some(s=>s.includes('Verified — registry')));
-  for(const needle of ['Source PDF:','SHA-256:','Outcome inventory','Model contributions','E1 / E2 status','Result-specific risk of bias','not been independently reviewed'])assert.ok(dr.t.includes(needle),'Drawer lacks '+needle);
+  assert.ok(dr.sr.some(s=>s.includes(regimenLabel))&&dr.sr.some(s=>s.includes('Verified — registry')));
+  for(const needle of ['Source PDF:','SHA-256:','Outcome inventory','Model contributions','E1 / E2 status','Result-specific risk of bias',leg.reviewed?'confirmed by a second reviewer':'not been independently reviewed'])assert.ok(dr.t.includes(needle),'Drawer lacks '+needle);
   assert.ok((await hash(page)).includes('study='));
   await page.locator('#close-drawer').click();assert.ok(!(await hash(page)).includes('study='));
   ok('study drawer retains statuses, verbatim quotes, source PDF/hash, models, E1/E2 and RoB');

@@ -423,6 +423,12 @@
     "label": "Harmonised report characteristics with verification status",
     "href": "current/report_characteristics.csv",
     "source": "10_FINAL_ADJUDICATION/14_CHARACTERISTICS/report_characteristics.csv",
-    "sha256": "cd2dc64516fc55e0f4e7186591df708639f8e9804bf79e68cf9f8ae3530acc70"
+    "sha256": "00610204431971768c98c5f408164f0621991cb1870796f126a9884f5c0fec23"
+  },
+  {
+    "label": "Second-review record: RoB 2, GRADE and regimen characteristics",
+    "href": "current/second_review.csv",
+    "source": "10_FINAL_ADJUDICATION/02_DECISIONS/v38/second_review.csv",
+    "sha256": "344788ca0d760dae09ea9f1beb8458d9b803c441e672cf1038ad3eeabb0d98a3"
   }
 ]
