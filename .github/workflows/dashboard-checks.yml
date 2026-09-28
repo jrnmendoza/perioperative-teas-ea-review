@@ -14,6 +14,11 @@ name: Dashboard checks (no deploy)
       - "scripts/check_current_dashboard_ui.cjs"
       - "scripts/deploy_integrity_check.py"
       - "scripts/check_generated_artifacts.py"
+      - "FINAL_CURRENT_STATE_REPORT.md"
+      - "manuscript/*.md"
+      - "references/**"
+      - "reports/check_manuscript_consistency.py"
+      - "reports/render_submission.py"
       - "package.json"
       - "package-lock.json"
       - ".github/workflows/dashboard-checks.yml"
@@ -46,6 +51,14 @@ jobs:
 
       - name: Generated artifacts match their generators
         run: python3 scripts/check_generated_artifacts.py --fast
+
+      # The manuscript's numbers, certainty words and second-review statements against the canonical outputs,
+      # and every citing sentence against the claim-citation audit. Rendering writes only manuscript/submission/.
+      - name: Manuscript consistency and claim-citation audit
+        run: |
+          python3 reports/render_submission.py > /dev/null
+          python3 reports/check_manuscript_consistency.py manuscript/submission/MANUSCRIPT_RENDERED.md
+          python3 references/check_claim_citation_audit.py
 
       - name: Set up Node
         uses: actions/setup-node@v4
