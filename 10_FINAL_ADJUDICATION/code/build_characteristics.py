@@ -10,14 +10,19 @@ used in a fixed order of provenance and nothing is inferred to fill a gap:
   Source-traced (extraction record)   dashboard/study_characteristics.js (extraction-record file + line)
   Legacy (v26, not re-verified)       dashboard/data.js (v26 master workbook import)
   Extracted (PDF quote, single extractor)
-                                      14_CHARACTERISTICS/regimen_extraction.csv: postoperative analgesia, PCA regimen,
-                                      rescue analgesia and cumulative stimulation time, each with a verbatim quote checked
-                                      against the report's text layer (code/verify_regimen_extraction.py); one extractor,
-                                      second review pending
+                                      14_CHARACTERISTICS/regimen_extraction.csv (postoperative analgesia, PCA regimen,
+                                      rescue analgesia, cumulative stimulation time) and baseline_protocol_extraction.csv
+                                      (age, female, BMI, ASA, anaesthesia, acupoints, frequency, intensity, timing,
+                                      sessions, session duration), each with a verbatim quote checked against the report's
+                                      text layer (code/verify_regimen_extraction.py, code/verify_baseline_extraction.py);
+                                      one extractor, second review pending
   Verified (PDF quote, second reviewer)
-                                      the same regimen fields once a second reviewer has confirmed value and quote
-                                      (regimen_extraction.csv second_review '<initials>, <date>: confirmed')
-  Not reported in source              regimen field searched in the full text and not reported there
+                                      the same fields once a second reviewer has confirmed value and quote
+                                      (second_review '<initials>, <date>: confirmed')
+  Not reported in source              field searched in the full text and not reported there
+
+Precedence for the eleven baseline/protocol fields: a registry value, and for anaesthesia an earlier PDF quote, keeps
+priority; then the baseline/protocol extraction; then the older partly verified, source-traced and legacy sources.
   Not verified                        registry value explicitly marked NOT VERIFIED and no other source
   Not extracted                       no structured source exists for this field
 
@@ -39,6 +44,8 @@ overlay = json.load(open(D / '03_CANONICAL/verified_metadata.json'))
 results = list(csv.DictReader(open(D / '03_CANONICAL/results.csv', encoding='utf-8-sig')))
 REGIMEN = OUT / 'regimen_extraction.csv'
 regimen = {(r['report_id'], r['field']): r for r in csv.DictReader(open(REGIMEN, encoding='utf-8'))} if REGIMEN.exists() else {}
+BASELINE = OUT / 'baseline_protocol_extraction.csv'
+baseline = {(r['report_id'], r['field']): r for r in csv.DictReader(open(BASELINE, encoding='utf-8'))} if BASELINE.exists() else {}
 
 def ok(v): return v not in (None, '') and 'NOT VERIFIED' not in str(v)
 # A regimen row is second-reviewed when its second_review reads '<initials>, <date>: confirmed' (verify_regimen_extraction.py).
@@ -48,6 +55,15 @@ COMPARATOR_CLASS = lambda s: 'sham' if s.lower().startswith('sham') else 'usual 
 out = []
 def put(rid, field, value, status, source='', note=''):
     out.append(dict(report_id=rid, field=field, value='' if value is None else str(value).strip(), status=status, source=source, note=note))
+def put_extracted(rid, field, x, record):
+    """One row of a quote-checked extraction record (regimen or baseline/protocol)."""
+    if x['status'] == 'Extracted (PDF quote)':
+        pages = f"p.{x['page']}" + (f", p.{x['page2']}" if x['quote2'] else '')
+        quote = f"p.{x['page']}: “{x['quote']}”" + (f" p.{x['page2']}: “{x['quote2']}”" if x['quote2'] else '')
+        put(rid, field, x['value'], 'Verified (PDF quote, second reviewer)' if reviewed(x) else 'Extracted (PDF quote, single extractor)',
+            f"{x['source_pdf']} {pages} ({record}{review_note(x)})", quote + (f" Note: {x['note']}" if x['note'] else ''))
+    else:
+        put(rid, field, '', 'Not reported in source', f"{x['source_pdf']} (full text checked; {record}{review_note(x)})", x['note'])
 
 for s in registry:
     rid = s['report_id']; lg = legacy.get(rid, {}); pe = pdf.get(rid, {}); tr = traced.get(rid, {}); ov = overlay.get(rid, {}).get('stricta', {})
@@ -64,6 +80,7 @@ for s in registry:
     for field, rkey, pkey, tkey, lkey in [('country', 'country', 'country', None, 'country'), ('anaesthesia', 'anesthesia', 'anaesthesia', 'anesthesia', None)]:
         if ok(s.get(rkey)): put(rid, field, s[rkey], reg, regsrc)
         elif isinstance(pe.get(pkey), dict) and pe[pkey].get('value'): put(rid, field, pe[pkey]['value'], 'Verified (PDF quote)', f"{pe.get('source_pdf', '')} p.{pe[pkey].get('page')}")
+        elif (rid, field) in baseline: put_extracted(rid, field, baseline[(rid, field)], 'baseline_protocol_extraction.csv')
         elif tkey and tr.get(tkey): put(rid, field, tr[tkey], 'Source-traced (extraction record)', f"{tr.get(tkey + '_source_file')}:{tr.get(tkey + '_source_line')}")
         elif lkey and lg.get(lkey): put(rid, field, lg[lkey], 'Legacy (v26, not re-verified)', 'dashboard/data.js')
         else: put(rid, field, '', 'Not verified' if rkey in s else 'Not extracted')
@@ -76,6 +93,7 @@ for s in registry:
     for field, rkey, lkeys in [('age', 'age_i_c', ('arm1_age', 'arm2_age')), ('female', 'sex_i_c', ('arm1_female', 'arm2_female')),
                                ('bmi', 'bmi_i_c', ('arm1_bmi', 'arm2_bmi')), ('asa', 'asa_i_c', ('asa_status',))]:
         if ok(s.get(rkey)): put(rid, field, s[rkey], reg, regsrc)
+        elif (rid, field) in baseline: put_extracted(rid, field, baseline[(rid, field)], 'baseline_protocol_extraction.csv')
         elif any(pop.get(k) for k in lkeys): put(rid, field, ' vs '.join(str(pop[k]) for k in lkeys if pop.get(k)), 'Legacy (v26, not re-verified)', 'dashboard/data.js population')
         else: put(rid, field, '', 'Not verified' if rkey in s else 'Not extracted')
     arms = sorted({r['intervention'] for r in results if r['study'] == rid}); ctrls = sorted({r['comparator'] for r in results if r['study'] == rid})
@@ -85,20 +103,14 @@ for s in registry:
     for field, okey, lkeys in [('acupoints', 'acupoints', ('acupoints',)), ('frequency', 'frequency_raw', ('frequency_raw', 'frequency_category')),
                                ('intensity', 'intensity', ('intensity', 'intensity_category')), ('timing', 'timing_raw', ('timing_raw', 'timing_category')),
                                ('sessions', 'sessions', ('sessions_category',)), ('session_duration', 'duration_raw', ('duration_raw', 'duration_category'))]:
-        if ov.get(okey) and ov[okey] != 'Unverified': put(rid, field, ov[okey], 'Partly verified (source excerpt)', f"03_CANONICAL/verified_metadata.json ({ov.get('verification_date')})")
+        if (rid, field) in baseline: put_extracted(rid, field, baseline[(rid, field)], 'baseline_protocol_extraction.csv')
+        elif ov.get(okey) and ov[okey] != 'Unverified': put(rid, field, ov[okey], 'Partly verified (source excerpt)', f"03_CANONICAL/verified_metadata.json ({ov.get('verification_date')})")
         elif any(st.get(k) for k in lkeys): put(rid, field, next(st[k] for k in lkeys if st.get(k)), 'Legacy (v26, not re-verified)', 'dashboard/data.js stricta')
         else: put(rid, field, '', 'Not extracted')
     for field in ('postoperative_analgesia', 'pca_regimen', 'rescue_analgesia', 'cumulative_duration'):
         x = regimen.get((rid, field))
-        if not x:
-            put(rid, field, '', 'Not extracted')
-        elif x['status'] == 'Extracted (PDF quote)':
-            pages = f"p.{x['page']}" + (f", p.{x['page2']}" if x['quote2'] else '')
-            quote = f"p.{x['page']}: “{x['quote']}”" + (f" p.{x['page2']}: “{x['quote2']}”" if x['quote2'] else '')
-            put(rid, field, x['value'], 'Verified (PDF quote, second reviewer)' if reviewed(x) else 'Extracted (PDF quote, single extractor)',
-                f"{x['source_pdf']} {pages} (regimen_extraction.csv{review_note(x)})", quote + (f" Note: {x['note']}" if x['note'] else ''))
-        else:
-            put(rid, field, '', 'Not reported in source', f"{x['source_pdf']} (full text checked; regimen_extraction.csv{review_note(x)})", x['note'])
+        if x: put_extracted(rid, field, x, 'regimen_extraction.csv')
+        else: put(rid, field, '', 'Not extracted')
 
 OUT.mkdir(exist_ok=True)
 with open(OUT / 'report_characteristics.csv', 'w', newline='') as fh:
@@ -108,7 +120,7 @@ for r in out: wide.setdefault(r['report_id'], {'report_id': r['report_id']})[r['
 with open(OUT / 'report_characteristics_wide.csv', 'w', newline='') as fh:
     w = csv.DictWriter(fh, ['report_id'] + fields); w.writeheader(); w.writerows(wide.values())
 srcs = ['10_FINAL_ADJUDICATION/03_CANONICAL/studies.json', '10_FINAL_ADJUDICATION/03_CANONICAL/verified_metadata.json', '10_FINAL_ADJUDICATION/03_CANONICAL/results.csv',
-        '10_FINAL_ADJUDICATION/14_CHARACTERISTICS/regimen_extraction.csv',
+        '10_FINAL_ADJUDICATION/14_CHARACTERISTICS/regimen_extraction.csv', '10_FINAL_ADJUDICATION/14_CHARACTERISTICS/baseline_protocol_extraction.csv',
         'dashboard/pdf_extracted.js', 'dashboard/study_characteristics.js', 'dashboard/data.js', 'dashboard/../10_FINAL_ADJUDICATION/code/build_characteristics.py',
         '10_FINAL_ADJUDICATION/14_CHARACTERISTICS/report_characteristics.csv', '10_FINAL_ADJUDICATION/14_CHARACTERISTICS/report_characteristics_wide.csv']
 with open(OUT / 'characteristics.sha256', 'w') as fh:
