@@ -29,6 +29,14 @@ What it checks
         claims for the v38 assessments.
     10. Reference numbers are contiguous and every one is cited in the text.
     11. Numbers that appear in tables also appear, unchanged, in the text.
+    12. Every quality-of-recovery estimate printed with its interval carries the
+        certainty in qor_grade.csv / qor_grade_later.csv on the same line, and no
+        graded later-window body is called ungraded.
+    13. Report counts in the length-of-stay and harms subsections match the
+        structured narrative tables (15_NARRATIVE_OUTCOMES).
+    14. A sentence that mentions second review of the later-window GRADE, the
+        baseline/protocol characteristics or the narrative tables says it is
+        pending unless second_review.csv covers that file.
 """
 
 from __future__ import annotations
@@ -522,6 +530,87 @@ def check_crossrefs(text: str) -> list[Finding]:
     return out
 
 
+QOR = ROOT / "10_FINAL_ADJUDICATION" / "08_QOR_ANALYSIS"
+NARR = ROOT / "10_FINAL_ADJUDICATION" / "15_NARRATIVE_OUTCOMES"
+WORDS = {w: i for i, w in enumerate("zero one two three four five six seven eight nine ten eleven twelve thirteen fourteen "
+                                    "fifteen sixteen seventeen eighteen nineteen twenty".split())}
+WORDS.update({t: 10 * (i + 2) for i, t in enumerate("twenty thirty forty fifty sixty seventy eighty ninety".split())})
+
+
+def word_number(w: str) -> int | None:
+    w = w.lower().strip()
+    if w.isdigit():
+        return int(w)
+    if "-" in w:
+        a, b = w.split("-", 1)
+        return WORDS[a] + WORDS[b] if a in WORDS and b in WORDS else None
+    return WORDS.get(w)
+
+
+def _rows(path: Path) -> list:
+    return list(csv.DictReader(path.open(newline="", encoding="utf-8"))) if path.exists() else []
+
+
+def check_qor_certainty(text: str) -> list[Finding]:
+    out = []
+    graded = _rows(QOR / "qor_grade.csv") + _rows(QOR / "qor_grade_later.csv")
+    fmt = lambda x: f"{float(x):.2f}".replace("-", "−")
+    for g in graded:
+        pat = re.escape(f"{fmt(g['effect'])} ({fmt(g['ci_low'])} to {fmt(g['ci_high'])})")
+        for m in re.finditer(pat, text):
+            line = text[text.rfind("\n", 0, m.start()) + 1: (text.find("\n", m.end()) + 1 or len(text) + 1) - 1]
+            if "|" not in line:
+                continue          # prose restatement; the table row carries the certainty
+            found = re.findall(r"\b(very low|low|moderate|high)\b", line.split(m.group(0))[1], re.I)
+            if not found or found[0].lower() != g["certainty"].lower():
+                f = Finding("ERROR", "qor-certainty", f"{g['model_id']}: table row says {found[:1] or 'nothing'}, "
+                            f"GRADE record says '{g['certainty']}'", line)
+                if f not in out:
+                    out.append(f)
+    if _rows(QOR / "qor_grade_later.csv") and re.search(r"not\s+(yet\s+)?certainty-rated|GRADE judgements for (these|the) four[^.]*have\s+not", text, re.I):
+        out.append(Finding("ERROR", "qor-certainty", "Later-window QoR bodies are graded (qor_grade_later.csv) but the text calls them ungraded"))
+    return out
+
+
+def _section(text: str, heading: str) -> str:
+    m = re.search(r"^#+\s*" + re.escape(heading) + r".*?$(.*?)(?=^#+\s|\Z)", text, re.M | re.S)
+    return m.group(1) if m else ""
+
+
+def check_narrative_counts(text: str) -> list[Finding]:
+    out = []
+    M, H = _rows(NARR / "recovery_milestones.csv"), _rows(NARR / "harms_structured.csv")
+    if not M:
+        return out
+    per = {}
+    for r in M:
+        per.setdefault(r["domain"], set()).add(r["report_id"])
+    allowed = {"Length of stay": {len({r['report_id'] for r in M})} | {len(v) for v in per.values()},
+               "Harms": {len({r['report_id'] for r in H if not r['reporting'].startswith('Not located')}),
+                         sum(r['reporting'].startswith('Not located') for r in H), len({r['report_id'] for r in H})}}
+    for heading, ok in allowed.items():
+        sec = _section(text, heading)
+        for m in re.finditer(r"\b([A-Za-z]+(?:-[a-z]+)?|\d+)\s+reports?\b", sec):
+            n = word_number(m.group(1))
+            if n is not None and n not in ok:
+                out.append(Finding("ERROR", "narrative", f"'{m.group(0)}' in {heading} matches no count in the structured tables {sorted(ok)}"))
+    return out
+
+
+def check_second_review_claims(text: str) -> list[Finding]:
+    out = []
+    covered = {r["file"] for r in _rows(ROOT / "10_FINAL_ADJUDICATION/02_DECISIONS/v38/second_review.csv")}
+    items = {r"later-window\s+(quality-of-recovery\s+)?GRADE": "qor_grade_later.csv", r"baseline\s+and\s+protocol\s+characteristics": "baseline_protocol_extraction.csv",
+             r"narrative-outcome\s+tables": "recovery_milestones.csv"}
+    for sent in re.split(r"(?<=[.;])\s+", text):
+        if not re.search(r"second[- ]review", sent, re.I):
+            continue
+        for pat, f in items.items():
+            if re.search(pat, sent, re.I) and not any(c.endswith(f) for c in covered) and not re.search(r"await|pending|not been|have not|has not|had not", sent, re.I):
+                out.append(Finding("ERROR", "second-review", f"Second review claimed for '{pat}' but second_review.csv does not cover {f}", sent[:200]))
+    return out
+
+
 def main(argv: list[str]) -> int:
     if len(argv) < 2:
         print(__doc__)
@@ -547,6 +636,9 @@ def main(argv: list[str]) -> int:
     findings += check_references(all_text)
     findings += check_tables_vs_text(text, cells)
     findings += check_crossrefs(all_text)
+    findings += check_qor_certainty(all_text)
+    findings += check_narrative_counts(text)
+    findings += check_second_review_claims(all_text)
 
     order = {"ERROR": 0, "WARN": 1, "INFO": 2}
     findings.sort(key=lambda f: (order[f.level], f.check))
