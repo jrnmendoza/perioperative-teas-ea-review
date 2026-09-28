@@ -230,8 +230,8 @@ By field:
 - The sensitivity parent map remains a proposed display grouping.
 - The 12-reference import gap, historical exclusion labels, post-hoc E2 timing and source holds are unchanged
   and remain disclosed on the Overview. The dashboard no longer states that RoB 2/GRADE judgements were
-  AI-conducted (removed on user instruction); the regimen-field tooltip still describes that extraction as
-  AI-assisted, single extractor.
+  AI-conducted, or that the regimen extraction was AI-assisted (both removed on user instruction); the
+  regimen fields are still labelled single-extractor.
 - The contrast test covers the main text classes, not every pixel. SVG forest text relies on theme variables
   and was checked visually in both themes. The Stata PNG previews sit on white in both themes, by design.
 - The repository `venv/` lost scipy on its Python upgrade; the validator ran in a scratch environment.

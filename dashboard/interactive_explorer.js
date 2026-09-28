@@ -72,7 +72,7 @@
         'Source-traced (extraction record)': ['TR', 'vs-mid', 'Source-traced',
             'Traced to a specific file and line of an earlier structured extraction record of the report. Not re-read against the PDF for this dashboard.'],
         'Extracted (PDF quote, single extractor)': ['PQ', 'vs-mid', 'Extracted from PDF quotation — single extractor',
-            'Extracted from the primary report by one extractor (AI-assisted), with the page and a verbatim quotation. The quotation is machine-checked against the report’s text on that page, but the value has not been independently reviewed by a second extractor.'],
+            'Extracted from the primary report by one extractor, with the page and a verbatim quotation. The quotation is machine-checked against the report’s text on that page, but the value has not been independently reviewed by a second extractor.'],
         'Legacy (v26, not re-verified)': ['L', 'vs-warn', 'Legacy extraction — not re-verified',
             'Inherited from the older v26 data workbook and not re-checked against the primary report. Check the report before using it for subgrouping or characteristics text.'],
         'Not verified': ['NV', 'vs-none', 'Not verified',
