@@ -21,19 +21,19 @@
     "label": "GRADE: all 38 reviewed bodies",
     "href": "current/FINAL_GRADE_RECOMMENDATIONS.md",
     "source": "FINAL_GRADE_RECOMMENDATIONS.md",
-    "sha256": "45a19664705eebb3aff90a7d539032ae91521130791799d42e40b9983fffe85e"
+    "sha256": "2d731fa92e8d3f1fcc607908bd123128dfd2a47a9b53dc51c45d24ce608565f3"
   },
   {
     "label": "GRADE table",
     "href": "current/grade.csv",
     "source": "10_FINAL_ADJUDICATION/03_CANONICAL/grade.csv",
-    "sha256": "372995393b3e7dea031aa2cf7340e7f5968205b1b4a21b51364f366b41967847"
+    "sha256": "5bb173a343db6e34e979ec8f355a7d89fca602c7b3a3cdf6412c18bac2ba3b9e"
   },
   {
     "label": "94 result-specific RoB assessments",
     "href": "current/rob2_assessments.csv",
     "source": "10_FINAL_ADJUDICATION/02_DECISIONS/v38/rob2_assessments.csv",
-    "sha256": "78e4c368c72ba7a2fdd052baf6fa419428c8e5b75de2a1e4d911acd16cfcd298"
+    "sha256": "dbf510bfc6196467e05423474941e655f3c768113fe98577815ffde6afe6b2ff"
   },
   {
     "label": "RoB source-text locators",
@@ -105,7 +105,7 @@
     "label": "Exact-result RoB linkage",
     "href": "current/FINAL_RESULT_ROB2_LINKAGE.csv",
     "source": "FINAL_RESULT_ROB2_LINKAGE.csv",
-    "sha256": "6d6246b1d1479a6728bb3c278043bd6d3621e5a40cc2e67984f51a2a503511de"
+    "sha256": "d3875e1fd792aa7a96e8c9df7ecb2e30e67bc23f4755a558d797cf2b1afcf92f"
   },
   {
     "label": "v37 \u2192 v38 changes",
@@ -141,7 +141,7 @@
     "label": "RoB signalling-question record",
     "href": "current/rob2_signalling_questions.csv",
     "source": "10_FINAL_ADJUDICATION/02_DECISIONS/v38/rob2_signalling_questions.csv",
-    "sha256": "cf7af7097f874e1aeda4562f4ed3449122febd682114a0832871eac724cf1ed4"
+    "sha256": "e90792b964b6d258cbd30ea2df168f3eb23ff5d79df0555f2f494114e3f70a94"
   },
   {
     "label": "Harms and PROM coverage report",
@@ -189,7 +189,7 @@
     "label": "QoR eight result-specific RoB assessments",
     "href": "current/qor_rob2.csv",
     "source": "10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/qor_rob2.csv",
-    "sha256": "3af95f2b1072105a5bd55b0d09b3e697e4b3031649a0d1293d426766e86e6942"
+    "sha256": "81c3df535b5634e9839e36964f1eb628608f88059aa3e2c518e142260b43d210"
   },
   {
     "label": "QoR 176 signalling responses",
@@ -207,7 +207,7 @@
     "label": "QoR three GRADE bodies",
     "href": "current/qor_grade.csv",
     "source": "10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/qor_grade.csv",
-    "sha256": "69bb2c79cbe575fd0cc2ef08456fd011b2fe2fcaa6a619e0262df6e7df389021"
+    "sha256": "011adcec5382d349a494a3e9eef8fe2330482ce80f750794566f42d4a4b0222f"
   },
   {
     "label": "QoR independent R comparison",
@@ -249,7 +249,7 @@
     "label": "QoR later-window RoB",
     "href": "current/qor_rob2_later.csv",
     "source": "10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/qor_rob2_later.csv",
-    "sha256": "50afbad2fe6233cb761edd47dcf39f0e1c350c61cd3b12b87be8a28cb51f6993"
+    "sha256": "94fccec197e5b11310ee626fbe3402ac045d19c0424b82bf6722e1d45ab36a47"
   },
   {
     "label": "QoR later-window RoB signals",
@@ -429,6 +429,6 @@
     "label": "Second-review record: RoB 2, GRADE and regimen characteristics",
     "href": "current/second_review.csv",
     "source": "10_FINAL_ADJUDICATION/02_DECISIONS/v38/second_review.csv",
-    "sha256": "344788ca0d760dae09ea9f1beb8458d9b803c441e672cf1038ad3eeabb0d98a3"
+    "sha256": "966b397889410a933480fcb4e4d1ab5d8d31ea0dce4215d25a79be9289d0e26d"
   }
 ]

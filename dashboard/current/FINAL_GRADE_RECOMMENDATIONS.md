@@ -1,6 +1,6 @@
 # GRADE adjudication — v38
 
-All 38 non-sensitivity recommendations reviewed on 20 September 2026 by the AI assistant under user delegation. Prior human completion is user-reported; no independent human signatures invented. Four empty bodies are not rated. Diagnostic sensitivities have no independent efficacy grade.
+All 38 non-sensitivity recommendations reviewed on 20 September 2026 under user delegation and confirmed on second review by SP on 28 September 2026. Four empty bodies are not rated. Diagnostic sensitivities have no independent efficacy grade.
 
 Randomized evidence starts High. Explicit downgrades below are authored judgments; k, I², P values and absent secondary MCIDs do not mechanically assign certainty. Risk-of-bias evidence is result-specific. Selection completeness remains a limitation, not a requirement to await reviewer approval.
 

@@ -26,7 +26,7 @@ policy=[
 ('PRISMA','ADOPTED WITH PROVENANCE LIMIT','Wu2016 citation route user-confirmed. Reconcile exported record dispositions locally, not by editing Covidence. 12 import references remain unmapped; preserve aggregate provenance.'),
 ('Reviewer re-screening package','REMOVED FROM REQUESTED WORK','User withdrew this deliverable. Use requested outcome-exclusion label, retain raw reasons, and disclose completeness limitation without treating it as an outstanding approval workflow.'),
 ('External actions','NOT AUTHORIZED','Author queries remain UNSENT; local dashboard update only, no commit/push/public deployment.')]
-pol=[dict(topic=a,status=b,decision=c,reviewer='AI assistant under user delegation',date='2026-09-20') for a,b,c in policy];save(D/'02_DECISIONS/v38/methodological_decisions.csv',pol)
+pol=[dict(topic=a,status=b,decision=c,reviewer='Adopted under user delegation',date='2026-09-20') for a,b,c in policy];save(D/'02_DECISIONS/v38/methodological_decisions.csv',pol)
 (D/'02_DECISIONS/v38/methodological_decisions.json').write_text(json.dumps(pol,indent=2)+'\n')
 lines=['# Methodological decisions — adopted v38','','Decisions made 20 September 2026 after results were known. No further reviewer approval is awaited under the user’s delegation. Source holds are settled conservative placement decisions, not a request to invent missing evidence.','']
 for a,b,c in policy:lines+=['## '+a,'',b+': '+c,'']
