@@ -114,7 +114,14 @@ reconciles arithmetically but cannot be replayed record by record.
 **How decisions were made.** Result-specific risk-of-bias assessment, GRADE
 judgements, estimand classification and the methodological adjudications were
 **AI-conducted under the review team's delegation**; prior human review is
-reported by the team. They do not constitute two independent human assessments.
+reported by the team. On 28 September 2026 a second reviewer (SP) checked and
+confirmed, without changes, the core and ~24-hour quality-of-recovery RoB 2
+assessments, the later-window RoB 2 assessments, the core and ~24-hour
+quality-of-recovery GRADE judgements and the regimen characteristics. That was a
+review of the first assessments, not an independent duplicate assessment, so they
+still do not constitute two independent human assessments; the later-window GRADE
+judgements, the baseline and protocol characteristics and the narrative-outcome
+tables await second review.
 **Every adjudication decision was made after the results of the contributing
 trials were known** and none should be read as prospective. Registration
 followed the recorded review start date, so this review is not described as
@@ -131,10 +138,11 @@ four remain unsent. **No reply had been received at the time of writing, and no 
 assumes a response.** Eight further reports with located quality-of-recovery data were held
 from synthesis rather than converted onto assumed distributions.
 
-**Incomplete coverage.** Length of stay, PACU stay and mobilisation were located
-in source reports but have not been assembled into structured tables or
-synthesised. GRADE judgements for the four later-window quality-of-recovery
-bodies have not been made. No eligible result for persistent opioid use beyond
+**Incomplete coverage.** Length of stay, PACU stay, extubation and mobilisation
+are now in structured, quote-checked tables but were not synthesised: the review
+defined no quantitative estimand for these registered additional outcomes, which
+is a deviation from the registered synthesis plan. The four later-window
+quality-of-recovery bodies were graded post hoc and await second review. No eligible result for persistent opioid use beyond
 30 days was located, so this review cannot address it. Harms and satisfaction
 are reported descriptively only; no pooled safety estimate was computed, and
 absence of a pooled estimate is not evidence of safety.

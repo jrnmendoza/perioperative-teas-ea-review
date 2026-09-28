@@ -29,7 +29,8 @@ included trial, so this review cannot address it.
 
 These conclusions rest on decisions made after the results were known, on
 risk-of-bias and certainty judgements conducted with AI assistance under the
-authors' delegation rather than by two independent human assessors, and on an
+authors' delegation and then checked by a second reviewer, rather than by two
+independent human assessors, and on an
 evidence base whose completeness is limited by an early outcome-focused
 screening rule and by restriction to English full texts. They should be read as
 bounded accordingly.

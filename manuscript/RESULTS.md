@@ -1,7 +1,8 @@
 # Results
 
 > **Draft status.** Corrected 20 September 2026 against adjudication **v38** plus
-> the QoR addendum. Every effect, interval, I² and certainty rating below is
+> the QoR addendum; updated 28 September 2026 for the later-window QoR GRADE and the
+> structured narrative-outcome tables. Every effect, interval, I² and certainty rating below is
 > transcribed from `04_MODELS/model_outputs.csv`, `03_CANONICAL/grade.csv` or
 > `08_QOR_ANALYSIS/`. The earlier draft of this section omitted k and N for the
 > primary bodies, omitted the ~24-hour pain co-outcome entirely, and did not
@@ -223,13 +224,20 @@ not demonstrated. One contributing trial reports intention-to-treat denominators
 of 50 and 50 against 48 and 49 observed completers with unexplained missing-data
 handling; omission and denominator stress diagnostics are provided.
 
-Later-window results are reported separately and **are not certainty-rated**:
-QoR-40 TEAS versus sham at POD2, 3.67 (0.83 to 6.51), k=1, N=60; QoR-40 TEAS
-versus usual care at 48 h, 2.00 (0.82 to 3.18), k=1, N=70; QoR-15 TEAS versus
-sham at POD2, 3.86 (−0.09 to 7.81), k=1, N=97; QoR-15 TEAS versus sham at POD3,
-11.54 (−40.70 to 63.78), k=2, N=130. GRADE judgements for these four bodies have
-not yet been made, and they should not be presented as certainty-rated evidence
-until they are.
+Later-window results are reported separately. Their GRADE judgements were made
+post hoc on 28 September 2026 and await second review.
+
+| Body (later window) | k | Analysis N | MD (95% CI), points | Certainty |
+|---|---:|---:|---|---|
+| QoR-40, TEAS vs sham, POD2 | 1 | 60 | 3.67 (0.83 to 6.51) | Low |
+| QoR-40, TEAS vs usual care, 48 h | 1 | 70 | 2.00 (0.82 to 3.18) | Low |
+| QoR-15, TEAS vs sham, POD2 | 1 | 97 | 3.86 (−0.09 to 7.81) | Low |
+| QoR-15, TEAS vs sham, POD3 | 2 | 130 | 11.54 (−40.70 to 63.78) | Very low |
+
+Each single-trial body was downgraded once for risk of bias (some concerns) and
+once for imprecision against the QoR benchmarks (6.3 points for QoR-40, 6.0 for
+QoR-15); the POD3 body was downgraded once for risk of bias, once for
+inconsistency and twice for imprecision. The two leave-one-out diagnostics of the POD3 body are not graded.
 
 Eight further reports with located QoR data were held from synthesis and
 contributed to no model: Chen 2015 and Lu 2022 (median-based data), He 2026
@@ -242,22 +250,34 @@ dispersion was inferred to admit any of them.
 
 ### Length of stay, PACU stay and mobilisation
 
-Source statements were located across the included reports but have **not yet
-been assembled into structured tables**, and no synthesis was attempted.
-Constructs are not interchangeable — total hospital stay, postoperative stay and
-PACU stay are distinct, as are extubation time and time to first ambulation —
-and definitions, units and time origins differ across reports. Pooling them
-would create an outcome the protocol does not define. Individual trials report
-shorter PACU stay and earlier ambulation with TEAS, but these are isolated
-uncontrolled-for comparisons that have not been assessed for risk of bias or
-certainty here, and counting statistically significant trials is not a synthesis.
-This coverage remains incomplete and is recorded as such.
+Thirty-eight reports gave at least one of these outcomes, extracted into a
+structured table, published with the review files, that gives the page and a
+verbatim quotation for every value: hospital length of stay or time to discharge in 24 reports,
+PACU or recovery-room stay in 14, extubation or airway-removal time in 14,
+emergence or reorientation times in 7, ambulation or mobilisation in 13, and time
+to operating-room discharge in 1. Constructs are not interchangeable — total
+hospital stay, postoperative stay and PACU stay are distinct, as are extubation
+time and time to first ambulation — and definitions, units, time origins and
+reporting formats (means, medians, categories, graphs) differ across reports.
+Length of stay and time to mobilisation are registered additional outcomes, but
+the review defined no quantitative estimand for them and **nothing was pooled**;
+this is a deviation from the registered synthesis plan. Each comparison is
+reported with the direction its report states; these comparisons have not been
+assessed for risk of bias or certainty, and counting statistically significant
+trials is not a synthesis. Several reports are internally inconsistent — a
+confidence interval that includes zero printed beside P = 0.004, units that
+cannot be right as printed — and these values are recorded as printed with the
+conflict noted. The table was extracted by a single extractor and awaits second
+review.
 
 ### Harms
 
 Harms were inconsistently reported and **no pooled comparative safety estimate
 was computed**; definitions, ascertainment windows and denominators differ too
-widely. A blanket statement of no adverse events would be false. Located reports
+widely. Thirty-two reports gave a harms result, tabulated by separate category
+with attribution as reported in a structured table published with the review
+files; for the other 38 no
+intervention-harm result was located, which is not a report of zero events. A blanket statement of no adverse events would be false. Located reports
 include electrode dermatitis, electrical discomfort, needle-related and
 tolerance incidents, needling-site pain and itching, and withdrawals attributed
 to skin reactions. Explicit statements of no events were recorded as such and

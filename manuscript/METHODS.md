@@ -8,9 +8,9 @@
 > Statement-by-statement traceability to the canonical analysis files is in the
 > accompanying traceability document. Two passages marked **[AUTHOR DECISION]**
 > require the author team's confirmation before submission. Citation placeholders
-> are written as `[@key]` and are not yet resolved to reference numbers, because
-> the bibliography is being rebuilt in a reference manager rather than carried
-> across from the previous manuscript.
+> are written as `[@key]`; `reports/render_submission.py` resolves them to BMC
+> numbered citations from `references/bibliography.csv`, and each citing sentence
+> is checked in `references/current_claim_citation_audit.csv`.
 
 ---
 
@@ -145,7 +145,13 @@ definitions and windows, arm-level statistics, and risk-of-bias information, wit
 protocol characteristics extracted against STRICTA-compatible domains
 [@macpherson2010] (Additional file 10). Trials with incompletely reported
 protocol characteristics remained eligible but contributed only to analyses for
-which the relevant information was available. The registered process is
+which the relevant information was available. Baseline characteristics (age,
+sex, body mass index, ASA status, anaesthetic technique) and the stimulation
+protocol (acupoints, frequency, intensity, timing, sessions, session duration)
+were re-extracted from the source PDFs on 28 September 2026, each value with its
+page and a verbatim quotation checked automatically against the report's text,
+replacing values inherited from an earlier extraction workbook that had not been
+re-verified; this extraction awaits second review. The registered process is
 extraction by at least two people, or by a person–machine combination, with a
 procedure for resolving differences.
 
@@ -204,6 +210,14 @@ background claims, eligibility criteria and descriptions of other studies, and
 every positive record carries a source-page anchor and a text hash. This was an
 AI-conducted coverage assessment, **not** an independent second extraction; "not
 located" is bounded by the available report text and does not establish absence.
+The located results were then extracted into three structured tables — recovery
+milestones (length of stay, PACU stay, extubation, emergence and mobilisation),
+harms by category, and satisfaction, acceptability and quality of life — each
+value with its page and a verbatim quotation that is checked automatically against
+the report's text. Length of stay, time to mobilisation and satisfaction are
+registered additional outcomes; the review defined no quantitative estimand for
+them and did not pool them, which is a deviation from the registered synthesis
+plan.
 
 Three reporting rules follow. Explicit statements of no events were recorded as
 such and distinguished from absent reporting; a report without a safety statement
@@ -416,10 +430,18 @@ locators are Additional file 6.
 > within the registered plan. The accurate description is that the current
 > result-specific RoB 2 assessments and all GRADE judgements were conducted by an
 > AI assistant under the review team's delegation and completed on 20 September
-> 2026; that the author team reports prior human review as complete, with those
+> 2026 (the later-window quality-of-recovery GRADE judgements on 28 September
+> 2026); that the author team reports prior human review as complete, with those
 > historical records retained but their attributions not transferred to the new
-> judgements; and that the current judgements do not constitute two independent
-> human assessments. The team must confirm this wording, and in particular the
+> judgements; that on 28 September 2026 a second reviewer (SP) checked and
+> confirmed without changes the core and quality-of-recovery RoB 2 assessments
+> (94, 8 and 5), the core and ~24-hour quality-of-recovery GRADE judgements (38 and
+> 3) and the 280 regimen-characteristic values, as recorded with file hashes in the
+> second-review record; that the signalling-question responses, the later-window
+> GRADE judgements, the baseline and protocol characteristics and the
+> narrative-outcome tables have not been second-reviewed; and that a check of a
+> first assessment is not an independent duplicate assessment, so the current
+> judgements do not constitute two independent human assessments. The team must confirm this wording, and in particular the
 > statement about prior human review, which is team-reported and cannot be
 > verified from the project record. BMC Anesthesiology operates transparent peer
 > review, so this statement will be published alongside the reviewer reports.
@@ -487,13 +509,20 @@ authors. The following tasks were AI-conducted under the review team's
 delegation, with the team retaining responsibility: result-specific risk-of-bias
 assessment; GRADE certainty judgements; classification of candidate results
 against the registered estimand; comparator classification from quoted source
-text; and the methodological adjudication decisions listed in Additional file
-10. AI assistance was also used for language editing and for writing and
+text; the methodological adjudication decisions listed in Additional file 10; and
+extraction, with a page-located verbatim quotation for every value, of the
+regimen, baseline and protocol characteristics and of the length-of-stay,
+recovery-milestone, harms and satisfaction tables. AI assistance was also used for language editing and for writing and
 checking analysis code.
 
 The review team set the delegation and the decision rules, and every decision is
 recorded with its date, rationale and the source text relied upon in files
-published with this review. We do not claim that every AI-generated output was
-independently verified by a human reader. All source reports are published in
+published with this review. A second reviewer (SP) checked and confirmed the
+risk-of-bias assessments, the core and ~24-hour quality-of-recovery GRADE
+judgements and the regimen characteristics on 28 September 2026; the later-window
+GRADE judgements, the baseline and protocol characteristics and the
+narrative-outcome tables had not been second-reviewed at the time of writing. We
+do not claim that every AI-generated output was independently verified by a human
+reader. All source reports are published in
 hashed form and every extracted value carries a source locator, so any individual
 judgement can be checked against its source.
