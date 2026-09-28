@@ -40,18 +40,43 @@
     return `<p class="stata-line"><span class="stata-badge">Stata independently reproduced</span> ${s.status==='STATA VERIFIED'?'Pooled estimate, confidence interval, τ² and I²':'Single-study estimate and confidence interval'} reproduced in Stata ${esc(ri.stata_version)}/${esc(ri.edition)} from the canonical inputs${s.metafor==='agrees'?'; R/metafor agrees':''}. <a href="#methods?section=stata">How this was checked</a></p>`;};
   const FIG_KIND={forest:'Forest plot',loo:'Leave-one-out',funnel:'Funnel plot',descriptive:'Evidence base'};
   const figFiles=f=>['svg','pdf','png'].map(x=>`<a href="${esc(f[x+'_href'])}" download>${x.toUpperCase()}</a>`).join(' · ');
-  const figOpen=(f,label)=>`<button type="button" class="text-button figure-open" data-src="${esc(f.png_href)}" data-caption="${esc(f.title+' · Stata '+d.stata.run_info.stata_version+' · '+f.use)}">${label}</button>`;
+  const figOpen=(f,label,cls='text-button')=>`<button type="button" class="${cls} figure-open" data-src="${esc(f.png_href)}" data-svg="${esc(f.svg_href)}" data-pdf="${esc(f.pdf_href)}" data-caption="${esc(f.title+' · generated in Stata '+d.stata.run_info.stata_version+' · '+f.use)}">${label}</button>`;
   const stataFigs=(mid,kinds=['forest','loo','funnel'])=>{const fs=(d.stata?.figures||[]).filter(f=>f.model_id===mid&&kinds.includes(f.kind));if(!fs.length)return '';
     return `<div class="stata-figs"><strong>Publication figure${fs.length>1?'s':''} (Stata)</strong><ul>${fs.map(f=>`<li>${figOpen(f,esc((f.kind==='forest'?'Forest plot: ':'')+f.title))} <small>${esc(f.use)}</small><br><small>Download Stata figure: ${figFiles(f)}</small></li>`).join('')}</ul></div>`;};
   const howTo=(what,body)=>`<details class="how-to"><summary>How to read ${what}</summary>${body}</details>`;
   const qorLink=()=>d.qor_analysis?note('QoR addendum: three ~24-hour syntheses, eight additional exact-result assessments and three Very-low-certainty judgments. <button type="button" class="text-button" data-view="qor">View QoR results, RoB and GRADE</button>. The v38 core below is preserved.'):'';
   const models=role=>d.models.filter(m=>role.includes(m.role));
   const primary=models(['PRINCIPAL','SUPPORTIVE']);
-  const modelTable=ms=>table(['Evidence body / role',`${term('k')} / ${term('N')}`,`Estimate [95% ${term('CI')}]`,term('Certainty','GRADE')],ms.map(m=>[`<button class="text-button model-link" data-model="${esc(m.model_id)}">${esc(m.model_id)}</button><br><small>${esc(m.role)}</small>`,`${m.k} / ${m.N}`,effect(m),tag(grade.get(m.model_id)?.certainty||'Diagnostic — not graded') ]));
+  const modelTable=ms=>table(['Evidence body / role',`${term('k')} / ${term('N')}`,`Estimate [95% ${term('CI')}]`,term('Certainty','GRADE')],ms.map(m=>[`${modelName(m.model_id)}<br><small>${esc(m.role)}</small>`,`${m.k} / ${m.N}`,effect(m),tag(grade.get(m.model_id)?.certainty||'Diagnostic — not graded') ]));
   function title(h,p=''){return `<h2>${h}</h2>${p?`<p class="lede">${p}</p>`:''}`;}
-  function overview(){return title('Evidence, with its limits','v38 core · 20 September 2026 · E2 sensitivity analysis · 23 September 2026 · PROSPERO CRD420261452908')+
-    `<div class="summary-grid"><article><span class="eyebrow">Evidence inventory</span><strong>70 reports · 69 families</strong><p>12,103 randomized participants, operational count. This is not an analysed efficacy population. Yeh probable overlap counted once and held out of models.</p></article><article><span class="eyebrow">v38 core RoB and GRADE complete under delegation</span><strong>94 RoB assessments · 38 GRADE bodies</strong><p>All 90 current non-sensitivity component results covered. Four empty bodies not rated. New judgments are AI-conducted; prior human completion is user-reported.</p></article></div>`+
-    note(`<strong>Outstanding work:</strong> ${d.outstanding.map(x => esc(x).replace(/\.$/, '')).join('; ')}. <a href=\"current/FINAL_CURRENT_STATE_REPORT.md\">Download the current-state report</a>.`)+
+  // Build and analysis provenance. The build record is the inline copy of build-meta.json that scripts/build_site.py
+  // writes into the deployed page; a copy served straight from the repository has none and says so.
+  const BUILD=(()=>{try{const el=document.getElementById('build-meta');const m=el?JSON.parse(el.textContent):null;return m&&m.git_commit?m:null;}catch(e){return null;}})();
+  const REPO=(d.stata?.code_url||'').split('/tree/')[0];
+  const fmtDate=iso=>{const t=new Date(String(iso).slice(0,10)+'T00:00:00Z');return isNaN(t)?esc(iso):t.toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric',timeZone:'UTC'});};
+  function provenance(){
+    const r=d.release||{},sha=BUILD&&/^[0-9a-f]{7,40}$/.test(BUILD.git_commit)?BUILD.git_commit:'';
+    return [`Analytical core: ${esc(r.core_version||d.version)} · ${fmtDate(r.core_date||d.date)}`,r.e2_date?`E2 (post hoc): ${fmtDate(r.e2_date)}`:'',
+      BUILD?`Dashboard build: ${fmtDate(BUILD.build_timestamp_utc)} · commit ${sha&&REPO?`<a href="${esc(REPO)}/commit/${sha}" rel="noopener" target="_blank"><code>${sha.slice(0,7)}</code></a>`:`<code>${esc(String(BUILD.git_commit).slice(0,7))}</code>`}`:'Dashboard build: no build record in this copy (not served from a deployment)'].filter(Boolean).join(' · ');
+  }
+  function overview(){
+    const nRep=d.studies.length,nFam=new Set(d.studies.map(s=>s.trial_id)).size,nRand=d.studies.reduce((a,s)=>a+(+s.randomized_n_counted||0),0);
+    const comps=new Set(d.specifications.filter(s=>s.role!=='SENSITIVITY').flatMap(s=>s.result_ids)).size,empty=d.grade.filter(g=>/^Not rated/.test(g.certainty)).length;
+    const p=d.prisma,holds=(d.results_register||[]).filter(r=>r.decision==='HOLD'),q=d.qor_analysis;
+    return title('Evidence, with its limits',`Registered in PROSPERO as ${esc(d.registration)} · public analytical release, not data-locked`)+
+    `<p class="provenance" id="overview-provenance">${provenance()}</p>`+
+    `<div class="summary-grid status-grid"><article><span class="eyebrow">Evidence inventory</span><strong>${nRep} reports · ${nFam} trial families</strong><p>${nRand.toLocaleString('en-GB')} randomised participants, operational count. This is not an analysed efficacy population: analysed N is outcome-specific. Yeh probable overlap counted once and held out of models.</p></article>`+
+    `<article class="status-done"><span class="eyebrow">Complete · v38 core</span><strong>${d.rob.length} RoB 2 assessments · ${d.grade.length} GRADE bodies</strong><p>Core v38 RoB 2 and GRADE are complete under the adopted workflow: all ${comps} current non-sensitivity component results are assessed; ${empty} empty bodies are not rated. New judgements are AI-conducted under user delegation; prior human completion is user-reported.${q?` The ~24 h QoR addendum adds ${q.rob.length} assessments and ${q.grade.length} GRADE bodies.`:''}</p></article>`+
+    `<article class="status-open" id="overview-outstanding"><span class="eyebrow">Outstanding</span><strong>${d.outstanding.length} review deliverables not complete</strong><ul>${d.outstanding.map(x=>`<li>${esc(x).replace(/\.$/,'')}</li>`).join('')}</ul><p>As recorded in the <a href="current/FINAL_CURRENT_STATE_REPORT.md">current-state report</a>. Later-window QoR results are shown ungraded.</p></article></div>`+
+    `<details class="limits" open><summary>Limitations that stay in view</summary><ul>`+
+      `<li><strong>Import mapping gap:</strong> ${p.references} raw references against ${p.reported_import_records} reported imports; the ${p.unmapped_import_difference}-reference difference cannot be mapped to records.</li>`+
+      `<li><strong>Historical selection:</strong> ${p.exclusion_reasons['no perioperative analgesia outcome found']??'—'} full-text exclusions keep the historical outcome-focused label; this is not fresh proof that every excluded report lacks every eligible outcome. <button type="button" class="text-button" data-view="prisma">PRISMA accounting</button></li>`+
+      `<li><strong>Reports and trials:</strong> ${nRep} reports come from ${nFam} operational trial families; counts of reports are not counts of independent trials.</li>`+
+      `<li><strong>Randomised and analysed N:</strong> the operational randomised count is not the analysed population; each model states its own N.</li>`+
+      `<li><strong>Source holds:</strong> ${holds.length} extracted results in ${new Set(holds.map(r=>r.study)).size} reports are held for unresolved source, comparator or construct questions and enter no model.</li>`+
+      `<li><strong>E2 is post hoc:</strong> defined and amended after the data were seen; E1 remains the registered primary analysis and E2 is not graded.</li>`+
+      `<li><strong>AI-assisted adjudication:</strong> post-hoc adjudication with results known; new RoB 2 and GRADE judgements are AI-conducted under user delegation.</li>`+
+      `<li><strong>Reproduction is not source truth:</strong> Stata, R and Python agreement shows computational consistency, not that extracted values match the reports or that selection was complete.</li></ul></details>`+
     qorLink()+`<h3>Primary question</h3>${modelTable(primary)}${note('No body establishes ≥10mg opioid sparing together with paired ~24h pain upper CI &lt;+1. Separate pain evidence cannot supply Szmit’s missing paired fixed-24h measurement. A one-study estimate is not a pooled meta-analysis.')}`+
     (d.e2_joint ? `<div class="panel"><h4>E2 post-hoc sensitivity analysis</h4>${
       (() => {
@@ -109,7 +134,12 @@
     const summary=pooled?`pooled ${show(m.effect)} [${show(m.ci_low)}, ${show(m.ci_high)}]`:`single study ${show(m.effect)} [${show(m.ci_low)}, ${show(m.ci_high)}], not pooled`;
     const lab=p=>{if(link==='study'&&sid(p.name))return `class="fp-link" data-study="${esc(sid(p.name))}" role="link" tabindex="0" aria-label="Study profile: ${esc(p.name)}"`;
       if(link==='result'&&d.inputs.some(x=>x.result_id===p.rid&&x.model_id===p.mid))return `class="fp-link result-open" data-result="${esc(p.rid)}" data-result-model="${esc(p.mid)}" role="button" tabindex="0" aria-label="${esc(p.name)}: open result ${esc(p.rid)} in the result inspector"`;return '';};
-    return `<div class="forest-wrap"><svg viewBox="0 0 960 ${ht}" role="group" aria-label="Forest plot for ${esc(m.model_id)}: ${esc(summary)} ${esc(unitLabel(m.unit))}. Study labels are links.">`+
+    // Text summary above the plot (readable without scrolling a wide plot on a phone); stored values only.
+    const u=` ${esc(rr?'(risk ratio)':unitLabel(m.unit))}`,ci=`<strong>${show(m.effect)} [${show(m.ci_low)}, ${show(m.ci_high)}]</strong>${u}`;
+    const brief=pooled?`Pooled estimate from ${m.k} studies (N = ${m.N}; REML, safeguarded Hartung–Knapp): ${ci}${m.I2!==null&&m.I2!==undefined?` · I² ${num(m.I2,1)}%`:''}${hasPI?` · 95% prediction interval ${show(m.pi_low)} to ${show(m.pi_high)}`:''}`:
+      m.k?`Single study (${esc(pts[0].name)}, N = ${m.N}): ${ci} · not pooled`:`${pts.length} ${pts.length===1?'study':'studies'} shown; no pooled estimate`;
+    return `<p class="forest-summary">${brief}${thr===null?'':' · dotted line: −10 mg registered threshold'}<span class="forest-hint"> · scroll the plot sideways to see every column</span></p>`+
+      `<div class="forest-wrap"><svg viewBox="0 0 960 ${ht}" role="group" aria-label="Forest plot for ${esc(modelLabel(m.model_id))} (model ${esc(m.model_id)}): ${esc(summary)} ${esc(unitLabel(m.unit))}. Study labels are links.">`+
       T(8,20,'Study','fill-opacity=".75"')+T(660,20,rr?'Risk ratio [95% CI]':'Estimate [95% CI]','fill-opacity=".75"')+(pooled?T(952,20,'Weight','fill-opacity=".75" text-anchor="end"'):'')+
       `<line x1="${x(0)}" x2="${x(0)}" y1="30" y2="${axisY}" class="fp-null" stroke="#94a3b8" stroke-dasharray="4 4"/>`+
       (thr===null?'':`<line x1="${x(thr)}" x2="${x(thr)}" y1="30" y2="${axisY}" class="fp-tl" stroke="#fbbf24" stroke-dasharray="1 4" stroke-width="2"/><text class="fp-tt" x="${x(thr)}" y="${axisY+54}" fill="#fbbf24" font-size="11" text-anchor="middle">−10 mg registered threshold</text>`)+
@@ -140,6 +170,28 @@
   const MEASURE={MD:'mean difference',RR:'risk ratio',SMD:'standardised mean difference (Hedges g)'};
   const COMP={sham:'sham',usual_care:'usual care',active_electrical:'active electrical control'};
   const minus=s=>String(s).replace(/-/g,'−');
+  // Reader-facing model names. One deterministic mapping, built only from stored fields: outcome construct,
+  // modality and comparator, plus the qualifier the model ID itself carries (e.g. "without Chen 2020").
+  // QoR models use their stored label; E2 models their stored body and label. The ID is always shown beside it.
+  const cap=s=>s?s[0].toUpperCase()+s.slice(1):s;
+  const CMP_TOKEN=new Set(['sham','usual','active']);
+  const idQualifier=(mid,mod)=>{const t=mid.split('_'),i=t.indexOf(mod),j=i<0?1:i+1+(CMP_TOKEN.has(t[i+1])?1:0);
+    return t.slice(j).join(' ').replace(/\bsuf(\d[\d.]*)/g,'sufentanil $1 mg/µg').replace(/([A-Za-z])(\d{4})\b/g,'$1 $2').replace(/\bleaveout\b/,'leave out').replace(/\bexcl\b/,'excluding').trim();};
+  const LABELS=new Map();
+  function modelLabel(mid){
+    if(LABELS.has(mid))return LABELS.get(mid);
+    let label=mid;const m=d.models.find(x=>x.model_id===mid);
+    if(m){const q=idQualifier(mid,m.modality);label=`${cap(OUTCOME[m.construct]||m.construct.replaceAll('_',' '))} — ${m.modality} vs ${COMP[m.comparator]||m.comparator}${q?` (${q})`:''}`;}
+    else{const q=[...(d.qor_analysis?.main_models||[]),...(d.qor_analysis?.diagnostics||[]),...(d.qor_later_models||[])].find(x=>x.model_id===mid);
+      const e=(d.e2_analysis?.models||[]).find(x=>x.model_id===mid);
+      if(q)label=q.label.replace(/ versus /g,' vs ');
+      else if(e){const mod=e.body.split(' vs ')[0],extra=e.role.includes('(main)')?'':((d.e2_labels||{})[mid]||idQualifier(mid.replace(/^E2_(opioid24_)?/,''),mod));
+        label=`E2 post-hoc: 0–24 h opioid consumption — ${e.body}${extra?` (${extra.replace(/^(.)/,c=>c.toLowerCase())})`:''}`;}}
+    LABELS.set(mid,label);return label;
+  }
+  // HTML for a model reference: readable label (a link to the model unless link is false) with the model ID beneath.
+  const modelName=(mid,link=true)=>`${link?`<button type="button" class="text-button model-link" data-model="${esc(mid)}">${esc(modelLabel(mid))}</button>`:`<span class="model-label">${esc(modelLabel(mid))}</span>`}<br><small class="model-id">Model ID: <code>${esc(mid)}</code></small>`;
+  window.reviewModelLabel=modelLabel;window.reviewModelName=modelName;
   // ctx: {e2:true} for E2 bodies; rows are the contributing trial rows.
   function evidenceCard(m,rows,ctx={}){
     const rr=m.measure==='RR',v=x=>minus(num(rr?Math.exp(x):x)),unit=rr||m.measure==='SMD'?'':' '+unitLabel(m.unit).replace(/^0–10 points$/,'points'),g=ctx.e2?null:grade.get(m.model_id),map=(d.sensitivity_map||[]).find(r=>r.model_id===m.model_id);
@@ -185,7 +237,7 @@
   const descendants=(id,depth=0)=>(d.sensitivity_map||[]).filter(r=>r.parent_model_id===id).flatMap(r=>[{...r,depth},...descendants(r.model_id,depth+1)]);
   function sensitivitySection(m){
     if(!d.sensitivity_map)return '';
-    const own=d.sensitivity_map.find(r=>r.model_id===m.model_id),link=id=>`<button type="button" class="text-button model-link" data-model="${esc(id)}">${esc(id)}</button>`;
+    const own=d.sensitivity_map.find(r=>r.model_id===m.model_id),link=id=>modelName(id);
     let base=m,head='',rows;
     if(own&&own.parent_model_id){base=modelById(own.parent_model_id);head=note(`This model is a sensitivity analysis of ${link(base.model_id)} (${esc(own.relation)}). It is not an independently graded evidence body.`);}
     if(own&&!own.parent_model_id){
@@ -212,7 +264,7 @@
   function modelDetail(mid){
     const m=d.models.find(m=>m.model_id===mid);if(!m)return;
     const s=d.specifications.find(s=>s.model_id===mid),g=grade.get(mid),ins=d.inputs.filter(r=>r.model_id===mid);
-    const panel=$('model-panel');panel.innerHTML=title(esc(mid),`${esc(m.role)} · ${esc(m.status)} · ${term('k')} ${m.k} · ${term('N')} ${m.N} · ${m.k>1?term('pooled'):m.k?term('single-study','single'):'no eligible data'}`)+`<p class="estimate">${effect(m)}</p>`+stataLine('core',mid)+
+    const panel=$('model-panel');panel.innerHTML=title(esc(modelLabel(mid)),`Model ID: <code>${esc(mid)}</code> · ${esc(m.role)} ·${esc(m.status)} · ${term('k')} ${m.k} · ${term('N')} ${m.N} · ${m.k>1?term('pooled'):m.k?term('single-study','single'):'no eligible data'}`)+`<p class="estimate">${effect(m)}</p>`+stataLine('core',mid)+
     `<details style="background:var(--bg); margin-bottom:16px"><summary>How to read this plot</summary><p style="font-size:0.9em">Squares are study estimates, sized by random-effects weight; their lines are normal-approximation 95% confidence intervals. The diamond is the canonical pooled estimate with its safeguarded Hartung–Knapp 95% confidence interval, which can be much wider than the study intervals when few studies are pooled. A single study is shown once and is not pooled. The bar under the diamond, where present, is the 95% prediction interval. The dashed line marks no effect (0, or 1 for risk ratios on a log scale); the dotted amber line marks the registered −10 mg IV MME threshold. Direction labels are printed under each axis.</p></details>`+
     forest(m)+note(esc((s.note||'Separate modality/comparator body. Compatible active arms combined; control counted once.').replace('mg/ug', 'mg/µg')))+
     (m.k>1?`<p>${term('I²')} ${num(m.I2,1)}% · ${term('τ²')} ${num(m.tau2,3)} (${term('REML')}) · ${term('safeguarded Hartung–Knapp','HK')} interval.</p>`:'')+
@@ -300,14 +352,14 @@
       table(['Body', 'Opioid limb', 'Pain limb', 'Joint criterion'], jointRows) +
       note(e2PainConstant);
   }
-  function results(){return title('Results and diagnostics','Fixed canonical analyses. Selecting a model does not silently change study membership.')+`<label for="model-select">Evidence body</label><select id="model-select"><option value="">Choose a model…</option>${['PRINCIPAL','SUPPORTIVE','ADDITIONAL','SENSITIVITY'].map(role=>`<optgroup label="${role}">${d.models.filter(m=>m.role===role).map(m=>`<option value="${esc(m.model_id)}">${esc(m.model_id)} · k=${m.k}</option>`).join('')}</optgroup>`).join('')}</select><div id="model-panel" class="panel" hidden></div><h3>Principal and supportive</h3>${modelTable(primary)}<h3>Additional outcomes</h3>${modelTable(models(['ADDITIONAL']))}<details><summary>36 explicitly labelled sensitivity / diagnostic models</summary>${modelTable(models(['SENSITIVITY']))}</details>`+e2_section();}
+  function results(){return title('Results and diagnostics','Fixed canonical analyses. Selecting a model does not silently change study membership.')+`<label for="model-select">Evidence body</label><select id="model-select"><option value="">Choose a model…</option>${['PRINCIPAL','SUPPORTIVE','ADDITIONAL','SENSITIVITY'].map(role=>`<optgroup label="${role}">${d.models.filter(m=>m.role===role).map(m=>`<option value="${esc(m.model_id)}">${esc(modelLabel(m.model_id))} · k=${m.k} · ${esc(m.model_id)}</option>`).join('')}</optgroup>`).join('')}</select><div id="model-panel" class="panel" hidden></div><h3>Principal and supportive</h3>${modelTable(primary)}<h3>Additional outcomes</h3>${modelTable(models(['ADDITIONAL']))}<details><summary>36 explicitly labelled sensitivity / diagnostic models</summary>${modelTable(models(['SENSITIVITY']))}</details>`+e2_section();}
   function prisma(){const p=d.prisma;return title('Selection and accounting','Historical aggregate screening counts, reconciled full-text record dispositions and a separate citation route.')+
     `<div class="flow-grid"><section><h3>Database route</h3><div class="flow-box">5100 raw references<br><small>Embase 1928 · CENTRAL 1698 · CINAHL 465 · PubMed 1009</small></div><div class="flow-arrow">↓</div><div class="flow-box">5088 reported imports<br><small>12-reference difference: mapping unavailable</small></div><div class="flow-arrow">↓ 1651 automatic duplicates + 1 manual duplicate + 508 automation removals</div><div class="flow-box">2928 screened → 2704 excluded</div><div class="flow-arrow">↓</div><div class="flow-box">224 reports sought → 2 not retrieved</div><div class="flow-arrow">↓</div><div class="flow-box">222 retrieved records → 6 late duplicates removed</div><div class="flow-arrow">↓</div><div class="flow-box">216 distinct reports assessed → 147 excluded</div><div class="flow-arrow">↓</div><div class="flow-box highlight">69 included database reports</div></section><section><h3>Citation route</h3><div class="flow-box">Wu 2016 · 1 report<br><small>Citation-search origin confirmed by user</small></div><div class="flow-arrow">↓</div><div class="flow-box">1 sought · 1 retrieved · 1 assessed</div><div class="flow-arrow">↓</div><div class="flow-box highlight">1 included citation report</div><h3>Combined evidence inventory</h3><div class="flow-box highlight">70 reports<br>69 operational trial families</div></section></div>`+
     table(['Full-text exclusion reason','Records'],Object.entries(p.exclusion_reasons).map(([r,n])=>[esc(r),n]))+
     note('147 substantive report exclusions are separate from six exact DOI/title duplicate records removed late. Zhang’s distinct conference abstract remains Abstract only. Six formerly excluded reports reinstated locally; original Covidence decisions are preserved in the downloadable ledger.')+p.caveats.map(c=>note(esc(c))).join('');}
   function evidence(){return title('Certainty of evidence','38 bodies reviewed and adopted under delegation: 34 rated, four empty. No sensitivity is given a standalone efficacy grade.')+
     howTo('this table',`<p>Each row is one evidence body: one outcome, one modality and one comparator. ${term('GRADE')} certainty starts High for randomised evidence and is rated down one or two levels for each of five domains. The Downgrades column lists the levels removed in the order risk of bias / inconsistency / indirectness / imprecision / publication bias. Bodies without eligible data are listed but not rated; ${term('sensitivity')} and ${term('diagnostic')} analyses are never graded on their own.</p><p>Select a body for its forest plot and all five rationales. <em>Risk of bias</em> opens the result-specific ${term('RoB 2')} assessments that fed the risk-of-bias domain. Nothing here is re-graded.</p>`)+
-    table(['Body',term('Certainty','GRADE'),'Downgrades: bias / inconsistency / indirectness / imprecision / publication','Decision','Risk of bias'],d.grade.map(g=>[`<button class="text-button model-link" data-model="${esc(g.model_id)}">${esc(g.model_id)}</button>`,tag(g.certainty),['risk_of_bias','inconsistency','indirectness','imprecision','publication_bias'].map(k=>g[k+'_downgrades']).join(' / '),esc(g.decision_status),
+    table(['Body',term('Certainty','GRADE'),'Downgrades: bias / inconsistency / indirectness / imprecision / publication','Decision','Risk of bias'],d.grade.map(g=>[modelName(g.model_id),tag(g.certainty),['risk_of_bias','inconsistency','indirectness','imprecision','publication_bias'].map(k=>g[k+'_downgrades']).join(' / '),esc(g.decision_status),
       bodyResults(g.model_id).length?`<button type="button" class="text-button" data-risk-model="${esc(g.model_id)}">Risk of bias →</button>`:'—']))+note('Select an evidence body to inspect all five rationales, its estimate and contributors. Moderate-certainty standalone pain evidence does not establish the joint opioid-and-pain criterion.');}
   // Risk of bias: every result-specific assessment (core v38, QoR ~24 h, QoR later windows) as a matrix of domains.
   const ROB_ALL=()=>[...d.rob.map(r=>({...r,set:'Core v38'})),...(d.qor_analysis?.rob||[]).map(r=>({...r,set:'QoR ~24 h'})),...(d.qor_later_rob||[]).map(r=>({...r,set:'QoR later window'}))];
@@ -322,7 +374,7 @@
     const sets=['Core v38','QoR ~24 h','QoR later window'],all=ROB_ALL();
     return title('Result-specific risk of bias',`${all.length} result-specific RoB 2 assessments: ${d.rob.length} core v38 (all current non-sensitivity components plus held/diagnostic results), ${(d.qor_analysis?.rob||[]).length} QoR ~24 h and ${(d.qor_later_rob||[]).length} QoR later-window. No study-overall rating is substituted for an outcome-specific assessment.`)+
       `<div class="rob-filters"><div><label for="risk-scope">Show</label><select id="risk-scope"><option value="">All assessments (${all.length})</option><optgroup label="Assessment set">${sets.map(s=>`<option value="set:${esc(s)}"${scope===s?' selected':''}>${esc(s)} (${all.filter(r=>r.set===s).length})</option>`).join('')}</optgroup>`+
-      `<optgroup label="Evidence body (its assessed components)">${robBodies().map(mid=>`<option value="model:${esc(mid)}"${scope===mid?' selected':''}>${esc(mid)}</option>`).join('')}</optgroup></select></div>`+
+      `<optgroup label="Evidence body (its assessed components)">${robBodies().map(mid=>`<option value="model:${esc(mid)}"${scope===mid?' selected':''}>${esc(modelLabel(mid))} · ${esc(mid)}</option>`).join('')}</optgroup></select></div>`+
       `<div><label for="risk-search">Find study, outcome, result ID or judgement</label><input id="risk-search" type="search" placeholder="e.g. Luo, nausea, V33-OD-0139" value="${esc(q)}"></div></div>`+
       howTo('the risk-of-bias matrix',`<p>Each row is one result-specific ${term('RoB 2')} assessment: one result from one report, for one outcome and time point. It is not a study-level rating, and a study can be judged differently for different outcomes. Columns are the five RoB 2 domains and the overall judgement.</p><p>Symbols carry the judgement as well as colour: <strong>+</strong> Low, <strong>!</strong> Some concerns, <strong>×</strong> High. The overall judgement follows the RoB 2 algorithm: High if any domain is High (or several have some concerns), Some concerns if any domain has some concerns, otherwise Low. Select a symbol for that domain’s rationale and the models the result feeds; select a study name for its profile.</p>`)+
       `<div id="risk-summary"></div><div id="risk-matrix"></div><h3>Assessment details</h3><div id="risk-list"></div>`+
@@ -354,11 +406,27 @@
       `<p>${esc(r[k+'_rationale'])}</p>`+table(['Domain','Judgement'],[1,2,3,4,5].map(i=>[`D${i}`,tag(r['d'+i])]).concat([['Overall',tag(r.overall)]]))+
       `<p class="source">Source: ${esc(r.source_pdf)} · ${esc(r.result_location)} · ${esc(r.set)} · assessed ${esc(r.review_date||'')}</p>`+
       (()=>{const mids=robBodies().filter(mid=>bodyResults(mid).includes(r.result_id)),core=d.inputs.find(x=>x.result_id.split('+').includes(r.result_id));
-        return `<p><strong>Used in:</strong> ${mids.length?mids.map(mid=>`<button type="button" class="text-button" data-model="${esc(mid)}">${esc(mid)}</button>`).join(' · '):'no current model'}</p>`+
+        return `<p><strong>Used in:</strong></p>${mids.length?`<ul class="model-list">${mids.map(mid=>`<li>${modelName(mid)}</li>`).join('')}</ul>`:'<p>no current model</p>'}`+
           `<p>${studyLink(r.study,'Study profile →')}${core?` · <button type="button" class="text-button result-open" data-result="${esc(core.result_id)}" data-result-model="${esc(core.model_id)}">Result and source →</button>`:''}</p>`;})();
     $('rob-dialog').showModal();
   }
-  function studies(){return `<div id="rich-explorer-container"></div>`;}
+  // Studies & figures: Stata's descriptive evidence-base figures first (the registered files, not redrawn here),
+  // then the Study Explorer (filters, contribution matrix, table, study drawer).
+  const DESC_FIG={fig_desc_evidence_base:'Four panels: surgical category, randomised sample size, modality by comparator label and publication year.',
+    fig_desc_publication_year:'Included reports by year of publication.',fig_desc_country:'Included reports by trial country.',
+    fig_desc_sample_size:'Randomised participants per report; the subtitle gives the median and interquartile range.',
+    fig_desc_surgical_category:'Included reports by surgical category (source-traced category).',
+    fig_desc_modality_comparator:'Reports by modality and study-level comparator label; result-level comparator classes decide model membership.'};
+  const DESC_ORDER=Object.keys(DESC_FIG),descRank=f=>{const i=DESC_ORDER.indexOf(f.figure_id);return i<0?DESC_ORDER.length:i;};
+  function studies(){
+    const ri=d.stata?.run_info,figs=(d.stata?.figures||[]).filter(f=>f.kind==='descriptive').sort((a,b)=>descRank(a)-descRank(b));
+    return (figs.length?`<section class="glance-figs" aria-labelledby="glance-figs-title"><h2 id="glance-figs-title">Evidence base at a glance</h2>`+
+      `<p class="lede">${figs.length} descriptive figures generated in Stata ${esc(ri.stata_version)}/${esc(ri.edition)} from the harmonised report characteristics. Bars count reports, not participants or independent trials. They describe the evidence base and test nothing.</p>`+
+      `<div class="fig-cards">${figs.map(f=>`<figure class="fig-card" id="fig-${esc(f.figure_id)}">${figOpen(f,`<img src="${esc(f.png_href)}" loading="lazy" alt="Enlarge figure: ${esc(f.title)}">`,'fig-thumb')}`+
+        `<figcaption><strong>${esc(f.title)}</strong><span>${esc(DESC_FIG[f.figure_id]||'')}</span><small>Generated in Stata · ${esc(f.use)}<br>Download: ${figFiles(f)}</small></figcaption></figure>`).join('')}</div>`+
+      `<p class="source">Every figure file and its SHA-256 hash is listed in the <a href="#methods?section=stata">figure register (Methods)</a>. “Manuscript candidate” and “supplement candidate” are suggestions for the writing team, not decisions.</p></section>`:'')+
+      `<div id="rich-explorer-container"></div>`;
+  }
   function studyRows(q=''){}
   function methods(){
     const e2_html = d.e2_methods_html ? `<h3>Post-hoc E2 sensitivity analysis</h3>` + Object.entries(d.e2_methods_html).map(([h, html]) => {
@@ -374,7 +442,7 @@
     const ri=st.run_info,S=st.summary,sets=[...new Set(S.map(s=>s.analysis_set))],count=(rows,p)=>rows.filter(p).length;
     const sec=h=>(st.methods.split('## '+h)[1]||'').split('\n## ')[0];
     const maxd=rows=>{const v=rows.filter(s=>s.status.startsWith('STATA VERIFIED')).map(s=>+s.max_rel_diff);return v.length?Math.max(...v).toExponential(0):'—';};
-    const figRows=st.figures.map(f=>[`${figOpen(f,esc(f.title))}<br><small>${esc(f.figure_id)}</small>`,esc(FIG_KIND[f.kind]),f.model_id?`<button type="button" class="text-button" data-model="${esc(f.model_id)}">${esc(f.model_id)}</button><br><small>${term('k')} ${esc(f.k)} · ${term('N')} ${esc(f.N)}</small>`:'Evidence base (reports)',`<strong>${esc(f.use)}</strong>`,esc(f.verification_status),figFiles(f)]);
+    const figRows=st.figures.map(f=>[`${figOpen(f,esc(f.title))}<br><small>${esc(f.figure_id)}</small>`,esc(FIG_KIND[f.kind]),f.model_id?`${modelName(f.model_id)}<br><small>${term('k')} ${esc(f.k)} · ${term('N')} ${esc(f.N)}</small>`:'Evidence base (reports)',`<strong>${esc(f.use)}</strong>`,esc(f.verification_status),figFiles(f)]);
     return `<section id="methods-stata" tabindex="-1"><h3>Statistical software and reproducibility</h3>`+
       note(`Stata ${esc(ri.stata_version)}/${esc(ri.edition)} (revision ${esc(ri.born_date)}, ${esc(ri.machine)}) re-ran every model from the canonical inputs with the official <code>meta</code> suite. Stata reads the canonical dataset only; no value is typed by hand, and the dashboard shows the canonical numbers, which Stata reproduces.`)+
       `<h4>Methods statement (generated from the executed run)</h4>${md(sec('Suggested wording'))}<details><summary>Notes for the methods section</summary>${md(sec('Notes for the methods section'))}</details>`+
@@ -383,14 +451,45 @@
         [...sets.map(set=>{const r=S.filter(s=>s.analysis_set===set);return [esc(set),r.length,count(r,s=>s.status==='STATA VERIFIED'),count(r,s=>s.status.startsWith('STATA VERIFIED (single')),count(r,s=>s.status==='NO ELIGIBLE DATA'),count(r,s=>s.status==='DISCREPANCY'),maxd(r),`${count(r,s=>s.metafor==='agrees')} of ${r.length}`];}),
          ['<strong>All</strong>',S.length,count(S,s=>s.status==='STATA VERIFIED'),count(S,s=>s.status.startsWith('STATA VERIFIED (single')),count(S,s=>s.status==='NO ELIGIBLE DATA'),count(S,s=>s.status==='DISCREPANCY'),maxd(S),`${count(S,s=>s.metafor==='agrees')} of ${S.length}`]])+
       note(`Python/SciPy is the canonical pipeline (all models). R/metafor results come from the existing reproduction runs; “not run” is not disagreement. Tolerance: 1e-6 on estimates, standard errors, confidence limits and τ² (scaled by magnitude), 1e-4 on I²; k and N exact. Convention differences (Stata’s k − 2 prediction-interval degrees of freedom, its Hedges g variance and REML stopping tolerance) are documented in the reconciliation report, not hidden.`)+
-      `<h4>Small-study effects</h4>`+(st.small_study.length?table(['Body',term('k'),'Test','Statistic','p'],st.small_study.map(s=>[`<button type="button" class="text-button" data-model="${esc(s.model_id)}">${esc(s.model_id)}</button>`,esc(s.k),esc(s.test),num(s.stat),Number(s.p).toPrecision(2)])):'')+
+      `<h4>Small-study effects</h4>`+(st.small_study.length?table(['Body',term('k'),'Test','Statistic','p'],st.small_study.map(s=>[modelName(s.model_id),esc(s.k),esc(s.test),num(s.stat),Number(s.p).toPrecision(2)])):'')+
       note('Exploratory: tested only where at least ten studies contributed, and not used to change any GRADE rating. Every other body: not evaluated because the number of studies is insufficient for a meaningful small-study-effect assessment.')+
       `<h4>Figure register (${st.figures.length} figures)</h4>`+note('File names are deterministic and every file hash is in the register. “Manuscript candidate”, “supplement candidate” and “dashboard only” are suggestions for the writing team, not decisions.')+
       table(['Figure','Kind','Model','Suggested use','Values','Files'],figRows)+
       `<h4>Glossary</h4><dl class="glossary">${Object.entries(GLOSSARY).map(([k,v])=>`<dt>${esc(k==='single'?'Single study':k)}</dt><dd>${esc(v)}</dd>`).join('')}</dl>`+
       `<p><a href="${esc(dl('STATA_RECONCILIATION.md')||'#downloads')}" download>Reconciliation report</a> · <a href="${esc(dl('stata_canonical_comparison.csv')||'#downloads')}" download>Every compared value</a> · <a href="${esc(dl('figure_register.csv')||'#downloads')}" download>Figure register</a> · <a href="${esc(st.code_url)}" rel="noopener" target="_blank">Stata do-files (GitHub)</a></p></section>`;
   }
-  function downloads(){return title('Data and audit downloads','Preserved v38 core plus clearly labelled coverage and QoR addenda. Historical versions remain in the project baseline.')+`<div class="download-grid">${d.downloads.map(x=>`<a class="download" href="${esc(x.href)}" download>${esc(x.label)}<small>${esc(x.href.split('/').pop())}</small></a>`).join('')}</div>`;}
+  // Downloads are grouped by fixed rules on each file's source path (first match wins; anything unmatched falls into
+  // "Other supporting files"), so a new download is always listed. PRIMARY_FILES are the files needed to reproduce and
+  // audit the analyses; the rest are supplementary audit records.
+  const DL_RULES=[['qor','QoR analysis',/08_QOR_ANALYSIS\//],['e1e2','E1 / E2 primary-outcome analyses',/09_E2_ANALYSIS\/|E2\.md$|ADDITIONAL_FILE_12|additional_file_12/i],
+    ['stata','Stata reproduction',/13_STATA\//],['chars','Study characteristics',/14_CHARACTERISTICS\//],['coverage','Outcome coverage (harms, recovery, satisfaction)',/07_OUTCOME_COVERAGE\//],
+    ['prisma','PRISMA and screening',/prisma|late_duplicate/i],['rob','Risk of bias (RoB 2)',/rob2/i],['grade','GRADE certainty',/grade/i],
+    ['repro','Independent reproduction (Python, R)',/05_REPRODUCTION\//],['models','Model data and results',/04_MODELS\/|MEMBERSHIP_MATRIX|03_CANONICAL\/results\.csv$|PARTICIPANT_LEDGER|model_comparison/],
+    ['status','Review status and decisions',/FINAL_CURRENT_STATE_REPORT|METHODOLOGICAL_DECISIONS|primary_evidence_table/]];
+  const DL_ORDER=['status','models','grade','rob','e1e2','qor','stata','chars','coverage','prisma','repro','other'];
+  const PRIMARY_FILES=new Set(['FINAL_CURRENT_STATE_REPORT.md','METHODOLOGICAL_DECISIONS.md','primary_evidence_table.csv','model_outputs.csv','model_inputs.csv','results.csv',
+    'FINAL_MODEL_MEMBERSHIP_MATRIX.csv','grade.csv','rob2_assessments.csv','e2_model_outputs.csv','AMENDED_PRIMARY_ESTIMAND_E2.md','qor_models.csv','qor_grade.csv','qor_rob2.csv',
+    'stata_verification_summary.csv','figure_register.csv','report_characteristics.csv','prisma_record_ledger.csv','prisma_counts.json']);
+  const dlGroup=x=>(DL_RULES.find(r=>r[2].test(x.source))||['other','Other supporting files'])[0];
+  const DL_NAMES=Object.fromEntries([...DL_RULES.map(r=>[r[0],r[1]]),['other','Other supporting files']]);
+  function downloads(){
+    const file=x=>x.href.split('/').pop(),groups=DL_ORDER.map(k=>[k,d.downloads.filter(x=>dlGroup(x)===k)]).filter(([,xs])=>xs.length);
+    const nPrim=d.downloads.filter(x=>PRIMARY_FILES.has(file(x))).length;
+    return title('Data and audit downloads','Preserved v38 core plus clearly labelled coverage and QoR addenda. Historical versions remain in the project baseline.')+
+      `<div class="dl-tools"><div><label for="dl-search">Find a file</label><input id="dl-search" type="search" placeholder="e.g. GRADE, QoR, model inputs, .csv"></div>`+
+      `<div><label for="dl-group">Category</label><select id="dl-group"><option value="">All categories (${d.downloads.length})</option>${groups.map(([k,xs])=>`<option value="${k}">${esc(DL_NAMES[k])} (${xs.length})</option>`).join('')}</select></div>`+
+      `<label class="chk dl-primary"><input type="checkbox" id="dl-primary"> Primary files only (${nPrim})</label><p class="dl-count" id="dl-count" role="status">${d.downloads.length} of ${d.downloads.length} files shown</p></div>`+
+      note('<span class="dl-badge dl-badge-primary">Primary</span> files reproduce and audit the analyses (canonical results, model inputs and outputs, membership, RoB 2, GRADE, E2, QoR, Stata verification, characteristics, PRISMA ledger). <span class="dl-badge">Audit</span> files are supplementary records behind them. Every file is hash-checked against its repository source at each deployment.')+
+      groups.map(([k,xs])=>`<section class="dl-section" data-dl-section="${k}"><h3>${esc(DL_NAMES[k])} <small>(${xs.length})</small></h3><div class="download-grid">${xs.map(x=>{const prim=PRIMARY_FILES.has(file(x));
+        return `<a class="download" href="${esc(x.href)}" download data-dl-group="${k}" data-dl-primary="${prim}" data-dl-text="${esc((x.label+' '+file(x)+' '+DL_NAMES[k]).toLowerCase())}"><span class="dl-badge${prim?' dl-badge-primary':''}">${prim?'Primary':'Audit'}</span> ${esc(x.label)}<small>${esc(file(x))}</small></a>`;}).join('')}</div></section>`).join('')+
+      `<p class="note" id="dl-none" hidden>No file matches these filters.</p>`;
+  }
+  function filterDownloads(){
+    const q=($('dl-search')?.value||'').toLowerCase().trim(),g=$('dl-group')?.value||'',prim=$('dl-primary')?.checked;let shown=0;
+    document.querySelectorAll('a.download[data-dl-group]').forEach(a=>{const ok=(!g||a.dataset.dlGroup===g)&&(!prim||a.dataset.dlPrimary==='true')&&q.split(/\s+/).every(w=>a.dataset.dlText.includes(w));a.hidden=!ok;shown+=ok;});
+    document.querySelectorAll('[data-dl-section]').forEach(s=>{s.hidden=!s.querySelector('a.download:not([hidden])');});
+    $('dl-count').textContent=`${shown} of ${d.downloads.length} files shown`;$('dl-none').hidden=shown>0;
+  }
   function coverage(){
     const c=d.outcome_coverage;
     if(!c)return title('Outcome coverage')+note('No coverage addendum loaded.');
@@ -530,10 +629,10 @@
       howTo('E1 vs E2',`<p>${term('E1')} is the registered primary analysis. ${term('E2')} is a post-hoc sensitivity synthesis with broader eligibility. Both estimate the ${term('MD')} in 0–24 h opioid consumption in mg ${term('IV MME','IV MME')}; negative values favour the intervention and the dotted line is the ${term('−10 mg')} threshold.</p><p>Pick a comparison. The pathway counts candidate reports by where they ended up: <strong>BOTH</strong> (in both models), <strong>E2 ONLY</strong>, <strong>E1 ONLY</strong> or <strong>NEITHER</strong> (held or excluded, with the reason in the table). Select a count to filter the table; select a report for its study profile; select a study label in a forest plot for its result or profile.</p>`)+
       note('<strong>E2 is post-hoc.</strong> It was defined, and amended (E2.1), after the data were seen; the decision to keep E1 as primary was made after E2 results were known. E1 remains the registered primary analysis. E2 is not graded and must not be reported as primary efficacy evidence.')+
       `<div class="body-picker" role="group" aria-label="Comparison">${E2_BODIES.map(([b])=>`<button type="button" class="e1e2-body${b===body?' active':''}" data-body="${esc(b)}" aria-pressed="${b===body}">${esc(b)}</button>`).join('')}</div>`+
-      `<h3>${esc(body)}: summary</h3>`+table(['',`E1 · <button class="text-button model-link" data-model="${esc(e1id)}">${esc(e1id)}</button>`,`E2 · <button class="text-button model-link" data-model="${esc(e2id)}">${esc(e2id)}</button>`],cmpRows)+
+      `<h3>${esc(body)}: summary</h3>`+table(['',`E1 (registered primary) · ${modelName(e1id)}`,`E2 (post hoc) · ${modelName(e2id)}`],cmpRows)+
       (j?note(`Registered joint criterion (≥10 mg sparing with paired ~24 h pain upper CI &lt; +1): opioid limb <strong>${esc(j.opioid_limb)}</strong>; pain limb <strong>${esc(j.pain_limb)}</strong>; joint <strong>${esc(j.joint_criterion)}</strong>.`):'')+
       (m1.k?cardPanel(evidenceCard(m1,rows1),e1id):'')+cardPanel(evidenceCard(m2plot,rows2,{e2:true,body,joint:j}),e2id)+
-      `<h3>Forest plots on a shared axis</h3><h4>E1 · registered primary · ${esc(e1id)}</h4>`+(m1.k?stataLine('core',e1id)+forest(m1,rows1,range):note('No eligible quantitative E1 evidence for this comparison.'))+`<h4>E2 · post-hoc, not graded · ${esc(e2id)}</h4>`+stataLine('E2',e2id)+forest(m2plot,rows2,range,'study')+stataFigs(e1id)+stataFigs(e2id)+
+      `<h3>Forest plots on a shared axis</h3><h4>E1 · registered primary · ${esc(modelLabel(e1id))} <small>(${esc(e1id)})</small></h4>`+(m1.k?stataLine('core',e1id)+forest(m1,rows1,range):note('No eligible quantitative E1 evidence for this comparison.'))+`<h4>E2 · post-hoc, not graded · ${esc(body)} <small>(${esc(e2id)})</small></h4>`+stataLine('E2',e2id)+forest(m2plot,rows2,range,'study')+stataFigs(e1id)+stataFigs(e2id)+
       note('Both plots use the same horizontal scale. “E2 only” marks trials admitted by E2 that are not in the E1 body. E2 study rows show arm values after the stated conversion factor and arm combination.')+
       `<h3 id="e1e2-accounting" tabindex="-1">Trial-by-trial accounting (${acc.length} candidate reports)</h3>`+
       `<div class="pathway" role="group" aria-label="Where the ${acc.length} candidate reports ended up"><span class="pathway-total">${acc.length} candidate reports</span><span aria-hidden="true">→</span>${['both','e2','e1','neither'].map(k=>memBtn(k,acc.filter(r=>mem(r)===k).length)).join('')}</div>`+
@@ -549,7 +648,9 @@
       `<p><a href="current/ADDITIONAL_FILE_12.md" download>Additional file 12 (trial-by-trial accounting)</a> · <a href="current/AMENDED_PRIMARY_ESTIMAND_E2.md" download>E2 estimand and amendment</a> · <a href="current/e2_model_outputs.csv" download>E2 estimates</a></p>`;
   }
   const views={overview,results,e1e2,qor,coverage,prisma,evidence,risk,studies,methods,downloads};
-  function render(id){if(!views[id])id='overview';$('content').innerHTML=(['results','risk','evidence','studies','methods','downloads'].includes(id)?qorLink():'')+views[id]();document.querySelectorAll('.nav [data-view]').forEach(b=>{b.classList.toggle('active',b.dataset.view===id);b.setAttribute('aria-selected',String(b.dataset.view===id));});if(id==='risk')riskRows();if(id==='studies'){if(window.renderRichExplorer){window.renderRichExplorer('rich-explorer-container');}else{studyRows();}}$('content').focus({preventScroll:true});return id;}
+  function render(id){if(!views[id])id='overview';$('content').innerHTML=(['results','risk','evidence','studies','methods','downloads'].includes(id)?qorLink():'')+views[id]();document.querySelectorAll('.nav [data-view]').forEach(b=>{const on=b.dataset.view===id;b.classList.toggle('active',on);if(on)b.setAttribute('aria-current','page');else b.removeAttribute('aria-current');});if(id==='risk')riskRows();if(id==='studies'){if(window.renderRichExplorer){window.renderRichExplorer('rich-explorer-container');}else{studyRows();}}if(booted)$('content').focus({preventScroll:true});return id;}
+  // Focus moves to the new content on in-page route changes only; on first load it stays at the top (skip link first).
+  let booted=false;
   // URL state: #view, #results?model=…&result=…, #qor?model=…; the Study Explorer adds its own filter/study keys.
   const parseHash=()=>{const [view,q='']=location.hash.slice(1).split('?');return {view,params:new URLSearchParams(q)};};
   const hashFor=(view,params={})=>{const q=new URLSearchParams(Object.entries(params).filter(([,v])=>v)).toString();return '#'+view+(q?'?'+q:'');};
@@ -589,14 +690,14 @@
       (parts.length>1?note(`Combined-arm input: component results ${parts.map(esc).join(' + ')} were combined into one intervention arm before analysis; the control arm is counted once.`):'')+
       panel('Source',`<p><strong>${esc(r.source_location)}</strong></p>${r.source_quote?`<blockquote style="border-left:4px solid #64748b;padding-left:16px;margin-left:0">${esc(r.source_quote)}</blockquote>`:''}<p class="source">${esc(r.source_pdf)}<br>SHA-256: ${esc(r.source_sha256)}</p>${r.source_qc&&r.source_qc!=='NOT REPORTED'?`<p><strong>Extraction note:</strong> ${esc(r.source_qc)}</p>`:''}`)+
       panel(`Extracted data in ${esc(r.model_id)}`,arms+`<p>Reported unit: ${esc(r.unit)} · conversion factor ${esc(r.factor)} · analysed as ${esc(unitLabel(r.analysis_unit||r.measure))}${r.continuity_correction&&r.continuity_correction!=='0'?` · continuity correction ${esc(r.continuity_correction)}`:''}</p><p>Study estimate: <strong>${val(+r.yi)} [${val(+r.yi-z*Math.sqrt(+r.vi))}, ${val(+r.yi+z*Math.sqrt(+r.vi))}]</strong> <small>(yi ${num(r.yi,4)}, vi ${num(r.vi,4)}${rr?'; log scale':''})</small></p>${r.decision?`<p><strong>Decision:</strong> ${esc(r.decision)}${r.rationale?` — ${esc(r.rationale)}`:''}</p>`:''}`)+
-      panel(`Used in ${uses.length} model${uses.length===1?'':'s'}`,`<ul>${uses.map(x=>`<li><button type="button" class="text-button" data-model="${esc(x.model_id)}">${esc(x.model_id)}</button> <small>${esc(x.role)} · factor ${esc(x.factor)}</small></li>`).join('')}</ul>`)+
+      panel(`Used in ${uses.length} model${uses.length===1?'':'s'}`,`<ul class="model-list">${uses.map(x=>`<li>${modelName(x.model_id)}<br><small>${esc(x.role)} · factor ${esc(x.factor)}</small></li>`).join('')}</ul>`)+
       panel('Risk of bias (v38, result-specific)',rob);
     if(!$('result-drawer')){document.body.insertAdjacentHTML('beforeend',`<dialog id="result-drawer" aria-labelledby="result-drawer-title" style="width:820px;max-width:92vw;max-height:90vh;overflow-y:auto;background:var(--card)"><button type="button" id="close-result-drawer" aria-label="Close result inspector">Close</button><div id="result-drawer-content"></div></dialog>`);
       $('result-drawer').addEventListener('close',clearResultKey);}
     $('result-drawer-content').innerHTML=html;$('result-drawer-content').querySelector('h2').id='result-drawer-title';$('result-drawer').showModal();
     if(parseHash().view==='results')setHash(hashFor('results',{model:r.model_id,result:rid}));
   }
-  document.addEventListener('click',e=>{const tm=e.target.closest('.term');if(tm){showTip(tm);return;}const nav=e.target.closest('[data-view]');if(nav){document.querySelectorAll('dialog[open]').forEach(x=>x.close());show(nav.dataset.view);return;}const model=e.target.closest('[data-model]');if(model){openModel(model.dataset.model);return;}const fig=e.target.closest('.figure-open');if(fig){$('figure-image').src=fig.dataset.src;$('figure-image').alt=fig.dataset.caption;$('figure-caption').textContent=fig.dataset.caption;$('figure-dialog').showModal();return;}const toStudy=e.target.closest('[data-study]');if(toStudy){show('studies',{study:toStudy.dataset.study});return;}const toBody=e.target.closest('[data-e1e2]');if(toBody){show('e1e2',{body:toBody.dataset.e1e2});return;}const toRisk=e.target.closest('[data-risk-q]');if(toRisk){show('risk',{q:toRisk.dataset.riskQ});return;}const robBtn=e.target.closest('.rob-cell');if(robBtn){robCell(robBtn);return;}if(e.target.id==='close-rob-dialog'){$('rob-dialog').close();return;}const riskLink=e.target.closest('[data-risk-model]');if(riskLink){show('risk',{model:riskLink.dataset.riskModel});return;}const cardBtn=e.target.closest('[data-card-action]');if(cardBtn){cardAction(cardBtn);return;}const bodyBtn=e.target.closest('.e1e2-body');if(bodyBtn){show('e1e2',{body:bodyBtn.dataset.body});return;}const memF=e.target.closest('[data-e1e2-in]');if(memF){e1e2Filter({in:memF.getAttribute('aria-pressed')==='true'?'':memF.dataset.e1e2In});return;}if(e.target.closest('[data-e1e2-clear]')){e1e2Filter({in:'',disp:''});return;}const res=e.target.closest('.result-open');if(res){openResultDrawer(res.dataset.result,res.dataset.resultModel);return;}if(e.target.id==='close-result-drawer'){$('result-drawer').close();clearResultKey();}});
+  document.addEventListener('click',e=>{const tm=e.target.closest('.term');if(tm){showTip(tm);return;}const nav=e.target.closest('[data-view]');if(nav){if(nav.tagName==='A'&&(e.metaKey||e.ctrlKey||e.shiftKey||e.altKey||e.button))return;e.preventDefault();document.querySelectorAll('dialog[open]').forEach(x=>x.close());show(nav.dataset.view);return;}const model=e.target.closest('[data-model]');if(model){openModel(model.dataset.model);return;}const fig=e.target.closest('.figure-open');if(fig){$('figure-image').src=fig.dataset.src;$('figure-image').alt=fig.dataset.caption;$('figure-caption').innerHTML=esc(fig.dataset.caption)+(fig.dataset.svg?` · Download <a href="${esc(fig.dataset.svg)}" download>SVG</a> · <a href="${esc(fig.dataset.pdf)}" download>PDF</a> · <a href="${esc(fig.dataset.src)}" download>PNG</a>`:'');$('figure-dialog').showModal();return;}const toStudy=e.target.closest('[data-study]');if(toStudy){show('studies',{study:toStudy.dataset.study});return;}const toBody=e.target.closest('[data-e1e2]');if(toBody){show('e1e2',{body:toBody.dataset.e1e2});return;}const toRisk=e.target.closest('[data-risk-q]');if(toRisk){show('risk',{q:toRisk.dataset.riskQ});return;}const robBtn=e.target.closest('.rob-cell');if(robBtn){robCell(robBtn);return;}if(e.target.id==='close-rob-dialog'){$('rob-dialog').close();return;}const riskLink=e.target.closest('[data-risk-model]');if(riskLink){show('risk',{model:riskLink.dataset.riskModel});return;}const cardBtn=e.target.closest('[data-card-action]');if(cardBtn){cardAction(cardBtn);return;}const bodyBtn=e.target.closest('.e1e2-body');if(bodyBtn){show('e1e2',{body:bodyBtn.dataset.body});return;}const memF=e.target.closest('[data-e1e2-in]');if(memF){e1e2Filter({in:memF.getAttribute('aria-pressed')==='true'?'':memF.dataset.e1e2In});return;}if(e.target.closest('[data-e1e2-clear]')){e1e2Filter({in:'',disp:''});return;}const res=e.target.closest('.result-open');if(res){openResultDrawer(res.dataset.result,res.dataset.resultModel);return;}if(e.target.id==='close-result-drawer'){$('result-drawer').close();clearResultKey();}});
   // E1 vs E2 filters are URL state (back/forward restore them).
   function e1e2Filter(p){const cur=parseHash().params,next={body:cur.get('body')||'',in:cur.get('in')||'',disp:cur.get('disp')||'',...p};show('e1e2',next);}
   // Keyboard: SVG labels and other non-button controls with role=button/link activate like buttons and links.
@@ -604,22 +705,29 @@
     if(e.key==='Enter'||(e.key===' '&&el.getAttribute('role')==='button')){e.preventDefault();el.dispatchEvent(new MouseEvent('click',{bubbles:true}));}});
   // Glossary tooltip: one fixed-position element, kept inside the viewport, shown on hover and keyboard focus, dismissed with Escape.
   const tip=document.createElement('div');tip.id='term-tip';tip.setAttribute('role','tooltip');tip.hidden=true;document.body.appendChild(tip);
-  function showTip(el){tip.textContent=el.dataset.tip;tip.hidden=false;const r=el.getBoundingClientRect(),w=tip.offsetWidth,h=tip.offsetHeight;
+  let tipAnchor=null;
+  function showTip(el){tipAnchor=el;tip.textContent=el.dataset.tip;tip.hidden=false;const r=el.getBoundingClientRect(),w=tip.offsetWidth,h=tip.offsetHeight;
     tip.style.left=Math.max(8,Math.min(r.left,innerWidth-w-8))+'px';tip.style.top=(r.bottom+6+h>innerHeight?r.top-h-6:r.bottom+6)+'px';}
-  function hideTip(){tip.hidden=true;}
-  document.addEventListener('mouseover',e=>{const el=e.target.closest('.term');if(el)showTip(el);else if(!tip.hidden&&!e.target.closest('#term-tip'))hideTip();});
+  function hideTip(){tip.hidden=true;tipAnchor=null;}
+  document.addEventListener('mouseover',e=>{const el=e.target.closest('.term,.vs[data-tip]');if(el)showTip(el);else if(!tip.hidden&&!e.target.closest('#term-tip')&&tipAnchor!==document.activeElement)hideTip();});
   document.addEventListener('focusin',e=>{const el=e.target.closest('.term');if(el)showTip(el);else hideTip();});
-  document.addEventListener('scroll',hideTip,{passive:true,capture:true});
-  document.addEventListener('input',e=>{if(e.target.id==='risk-search')riskRows();if(e.target.id==='study-search')studyRows(e.target.value);});
-  document.addEventListener('change',e=>{if(e.target.id==='risk-scope'){riskRows();return;}if(e.target.id==='e1e2-disp'){e1e2Filter({disp:e.target.value});return;}if(e.target.id==='model-select'){history.pushState(null,'',hashFor('results',{model:e.target.value}));routed=location.hash;modelDetail(e.target.value);}});
+  // Scrolling moves a tooltip that belongs to the focused control (focus can scroll it into view); others close.
+  document.addEventListener('scroll',()=>{if(tipAnchor&&tipAnchor===document.activeElement&&!tip.hidden)showTip(tipAnchor);else hideTip();},{passive:true,capture:true});
+  document.addEventListener('input',e=>{if(e.target.id==='dl-search')filterDownloads();if(e.target.id==='risk-search')riskRows();if(e.target.id==='study-search')studyRows(e.target.value);});
+  document.addEventListener('change',e=>{if(e.target.id==='dl-group'||e.target.id==='dl-primary'){filterDownloads();return;}if(e.target.id==='risk-scope'){riskRows();return;}if(e.target.id==='e1e2-disp'){e1e2Filter({disp:e.target.value});return;}if(e.target.id==='model-select'){history.pushState(null,'',hashFor('results',{model:e.target.value}));routed=location.hash;modelDetail(e.target.value);}});
   $('close-figure').addEventListener('click',()=>$('figure-dialog').close());
   window.addEventListener('hashchange',()=>route());
   window.addEventListener('popstate',()=>route());
-    document.querySelector('.nav').insertAdjacentHTML('beforeend', '<button type="button" id="theme-toggle" aria-label="Toggle light/dark theme" aria-pressed="false" style="margin-left:auto;padding:8px" title="Toggle theme">🌓</button>');
-  $('theme-toggle').addEventListener('click', e => {
-    const isDark = document.documentElement.dataset.theme === 'dark' || (!document.documentElement.dataset.theme && window.matchMedia('(prefers-color-scheme: dark)').matches);
-    document.documentElement.dataset.theme = isDark ? 'light' : 'dark';
-    e.target.setAttribute('aria-pressed', isDark);
-  });
-  route();if(!views[parseHash().view])setHash('#overview');
+  // Theme: theme.js (in <head>) applies the stored or system theme before first paint and keeps an explicit choice.
+  // The switch reports the theme in effect: pressed = dark.
+  const TH=window.reviewTheme;
+  if(TH){
+    document.querySelector('.nav').insertAdjacentHTML('afterend','<div class="header-tools"><button type="button" id="theme-toggle" aria-pressed="false"><span aria-hidden="true">◐</span> Dark theme</button></div>');
+    const sync=()=>$('theme-toggle').setAttribute('aria-pressed',String(TH.current()==='dark'));
+    $('theme-toggle').addEventListener('click',()=>{TH.set(TH.current()==='dark'?'light':'dark');sync();});
+    TH.onSystemChange(sync);sync();
+  }
+  // Footer: the same analysis and build provenance as the Overview.
+  if($('provenance-line'))$('provenance-line').innerHTML=provenance();
+  route();if(!views[parseHash().view])setHash('#overview');booted=true;
 })();

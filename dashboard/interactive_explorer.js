@@ -6,6 +6,8 @@
     const esc = x => String(x ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
     const num = (x, n = 2) => x === null || x === undefined || x === '' || isNaN(+x) ? '—' : Number(x).toFixed(n);
     const term = (label, key) => window.reviewTerm ? window.reviewTerm(label, key) : esc(label);
+    // Model references use the main UI's single label mapping (label + model ID); plain ID if it is unavailable.
+    const modelName = mid => window.reviewModelName ? window.reviewModelName(mid) : `<button type="button" class="text-button model-link" data-model="${esc(mid)}">${esc(mid)}</button>`;
     const Z95 = 1.95996398454;
 
     // Detailed contribution matrix: outcome families and the model-ID rule that assigns a model to each.
@@ -55,10 +57,32 @@
         ['acupoints', 'Acupoints'], ['frequency', 'Frequency'], ['intensity', 'Intensity'], ['timing', 'Timing'], ['sessions', 'Sessions'],
         ['session_duration', 'Session duration'], ['cumulative_duration', 'Cumulative duration'], ['intervention_arms', 'Intervention arms'], ['control_arms', 'Control / sham arms']];
     const DEFAULT_COLS = ['surgical_category', 'randomized_n', 'analysed_n'];
-    const VS = { 'Verified (registry)': ['V', 'vs-ok'], 'Verified (PDF quote)': ['PDF', 'vs-ok'], 'Partly verified (source excerpt)': ['SX', 'vs-ok'],
-        'Canonical result register': ['REG', 'vs-ok'], 'Source-traced (extraction record)': ['TR', 'vs-mid'], 'Legacy (v26, not re-verified)': ['L', 'vs-warn'],
-        'Extracted (PDF quote, single extractor)': ['PQ', 'vs-mid'], 'Not reported in source': ['NR', 'vs-none'],
-        'Not verified': ['NV', 'vs-none'], 'Not extracted': ['NE', 'vs-none'] };
+    // Verification status of each characteristic (the status strings of 14_CHARACTERISTICS/report_characteristics.csv,
+    // set by code/build_characteristics.py): badge, colour class, plain-language label and what the status means.
+    // Order = strongest to weakest provenance; the legend, badges and tooltips all read from this one table.
+    const VS = {
+        'Verified (registry)': ['V', 'vs-ok', 'Verified — registry',
+            'Taken from the canonical v38 study registry, the adjudicated record of each report. The registry marks every field it could not confirm from the source as not verified; those never carry this badge. For randomised N the registry also stores the source page and a verbatim excerpt (shown in the study profile).'],
+        'Verified (PDF quote)': ['PDF', 'vs-ok', 'Verified — PDF quotation',
+            'Found in the primary report by the conservative PDF extraction step, which keeps a value only with its page number and the verbatim sentence it came from, and only when the whole paper gives one consistent answer.'],
+        'Partly verified (source excerpt)': ['SX', 'vs-ok', 'Partly verified — source excerpt',
+            'Checked against a dated source excerpt for this protocol item. Other parts of the same stimulation description may still be legacy values.'],
+        'Canonical result register': ['REG', 'vs-ok', 'Canonical result register',
+            'Arm descriptions copied from the adjudicated canonical results register (the same record the models use), not from a separate characteristics extraction.'],
+        'Source-traced (extraction record)': ['TR', 'vs-mid', 'Source-traced',
+            'Traced to a specific file and line of an earlier structured extraction record of the report. Not re-read against the PDF for this dashboard.'],
+        'Extracted (PDF quote, single extractor)': ['PQ', 'vs-mid', 'Extracted from PDF quotation — single extractor',
+            'Extracted from the primary report by one extractor (AI-assisted), with the page and a verbatim quotation. The quotation is machine-checked against the report’s text on that page, but the value has not been independently reviewed by a second extractor.'],
+        'Legacy (v26, not re-verified)': ['L', 'vs-warn', 'Legacy extraction — not re-verified',
+            'Inherited from the older v26 data workbook and not re-checked against the primary report. Check the report before using it for subgrouping or characteristics text.'],
+        'Not verified': ['NV', 'vs-none', 'Not verified',
+            'The registry records this field as not verified and no other checked source exists, so no value is shown.'],
+        'Not reported in source': ['NR', 'vs-none', 'Not reported in source',
+            'The full text was searched and the report does not state this item. This is a finding about the report, not a failed extraction, and it does not mean the item was absent in the trial.'],
+        'Not extracted': ['NE', 'vs-none', 'Not extracted',
+            'No structured extraction exists for this field. Nothing is inferred to fill the gap.'] };
+    const REGIMEN_FIELDS = ['postoperative_analgesia', 'pca_regimen', 'rescue_analgesia', 'cumulative_duration'];
+    const EXTRA_FIELD_LABEL = { modality: 'Modality', comparator: 'Comparator (study label)', comparator_class: 'Comparator class', randomized_n_counted: 'N randomised (operational count)' };
     const PRESETS = [['All', {}], ['TEAS', { modality: 'TEAS' }], ['EA', { modality: 'EA' }], ['Sham controlled', { comparator: 'Sham' }], ['Usual care', { comparator: 'Usual' }],
         ['E1 contributors', { status: 'e1' }], ['E2 contributors', { status: 'e2' }], ['E2 only', { status: 'e2only' }], ['Pain evidence', { family: 'pain' }],
         ['PONV evidence', { family: 'ponv' }], ['GI evidence', { family: 'gi' }], ['QoR evidence', { family: 'qor' }], ['High RoB', { rob: 'high' }], ['Held / source issue', { status: 'held' }]];
@@ -173,11 +197,27 @@
         };
 
         // ---- Rendering helpers.
-        const vs = c => { if (!c) return ''; const [ab, cls] = VS[c.status] || ['?', 'vs-none']; return `<span class="vs ${cls}" title="${esc(c.status)}${c.source ? ': ' + esc(c.source) : ''}"><span class="sr-only">${esc(c.status)}: </span>${ab}</span>`; };
+        // Cell badge: the abbreviation, with the plain-language status for screen readers and the full meaning on hover.
+        const vs = c => { if (!c) return ''; const [ab, cls, lab, help] = VS[c.status] || ['?', 'vs-none', c.status, ''];
+            return `<span class="vs ${cls}" data-tip="${esc(lab + ': ' + help + (c.source ? ' Source: ' + c.source : ''))}"><span class="sr-only">(${esc(lab)}) </span><span aria-hidden="true">${ab}</span></span>`; };
         // detail (study drawer): also show the verbatim source quote or extraction note carried in the note field.
         const charCell = (r, f, detail) => { const c = r.ch[f]; if (!c) return '<small>Not extracted</small>';
-            const v = c.value || ({ 'Not verified': 'Not verified', 'Not reported in source': 'Not reported in source' }[c.status] || 'Not extracted');
+            const v = c.value || (VS[c.status] && !c.value ? VS[c.status][2] : 'Not extracted');
             return `${c.value ? esc(v) : `<small>${esc(v)}</small>`} ${vs(c)}${detail && c.note ? `<br><small class="char-quote">${esc(c.note)}</small>` : ''}`; };
+        // Provenance legend (above the explorer): one keyboard-reachable help button per status, from VS.
+        const statusBtn = s => { const [ab, cls, lab, help] = VS[s]; return `<button type="button" class="term vs ${cls}" data-tip="${esc(lab + ': ' + help)}" aria-label="${esc(lab)}: ${esc(help)}">${ab}</button>`; };
+        const provenanceLegend = () => {
+            const all = d.characteristics || [], used = Object.keys(VS).filter(s => all.some(c => c.status === s));
+            const fields = [...new Set(all.map(c => c.field))].map(f => [f, (CHARS.find(x => x[0] === f) || [, EXTRA_FIELD_LABEL[f] || f.replaceAll('_', ' ')])[1]]);
+            const count = (f, s) => all.filter(c => c.field === f && c.status === s).length;
+            return `<section class="prov-legend" aria-labelledby="prov-legend-title"><h3 id="prov-legend-title">How far each characteristic has been checked</h3>
+                <p class="note"><strong>Characteristics do not all have the same verification level.</strong> Registry- and PDF-verified values are distinguished from source-traced, legacy and single-extractor fields. Missing values are not inferred.</p>
+                <ul class="prov-list">${used.map(s => `<li>${statusBtn(s)} <span>${esc(VS[s][2])}</span></li>`).join('')}</ul>
+                <p class="source">Select or focus a badge for what it means. <strong>Postoperative analgesia, PCA regimen, rescue analgesia and cumulative stimulation duration</strong> are quoted from the report PDF (each quotation machine-checked against the report’s text) but come from a single extractor; they stay marked as single-extractor values unless and until they are independently reviewed.</p>
+                <details class="prov-counts"><summary>Verification level by field (${INDEX.length} reports)</summary><div class="table-scroll"><table><thead><tr><th scope="col">Field</th>${used.map(s => `<th scope="col" title="${esc(VS[s][2])}"><span class="vs ${VS[s][1]}" aria-hidden="true">${VS[s][0]}</span><span class="sr-only">${esc(VS[s][2])}</span></th>`).join('')}</tr></thead>
+                <tbody>${fields.map(([f, l]) => `<tr><th scope="row">${esc(l)}</th>${used.map(s => { const n = count(f, s); return `<td>${n || '<span class="muted">·</span>'}</td>`; }).join('')}</tr>`).join('')}</tbody></table></div>
+                <p class="source">Number of reports per field and status, from the harmonised characteristics file in Downloads.</p></details></section>`;
+        };
         const cellBtn = (r, key, label, cell) => {
             if (!cell) return `<button type="button" class="matrix-cell none" data-cell="${key}" data-id="${esc(r.id)}" aria-label="${esc(r.id)} ${esc(label)}: no current model contribution; show extracted results">–</button>`;
             const lab = `${r.id} ${label}: ${STATE[cell.tier]}${cell.models.length ? '. Models: ' + cell.models.join(', ') : ''}`;
@@ -195,19 +235,20 @@
             const group = (title, key, items, cur) => { const max = Math.max(...items.map(i => i[2])); return `<div class="glance-group"><h4>${title}</h4>${items.map(([v, l, n]) => bar(key, v, l, n, max, cur === v)).join('')}</div>`; };
             const count = f => { const m = new Map(); for (const r of INDEX) m.set(f(r), (m.get(f(r)) || 0) + 1); return [...m.entries()].sort((a, b) => b[1] - a[1]); };
             const fig = (d.stata?.figures || []).find(f => f.figure_id === 'fig_desc_evidence_base');
-            return `<details class="glance" open><summary>Evidence base at a glance <small>(${INDEX.length} reports, ${nFam} trial families; counts are reports, not patients; click a bar to filter)</small></summary><div class="glance-grid">` +
+            return `<details class="glance" open><summary>Evidence-base counts: select a bar to filter <small>(${INDEX.length} reports, ${nFam} trial families; counts are reports, not patients)</small></summary><div class="glance-grid">` +
                 group('Surgical category', 'surgery', count(r => r.surgery).map(([v, n]) => [v, v, n]), state.surgery) +
                 group('Country', 'country', count(r => r.country).map(([v, n]) => [v, v, n]), state.country) +
                 group('Publication year', 'year', YEARS.map(([l, a, b]) => [`${a}-${b}`, l, INDEX.filter(r => r.year >= a && r.year <= b).length]), state.ymin || state.ymax ? `${state.ymin || 0}-${state.ymax || 9999}` : '') +
                 group('Modality', 'modality', count(r => r.s.modality).map(([v, n]) => [v === 'UNCLEAR' ? 'Unclear' : v, v, n]), state.modality) +
                 group('Comparator (study-level label)', 'comparator', count(r => r.cmp).map(([v, n]) => [({ sham: 'Sham', 'usual care': 'Usual', 'active control': 'Active' })[v] || 'Unclear', v, n]), ({ Sham: 'sham', Usual: 'usual care', Active: 'active control' })[state.comparator] || '') +
                 group('Randomised N per report', 'size', SIZE.map(([k, l, f]) => [k, l, INDEX.filter(r => f(r.n)).length]), state.size) +
-                `</div>${fig ? `<p class="source">Publication figure (Stata): <a href="${esc(fig.svg_href)}" download>SVG</a> · <a href="${esc(fig.pdf_href)}" download>PDF</a> · <a href="${esc(fig.png_href)}" download>PNG</a>. Individual panels are listed in Methods → Stata figures.</p>` : ''}</details>`;
+                `</div>${fig ? `<p class="source">The same counts as publication figures (Stata): <a href="#fig-${esc(fig.figure_id)}">Evidence base at a glance</a>, above.</p>` : ''}</details>`;
         };
 
         const renderControls = () => `
             <h2>Study Explorer &amp; Contribution Matrix</h2>
             <p class="lede">All ${INDEX.length} reports (${nFam} operational trial families): characteristics with their verification status, and each report's contribution to the evidence bodies. Filters select reports; they never refit a meta-analysis.</p>
+            ${provenanceLegend()}
             <div class="explorer-toolbar">
                 <div style="flex:2;min-width:240px"><label for="explorer-search">Search</label>
                     <input id="explorer-search" type="search" placeholder="Study, year, country, surgery, acupoint (e.g. PC6), outcome, model or result ID" value="${esc(state.search)}"></div>
@@ -226,7 +267,7 @@
             <div id="explorer-glance"></div>
             <details class="colchooser"><summary>Columns and characteristics</summary>
                 <fieldset><legend class="sr-only">Characteristic columns</legend>${CHARS.map(([f, l]) => `<label class="chk"><input type="checkbox" data-col="${f}"${state.cols.includes(f) ? ' checked' : ''}> ${esc(l)}</label>`).join('')}</fieldset>
-                <p class="source">Status badges: ${Object.entries(VS).map(([k, [ab, cls]]) => `<span class="vs ${cls}">${ab}</span> ${esc(k)}`).join(' · ')}. Legacy values were imported from the v26 workbook and have not been re-checked against the PDF; do not use them for subgrouping or characteristics text without checking. PQ values (analgesia, PCA, rescue and cumulative stimulation time) were extracted by one extractor with a verbatim quote that is machine-checked against the report text; second review is pending. NR means the full text was searched and the item is not reported, which is not the same as absent.</p></details>
+                <p class="source">Each value carries its verification badge (${Object.values(VS).map(([ab, cls, lab]) => `<span class="vs ${cls}" aria-hidden="true">${ab}</span> ${esc(lab)}`).join(' · ')}); see the legend above for what each means. Legacy values have not been re-checked against the PDF: do not use them for subgrouping or characteristics text without checking.</p></details>
             <div class="matrix-bar">
                 <div class="matrix-legend" aria-label="Contribution legend">
                     <span><span class="matrix-cell e1">E1</span> E1 primary opioid body</span><span><span class="matrix-cell e2">E2</span> E2 post-hoc body only</span>
@@ -285,7 +326,7 @@
                 for (const mid of models) {
                     const m = graph.models[mid]?.canonical || {}, core = d.models.some(x => x.model_id === mid), rr = (m.measure || '') === 'RR';
                     const ins = r.inputs.filter(i => i.model_id === mid);
-                    html += `<h3><button type="button" class="text-button model-link" data-model="${esc(mid)}">${esc(mid)} →</button></h3><p><small>${esc(m.role || '')} · ${esc(m.status || '')} · k = ${esc(m.k ?? '')}</small></p>` +
+                    html += `<h3>${modelName(mid)}</h3><p><small>${esc(m.role || '')} · ${esc(m.status || '')} · k = ${esc(m.k ?? '')}</small></p>` +
                         `<div class="table-scroll"><table><thead><tr><th>Result</th><th>Window</th><th>n (I / C)</th><th>Study estimate</th><th>Source</th><th>RoB</th><th>Decision</th></tr></thead><tbody>` +
                         ins.map(i => {
                             const parts = String(i.result_id).split('+'), reg = r.reg.find(x => x.result_id === parts[0]) || {}, rob = parts.map(p => graph.results[p]?.rob?.overall).filter(Boolean);
@@ -325,23 +366,24 @@
             const coreIn = new Set(d.inputs.filter(i => i.study === id).flatMap(i => [i.result_id, ...String(i.result_id).split('+')]));
             const inputFor = rid => d.inputs.find(i => i.study === id && String(i.result_id).split('+').includes(rid));
             const figs = window.ARTICLE_FIGURES?.[id] || [];
-            const verified = Object.values(ch).filter(c => /^Verified|Partly|Canonical/.test(c.status)).length, total = Object.keys(ch).length;
+            const byStatus = Object.keys(VS).map(st => [st, Object.values(ch).filter(c => c.status === st).length]).filter(([, n]) => n);
             const html = `
                 <div class="drawer-head"><button type="button" id="close-drawer" aria-label="Close study profile">&times;</button>
                     <h2 id="study-drawer-title" style="margin:0 0 4px">${esc(id)}</h2><p class="source" style="margin:0">${esc(bg.citation || '')}${bg.doi ? ` · <a href="https://doi.org/${esc(bg.doi)}" target="_blank" rel="noopener">DOI</a>` : ''}</p>
                     <p style="margin:8px 0 0"><span class="tag">${esc(s.modality)}</span> <span class="tag">${esc(s.comparator)}</span> <span class="tag">${esc(s.trial_id)}</span> ${[...r.st].filter(x => ['e1', 'e2', 'e2only', 'held'].includes(x)).map(x => `<span class="tag badge-${x}">${esc(STATUSES.find(y => y[0] === x)[1])}</span>`).join(' ')}</p>
                     <nav class="drawer-nav" aria-label="Sections">${['Population', 'Anaesthesia', 'Intervention', 'Comparator', 'Outcomes', 'Models', 'E1/E2', 'RoB', 'Figures', 'Sources', 'Holds'].map(x => `<a href="#dr-${x.replace(/\W/g, '')}">${x}</a>`).join('')}</nav></div>
-                <p class="source">Characteristics: ${verified} of ${total} fields verified, source-excerpted or from the canonical result register; others are legacy, not verified or not extracted (badges show which).</p>
+                <p class="source">Verification of this report’s ${Object.keys(ch).length} characteristic fields: ${byStatus.map(([st, n]) => `<span class="vs ${VS[st][1]}" aria-hidden="true">${VS[st][0]}</span> ${esc(VS[st][2])} ${n}`).join(' · ')}. Badges beside each value show which; hover a badge, or see the legend in the explorer, for what it means.</p>
                 <h3 id="dr-Population">Population</h3>${tbl(row('Year', 'year') + row('Country', 'country') + row('Surgical category', 'surgical_category') + row('Procedure', 'procedure') + row('Randomised N', 'randomized_n') + row('Analysed N', 'analysed_n') + row('Age', 'age') + row('Female', 'female') + row('BMI', 'bmi') + row('ASA', 'asa'))}
                 <h3 id="dr-Anaesthesia">Anaesthesia and analgesia</h3>${tbl(row('Anaesthesia', 'anaesthesia') + row('Postoperative analgesia', 'postoperative_analgesia') + row('PCA regimen', 'pca_regimen') + row('Rescue analgesia', 'rescue_analgesia'))}
+                ${REGIMEN_FIELDS.some(f => ch[f]?.status === 'Extracted (PDF quote, single extractor)') ? note('Postoperative analgesia, PCA regimen, rescue analgesia and cumulative stimulation duration are quoted from the report (quotation shown under each value, machine-checked against the report’s text) by a single extractor; they have not been independently reviewed.') : ''}
                 <h3 id="dr-Intervention">Intervention</h3>${tbl(row('Intervention arms (result register)', 'intervention_arms') + row('Acupoints', 'acupoints') + row('Frequency', 'frequency') + row('Intensity', 'intensity') + row('Timing', 'timing') + row('Sessions', 'sessions') + row('Session duration', 'session_duration') + row('Cumulative duration', 'cumulative_duration'))}
                 ${bg.stricta?.status === 'Verified' ? note(`Partly source-verified ${esc(bg.stricta.verification_date)}: “${esc(bg.stricta.source_excerpt)}”${bg.stricta.correction_note ? ' ' + esc(bg.stricta.correction_note) : ''}`) : note('STRICTA details are legacy imports (not re-verified) unless marked otherwise; the intervention-arm text comes from the canonical result register.')}
                 <h3 id="dr-Comparator">Comparator</h3>${tbl(`<tr><th scope="row">Study-level label</th><td>${esc(s.comparator)} <small>(${esc(s.comparator_source_status || '')})</small></td></tr>` + row('Control / sham arms (result register)', 'control_arms'))}
                 <h3 id="dr-Outcomes">Outcome inventory (${r.reg.length} extracted results)</h3>
                 <div class="table-scroll"><table><thead><tr><th>Result</th><th>Outcome</th><th>Window</th><th>Decision</th><th>Models</th></tr></thead><tbody>${r.reg.map(x => { const inp = inputFor(x.result_id);
-                    return `<tr><td>${inp ? `<button type="button" class="text-button result-open" data-result="${esc(inp.result_id)}" data-result-model="${esc(inp.model_id)}">${esc(x.result_id)}</button>` : esc(x.result_id)}</td><td>${esc(x.outcome)}</td><td>${esc(x.window)}</td><td><strong>${esc(x.decision)}</strong>${x.decision !== 'INCLUDE' && x.rationale ? `<br><small>${esc(x.rationale)}</small>` : ''}</td><td>${x.models.split(';').filter(Boolean).map(m => `<button type="button" class="text-button model-link" data-model="${esc(m)}">${esc(m)}</button>`).join('<br>') || '<small>none</small>'}</td></tr>`; }).join('')}</tbody></table></div>
+                    return `<tr><td>${inp ? `<button type="button" class="text-button result-open" data-result="${esc(inp.result_id)}" data-result-model="${esc(inp.model_id)}">${esc(x.result_id)}</button>` : esc(x.result_id)}</td><td>${esc(x.outcome)}</td><td>${esc(x.window)}</td><td><strong>${esc(x.decision)}</strong>${x.decision !== 'INCLUDE' && x.rationale ? `<br><small>${esc(x.rationale)}</small>` : ''}</td><td>${x.models.split(';').filter(Boolean).map(m => modelName(m)).join('<br>') || '<small>none</small>'}</td></tr>`; }).join('')}</tbody></table></div>
                 <h3 id="dr-Models">Model contributions (${r.models.length})</h3>
-                ${r.models.length ? `<div class="table-scroll"><table><thead><tr><th>Model</th><th>Role</th><th>k</th></tr></thead><tbody>${r.models.map(mid => { const m = graph.models[mid]?.canonical || {}; return `<tr><td><button type="button" class="text-button model-link" data-model="${esc(mid)}">${esc(mid)} →</button></td><td>${esc(m.role || '—')}</td><td>${esc(m.k ?? '—')}</td></tr>`; }).join('')}</tbody></table></div>` : note('No contribution to any current model. This is not an efficacy claim; results may be reported but not poolable, held or ineligible (see the outcome inventory).')}
+                ${r.models.length ? `<div class="table-scroll"><table><thead><tr><th>Model</th><th>Role</th><th>k</th></tr></thead><tbody>${r.models.map(mid => { const m = graph.models[mid]?.canonical || {}; return `<tr><td>${modelName(mid)}</td><td>${esc(m.role || '—')}</td><td>${esc(m.k ?? '—')}</td></tr>`; }).join('')}</tbody></table></div>` : note('No contribution to any current model. This is not an efficacy claim; results may be reported but not poolable, held or ineligible (see the outcome inventory).')}
                 <h3 id="dr-E1E2">E1 / E2 status</h3>
                 ${acc.length || b12.length ? `<div class="table-scroll"><table><thead><tr><th>Comparison</th><th>E1</th><th>E2</th><th>Rule / basis</th></tr></thead><tbody>${acc.map(x => `<tr><td><button type="button" class="text-button" data-e1e2="${esc(x.body)}">${esc(x.body)} →</button></td><td>${esc(x.E1_disposition)}</td><td><strong>${esc(x.E2_disposition)}</strong></td><td>${esc(x.E2_basis)}</td></tr>`).join('')}${b12.filter(x => !acc.some(a => a.report === x.report)).map(x => `<tr><td>${esc(x.modality)} vs ${esc(x.comparator)}</td><td>${esc(x.E1_disposition || '—')}</td><td><strong>${esc(x.E2_disposition)}</strong></td><td>${esc(x.E2_rule_failed)}</td></tr>`).join('')}</tbody></table></div>` : note('Not a candidate for the primary opioid outcome in the E2 decision files.')}
                 <h3 id="dr-RoB">Result-specific risk of bias (${r.robs.length})</h3>

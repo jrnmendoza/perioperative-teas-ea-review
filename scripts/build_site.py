@@ -260,7 +260,7 @@ def inject_build_badge(out: Path, meta: dict) -> None:
     html = index.read_text(encoding="utf-8")
     short_sha = meta["git_commit"][:8]
     badge_html = (
-        f'<div id="build-badge" style="position:fixed;right:6px;bottom:6px;'
+        f'<div id="build-badge" aria-hidden="true" style="position:fixed;right:6px;bottom:6px;'
         f'z-index:2147483647;font:9px/1.3 monospace;background:rgba(15,23,42,0.7);'
         f'color:#64748b;padding:2px 6px;border-radius:3px;pointer-events:none;'
         f'opacity:0.7;max-width:60vw;overflow:hidden;text-overflow:ellipsis;'
@@ -310,12 +310,12 @@ def main() -> int:
         if out in (ROOT, DASH, Path.home(), Path('/')):
             raise RuntimeError('Refuse build into a source or broad directory')
         out.mkdir(parents=True,exist_ok=True)
-        for name in ['index.html','current_review.js','current_review.json','current_review_ui.js','current_review.css','article_figures.js','search_strategies.js','evidence_graph.js','interactive_explorer.js']:
+        for name in ['index.html','current_review.js','current_review.json','current_review_ui.js','current_review.css','article_figures.js','search_strategies.js','evidence_graph.js','interactive_explorer.js','theme.js']:
             shutil.copyfile(DASH/name,out/name)
         for name in ['current','article_figures']:
             shutil.copytree(DASH/name,out/name,dirs_exist_ok=True)
         # Hash current content, not only HEAD: this working-tree build is uncommitted.
-        V38_ASSETS=['current_review.js','current_review_ui.js','current_review.css','article_figures.js','search_strategies.js','evidence_graph.js','interactive_explorer.js']
+        V38_ASSETS=['current_review.js','current_review_ui.js','current_review.css','article_figures.js','search_strategies.js','evidence_graph.js','interactive_explorer.js','theme.js']
         import hashlib
         fingerprint=hashlib.sha256(b''.join((DASH/name).read_bytes() for name in V38_ASSETS)).hexdigest()[:12]
         text=(out/'index.html').read_text()
@@ -324,6 +324,12 @@ def main() -> int:
         (out/'index.html').write_text(text)
         meta['content_fingerprint']=fingerprint
         inject_build_badge(out,meta);write_build_meta(out,meta)
+        # The page reads its own build record (commit, build time) from this inline copy of build-meta.json;
+        # it sits in <head> so it exists before the dashboard scripts run, and needs no network request.
+        text=(out/'index.html').read_text()
+        inline=json.dumps(meta,separators=(',',':')).replace('</','<\\/')
+        assert text.count('</head>')==1,'index.html must have exactly one </head>'
+        (out/'index.html').write_text(text.replace('</head>',f'<script id="build-meta" type="application/json">{inline}</script></head>'))
         print(json.dumps(meta,indent=2));print(f'Built local v38 site at {out}')
         return 0
 
