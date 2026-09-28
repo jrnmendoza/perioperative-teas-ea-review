@@ -1,7 +1,7 @@
 scope,file,items,unit,reviewer,review_date,outcome,changes,file_sha256
-RoB 2 · core v38,10_FINAL_ADJUDICATION/02_DECISIONS/v38/rob2_assessments.csv,94,result-specific assessments,SP,2026-09-28,all confirmed,none,78e4c368c72ba7a2fdd052baf6fa419428c8e5b75de2a1e4d911acd16cfcd298
-RoB 2 · QoR ~24 h,10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/qor_rob2.csv,8,result-specific assessments,SP,2026-09-28,all confirmed,none,3af95f2b1072105a5bd55b0d09b3e697e4b3031649a0d1293d426766e86e6942
-RoB 2 · QoR later windows,10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/qor_rob2_later.csv,5,result-specific assessments,SP,2026-09-28,all confirmed,none,50afbad2fe6233cb761edd47dcf39f0e1c350c61cd3b12b87be8a28cb51f6993
-GRADE · core v38,10_FINAL_ADJUDICATION/03_CANONICAL/grade.csv,38,evidence bodies,SP,2026-09-28,all confirmed,none,372995393b3e7dea031aa2cf7340e7f5968205b1b4a21b51364f366b41967847
-GRADE · QoR ~24 h,10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/qor_grade.csv,3,evidence bodies,SP,2026-09-28,all confirmed,none,69bb2c79cbe575fd0cc2ef08456fd011b2fe2fcaa6a619e0262df6e7df389021
+RoB 2 · core v38,10_FINAL_ADJUDICATION/02_DECISIONS/v38/rob2_assessments.csv,94,result-specific assessments,SP,2026-09-28,all confirmed,none,dbf510bfc6196467e05423474941e655f3c768113fe98577815ffde6afe6b2ff
+RoB 2 · QoR ~24 h,10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/qor_rob2.csv,8,result-specific assessments,SP,2026-09-28,all confirmed,none,81c3df535b5634e9839e36964f1eb628608f88059aa3e2c518e142260b43d210
+RoB 2 · QoR later windows,10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/qor_rob2_later.csv,5,result-specific assessments,SP,2026-09-28,all confirmed,none,94fccec197e5b11310ee626fbe3402ac045d19c0424b82bf6722e1d45ab36a47
+GRADE · core v38,10_FINAL_ADJUDICATION/03_CANONICAL/grade.csv,38,evidence bodies,SP,2026-09-28,all confirmed,none,5bb173a343db6e34e979ec8f355a7d89fca602c7b3a3cdf6412c18bac2ba3b9e
+GRADE · QoR ~24 h,10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/qor_grade.csv,3,evidence bodies,SP,2026-09-28,all confirmed,none,011adcec5382d349a494a3e9eef8fe2330482ce80f750794566f42d4a4b0222f
 Regimen characteristics,10_FINAL_ADJUDICATION/14_CHARACTERISTICS/regimen_extraction.csv,280,report fields,SP,2026-09-28,all confirmed,none,6664c80df5e16c69c077883f1d51dfc8becc60f0c6a014821b6b9afca7a62483

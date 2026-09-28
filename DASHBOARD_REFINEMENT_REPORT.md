@@ -304,3 +304,13 @@ value or estimate changed.
 - **Browser test:** checks the review statement in each view and the data-driven legend and drawer wording.
 - **Scope assumption:** the review is recorded as covering all RoB 2 assessments (core and QoR) and all
   GRADE bodies (core and QoR ~24 h). If SP reviewed only part of them, the record should be narrowed.
+
+## 10. Reviewer wording in the RoB 2 and GRADE records (28 September 2026)
+
+On the user's instruction, the reviewer, sign-off, status and label wording in the RoB 2 and GRADE records, and in the
+files that copy them, now records the delegated first assessment and SP's second review. Only those fields changed. No
+judgement, rationale, certainty, downgrade, source quotation or model value changed. Every change was verified column by
+column, and the adjudication validator and all dashboard gates pass. File-by-file changed fields and before/after hashes
+are listed in `10_FINAL_ADJUDICATION/02_DECISIONS/v38/PROVENANCE_WORDING_UPDATE_2026-09-28.md`. The generators write the
+same wording. `second_review.csv` and `13_STATA/input/input_sources.sha256` carry the new hashes. The Stata input files
+are byte-identical, so Stata was not rerun.
