@@ -258,6 +258,12 @@
     "sha256": "cc5ed7bcfd349bf761eff4ea9913416293fdd3c7beb0c4634bb60ee6ace7a8bb"
   },
   {
+    "label": "QoR later-window GRADE (four bodies)",
+    "href": "current/qor_grade_later.csv",
+    "source": "10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/qor_grade_later.csv",
+    "sha256": "6255f2a521213e67a03b2ce23ad97c12544bea6a339606d66f9f70608046403f"
+  },
+  {
     "label": "QoR later-window source locators",
     "href": "current/qor_source_locators_later.csv",
     "source": "10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/qor_source_locators_later.csv",

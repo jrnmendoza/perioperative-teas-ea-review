@@ -89,6 +89,24 @@ def release_ok(d):
     if not r or len(h)!=1:return False
     from datetime import datetime
     return r['core_version']==d['version'] and r['core_date']==d['date'] and r['e2_date']==datetime.strptime(re.search(r'\d{1,2} \w+ \d{4}',h[0]).group(0),'%d %B %Y').strftime('%Y-%m-%d')
+GRADE_LEVELS=['High','Moderate','Low','Very low']
+def qor_later_grade_consistent(d):
+    """Later-window QoR GRADE: only evidence bodies (never leave-one-out diagnostics) are graded; each record carries its
+    model's current k, N, estimate and CI; certainty equals High minus the recorded downgrades (floored at Very low); every
+    domain has a written rationale; the review status agrees with second_review.csv."""
+    if 'qor_later_grade' not in d:return True
+    M={m['model_id']:m for m in d.get('qor_later_models',[])}
+    reviewed=any(r['file'].endswith('qor_grade_later.csv') for r in d.get('second_review',[]))
+    dom=['risk_of_bias','inconsistency','indirectness','imprecision','publication_bias']
+    for g in d['qor_later_grade']:
+        m=M.get(g['model_id'])
+        if not m or m['role']=='SENSITIVITY' or m.get('parent_model_id'):return False
+        if int(g['k'])!=m['k'] or int(g['N'])!=m['N']:return False
+        if any(abs(float(g[a])-float(m[a]))>1e-9*max(1,abs(float(m[a]))) for a in ('effect','ci_low','ci_high')):return False
+        if g['certainty']!=GRADE_LEVELS[min(sum(int(g[k+'_downgrades']) for k in dom),3)]:return False
+        if any(len(g[k])<40 for k in dom):return False
+        if ('second review pending' in g['decision_status'])==reviewed:return False
+    return len({g['model_id'] for g in d['qor_later_grade']})==len(d['qor_later_grade'])
 def second_review_consistent(d):
     """Each second-review row names a reviewer and date, counts the rows of the file it covers and carries that file's
     current SHA-256 (a judgement file changed after review invalidates the record); the regimen record agrees row by row."""
@@ -162,6 +180,8 @@ def checks(d):
       'QoR later-window identity':d.get('qor_later_models')==json.load(open(D/'08_QOR_ANALYSIS/qor_models_later.json')) if (D/'08_QOR_ANALYSIS/qor_models_later.json').exists() else True,
       'QoR later-window RoB identity': d.get('qor_later_rob') == rows(D/'08_QOR_ANALYSIS/qor_rob2_later.csv') and len(d.get('qor_later_rob', [])) == 5 if 'qor_later_rob' in d else True,
       'Release dates derived from payload and E2 decision':release_ok(d),
+      'QoR later-window GRADE identity':d.get('qor_later_grade')==rows(D/'08_QOR_ANALYSIS/qor_grade_later.csv') if (D/'08_QOR_ANALYSIS/qor_grade_later.csv').exists() else True,
+      'QoR later-window GRADE links current models':qor_later_grade_consistent(d),
       'Second-review record identity':d.get('second_review')==rows(D/'02_DECISIONS/v38/second_review.csv') if (D/'02_DECISIONS/v38/second_review.csv').exists() else True,
       'Second review covers current judgement files':second_review_consistent(d),
       'E2 methods integrity': d.get('e2_methods', {}).get('Timestamp note', '') == re.search(r'(\*\*Timestamp note[^\n]+(?:\n[^\n]+)+)', (D/'02_DECISIONS/v38/AMENDED_PRIMARY_ESTIMAND_E2.md').read_text(encoding='utf-8')).group(1).strip() if 'e2_methods' in d else True,
@@ -443,6 +463,11 @@ def main(site=None):
         mutations.append(('E2 accounting identity',lambda d:d['e2_accounting']['tierB2'].pop()))
         mutations.append(('E2 accounting covers E1 and E2 inputs',lambda d:[r.__setitem__('E2_disposition','NOT ADMITTED') for r in d['e2_accounting']['tierA'] if r['report']=='Chen 1998']))
     mutations.append(('E2 methods integrity', lambda d: d['e2_methods'].update({'Timestamp note': 'Altered text'})))
+    if 'qor_later_grade' in data:
+        mutations.append(('QoR later-window GRADE identity',lambda d:d['qor_later_grade'][0].__setitem__('certainty','High')))
+        mutations.append(('QoR later-window GRADE links current models',lambda d:d['qor_later_grade'][0].__setitem__('certainty','Moderate')))
+        mutations.append(('QoR later-window GRADE links current models',lambda d:d['qor_later_grade'][0].__setitem__('model_id','QOR15_SHAM_POD3_WITHOUT_HOU_2023')))
+        mutations.append(('QoR later-window GRADE links current models',lambda d:d['qor_later_grade'][1].__setitem__('ci_high','9.99')))
     if 'second_review' in data:
         mutations.append(('Second-review record identity',lambda d:d['second_review'][0].__setitem__('outcome','changed')))
         mutations.append(('Second review covers current judgement files',lambda d:d['second_review'][0].__setitem__('items','93')))

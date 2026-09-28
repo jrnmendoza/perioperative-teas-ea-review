@@ -36,6 +36,8 @@ if qor_path.exists():
   files.append(('QoR later-window exact arm inputs', '10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/qor_inputs_later.csv'))
   files.append(('QoR later-window RoB', '10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/qor_rob2_later.csv'))
   files.append(('QoR later-window RoB signals', '10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/qor_rob2_signals_later.csv'))
+  if (D/'08_QOR_ANALYSIS/qor_grade_later.csv').exists():
+   files.append(('QoR later-window GRADE (four bodies)', '10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/qor_grade_later.csv'))
   files.append(('QoR later-window source locators', '10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/qor_source_locators_later.csv'))
   files.append(('QoR later-window R script', '10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/metafor_forest_later/forest_qor_later.R'))
   files.append(('QoR later-window R log', '10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/metafor_forest_later/forest_qor_later_run.txt'))
@@ -105,6 +107,9 @@ if qor_path.exists():
  if (D/'08_QOR_ANALYSIS/qor_models_later.json').exists():
   data['qor_later_models']=json.loads((D/'08_QOR_ANALYSIS/qor_models_later.json').read_text())
   data['qor_later_rob'] = rows('10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/qor_rob2_later.csv')
+  # GRADE for the later-window bodies (hand-assessed record, same framework and columns as qor_grade.csv).
+  if (D/'08_QOR_ANALYSIS/qor_grade_later.csv').exists():
+   data['qor_later_grade'] = rows('10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/qor_grade_later.csv')
   data['qor_later_metafor_manifest'] = json.loads((D/'08_QOR_ANALYSIS/metafor_forest_later/manifest.json').read_text())
 
 e2_path=D/'09_E2_ANALYSIS/e2_model_outputs.json'
