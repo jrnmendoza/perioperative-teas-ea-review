@@ -1,0 +1,59 @@
+name: Dashboard checks (no deploy)
+
+# The same gates as deploy-pages.yml's build job, plus the browser regression test, run on pull requests so a
+# dashboard change is proven before it reaches the deployment branch. Nothing here publishes anything.
+
+"on":
+  pull_request:
+    paths:
+      - "dashboard/**"
+      - "10_FINAL_ADJUDICATION/**"
+      - "scripts/build_site.py"
+      - "scripts/build_evidence_graph.py"
+      - "scripts/check_current_dashboard.py"
+      - "scripts/check_current_dashboard_ui.cjs"
+      - "scripts/deploy_integrity_check.py"
+      - "scripts/check_generated_artifacts.py"
+      - "package.json"
+      - "package-lock.json"
+      - ".github/workflows/dashboard-checks.yml"
+      - ".github/workflows/deploy-pages.yml"
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install build dependencies
+        run: pip install --quiet openpyxl
+
+      - name: Build site
+        run: python3 scripts/build_site.py --out _site --commit "${{ github.sha }}"
+
+      - name: Deployment integrity check (v38 contract and mutations)
+        run: python3 scripts/deploy_integrity_check.py --site _site
+
+      - name: Generated artifacts match their generators
+        run: python3 scripts/check_generated_artifacts.py --fast
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      # Playwright drives the Chrome that ships with the runner image; no browser download.
+      - name: Browser regression checks of the built dashboard
+        run: |
+          npm ci --no-audit --no-fund
+          node scripts/check_current_dashboard_ui.cjs --site _site
