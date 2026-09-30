@@ -544,17 +544,25 @@ def main(site=None):
             mutations.append((NV,lambda d:first(d,'harms',lambda r:r['reporting']=='Not located (not a zero)').update(events_i='0',events_c='0')))
             mutations.append((NV,lambda d:first(d,'satisfaction').__setitem__('synthesis','Pooled by random-effects meta-analysis.')))
             mutations.append((NV,lambda d:first(d,'harms',lambda r:r['quote']).__setitem__('second_review','ZZ, 2026-01-01: confirmed')))
-            mutations.append((NV,lambda d:first(d,'harms',lambda r:not r['quote']).__setitem__('second_review','SP, 2026-09-30: confirmed') if any(x['file'].endswith('harms_structured.csv') for x in d.get('second_review',[])) else first(d,'harms',lambda r:not r['quote']).__setitem__('second_review','ZZ, 2026-01-01: confirmed')))
+            # flip a not-located row's review state against its record entry (pending under 'all confirmed', or marked under a partial review)
+            def flip_nl(d):
+                r=first(d,'harms',lambda r:not r['quote']);e=next((x for x in d.get('second_review',[]) if x['file'].endswith('harms_structured.csv')),None)
+                r['second_review']='pending' if r['second_review']!='pending' else (f"{e['reviewer']}, {e['review_date']}: confirmed" if e else 'ZZ, 2026-01-01: confirmed')
+            mutations.append((NV,flip_nl))
             mutations.append((NV,lambda d:first(d,'milestones',lambda r:r['register_result_id']).__setitem__('register_result_id','V33-OD-0001')))
             mutations.append((NV,lambda d:d['narrative_outcomes']['harms'].__setitem__(slice(None),[r for r in d['narrative_outcomes']['harms'] if r['report_id']!=d['narrative_outcomes']['harms'][0]['report_id']])))
         CS='Current-state report is current and matches the payload'
         mutations.append((CS,lambda d:d['qor_later_grade'].pop()))
-        mutations.append((CS,lambda d:d['second_review_pending'][0].__setitem__('items',int(d['second_review_pending'][0]['items'])+1)))
+        # the payload's pending count no longer matches the report (one more pending item than recorded)
+        mutations.append((CS,lambda d:(d['second_review_pending'][0].__setitem__('items',int(d['second_review_pending'][0]['items'])+1) if d['second_review_pending'] else d['second_review_pending'].append(dict(item_type='Harm',record='x',items=1)))))
         mutations.append((CS,lambda d:d['release'].__setitem__('e2_date','2026-12-31')))
         mutations.append((CS,lambda d:d['characteristics'][0].__setitem__('status','Legacy (v26, not re-verified)')))
         if 'second_review_pending' in data:
-            mutations.append(('Second-review worksheet current and unreviewed',lambda d:d['second_review_pending'][0].__setitem__('items',0)))
-            mutations.append(('Second-review worksheet current and unreviewed',lambda d:d['second_review_pending'].pop()))
+            if data['second_review_pending']:
+                mutations.append(('Second-review worksheet current and unreviewed',lambda d:d['second_review_pending'][0].__setitem__('items',0)))
+                mutations.append(('Second-review worksheet current and unreviewed',lambda d:d['second_review_pending'].pop()))
+            else:   # nothing pending: claiming a pending item must fail
+                mutations.append(('Second-review worksheet current and unreviewed',lambda d:d['second_review_pending'].append(dict(item_type='Harm',record='x',items=1))))
         if (D/'14_CHARACTERISTICS/baseline_protocol_extraction.csv').exists():
             BAS=('age','female','bmi','asa','anaesthesia','acupoints','frequency','intensity','timing','sessions','session_duration')
             QUOTED=('Extracted (PDF quote, single extractor)','Verified (PDF quote, second reviewer)')

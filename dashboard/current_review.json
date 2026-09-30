@@ -19244,7 +19244,7 @@
       "label": "Current-state report",
       "href": "current/FINAL_CURRENT_STATE_REPORT.md",
       "source": "FINAL_CURRENT_STATE_REPORT.md",
-      "sha256": "35b57c781cc0b05dcbd2f6b5f237da8448e6f0fdc59ff73b06024417ee8a2bbf"
+      "sha256": "63735cd5e62ecfcde5fa41d6ee1a227caa8c1f12955443dc2fa2f505a8a851c2"
     },
     {
       "label": "GRADE: all 38 reviewed bodies",
@@ -19664,7 +19664,7 @@
       "label": "Second-review record: RoB 2, GRADE and regimen characteristics",
       "href": "current/second_review.csv",
       "source": "10_FINAL_ADJUDICATION/02_DECISIONS/v38/second_review.csv",
-      "sha256": "3321da39499a178571d36da7bc5997b19e88fc9f24a862632e621671ffc05c80"
+      "sha256": "855f68c840959687b9913b2d3bc0bc7870fe19426d08a3b4315868ed46c483f0"
     },
     {
       "label": "Baseline and protocol characteristics: PDF page and verbatim quotation per value (single extractor)",
@@ -19676,7 +19676,7 @@
       "label": "Narrative outcomes report: recovery milestones, harms, satisfaction",
       "href": "current/NARRATIVE_OUTCOMES_REPORT.md",
       "source": "10_FINAL_ADJUDICATION/15_NARRATIVE_OUTCOMES/NARRATIVE_OUTCOMES_REPORT.md",
-      "sha256": "38966fa3902ac608c89d12eb9a57e2cf5c701222fb9d9045e5085a0ec9fcec87"
+      "sha256": "26d518f81a78e837eed34e6079bd9eee2fdb7e3c6f6dc61c45dfc14177ac1e0c"
     },
     {
       "label": "Recovery milestones (LOS, PACU, extubation, emergence, mobilisation): quoted values per report",
@@ -19688,7 +19688,7 @@
       "label": "Harms by separate category, all 70 reports (unreported is not zero)",
       "href": "current/harms_structured.csv",
       "source": "10_FINAL_ADJUDICATION/15_NARRATIVE_OUTCOMES/harms_structured.csv",
-      "sha256": "36afb3f39b4a74f9111c411a179a050aac2b9dadc41fce659a8932aeea5e16f7"
+      "sha256": "84029567ae7b9dafe95a4a69db975a0d937ef3101e164d5ab622e73c4f8c04f7"
     },
     {
       "label": "Satisfaction, acceptability and quality of life: quoted values per report",
@@ -19700,7 +19700,7 @@
       "label": "Second-review worksheet: items with one assessor (reviewer columns blank)",
       "href": "current/second_review_worksheet.csv",
       "source": "10_FINAL_ADJUDICATION/02_DECISIONS/v38/second_review_worksheet.csv",
-      "sha256": "88dff934e348df3881b267c6dc4daada43e4c9e20e6c38f1acdd4cdd1e10d294"
+      "sha256": "c5c651d792cbd4776ecd17402c58f0b96839e49c11022658dde2a0aa7a5e1da6"
     }
   ],
   "outcome_coverage": {
@@ -59434,9 +59434,9 @@
       "unit": "report rows",
       "reviewer": "SP",
       "review_date": "2026-09-30",
-      "outcome": "50 rows with data all confirmed; 38 not-located rows not reviewed",
+      "outcome": "all confirmed",
       "changes": "none",
-      "file_sha256": "36afb3f39b4a74f9111c411a179a050aac2b9dadc41fce659a8932aeea5e16f7"
+      "file_sha256": "84029567ae7b9dafe95a4a69db975a0d937ef3101e164d5ab622e73c4f8c04f7"
     },
     {
       "scope": "Satisfaction and acceptability",
@@ -61986,7 +61986,7 @@
         "source_pdf": "TEAS EA Verification/Source PDFs/covidence_698_full_article.pdf",
         "source_sha256": "56f30fc7755720d3fe7611252f8c3700faa6c6ab57cddc112fef729cc913c645",
         "extracted_by": "Single extractor, 2026-09-28",
-        "second_review": "pending"
+        "second_review": "SP, 2026-09-30: confirmed"
       },
       {
         "report_id": "Ao 2021",
@@ -62011,7 +62011,7 @@
         "source_pdf": "TEAS EA Verification/Source PDFs/download.pdf",
         "source_sha256": "023be0cdbc3241bf59fa7725d3149866a3e4066f696415c969ee99adfce8cfda",
         "extracted_by": "Single extractor, 2026-09-28",
-        "second_review": "pending"
+        "second_review": "SP, 2026-09-30: confirmed"
       },
       {
         "report_id": "Chen 1998",
@@ -62036,7 +62036,7 @@
         "source_pdf": "TEAS EA Verification/Source PDFs/covidence_969_chen_1998.pdf",
         "source_sha256": "92fa5191eb603eec1bd5fec9c4261c08c70fe527617dd9a72956ffeb8a29c232",
         "extracted_by": "Single extractor, 2026-09-28",
-        "second_review": "pending"
+        "second_review": "SP, 2026-09-30: confirmed"
       },
       {
         "report_id": "Chen 2015",
@@ -62061,7 +62061,7 @@
         "source_pdf": "037_chen_2015_thyroidectomy_lund.pdf",
         "source_sha256": "60361dc28f099a330d13fe98c9e96d8f94334920f0eaffd65c450ffd6dc87bfc",
         "extracted_by": "Single extractor, 2026-09-28",
-        "second_review": "pending"
+        "second_review": "SP, 2026-09-30: confirmed"
       },
       {
         "report_id": "Chen 2015 (Hyperalgesia)",
@@ -62086,7 +62086,7 @@
         "source_pdf": "040_chen_2015_hyperalgesia_lund.pdf",
         "source_sha256": "88719bd172fa29650c9503944c2e6f7cf083d1dac34c978d8f0d2ddf12b7d2ba",
         "extracted_by": "Single extractor, 2026-09-28",
-        "second_review": "pending"
+        "second_review": "SP, 2026-09-30: confirmed"
       },
       {
         "report_id": "Chen 2020",
@@ -62111,7 +62111,7 @@
         "source_pdf": "TEAS EA Verification/Source PDFs/Thoracic Cancer - 2020 - Chen - Efficacy of transcutaneous electrical acupoint stimulation combined with general anesthesia.pdf",
         "source_sha256": "debc925a549725290efc12e4fde6fbbb63880cb0bbd6425faac2e22b1e5c3663",
         "extracted_by": "Single extractor, 2026-09-28",
-        "second_review": "pending"
+        "second_review": "SP, 2026-09-30: confirmed"
       },
       {
         "report_id": "Coura 2011",
@@ -62161,7 +62161,7 @@
         "source_pdf": "TEAS EA Verification/Source PDFs/covidence_868_full_article.pdf",
         "source_sha256": "afb7b0095736da9d64b2c771296a6b74cb30c9287b7aa3e2644a14b5e0307529",
         "extracted_by": "Single extractor, 2026-09-28",
-        "second_review": "pending"
+        "second_review": "SP, 2026-09-30: confirmed"
       },
       {
         "report_id": "Gao 2021",
@@ -62236,7 +62236,7 @@
         "source_pdf": "retrieved_pdfs/030_grech_2016_lund.pdf",
         "source_sha256": "3e8ef2e6a5e8768cc4f9c4635ed2156fe7d03d529e4d140df84d8789138f6a63",
         "extracted_by": "Single extractor, 2026-09-28",
-        "second_review": "pending"
+        "second_review": "SP, 2026-09-30: confirmed"
       },
       {
         "report_id": "Gu 2019",
@@ -62261,7 +62261,7 @@
         "source_pdf": "TEAS EA Verification/Source PDFs/covidence_1471_full_article.pdf",
         "source_sha256": "b6fb0c0901f5f6716bd6cc6facc06f0844dca5c5e9d357527f55936d5de0aa33",
         "extracted_by": "Single extractor, 2026-09-28",
-        "second_review": "pending"
+        "second_review": "SP, 2026-09-30: confirmed"
       },
       {
         "report_id": "Guo 2023",
@@ -62361,7 +62361,7 @@
         "source_pdf": "TEAS EA Verification/Source PDFs/covidence_41_verified.pdf",
         "source_sha256": "c72b10318ea20c6c8d9c26a001fcbccbb77e7330991aa41644433139108a8cb4",
         "extracted_by": "Single extractor, 2026-09-28",
-        "second_review": "pending"
+        "second_review": "SP, 2026-09-30: confirmed"
       },
       {
         "report_id": "He 2026 (hepatectomy/JIS)",
@@ -62411,7 +62411,7 @@
         "source_pdf": "retrieved_pdfs/007_hou_2023.pdf",
         "source_sha256": "e942cff2967fe015df636ad7e2c2070c665cdc8ac23b7dafab141d6d16cddbe6",
         "extracted_by": "Single extractor, 2026-09-28",
-        "second_review": "pending"
+        "second_review": "SP, 2026-09-30: confirmed"
       },
       {
         "report_id": "Huang 2017",
@@ -62786,7 +62786,7 @@
         "source_pdf": "retrieved_pdfs/049_lee_2011.pdf",
         "source_sha256": "7ccfcd9d5a6cb8d3957f2666285774d528469a929b619a9e28a7c2b56ca36fe5",
         "extracted_by": "Single extractor, 2026-09-28",
-        "second_review": "pending"
+        "second_review": "SP, 2026-09-30: confirmed"
       },
       {
         "report_id": "Li 2021",
@@ -62811,7 +62811,7 @@
         "source_pdf": "TEAS EA Verification/Source PDFs/covidence_437_full_article.pdf",
         "source_sha256": "52c6875e2a79825acdfc51e806e848b8da74b70d9a854fcb8a042e264e1b5aca",
         "extracted_by": "Single extractor, 2026-09-28",
-        "second_review": "pending"
+        "second_review": "SP, 2026-09-30: confirmed"
       },
       {
         "report_id": "Li 2022",
@@ -62836,7 +62836,7 @@
         "source_pdf": "TEAS EA Verification/Source PDFs/getfile.php.pdf",
         "source_sha256": "adc64abb5486e6a8fc358d6ffe320df7742a381dc3592167dc97dfbabb4b2d8d",
         "extracted_by": "Single extractor, 2026-09-28",
-        "second_review": "pending"
+        "second_review": "SP, 2026-09-30: confirmed"
       },
       {
         "report_id": "Liang 2021",
@@ -62861,7 +62861,7 @@
         "source_pdf": "retrieved_pdfs/014_liang_2021.pdf",
         "source_sha256": "cf2cc8a627b115ade55a85190c39352aa1a8e63ff1974e4a33dc7b65f961a5a3",
         "extracted_by": "Single extractor, 2026-09-28",
-        "second_review": "pending"
+        "second_review": "SP, 2026-09-30: confirmed"
       },
       {
         "report_id": "Lin 2002",
@@ -62886,7 +62886,7 @@
         "source_pdf": "TEAS EA Verification/Source PDFs/covidence_951_lin_2002.pdf",
         "source_sha256": "3269060aad01eab541c8f7a29ae1088b784936d22b0384e8797f905da1a6550d",
         "extracted_by": "Single extractor, 2026-09-28",
-        "second_review": "pending"
+        "second_review": "SP, 2026-09-30: confirmed"
       },
       {
         "report_id": "Liu 2015",
@@ -62911,7 +62911,7 @@
         "source_pdf": "TEAS EA Verification/Source PDFs/covidence_681_full_article.pdf",
         "source_sha256": "9cf5bec1437acb80b316e677836c7069282325820a6c6c9ceab4600976ec253c",
         "extracted_by": "Single extractor, 2026-09-28",
-        "second_review": "pending"
+        "second_review": "SP, 2026-09-30: confirmed"
       },
       {
         "report_id": "Liu 2021",
@@ -62936,7 +62936,7 @@
         "source_pdf": "TEAS EA Verification/Source PDFs/getfile.php-2.pdf",
         "source_sha256": "02e9d16c8cb8dd39b10b0e073b010a22888c05ae8dd4c6cc7ccfafdf2e0bf2cb",
         "extracted_by": "Single extractor, 2026-09-28",
-        "second_review": "pending"
+        "second_review": "SP, 2026-09-30: confirmed"
       },
       {
         "report_id": "Liu 2025",
@@ -63036,7 +63036,7 @@
         "source_pdf": "TEAS EA Verification/Source PDFs/1-s2.0-S0020138325005200.pdf",
         "source_sha256": "96e50ce97c0abd3a6258ae9935df22a79c14454aa3293252100fca9474b275da",
         "extracted_by": "Single extractor, 2026-09-28",
-        "second_review": "pending"
+        "second_review": "SP, 2026-09-30: confirmed"
       },
       {
         "report_id": "Lu 2021",
@@ -63086,7 +63086,7 @@
         "source_pdf": "TEAS EA Verification/Source PDFs/getfile.php-3.pdf",
         "source_sha256": "83439ead7b747aa55a3be6aab468dc4350619651c2dfd0c516ffbf47d7b16f7c",
         "extracted_by": "Single extractor, 2026-09-28",
-        "second_review": "pending"
+        "second_review": "SP, 2026-09-30: confirmed"
       },
       {
         "report_id": "Luo 2026",
@@ -63261,7 +63261,7 @@
         "source_pdf": "TEAS EA Verification/Source PDFs/covidence_505_full_article.pdf",
         "source_sha256": "04adf93c41df2ef075a05eb2692f4d5354e114c333dfceadbfd642050d04dcb8",
         "extracted_by": "Single extractor, 2026-09-28",
-        "second_review": "pending"
+        "second_review": "SP, 2026-09-30: confirmed"
       },
       {
         "report_id": "Pan 2023",
@@ -63286,7 +63286,7 @@
         "source_pdf": "TEAS EA Verification/Source PDFs/getfile.php-4.pdf",
         "source_sha256": "7f51a98abb60112923a7996495bc8d143af74aa710175a70c29894b62a64479d",
         "extracted_by": "Single extractor, 2026-09-28",
-        "second_review": "pending"
+        "second_review": "SP, 2026-09-30: confirmed"
       },
       {
         "report_id": "Seevaunnamtum 2016",
@@ -63311,7 +63311,7 @@
         "source_pdf": "TEAS EA Verification/Source PDFs/covidence_596_verified.pdf",
         "source_sha256": "7c25e5c670ee6ebcd32888161b0b53f2ac88a1eb1061a51def0b529c6320d6a3",
         "extracted_by": "Single extractor, 2026-09-28",
-        "second_review": "pending"
+        "second_review": "SP, 2026-09-30: confirmed"
       },
       {
         "report_id": "Sim 2002",
@@ -63361,7 +63361,7 @@
         "source_pdf": "TEAS EA Verification/Source PDFs/getfile.php-6.pdf",
         "source_sha256": "0a262651d2a78a1454e1b07a661f3c6a77c06b6a6143de7adb70ca1abc9c844a",
         "extracted_by": "Single extractor, 2026-09-28",
-        "second_review": "pending"
+        "second_review": "SP, 2026-09-30: confirmed"
       },
       {
         "report_id": "Sun 2017",
@@ -63461,7 +63461,7 @@
         "source_pdf": "TEAS EA Verification/Source PDFs/s40122-023-00493-2.pdf",
         "source_sha256": "9eae987a3d59d97843498faa079d7eac7ae430cae80d2971d356bb988714bd6c",
         "extracted_by": "Single extractor, 2026-09-28",
-        "second_review": "pending"
+        "second_review": "SP, 2026-09-30: confirmed"
       },
       {
         "report_id": "Wang 2024",
@@ -63486,7 +63486,7 @@
         "source_pdf": "TEAS EA Verification/Source PDFs/covidence_212_full_article.pdf",
         "source_sha256": "0d6dfc8648e5411a59cb9c8c9af42519fedd58975fe97916b08b61fde82f946e",
         "extracted_by": "Single extractor, 2026-09-28",
-        "second_review": "pending"
+        "second_review": "SP, 2026-09-30: confirmed"
       },
       {
         "report_id": "Wong 2006",
@@ -63536,7 +63536,7 @@
         "source_pdf": "TEAS EA Verification/Source PDFs/wu2015.pdf",
         "source_sha256": "193321b7d3e57c0519cd87df66886a7015c5d816b43403e67b12ff198fd54999",
         "extracted_by": "Single extractor, 2026-09-28",
-        "second_review": "pending"
+        "second_review": "SP, 2026-09-30: confirmed"
       },
       {
         "report_id": "Wu 2022",
@@ -63561,7 +63561,7 @@
         "source_pdf": "TEAS EA Verification/Source PDFs/s12871-022-01875-3.pdf",
         "source_sha256": "bb3c8a4aedbf656c306082e2b889c37c04af8d614fb8e8f23b3d6da85e33d3aa",
         "extracted_by": "Single extractor, 2026-09-28",
-        "second_review": "pending"
+        "second_review": "SP, 2026-09-30: confirmed"
       },
       {
         "report_id": "Wu 2025",
@@ -63636,7 +63636,7 @@
         "source_pdf": "TEAS EA Verification/Source PDFs/covidence_701_full_article.pdf",
         "source_sha256": "266dbdedc8cd25d5a1062363b7ead083bd8d7f939052db59b24463cdf7f795a3",
         "extracted_by": "Single extractor, 2026-09-28",
-        "second_review": "pending"
+        "second_review": "SP, 2026-09-30: confirmed"
       },
       {
         "report_id": "Xing 2022",
@@ -63661,7 +63661,7 @@
         "source_pdf": "TEAS EA Verification/Source PDFs/s40122-022-00429-2.pdf",
         "source_sha256": "ef7826ca61ea657ea56689464a863c5340af1703488c259420346131727062c3",
         "extracted_by": "Single extractor, 2026-09-28",
-        "second_review": "pending"
+        "second_review": "SP, 2026-09-30: confirmed"
       },
       {
         "report_id": "Xiong 2021",
@@ -63686,7 +63686,7 @@
         "source_pdf": "TEAS EA Verification/Source PDFs/covidence_431_full_article.pdf",
         "source_sha256": "85f0cc1e5493db16e616ba5a77950207798546aa0ed9986773bbcefac9ca1d45",
         "extracted_by": "Single extractor, 2026-09-28",
-        "second_review": "pending"
+        "second_review": "SP, 2026-09-30: confirmed"
       },
       {
         "report_id": "Yang 2020",
@@ -63786,7 +63786,7 @@
         "source_pdf": "retrieved_pdfs/039_yao_2015.pdf",
         "source_sha256": "769574c60b55724c5f5d1bb988ebb6cbd252be9b95734e3b11bf61bf5ae9272f",
         "extracted_by": "Single extractor, 2026-09-28",
-        "second_review": "pending"
+        "second_review": "SP, 2026-09-30: confirmed"
       },
       {
         "report_id": "Yeh 2010",
@@ -63811,7 +63811,7 @@
         "source_pdf": "TEAS EA Verification/Source PDFs/015_PainATHM-2.pdf",
         "source_sha256": "58b5e1536bc704b429f00e4886606814fbec60efa6ffe63e7098571548c41994",
         "extracted_by": "Single extractor, 2026-09-28",
-        "second_review": "pending"
+        "second_review": "SP, 2026-09-30: confirmed"
       },
       {
         "report_id": "Yeh 2011",
@@ -63861,7 +63861,7 @@
         "source_pdf": "TEAS EA Verification/Source PDFs/s13063-019-3892-4.pdf",
         "source_sha256": "12fbd503870f7f12216ff5f2544b159c66fecd557d4838bcabceec1aa151fb69",
         "extracted_by": "Single extractor, 2026-09-28",
-        "second_review": "pending"
+        "second_review": "SP, 2026-09-30: confirmed"
       },
       {
         "report_id": "Zhan 2020",
@@ -63911,7 +63911,7 @@
         "source_pdf": "retrieved_pdfs/043_zhang_2014.pdf",
         "source_sha256": "d11683b0117d0969b067c93da9fc3dee44082ef4c10edd5fb53023a0beced310",
         "extracted_by": "Single extractor, 2026-09-28",
-        "second_review": "pending"
+        "second_review": "SP, 2026-09-30: confirmed"
       },
       {
         "report_id": "Zhang 2018",
@@ -63936,7 +63936,7 @@
         "source_pdf": "TEAS EA Verification/Source PDFs/Needleless Transcutaneous Electrical Acustimulation_ A Pilot Study Evaluating Improvement in Post-Operative Recovery-2.pdf",
         "source_sha256": "14060b2cb80b9e271fdeb2d154101eba725b0e4864fe90d95b8730d9848a9d2e",
         "extracted_by": "Single extractor, 2026-09-28",
-        "second_review": "pending"
+        "second_review": "SP, 2026-09-30: confirmed"
       },
       {
         "report_id": "Zhang 2023",
@@ -64036,7 +64036,7 @@
         "source_pdf": "TEAS EA Verification/Source PDFs/109551.pdf",
         "source_sha256": "691899a10069da68a1525a13662118fca1d4f9ed245d4304b120c426d27bb053",
         "extracted_by": "Single extractor, 2026-09-28",
-        "second_review": "pending"
+        "second_review": "SP, 2026-09-30: confirmed"
       },
       {
         "report_id": "Zheng 2025",
@@ -64061,7 +64061,7 @@
         "source_pdf": "TEAS EA Verification/Source PDFs/109499.pdf",
         "source_sha256": "a99722242c4b1800916d66613b5a0ed223a91f853e14ecce929740eb91dc466b",
         "extracted_by": "Single extractor, 2026-09-28",
-        "second_review": "pending"
+        "second_review": "SP, 2026-09-30: confirmed"
       },
       {
         "report_id": "Zhou 2021",
@@ -64814,13 +64814,7 @@
       }
     ]
   },
-  "second_review_pending": [
-    {
-      "item_type": "Harm (not located)",
-      "record": "10_FINAL_ADJUDICATION/15_NARRATIVE_OUTCOMES/harms_structured.csv",
-      "items": 38
-    }
-  ],
+  "second_review_pending": [],
   "paired_pain": [
     {
       "analysis": "E1",
@@ -65370,7 +65364,6 @@
     }
   ],
   "outstanding": [
-    "Second review of single-assessor items.",
     "Author decisions in the manuscript.",
     "Author query replies.",
     "Submission sections not yet written.",

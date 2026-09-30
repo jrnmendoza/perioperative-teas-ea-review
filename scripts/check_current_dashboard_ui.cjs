@@ -226,7 +226,7 @@ let passed=0;const ok=(name)=>{passed++;console.log('PASS '+name);};
     assert.ok(nar.has,'Coverage must show the structured narrative tables');
     assert.equal(nar.rows,nar.want,'Every structured narrative row is shown exactly once');
     assert.equal(nar.quotes,nar.want,'Every structured narrative row shows its quoted source');
-    assert.ok(nar.text.includes('nothing is pooled')&&nar.text.includes('registered additional outcomes')&&nar.text.includes(`${nar.pending} rows await second review`)&&(!nar.reviewed||nar.text.includes(`${nar.reviewed} rows were confirmed by a second reviewer`)),'Narrative note must state no pooling, registration and pending review');
+    assert.ok(nar.text.includes('nothing is pooled')&&nar.text.includes('registered additional outcomes')&&nar.text.includes(nar.pending?`${nar.pending} rows await second review`:'no row awaits second review')&&(!nar.reviewed||nar.text.includes(`${nar.reviewed} rows were confirmed by a second reviewer`)),'Narrative note must state no pooling, registration and pending review');
     assert.ok(nar.text.includes(`No intervention-harm result located (${nar.none.length} reports; not a zero)`)&&nar.none.every(id=>nar.text.includes(id)),'Reports without a harms result must be listed as not located, not zero');
     assert.ok(!/pooled (estimate|risk|mean)|meta-analys/i.test(nar.text.replace(/nothing is pooled|not pooled/g,'')),'Narrative tables must not present pooled results');
     for(const f of ['recovery_milestones.csv','harms_structured.csv','satisfaction_acceptability.csv','NARRATIVE_OUTCOMES_REPORT.md'])assert.ok(nar.links.some(h=>h.endsWith(f)),'Narrative download missing: '+f);
