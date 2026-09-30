@@ -68,6 +68,7 @@ def check_table(name, reviews, R=None):
         if not re.fullmatch(r'Single extractor, \d{4}-\d{2}-\d{2}', r['extracted_by']): errs.append(f'{where}: bad extracted_by')
         if r['second_review'] != 'pending' and r['second_review'] != expected: errs.append(f'{where}: second review claimed without a matching record')
         if entry and r['second_review'] != 'pending' and not r['quote'] and entry['outcome'] != 'all confirmed': errs.append(f'{where}: marks a row the review did not cover')
+        if entry and entry['outcome'] == 'all confirmed' and r['second_review'] == 'pending': errs.append(f'{where}: pending although the record says all confirmed')
     if name == 'harms_structured.csv':
         missing = set(V.registry) - {r['report_id'] for r in R}
         errs += [f'{name}: report {m} has no row (a report without a harms result must say "Not located")' for m in sorted(missing)]
