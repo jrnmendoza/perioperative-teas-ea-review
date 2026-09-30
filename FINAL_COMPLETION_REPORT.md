@@ -369,4 +369,16 @@ Recommended for both branches:
 
 ## M. Deployment
 
-To be completed after merge and deployment.
+| Item | Value |
+|---|---|
+| Pull request | [jrnmendoza/perioperative-teas-ea-review#55](https://github.com/jrnmendoza/perioperative-teas-ea-review/pull/55): PR checks ("Dashboard checks (no deploy)", run 36478684969) passed; merged 30 September 2026 |
+| Commit deployed | `1f3632f1c1528c47400bce1721d4c6a4a1dbd0e2` (merge of PR #55; tree identical to `f899537`) |
+| Deployment branch | `claude-v26-dashboard-final` fast-forwarded `80e7e42` → `1f3632f` |
+| Pages run | 36755127492: build, deploy and verify jobs all succeeded |
+| Live URL | <https://jrnmendoza.github.io/perioperative-teas-ea-review/> |
+| Cache-busting URL | <https://jrnmendoza.github.io/perioperative-teas-ea-review/?build=1f3632f1> |
+| Live `build-meta.json` | `git_commit` `1f3632f…`, built 2026-09-30T17:57:55Z, content fingerprint `55ed70a4ae2d` |
+| Live verification | `scripts/verify_deployment.py --commit 1f3632f…`: all live verification checks passed (79 downloads hash-match their sources). `scripts/check_current_dashboard_ui.cjs` against the live URL: 19/19 browser checks passed. |
+
+This report's deployment section was added afterwards in a report-only commit. The Pages workflow's path filter
+excludes this file, so recording it did not redeploy the site; the live content remains `1f3632f`.
