@@ -117,11 +117,13 @@ judgements, estimand classification and the methodological adjudications were
 reported by the team. On 28 September 2026 a second reviewer (SP) checked and
 confirmed, without changes, the core and ~24-hour quality-of-recovery RoB 2
 assessments, the later-window RoB 2 assessments, the core and ~24-hour
-quality-of-recovery GRADE judgements and the regimen characteristics. That was a
-review of the first assessments, not an independent duplicate assessment, so they
-still do not constitute two independent human assessments; the later-window GRADE
-judgements, the baseline and protocol characteristics and the narrative-outcome
-tables await second review.
+quality-of-recovery GRADE judgements and the regimen characteristics; on 30
+September 2026 the same reviewer confirmed the RoB 2 signalling responses, the
+later-window GRADE judgements, the baseline and protocol characteristics and the
+narrative-outcome tables, except the harms "not located" determinations, which
+await second review. That was a review of the first assessments, not an
+independent duplicate assessment, so they still do not constitute two independent
+human assessments.
 **Every adjudication decision was made after the results of the contributing
 trials were known** and none should be read as prospective. Registration
 followed the recorded review start date, so this review is not described as
@@ -142,7 +144,7 @@ from synthesis rather than converted onto assumed distributions.
 are now in structured, quote-checked tables but were not synthesised: the review
 defined no quantitative estimand for these registered additional outcomes, which
 is a deviation from the registered synthesis plan. The four later-window
-quality-of-recovery bodies were graded post hoc and await second review. No eligible result for persistent opioid use beyond
+quality-of-recovery bodies were graded post hoc, and the grading was then checked by a second reviewer. No eligible result for persistent opioid use beyond
 30 days was located, so this review cannot address it. Harms and satisfaction
 are reported descriptively only; no pooled safety estimate was computed, and
 absence of a pooled estimate is not evidence of safety.

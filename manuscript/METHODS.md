@@ -151,7 +151,7 @@ protocol (acupoints, frequency, intensity, timing, sessions, session duration)
 were re-extracted from the source PDFs on 28 September 2026, each value with its
 page and a verbatim quotation checked automatically against the report's text,
 replacing values inherited from an earlier extraction workbook that had not been
-re-verified; this extraction awaits second review. The registered process is
+re-verified; a second reviewer confirmed every value on 30 September 2026. The registered process is
 extraction by at least two people, or by a person–machine combination, with a
 procedure for resolving differences.
 
@@ -437,9 +437,11 @@ locators are Additional file 6.
 > confirmed without changes the core and quality-of-recovery RoB 2 assessments
 > (94, 8 and 5), the core and ~24-hour quality-of-recovery GRADE judgements (38 and
 > 3) and the 280 regimen-characteristic values, as recorded with file hashes in the
-> second-review record; that the signalling-question responses, the later-window
-> GRADE judgements, the baseline and protocol characteristics and the
-> narrative-outcome tables have not been second-reviewed; and that a check of a
+> second-review record; that on 30 September 2026 the same reviewer confirmed
+> without changes the signalling-question responses (2,068, 176 and 110), the four
+> later-window GRADE judgements, the 714 baseline and protocol characteristic
+> values and the 170 narrative-outcome rows with located results, the 38 harms
+> "not located" determinations remaining unreviewed; and that a check of a
 > first assessment is not an independent duplicate assessment, so the current
 > judgements do not constitute two independent human assessments. The team must confirm this wording, and in particular the
 > statement about prior human review, which is team-reported and cannot be
@@ -519,9 +521,10 @@ The review team set the delegation and the decision rules, and every decision is
 recorded with its date, rationale and the source text relied upon in files
 published with this review. A second reviewer (SP) checked and confirmed the
 risk-of-bias assessments, the core and ~24-hour quality-of-recovery GRADE
-judgements and the regimen characteristics on 28 September 2026; the later-window
-GRADE judgements, the baseline and protocol characteristics and the
-narrative-outcome tables had not been second-reviewed at the time of writing. We
+judgements and the regimen characteristics on 28 September 2026, and the
+signalling responses, the later-window GRADE judgements, the baseline and protocol
+characteristics and the narrative-outcome tables on 30 September 2026; the harms
+"not located" determinations had not been second-reviewed at the time of writing. We
 do not claim that every AI-generated output was independently verified by a human
 reader. All source reports are published in
 hashed form and every extracted value carries a source locator, so any individual

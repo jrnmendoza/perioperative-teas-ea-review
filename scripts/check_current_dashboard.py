@@ -80,8 +80,9 @@ def baseline_verified(d):
     sys.path.insert(0,str(D/'code'));import verify_baseline_extraction as B
     R={(r['report_id'],r['field']):r for r in rows(rec)}
     if any(B.V.check_row(r,B.FIELDS) for r in R.values()):return False
-    covered=any(x['file'].endswith('baseline_protocol_extraction.csv') for x in d.get('second_review',[]))
-    if not covered and any(r['second_review']!='pending' for r in R.values()):return False
+    entry=next((x for x in d.get('second_review',[]) if x['file'].endswith('baseline_protocol_extraction.csv')),None)
+    expected=f"{entry['reviewer']}, {entry['review_date']}: confirmed" if entry else None
+    if any(r['second_review'] not in ('pending',expected) for r in R.values()):return False
     for c in d['characteristics']:
         if c['field'] not in B.FIELDS:continue
         r=R.get((c['report_id'],c['field']))
@@ -163,7 +164,7 @@ def narrative_verified(d):
     n=d.get('narrative_outcomes')
     if n is None:return not (D/'15_NARRATIVE_OUTCOMES/recovery_milestones.csv').exists()
     sys.path.insert(0,str(D/'code'));import verify_narrative_outcomes as N
-    reviewed={r['file'] for r in d.get('second_review',[])}
+    reviewed={r['file']:r for r in d.get('second_review',[])}
     return set(n)==set(NARR_FILES) and not any(N.check_table(f,reviewed,n[k])[0] for k,f in NARR_FILES.items())
 import functools
 @functools.lru_cache(maxsize=None)  # git's index does not change during one run; each mutation re-runs every contract
@@ -191,8 +192,14 @@ def second_review_consistent(d):
         f=ROOT/r['file']
         if not (r['reviewer'] and re.fullmatch(r'\d{4}-\d{2}-\d{2}',r['review_date']) and f.is_file()):return False
         if int(r['items'])!=len(rows(f)) or sha(f)!=r['file_sha256']:return False
-        if r['file'].endswith('regimen_extraction.csv') and r['outcome']=='all confirmed':
-            if any(x['second_review']!=f"{r['reviewer']}, {r['review_date']}: confirmed" for x in rows(f)):return False
+        # A record with a per-row second_review column: every row marked reviewed carries this entry's reviewer and date;
+        # 'all confirmed' leaves no row pending, and a partial outcome leaves pending only rows with nothing quoted.
+        R=rows(f)
+        if R and 'second_review' in R[0]:
+            expected=f"{r['reviewer']}, {r['review_date']}: confirmed"
+            if any(x['second_review'] not in ('pending',expected) for x in R):return False
+            if r['outcome']=='all confirmed' and any(x['second_review']=='pending' for x in R):return False
+            if r['outcome']!='all confirmed' and any(x['second_review']=='pending' and x.get('quote') for x in R):return False
     return True
 def stata_reproduces_canonical(d):
     """The shipped Stata estimates still reproduce the current canonical models (catches a stale Stata run)."""
@@ -536,7 +543,8 @@ def main(site=None):
             mutations.append((NV,lambda d:first(d,'milestones').__setitem__('quote','a quotation that is not in the report')))
             mutations.append((NV,lambda d:first(d,'harms',lambda r:r['reporting']=='Not located (not a zero)').update(events_i='0',events_c='0')))
             mutations.append((NV,lambda d:first(d,'satisfaction').__setitem__('synthesis','Pooled by random-effects meta-analysis.')))
-            mutations.append((NV,lambda d:first(d,'harms',lambda r:r['quote']).__setitem__('second_review','SP, 2026-09-28: confirmed')))
+            mutations.append((NV,lambda d:first(d,'harms',lambda r:r['quote']).__setitem__('second_review','ZZ, 2026-01-01: confirmed')))
+            mutations.append((NV,lambda d:first(d,'harms',lambda r:not r['quote']).__setitem__('second_review','SP, 2026-09-30: confirmed') if any(x['file'].endswith('harms_structured.csv') for x in d.get('second_review',[])) else first(d,'harms',lambda r:not r['quote']).__setitem__('second_review','ZZ, 2026-01-01: confirmed')))
             mutations.append((NV,lambda d:first(d,'milestones',lambda r:r['register_result_id']).__setitem__('register_result_id','V33-OD-0001')))
             mutations.append((NV,lambda d:d['narrative_outcomes']['harms'].__setitem__(slice(None),[r for r in d['narrative_outcomes']['harms'] if r['report_id']!=d['narrative_outcomes']['harms'][0]['report_id']])))
         CS='Current-state report is current and matches the payload'
@@ -549,14 +557,16 @@ def main(site=None):
             mutations.append(('Second-review worksheet current and unreviewed',lambda d:d['second_review_pending'].pop()))
         if (D/'14_CHARACTERISTICS/baseline_protocol_extraction.csv').exists():
             BAS=('age','female','bmi','asa','anaesthesia','acupoints','frequency','intensity','timing','sessions','session_duration')
-            first_bas=lambda d,st:next(c for c in d['characteristics'] if c['field'] in BAS and c['status']==st)
-            # a changed value, a quote that is not in the record, a claimed second review, a value with no page locator,
+            QUOTED=('Extracted (PDF quote, single extractor)','Verified (PDF quote, second reviewer)')
+            first_bas=lambda d,st:next(c for c in d['characteristics'] if c['field'] in BAS and (c['status'] in QUOTED if st=='quoted' else c['status']==st) and (st!='quoted' or 'baseline_protocol_extraction' in c['source']))
+            flip=lambda c:c.__setitem__('status',QUOTED[1-QUOTED.index(c['status'])])
+            # a changed value, a quote that is not in the record, a review state that contradicts the record, a value with no page locator,
             # and a legacy value brought back where the record now governs
-            mutations.append(('Baseline/protocol extraction matches record and source quotes',lambda d:first_bas(d,'Extracted (PDF quote, single extractor)').__setitem__('value','changed')))
-            mutations.append(('Baseline/protocol extraction matches record and source quotes',lambda d:first_bas(d,'Extracted (PDF quote, single extractor)').__setitem__('note','p.1: “quote not in source”')))
-            mutations.append(('Baseline/protocol extraction matches record and source quotes',lambda d:first_bas(d,'Extracted (PDF quote, single extractor)').__setitem__('status','Verified (PDF quote, second reviewer)')))
-            mutations.append(('Baseline/protocol extraction matches record and source quotes',lambda d:(lambda c:c.__setitem__('source',c['source'].split(' p.')[0]))(first_bas(d,'Extracted (PDF quote, single extractor)'))))
-            mutations.append(('Baseline/protocol extraction matches record and source quotes',lambda d:first_bas(d,'Extracted (PDF quote, single extractor)').update(status='Legacy (v26, not re-verified)',source='dashboard/data.js')))
+            mutations.append(('Baseline/protocol extraction matches record and source quotes',lambda d:first_bas(d,'quoted').__setitem__('value','changed')))
+            mutations.append(('Baseline/protocol extraction matches record and source quotes',lambda d:first_bas(d,'quoted').__setitem__('note','p.1: “quote not in source”')))
+            mutations.append(('Baseline/protocol extraction matches record and source quotes',lambda d:flip(first_bas(d,'quoted'))))
+            mutations.append(('Baseline/protocol extraction matches record and source quotes',lambda d:(lambda c:c.__setitem__('source',c['source'].split(' p.')[0]))(first_bas(d,'quoted'))))
+            mutations.append(('Baseline/protocol extraction matches record and source quotes',lambda d:first_bas(d,'quoted').update(status='Legacy (v26, not re-verified)',source='dashboard/data.js')))
             mutations.append(('Baseline/protocol extraction matches record and source quotes',lambda d:first_bas(d,'Not reported in source').update(value='5–15 mA',status='Legacy (v26, not re-verified)')))
     if 'stata' in data:
         mutations.append(('Stata verification identity',lambda d:d['stata']['summary'][0].__setitem__('status','changed')))
