@@ -15,7 +15,7 @@
     "label": "Current-state report",
     "href": "current/FINAL_CURRENT_STATE_REPORT.md",
     "source": "FINAL_CURRENT_STATE_REPORT.md",
-    "sha256": "111df553c25f7dea1c281570e109ce732f490fd9879a9872c6cd7f42ac13290b"
+    "sha256": "35b57c781cc0b05dcbd2f6b5f237da8448e6f0fdc59ff73b06024417ee8a2bbf"
   },
   {
     "label": "GRADE: all 38 reviewed bodies",
@@ -141,7 +141,7 @@
     "label": "RoB signalling-question record",
     "href": "current/rob2_signalling_questions.csv",
     "source": "10_FINAL_ADJUDICATION/02_DECISIONS/v38/rob2_signalling_questions.csv",
-    "sha256": "e90792b964b6d258cbd30ea2df168f3eb23ff5d79df0555f2f494114e3f70a94"
+    "sha256": "d6359cad20b533f8f03a883b652b6578c8c2b685a3a3ce01a1bc70a2c7a38a83"
   },
   {
     "label": "Harms and PROM coverage report",
@@ -261,7 +261,7 @@
     "label": "QoR later-window GRADE (four bodies)",
     "href": "current/qor_grade_later.csv",
     "source": "10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/qor_grade_later.csv",
-    "sha256": "f7dd7d21401c0b9f5d3d2a381325591c04298a352f77e1e82256217d3808a5a0"
+    "sha256": "5532d1017e063b904f39ea73d275ccf8380f6fe5c99ca2e3c426724d3f75b87e"
   },
   {
     "label": "QoR later-window source locators",
@@ -429,48 +429,48 @@
     "label": "Harmonised report characteristics with verification status",
     "href": "current/report_characteristics.csv",
     "source": "10_FINAL_ADJUDICATION/14_CHARACTERISTICS/report_characteristics.csv",
-    "sha256": "39098fa3fc461451e238533fcfd990c33217a6a5c4617f17afc3ef85061be8df"
+    "sha256": "f9eb9c0fa490c4cd0081307ff73e6698127c4c2101414abb67917344339d2515"
   },
   {
     "label": "Second-review record: RoB 2, GRADE and regimen characteristics",
     "href": "current/second_review.csv",
     "source": "10_FINAL_ADJUDICATION/02_DECISIONS/v38/second_review.csv",
-    "sha256": "966b397889410a933480fcb4e4d1ab5d8d31ea0dce4215d25a79be9289d0e26d"
+    "sha256": "3321da39499a178571d36da7bc5997b19e88fc9f24a862632e621671ffc05c80"
   },
   {
     "label": "Baseline and protocol characteristics: PDF page and verbatim quotation per value (single extractor)",
     "href": "current/baseline_protocol_extraction.csv",
     "source": "10_FINAL_ADJUDICATION/14_CHARACTERISTICS/baseline_protocol_extraction.csv",
-    "sha256": "4dfbb0cb6523c4c7a9c0dee1eeb27121f1f69f0f32a464c31687b22a459285fe"
+    "sha256": "0c5546b62ef9edf1875aec7a9496f0ed487f411e8ec0dba5d4875a485ad59d36"
   },
   {
     "label": "Narrative outcomes report: recovery milestones, harms, satisfaction",
     "href": "current/NARRATIVE_OUTCOMES_REPORT.md",
     "source": "10_FINAL_ADJUDICATION/15_NARRATIVE_OUTCOMES/NARRATIVE_OUTCOMES_REPORT.md",
-    "sha256": "2b66dc24c7c06b0b6652b6316399664347c1737b06eb11499ccdc45fbf3604d2"
+    "sha256": "38966fa3902ac608c89d12eb9a57e2cf5c701222fb9d9045e5085a0ec9fcec87"
   },
   {
     "label": "Recovery milestones (LOS, PACU, extubation, emergence, mobilisation): quoted values per report",
     "href": "current/recovery_milestones.csv",
     "source": "10_FINAL_ADJUDICATION/15_NARRATIVE_OUTCOMES/recovery_milestones.csv",
-    "sha256": "8312e2db7f6be43ef6bb1a175b593778ab4554cead6bedc6af0566543b612bf3"
+    "sha256": "b942c8ee90cf9ec452cb93ff49f00205735c79a1cad382f937c70b64bf338e9f"
   },
   {
     "label": "Harms by separate category, all 70 reports (unreported is not zero)",
     "href": "current/harms_structured.csv",
     "source": "10_FINAL_ADJUDICATION/15_NARRATIVE_OUTCOMES/harms_structured.csv",
-    "sha256": "70f5102d1aef5a68c90aaee7d11bedbe224182cc6eca9986aa404a49e530f6aa"
+    "sha256": "36afb3f39b4a74f9111c411a179a050aac2b9dadc41fce659a8932aeea5e16f7"
   },
   {
     "label": "Satisfaction, acceptability and quality of life: quoted values per report",
     "href": "current/satisfaction_acceptability.csv",
     "source": "10_FINAL_ADJUDICATION/15_NARRATIVE_OUTCOMES/satisfaction_acceptability.csv",
-    "sha256": "cd4c4273a826d3f69c1d53c0dba77360378e60a61f0820d38881bc6cc89a47ca"
+    "sha256": "a5ce226a62457b600fc2d58e18e4ea41bea165f9b9d1bf111cf62e4c4bb8ee00"
   },
   {
     "label": "Second-review worksheet: items with one assessor (reviewer columns blank)",
     "href": "current/second_review_worksheet.csv",
     "source": "10_FINAL_ADJUDICATION/02_DECISIONS/v38/second_review_worksheet.csv",
-    "sha256": "bf5f8201ed3ec8ff4f97e0a2070cdf641f5e780c7e24e30560b383f632c1fde4"
+    "sha256": "88dff934e348df3881b267c6dc4daada43e4c9e20e6c38f1acdd4cdd1e10d294"
   }
 ]

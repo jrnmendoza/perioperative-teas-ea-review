@@ -142,7 +142,9 @@ let passed=0;const ok=(name)=>{passed++;console.log('PASS '+name);};
   assert.ok(dr.q>0,'Drawer must show source quotations');
   assert.ok(dr.sr.some(s=>s.includes(regimenLabel))&&dr.sr.some(s=>s.includes('Verified — registry')));
   for(const needle of ['Source PDF:','SHA-256:','Outcome inventory','Model contributions','E1 / E2 status','Result-specific risk of bias',leg.reviewed?'confirmed by a second reviewer':'not been independently reviewed'])assert.ok(dr.t.includes(needle),'Drawer lacks '+needle);
-  if(leg.baseSingle){assert.ok(/Stimulation protocol values marked PQ are quoted from the report .* by a single extractor; second review pending/.test(dr.t),'Drawer must mark the protocol values single-extractor');
+  if(leg.base){const rev=await page.evaluate(()=>(window.CURRENT_REVIEW.second_review||[]).find(r=>r.file.endsWith('baseline_protocol_extraction.csv')));
+    assert.ok(/Stimulation protocol values are quoted from the report .* extracted by one extractor and /.test(dr.t),'Drawer must describe the protocol-value provenance');
+    assert.ok(rev?dr.t.includes(`confirmed by a second reviewer (${rev.reviewer}, ${rev.review_date})`):dr.t.includes('second review pending'),'Drawer review status must follow second_review.csv');
     assert.ok(!/STRICTA details are legacy imports/.test(dr.t),'Drawer must not call source-quoted protocol values legacy');}
   assert.ok((await hash(page)).includes('study='));
   await page.locator('#close-drawer').click();assert.ok(!(await hash(page)).includes('study='));
@@ -217,13 +219,14 @@ let passed=0;const ok=(name)=>{passed++;console.log('PASS '+name);};
   const nar=await page.evaluate(()=>{const n=window.CURRENT_REVIEW.narrative_outcomes;if(!n)return null;const sec=document.querySelector('section.narrative');
     const nl=n.harms.filter(r=>r.reporting==='Not located (not a zero)');
     return {has:!!sec,text:sec?sec.textContent:'',rows:document.querySelectorAll('section.narrative .narr-group tbody tr').length,quotes:document.querySelectorAll('section.narrative .narr-group .char-quote').length,
-      want:n.milestones.length+n.harms.length-nl.length+n.satisfaction.length,none:nl.map(r=>r.report_id),pending:[...n.milestones,...n.harms,...n.satisfaction].filter(r=>r.second_review==='pending'&&r.quote).length,
+      want:n.milestones.length+n.harms.length-nl.length+n.satisfaction.length,none:nl.map(r=>r.report_id),pending:[...n.milestones,...n.harms,...n.satisfaction].filter(r=>r.second_review==='pending').length,
+      reviewed:[...n.milestones,...n.harms,...n.satisfaction].filter(r=>r.second_review!=='pending').length,
       links:[...sec.querySelectorAll('a[download]')].map(a=>a.getAttribute('href'))};});
   if(nar){
     assert.ok(nar.has,'Coverage must show the structured narrative tables');
     assert.equal(nar.rows,nar.want,'Every structured narrative row is shown exactly once');
     assert.equal(nar.quotes,nar.want,'Every structured narrative row shows its quoted source');
-    assert.ok(nar.text.includes('nothing is pooled')&&nar.text.includes('registered additional outcomes')&&nar.text.includes(`${nar.pending} rows await second review`),'Narrative note must state no pooling, registration and pending review');
+    assert.ok(nar.text.includes('nothing is pooled')&&nar.text.includes('registered additional outcomes')&&nar.text.includes(`${nar.pending} rows await second review`)&&(!nar.reviewed||nar.text.includes(`${nar.reviewed} rows were confirmed by a second reviewer`)),'Narrative note must state no pooling, registration and pending review');
     assert.ok(nar.text.includes(`No intervention-harm result located (${nar.none.length} reports; not a zero)`)&&nar.none.every(id=>nar.text.includes(id)),'Reports without a harms result must be listed as not located, not zero');
     assert.ok(!/pooled (estimate|risk|mean)|meta-analys/i.test(nar.text.replace(/nothing is pooled|not pooled/g,'')),'Narrative tables must not present pooled results');
     for(const f of ['recovery_milestones.csv','harms_structured.csv','satisfaction_acceptability.csv','NARRATIVE_OUTCOMES_REPORT.md'])assert.ok(nar.links.some(h=>h.endsWith(f)),'Narrative download missing: '+f);

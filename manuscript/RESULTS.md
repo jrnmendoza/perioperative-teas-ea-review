@@ -225,7 +225,8 @@ of 50 and 50 against 48 and 49 observed completers with unexplained missing-data
 handling; omission and denominator stress diagnostics are provided.
 
 Later-window results are reported separately. Their GRADE judgements were made
-post hoc on 28 September 2026 and await second review.
+post hoc on 28 September 2026 and confirmed by a second reviewer on 30 September
+2026.
 
 | Body (later window) | k | Analysis N | MD (95% CI), points | Certainty |
 |---|---:|---:|---|---|
@@ -267,8 +268,8 @@ assessed for risk of bias or certainty, and counting statistically significant
 trials is not a synthesis. Several reports are internally inconsistent — a
 confidence interval that includes zero printed beside P = 0.004, units that
 cannot be right as printed — and these values are recorded as printed with the
-conflict noted. The table was extracted by a single extractor and awaits second
-review.
+conflict noted. The table was extracted by a single extractor and every value
+was confirmed by a second reviewer on 30 September 2026.
 
 ### Harms
 
