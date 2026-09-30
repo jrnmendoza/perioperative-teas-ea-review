@@ -11,5 +11,5 @@ RoB 2 signalling · QoR later windows,10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/qor_
 GRADE · QoR later windows,10_FINAL_ADJUDICATION/08_QOR_ANALYSIS/qor_grade_later.csv,4,evidence bodies,SP,2026-09-30,all confirmed,none,5532d1017e063b904f39ea73d275ccf8380f6fe5c99ca2e3c426724d3f75b87e
 Baseline and protocol characteristics,10_FINAL_ADJUDICATION/14_CHARACTERISTICS/baseline_protocol_extraction.csv,714,report fields,SP,2026-09-30,all confirmed,none,0c5546b62ef9edf1875aec7a9496f0ed487f411e8ec0dba5d4875a485ad59d36
 Recovery milestones,10_FINAL_ADJUDICATION/15_NARRATIVE_OUTCOMES/recovery_milestones.csv,92,report rows,SP,2026-09-30,all confirmed,none,b942c8ee90cf9ec452cb93ff49f00205735c79a1cad382f937c70b64bf338e9f
-Harms,10_FINAL_ADJUDICATION/15_NARRATIVE_OUTCOMES/harms_structured.csv,88,report rows,SP,2026-09-30,50 rows with data all confirmed; 38 not-located rows not reviewed,none,36afb3f39b4a74f9111c411a179a050aac2b9dadc41fce659a8932aeea5e16f7
+Harms,10_FINAL_ADJUDICATION/15_NARRATIVE_OUTCOMES/harms_structured.csv,88,report rows,SP,2026-09-30,all confirmed,none,84029567ae7b9dafe95a4a69db975a0d937ef3101e164d5ab622e73c4f8c04f7
 Satisfaction and acceptability,10_FINAL_ADJUDICATION/15_NARRATIVE_OUTCOMES/satisfaction_acceptability.csv,28,report rows,SP,2026-09-30,all confirmed,none,a5ce226a62457b600fc2d58e18e4ea41bea165f9b9d1bf111cf62e4c4bb8ee00

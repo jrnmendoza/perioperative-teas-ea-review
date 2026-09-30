@@ -45,3 +45,15 @@ Generated outputs rebuilt from these records: `report_characteristics.csv` (877 
 | Cache-busting URL | <https://jrnmendoza.github.io/perioperative-teas-ea-review/?build=becc943f> |
 | Live `build-meta.json` | `git_commit` `becc943…`, built 2026-09-30T18:19:15Z, content fingerprint `aafb81f6f675` |
 | Live verification | `scripts/verify_deployment.py --commit becc943…`: all live verification checks passed (79 downloads hash-match their sources; the live `second_review.csv` carries the 14 entries). `scripts/check_current_dashboard_ui.cjs` against the live URL: 19/19 browser checks passed. |
+
+## Addendum — harms "not located" rows (30 September 2026)
+
+Later the same day the review owner reported that SP had also reviewed the 38 harms rows recording "no
+intervention-harm result located (not a zero)" and confirmed all of them without changes. Recorded as:
+
+- `second_review` set to `SP, 2026-09-30: confirmed` on those 38 rows of `harms_structured.csv` (no other column changed;
+  SHA-256 `36afb3f39b4a74f9…` → `84029567ae7b9daf…`);
+- the Harms entry in `second_review.csv` changed from "50 rows with data all confirmed; 38 not-located rows not reviewed"
+  to "all confirmed", with the new file hash.
+
+No item now awaits second review: the regenerated worksheet is empty.
