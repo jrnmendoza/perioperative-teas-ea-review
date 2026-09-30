@@ -440,8 +440,8 @@ locators are Additional file 6.
 > second-review record; that on 30 September 2026 the same reviewer confirmed
 > without changes the signalling-question responses (2,068, 176 and 110), the four
 > later-window GRADE judgements, the 714 baseline and protocol characteristic
-> values and the 170 narrative-outcome rows with located results, the 38 harms
-> "not located" determinations remaining unreviewed; and that a check of a
+> values and all 208 narrative-outcome rows, including the 38 harms "not located"
+> determinations; and that a check of a
 > first assessment is not an independent duplicate assessment, so the current
 > judgements do not constitute two independent human assessments. The team must confirm this wording, and in particular the
 > statement about prior human review, which is team-reported and cannot be
@@ -523,8 +523,8 @@ published with this review. A second reviewer (SP) checked and confirmed the
 risk-of-bias assessments, the core and ~24-hour quality-of-recovery GRADE
 judgements and the regimen characteristics on 28 September 2026, and the
 signalling responses, the later-window GRADE judgements, the baseline and protocol
-characteristics and the narrative-outcome tables on 30 September 2026; the harms
-"not located" determinations had not been second-reviewed at the time of writing. We
+characteristics and the narrative-outcome tables, including the harms "not
+located" determinations, on 30 September 2026. We
 do not claim that every AI-generated output was independently verified by a human
 reader. All source reports are published in
 hashed form and every extracted value carries a source locator, so any individual

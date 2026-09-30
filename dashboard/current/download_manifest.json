@@ -15,7 +15,7 @@
     "label": "Current-state report",
     "href": "current/FINAL_CURRENT_STATE_REPORT.md",
     "source": "FINAL_CURRENT_STATE_REPORT.md",
-    "sha256": "35b57c781cc0b05dcbd2f6b5f237da8448e6f0fdc59ff73b06024417ee8a2bbf"
+    "sha256": "63735cd5e62ecfcde5fa41d6ee1a227caa8c1f12955443dc2fa2f505a8a851c2"
   },
   {
     "label": "GRADE: all 38 reviewed bodies",
@@ -435,7 +435,7 @@
     "label": "Second-review record: RoB 2, GRADE and regimen characteristics",
     "href": "current/second_review.csv",
     "source": "10_FINAL_ADJUDICATION/02_DECISIONS/v38/second_review.csv",
-    "sha256": "3321da39499a178571d36da7bc5997b19e88fc9f24a862632e621671ffc05c80"
+    "sha256": "855f68c840959687b9913b2d3bc0bc7870fe19426d08a3b4315868ed46c483f0"
   },
   {
     "label": "Baseline and protocol characteristics: PDF page and verbatim quotation per value (single extractor)",
@@ -447,7 +447,7 @@
     "label": "Narrative outcomes report: recovery milestones, harms, satisfaction",
     "href": "current/NARRATIVE_OUTCOMES_REPORT.md",
     "source": "10_FINAL_ADJUDICATION/15_NARRATIVE_OUTCOMES/NARRATIVE_OUTCOMES_REPORT.md",
-    "sha256": "38966fa3902ac608c89d12eb9a57e2cf5c701222fb9d9045e5085a0ec9fcec87"
+    "sha256": "26d518f81a78e837eed34e6079bd9eee2fdb7e3c6f6dc61c45dfc14177ac1e0c"
   },
   {
     "label": "Recovery milestones (LOS, PACU, extubation, emergence, mobilisation): quoted values per report",
@@ -459,7 +459,7 @@
     "label": "Harms by separate category, all 70 reports (unreported is not zero)",
     "href": "current/harms_structured.csv",
     "source": "10_FINAL_ADJUDICATION/15_NARRATIVE_OUTCOMES/harms_structured.csv",
-    "sha256": "36afb3f39b4a74f9111c411a179a050aac2b9dadc41fce659a8932aeea5e16f7"
+    "sha256": "84029567ae7b9dafe95a4a69db975a0d937ef3101e164d5ab622e73c4f8c04f7"
   },
   {
     "label": "Satisfaction, acceptability and quality of life: quoted values per report",
@@ -471,6 +471,6 @@
     "label": "Second-review worksheet: items with one assessor (reviewer columns blank)",
     "href": "current/second_review_worksheet.csv",
     "source": "10_FINAL_ADJUDICATION/02_DECISIONS/v38/second_review_worksheet.csv",
-    "sha256": "88dff934e348df3881b267c6dc4daada43e4c9e20e6c38f1acdd4cdd1e10d294"
+    "sha256": "c5c651d792cbd4776ecd17402c58f0b96839e49c11022658dde2a0aa7a5e1da6"
   }
 ]

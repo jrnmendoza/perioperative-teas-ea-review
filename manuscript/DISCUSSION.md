@@ -120,8 +120,8 @@ assessments, the later-window RoB 2 assessments, the core and ~24-hour
 quality-of-recovery GRADE judgements and the regimen characteristics; on 30
 September 2026 the same reviewer confirmed the RoB 2 signalling responses, the
 later-window GRADE judgements, the baseline and protocol characteristics and the
-narrative-outcome tables, except the harms "not located" determinations, which
-await second review. That was a review of the first assessments, not an
+narrative-outcome tables, including the harms "not located" determinations. That
+was a review of the first assessments, not an
 independent duplicate assessment, so they still do not constitute two independent
 human assessments.
 **Every adjudication decision was made after the results of the contributing
