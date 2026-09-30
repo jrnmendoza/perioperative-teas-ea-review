@@ -54,7 +54,7 @@ for r in rows:
   for i,value in enumerate(values,1):answers[f'{domain}.{i}']=value
  assert set(answers)==set(Q)
  for q,answer in answers.items():
-  dom=q[0];out.append(dict(assessment_id=r['assessment_id'],result_id=rid,study=s,question_id=q,short_question=Q[q],answer=answer,justification=r['d'+dom+'_rationale'],final_domain_judgment=r['d'+dom],judgment_basis='Manual source-informed assessment; see domain rationale for uncertainty/author judgment. Not a software-generated rating.',source_text=r['source_text'],source_pdf=r['source_pdf'],result_location=r['result_location'],reviewer=r['reviewer'],review_date=r['review_date']))
+  dom=q[0];out.append(dict(assessment_id=r['assessment_id'],result_id=rid,study=s,question_id=q,short_question=Q[q],answer=answer,justification=r['d'+dom+'_rationale'],final_domain_judgment=r['d'+dom],judgment_basis='Manual source-informed assessment; see domain rationale for uncertainty/author judgment. Not a software-generated rating.',source_text=r['source_text'],source_pdf=r['source_pdf'],result_location=r['result_location'],reviewer='Delegated assessor; second review SP, 2026-09-30 (confirmed)',review_date=r['review_date'])  # second review of the signalling responses: second_review.csv)
 with open(O/'rob2_signalling_questions.csv','w',newline='') as f:w=csv.DictWriter(f,list(out[0]));w.writeheader();w.writerows(out)
 (O/'ROB2_METHOD.md').write_text('''# v38 result-specific risk-of-bias method
 
