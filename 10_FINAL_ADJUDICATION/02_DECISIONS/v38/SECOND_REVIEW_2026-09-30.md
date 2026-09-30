@@ -57,3 +57,16 @@ intervention-harm result located (not a zero)" and confirmed all of them without
   to "all confirmed", with the new file hash.
 
 No item now awaits second review: the regenerated worksheet is empty.
+
+### Deployment of the addendum
+
+| Item | Value |
+|---|---|
+| Pull request | [jrnmendoza/perioperative-teas-ea-review#59](https://github.com/jrnmendoza/perioperative-teas-ea-review/pull/59): check "Dashboard checks (no deploy)" passed; merged 30 September 2026 |
+| Commit deployed | `d346caef521eb86993a33ed58766b1bdf25e0279` (merge of PR #59; tree identical to `8a75856`) |
+| Deployment branch | `claude-v26-dashboard-final` fast-forwarded `24f32f2` → `d346cae` |
+| Pages run | 36763030043. Attempt 1: build succeeded, but the deploy job stayed queued ("waiting") on GitHub's side from 19:05 UTC with no approval rule or competing run; cancelled on the review owner's instruction. Attempt 2: build, deploy and verify all succeeded. |
+| Live URL | <https://jrnmendoza.github.io/perioperative-teas-ea-review/> |
+| Cache-busting URL | <https://jrnmendoza.github.io/perioperative-teas-ea-review/?build=d346caef> |
+| Live `build-meta.json` | `git_commit` `d346cae…`, built 2026-09-30T19:18:56Z, content fingerprint `58fdb1cd512b` |
+| Live verification | `scripts/verify_deployment.py --commit d346cae…`: all live verification checks passed (79 downloads hash-match their sources; the live worksheet has no items). `scripts/check_current_dashboard_ui.cjs` against the live URL: 19/19 browser checks passed. |
