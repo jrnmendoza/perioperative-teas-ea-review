@@ -35,4 +35,13 @@ Generated outputs rebuilt from these records: `report_characteristics.csv` (877 
 
 ## Deployment
 
-To be completed after merge and deployment.
+| Item | Value |
+|---|---|
+| Pull request | [jrnmendoza/perioperative-teas-ea-review#57](https://github.com/jrnmendoza/perioperative-teas-ea-review/pull/57): check "Dashboard checks (no deploy)" passed; merged 30 September 2026 |
+| Commit deployed | `becc943f02f3b54c1873f8fda7b0253807ddb4e8` (merge of PR #57; tree identical to `e63db09`) |
+| Deployment branch | `claude-v26-dashboard-final` fast-forwarded `2b39655` → `becc943` |
+| Pages run | 36757699659: build, deploy and verify jobs all succeeded |
+| Live URL | <https://jrnmendoza.github.io/perioperative-teas-ea-review/> |
+| Cache-busting URL | <https://jrnmendoza.github.io/perioperative-teas-ea-review/?build=becc943f> |
+| Live `build-meta.json` | `git_commit` `becc943…`, built 2026-09-30T18:19:15Z, content fingerprint `aafb81f6f675` |
+| Live verification | `scripts/verify_deployment.py --commit becc943…`: all live verification checks passed (79 downloads hash-match their sources; the live `second_review.csv` carries the 14 entries). `scripts/check_current_dashboard_ui.cjs` against the live URL: 19/19 browser checks passed. |
