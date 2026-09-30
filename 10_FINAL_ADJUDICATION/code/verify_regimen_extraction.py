@@ -9,7 +9,7 @@ inferred. The second_review column is 'pending' or '<initials>, <YYYY-MM-DD>: co
 Usage: python3 10_FINAL_ADJUDICATION/code/verify_regimen_extraction.py [--partial]
   --partial  allow reports that are not yet in the record (while extraction is in progress).
 """
-import csv, hashlib, json, pathlib, re, sys, unicodedata
+import csv, functools, hashlib, json, pathlib, re, sys, unicodedata
 
 ROOT = pathlib.Path(__file__).resolve().parents[2]; D = ROOT / '10_FINAL_ADJUDICATION'
 RECORD = D / '14_CHARACTERISTICS/regimen_extraction.csv'
@@ -34,17 +34,18 @@ def pages(rid):
         _pages[rid] = {int(parts[i]): norm(parts[i + 1]) for i in range(1, len(parts), 2)}
     return _pages[rid]
 
+@functools.lru_cache(maxsize=None)  # pure function of the tracked text layer; the gates call it many times per run
 def quote_found(rid, page, quote):
     """Exact match after whitespace normalisation; fallback ignores whitespace only (text layers split words)."""
     txt = pages(rid).get(int(page), '')
     q = norm(quote)
     return q in txt or re.sub(r'\s', '', q) in re.sub(r'\s', '', txt)
 
-def check_row(r):
+def check_row(r, fields=FIELDS):
     errs = []
     rid = r['report_id']
     if rid not in registry: return [f'unknown report {rid}']
-    if r['field'] not in FIELDS: errs.append(f'unknown field {r["field"]}')
+    if r['field'] not in fields: errs.append(f'unknown field {r["field"]}')
     if r['status'] not in STATUSES: errs.append(f'bad status {r["status"]}')
     if r['source_pdf'] != registry[rid]['source_pdf'] or r['source_sha256'] != registry[rid]['source_sha256']: errs.append('source PDF/hash differs from registry')
     if r['status'] == 'Extracted (PDF quote)':

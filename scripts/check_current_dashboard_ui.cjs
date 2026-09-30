@@ -107,15 +107,23 @@ let passed=0;const ok=(name)=>{passed++;console.log('PASS '+name);};
 
   // ---------- 5. Provenance legend and characteristic statuses ----------
   const leg=await page.evaluate(()=>{const d=window.CURRENT_REVIEW,used=[...new Set(d.characteristics.map(c=>c.status))];
-    return {used:used.length,single:used.includes('Extracted (PDF quote, single extractor)'),reviewed:used.includes('Verified (PDF quote, second reviewer)'),btns:[...document.querySelectorAll('.prov-legend .prov-list button.term')].map(b=>b.getAttribute('aria-label')),text:document.querySelector('.prov-legend').textContent};});
+    const base=d.characteristics.filter(c=>/baseline_protocol_extraction/.test(c.source));
+    return {used:used.length,usedLabels:used.map(s=>({'Verified (registry)':'Verified — registry','Verified (PDF quote)':'Verified — PDF quotation','Partly verified (source excerpt)':'Partly verified — source excerpt','Canonical result register':'Canonical result register','Source-traced (extraction record)':'Source-traced','Verified (PDF quote, second reviewer)':'Verified — PDF quotation, second reviewer','Extracted (PDF quote, single extractor)':'Extracted from PDF quotation — single extractor','Legacy (v26, not re-verified)':'Legacy extraction — not re-verified','Not verified':'Not verified','Not reported in source':'Not reported in source','Not extracted':'Not extracted'})[s]),
+      legacy:used.includes('Legacy (v26, not re-verified)'),base:base.length,baseSingle:base.filter(c=>c.status==='Extracted (PDF quote, single extractor)').length,single:used.includes('Extracted (PDF quote, single extractor)'),reviewed:used.includes('Verified (PDF quote, second reviewer)'),btns:[...document.querySelectorAll('.prov-legend .prov-list button.term')].map(b=>b.getAttribute('aria-label')),text:document.querySelector('.prov-legend').textContent};});
   assert.equal(leg.btns.length,leg.used);
   assert.ok(leg.text.includes('Characteristics do not all have the same verification level.')&&leg.text.includes('Missing values are not inferred.'));
   // The regimen-field sentence follows the data: single-extractor values say so; second-reviewed values name the review.
   if(leg.single)assert.ok(leg.text.includes('single extractor'),'Legend must say the regimen fields are single-extractor');
   if(leg.reviewed)assert.ok(/confirmed by a second reviewer \(SP, 2026-09-28/.test(leg.text)||/confirmed by a second reviewer \([A-Z]{2,4}, \d{4}-\d{2}-\d{2}/.test(leg.text),'Legend must name the second review');
   const regimenLabel=leg.reviewed?'Verified — PDF quotation, second reviewer':'Extracted from PDF quotation — single extractor';
-  for(const lab of ['Verified — registry','Verified — PDF quotation','Source-traced','Partly verified — source excerpt',regimenLabel,'Legacy extraction — not re-verified','Not verified','Not reported in source'])
+  // Every status the data uses has its legend entry (and, by the count above, no other entry is shown); the core ones are always used.
+  assert.ok(leg.usedLabels.every(Boolean),'A characteristic status has no legend label');
+  for(const lab of new Set([...leg.usedLabels,'Verified — registry','Verified — PDF quotation','Source-traced',regimenLabel,'Not reported in source']))
     assert.ok(leg.btns.some(b=>b.startsWith(lab+':')),'Legend entry missing: '+lab);
+  // Baseline and protocol fields quoted from the PDFs: the legend says so, with the single-extractor count; no legacy wording once no legacy value is left.
+  if(leg.base){assert.ok(/Age, sex, BMI, ASA status, anaesthesia and the stimulation protocol/.test(leg.text),'Legend must describe the baseline/protocol extraction');
+    if(leg.baseSingle)assert.ok(leg.text.includes(`${leg.baseSingle} values come from a single extractor`),'Legend must count the single-extractor baseline values');}
+  if(!leg.legacy)assert.ok(!/legacy/i.test(leg.text),'Legend must not mention legacy values when none remain');
   const nr=leg.btns.find(b=>b.startsWith('Not reported in source:'));assert.ok(/not a failed extraction/.test(nr));
   await page.locator('.prov-legend .prov-list button.term').first().focus();
   assert.ok(await page.locator('#term-tip').isVisible(),'Legend help must appear on keyboard focus');
@@ -134,6 +142,8 @@ let passed=0;const ok=(name)=>{passed++;console.log('PASS '+name);};
   assert.ok(dr.q>0,'Drawer must show source quotations');
   assert.ok(dr.sr.some(s=>s.includes(regimenLabel))&&dr.sr.some(s=>s.includes('Verified — registry')));
   for(const needle of ['Source PDF:','SHA-256:','Outcome inventory','Model contributions','E1 / E2 status','Result-specific risk of bias',leg.reviewed?'confirmed by a second reviewer':'not been independently reviewed'])assert.ok(dr.t.includes(needle),'Drawer lacks '+needle);
+  if(leg.baseSingle){assert.ok(/Stimulation protocol values marked PQ are quoted from the report .* by a single extractor; second review pending/.test(dr.t),'Drawer must mark the protocol values single-extractor');
+    assert.ok(!/STRICTA details are legacy imports/.test(dr.t),'Drawer must not call source-quoted protocol values legacy');}
   assert.ok((await hash(page)).includes('study='));
   await page.locator('#close-drawer').click();assert.ok(!(await hash(page)).includes('study='));
   ok('study drawer retains statuses, verbatim quotes, source PDF/hash, models, E1/E2 and RoB');
@@ -201,6 +211,26 @@ let passed=0;const ok=(name)=>{passed++;console.log('PASS '+name);};
   assert.equal(await page.locator('[data-e1e2-in=both]').getAttribute('aria-pressed'),'true');
   const studyFp=page.locator('.fp-link[data-study]').first();await studyFp.click();await page.waitForSelector('#study-drawer[open]');
   ok('E1 vs E2: body picker, membership filters (URL state), post-hoc label, E2 forest → study profile');
+
+  // ---------- 7b. Coverage: structured narrative tables (recovery milestones, harms, satisfaction) ----------
+  await go(page,'#coverage');
+  const nar=await page.evaluate(()=>{const n=window.CURRENT_REVIEW.narrative_outcomes;if(!n)return null;const sec=document.querySelector('section.narrative');
+    const nl=n.harms.filter(r=>r.reporting==='Not located (not a zero)');
+    return {has:!!sec,text:sec?sec.textContent:'',rows:document.querySelectorAll('section.narrative .narr-group tbody tr').length,quotes:document.querySelectorAll('section.narrative .narr-group .char-quote').length,
+      want:n.milestones.length+n.harms.length-nl.length+n.satisfaction.length,none:nl.map(r=>r.report_id),pending:[...n.milestones,...n.harms,...n.satisfaction].filter(r=>r.second_review==='pending'&&r.quote).length,
+      links:[...sec.querySelectorAll('a[download]')].map(a=>a.getAttribute('href'))};});
+  if(nar){
+    assert.ok(nar.has,'Coverage must show the structured narrative tables');
+    assert.equal(nar.rows,nar.want,'Every structured narrative row is shown exactly once');
+    assert.equal(nar.quotes,nar.want,'Every structured narrative row shows its quoted source');
+    assert.ok(nar.text.includes('nothing is pooled')&&nar.text.includes('registered additional outcomes')&&nar.text.includes(`${nar.pending} rows await second review`),'Narrative note must state no pooling, registration and pending review');
+    assert.ok(nar.text.includes(`No intervention-harm result located (${nar.none.length} reports; not a zero)`)&&nar.none.every(id=>nar.text.includes(id)),'Reports without a harms result must be listed as not located, not zero');
+    assert.ok(!/pooled (estimate|risk|mean)|meta-analys/i.test(nar.text.replace(/nothing is pooled|not pooled/g,'')),'Narrative tables must not present pooled results');
+    for(const f of ['recovery_milestones.csv','harms_structured.csv','satisfaction_acceptability.csv','NARRATIVE_OUTCOMES_REPORT.md'])assert.ok(nar.links.some(h=>h.endsWith(f)),'Narrative download missing: '+f);
+    const grp=page.locator('section.narrative details.narr-group').first();await grp.locator('summary').click();
+    assert.ok(await grp.locator('tbody tr').first().isVisible(),'A narrative group opens to its rows');
+    ok(`coverage: ${nar.want} structured narrative rows with quotes, ${nar.none.length} not-located harms reports, no pooling`);
+  }
 
   // ---------- 8. Downloads grouping ----------
   await go(page,'#downloads');

@@ -1,5 +1,11 @@
 # Dashboard refinement — report (28 September 2026)
 
+> **Superseded in part (later on 28 September 2026).** This is a dated task report. Since it was written, the
+> regimen fields received a second review (SP, 28 September 2026; `second_review.csv`), the baseline and protocol
+> characteristics were re-extracted from the PDFs (`14_CHARACTERISTICS/baseline_protocol_extraction.csv`), and
+> structured narrative-outcome tables were added. For the current state see `FINAL_CURRENT_STATE_REPORT.md`; for
+> this work see `FINAL_COMPLETION_REPORT.md`. The deployment record in section 8 remains accurate for `2971096`.
+
 A refinement of the deployed v38 dashboard: provenance, reader navigation, study exploration, figure
 discoverability, accessibility and tests. No analysis was rewritten and no canonical value changed. The
 pre-edit audit is in `DASHBOARD_REFINEMENT_AUDIT.md`.

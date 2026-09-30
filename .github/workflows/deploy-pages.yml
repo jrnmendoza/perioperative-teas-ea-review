@@ -47,6 +47,9 @@ name: Deploy dashboard to GitHub Pages
       - "scripts/check_tabs_ui.cjs"
       - "scripts/check_navigation_ui.cjs"
       - "scripts/check_current_dashboard_ui.cjs"
+      # The v38 contract regenerates FINAL_CURRENT_STATE_REPORT.md, which reads the manuscript drafts.
+      - "FINAL_CURRENT_STATE_REPORT.md"
+      - "manuscript/*.md"
       - "package.json"
       - "package-lock.json"
       - "09_V34_INTAKE/**"

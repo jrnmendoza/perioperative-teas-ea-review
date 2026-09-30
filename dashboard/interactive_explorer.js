@@ -84,6 +84,9 @@
         'Not extracted': ['NE', 'vs-none', 'Not extracted',
             'No structured extraction exists for this field. Nothing is inferred to fill the gap.'] };
     const REGIMEN_FIELDS = ['postoperative_analgesia', 'pca_regimen', 'rescue_analgesia', 'cumulative_duration'];
+    // Baseline and protocol fields quoted from the PDFs (14_CHARACTERISTICS/baseline_protocol_extraction.csv); a registry value keeps priority.
+    const BASELINE_FIELDS = ['age', 'female', 'bmi', 'asa', 'anaesthesia', 'acupoints', 'frequency', 'intensity', 'timing', 'sessions', 'session_duration'];
+    const STRICTA_FIELDS = ['acupoints', 'frequency', 'intensity', 'timing', 'sessions', 'session_duration'];
     const EXTRA_FIELD_LABEL = { modality: 'Modality', comparator: 'Comparator (study label)', comparator_class: 'Comparator class', randomized_n_counted: 'N randomised (operational count)' };
     const PRESETS = [['All', {}], ['TEAS', { modality: 'TEAS' }], ['EA', { modality: 'EA' }], ['Sham controlled', { comparator: 'Sham' }], ['Usual care', { comparator: 'Usual' }],
         ['E1 contributors', { status: 'e1' }], ['E2 contributors', { status: 'e2' }], ['E2 only', { status: 'e2only' }], ['Pain evidence', { family: 'pain' }],
@@ -208,9 +211,9 @@
             return `${c.value ? esc(v) : `<small>${esc(v)}</small>`} ${vs(c)}${detail && c.note ? `<br><small class="char-quote">${esc(c.note)}</small>` : ''}`; };
         // Provenance legend (above the explorer): one keyboard-reachable help button per status, from VS.
         const statusBtn = s => { const [ab, cls, lab, help] = VS[s]; return `<button type="button" class="term vs ${cls}" data-tip="${esc(lab + ': ' + help)}" aria-label="${esc(lab)}: ${esc(help)}">${ab}</button>`; };
-        // What the regimen fields' statuses currently say, from the data (single extractor, or second-reviewed with reviewer and date).
-        const regimenStatus = () => {
-            const rs = (d.characteristics || []).filter(c => REGIMEN_FIELDS.includes(c.field)), single = rs.filter(c => c.status === 'Extracted (PDF quote, single extractor)').length;
+        // What an extraction record's fields currently say, from the data (single extractor, or second-reviewed with reviewer and date).
+        const regimenStatus = (fields = REGIMEN_FIELDS) => {
+            const rs = (d.characteristics || []).filter(c => fields.includes(c.field) && /extraction\.csv/.test(c.source)), single = rs.filter(c => c.status === 'Extracted (PDF quote, single extractor)').length;
             const reviewed = rs.filter(c => c.status === 'Verified (PDF quote, second reviewer)'), who = [...new Set(reviewed.map(c => (c.source.match(/second review ([A-Z]{2,4}, \d{4}-\d{2}-\d{2})/) || [])[1]).filter(Boolean))];
             return single ? `quoted from the report PDF (each quotation machine-checked against the report’s text); ${single} values come from a single extractor and stay marked as such until independently reviewed.`
                 : `quoted from the report PDF (each quotation machine-checked against the report’s text) and confirmed by a second reviewer${who.length ? ` (${esc(who.join('; '))})` : ''}${rs.filter(c => c.status === 'Not reported in source').every(c => c.source.includes('second review')) ? ', including the fields recorded as not reported' : ''}.`;
@@ -220,9 +223,10 @@
             const fields = [...new Set(all.map(c => c.field))].map(f => [f, (CHARS.find(x => x[0] === f) || [, EXTRA_FIELD_LABEL[f] || f.replaceAll('_', ' ')])[1]]);
             const count = (f, s) => all.filter(c => c.field === f && c.status === s).length;
             return `<section class="prov-legend" aria-labelledby="prov-legend-title"><h3 id="prov-legend-title">How far each characteristic has been checked</h3>
-                <p class="note"><strong>Characteristics do not all have the same verification level.</strong> Registry- and PDF-verified values are distinguished from source-traced, legacy and single-extractor fields. Missing values are not inferred.</p>
+                <p class="note"><strong>Characteristics do not all have the same verification level.</strong> Registry- and PDF-verified values are distinguished from source-traced${used.includes('Legacy (v26, not re-verified)') ? ', legacy' : ''} and single-extractor fields. Missing values are not inferred.</p>
                 <ul class="prov-list">${used.map(s => `<li>${statusBtn(s)} <span>${esc(VS[s][2])}</span></li>`).join('')}</ul>
                 <p class="source">Select or focus a badge for what it means. <strong>Postoperative analgesia, PCA regimen, rescue analgesia and cumulative stimulation duration</strong>: ${regimenStatus()}</p>
+                ${all.some(c => BASELINE_FIELDS.includes(c.field) && /baseline_protocol_extraction/.test(c.source)) ? `<p class="source"><strong>Age, sex, BMI, ASA status, anaesthesia and the stimulation protocol (acupoints, frequency, intensity, timing, sessions, session duration)</strong>, where the registry does not already hold a verified value: ${regimenStatus(BASELINE_FIELDS)}</p>` : ''}
                 <details class="prov-counts"><summary>Verification level by field (${INDEX.length} reports)</summary><div class="table-scroll"><table><thead><tr><th scope="col">Field</th>${used.map(s => `<th scope="col" title="${esc(VS[s][2])}"><span class="vs ${VS[s][1]}" aria-hidden="true">${VS[s][0]}</span><span class="sr-only">${esc(VS[s][2])}</span></th>`).join('')}</tr></thead>
                 <tbody>${fields.map(([f, l]) => `<tr><th scope="row">${esc(l)}</th>${used.map(s => { const n = count(f, s); return `<td>${n || '<span class="muted">·</span>'}</td>`; }).join('')}</tr>`).join('')}</tbody></table></div>
                 <p class="source">Number of reports per field and status, from the harmonised characteristics file in Downloads.</p></details></section>`;
@@ -276,7 +280,7 @@
             <div id="explorer-glance"></div>
             <details class="colchooser"><summary>Columns and characteristics</summary>
                 <fieldset><legend class="sr-only">Characteristic columns</legend>${CHARS.map(([f, l]) => `<label class="chk"><input type="checkbox" data-col="${f}"${state.cols.includes(f) ? ' checked' : ''}> ${esc(l)}</label>`).join('')}</fieldset>
-                <p class="source">Each value carries its verification badge (${Object.values(VS).map(([ab, cls, lab]) => `<span class="vs ${cls}" aria-hidden="true">${ab}</span> ${esc(lab)}`).join(' · ')}); see the legend above for what each means. Legacy values have not been re-checked against the PDF: do not use them for subgrouping or characteristics text without checking.</p></details>
+                <p class="source">Each value carries its verification badge (${Object.values(VS).map(([ab, cls, lab]) => `<span class="vs ${cls}" aria-hidden="true">${ab}</span> ${esc(lab)}`).join(' · ')}); see the legend above for what each means.${(d.characteristics || []).some(c => c.status === 'Legacy (v26, not re-verified)') ? ' Legacy values have not been re-checked against the PDF: do not use them for subgrouping or characteristics text without checking.' : ''}</p></details>
             <div class="matrix-bar">
                 <div class="matrix-legend" aria-label="Contribution legend">
                     <span><span class="matrix-cell e1">E1</span> E1 primary opioid body</span><span><span class="matrix-cell e2">E2</span> E2 post-hoc body only</span>
@@ -386,8 +390,11 @@
                 <h3 id="dr-Anaesthesia">Anaesthesia and analgesia</h3>${tbl(row('Anaesthesia', 'anaesthesia') + row('Postoperative analgesia', 'postoperative_analgesia') + row('PCA regimen', 'pca_regimen') + row('Rescue analgesia', 'rescue_analgesia'))}
                 ${REGIMEN_FIELDS.some(f => ch[f]?.status === 'Extracted (PDF quote, single extractor)') ? note('Postoperative analgesia, PCA regimen, rescue analgesia and cumulative stimulation duration are quoted from the report (quotation shown under each value, machine-checked against the report’s text) by a single extractor; they have not been independently reviewed.')
                   : REGIMEN_FIELDS.some(f => ch[f]?.status === 'Verified (PDF quote, second reviewer)') ? note(`Postoperative analgesia, PCA regimen, rescue analgesia and cumulative stimulation duration are quoted from the report (quotation shown under each value, machine-checked against the report’s text) and were confirmed by a second reviewer (${esc((ch[REGIMEN_FIELDS.find(f => ch[f]?.status === 'Verified (PDF quote, second reviewer)')].source.match(/second review ([A-Z]{2,4}, \d{4}-\d{2}-\d{2})/) || [, 'see source'])[1])}).`) : ''}
+                ${['age', 'female', 'bmi', 'asa', 'anaesthesia'].some(f => ch[f]?.status === 'Extracted (PDF quote, single extractor)') ? note('Population and anaesthesia values marked PQ are quoted from the report (quotation shown under each value, machine-checked against the report’s text) by a single extractor; second review pending.') : ''}
                 <h3 id="dr-Intervention">Intervention</h3>${tbl(row('Intervention arms (result register)', 'intervention_arms') + row('Acupoints', 'acupoints') + row('Frequency', 'frequency') + row('Intensity', 'intensity') + row('Timing', 'timing') + row('Sessions', 'sessions') + row('Session duration', 'session_duration') + row('Cumulative duration', 'cumulative_duration'))}
-                ${bg.stricta?.status === 'Verified' ? note(`Partly source-verified ${esc(bg.stricta.verification_date)}: “${esc(bg.stricta.source_excerpt)}”${bg.stricta.correction_note ? ' ' + esc(bg.stricta.correction_note) : ''}`) : note('STRICTA details are legacy imports (not re-verified) unless marked otherwise; the intervention-arm text comes from the canonical result register.')}
+                ${STRICTA_FIELDS.some(f => ch[f]?.status === 'Extracted (PDF quote, single extractor)') ? note('Stimulation protocol values marked PQ are quoted from the report (quotation shown under each value, machine-checked against the report’s text) by a single extractor; second review pending. The intervention-arm text comes from the canonical result register.')
+                  : STRICTA_FIELDS.some(f => ch[f]?.status === 'Legacy (v26, not re-verified)') ? note('STRICTA details marked L are legacy imports (not re-verified); the intervention-arm text comes from the canonical result register.') : ''}
+                ${bg.stricta?.status === 'Verified' && STRICTA_FIELDS.some(f => ch[f]?.status === 'Partly verified (source excerpt)') ? note(`Partly source-verified ${esc(bg.stricta.verification_date)}: “${esc(bg.stricta.source_excerpt)}”${bg.stricta.correction_note ? ' ' + esc(bg.stricta.correction_note) : ''}`) : ''}
                 <h3 id="dr-Comparator">Comparator</h3>${tbl(`<tr><th scope="row">Study-level label</th><td>${esc(s.comparator)} <small>(${esc(s.comparator_source_status || '')})</small></td></tr>` + row('Control / sham arms (result register)', 'control_arms'))}
                 <h3 id="dr-Outcomes">Outcome inventory (${r.reg.length} extracted results)</h3>
                 <div class="table-scroll"><table><thead><tr><th>Result</th><th>Outcome</th><th>Window</th><th>Decision</th><th>Models</th></tr></thead><tbody>${r.reg.map(x => { const inp = inputFor(x.result_id);

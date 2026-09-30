@@ -5,9 +5,10 @@
 > via PubMed; the mapping is in the accompanying traceability document. Six
 > references were added in this revision following a literature check with
 > Consensus, each then independently verified against PubMed before inclusion.
-> Citation placeholders are `[@key]` and are not yet resolved to reference
-> numbers, because the bibliography is being rebuilt in a reference manager
-> rather than carried across from any earlier draft. No included trial is cited
+> Citation placeholders are `[@key]`; `reports/render_submission.py` resolves
+> them to BMC numbered citations from `references/bibliography.csv` (31 entries,
+> each verified against PubMed or Crossref). Each citing sentence is checked in
+> `references/current_claim_citation_audit.csv` (28 September 2026). No included trial is cited
 > here as background evidence.
 >
 > **Surname collision warnings for the bibliography.** `@wu2016review` and
@@ -45,8 +46,9 @@ studies (6,507,173 participants) reached a comparable pooled estimate of 7.15%
 found no significant variation by surgery type, and showed the figure to be
 strongly definition-dependent: 8.29% under a 90–180-day definition against 2.89%
 where opioid use across a full 180-day period was required [@frangakis2026].
-Estimates are also markedly lower outside the United States — 1.7% in a national
-Austrian cohort of 559,096 patients [@bologheanu2025] — and a pooled analysis
+Estimates are also markedly lower outside the United States — 1.7% of 642,857
+procedures in a national Austrian cohort of 559,096 patients [@bologheanu2025] —
+and a pooled analysis
 restricted to opioid-naive participants at baseline gave 1.2% (95% CI 0.4–3.9)
 [@lawal2020].
 
