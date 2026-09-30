@@ -10,7 +10,8 @@
 
 Every row with data carries a verbatim quote (optionally a second one) that is found on its stated page of the report's
 text layer (verify_regimen_extraction.quote_found); the source PDF and hash match the registry; a linked register result
-exists for the same report; vocabularies are closed; nothing is marked second-reviewed unless second_review.csv covers
+exists for the same report; vocabularies are closed; a row's second-review mark equals the reviewer and date second_review.csv records for its file (and a partial review
+leaves the rows it did not cover pending); nothing is marked second-reviewed unless second_review.csv covers
 the file. The tables are descriptive: no row carries a pooled estimate. Exits non-zero on any failure and writes a hash
 manifest when every table passes.
 
@@ -34,11 +35,14 @@ CONSTRUCTS = ('Satisfaction', 'Acceptability of the intervention', 'Health-relat
 POOLED = re.compile(r'pooled|summary estimate|random[- ]effects', re.I)
 TABLES = {'recovery_milestones.csv': ('domain', DOMAINS), 'harms_structured.csv': ('category', CATEGORIES), 'satisfaction_acceptability.csv': ('construct', CONSTRUCTS)}
 
-def check_table(name, reviewed_files, R=None):
+def check_table(name, reviews, R=None):
     """All row checks for one table (R: the rows to check; default the file)."""
     errs = []; R = rows(OUT / name) if R is None else R; field, vocab = TABLES[name]
     register = {r['result_id']: r for r in csv.DictReader(open(D / '03_CANONICAL/results.csv', encoding='utf-8-sig'))}
-    covered = f'10_FINAL_ADJUDICATION/15_NARRATIVE_OUTCOMES/{name}' in reviewed_files
+    # reviews: second_review.csv rows keyed by file. A review mark must equal this file's entry ("<initials>, <date>:
+    # confirmed"); under a partial outcome, rows with nothing quoted (not-located determinations) stay pending.
+    entry = reviews.get(f'10_FINAL_ADJUDICATION/15_NARRATIVE_OUTCOMES/{name}')
+    expected = f"{entry['reviewer']}, {entry['review_date']}: confirmed" if entry else None
     for i, r in enumerate(R, 2):
         rid = r['report_id']; where = f'{name}:{i} {rid}'
         if rid not in V.registry: errs.append(f'{where}: unknown report'); continue
@@ -62,14 +66,15 @@ def check_table(name, reviewed_files, R=None):
             if r['attribution'] not in ATTRIBUTION: errs.append(f'{where}: bad attribution {r["attribution"]!r}')
             if r['reporting'] == 'Explicit zero' and (r['events_i'] not in ('0',) or r['events_c'] not in ('0', 'not applicable')): errs.append(f'{where}: explicit zero with non-zero counts')
         if not re.fullmatch(r'Single extractor, \d{4}-\d{2}-\d{2}', r['extracted_by']): errs.append(f'{where}: bad extracted_by')
-        if r['second_review'] != 'pending' and not (covered and re.fullmatch(r'[A-Z]{2,4}, \d{4}-\d{2}-\d{2}: confirmed', r['second_review'])): errs.append(f'{where}: second review claimed without a record')
+        if r['second_review'] != 'pending' and r['second_review'] != expected: errs.append(f'{where}: second review claimed without a matching record')
+        if entry and r['second_review'] != 'pending' and not r['quote'] and entry['outcome'] != 'all confirmed': errs.append(f'{where}: marks a row the review did not cover')
     if name == 'harms_structured.csv':
         missing = set(V.registry) - {r['report_id'] for r in R}
         errs += [f'{name}: report {m} has no row (a report without a harms result must say "Not located")' for m in sorted(missing)]
     return errs, R
 
 def main():
-    reviewed = {r['file'] for r in rows(D / '02_DECISIONS/v38/second_review.csv')}
+    reviewed = {r['file']: r for r in rows(D / '02_DECISIONS/v38/second_review.csv')}
     errs = []; summary = []
     for name, (field, _) in TABLES.items():
         e, R = check_table(name, reviewed); errs += e

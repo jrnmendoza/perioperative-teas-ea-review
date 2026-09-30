@@ -3,7 +3,7 @@
 One row per item awaiting second review:
   - baseline/protocol characteristics (14_CHARACTERISTICS/baseline_protocol_extraction.csv, second_review 'pending');
   - structured narrative outcomes (15_NARRATIVE_OUTCOMES: recovery milestones, harms, satisfaction/acceptability), every
-    row with data whose second_review is 'pending';
+    row whose second_review is 'pending', including a harms "not located (not a zero)" determination;
   - later-window QoR GRADE bodies (08_QOR_ANALYSIS/qor_grade_later.csv) while second_review.csv does not cover that file.
 Each row gives what was decided, where in the source it comes from and the quotation or rationale, and leaves the
 reviewer columns blank. This file never records a review: a completed review is entered in the source record
@@ -37,7 +37,12 @@ def build():
         rec = f'10_FINAL_ADJUDICATION/15_NARRATIVE_OUTCOMES/{name}'
         if not (ROOT / rec).exists(): continue
         for r in rows(ROOT / rec):
-            if r['second_review'] != 'pending' or not r['quote']: continue
+            if r['second_review'] != 'pending': continue
+            if not r['quote']:   # a "not located" harms determination from the outcome-coverage audit: nothing quoted
+                out.append(dict(item_type='Harm (not located)', record=rec, report_or_body=r['report_id'], field=r[field], value=r['reporting'],
+                                locator='full text searched (outcome-coverage audit)', quotation_or_rationale=r['note'],
+                                source_pdf=r['source_pdf'], source_sha256=r['source_sha256'], first_assessment=r['extracted_by'], **REVIEW_BLANK))
+                continue
             out.append(dict(item_type=kind, record=rec, report_or_body=r['report_id'], field=r[field], value=value(r),
                             locator=f"p.{r['page']}" + (f"; p.{r['page2']}" if r['quote2'] else ''),
                             quotation_or_rationale=f"“{r['quote']}”" + (f" / “{r['quote2']}”" if r['quote2'] else '') + (f" Note: {r['note']}" if r['note'] else ''),
