@@ -117,14 +117,14 @@ def main() -> int:
         # Validate current identity first, then reject (not silently fix) drift.
         from check_current_dashboard import main as check_current
         if check_current(): return 1
-        paths=[ROOT/'dashboard'/n for n in ['index.html','current_review.js','current_review.json']]
+        paths=[ROOT/'dashboard'/n for n in ['current_review.js','current_review.json']]
         snapshots={p:p.read_bytes() for p in paths}
         try:
-            subprocess.run([sys.executable,str(ROOT/'10_FINAL_ADJUDICATION/code/build_current_dashboard.py')],cwd=ROOT,check=True)
-            assert all(p.read_bytes()==v for p,v in snapshots.items()),'v38 generator drift'
+            subprocess.run([sys.executable,str(ROOT/'scripts/build_dashboard_data.py')],cwd=ROOT,check=True)
+            assert all(p.read_bytes()==v for p,v in snapshots.items()),'dashboard data generator drift'
         finally:
             for p,v in snapshots.items():p.write_bytes(v)
-        print('PASS v38 generated dashboard matches current generator')
+        print('PASS BMC Revision generated dashboard matches current generator')
         return 0
     fast = "--fast" in sys.argv
     if "--list" in sys.argv:

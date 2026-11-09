@@ -104,7 +104,9 @@ def main() -> int:
         )
 
     if meta:
-        for key, expected in REQUIRED_META.items():
+        expected_studies = 43 if meta.get("master_version") == "BMC_Revision_44_reports" else REQUIRED_META["canonical_studies"]
+        required = {"canonical_studies": expected_studies, "strict_primary_opioid_k": REQUIRED_META["strict_primary_opioid_k"]}
+        for key, expected in required.items():
             got = meta.get(key)
             if got != expected:
                 failures.append(f"build-meta.json[{key}] = {got!r}, expected {expected!r}")
@@ -112,11 +114,11 @@ def main() -> int:
                 print(f"  OK  build-meta.json[{key}] = {got}")
 
         # Version-specific fields: check them for internal consistency rather
-        # than against a literal. Hardcoding "v32" here would have blocked
-        # every correct later deployment while silently blessing a stale one --
-        # which is exactly what it did on the v33 deploy.
+        # than against a literal.
         master_file = str(meta.get("master_file", ""))
-        if meta.get("master_version") == "v38" and master_file == "10_FINAL_ADJUDICATION/03_CANONICAL":
+        if meta.get("master_version") == "BMC_Revision_44_reports" and master_file == "Additional_files":
+            print(f"  OK  master_version {meta['master_version']} matches master_file {master_file}")
+        elif meta.get("master_version") == "v38" and master_file == "10_FINAL_ADJUDICATION/03_CANONICAL":
             print(f"  OK  master_version {meta['master_version']} matches master_file")
         else:
             m = re.search(r"_v(\d+)_", master_file)

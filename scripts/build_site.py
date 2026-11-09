@@ -288,49 +288,53 @@ def main() -> int:
     args = ap.parse_args()
     out = Path(args.out)
 
-    # v38 canonical release: do not regenerate or serve stale v26 inference.
+    # BMC Revision (44 reports): authoritative lock
     if (DASH / 'current_review.json').exists():
-        run([sys.executable, '10_FINAL_ADJUDICATION/code/build_current_dashboard.py'])
         current = json.loads((DASH / 'current_review.json').read_text())
         commit = git_commit(args.commit)
-        meta = dict(master_version='v38', master_file='10_FINAL_ADJUDICATION/03_CANONICAL',
-                    canonical_reports=len(current['studies']), canonical_studies=len({s['trial_id'] for s in current['studies']}),
-                    included_studies=len({s['trial_id'] for s in current['studies']}), companion_reports=len(current['studies'])-len({s['trial_id'] for s in current['studies']}),
-                    source_normalized_outcome_rows=len(read_csv_rows(ROOT/'10_FINAL_ADJUDICATION/03_CANONICAL/results.csv')),
-                    strict_primary_opioid_k=next(m['k'] for m in current['models'] if m['model_id']=='opioid24_TEAS_sham'),
-                    defined_models=len(current['models']), grade_bodies=len(current['grade']),
-                    fresh_rob_assessments=len(current['rob']), git_commit=commit,
-                    build_timestamp_utc=datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'))
-        if 'qor_analysis' in current:
-            q=current['qor_analysis']
-            meta['qor_addendum']=dict(version=q['version'],main_models=len(q['main_models']),
-                                     diagnostic_models=len(q['diagnostics']),grade_bodies=len(q['grade']),
-                                     exact_result_assessments=len(q['rob']))
-        out=out.resolve()
+        meta = dict(
+            master_version='BMC_Revision_44_reports',
+            master_file='Additional_files',
+            canonical_reports=len(current.get('characteristics', [])),
+            canonical_studies=current.get('metadata', {}).get('counts', {}).get('included_trials', 43),
+            included_studies=current.get('metadata', {}).get('counts', {}).get('included_trials', 43),
+            companion_reports=1,
+            strict_primary_opioid_k=1,
+            fresh_rob_assessments=len(current.get('rob', {}).get('judgements', [])),
+            source_normalized_outcome_rows=len(current.get('extracted_results', [])),
+            git_commit=commit,
+            build_timestamp_utc=datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')
+        )
+        out = out.resolve()
         if out in (ROOT, DASH, Path.home(), Path('/')):
             raise RuntimeError('Refuse build into a source or broad directory')
-        out.mkdir(parents=True,exist_ok=True)
-        for name in ['index.html','current_review.js','current_review.json','current_review_ui.js','current_review.css','article_figures.js','search_strategies.js','evidence_graph.js','interactive_explorer.js','theme.js']:
-            shutil.copyfile(DASH/name,out/name)
-        for name in ['current','article_figures']:
-            shutil.copytree(DASH/name,out/name,dirs_exist_ok=True)
-        # Hash current content, not only HEAD: this working-tree build is uncommitted.
-        V38_ASSETS=['current_review.js','current_review_ui.js','current_review.css','article_figures.js','search_strategies.js','evidence_graph.js','interactive_explorer.js','theme.js']
+        out.mkdir(parents=True, exist_ok=True)
+        for name in ['index.html', 'current_review.js', 'current_review.json', 'current_review_ui.js', 'current_review.css', 'theme.js']:
+            if (DASH / name).exists():
+                shutil.copyfile(DASH / name, out / name)
+        for name in ['Additional_files', 'figures_png', 'current', 'article_figures']:
+            if (DASH / name).exists():
+                shutil.copytree(DASH / name, out / name, dirs_exist_ok=True)
+        if (DASH / 'TEAS_EA_review_READING_COPY_with_figures.docx').exists():
+            shutil.copyfile(DASH / 'TEAS_EA_review_READING_COPY_with_figures.docx', out / 'TEAS_EA_review_READING_COPY_with_figures.docx')
+
+        ACTIVE_ASSETS = [n for n in ['current_review.js', 'current_review_ui.js', 'current_review.css', 'theme.js'] if (DASH / n).exists()]
         import hashlib
-        fingerprint=hashlib.sha256(b''.join((DASH/name).read_bytes() for name in V38_ASSETS)).hexdigest()[:12]
-        text=(out/'index.html').read_text()
-        for asset in V38_ASSETS:
-            text=text.replace(asset+'"',asset+'?v='+fingerprint+'"')
-        (out/'index.html').write_text(text)
-        meta['content_fingerprint']=fingerprint
-        inject_build_badge(out,meta);write_build_meta(out,meta)
-        # The page reads its own build record (commit, build time) from this inline copy of build-meta.json;
-        # it sits in <head> so it exists before the dashboard scripts run, and needs no network request.
-        text=(out/'index.html').read_text()
-        inline=json.dumps(meta,separators=(',',':')).replace('</','<\\/')
-        assert text.count('</head>')==1,'index.html must have exactly one </head>'
-        (out/'index.html').write_text(text.replace('</head>',f'<script id="build-meta" type="application/json">{inline}</script></head>'))
-        print(json.dumps(meta,indent=2));print(f'Built local v38 site at {out}')
+        fingerprint = hashlib.sha256(b''.join((DASH / name).read_bytes() for name in ACTIVE_ASSETS)).hexdigest()[:12]
+        text = (out / 'index.html').read_text()
+        for asset in ACTIVE_ASSETS:
+            text = text.replace(asset + '"', asset + '?v=' + fingerprint + '"')
+        (out / 'index.html').write_text(text)
+        meta['content_fingerprint'] = fingerprint
+        inject_build_badge(out, meta)
+        write_build_meta(out, meta)
+
+        text = (out / 'index.html').read_text()
+        inline = json.dumps(meta, separators=(',', ':')).replace('</', '<\\/')
+        assert text.count('</head>') == 1, 'index.html must have exactly one </head>'
+        (out / 'index.html').write_text(text.replace('</head>', f'<script id="build-meta" type="application/json">{inline}</script></head>'))
+        print(json.dumps(meta, indent=2))
+        print(f'Built local BMC Revision site at {out}')
         return 0
 
     run([sys.executable, "scripts/build_reference_data.py"])

@@ -1,778 +1,1085 @@
-/* v38 canonical dashboard. No historical pooled or study-overall RoB inference. */
+/* Perioperative TEAS & EA Review Dashboard — BMC Anesthesiology Revision (44 Reports)
+   Authoritative interface built strictly from the review folder data. */
 (() => {
   'use strict';
-  function unitLabel(u){return u==='mg IVMME'?'mg IV MME':u==='assumed mg IVMME'?'assumed mg IV MME':u;}
-  const d=window.CURRENT_REVIEW, $=id=>document.getElementById(id);
-  const esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-  const num=(x,n=2)=>x===null||x===undefined||x===''?'—':Number(x).toFixed(n);
-  const grade=new Map(d.grade.map(g=>[g.model_id,g]));
-  const effect=m=>m.k?`${num(m.display_effect)} [${num(m.display_ci_low)}, ${num(m.display_ci_high)}] ${esc(unitLabel(m.unit))}`:'No eligible quantitative evidence';
-  const table=(heads,rows)=>`<div class="table-scroll"><table><thead><tr>${heads.map(h=>`<th scope="col">${h}</th>`).join('')}</tr></thead><tbody>${rows.map(row=>`<tr>${row.map(v=>`<td>${v}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
-  const tag=x=>`<span class="tag ${x==='High'?'risk-high':x==='Low'?'risk-low':''}">${esc(x)}</span>`;
-  const note=t=>`<p class="note">${t}</p>`;
-  // Statistical glossary: one definition per term, shown as a keyboard-reachable tooltip and listed in Methods.
-  const GLOSSARY={k:'Number of studies contributing to this analysis (one estimate per trial family).',N:'Participants in the analysed arms of the contributing studies; a shared control arm is counted once.',
-    MD:'Mean difference: intervention mean minus comparator mean, in the outcome’s own units.',SMD:'Standardised mean difference (Hedges g): the mean difference divided by the pooled standard deviation, with a small-sample correction. Unitless.',
-    RR:'Risk ratio: event risk with the intervention divided by event risk with the comparator. Below 1 means fewer events with the intervention.',
-    'IV MME':'Intravenous morphine milligram equivalents: opioid doses converted to one intravenous morphine scale before pooling.',
-    CI:'95% confidence interval: the range of effects compatible with the data under the model. Pooled intervals use the safeguarded Hartung–Knapp method.',
-    PI:'95% prediction interval: where the effect in a new, similar study is expected to fall. Shown only when at least five studies are pooled.',
-    'I²':'Share of the variability between study estimates attributed to heterogeneity rather than chance. Very imprecise when few studies contribute.',
-    'τ²':'Between-study variance of the true effects (REML estimate), in squared outcome units.',REML:'Restricted maximum likelihood: the estimator used for the between-study variance τ².',
-    HK:'Safeguarded Hartung–Knapp adjustment: the pooled confidence interval uses a t distribution with k − 1 degrees of freedom and is never narrower than the unadjusted interval.',
-    pooled:'A random-effects estimate that combines two or more studies.',single:'Only one study contributes: its own estimate and normal 95% CI are shown, and nothing is pooled.',
-    GRADE:'Certainty of the evidence for one outcome and comparison: High, Moderate, Low or Very low. Randomised evidence starts High and is rated down for risk of bias, inconsistency, indirectness, imprecision and publication bias.',
-    'RoB 2':'Cochrane risk-of-bias tool for randomised trials, applied to each result across five domains; there is no study-wide rating.',
-    sensitivity:'A re-analysis that tests whether a result depends on one decision. It is not a separate efficacy conclusion and is not graded.',
-    diagnostic:'A check on a model (for example leave-one-out or a stress test). Not graded.',E1:'The registered primary opioid analysis: cumulative 0–24 h systemic opioid consumption under the registered eligibility rules.',
-    E2:'A post-hoc sensitivity synthesis of 0–24 h opioid consumption with broader eligibility, defined after the data were seen. Not graded; E1 remains primary.',
-    '−10 mg':'Registered clinical-importance threshold for opioid sparing: a reduction of at least 10 mg IV MME over 0–24 h.',
-    '+1 pain':'Paired pain limb of the registered criterion: the upper 95% limit of the same-trial ~24 h pain difference must be below +1 point on a 0–10 scale.'};
-  const term=(label,key=label)=>GLOSSARY[key]?`<button type="button" class="term" data-tip="${esc(GLOSSARY[key])}" aria-label="${esc(label)}: ${esc(GLOSSARY[key])}">${esc(label)}</button>`:esc(label);
-  window.reviewTerm=term;
-  // Report names in decision files resolve to canonical report IDs (exact, else a unique prefix such as "He 2026 (hepatectomy" → "He 2026 (hepatectomy/JIS)").
-  const REPORT_IDS=[...new Set((d.characteristics||[]).map(r=>r.report_id))];
-  const sid=n=>{if(REPORT_IDS.includes(n))return n;const hit=REPORT_IDS.filter(i=>i.startsWith(String(n).replace(/\)$/,'')));return hit.length===1?hit[0]:'';};
-  const studyLink=(n,label=n)=>sid(n)?`<button type="button" class="text-button" data-study="${esc(sid(n))}" aria-label="Study profile: ${esc(n)}">${esc(label)}</button>`:esc(label);
-  // Stata reproduction: status per model and the publication figures registered for it (never recomputed here).
-  const stataRow=(set,mid)=>(d.stata?.summary||[]).find(s=>s.analysis_set===set&&s.model_id===mid);
-  const stataLine=(set,mid)=>{const s=stataRow(set,mid),ri=d.stata?.run_info;if(!s||!s.status.startsWith('STATA VERIFIED'))return '';
-    return `<p class="stata-line"><span class="stata-badge">Stata independently reproduced</span> ${s.status==='STATA VERIFIED'?'Pooled estimate, confidence interval, τ² and I²':'Single-study estimate and confidence interval'} reproduced in Stata ${esc(ri.stata_version)}/${esc(ri.edition)} from the canonical inputs${s.metafor==='agrees'?'; R/metafor agrees':''}. <a href="#methods?section=stata">How this was checked</a></p>`;};
-  const FIG_KIND={forest:'Forest plot',loo:'Leave-one-out',funnel:'Funnel plot',descriptive:'Evidence base'};
-  const figFiles=f=>['svg','pdf','png'].map(x=>`<a href="${esc(f[x+'_href'])}" download>${x.toUpperCase()}</a>`).join(' · ');
-  const figOpen=(f,label,cls='text-button')=>`<button type="button" class="${cls} figure-open" data-src="${esc(f.png_href)}" data-svg="${esc(f.svg_href)}" data-pdf="${esc(f.pdf_href)}" data-caption="${esc(f.title+' · generated in Stata '+d.stata.run_info.stata_version+' · '+f.use)}">${label}</button>`;
-  const stataFigs=(mid,kinds=['forest','loo','funnel'])=>{const fs=(d.stata?.figures||[]).filter(f=>f.model_id===mid&&kinds.includes(f.kind));if(!fs.length)return '';
-    return `<div class="stata-figs"><strong>Publication figure${fs.length>1?'s':''} (Stata)</strong><ul>${fs.map(f=>`<li>${figOpen(f,esc((f.kind==='forest'?'Forest plot: ':'')+f.title))} <small>${esc(f.use)}</small><br><small>Download Stata figure: ${figFiles(f)}</small></li>`).join('')}</ul></div>`;};
-  const howTo=(what,body)=>`<details class="how-to"><summary>How to read ${what}</summary>${body}</details>`;
-  const qorLink=()=>d.qor_analysis?note('QoR addendum: three ~24-hour syntheses, eight additional exact-result assessments and three Very-low-certainty judgments. <button type="button" class="text-button" data-view="qor">View QoR results, RoB and GRADE</button>. The v38 core below is preserved.'):'';
-  const models=role=>d.models.filter(m=>role.includes(m.role));
-  const primary=models(['PRINCIPAL','SUPPORTIVE']);
-  const modelTable=ms=>table(['Evidence body / role',`${term('k')} / ${term('N')}`,`Estimate [95% ${term('CI')}]`,term('Certainty','GRADE')],ms.map(m=>[`${modelName(m.model_id)}<br><small>${esc(m.role)}</small>`,`${m.k} / ${m.N}`,effect(m),tag(grade.get(m.model_id)?.certainty||'Diagnostic — not graded') ]));
-  function title(h,p=''){return `<h2>${h}</h2>${p?`<p class="lede">${p}</p>`:''}`;}
-  // Build and analysis provenance. The build record is the inline copy of build-meta.json that scripts/build_site.py
-  // writes into the deployed page; a copy served straight from the repository has none and says so.
-  const BUILD=(()=>{try{const el=document.getElementById('build-meta');const m=el?JSON.parse(el.textContent):null;return m&&m.git_commit?m:null;}catch(e){return null;}})();
-  const REPO=(d.stata?.code_url||'').split('/tree/')[0];
-  const fmtDate=iso=>{const t=new Date(String(iso).slice(0,10)+'T00:00:00Z');return isNaN(t)?esc(iso):t.toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric',timeZone:'UTC'});};
-  // Second review (02_DECISIONS/v38/second_review.csv): reviewer, date and outcome per reviewed scope, as recorded.
-  function reviewLine(test){
-    const rs=(d.second_review||[]).filter(r=>test(r.scope));if(!rs.length)return '';
-    const who=[...new Set(rs.map(r=>`${esc(r.reviewer)}, ${fmtDate(r.review_date)}`))].join('; ');
-    return `<span class="second-review">Second review (${who}): ${rs.map(r=>`${esc(r.items)} ${esc(r.unit)} (${esc(r.scope)}) ${esc(r.outcome)}${r.changes==='none'?', no changes':''}`).join('; ')}.</span>`;
-  }
-  function provenance(){
-    const r=d.release||{},sha=BUILD&&/^[0-9a-f]{7,40}$/.test(BUILD.git_commit)?BUILD.git_commit:'';
-    return [`Analytical core: ${esc(r.core_version||d.version)} · ${fmtDate(r.core_date||d.date)}`,r.e2_date?`E2 (post hoc): ${fmtDate(r.e2_date)}`:'',
-      BUILD?`Dashboard build: ${fmtDate(BUILD.build_timestamp_utc)} · commit ${sha&&REPO?`<a href="${esc(REPO)}/commit/${sha}" rel="noopener" target="_blank"><code>${sha.slice(0,7)}</code></a>`:`<code>${esc(String(BUILD.git_commit).slice(0,7))}</code>`}`:'Dashboard build: no build record in this copy (not served from a deployment)'].filter(Boolean).join(' · ');
-  }
-  function overview(){
-    const nRep=d.studies.length,nFam=new Set(d.studies.map(s=>s.trial_id)).size,nRand=d.studies.reduce((a,s)=>a+(+s.randomized_n_counted||0),0);
-    const comps=new Set(d.specifications.filter(s=>s.role!=='SENSITIVITY').flatMap(s=>s.result_ids)).size,empty=d.grade.filter(g=>/^Not rated/.test(g.certainty)).length;
-    const p=d.prisma,holds=(d.results_register||[]).filter(r=>r.decision==='HOLD'),q=d.qor_analysis;
-    return title('Evidence, with its limits',`Registered in PROSPERO as ${esc(d.registration)} · public analytical release, not data-locked`)+
-    `<p class="provenance" id="overview-provenance">${provenance()}</p>`+
-    `<div class="summary-grid status-grid"><article><span class="eyebrow">Evidence inventory</span><strong>${nRep} reports · ${nFam} trial families</strong><p>${nRand.toLocaleString('en-GB')} randomised participants, operational count. This is not an analysed efficacy population: analysed N is outcome-specific. Yeh probable overlap counted once and held out of models.</p></article>`+
-    `<article class="status-done"><span class="eyebrow">Complete · v38 core</span><strong>${d.rob.length} RoB 2 assessments · ${d.grade.length} GRADE bodies</strong><p>Core v38 RoB 2 and GRADE are complete under the adopted workflow: all ${comps} current non-sensitivity component results are assessed; ${empty} empty bodies are not rated. ${reviewLine(x=>x.endsWith('core v38'))}${q?` The ~24 h QoR addendum adds ${q.rob.length} assessments and ${q.grade.length} GRADE bodies.`:''}</p></article>`+
-    `<article class="status-open" id="overview-outstanding"><span class="eyebrow">Outstanding</span><strong>${d.outstanding.length} review deliverables not complete</strong><ul>${d.outstanding.map(x=>`<li>${esc(x).replace(/\.$/,'')}</li>`).join('')}</ul><p>As recorded in the <a href="current/FINAL_CURRENT_STATE_REPORT.md">current-state report</a>. ${(d.qor_later_models||[]).some(m=>m.role!=='SENSITIVITY'&&!(d.qor_later_grade||[]).some(g=>g.model_id===m.model_id))?' Later-window QoR bodies without a GRADE record are shown ungraded.':''}</p></article></div>`+
-    `<details class="limits" open><summary>Limitations that stay in view</summary><ul>`+
-      `<li><strong>Import mapping gap:</strong> ${p.references} raw references against ${p.reported_import_records} reported imports; the ${p.unmapped_import_difference}-reference difference cannot be mapped to records.</li>`+
-      `<li><strong>Historical selection:</strong> ${p.exclusion_reasons['no perioperative analgesia outcome found']??'—'} full-text exclusions keep the historical outcome-focused label; this is not fresh proof that every excluded report lacks every eligible outcome. <button type="button" class="text-button" data-view="prisma">PRISMA accounting</button></li>`+
-      `<li><strong>Reports and trials:</strong> ${nRep} reports come from ${nFam} operational trial families; counts of reports are not counts of independent trials.</li>`+
-      `<li><strong>Randomised and analysed N:</strong> the operational randomised count is not the analysed population; each model states its own N.</li>`+
-      `<li><strong>Source holds:</strong> ${holds.length} extracted results in ${new Set(holds.map(r=>r.study)).size} reports are held for unresolved source, comparator or construct questions and enter no model.</li>`+
-      `<li><strong>E2 is post hoc:</strong> defined and amended after the data were seen; E1 remains the registered primary analysis and E2 is not graded.</li>`+
-      `<li><strong>Reproduction is not source truth:</strong> Stata, R and Python agreement shows computational consistency, not that extracted values match the reports or that selection was complete.</li></ul></details>`+
-    qorLink()+`<h3>Primary question</h3>${modelTable(primary)}${note('No body establishes ≥10mg opioid sparing together with paired ~24h pain upper CI &lt;+1. Separate pain evidence cannot supply Szmit’s missing paired fixed-24h measurement. A one-study estimate is not a pooled meta-analysis.')}`+
-    (d.e2_joint ? `<div class="panel"><h4>E2 post-hoc sensitivity analysis</h4>${
-      (() => {
-        const mTeas = d.e2_analysis.models.find(m=>m.body==='TEAS vs sham' && m.role==='E2 POST-HOC SENSITIVITY (main)');
-        const mEa = d.e2_analysis.models.find(m=>m.body==='EA vs sham' && m.role==='E2 POST-HOC SENSITIVITY (main)');
-        let txt = `TEAS vs sham (k=${mTeas.k}, N=${mTeas.N}): ${num(mTeas.effect)} mg IV MME [${num(mTeas.ci_low)}, ${num(mTeas.ci_high)}]. EA vs sham: ` + (mEa.k ? `(k=${mEa.k}) ${num(mEa.effect)} mg IV MME [${num(mEa.ci_low)}, ${num(mEa.ci_high)}].` : `k=${mEa.k}.`);
-        
-        const met_bodies = d.e2_joint.filter(x => x.joint_criterion === 'Met').map(x => x.body);
-        if (met_bodies.length > 0) {
-            txt += ` Joint criterion met in ${met_bodies.join(' and ')}`;
-        } else {
-            txt += ` Joint criterion met in no body`;
-        }
-        
-        const cant_eval_bodies = d.e2_joint.filter(x => x.joint_criterion === 'Cannot be evaluated').map(x => x.body);
-        if (cant_eval_bodies.length > 0) {
-            txt += `; for ${cant_eval_bodies.join(' and ')} it cannot be evaluated`;
-        }
-        txt += `.`;
-        txt += ` E2 was defined and amended after results were known. E1 stays primary. E2 is not graded.`;
-        txt += ` <button type="button" class="text-button" data-view="results">See E2 section in Results</button>.`;
-        txt += ` Trial-by-trial accounting: <a href="current/ADDITIONAL_FILE_12.md">Additional file 12</a>.`;
-        return note(txt);
-      })()
-    }</div>` : '')+
-    `<h3>What changed</h3><ul><li>Wu 2016 recorded as citation-search evidence; full-text dispositions reconciled.</li><li>Risk-of-bias and all ${d.grade.length} certainty decisions adopted${(d.second_review||[]).some(r=>r.scope==='GRADE · core v38')?`; second review (${esc((d.second_review.find(r=>r.scope==='GRADE · core v38')||{}).reviewer)}, ${fmtDate((d.second_review.find(r=>r.scope==='GRADE · core v38')||{}).review_date)}) confirmed them`:'; no reviewer approval queue'}.</li><li>Zheng’s unresolved continuous data held out of main models; original values retained in diagnostics.</li><li>Wu 2025 intraoperative dose preceded treatment and is now diagnostic only.</li><li>The 24-h QoR addendum (3 Very-low-certainty bodies).</li><li>Later-window QoR models${laterGraded().length?`, ${laterGraded().length} bodies graded post hoc (${esc(reviewText('qor_grade_later.csv'))})`:', ungraded'}.</li>${(d.characteristics||[]).some(c=>/baseline_protocol_extraction/.test(c.source))?`<li>Baseline and protocol characteristics quoted from the source PDFs, replacing every legacy value (${esc(reviewText('baseline_protocol_extraction.csv'))}).</li>`:''}${d.narrative_outcomes?`<li>Structured recovery-milestone, harms and satisfaction tables with page-located quotations; descriptive only. <button type="button" class="text-button" data-view="coverage">Open the tables</button>.</li>`:''}${(d.second_review_pending||[]).length?`<li>A second-review worksheet lists the ${d.second_review_pending.reduce((a,x)=>a+ +x.items,0)} items that still have one assessor.</li>`:''}${latestReview()}<li>The E2 post-hoc sensitivity analysis, with E1 retained as primary. <button type="button" class="text-button" data-view="results">See E2 results</button>.</li>`+
-    (d.stata?`<li>Every analysis with data (${d.stata.summary.filter(s=>s.status.startsWith('STATA VERIFIED')).length}) independently reproduced in Stata ${esc(d.stata.run_info.stata_version)}, with ${d.stata.figures.length} publication figures (SVG, PDF, PNG). <a href="#methods?section=stata">Reproducibility</a>.</li>`:'')+
-    `<li>Study Explorer: harmonised report characteristics with verification status, filters, presets and a detailed outcome matrix. <button type="button" class="text-button" data-view="studies">Open the explorer</button>.</li></ul>`+
-    note('The 12-reference import gap and historical outcome-focused exclusion limitation remain disclosed.');}
-  // Plot extent: study CIs, stored pooled CI/PI, the null and (where recorded) the -10 mg threshold, padded 5%.
-  const Z95=1.95996398454;
-  const plotVals=(m,rows)=>[0,...rows.flatMap(r=>[+r.yi-Z95*Math.sqrt(+r.vi),+r.yi+Z95*Math.sqrt(+r.vi)]),...(m.k?[m.ci_low,m.ci_high]:[]),...(m.pi_low!==null&&m.pi_low!==undefined?[m.pi_low,m.pi_high]:[]),...(m.reaches10mg!==null&&m.reaches10mg!==undefined?[-10]:[])];
-  const padRange=vals=>{const lo=Math.min(...vals),hi=Math.max(...vals),pad=(hi-lo||1)*.05;return [lo-pad,hi+pad];};
-  function axisTicks(lo,hi,rr){
-    const fmt=v=>String(+v.toFixed(6));
-    if(rr){const sets=[[.01,.02,.05,.1,.2,.5,.75,1,1.5,2,4,5,10,20,50,100],[.001,.002,.005,.01,.02,.05,.1,.2,.5,1,2,5,10,20,50,100,200,500,1000],[.001,.01,.1,1,10,100,1000]];
-      return sets.map(s=>s.filter(t=>Math.log(t)>=lo&&Math.log(t)<=hi)).find(s=>s.length<=7).map(t=>({v:Math.log(t),label:fmt(t)}));}
-    const raw=(hi-lo)/5,p=10**Math.floor(Math.log10(raw)),step=[1,2,2.5,5,10].map(s=>s*p).find(s=>raw<=s),ticks=[];
-    for(let v=Math.ceil(lo/step)*step;v<=hi;v+=step)ticks.push({v,label:fmt(v)});return ticks;
-  }
-  // Drawn only from canonical outputs and inputs: pooled estimate/CI/PI are never recomputed here.
-  // rows defaults to the model's core inputs; range lets several plots share one axis.
-  // link: 'result' opens the result inspector for the row; 'study' opens the study profile (rows without a core inspector entry).
-  function forest(m,rows=d.inputs.filter(r=>r.model_id===m.model_id),range,link='result'){
-    if(!rows.length)return '';
-    const rr=m.measure==='RR',show=v=>num(rr?Math.exp(v):v),z=Z95,tau2=+m.tau2||0,pooled=m.k>1;
-    const w=rows.map(r=>1/(+r.vi+tau2)),wsum=w.reduce((a,b)=>a+b,0);
-    const pts=rows.map((r,i)=>({name:r.study,mark:r.mark,rid:r.result_id,mid:r.model_id,y:+r.yi,lo:+r.yi-z*Math.sqrt(+r.vi),hi:+r.yi+z*Math.sqrt(+r.vi),w:w[i]/wsum}));
-    const hasPI=m.pi_low!==null&&m.pi_low!==undefined,thr=m.reaches10mg!==null&&m.reaches10mg!==undefined?-10:null;
-    const [lo,hi]=range||padRange(plotVals(m,rows));
-    const X0=290,X1=640,x=v=>X0+(v-lo)/(hi-lo)*(X1-X0),ticks=axisTicks(lo,hi,rr);
-    const RH=30,top=46,poolY=top+pts.length*RH+(pooled?8:0),piY=poolY+RH,axisY=(pooled?(hasPI?piY:poolY):top+(pts.length-1)*RH)+28,ht=axisY+(m.construct.startsWith('pre_')?46:66);
-    const T=(tx,ty,s,o='')=>`<text x="${tx}" y="${ty}" fill="#dbeafe" font-size="13" ${o}>${s}</text>`;
-    const comp={sham:'sham',usual_care:'usual care',active_electrical:'active electrical control'}[m.comparator]||esc(m.comparator);
-    const summary=pooled?`pooled ${show(m.effect)} [${show(m.ci_low)}, ${show(m.ci_high)}]`:`single study ${show(m.effect)} [${show(m.ci_low)}, ${show(m.ci_high)}], not pooled`;
-    const lab=p=>{if(link==='study'&&sid(p.name))return `class="fp-link" data-study="${esc(sid(p.name))}" role="link" tabindex="0" aria-label="Study profile: ${esc(p.name)}"`;
-      if(link==='result'&&d.inputs.some(x=>x.result_id===p.rid&&x.model_id===p.mid))return `class="fp-link result-open" data-result="${esc(p.rid)}" data-result-model="${esc(p.mid)}" role="button" tabindex="0" aria-label="${esc(p.name)}: open result ${esc(p.rid)} in the result inspector"`;return '';};
-    // Text summary above the plot (readable without scrolling a wide plot on a phone); stored values only.
-    const u=` ${esc(rr?'(risk ratio)':unitLabel(m.unit))}`,ci=`<strong>${show(m.effect)} [${show(m.ci_low)}, ${show(m.ci_high)}]</strong>${u}`;
-    const brief=pooled?`Pooled estimate from ${m.k} studies (N = ${m.N}; REML, safeguarded Hartung–Knapp): ${ci}${m.I2!==null&&m.I2!==undefined?` · I² ${num(m.I2,1)}%`:''}${hasPI?` · 95% prediction interval ${show(m.pi_low)} to ${show(m.pi_high)}`:''}`:
-      m.k?`Single study (${esc(pts[0].name)}, N = ${m.N}): ${ci} · not pooled`:`${pts.length} ${pts.length===1?'study':'studies'} shown; no pooled estimate`;
-    return `<p class="forest-summary">${brief}${thr===null?'':' · dotted line: −10 mg registered threshold'}<span class="forest-hint"> · scroll the plot sideways to see every column</span></p>`+
-      `<div class="forest-wrap"><svg viewBox="0 0 960 ${ht}" role="group" aria-label="Forest plot for ${esc(modelLabel(m.model_id))} (model ${esc(m.model_id)}): ${esc(summary)} ${esc(unitLabel(m.unit))}. Study labels are links.">`+
-      T(8,20,'Study','fill-opacity=".75"')+T(660,20,rr?'Risk ratio [95% CI]':'Estimate [95% CI]','fill-opacity=".75"')+(pooled?T(952,20,'Weight','fill-opacity=".75" text-anchor="end"'):'')+
-      `<line x1="${x(0)}" x2="${x(0)}" y1="30" y2="${axisY}" class="fp-null" stroke="#94a3b8" stroke-dasharray="4 4"/>`+
-      (thr===null?'':`<line x1="${x(thr)}" x2="${x(thr)}" y1="30" y2="${axisY}" class="fp-tl" stroke="#fbbf24" stroke-dasharray="1 4" stroke-width="2"/><text class="fp-tt" x="${x(thr)}" y="${axisY+54}" fill="#fbbf24" font-size="11" text-anchor="middle">−10 mg registered threshold</text>`)+
-      pts.map((p,i)=>{const y=top+i*RH,sz=pooled?5+11*Math.sqrt(p.w):9;return T(8,y+4,esc(p.name)+(p.mark?` <tspan class="fp-mut" fill="#94a3b8">${esc(p.mark)}</tspan>`:''),lab(p))+`<line x1="${x(p.lo)}" x2="${x(p.hi)}" y1="${y}" y2="${y}" class="fp-s" stroke="#93c5fd" stroke-width="1.6"/><rect class="fp-f" x="${x(p.y)-sz/2}" y="${y-sz/2}" width="${sz}" height="${sz}" fill="#93c5fd"/>`+T(660,y+4,`${show(p.y)} [${show(p.lo)}, ${show(p.hi)}]`)+(pooled?T(952,y+4,`${(100*p.w).toFixed(1)}%`,'text-anchor="end"'):'');}).join('')+
-      (pooled?`<line x1="8" x2="952" y1="${poolY-RH/2-4}" y2="${poolY-RH/2-4}" class="fp-sep" stroke="#2a3a52"/>`+T(8,poolY+4,'Pooled · REML, safeguarded HK','font-weight="600"')+
-        `<polygon points="${x(m.ci_low)},${poolY} ${x(m.effect)},${poolY-8} ${x(m.ci_high)},${poolY} ${x(m.effect)},${poolY+8}" class="fp-pf" fill="#5eead4"/>`+T(660,poolY+4,`${show(m.effect)} [${show(m.ci_low)}, ${show(m.ci_high)}]`,'class="fp-pf" font-weight="600" fill="#5eead4"')+T(952,poolY+4,'100%','text-anchor="end"')+
-        (hasPI?T(8,piY+4,'95% prediction interval','fill-opacity=".75"')+`<line x1="${x(m.pi_low)}" x2="${x(m.pi_high)}" y1="${piY}" y2="${piY}" class="fp-ps" stroke="#5eead4" stroke-width="2"/><line x1="${x(m.pi_low)}" x2="${x(m.pi_low)}" y1="${piY-5}" y2="${piY+5}" class="fp-ps" stroke="#5eead4" stroke-width="2"/><line x1="${x(m.pi_high)}" x2="${x(m.pi_high)}" y1="${piY-5}" y2="${piY+5}" class="fp-ps" stroke="#5eead4" stroke-width="2"/>`+T(660,piY+4,`${show(m.pi_low)} to ${show(m.pi_high)}`,'fill-opacity=".75"'):'')
-      :T(660,top+pts.length*RH-6,'Single study · not pooled','class="fp-mut" font-size="12" fill="#94a3b8"'))+
-      `<line x1="${X0}" x2="${X1}" y1="${axisY}" y2="${axisY}" class="fp-axis" stroke="#94a3b8"/>`+
-      ticks.map(t=>`<line x1="${x(t.v)}" x2="${x(t.v)}" y1="${axisY}" y2="${axisY+5}" class="fp-axis" stroke="#94a3b8"/><text class="fp-mut" x="${x(t.v)}" y="${axisY+18}" fill="#94a3b8" font-size="11" text-anchor="middle">${t.label}</text>`).join('')+
-      (m.construct.startsWith('pre_')?'':`<text x="${x(0)-8}" y="${axisY+36}" fill="#cbd5e1" font-size="12" text-anchor="end">← Favours ${esc(m.modality)}</text><text x="${x(0)+8}" y="${axisY+36}" fill="#cbd5e1" font-size="12">Favours ${comp} →</text>`)+
-      T(660,axisY+18,`${rr?'Risk ratio, log scale; null = 1':'Difference; null = 0'} · ${esc(unitLabel(m.unit))}`,'class="fp-mut" font-size="12" fill="#94a3b8"')+
-      `</svg></div>`;
-  }
-  // Evidence cards for writing: fixed, neutral wording generated only from stored fields (no interpretation).
-  const OUTCOME={systemic_opioid_0_24h:'cumulative 0–24 h systemic opioid consumption',device_or_systemic_opioid_0_24h:'0–24 h opioid consumption (device or systemic totals)',
-    device_or_equivalence_uncertain_opioid_0_24h:'0–24 h opioid consumption (expanded: device totals or uncertain equivalence)',PCA_partial_1_to_24h:'PCA opioid consumption from 1 to 24 h',
-    PCA_morphine_0_24h_weight_normalized:'0–24 h PCA morphine per kg',fentanyl_0_24h_weight_normalized:'0–24 h fentanyl per kg',PCA_or_author_equivalent_0_48h:'0–48 h PCA or author-equivalent opioid consumption',
-    PCA_fentanyl_0_48h:'0–48 h PCA fentanyl consumption',PCA_morphine_0_72h:'0–72 h PCA morphine consumption',PCA_tramadol_0_24h:'0–24 h PCA tramadol consumption',rescue_pethidine_0_24h:'0–24 h rescue pethidine',
-    composite_PONV_0_24h:'postoperative nausea and vomiting within 24 h',composite_PONV_0_24h_broad_sham:'postoperative nausea and vomiting within 24 h (broad sham definition)',
-    PONV_24h_including_point_window_uncertain:'postoperative nausea and vomiting at about 24 h (including point-window reports)',composite_PONV_0_48h:'postoperative nausea and vomiting within 48 h',
-    nausea_0_24h:'nausea within 24 h',nausea_0_48h:'nausea within 48 h',nausea_6_24h:'nausea from 6 to 24 h',persistent_nausea_over5min_0_24h:'persistent nausea (over 5 minutes) within 24 h',
-    vomiting_0_24h:'vomiting within 24 h',vomiting_0_48h:'vomiting within 48 h',vomiting_6_24h:'vomiting from 6 to 24 h',
-    pain_rest_approximately24h:'pain at rest at about 24 h (0–10 scale)',pain_movement_approximately24h:'pain on movement at about 24 h (0–10 scale)',
-    pain_setting_unspecified_24h:'pain at about 24 h, rest or movement not stated (0–10 scale)',pain_setting_unspecified_POD1:'pain on postoperative day 1, rest or movement not stated (0–10 scale)',
-    pain_movement_interval6_24h:'pain on movement summarised over 6–24 h (0–10 scale)',time_first_flatus:'time to first flatus',time_first_defecation:'time to first defecation',
-    time_first_bowel_sounds:'time to first bowel sounds',intraop_remifentanil:'intraoperative remifentanil consumption',pre_intervention_intraop_remifentanil:'intraoperative remifentanil given before the intervention started (diagnostic)'};
-  const MEASURE={MD:'mean difference',RR:'risk ratio',SMD:'standardised mean difference (Hedges g)'};
-  const COMP={sham:'sham',usual_care:'usual care',active_electrical:'active electrical control'};
-  const minus=s=>String(s).replace(/-/g,'−');
-  // Reader-facing model names. One deterministic mapping, built only from stored fields: outcome construct,
-  // modality and comparator, plus the qualifier the model ID itself carries (e.g. "without Chen 2020").
-  // QoR models use their stored label; E2 models their stored body and label. The ID is always shown beside it.
-  const cap=s=>s?s[0].toUpperCase()+s.slice(1):s;
-  const CMP_TOKEN=new Set(['sham','usual','active']);
-  const idQualifier=(mid,mod)=>{const t=mid.split('_'),i=t.indexOf(mod),j=i<0?1:i+1+(CMP_TOKEN.has(t[i+1])?1:0);
-    return t.slice(j).join(' ').replace(/\bsuf(\d[\d.]*)/g,'sufentanil $1 mg/µg').replace(/([A-Za-z])(\d{4})\b/g,'$1 $2').replace(/\bleaveout\b/,'leave out').replace(/\bexcl\b/,'excluding').trim();};
-  const LABELS=new Map();
-  function modelLabel(mid){
-    if(LABELS.has(mid))return LABELS.get(mid);
-    let label=mid;const m=d.models.find(x=>x.model_id===mid);
-    if(m){const q=idQualifier(mid,m.modality);label=`${cap(OUTCOME[m.construct]||m.construct.replaceAll('_',' '))} — ${m.modality} vs ${COMP[m.comparator]||m.comparator}${q?` (${q})`:''}`;}
-    else{const q=[...(d.qor_analysis?.main_models||[]),...(d.qor_analysis?.diagnostics||[]),...(d.qor_later_models||[])].find(x=>x.model_id===mid);
-      const e=(d.e2_analysis?.models||[]).find(x=>x.model_id===mid);
-      if(q)label=q.label.replace(/ versus /g,' vs ');
-      else if(e){const mod=e.body.split(' vs ')[0],extra=e.role.includes('(main)')?'':((d.e2_labels||{})[mid]||idQualifier(mid.replace(/^E2_(opioid24_)?/,''),mod));
-        label=`E2 post-hoc: 0–24 h opioid consumption — ${e.body}${extra?` (${extra.replace(/^(.)/,c=>c.toLowerCase())})`:''}`;}}
-    LABELS.set(mid,label);return label;
-  }
-  // HTML for a model reference: readable label (a link to the model unless link is false) with the model ID beneath.
-  const modelName=(mid,link=true)=>`${link?`<button type="button" class="text-button model-link" data-model="${esc(mid)}">${esc(modelLabel(mid))}</button>`:`<span class="model-label">${esc(modelLabel(mid))}</span>`}<br><small class="model-id">Model ID: <code>${esc(mid)}</code></small>`;
-  window.reviewModelLabel=modelLabel;window.reviewModelName=modelName;
-  // ctx: {e2:true} for E2 bodies; rows are the contributing trial rows.
-  function evidenceCard(m,rows,ctx={}){
-    const rr=m.measure==='RR',v=x=>minus(num(rr?Math.exp(x):x)),unit=rr||m.measure==='SMD'?'':' '+unitLabel(m.unit).replace(/^0–10 points$/,'points'),g=ctx.e2?null:grade.get(m.model_id),map=(d.sensitivity_map||[]).find(r=>r.model_id===m.model_id);
-    const outcome=OUTCOME[m.construct]||m.construct.replaceAll('_',' '),cmp=`${m.modality} versus ${COMP[m.comparator]||m.comparator}`;
-    const cert=ctx.e2?'not graded':g&&!g.certainty.startsWith('Not rated')?`${g.certainty.toLowerCase()}-certainty evidence`:'not independently graded';
-    const frame=ctx.e2?`In the post-hoc E2 sensitivity synthesis for ${cmp} (defined and amended after the data were seen), `:
-      m.role==='PRINCIPAL'||m.role==='SUPPORTIVE'?`In the ${m.role.toLowerCase()} ${cmp} comparison for ${outcome}, `:
-      map&&map.parent_model_id?`In a sensitivity analysis of ${map.parent_model_id} (${map.relation.replace(/ \((.*)\)$/,', $1')}) for ${outcome} with ${cmp}, `:
-      map?`In a stand-alone diagnostic analysis (${map.relation.replace(/^stand-alone \((.*)\)$/,'$1')}) of ${outcome} with ${cmp}, `:`For ${outcome} with ${cmp}, `;
-    const stats=m.k>1?`${m.k} trials (${m.N} participants) gave a pooled ${MEASURE[m.measure]} of ${v(m.effect)}${unit} (95% CI ${v(m.ci_low)} to ${v(m.ci_high)}; I² ${num(m.I2,1)}%${m.pi_low!==null&&m.pi_low!==undefined?`; 95% prediction interval ${v(m.pi_low)} to ${v(m.pi_high)}`:''}; ${cert}).`:
-      `one trial (${m.N} participants) reported a ${MEASURE[m.measure]} of ${v(m.effect)}${unit} (95% CI ${v(m.ci_low)} to ${v(m.ci_high)}; ${cert}); this is a single-study estimate, not a pooled result.`;
-    const nullTxt=(m.ci_high<0||m.ci_low>0)?'The 95% CI excludes the null (no difference).':'The 95% CI includes the null (no difference).';
-    const extra=ctx.e2?` E1 remains the registered primary analysis.${ctx.joint?` Registered joint criterion: ${ctx.joint.joint_criterion.toLowerCase()}.`:''}`:
-      (m.role==='PRINCIPAL'||m.role==='SUPPORTIVE')&&m.construct==='systemic_opioid_0_24h'?' The registered joint clinical-importance criterion was not established.':'';
-    const sentence=m.k?frame+stats+' '+nullTxt+extra:`No eligible quantitative evidence was identified for ${outcome} with ${cmp}.`;
-    const doms=g?['risk_of_bias','inconsistency','indirectness','imprecision','publication_bias'].filter(k=>+g[k+'_downgrades']>0).map(k=>`${k.replaceAll('_',' ')} (−${g[k+'_downgrades']})`):[];
-    const certLine=ctx.e2?'Not graded: post-hoc sensitivity analysis.':g?`${g.certainty}${doms.length?'; downgraded for '+doms.join(', '):''}.`:'Not independently graded (sensitivity or diagnostic model).';
-    const url=`${location.origin}${location.pathname}#${ctx.e2?'e1e2?body='+encodeURIComponent(ctx.body):'results?model='+encodeURIComponent(m.model_id)}`;
-    const source=`Perioperative TEAS & EA review dashboard ${d.version} (${d.date}); model ${m.model_id}; ${url}`;
-    const trials=rows.map(r=>`${r.study} (${r.result_id}${r.source_location?'; '+r.source_location:''}${r.factor&&+r.factor!==1?'; conversion factor '+r.factor:''})`);
-    const md=`### ${outcome[0].toUpperCase()+outcome.slice(1)}: ${cmp}\n\n${sentence}\n\n| Evidence body | Role | k / N | ${rr?'RR':'Estimate'} [95% CI] | I² | Certainty |\n|---|---|---|---|---|---|\n`+
-      `| ${m.model_id} | ${ctx.e2?'E2 post-hoc':m.role} | ${m.k} / ${m.N} | ${m.k?`${v(m.effect)} [${v(m.ci_low)}, ${v(m.ci_high)}]${unit}`:'—'} | ${m.k>1?num(m.I2,1)+'%':'—'} | ${ctx.e2?'Not graded':g?g.certainty:'Not graded'} |\n\n`+
-      `**Certainty:** ${certLine}\n\n**Trials:** ${trials.length?trials.join('; '):'none'}.\n\n**Source:** ${source}\n`;
-    return {sentence,md};
-  }
-  function cardPanel(card,id){
-    return `<details class="evidence-card" data-card="${esc(id)}"><summary>Evidence card for writing</summary><p class="card-sentence">${esc(card.sentence)}</p>`+
-      `<div class="card-actions"><button type="button" data-card-action="sentence">Copy sentence</button><button type="button" data-card-action="markdown">Copy Markdown</button><button type="button" data-card-action="download">Download .md</button><span class="card-status" role="status"></span></div>`+
-      `<textarea class="card-md" readonly rows="10" aria-label="Evidence card Markdown">${esc(card.md)}</textarea>`+
-      `<p class="source">Generated from stored outputs with fixed wording. Check the sentence against the model before use; certainty applies only to graded bodies.</p></details>`;
-  }
-  function cardAction(btn){
-    const box=btn.closest('.evidence-card'),md=box.querySelector('.card-md').value,sentence=box.querySelector('.card-sentence').textContent,status=box.querySelector('.card-status'),act=btn.dataset.cardAction;
-    if(act==='download'){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([md],{type:'text/markdown'}));a.download=`evidence_card_${box.dataset.card}.md`;a.click();URL.revokeObjectURL(a.href);status.textContent='Downloaded.';return;}
-    const text=act==='sentence'?sentence:md;
-    (navigator.clipboard?navigator.clipboard.writeText(text):Promise.reject()).then(()=>{status.textContent='Copied.';},()=>{const ta=box.querySelector('.card-md');ta.focus();ta.select();status.textContent='Copy blocked by the browser: the Markdown is selected; press Ctrl/Cmd+C.';});
-  }
-  // Sensitivity comparison for the Results panel: the baseline body and every mapped sensitivity (sensitivity_map,
-  // a proposed display grouping) from stored outputs. Only models on the baseline's scale share its ladder.
-  const modelById=id=>d.models.find(x=>x.model_id===id);
-  const sameScale=(a,b)=>a.measure===b.measure&&a.unit.replace('assumed ','')===b.unit.replace('assumed ','');
-  const excludesNull=m=>m.k?(m.ci_high<0||m.ci_low>0):null;
-  const descendants=(id,depth=0)=>(d.sensitivity_map||[]).filter(r=>r.parent_model_id===id).flatMap(r=>[{...r,depth},...descendants(r.model_id,depth+1)]);
-  function sensitivitySection(m){
-    if(!d.sensitivity_map)return '';
-    const own=d.sensitivity_map.find(r=>r.model_id===m.model_id),link=id=>modelName(id);
-    let base=m,head='',rows;
-    if(own&&own.parent_model_id){base=modelById(own.parent_model_id);head=note(`This model is a sensitivity analysis of ${link(base.model_id)} (${esc(own.relation)}). It is not an independently graded evidence body.`);}
-    if(own&&!own.parent_model_id){
-      const fam=d.sensitivity_map.filter(r=>!r.parent_model_id&&(()=>{const x=modelById(r.model_id);return x.construct===m.construct&&x.modality===m.modality&&x.comparator===m.comparator;})());
-      head=note(`Stand-alone diagnostic (${esc(own.relation)}): there is no main evidence body to compare it with.${fam.length>1?' Models of the same construct and comparison are shown together.':''}`);
-      rows=fam.map(r=>({r,m:modelById(r.model_id),depth:0}));base=null;
-    }else rows=descendants(base.model_id).map(r=>({r,m:modelById(r.model_id),depth:r.depth}));
-    if(!rows.length)return '';
-    const ref=base&&base.k?base:null,rr=(base||m).measure==='RR',disp=v=>num(rr?Math.exp(v):v);
-    const est=x=>x.k?`<span style="white-space:nowrap">${disp(x.effect)} [${disp(x.ci_low)}, ${disp(x.ci_high)}]</span>`:'No eligible evidence';
-    const pi=x=>x.pi_low!==null&&x.pi_low!==undefined?`${disp(x.pi_low)} to ${disp(x.pi_high)}`:'—';
-    const nullTxt=x=>x.k?(excludesNull(x)?'Excludes null':'Includes null'):'—';
-    const shift=x=>!ref||!x.k||!sameScale(x,ref)?'—':excludesNull(x)===excludesNull(ref)?'Same':'<strong>Changes</strong>';
-    const delta=x=>!ref||!x.k||!sameScale(x,ref)?'—':rr?`×${num(Math.exp(x.effect-ref.effect))}`:num(x.effect-ref.effect);
-    const tbl=table(['Model','Relation','k','Estimate [95% CI]','Prediction interval','Δ vs baseline','95% CI','Conclusion vs baseline'],
-      [...(base?[[`${link(base.model_id)}<br><small>baseline · ${esc(base.role)}</small>`,'—',base.k,est(base),pi(base),'—',nullTxt(base),'—']]:[]),
-       ...rows.map(({r,m:x,depth})=>[`${'&nbsp;&nbsp;'.repeat(depth*2)}${link(x.model_id)}${base&&!sameScale(x,base)?'<br><small>different scale: '+esc(x.unit)+'</small>':''}`,esc(r.relation),x.k,est(x),pi(x),delta(x),nullTxt(x),shift(x)])]);
-    const plotBase=base||m,onAxis=[...(base&&base.k?[base]:[]),...rows.map(o=>o.m).filter(x=>x.k&&sameScale(x,plotBase))];
-    const thr=plotBase.reaches10mg!==null&&plotBase.reaches10mg!==undefined?-10:null;
-    const lad=onAxis.length>1?ladder(onAxis.map(x=>({label:x.model_id,effect:x.effect,lo:x.ci_low,hi:x.ci_high,k:x.k,main:x===base})),padRange([0,...(thr===null?[]:[thr]),...onAxis.flatMap(x=>[x.ci_low,x.ci_high])]),{rr,unit:unitLabel(plotBase.unit),thr}):'';
-    return `<h3>Sensitivity comparison</h3>`+head+lad+tbl+
-      note('Stored estimates only. “Conclusion vs baseline” compares whether each 95% CI excludes the null; a change is a prompt to look at the model, not evidence of effect modification. Parent links are a proposed display grouping, not an analysis decision.');
-  }
-  function modelDetail(mid){
-    const m=d.models.find(m=>m.model_id===mid);if(!m)return;
-    const s=d.specifications.find(s=>s.model_id===mid),g=grade.get(mid),ins=d.inputs.filter(r=>r.model_id===mid);
-    const panel=$('model-panel');panel.innerHTML=title(esc(modelLabel(mid)),`Model ID: <code>${esc(mid)}</code> · ${esc(m.role)} ·${esc(m.status)} · ${term('k')} ${m.k} · ${term('N')} ${m.N} · ${m.k>1?term('pooled'):m.k?term('single-study','single'):'no eligible data'}`)+`<p class="estimate">${effect(m)}</p>`+stataLine('core',mid)+
-    `<details style="background:var(--bg); margin-bottom:16px"><summary>How to read this plot</summary><p style="font-size:0.9em">Squares are study estimates, sized by random-effects weight; their lines are normal-approximation 95% confidence intervals. The diamond is the canonical pooled estimate with its safeguarded Hartung–Knapp 95% confidence interval, which can be much wider than the study intervals when few studies are pooled. A single study is shown once and is not pooled. The bar under the diamond, where present, is the 95% prediction interval. The dashed line marks no effect (0, or 1 for risk ratios on a log scale); the dotted amber line marks the registered −10 mg IV MME threshold. Direction labels are printed under each axis.</p></details>`+
-    forest(m)+note(esc((s.note||'Separate modality/comparator body. Compatible active arms combined; control counted once.').replace('mg/ug', 'mg/µg')))+
-    (m.k>1?`<p>${term('I²')} ${num(m.I2,1)}% · ${term('τ²')} ${num(m.tau2,3)} (${term('REML')}) · ${term('safeguarded Hartung–Knapp','HK')} interval.</p>`:'')+
-    (m.pi_low!==null&&m.pi_low!==undefined?`<p>${term('Prediction interval','PI')}: ${num(m.measure==='RR'?Math.exp(m.pi_low):m.pi_low)} to ${num(m.measure==='RR'?Math.exp(m.pi_high):m.pi_high)} ${esc(unitLabel(m.unit))}. Interpret cautiously.</p>`:'')+
-    stataFigs(mid)+
-    table(['Contributor / exact result IDs','n intervention / control','Source location','Study'],ins.map(r=>[`<button type="button" class="text-button result-open" data-result="${esc(r.result_id)}" data-result-model="${esc(r.model_id)}">${esc(r.study)}<br><small>${esc(r.result_id)}</small></button>`,`${num(r.n_i,0)} / ${num(r.n_c,0)}`,esc(r.source_location),studyLink(r.study,'Profile →')]))+
-    (m.k?`<p><button type="button" class="text-button" data-risk-model="${esc(m.model_id)}">Risk of bias for this body →</button></p>`:'')+
-    cardPanel(evidenceCard(m,ins),m.model_id)+
-    sensitivitySection(m)+
-    (g?`<h3>GRADE: ${esc(g.certainty)}</h3>${['risk_of_bias','inconsistency','indirectness','imprecision','publication_bias'].map(k=>`<p><strong>${esc(k.replaceAll('_',' '))} (−${g[k+'_downgrades']})</strong> — ${esc(g[k])}</p>`).join('')}`:note('Diagnostic only. Not an independently graded efficacy conclusion.'));
-    panel.hidden=false;panel.scrollIntoView({behavior:'smooth',block:'start'});
-  }
-  function e2_section() {
-    if(!d.e2_analysis) return '';
-    const e2 = d.e2_analysis;
-    const est = m => m ? `${num(m.effect)} [${num(m.ci_low)}, ${num(m.ci_high)}]` : '—';
-    const mainE2 = e2.models.filter(m => m.role === 'E2 POST-HOC SENSITIVITY (main)');
-    
-    const removeDups = ms => ms.filter(m => !['E2_TEAS_sham_leaveout_Gu2019', 'E2_TEAS_sham_leaveout_Lee2011', 'E2_TEAS_sham_excl_unstated_route', 'E2_EA_usual_leaveout_ElRakshy', 'E2_TEAS_sham_E1_restriction'].includes(m.model_id));
-    const teasAll = removeDups(e2.models.filter(m => m.body === 'TEAS vs sham' && m.role !== 'E2 POST-HOC SENSITIVITY (main)'));
-    const eaAll = removeDups(e2.models.filter(m => m.body === 'EA vs usual care' && m.role !== 'E2 POST-HOC SENSITIVITY (main)'));
 
-    const teasSens = teasAll.filter(m => !m.model_id.includes('_LOO_'));
-    const teasLoo = teasAll.filter(m => m.model_id.includes('_LOO_'));
-    const eaSens = eaAll.filter(m => !m.model_id.includes('_LOO_'));
-    const eaLoo = eaAll.filter(m => m.model_id.includes('_LOO_'));
+  const d = window.CURRENT_REVIEW;
+  if (!d) {
+    console.error('window.CURRENT_REVIEW is not loaded');
+    return;
+  }
 
-    const getLabel = m => (d.e2_labels && d.e2_labels[m.model_id]) ? d.e2_labels[m.model_id] : esc((m.note || 'E2 main').replace('mg/ug', 'mg/µg'));
+  const $ = id => document.getElementById(id);
+  const esc = x => String(x ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const num = (x, n = 2) => (x === null || x === undefined || x === '' || isNaN(+x)) ? '—' : Number(x).toFixed(n);
 
-    const estTable = (m2, m1) => {
-        const piText = (m2.k >= 5 && m2.pi_low !== null && m2.pi_high !== null) ? `PI ${num(m2.pi_low)} to ${num(m2.pi_high)}` : 'PI not shown (k<5)';
-        const hetero = (m2.k > 1 && m2.I2 !== null) ? `<br><small>I² ${num(m2.I2, 1)}%, ${piText}</small>` : '<br><small>—</small>';
-        const caveat = m2.body === 'EA vs sham' ? '<br><small>Lin 2002 only; admitted on a boundary reading of DP1 (PCA from hour 1) and DP4 (unquantified IM pethidine first-hour rescue); high risk of bias</small>' : '';
-        return [
-          esc(m2.body),
-          m1 && m1.k ? `${m1.k} / ${m1.N}` : '0 / 0',
-          m1 && m1.k ? effect(m1).replace(' mg IV MME', '') : 'No eligible data',
-          `${m2.k} / ${m2.N}`,
-          est(m2) + hetero + caveat,
-          tag('Not graded')
-        ];
-    };
+  function unitLabel(u) {
+    if (u === 'mg IVMME' || u === 'mg IV morphine') return 'mg IV MME';
+    if (u === 'assumed mg IVMME') return 'assumed mg IV MME';
+    return u || '';
+  }
 
-    const teasMain = mainE2.find(m=>m.model_id==='E2_opioid24_TEAS_sham');
-    const teasModels = [teasMain, ...teasSens, ...teasLoo];
-    const crossesZero = teasModels.filter(m => m.ci_high > 0).length;
-    const noneReaches = teasModels.filter(m => m.effect > -10).length;
-    const total = teasModels.length;
-    const crossZeroText = crossesZero === total ? 'All ' + total + ' TEAS-vs-sham E2 analyses cross zero' : crossesZero + ' of ' + total + ' TEAS-vs-sham E2 analyses cross zero';
-    const noneReachesText = noneReaches === total ? 'none reaches -10 mg.' : (total - noneReaches) + ' reaches -10 mg.';
-    const teasCaption = `${crossZeroText}; ${noneReachesText}`;
-
-    const looRange = (loo) => {
-        if (!loo.length) return '';
-        const min = Math.min(...loo.map(m => m.effect));
-        const max = Math.max(...loo.map(m => m.effect));
-        return note(`Leave-one-out range: ${num(min)} to ${num(max)} mg.`);
-    };
-
-    const e2PainConstant = 'As stated in E2_RESULTS.md, digitising Lin 2002 Fig. 1 has not been done and would be a further post-hoc decision.';
-    const jointRows = (d.e2_joint || []).map(j => [j.body, j.opioid_limb, j.pain_limb, j.joint_criterion]);
-
-    return `<h3 id="e2-section" tabindex="-1">E2 post-hoc sensitivity analysis</h3>` +
-      note('E1 stays primary. Trial-by-trial accounting: <a href="current/ADDITIONAL_FILE_12.md">Additional file 12</a>. E2 is post-hoc, defined and amended (E2.1) after data were seen, and the decision to keep E1 primary was made after the E2 results were known.') +
-      table(['Body', 'E1 k / N', 'E1 Estimate [95% CI]', 'E2 k / N', 'E2 Estimate [95% CI]', 'E2 Certainty'], mainE2.map(m2 => {
-        const m1 = primary.find(m => m.model_id === 'opioid24_' + m2.model_id.replace('E2_opioid24_', ''));
-        return estTable(m2, m1);
-      })) +
-      `<h4>TEAS vs sham — sensitivity analyses</h4>` +
-      note(teasCaption) +
-      table(['Analysis', 'k', 'MD [95% CI]'], [teasMain, ...teasSens].map(m => [getLabel(m), m.k, est(m)])) +
-      (() => {
-        const e1Rest = e2.models.find(m => m.model_id === 'E2_TEAS_sham_E1_restriction');
-        return e1Rest ? note(`The registered E1 primary (${esc(e1Rest.studies)} only; k=${e1Rest.k}, N=${e1Rest.N}): ${est(e1Rest)}`) : '';
-      })() +
-      `<h4>TEAS vs sham — leave-one-out</h4>` +
-      looRange(teasLoo) +
-      table(['Analysis', 'k', 'MD [95% CI]'], teasLoo.map(m => [getLabel(m), m.k, est(m)])) +
-      `<h4>EA vs usual care — sensitivity analyses</h4>` +
-      table(['Analysis', 'k', 'MD [95% CI]'], [mainE2.find(m=>m.model_id==='E2_opioid24_EA_usual'), ...eaSens].map(m => [getLabel(m), m.k, est(m)])) +
-      `<h4>EA vs usual care — leave-one-out</h4>` +
-      looRange(eaLoo) +
-      table(['Analysis', 'k', 'MD [95% CI]'], eaLoo.map(m => [getLabel(m), m.k, est(m)])) +
-      `<h4>Joint criterion (≥10 mg sparing and paired pain upper limit &lt; +1)</h4>` +
-      table(['Body', 'Opioid limb', 'Pain limb', 'Joint criterion'], jointRows) +
-      note(e2PainConstant);
-  }
-  function results(){return title('Results and diagnostics','Fixed canonical analyses. Selecting a model does not silently change study membership.')+`<label for="model-select">Evidence body</label><select id="model-select"><option value="">Choose a model…</option>${['PRINCIPAL','SUPPORTIVE','ADDITIONAL','SENSITIVITY'].map(role=>`<optgroup label="${role}">${d.models.filter(m=>m.role===role).map(m=>`<option value="${esc(m.model_id)}">${esc(modelLabel(m.model_id))} · k=${m.k} · ${esc(m.model_id)}</option>`).join('')}</optgroup>`).join('')}</select><div id="model-panel" class="panel" hidden></div><h3>Principal and supportive</h3>${modelTable(primary)}<h3>Additional outcomes</h3>${modelTable(models(['ADDITIONAL']))}<details><summary>36 explicitly labelled sensitivity / diagnostic models</summary>${modelTable(models(['SENSITIVITY']))}</details>`+e2_section();}
-  function prisma(){const p=d.prisma;return title('Selection and accounting','Historical aggregate screening counts, reconciled full-text record dispositions and a separate citation route.')+
-    `<div class="flow-grid"><section><h3>Database route</h3><div class="flow-box">5100 raw references<br><small>Embase 1928 · CENTRAL 1698 · CINAHL 465 · PubMed 1009</small></div><div class="flow-arrow">↓</div><div class="flow-box">5088 reported imports<br><small>12-reference difference: mapping unavailable</small></div><div class="flow-arrow">↓ 1651 automatic duplicates + 1 manual duplicate + 508 automation removals</div><div class="flow-box">2928 screened → 2704 excluded</div><div class="flow-arrow">↓</div><div class="flow-box">224 reports sought → 2 not retrieved</div><div class="flow-arrow">↓</div><div class="flow-box">222 retrieved records → 6 late duplicates removed</div><div class="flow-arrow">↓</div><div class="flow-box">216 distinct reports assessed → 147 excluded</div><div class="flow-arrow">↓</div><div class="flow-box highlight">69 included database reports</div></section><section><h3>Citation route</h3><div class="flow-box">Wu 2016 · 1 report<br><small>Citation-search origin confirmed by user</small></div><div class="flow-arrow">↓</div><div class="flow-box">1 sought · 1 retrieved · 1 assessed</div><div class="flow-arrow">↓</div><div class="flow-box highlight">1 included citation report</div><h3>Combined evidence inventory</h3><div class="flow-box highlight">70 reports<br>69 operational trial families</div></section></div>`+
-    table(['Full-text exclusion reason','Records'],Object.entries(p.exclusion_reasons).map(([r,n])=>[esc(r),n]))+
-    note('147 substantive report exclusions are separate from six exact DOI/title duplicate records removed late. Zhang’s distinct conference abstract remains Abstract only. Six formerly excluded reports reinstated locally; original Covidence decisions are preserved in the downloadable ledger.')+p.caveats.map(c=>note(esc(c))).join('');}
-  function evidence(){return title('Certainty of evidence','38 bodies reviewed and adopted under delegation: 34 rated, four empty. No sensitivity is given a standalone efficacy grade.')+
-    (reviewLine(x=>x.startsWith('GRADE'))?note(reviewLine(x=>x.startsWith('GRADE'))):'')+
-    howTo('this table',`<p>Each row is one evidence body: one outcome, one modality and one comparator. ${term('GRADE')} certainty starts High for randomised evidence and is rated down one or two levels for each of five domains. The Downgrades column lists the levels removed in the order risk of bias / inconsistency / indirectness / imprecision / publication bias. Bodies without eligible data are listed but not rated; ${term('sensitivity')} and ${term('diagnostic')} analyses are never graded on their own.</p><p>Select a body for its forest plot and all five rationales. <em>Risk of bias</em> opens the result-specific ${term('RoB 2')} assessments that fed the risk-of-bias domain. Nothing here is re-graded.</p>`)+
-    table(['Body',term('Certainty','GRADE'),'Downgrades: bias / inconsistency / indirectness / imprecision / publication','Decision','Risk of bias'],d.grade.map(g=>[modelName(g.model_id),tag(g.certainty),['risk_of_bias','inconsistency','indirectness','imprecision','publication_bias'].map(k=>g[k+'_downgrades']).join(' / '),esc(g.decision_status),
-      bodyResults(g.model_id).length?`<button type="button" class="text-button" data-risk-model="${esc(g.model_id)}">Risk of bias →</button>`:'—']))+note('Select an evidence body to inspect all five rationales, its estimate and contributors. Moderate-certainty standalone pain evidence does not establish the joint opioid-and-pain criterion.')+
-    // QoR addendum bodies (~24 h and later windows) are graded in their own records and displayed in the QoR view.
-    ((d.qor_analysis?.grade||[]).length+laterGraded().length?`<h3>Quality-of-recovery bodies</h3>`+table(['Body',term('Certainty','GRADE'),'Downgrades: bias / inconsistency / indirectness / imprecision / publication','Decision'],
-      [...(d.qor_analysis?.grade||[]).map(g=>[g,'~24 h']),...laterGraded().map(g=>[g,'later window'])].map(([g,w])=>[`${modelName(g.model_id)}<br><small>${w}</small>`,tag(g.certainty),['risk_of_bias','inconsistency','indirectness','imprecision','publication_bias'].map(k=>g[k+'_downgrades']).join(' / '),esc(g.decision_status)]))+
-      note('Rationales for each QoR body are in the QoR analysis view. Leave-one-out and stress-test diagnostics are not graded.'):'');}
-  // Risk of bias: every result-specific assessment (core v38, QoR ~24 h, QoR later windows) as a matrix of domains.
-  const ROB_ALL=()=>[...d.rob.map(r=>({...r,set:'Core v38'})),...(d.qor_analysis?.rob||[]).map(r=>({...r,set:'QoR ~24 h'})),...(d.qor_later_rob||[]).map(r=>({...r,set:'QoR later window'}))];
-  const ROB_SYM={Low:'+','Some concerns':'!',High:'×'},ROB_CLS={Low:'rob-low','Some concerns':'rob-sc',High:'rob-high'};
-  // Assessed components of an evidence body (combined-arm inputs split into their components).
-  const bodyResults=mid=>{const core=d.inputs.filter(r=>r.model_id===mid).flatMap(r=>r.result_id.split('+'));if(core.length)return core;
-    const q=[...(d.qor_analysis?.main_models||[]),...(d.qor_analysis?.diagnostics||[])].find(m=>m.model_id===mid);if(q)return q.inputs.map(r=>r.result_id);
-    const l=(d.qor_later_models||[]).find(m=>m.model_id===mid);return l?l.result_ids:[];};
-  const robBodies=()=>{const ids=new Set(ROB_ALL().map(r=>r.result_id));return [...d.models.map(m=>m.model_id),...(d.qor_analysis?.main_models||[]).map(m=>m.model_id),...(d.qor_analysis?.diagnostics||[]).map(m=>m.model_id),...(d.qor_later_models||[]).map(m=>m.model_id)].filter(mid=>bodyResults(mid).some(r=>ids.has(r)));};
-  function risk(){
-    const {params}=parseHash(),scope=params.get('model')||params.get('set')||'',q=params.get('q')||'';
-    const sets=['Core v38','QoR ~24 h','QoR later window'],all=ROB_ALL();
-    return title('Result-specific risk of bias',`${all.length} result-specific RoB 2 assessments: ${d.rob.length} core v38 (all current non-sensitivity components plus held/diagnostic results), ${(d.qor_analysis?.rob||[]).length} QoR ~24 h and ${(d.qor_later_rob||[]).length} QoR later-window. No study-overall rating is substituted for an outcome-specific assessment.`)+
-      `<div class="rob-filters"><div><label for="risk-scope">Show</label><select id="risk-scope"><option value="">All assessments (${all.length})</option><optgroup label="Assessment set">${sets.map(s=>`<option value="set:${esc(s)}"${scope===s?' selected':''}>${esc(s)} (${all.filter(r=>r.set===s).length})</option>`).join('')}</optgroup>`+
-      `<optgroup label="Evidence body (its assessed components)">${robBodies().map(mid=>`<option value="model:${esc(mid)}"${scope===mid?' selected':''}>${esc(modelLabel(mid))} · ${esc(mid)}</option>`).join('')}</optgroup></select></div>`+
-      `<div><label for="risk-search">Find study, outcome, result ID or judgement</label><input id="risk-search" type="search" placeholder="e.g. Luo, nausea, V33-OD-0139" value="${esc(q)}"></div></div>`+
-      howTo('the risk-of-bias matrix',`<p>Each row is one result-specific ${term('RoB 2')} assessment: one result from one report, for one outcome and time point. It is not a study-level rating, and a study can be judged differently for different outcomes. Columns are the five RoB 2 domains and the overall judgement.</p><p>Symbols carry the judgement as well as colour: <strong>+</strong> Low, <strong>!</strong> Some concerns, <strong>×</strong> High. The overall judgement follows the RoB 2 algorithm: High if any domain is High (or several have some concerns), Some concerns if any domain has some concerns, otherwise Low. Select a symbol for that domain’s rationale and the models the result feeds; select a study name for its profile.</p>`)+
-      `<div id="risk-summary"></div><div id="risk-matrix"></div><h3>Assessment details</h3><div id="risk-list"></div>`+
-      note('Assessments dated 20 September 2026 (QoR addenda dated with their analyses). '+reviewLine(x=>x.startsWith('RoB 2'))+' Symbols: + Low, ! Some concerns, × High. Select a cell for that domain’s rationale. Other historical/sensitivity results without a fresh assessment are not silently called Low risk.')+
-      `<dialog id="rob-dialog" aria-labelledby="rob-dialog-title"><button type="button" id="close-rob-dialog">Close</button><div id="rob-dialog-content"></div></dialog>`;
-  }
-  function riskFiltered(){
-    const sel=$('risk-scope')?.value||'',q=($('risk-search')?.value||'').toLowerCase();
-    let rows=ROB_ALL();
-    if(sel.startsWith('set:'))rows=rows.filter(r=>r.set===sel.slice(4));
-    if(sel.startsWith('model:')){const ids=new Set(bodyResults(sel.slice(6)));rows=rows.filter(r=>ids.has(r.result_id));}
-    return rows.filter(r=>`${r.study} ${r.outcome} ${r.result_id} ${r.window} ${r.overall} ${[1,2,3,4,5].map(i=>r['d'+i]).join(' ')}`.toLowerCase().includes(q));
-  }
-  function riskRows(){
-    if(!$('risk-list'))return;
-    const rows=riskFiltered(),doms=['d1','d2','d3','d4','d5','overall'],lab={d1:'D1 Randomisation',d2:'D2 Deviations',d3:'D3 Missing data',d4:'D4 Measurement',d5:'D5 Reporting',overall:'Overall'};
-    const sel=$('risk-scope').value,q=$('risk-search').value,params={};if(sel.startsWith('model:'))params.model=sel.slice(6);if(sel.startsWith('set:'))params.set=sel.slice(4);if(q)params.q=q;
-    if(parseHash().view==='risk')setHash(hashFor('risk',params));
-    $('risk-summary').innerHTML=rows.length?`<div class="rob-summary" role="img" aria-label="Judgements by domain for ${rows.length} assessments">${doms.map(k=>{const c={Low:0,'Some concerns':0,High:0};rows.forEach(r=>c[r[k]]++);
-      return `<div class="rob-sum-row"><span class="rob-sum-label">${lab[k]}</span><span class="rob-bar">${['Low','Some concerns','High'].filter(j=>c[j]).map(j=>`<span class="${ROB_CLS[j]}" style="flex:${c[j]}" title="${j}: ${c[j]}">${c[j]}</span>`).join('')}</span></div>`;}).join('')}</div>`:'';
-    $('risk-matrix').innerHTML=rows.length?`<div class="table-scroll"><table class="rob-matrix"><thead><tr><th scope="col">Result</th>${doms.map(k=>`<th scope="col" title="${lab[k]}">${k==='overall'?'Overall':k.toUpperCase()}</th>`).join('')}</tr></thead><tbody>`+
-      rows.map(r=>`<tr><td>${studyLink(r.study)} · ${esc(r.outcome)}<br><small>${esc(r.result_id)} · ${esc(r.window)} · ${esc(r.set)}</small></td>${doms.map(k=>`<td><button type="button" class="rob-cell ${ROB_CLS[r[k]]}" data-rob="${esc(r.set+'|'+(r.assessment_id||r.result_id))}" data-dom="${k}" aria-label="${esc(r.study)} ${lab[k]}: ${esc(r[k])}. Show rationale">${ROB_SYM[r[k]]}</button></td>`).join('')}</tr>`).join('')+`</tbody></table></div>`:note('No assessments match this filter.');
-    $('risk-list').innerHTML=rows.map(r=>`<details><summary>${esc(r.study)} · ${esc(r.outcome)} · ${tag(r.overall)}<br><small>${esc(r.result_id)} · ${esc(r.window)} · n=${esc(r.population)} · ${esc(r.set)}</small></summary><p>${esc(r.comparison)}</p>${[1,2,3,4,5].map(i=>`<p><strong>D${i}: ${esc(r['d'+i])}</strong> — ${esc(r['d'+i+'_rationale'])}</p>`).join('')}<p>${esc(r.overall_rationale)}</p><p class="source">${esc(r.source_pdf)} · ${esc(r.result_location)}</p></details>`).join('');
-  }
-  function robCell(btn){
-    const [set,key]=btn.dataset.rob.split(/\|(.*)/s),r=ROB_ALL().find(x=>x.set===set&&(x.assessment_id||x.result_id)===key),k=btn.dataset.dom;if(!r)return;
-    const dn=k==='overall'?'Overall':'Domain '+k.slice(1);
-    $('rob-dialog-content').innerHTML=`<h2 id="rob-dialog-title" style="margin-top:0">${esc(r.study)} · ${esc(dn)}: ${tag(r[k])}</h2><p class="lede">${esc(r.outcome)} · ${esc(r.window)} · ${esc(r.result_id)}</p>`+
-      `<p>${esc(r[k+'_rationale'])}</p>`+table(['Domain','Judgement'],[1,2,3,4,5].map(i=>[`D${i}`,tag(r['d'+i])]).concat([['Overall',tag(r.overall)]]))+
-      `<p class="source">Source: ${esc(r.source_pdf)} · ${esc(r.result_location)} · ${esc(r.set)} · assessed ${esc(r.review_date||'')}</p>`+
-      (()=>{const mids=robBodies().filter(mid=>bodyResults(mid).includes(r.result_id)),core=d.inputs.find(x=>x.result_id.split('+').includes(r.result_id));
-        return `<p><strong>Used in:</strong></p>${mids.length?`<ul class="model-list">${mids.map(mid=>`<li>${modelName(mid)}</li>`).join('')}</ul>`:'<p>no current model</p>'}`+
-          `<p>${studyLink(r.study,'Study profile →')}${core?` · <button type="button" class="text-button result-open" data-result="${esc(core.result_id)}" data-result-model="${esc(core.model_id)}">Result and source →</button>`:''}</p>`;})();
-    $('rob-dialog').showModal();
-  }
-  // Studies & figures: Stata's descriptive evidence-base figures first (the registered files, not redrawn here),
-  // then the Study Explorer (filters, contribution matrix, table, study drawer).
-  const DESC_FIG={fig_desc_evidence_base:'Four panels: surgical category, randomised sample size, modality by comparator label and publication year.',
-    fig_desc_publication_year:'Included reports by year of publication.',fig_desc_country:'Included reports by trial country.',
-    fig_desc_sample_size:'Randomised participants per report; the subtitle gives the median and interquartile range.',
-    fig_desc_surgical_category:'Included reports by surgical category (source-traced category).',
-    fig_desc_modality_comparator:'Reports by modality and study-level comparator label; result-level comparator classes decide model membership.'};
-  const DESC_ORDER=Object.keys(DESC_FIG),descRank=f=>{const i=DESC_ORDER.indexOf(f.figure_id);return i<0?DESC_ORDER.length:i;};
-  function studies(){
-    const ri=d.stata?.run_info,figs=(d.stata?.figures||[]).filter(f=>f.kind==='descriptive').sort((a,b)=>descRank(a)-descRank(b));
-    return (figs.length?`<section class="glance-figs" aria-labelledby="glance-figs-title"><h2 id="glance-figs-title">Evidence base at a glance</h2>`+
-      `<p class="lede">${figs.length} descriptive figures generated in Stata ${esc(ri.stata_version)}/${esc(ri.edition)} from the harmonised report characteristics. Bars count reports, not participants or independent trials. They describe the evidence base and test nothing.</p>`+
-      `<div class="fig-cards">${figs.map(f=>`<figure class="fig-card" id="fig-${esc(f.figure_id)}">${figOpen(f,`<img src="${esc(f.png_href)}" loading="lazy" alt="Enlarge figure: ${esc(f.title)}">`,'fig-thumb')}`+
-        `<figcaption><strong>${esc(f.title)}</strong><span>${esc(DESC_FIG[f.figure_id]||'')}</span><small>Generated in Stata · ${esc(f.use)}<br>Download: ${figFiles(f)}</small></figcaption></figure>`).join('')}</div>`+
-      `<p class="source">Every figure file and its SHA-256 hash is listed in the <a href="#methods?section=stata">figure register (Methods)</a>. “Manuscript candidate” and “supplement candidate” are suggestions for the writing team, not decisions.</p></section>`:'')+
-      `<div id="rich-explorer-container"></div>`;
-  }
-  function studyRows(q=''){}
-  function methods(){
-    const e2_html = d.e2_methods_html ? `<h3>Post-hoc E2 sensitivity analysis</h3>` + Object.entries(d.e2_methods_html).map(([h, html]) => {
-      return `<details><summary>${esc(h)}</summary>${html}</details>`;
-    }).join('') + `<p><a href="current/AMENDED_PRIMARY_ESTIMAND_E2.md" download>Full E2 definition</a> · <a href="current/E2_RESULTS.md" download>E2 results</a></p>` : '';
-    return title('Methods and adopted decisions','Posthoc adjudication with results known. No reviewer approval is awaited for these decisions.')+stataMethods()+d.policies.map(p=>`<details><summary>${esc(p.topic)} · ${esc(p.status)}</summary><p>${esc(p.decision)}</p></details>`).join('')+e2_html+`<h3>Search strategies</h3>${(window.SEARCH_STRATEGIES||[]).map(s=>`<details><summary>${esc(s.name)} · ${esc(s.date)} · ${s.hits} records</summary><p>${esc(s.platform)} · ${esc(s.status)}</p><pre>${esc(s.strategy_text)}</pre><p class="source">${esc(s.source)}</p></details>`).join('')}`+note('Current R/metafor and independent Python validation results are in Downloads. Reproduction establishes computational consistency, not source truth or exhaustive selection.');
-  }
-  // Minimal Markdown for the generated methods statement: paragraphs, bullets and inline code only.
-  const md=s=>s.trim().split(/\n\s*\n/).map(b=>/^- /.test(b)?`<ul>${b.split(/\n(?=- )/).map(li=>`<li>${esc(li.slice(2)).replace(/`([^`]+)`/g,'<code>$1</code>')}</li>`).join('')}</ul>`:`<p>${esc(b).replace(/`([^`]+)`/g,'<code>$1</code>')}</p>`).join('');
-  const dl=name=>(d.downloads.find(x=>x.href.endsWith('/'+name))||{}).href;
-  function stataMethods(){
-    const st=d.stata;if(!st)return '';
-    const ri=st.run_info,S=st.summary,sets=[...new Set(S.map(s=>s.analysis_set))],count=(rows,p)=>rows.filter(p).length;
-    const sec=h=>(st.methods.split('## '+h)[1]||'').split('\n## ')[0];
-    const maxd=rows=>{const v=rows.filter(s=>s.status.startsWith('STATA VERIFIED')).map(s=>+s.max_rel_diff);return v.length?Math.max(...v).toExponential(0):'—';};
-    const figRows=st.figures.map(f=>[`${figOpen(f,esc(f.title))}<br><small>${esc(f.figure_id)}</small>`,esc(FIG_KIND[f.kind]),f.model_id?`${modelName(f.model_id)}<br><small>${term('k')} ${esc(f.k)} · ${term('N')} ${esc(f.N)}</small>`:'Evidence base (reports)',`<strong>${esc(f.use)}</strong>`,esc(f.verification_status),figFiles(f)]);
-    return `<section id="methods-stata" tabindex="-1"><h3>Statistical software and reproducibility</h3>`+
-      note(`Stata ${esc(ri.stata_version)}/${esc(ri.edition)} (revision ${esc(ri.born_date)}, ${esc(ri.machine)}) re-ran every model from the canonical inputs with the official <code>meta</code> suite. Stata reads the canonical dataset only; no value is typed by hand, and the dashboard shows the canonical numbers, which Stata reproduces.`)+
-      `<h4>Methods statement (generated from the executed run)</h4>${md(sec('Suggested wording'))}<details><summary>Notes for the methods section</summary>${md(sec('Notes for the methods section'))}</details>`+
-      `<h4>Stata compared with the Python and R pipelines</h4>`+
-      table(['Analysis set','Models','Stata verified: pooled','Stata verified: single study (not pooled)','No eligible data','Discrepancies','Largest relative difference','R/metafor agrees'],
-        [...sets.map(set=>{const r=S.filter(s=>s.analysis_set===set);return [esc(set),r.length,count(r,s=>s.status==='STATA VERIFIED'),count(r,s=>s.status.startsWith('STATA VERIFIED (single')),count(r,s=>s.status==='NO ELIGIBLE DATA'),count(r,s=>s.status==='DISCREPANCY'),maxd(r),`${count(r,s=>s.metafor==='agrees')} of ${r.length}`];}),
-         ['<strong>All</strong>',S.length,count(S,s=>s.status==='STATA VERIFIED'),count(S,s=>s.status.startsWith('STATA VERIFIED (single')),count(S,s=>s.status==='NO ELIGIBLE DATA'),count(S,s=>s.status==='DISCREPANCY'),maxd(S),`${count(S,s=>s.metafor==='agrees')} of ${S.length}`]])+
-      note(`Python/SciPy is the canonical pipeline (all models). R/metafor results come from the existing reproduction runs; “not run” is not disagreement. Tolerance: 1e-6 on estimates, standard errors, confidence limits and τ² (scaled by magnitude), 1e-4 on I²; k and N exact. Convention differences (Stata’s k − 2 prediction-interval degrees of freedom, its Hedges g variance and REML stopping tolerance) are documented in the reconciliation report, not hidden.`)+
-      `<h4>Small-study effects</h4>`+(st.small_study.length?table(['Body',term('k'),'Test','Statistic','p'],st.small_study.map(s=>[modelName(s.model_id),esc(s.k),esc(s.test),num(s.stat),Number(s.p).toPrecision(2)])):'')+
-      note('Exploratory: tested only where at least ten studies contributed, and not used to change any GRADE rating. Every other body: not evaluated because the number of studies is insufficient for a meaningful small-study-effect assessment.')+
-      `<h4>Figure register (${st.figures.length} figures)</h4>`+note('File names are deterministic and every file hash is in the register. “Manuscript candidate”, “supplement candidate” and “dashboard only” are suggestions for the writing team, not decisions.')+
-      table(['Figure','Kind','Model','Suggested use','Values','Files'],figRows)+
-      `<h4>Glossary</h4><dl class="glossary">${Object.entries(GLOSSARY).map(([k,v])=>`<dt>${esc(k==='single'?'Single study':k)}</dt><dd>${esc(v)}</dd>`).join('')}</dl>`+
-      `<p><a href="${esc(dl('STATA_RECONCILIATION.md')||'#downloads')}" download>Reconciliation report</a> · <a href="${esc(dl('stata_canonical_comparison.csv')||'#downloads')}" download>Every compared value</a> · <a href="${esc(dl('figure_register.csv')||'#downloads')}" download>Figure register</a> · <a href="${esc(st.code_url)}" rel="noopener" target="_blank">Stata do-files (GitHub)</a></p></section>`;
-  }
-  // Downloads are grouped by fixed rules on each file's source path (first match wins; anything unmatched falls into
-  // "Other supporting files"), so a new download is always listed. PRIMARY_FILES are the files needed to reproduce and
-  // audit the analyses; the rest are supplementary audit records.
-  const DL_RULES=[['qor','QoR analysis',/08_QOR_ANALYSIS\//],['e1e2','E1 / E2 primary-outcome analyses',/09_E2_ANALYSIS\/|E2\.md$|ADDITIONAL_FILE_12|additional_file_12/i],
-    ['stata','Stata reproduction',/13_STATA\//],['chars','Study characteristics',/14_CHARACTERISTICS\//],['coverage','Outcome coverage and narrative outcomes (harms, recovery, satisfaction)',/07_OUTCOME_COVERAGE\/|15_NARRATIVE_OUTCOMES\//],
-    ['prisma','PRISMA and screening',/prisma|late_duplicate/i],['rob','Risk of bias (RoB 2)',/rob2/i],['grade','GRADE certainty',/grade/i],
-    ['repro','Independent reproduction (Python, R)',/05_REPRODUCTION\//],['models','Model data and results',/04_MODELS\/|MEMBERSHIP_MATRIX|03_CANONICAL\/results\.csv$|PARTICIPANT_LEDGER|model_comparison/],
-    ['status','Review status and decisions',/FINAL_CURRENT_STATE_REPORT|METHODOLOGICAL_DECISIONS|primary_evidence_table|second_review/]];
-  const DL_ORDER=['status','models','grade','rob','e1e2','qor','stata','chars','coverage','prisma','repro','other'];
-  const PRIMARY_FILES=new Set(['FINAL_CURRENT_STATE_REPORT.md','METHODOLOGICAL_DECISIONS.md','primary_evidence_table.csv','model_outputs.csv','model_inputs.csv','results.csv',
-    'FINAL_MODEL_MEMBERSHIP_MATRIX.csv','grade.csv','rob2_assessments.csv','e2_model_outputs.csv','AMENDED_PRIMARY_ESTIMAND_E2.md','qor_models.csv','qor_grade.csv','qor_rob2.csv',
-    'stata_verification_summary.csv','figure_register.csv','report_characteristics.csv','prisma_record_ledger.csv','prisma_counts.json','second_review.csv','baseline_protocol_extraction.csv','recovery_milestones.csv','harms_structured.csv','satisfaction_acceptability.csv']);
-  const dlGroup=x=>(DL_RULES.find(r=>r[2].test(x.source))||['other','Other supporting files'])[0];
-  const DL_NAMES=Object.fromEntries([...DL_RULES.map(r=>[r[0],r[1]]),['other','Other supporting files']]);
-  function downloads(){
-    const file=x=>x.href.split('/').pop(),groups=DL_ORDER.map(k=>[k,d.downloads.filter(x=>dlGroup(x)===k)]).filter(([,xs])=>xs.length);
-    const nPrim=d.downloads.filter(x=>PRIMARY_FILES.has(file(x))).length;
-    return title('Data and audit downloads','Preserved v38 core plus clearly labelled coverage and QoR addenda. Historical versions remain in the project baseline.')+
-      `<div class="dl-tools"><div><label for="dl-search">Find a file</label><input id="dl-search" type="search" placeholder="e.g. GRADE, QoR, model inputs, .csv"></div>`+
-      `<div><label for="dl-group">Category</label><select id="dl-group"><option value="">All categories (${d.downloads.length})</option>${groups.map(([k,xs])=>`<option value="${k}">${esc(DL_NAMES[k])} (${xs.length})</option>`).join('')}</select></div>`+
-      `<label class="chk dl-primary"><input type="checkbox" id="dl-primary"> Primary files only (${nPrim})</label><p class="dl-count" id="dl-count" role="status">${d.downloads.length} of ${d.downloads.length} files shown</p></div>`+
-      note('<span class="dl-badge dl-badge-primary">Primary</span> files reproduce and audit the analyses (canonical results, model inputs and outputs, membership, RoB 2, GRADE, E2, QoR, Stata verification, characteristics, narrative outcome tables, PRISMA ledger). <span class="dl-badge">Audit</span> files are supplementary records behind them. Every file is hash-checked against its repository source at each deployment.')+
-      groups.map(([k,xs])=>`<section class="dl-section" data-dl-section="${k}"><h3>${esc(DL_NAMES[k])} <small>(${xs.length})</small></h3><div class="download-grid">${xs.map(x=>{const prim=PRIMARY_FILES.has(file(x));
-        return `<a class="download" href="${esc(x.href)}" download data-dl-group="${k}" data-dl-primary="${prim}" data-dl-text="${esc((x.label+' '+file(x)+' '+DL_NAMES[k]).toLowerCase())}"><span class="dl-badge${prim?' dl-badge-primary':''}">${prim?'Primary':'Audit'}</span> ${esc(x.label)}<small>${esc(file(x))}</small></a>`;}).join('')}</div></section>`).join('')+
-      `<p class="note" id="dl-none" hidden>No file matches these filters.</p>`;
-  }
-  function filterDownloads(){
-    const q=($('dl-search')?.value||'').toLowerCase().trim(),g=$('dl-group')?.value||'',prim=$('dl-primary')?.checked;let shown=0;
-    document.querySelectorAll('a.download[data-dl-group]').forEach(a=>{const ok=(!g||a.dataset.dlGroup===g)&&(!prim||a.dataset.dlPrimary==='true')&&q.split(/\s+/).every(w=>a.dataset.dlText.includes(w));a.hidden=!ok;shown+=ok;});
-    document.querySelectorAll('[data-dl-section]').forEach(s=>{s.hidden=!s.querySelector('a.download:not([hidden])');});
-    $('dl-count').textContent=`${shown} of ${d.downloads.length} files shown`;$('dl-none').hidden=shown>0;
-  }
-  // Structured narrative tables (15_NARRATIVE_OUTCOMES): one row per report, outcome and comparison, each with a quoted
-  // PDF page. Descriptive only: nothing is pooled or tallied, and a report with no harms result is "not located", not zero.
-  // "confirmed by a second reviewer (SP, 30 September 2026)" for a record listed in second_review.csv, else "second review pending".
-  function reviewText(file){const r=(d.second_review||[]).find(x=>x.file.endsWith(file));return r?`confirmed by a second reviewer (${r.reviewer}, ${fmtDate(r.review_date)})`:'second review pending';}
-  // The most recent second-review round (entries sharing the latest review date), when there has been more than one round.
-  function latestReview(){const R=d.second_review||[],dates=[...new Set(R.map(r=>r.review_date))].sort();if(dates.length<2)return '';
-    const L=R.filter(r=>r.review_date===dates[dates.length-1]);
-    return `<li>Latest second review (${esc([...new Set(L.map(r=>r.reviewer))].join(', '))}, ${fmtDate(dates[dates.length-1])}): ${L.map(r=>esc(r.scope)).join('; ')}; each reviewed file pinned by hash.</li>`;}
-  function narrativeTables(){
-    const n=d.narrative_outcomes;if(!n)return '';
-    const q=r=>`<small class="char-quote">p.${esc(r.page)}: “${esc(r.quote)}”${r.quote2?` p.${esc(r.page2)}: “${esc(r.quote2)}”`:''}${r.note?` Note: ${esc(r.note)}`:''}</small>`;
-    const armv=(v,k)=>`${esc(v||'—')}${k&&k!=='not stated'?` <small>(n=${esc(k)})</small>`:''}`;
-    const group=(rows,key)=>{const m=new Map();rows.forEach(r=>{if(!m.has(r[key]))m.set(r[key],[]);m.get(r[key]).push(r);});return [...m.entries()];};
-    const reports=rows=>new Set(rows.map(r=>r.report_id)).size;
-    const all=[...n.milestones,...n.harms,...n.satisfaction],pending=all.filter(r=>r.second_review==='pending').length,reviewedN=all.filter(r=>r.second_review!=='pending').length;
-    const located=n.harms.filter(r=>r.reporting!=='Not located (not a zero)'),none=n.harms.filter(r=>r.reporting==='Not located (not a zero)');
-    const dlink=(f,l)=>{const h=dl(f);return h?`<a href="${esc(h)}" download>${l}</a>`:'';};
-    return `<section class="narrative" aria-labelledby="narr-title"><h3 id="narr-title">Structured narrative tables</h3>`+
-      note(`Every value was extracted by a single extractor with a page-located verbatim quotation (machine-checked against the report’s text)${reviewedN?`; ${reviewedN} rows were ${esc(reviewText('recovery_milestones.csv'))}`:''}${pending?`; ${pending} rows await second review${n.harms.filter(r=>r.second_review==='pending').length===pending?' (the harms “not located” determinations)':''}`:'; no row awaits second review'}. Length of stay, functional recovery, time to mobilisation, satisfaction and adverse events are registered additional outcomes. The review defined no quantitative estimand for them, and definitions, units, reporting formats and care pathways differ, so <strong>nothing is pooled</strong> (a disclosed deviation from the registered synthesis plan) and significance is not tallied across reports. Multi-arm trials appear once per comparison with the shared control repeated.`)+
-      `<h4>Recovery milestones <small>(${n.milestones.length} rows, ${reports(n.milestones)} reports)</small></h4>`+
-      group(n.milestones,'domain').map(([k,rs])=>`<details class="narr-group" data-narr="milestone"><summary>${esc(k)} <small>(${reports(rs)} reports, ${rs.length} rows)</small></summary>`+
-        table(['Report / comparison','Outcome','Intervention','Control','Reported P','Direction as reported'],rs.map(r=>[`<strong>${esc(r.report_id)}</strong><br><small>${esc(r.comparison)}</small>`,`${esc(r.outcome)}<br><small>${esc(r.statistic)}${r.unit?' · '+esc(r.unit):''}${r.register_result_id?` · register ${esc(r.register_result_id)} (${esc(r.register_decision)})`:''}</small>${q(r)}`,armv(r.value_i,r.n_i),armv(r.value_c,r.n_c),esc(r.reported_p||'—'),esc(r.direction)]))+`</details>`).join('')+
-      `<h4>Harms by category <small>(${located.length} rows from ${reports(located)} reports; ${none.length} reports with no harms result located)</small></h4>`+
-      note('Categories are kept separate and attribution is as the report states it. “Explicit zero” means the report says no such event occurred in that window, not that none could occur. Event types are not summed into patients, and counts are not pooled or added across reports.')+
-      group(located,'category').map(([k,rs])=>`<details class="narr-group" data-narr="harm"><summary>${esc(k)} <small>(${reports(rs)} reports, ${rs.length} rows)</small></summary>`+
-        table(['Report','Event','Attribution / reporting','Intervention','Control','Window'],rs.map(r=>[`<strong>${esc(r.report_id)}</strong>`,`${esc(r.event)}${q(r)}`,`${esc(r.attribution)}<br><small>${esc(r.reporting)}</small>`,`${esc(r.arm_i)}: ${esc(r.events_i)}/${esc(r.n_i)}`,`${esc(r.arm_c)}: ${esc(r.events_c)}/${esc(r.n_c)}`,esc(r.window)]))+`</details>`).join('')+
-      `<details class="narr-group" data-narr="harm-none"><summary>No intervention-harm result located <small>(${none.length} reports; not a zero)</small></summary><p>${none.map(r=>esc(r.report_id)).join(', ')}.</p></details>`+
-      `<h4>Satisfaction, acceptability and quality of life <small>(${n.satisfaction.length} rows, ${reports(n.satisfaction)} reports)</small></h4>`+
-      group(n.satisfaction,'construct').map(([k,rs])=>`<details class="narr-group" data-narr="satisfaction"><summary>${esc(k)} <small>(${reports(rs)} reports, ${rs.length} rows)</small></summary>`+
-        table(['Report / comparison','Instrument and time point','Intervention','Control','Reported P','Use'],rs.map(r=>[`<strong>${esc(r.report_id)}</strong><br><small>${esc(r.comparison)}</small>`,`${esc(r.instrument)}<br><small>${esc(r.time_point)} · ${esc(r.statistic)}</small>${q(r)}`,armv(r.value_i,r.n_i),armv(r.value_c,r.n_c),esc(r.reported_p||'—'),`<small>${esc(r.synthesis)}</small>`]))+`</details>`).join('')+
-      `<p>${[dlink('NARRATIVE_OUTCOMES_REPORT.md','Narrative outcomes report'),dlink('recovery_milestones.csv','Recovery milestones'),dlink('harms_structured.csv','Harms'),dlink('satisfaction_acceptability.csv','Satisfaction and acceptability'),dlink('second_review_worksheet.csv','Second-review worksheet')].filter(Boolean).join(' · ')}</p></section>`;
-  }
-  function coverage(){
-    const c=d.outcome_coverage;
-    if(!c)return title('Outcome coverage')+note('No coverage addendum loaded.');
-    return title('Harms and patient-reported recovery',d.narrative_outcomes?'Structured narrative tables · 28 September 2026 · on the coverage addendum of 20 September 2026 · All 70 included report texts checked':'Coverage addendum · 20 September 2026 · All 70 included report texts checked')+
-      `<div class="summary-grid"><article><span class="eyebrow">Recovery evidence exists</span><strong>${c.qor_reports} QoR reports</strong><p>${c.satisfaction_reports} satisfaction/willingness reports; ${c.quality_of_life_reports} additional quality-of-life reports; ${c.acceptability_reports} additional acceptability reports. Categories can overlap.</p></article><article><span class="eyebrow">Reporting limits</span><strong>No eligible persistent-opioid-use result located</strong><p>Registered window: beyond 30 days. Long-term pain follow-up is not opioid-use follow-up. Missing reporting is not zero events.</p></article></div>`+
-      narrativeTables()+(d.narrative_outcomes?`<h3>Coverage audit records (20 September 2026)</h3>`:'')+(d.qor_analysis?qorLink()+note('The table below preserves the original coverage-audit dispositions. Its candidate / awaiting-assessment labels describe that earlier audit, not the current status of the eight ~24-hour results now assessed in the QoR analysis tab. Other windows and source holds remain separate.'):note('Coverage and descriptive extraction are complete within available-source scope. New QoR meta-analyses and exact-result RoB/GRADE remain to be done.'))+
-      `<h3>Recovery, satisfaction and acceptability</h3>`+
-      table(['Report / instrument','Timing / population','Source values','Synthesis decision'],c.recovery.map(r=>[`${esc(r.study)}<br><strong>${esc(r.instrument)}</strong><br><small>PDF p${esc(r.pdf_pages)}</small>`,`${esc(r.window)}<br>${esc(r.population)}`,esc(r.source_values),esc(r.synthesis_disposition)]))+
-      `<h3>Safety findings (${c.safety_records} report entries)</h3>`+
-      note('Do not conclude no harms. Skin reactions, electrical discomfort, needle incidents and treatment-intolerance withdrawals occurred. He 2026 hepatectomy reports two deaths versus none at six months, without intervention attribution. These are neither proven TEAS-caused deaths nor evidence of zero serious outcomes.')+
-      c.safety.map(r=>`<details><summary>${esc(r.study)} · ${esc(r.status)}</summary><p>${esc(r.finding)}</p><p>${esc(r.window)} · ${esc(r.denominator)}</p><p>${esc(r.limitation)}</p><p class="source">${esc(r.source_pdf)} · PDF p${esc(r.pdf_pages)}</p></details>`).join('')+
-      `<p><a href="current/OUTCOME_COVERAGE_REPORT.md" download>Download coverage report</a> · <a href="current/report_coverage.csv" download>All 70 reports</a> · <a href="current/recovery_evidence.csv" download>Recovery evidence</a> · <a href="current/safety_evidence.csv" download>Safety evidence</a></p>`;
-  }
-  // Later-window QoR GRADE (qor_grade_later.csv): one record per graded body; diagnostics are never graded.
-  const laterGraded=()=>d.qor_later_grade||[],laterGrade=mid=>laterGraded().find(g=>g.model_id===mid);
-  const gradeRationale=g=>g?`<h4>GRADE: ${esc(g.certainty)}</h4>${['risk_of_bias','inconsistency','indirectness','imprecision','publication_bias'].map(k=>`<p><strong>${esc(k.replaceAll('_',' '))} (−${g[k+'_downgrades']})</strong>: ${esc(g[k])}</p>`).join('')}<p class="source">Benchmark for important benefit: ${esc(g.clinical_benchmark)}${g.alternative_benchmark?` (alternative ${esc(g.alternative_benchmark)})`:''} points · ${esc(g.decision_status)} · assessed ${esc(g.review_date)}</p>`:'';
-  function qor(){
-    const q=d.qor_analysis;if(!q)return title('Quality of recovery')+note('QoR analysis not loaded.');
-    const estimate=m=>`${num(m.effect)} [${num(m.ci_low)}, ${num(m.ci_high)}]`;
-    const renderRob=robList=>robList.map(r=>`<details><summary>${esc(r.study)} · ${esc(r.outcome)} · ${tag(r.overall)}</summary><p>${esc(r.window)} · ${esc(r.comparison)}</p>${[1,2,3,4,5].map(i=>`<p><strong>D${i}: ${esc(r['d'+i])}</strong> — ${esc(r['d'+i+'_rationale'])}</p>`).join('')}<p>${esc(r.overall_rationale)}</p><p class="source">${esc(r.source_pdf)} · ${esc(r.result_location)}</p></details>`).join('');
-    return title('Quality of recovery at approximately 24 hours','Three separate TEAS comparisons · Eight reports · Positive differences favor TEAS')+
-      note(esc(q.certainty_conclusion))+(reviewLine(x=>x.includes('QoR'))?note(reviewLine(x=>x.includes('QoR'))):'')+
-      table(['Comparison','k / reported N','MD [95% CI], scale points','I²','Certainty'],q.main_models.map(m=>[esc(m.label),`${m.k} / ${m.N}`,estimate(m),`${num(m.I2,1)}%`,tag(q.grade.find(g=>g.model_id===m.model_id)?.certainty||'Not graded')]))+
-      note(esc(q.wu_note))+
-      q.main_models.map(m=>{const g=q.grade.find(g=>g.model_id===m.model_id);return `<section id="qor-${esc(m.model_id)}" tabindex="-1"><h3>${esc(m.label)}</h3>${stataLine('QoR 24h',m.model_id)}<img src="current/${esc(m.model_id)}.svg" style="width:100%;height:auto" alt="Forest plot: ${esc(m.label)}">${stataFigs(m.model_id)}<details><summary>Inputs and all five GRADE rationales</summary>${table(['Study / exact result','n TEAS / control','Mean (SD), TEAS / control','Source'],m.inputs.map(r=>[`${esc(r.study)}<br>${esc(r.result_id)}`,`${r.n_i} / ${r.n_c}`,`${r.mean_i} (${r.sd_i}) / ${r.mean_c} (${r.sd_c})`,esc(r.source_location)]))}${['risk_of_bias','inconsistency','indirectness','imprecision','publication_bias'].map(k=>`<p><strong>${esc(k.replaceAll('_',' '))} (−${g[k+'_downgrades']})</strong>: ${esc(g[k])}</p>`).join('')}</details></section>`;}).join('')+
-      `<h3 id="qor-diagnostics" tabindex="-1">Sensitivity analyses</h3>`+note('Eight leave-one-out analyses and one hypothetical Wu denominator-only stress test. Single-study remainders are not pooled. Diagnostics are not independently graded.')+
-      table(['Diagnostic','k / N','MD [95% CI]','Limitation'],q.diagnostics.map(m=>[esc(m.label),`${m.k} / ${m.N}`,estimate(m),esc((m.note||'').replace('mg/ug', 'mg/µg'))]))+
-      `<h3>Eight exact-result risk-of-bias assessments</h3>`+renderRob(q.rob)+
-      note(esc(q.remaining)) + note(esc(q.core_status)) +
-      (d.qor_later_models ? 
-        `<h3>Later QoR windows (POD2 / 48 h and POD3)</h3>` +
-        note(`${laterGraded().length} of ${d.qor_later_models.filter(m=>m.role!=='SENSITIVITY').length} later-window evidence bodies have a GRADE assessment (${esc(fmtDate(laterGraded()[0]?.review_date||''))}; ${esc(reviewText('qor_grade_later.csv'))}); leave-one-out diagnostics are not graded. Single-study bodies are not pooled.`) +
-        table(['Model', 'k / N', 'MD [95% CI]', 'RoB', 'Certainty'], d.qor_later_models.map(m => [
-          esc(m.label) + (m.note.includes('Leave-one-out') ? '<br><small>'+esc(m.note)+'</small>' : ''),
-          `${m.k} / ${m.N}`,
-          `${num(m.effect)} [${num(m.ci_low)}, ${num(m.ci_high)}]`,
-          m.result_ids.map(rid => { const rr = d.qor_later_rob.find(r => r.result_id === rid); return rr ? esc(rr.study) + ': ' + tag(rr.overall) : ''; }).join('<br>'),
-          tag(laterGrade(m.model_id)?.certainty||'Not graded')
-        ])) +
-        d.qor_later_models.map(m => `<details id="qor-${esc(m.model_id)}" tabindex="-1"><summary>${esc(m.label)}${laterGrade(m.model_id)?' · '+tag(laterGrade(m.model_id).certainty):''}</summary>${stataLine('QoR later',m.model_id)}${gradeRationale(laterGrade(m.model_id))}<img src="current/forest_${esc(m.model_id)}.svg" alt="${esc(m.label)}" style="width:100%;height:auto"><p>Forest plot produced with ${esc(d.qor_later_metafor_manifest.R_version)} / metafor ${esc(d.qor_later_metafor_manifest.metafor_version)} (same specification as the canonical cross-check); script: forest_qor_later.R</p></details>`).join('') +
-        `<h3>Five exact-result risk-of-bias assessments (later windows)</h3>` + renderRob(d.qor_later_rob) : '') +
-      `<p><a href="current/QOR_ANALYSIS_REPORT.md" download>Full QoR report</a> · <a href="current/qor_rob2_signals.csv" download>176 signalling responses</a> · <a href="current/qor_source_locators.csv" download>Source locators</a> · <a href="current/qor_verification.json" download>Independent verification</a></p>`;
-  }
-  // E1 vs E2 workspace: canonical E1 and post-hoc E2 bodies side by side, from stored outputs and decision files only.
-  const E2_BODIES=[['TEAS vs sham','opioid24_TEAS_sham','E2_opioid24_TEAS_sham'],['TEAS vs usual care','opioid24_TEAS_usual','E2_opioid24_TEAS_usual'],['EA vs sham','opioid24_EA_sham','E2_opioid24_EA_sham'],['EA vs usual care','opioid24_EA_usual','E2_opioid24_EA_usual']];
-  const resultIds=s=>s.startsWith('Tier B1')?[]:s.split(' / ').map(x=>x.split(' (')[0].trim());
-  const bodyOf=r=>`${r.modality} vs ${/^sham/i.test(r.comparator)?'sham':/usual/i.test(r.comparator)?'usual care':r.comparator}`;
-  // Same join as the CI contract: result ID, or report name for the E2.1 Tier B1 admissions.
-  const accountingRows=(body,e1id,e2id)=>{
-    const acc=d.e2_accounting,modality=body.split(' vs ')[0];
-    const rows=[...acc.tierA.filter(r=>r.body===body),...acc.tierA_addendum.filter(r=>r.body.startsWith(modality+' vs unresolved'))].map(r=>({...r,tier:r.addendum_note?'A (addendum)':'A'}));
-    const named=new Set(rows.map(r=>r.report));
-    for(const [tier,list] of [['B1',acc.tierB1],['B2',acc.tierB2]])for(const r of list){
-      if(bodyOf(r)!==body)continue;
-      const a=rows.find(x=>x.report===r.report);
-      if(a){a.detail=r;continue;}
-      if(!named.has(r.report))rows.push({report:r.report,E1_disposition:r.E1_disposition||'—',E2_disposition:r.E2_disposition,E2_basis:r.E2_rule_failed,flags:r.flag||r.notes||'',mandatory_sensitivity:'',tier,detail:r});
-    }
-    const hit=(list,mid,r)=>list.find(x=>x.model_id===mid&&(resultIds(r.result_ids||'').includes(x.result_id)||((r.result_ids||'').startsWith('Tier B1')&&x.study===r.report)));
-    return rows.map(r=>({...r,e1:hit(d.inputs,e1id,r),e2:hit(d.e2_inputs,e2id,r)}));
+  const GLOSSARY = {
+    'k': 'Number of studies contributing to this analysis.',
+    'N': 'Total participants in analysed arms across contributing studies.',
+    'MD': 'Mean difference: intervention mean minus control mean.',
+    'SMD': 'Standardised mean difference (Hedges g). Unitless.',
+    'RR': 'Risk ratio: intervention event risk divided by control event risk.',
+    'IV MME': 'Intravenous morphine milligram equivalents.',
+    'CI': '95% confidence interval under random-effects REML + Hartung-Knapp adjustment.',
+    'PI': '95% prediction interval (where the effect in a new, similar study is expected to fall; calculated when k >= 5).',
+    'I²': 'Percentage of total variation across studies due to heterogeneity rather than chance.',
+    'τ²': 'Between-study variance of true effects (REML estimate).',
+    'REML': 'Restricted maximum likelihood estimator for τ².',
+    'HK': 'Safeguarded Hartung-Knapp adjustment: t-distribution with k - 1 degrees of freedom.',
+    'GRADE': 'Certainty of evidence: High, Moderate, Low, Very low.',
+    'RoB 2': 'Cochrane Risk of Bias 2 tool applied to each result across 5 domains.',
+    'E1': 'Registered primary opioid analysis: cumulative 0-24h systemic opioid consumption under registered rules.',
+    'E2': 'Post-hoc broader first-day sensitivity analysis admitting PCA-only and unquantified rescue.',
+    '−10 mg': 'Registered clinical importance threshold: reduction of >= 10 mg IV MME over 24h.',
+    '+1 pain': 'Paired pain limb of registered criterion: upper 95% CI of ~24h pain difference < +1 point (0-10 scale).'
   };
-  // Model ladder: stored estimate and CI per model on one axis (no recomputation).
-  // opts: rr (effects on the log scale, displayed as ratios), unit (axis caption), thr (threshold line, e.g. -10 mg; null for none).
-  function ladder(items,range,{rr=false,unit='mg IV MME',thr=-10}={}){
-    const [lo,hi]=range,X0=400,X1=700,x=v=>X0+(v-lo)/(hi-lo)*(X1-X0),RH=26,top=36,axisY=top+items.length*RH,ticks=axisTicks(lo,hi,rr),show=v=>num(rr?Math.exp(v):v);
-    const T=(tx,ty,s,o='')=>`<text x="${tx}" y="${ty}" fill="#dbeafe" font-size="12" ${o}>${s}</text>`;
-    return `<div class="forest-wrap"><svg viewBox="0 0 960 ${axisY+34}" role="img" aria-label="Sensitivity ladder: ${items.length} stored model estimates on a shared axis">`+
-      T(8,18,'Model','fill-opacity=".75"')+T(716,18,`${rr?'RR':'Estimate'} [95% CI] · k`,'fill-opacity=".75"')+
-      `<line x1="${x(0)}" x2="${x(0)}" y1="24" y2="${axisY}" class="fp-null" stroke="#94a3b8" stroke-dasharray="4 4"/>${thr===null?'':`<line x1="${x(thr)}" x2="${x(thr)}" y1="24" y2="${axisY}" class="fp-tl" stroke="#fbbf24" stroke-dasharray="1 4" stroke-width="2"/>`}`+
-      items.map((it,i)=>{const y=top+i*RH,cls=it.e2?'fp-ps':'fp-s',fcls=it.e2?'fp-pf':'fp-f',col=it.e2?'#5eead4':'#93c5fd';
-        return T(8,y+4,esc(it.label),it.main?'font-weight="600"':'class="fp-mut" fill="#94a3b8"')+`<line x1="${x(it.lo)}" x2="${x(it.hi)}" y1="${y}" y2="${y}" class="${cls}" stroke="${col}" stroke-width="${it.main?2.5:1.5}"/>`+
-          (it.main?`<polygon points="${x(it.lo)},${y} ${x(it.effect)},${y-6} ${x(it.hi)},${y} ${x(it.effect)},${y+6}" class="${fcls}" fill="${col}"/>`:`<circle cx="${x(it.effect)}" cy="${y}" r="4" class="${fcls}" fill="${col}"/>`)+
-          T(716,y+4,`${show(it.effect)} [${show(it.lo)}, ${show(it.hi)}] · ${it.k}`,it.main?'font-weight="600"':'');}).join('')+
-      `<line x1="${X0}" x2="${X1}" y1="${axisY}" y2="${axisY}" class="fp-axis" stroke="#94a3b8"/>`+ticks.map(t=>`<line x1="${x(t.v)}" x2="${x(t.v)}" y1="${axisY}" y2="${axisY+5}" class="fp-axis" stroke="#94a3b8"/><text class="fp-mut" x="${x(t.v)}" y="${axisY+18}" fill="#94a3b8" font-size="11" text-anchor="middle">${t.label}</text>`).join('')+
-      T(716,axisY+18,`${esc(unit)}${rr?' (log scale)':''}${thr===null?'':' · dotted line '+(Number.isInteger(thr)?String(thr):show(thr))}`,'class="fp-mut" font-size="11" fill="#94a3b8"')+`</svg></div>`;
+
+  const term = (label, key = label) => {
+    const tip = GLOSSARY[key] || GLOSSARY[label];
+    return tip ? `<button type="button" class="term" data-tip="${esc(tip)}" aria-label="${esc(label)}: ${esc(tip)}">${esc(label)}</button>` : esc(label);
+  };
+  window.reviewTerm = term;
+
+  function tag(x) {
+    const val = String(x || '').trim();
+    const cls = val === 'High' ? 'risk-high' : (val === 'Low' ? 'risk-low' : (val === 'Some concerns' ? 'risk-sc' : ''));
+    return `<span class="tag ${cls}">${esc(val || '—')}</span>`;
   }
-  // Paired opioid-pain check: per opioid contrast, the trial's opioid MD against -10 mg beside its same-trial pain MD
-  // against +1 (0-10 scale), from the paired-pain registry. Only ~24 h pain is drawn; eligibility is the registry's.
-  const PAIR_RANK={'ELIGIBLE PAIRED PAIN':0,'PAIN ELIGIBLE, ARMS DIFFER':1,'NOT USABLE FOR REGISTERED CRITERION':2,'NO SAME-TRIAL PAIN RESULT':3};
-  function pairedPlot(groups){
-    const items=groups.map(rs=>{const shown=rs.filter(r=>r.pain_md!==''&&/24|POD1/i.test(r.pain_window)).sort((a,b)=>PAIR_RANK[a.pairing_status]-PAIR_RANK[b.pairing_status])[0];return {o:rs[0],p:shown,best:rs.slice().sort((a,b)=>PAIR_RANK[a.pairing_status]-PAIR_RANK[b.pairing_status])[0]};});
-    const [olo,ohi]=padRange([0,-10,...items.flatMap(i=>[+i.o.opioid_ci_low,+i.o.opioid_ci_high])]),[plo,phi]=padRange([0,1,...items.filter(i=>i.p).flatMap(i=>[+i.p.pain_ci_low,+i.p.pain_ci_high])]);
-    const OX0=220,OX1=470,PX0=540,PX1=760,ox=v=>OX0+(v-olo)/(ohi-olo)*(OX1-OX0),px=v=>PX0+(v-plo)/(phi-plo)*(PX1-PX0),RH=28,top=44,axisY=top+items.length*RH;
-    const T=(tx,ty,s,o='')=>`<text x="${tx}" y="${ty}" fill="#dbeafe" font-size="12" ${o}>${s}</text>`;
-    const status=s=>({'ELIGIBLE PAIRED PAIN':'eligible pair','PAIN ELIGIBLE, ARMS DIFFER':'arms differ','NOT USABLE FOR REGISTERED CRITERION':'not usable','NO SAME-TRIAL PAIN RESULT':'no pain result'})[s];
-    return `<div class="forest-wrap"><svg viewBox="0 0 960 ${axisY+40}" role="img" aria-label="Paired opioid and pain estimates for ${items.length} opioid contrasts">`+
-      T(8,16,'Contrast','fill-opacity=".75"')+T((OX0+OX1)/2,16,'Opioid MD, mg IV MME (trial)','fill-opacity=".75" text-anchor="middle"')+T((PX0+PX1)/2,16,'Same-trial ~24 h pain MD, 0–10','fill-opacity=".75" text-anchor="middle"')+T(775,16,'Pairing','fill-opacity=".75"')+
-      `<line x1="${ox(0)}" x2="${ox(0)}" y1="24" y2="${axisY}" class="fp-null" stroke="#94a3b8" stroke-dasharray="4 4"/><line x1="${ox(-10)}" x2="${ox(-10)}" y1="24" y2="${axisY}" class="fp-tl" stroke="#fbbf24" stroke-dasharray="1 4" stroke-width="2"/>`+
-      `<line x1="${px(0)}" x2="${px(0)}" y1="24" y2="${axisY}" class="fp-null" stroke="#94a3b8" stroke-dasharray="4 4"/><line x1="${px(1)}" x2="${px(1)}" y1="24" y2="${axisY}" class="fp-tl" stroke="#fbbf24" stroke-dasharray="1 4" stroke-width="2"/>`+
-      items.map((it,i)=>{const y=top+i*RH,o=it.o,p=it.p,ok=p&&p.pairing_status==='ELIGIBLE PAIRED PAIN';
-        return T(8,y+4,`${esc(o.analysis)} · ${esc(o.study)}`)+`<line x1="${ox(+o.opioid_ci_low)}" x2="${ox(+o.opioid_ci_high)}" y1="${y}" y2="${y}" class="fp-s" stroke="#93c5fd" stroke-width="1.6"/><rect class="fp-f" x="${ox(+o.opioid_md)-4}" y="${y-4}" width="8" height="8" fill="#93c5fd"/>`+
-          (p?`<line x1="${px(+p.pain_ci_low)}" x2="${px(+p.pain_ci_high)}" y1="${y}" y2="${y}" class="fp-ps" stroke="#5eead4" stroke-width="1.6" ${ok?'':'stroke-dasharray="3 3"'}/><circle cx="${px(+p.pain_md)}" cy="${y}" r="4" ${ok?'class="fp-pf" fill="#5eead4"':'class="fp-ps" fill="none" stroke="#5eead4" stroke-width="1.6"'}/>`:T((PX0+PX1)/2,y+4,'—','class="fp-mut" fill="#94a3b8" text-anchor="middle"'))+
-          T(775,y+4,status(it.best.pairing_status),ok?'font-weight="600"':'class="fp-mut" fill="#94a3b8"');}).join('')+
-      [[OX0,OX1,olo,ohi,ox],[PX0,PX1,plo,phi,px]].map(([a,b,lo,hi,f])=>`<line x1="${a}" x2="${b}" y1="${axisY}" y2="${axisY}" class="fp-axis" stroke="#94a3b8"/>`+axisTicks(lo,hi,false).map(t=>`<line x1="${f(t.v)}" x2="${f(t.v)}" y1="${axisY}" y2="${axisY+5}" class="fp-axis" stroke="#94a3b8"/><text class="fp-mut" x="${f(t.v)}" y="${axisY+18}" fill="#94a3b8" font-size="11" text-anchor="middle">${t.label}</text>`).join('')).join('')+
-      T(8,axisY+34,'Dotted lines: −10 mg (opioid) and +1 point (pain upper limit). Hollow, dashed pain marks are descriptive only: not usable for the registered criterion.','class="fp-mut" font-size="11" fill="#94a3b8"')+`</svg></div>`;
+
+  function certaintyBadge(c) {
+    const val = String(c || '').trim();
+    let cls = 'grade-very-low';
+    if (val.toLowerCase().includes('high')) cls = 'grade-high';
+    else if (val.toLowerCase().includes('moderate')) cls = 'grade-moderate';
+    else if (val.toLowerCase().includes('low') && !val.toLowerCase().includes('very')) cls = 'grade-low';
+    return `<span class="grade-badge ${cls}">${esc(val || 'Unrated')}</span>`;
   }
-  function pairedSection(body,m1,j){
-    if(!d.paired_pain)return '';
-    const rows=d.paired_pain.filter(r=>r.body===body),groups=[...new Map(rows.map(r=>[r.analysis+'|'+r.opioid_result_id,rows.filter(x=>x.analysis===r.analysis&&x.opioid_result_id===r.opioid_result_id)])).values()];
-    const eligible=rows.filter(r=>r.pairing_status==='ELIGIBLE PAIRED PAIN').length,ci=(a,b,c)=>a===''?'—':`<span style="white-space:nowrap">${num(+a)} [${num(+b)}, ${num(+c)}]</span>`;
-    return `<h3>Paired opioid–pain check</h3>`+
-      note(`Registered clinical-importance criterion: ≥10 mg IV MME sparing <em>and</em> a paired ~24 h pain difference whose upper 95% limit is below +1 point, from the same trials. Pain from other trials cannot supply the pairing. Eligible paired pain results for this comparison: <strong>${eligible}</strong> of ${groups.length} opioid contrasts.`)+
-      table(['','Opioid limb','Pain limb','Joint criterion'],[
-        ['E1 (registered primary)',m1.k?(m1.reaches10mg?'Point estimate ≤ −10 mg':`Not met (point estimate ${num(m1.effect)})`):'No eligible E1 evidence',eligible&&rows.some(r=>r.analysis==='E1'&&r.pairing_status==='ELIGIBLE PAIRED PAIN')?'See registry':'No eligible paired pain','Not established'],
-        ['E2 (post-hoc)',esc(j?.opioid_limb||'—'),j?.pain_limb==='—'?'— (not evaluated: opioid limb not met)':esc(j?.pain_limb||'—'),`<strong>${esc(j?.joint_criterion||'—')}</strong>`]])+
-      pairedPlot(groups)+
-      `<details><summary>Paired-pain registry: ${rows.length} rows for ${groups.length} opioid contrasts</summary>`+
-      table(['Contrast','Opioid MD [95% CI]','Same-trial pain result','Pain MD [95% CI]','Arms','Pairing','Reason'],rows.map(r=>[
-        `${esc(r.analysis)} · ${esc(r.study)}<br><small>${esc(r.opioid_result_id)}</small>`,ci(r.opioid_md,r.opioid_ci_low,r.opioid_ci_high),
-        r.pain_result_id?`${esc(r.pain_outcome)}<br><small>${esc(r.pain_result_id)} · ${esc(r.pain_window)} · ${esc(r.pain_unit)}</small>`:'—',ci(r.pain_md,r.pain_ci_low,r.pain_ci_high),esc(r.arm_match||'—'),`<strong>${esc(r.pairing_status)}</strong>`,esc(r.reason)]))+
-      note('Built mechanically by code/build_paired_pain.py from the canonical results register and model specifications: same trial, same intervention and comparator arms (E2.1 admissions by comparator class). Eligibility is the pipeline’s own rule (a ~24 h rest or movement pain body outside sensitivity roles); every other result shows its canonical decision. No new adjudication.')+
-      `</details>`;
-  }
-  function e1e2(){
-    if(!d.e2_accounting||!d.e2_inputs)return title('E1 vs E2')+note('E2 inputs or accounting not loaded.');
-    const want=parseHash().params.get('body'),[body,e1id,e2id]=E2_BODIES.find(b=>b[0]===want)||E2_BODIES[0];
-    const m1=d.models.find(m=>m.model_id===e1id),m2=d.e2_analysis.models.find(m=>m.model_id===e2id),g=grade.get(e1id),j=(d.e2_joint||[]).find(x=>x.body===body);
-    const [modality,cmp]=body.split(' vs ');
-    const m2plot={...m2,measure:'MD',unit:m1.unit,construct:m1.construct,modality,comparator:m1.comparator};
-    const rows1=d.inputs.filter(r=>r.model_id===e1id),e1ids=new Set(rows1.map(r=>r.study));
-    const rows2=d.e2_inputs.filter(r=>r.model_id===e2id).map(r=>({...r,mark:e1ids.has(r.study)?'':'E2 only'}));
-    const range=padRange([...plotVals(m1,rows1),...plotVals(m2plot,rows2)]);
-    const est=m=>m.k?`${num(m.effect)} [${num(m.ci_low)}, ${num(m.ci_high)}]`:'No eligible evidence';
-    const cmpRows=[['Role','Registered primary','Post-hoc sensitivity (defined and amended after data were seen)'],[`${term('k')} / ${term('N')}`,`${m1.k} / ${m1.N}`,`${m2.k} / ${m2.N}`],['MD, mg IV MME [95% CI]',est(m1),est(m2)],
-      [`${term('I²')} · ${term('τ²')}`,m1.k>1?`${num(m1.I2,1)}% · ${num(m1.tau2,3)}`:'—',m2.k>1?`${num(m2.I2,1)}% · ${num(m2.tau2,3)}`:'—'],
-      [term('Prediction interval','PI'),m1.pi_low!=null?`${num(m1.pi_low)} to ${num(m1.pi_high)}`:'—',m2.pi_low!=null?`${num(m2.pi_low)} to ${num(m2.pi_high)}`:'—'],
-      ['Point estimate ≤ −10 mg',m1.k?(m1.reaches10mg?'Yes':'No'):'—',m2.reaches10mg?'Yes':'No'],['Certainty',tag(g?.certainty||'—'),tag('Not graded')]];
-    const sens=[...(m1.k?[{label:'E1 · registered primary',effect:m1.effect,lo:m1.ci_low,hi:m1.ci_high,k:m1.k,main:true}]:[]),
-      ...d.models.filter(m=>m.model_id.startsWith(e1id+'_')&&m.role==='SENSITIVITY'&&/mg IVMME$/.test(m.unit)&&m.k).map(m=>({label:'E1 sens · '+m.model_id.slice(e1id.length+1).replaceAll('_',' ')+(m.unit.startsWith('assumed')?' (assumed MME)':''),effect:m.effect,lo:m.ci_low,hi:m.ci_high,k:m.k})),
-      {label:'E2 · post-hoc main',effect:m2.effect,lo:m2.ci_low,hi:m2.ci_high,k:m2.k,main:true,e2:true},
-      ...d.e2_analysis.models.filter(m=>m.body===body&&m.model_id!==e2id).map(m=>({label:'E2 '+(m.role==='LEAVE-ONE-OUT'?'LOO':'sens')+' · '+((d.e2_labels||{})[m.model_id]||m.note||m.model_id).replace(/<[^>]+>/g,''),effect:m.effect,lo:m.ci_low,hi:m.ci_high,k:m.k,e2:true}))];
-    const lrange=padRange([0,-10,...sens.flatMap(s=>[s.lo,s.hi])]);
-    const acc=accountingRows(body,e1id,e2id).sort((a,b)=>(!!b.e2-!!a.e2)||(!!b.e1-!!a.e1)||a.report.localeCompare(b.report));
-    const MEM={both:'BOTH',e2:'E2 ONLY',e1:'E1 ONLY',neither:'NEITHER'},mem=r=>r.e1&&r.e2?'both':r.e2?'e2':r.e1?'e1':'neither';
-    const P=parseHash().params,fin=MEM[P.get('in')]?P.get('in'):'',fdisp=P.get('disp')||'',disps=[...new Set(acc.map(r=>r.E2_disposition))].sort();
-    const shown=acc.filter(r=>(!fin||mem(r)===fin)&&(!fdisp||r.E2_disposition===fdisp));
-    const memBtn=(k,n)=>`<button type="button" class="e1e2-filter${fin===k?' active':''}" data-e1e2-in="${k}" aria-pressed="${fin===k}"><span class="mem-badge mem-${k}">${MEM[k]}</span> ${n}</button>`;
-    const trial=r=>r?`<span style="white-space:nowrap">${num(+r.yi)} [${num(+r.yi-Z95*Math.sqrt(+r.vi))}, ${num(+r.yi+Z95*Math.sqrt(+r.vi))}]</span>${r.factor&&+r.factor!==1?`<br><small>factor ${esc(r.factor)}</small>`:''}`:'—';
-    return title('E1 vs E2','Why the estimate changes between the registered primary (E1) and the post-hoc E2 synthesis: membership, trial-level estimates and sensitivity, from stored outputs only.')+
-      howTo('E1 vs E2',`<p>${term('E1')} is the registered primary analysis. ${term('E2')} is a post-hoc sensitivity synthesis with broader eligibility. Both estimate the ${term('MD')} in 0–24 h opioid consumption in mg ${term('IV MME','IV MME')}; negative values favour the intervention and the dotted line is the ${term('−10 mg')} threshold.</p><p>Pick a comparison. The pathway counts candidate reports by where they ended up: <strong>BOTH</strong> (in both models), <strong>E2 ONLY</strong>, <strong>E1 ONLY</strong> or <strong>NEITHER</strong> (held or excluded, with the reason in the table). Select a count to filter the table; select a report for its study profile; select a study label in a forest plot for its result or profile.</p>`)+
-      note('<strong>E2 is post-hoc.</strong> It was defined, and amended (E2.1), after the data were seen; the decision to keep E1 as primary was made after E2 results were known. E1 remains the registered primary analysis. E2 is not graded and must not be reported as primary efficacy evidence.')+
-      `<div class="body-picker" role="group" aria-label="Comparison">${E2_BODIES.map(([b])=>`<button type="button" class="e1e2-body${b===body?' active':''}" data-body="${esc(b)}" aria-pressed="${b===body}">${esc(b)}</button>`).join('')}</div>`+
-      `<h3>${esc(body)}: summary</h3>`+table(['',`E1 (registered primary) · ${modelName(e1id)}`,`E2 (post hoc) · ${modelName(e2id)}`],cmpRows)+
-      (j?note(`Registered joint criterion (≥10 mg sparing with paired ~24 h pain upper CI &lt; +1): opioid limb <strong>${esc(j.opioid_limb)}</strong>; pain limb <strong>${esc(j.pain_limb)}</strong>; joint <strong>${esc(j.joint_criterion)}</strong>.`):'')+
-      (m1.k?cardPanel(evidenceCard(m1,rows1),e1id):'')+cardPanel(evidenceCard(m2plot,rows2,{e2:true,body,joint:j}),e2id)+
-      `<h3>Forest plots on a shared axis</h3><h4>E1 · registered primary · ${esc(modelLabel(e1id))} <small>(${esc(e1id)})</small></h4>`+(m1.k?stataLine('core',e1id)+forest(m1,rows1,range):note('No eligible quantitative E1 evidence for this comparison.'))+`<h4>E2 · post-hoc, not graded · ${esc(body)} <small>(${esc(e2id)})</small></h4>`+stataLine('E2',e2id)+forest(m2plot,rows2,range,'study')+stataFigs(e1id)+stataFigs(e2id)+
-      note('Both plots use the same horizontal scale. “E2 only” marks trials admitted by E2 that are not in the E1 body. E2 study rows show arm values after the stated conversion factor and arm combination.')+
-      `<h3 id="e1e2-accounting" tabindex="-1">Trial-by-trial accounting (${acc.length} candidate reports)</h3>`+
-      `<div class="pathway" role="group" aria-label="Where the ${acc.length} candidate reports ended up"><span class="pathway-total">${acc.length} candidate reports</span><span aria-hidden="true">→</span>${['both','e2','e1','neither'].map(k=>memBtn(k,acc.filter(r=>mem(r)===k).length)).join('')}</div>`+
-      `<div class="e1e2-tools"><label for="e1e2-disp">E2 disposition</label><select id="e1e2-disp"><option value="">All dispositions</option>${disps.map(x=>`<option${x===fdisp?' selected':''}>${esc(x)}</option>`).join('')}</select>${fin||fdisp?`<button type="button" class="text-button" data-e1e2-clear="1">Clear filters</button>`:''}<span class="e1e2-count" role="status">${shown.length} of ${acc.length} reports shown</span></div>`+
-      table(['Report','Membership','E1','E2','Rule / basis','In E2 model: MD [95% CI]','Flags · required sensitivity'],shown.map(r=>[
-        `${studyLink(r.report)}<br><small>Tier ${esc(r.tier)}${r.result_ids&&!r.result_ids.startsWith('Tier')?' · '+esc(r.result_ids):''}</small>`,`<span class="mem-badge mem-${mem(r)}">${MEM[mem(r)]}</span>`,esc(r.E1_disposition),`<strong>${esc(r.E2_disposition)}</strong>`,
-        esc(r.E2_basis)+(r.detail?.source_locator?`<br><small>${esc(r.detail.source_locator)}${r.detail.resolvable_by?' · resolvable by: '+esc(r.detail.resolvable_by):''}</small>`:''),
-        trial(r.e2),[r.flags,r.mandatory_sensitivity].filter(Boolean).map(esc).join('<br>')||'—']))+
-      note('Dispositions are the committed E2 decision files (Tier A reclassification and addendum; Tier B1 extraction; Tier B2 re-check), unchanged. Reports held for unresolved source or comparator questions stay out of both analyses.')+
-      pairedSection(body,m1,j)+
-      `<h3>Sensitivity ladder</h3>`+ladder(sens,lrange)+
-      note('Stored estimates only; nothing is re-fitted in the browser. E1 sensitivities with assumed MME conversions are labelled. A different estimate under a sensitivity is not evidence of effect modification.')+
-      `<p><a href="current/ADDITIONAL_FILE_12.md" download>Additional file 12 (trial-by-trial accounting)</a> · <a href="current/AMENDED_PRIMARY_ESTIMAND_E2.md" download>E2 estimand and amendment</a> · <a href="current/e2_model_outputs.csv" download>E2 estimates</a></p>`;
-  }
-  const views={overview,results,e1e2,qor,coverage,prisma,evidence,risk,studies,methods,downloads};
-  function render(id){if(!views[id])id='overview';$('content').innerHTML=(['results','risk','evidence','studies','methods','downloads'].includes(id)?qorLink():'')+views[id]();document.querySelectorAll('.nav [data-view]').forEach(b=>{const on=b.dataset.view===id;b.classList.toggle('active',on);if(on)b.setAttribute('aria-current','page');else b.removeAttribute('aria-current');});if(id==='risk')riskRows();if(id==='studies'){if(window.renderRichExplorer){window.renderRichExplorer('rich-explorer-container');}else{studyRows();}}if(booted)$('content').focus({preventScroll:true});return id;}
-  // Focus moves to the new content on in-page route changes only; on first load it stays at the top (skip link first).
-  let booted=false;
-  // URL state: #view, #results?model=…&result=…, #qor?model=…; the Study Explorer adds its own filter/study keys.
-  const parseHash=()=>{const [view,q='']=location.hash.slice(1).split('?');return {view,params:new URLSearchParams(q)};};
-  const hashFor=(view,params={})=>{const q=new URLSearchParams(Object.entries(params).filter(([,v])=>v)).toString();return '#'+view+(q?'?'+q:'');};
-  let routed=null;
-  function setHash(h){history.replaceState(null,'',h);routed=location.hash;}
-  function route(force){
-    if(!force&&location.hash===routed)return;routed=location.hash;
-    document.querySelectorAll('dialog[open]').forEach(x=>x.close());
-    const {view,params}=parseHash(),id=render(view),mid=params.get('model');
-    const focus=el=>{if(!el)return;if(el.tagName==='DETAILS')el.open=true;el.scrollIntoView({block:'start'});el.focus({preventScroll:true});};
-    if(id==='results'&&mid){
-      if(d.models.some(m=>m.model_id===mid)){$('model-select').value=mid;modelDetail(mid);if(params.get('result'))openResultDrawer(params.get('result'),mid);}
-      else if((d.e2_analysis?.models||[]).some(m=>m.model_id===mid))focus($('e2-section'));
+
+  const table = (heads, rows) => `<div class="table-scroll"><table><thead><tr>${heads.map(h => `<th scope="col">${h}</th>`).join('')}</tr></thead><tbody>${rows.map(row => `<tr>${row.map(v => `<td>${v}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
+  const note = t => `<div class="note">${t}</div>`;
+
+  // Figure Lightbox Dialog
+  function openFigure(figId) {
+    const fig = d.figures.find(f => f.id === figId || f.file === figId);
+    if (!fig) return;
+    const dialog = $('figure-dialog');
+    const img = $('figure-image');
+    const cap = $('figure-caption');
+    if (dialog && img && cap) {
+      img.src = `figures_png/${fig.file}`;
+      cap.innerHTML = `<strong>${esc(fig.title)}</strong><br><small>${esc(fig.legend)}</small><br><small><a href="figures_png/${esc(fig.file)}" download="${esc(fig.file)}">Download full-resolution PNG</a></small>`;
+      dialog.showModal();
     }
-    if(id==='methods'&&params.get('section'))focus($('methods-'+params.get('section')));
-    if(id==='e1e2'&&(params.get('in')||params.get('disp')))focus($('e1e2-accounting'));
-    if(id==='qor'&&mid)focus($('qor-'+mid)||((d.qor_analysis?.diagnostics||[]).some(m=>m.model_id===mid)?$('qor-diagnostics'):null));
   }
-  function show(id,params){const h=hashFor(id,params);if(location.hash!==h)history.pushState(null,'',h);route(true);}
-  // Route any model ID (core, QoR 24 h, QoR diagnostic, QoR later window, E2) to where it is displayed.
-  function openModel(mid){const qor=[...(d.qor_analysis?.main_models||[]),...(d.qor_analysis?.diagnostics||[]),...(d.qor_later_models||[])].some(m=>m.model_id===mid);show(qor?'qor':'results',{model:mid});}
-  // Result/source inspector for one model input row. A result can feed several models with different
-  // conversion factors, so the row is looked up by result ID and model ID together.
-  // Closing the inspector drops ?result= (called directly too: some browsers defer the close event for hidden pages).
-  function clearResultKey(){const {view,params}=parseHash();if($('result-drawer').open||view!=='results'||!params.get('result'))return;params.delete('result');setHash(hashFor('results',Object.fromEntries(params)));}
-  function openResultDrawer(rid,mid){
-    const r=d.inputs.find(x=>x.result_id===rid&&x.model_id===mid)||d.inputs.find(x=>x.result_id===rid);if(!r)return;
-    const parts=rid.split('+'),rr=r.measure==='RR',val=v=>num(rr?Math.exp(v):v),z=1.95996398454;
-    const panel=(h,body)=>`<div class="panel" style="margin:0 0 16px"><h3 style="margin-top:0">${h}</h3>${body}</div>`;
-    const arms=r.data_type==='Mean/SD'
-      ?table(['Arm','n','Mean','SD'],[[esc(r.intervention||'Intervention'),num(r.n_i,0),esc(r.mean_i),esc(r.sd_i)],[esc(r.comparator||'Comparator'),num(r.n_c,0),esc(r.mean_c),esc(r.sd_c)]])
-      :table(['Arm','Events','n'],[[esc(r.intervention||'Intervention'),esc(r.events_i),num(r.n_i,0)],[esc(r.comparator||'Comparator'),esc(r.events_c),num(r.n_c,0)]]);
-    const uses=d.inputs.filter(x=>x.result_id===rid);
-    const rob=parts.map(p=>{const a=d.rob.find(x=>x.result_id===p);return a?`<details><summary>${esc(p)} · ${esc(a.outcome)} · ${tag(a.overall)}</summary>${[1,2,3,4,5].map(i=>`<p><strong>D${i}: ${esc(a['d'+i])}</strong> — ${esc(a['d'+i+'_rationale'])}</p>`).join('')}<p>${esc(a.overall_rationale)}</p></details>`:`<p>${esc(p)}: no v38 result-specific assessment recorded.</p>`;}).join('');
-    const html=`<h2 style="margin-top:0">${esc(r.study)} · ${esc(rid)}</h2><p class="lede">${esc(r.outcome)} · ${esc(r.window)} · ${esc(r.population)}</p>`+
-      `<p class="drawer-links">${studyLink(r.study,'Study profile →')} · <button type="button" class="text-button" data-risk-q="${esc(parts[0])}">Risk-of-bias matrix for this result →</button></p>`+
-      (parts.length>1?note(`Combined-arm input: component results ${parts.map(esc).join(' + ')} were combined into one intervention arm before analysis; the control arm is counted once.`):'')+
-      panel('Source',`<p><strong>${esc(r.source_location)}</strong></p>${r.source_quote?`<blockquote style="border-left:4px solid #64748b;padding-left:16px;margin-left:0">${esc(r.source_quote)}</blockquote>`:''}<p class="source">${esc(r.source_pdf)}<br>SHA-256: ${esc(r.source_sha256)}</p>${r.source_qc&&r.source_qc!=='NOT REPORTED'?`<p><strong>Extraction note:</strong> ${esc(r.source_qc)}</p>`:''}`)+
-      panel(`Extracted data in ${esc(r.model_id)}`,arms+`<p>Reported unit: ${esc(r.unit)} · conversion factor ${esc(r.factor)} · analysed as ${esc(unitLabel(r.analysis_unit||r.measure))}${r.continuity_correction&&r.continuity_correction!=='0'?` · continuity correction ${esc(r.continuity_correction)}`:''}</p><p>Study estimate: <strong>${val(+r.yi)} [${val(+r.yi-z*Math.sqrt(+r.vi))}, ${val(+r.yi+z*Math.sqrt(+r.vi))}]</strong> <small>(yi ${num(r.yi,4)}, vi ${num(r.vi,4)}${rr?'; log scale':''})</small></p>${r.decision?`<p><strong>Decision:</strong> ${esc(r.decision)}${r.rationale?` — ${esc(r.rationale)}`:''}</p>`:''}`)+
-      panel(`Used in ${uses.length} model${uses.length===1?'':'s'}`,`<ul class="model-list">${uses.map(x=>`<li>${modelName(x.model_id)}<br><small>${esc(x.role)} · factor ${esc(x.factor)}</small></li>`).join('')}</ul>`)+
-      panel('Risk of bias (v38, result-specific)',rob);
-    if(!$('result-drawer')){document.body.insertAdjacentHTML('beforeend',`<dialog id="result-drawer" aria-labelledby="result-drawer-title" style="width:820px;max-width:92vw;max-height:90vh;overflow-y:auto;background:var(--card)"><button type="button" id="close-result-drawer" aria-label="Close result inspector">Close</button><div id="result-drawer-content"></div></dialog>`);
-      $('result-drawer').addEventListener('close',clearResultKey);}
-    $('result-drawer-content').innerHTML=html;$('result-drawer-content').querySelector('h2').id='result-drawer-title';$('result-drawer').showModal();
-    if(parseHash().view==='results')setHash(hashFor('results',{model:r.model_id,result:rid}));
+  window.openFigure = openFigure;
+
+  // Study Profile Modal Dialog
+  function openStudyProfile(reportId) {
+    const st = d.characteristics.find(c => c.Report === reportId);
+    if (!st) return;
+    const dialog = $('study-dialog');
+    if (!dialog) return;
+
+    let content = `
+      <div class="drawer-header">
+        <div>
+          <span class="eyebrow">${esc(st.Country || 'Trial')} · ${esc(st.Year || '')}</span>
+          <h3>${esc(st.Report)}: ${esc(st.Procedure || st['Surgical category'] || 'Surgical Trial')}</h3>
+          <p class="lede">${esc(st.Modality)} vs ${esc(st['Comparator (as extracted)'])} · ${esc(st['N randomised'] || '')} randomised, ${esc(st['N analysed'] || '')} analysed</p>
+        </div>
+        <button type="button" class="btn-close" onclick="document.getElementById('study-dialog').close()">Close</button>
+      </div>
+
+      <h4>Electrostimulation Regimen</h4>
+      <div class="study-meta-grid">
+        <div class="meta-item"><strong>Modality</strong><span>${esc(st.Modality)}</span></div>
+        <div class="meta-item"><strong>Acupoints</strong><span>${esc(st.Acupoints || 'Not stated')}</span></div>
+        <div class="meta-item"><strong>Frequency</strong><span>${esc(st.Frequency || 'Not stated')}</span></div>
+        <div class="meta-item"><strong>Intensity</strong><span>${esc(st.Intensity || 'Not stated')}</span></div>
+        <div class="meta-item"><strong>Timing</strong><span>${esc(st.Timing || 'Not stated')}</span></div>
+        <div class="meta-item"><strong>Sessions &amp; Duration</strong><span>${esc(st.Sessions || '')} session(s); ${esc(st['Session duration'] || '')}</span></div>
+        <div class="meta-item"><strong>Cumulative Duration</strong><span>${esc(st['Cumulative duration'] || '—')} (${esc(st['Planned active minutes before 24 h'] || '—')} min active before 24h)</span></div>
+        <div class="meta-item"><strong>Timing Category</strong><span>${esc(st['Timing category (registered)'] || '—')}</span></div>
+      </div>
+
+      <h4>Clinical &amp; Analgesia Characteristics</h4>
+      <div class="study-meta-grid">
+        <div class="meta-item"><strong>Setting</strong><span>${esc(st.Setting || '—')}</span></div>
+        <div class="meta-item"><strong>Anaesthesia</strong><span>${esc(st.Anaesthesia || 'General')}</span></div>
+        <div class="meta-item"><strong>Surgery &amp; Category</strong><span>${esc(st['Surgical category'] || '')} — ${esc(st.Procedure || '')}</span></div>
+        <div class="meta-item"><strong>Demographics</strong><span>Age: ${esc(st.Age || '—')}; Female: ${esc(st.Female || '—')}; BMI: ${esc(st.BMI || '—')}; ASA: ${esc(st.ASA || '—')}</span></div>
+        <div class="meta-item"><strong>PCA Regimen</strong><span>${esc(st['PCA regimen'] || 'None/not reported')}</span></div>
+        <div class="meta-item"><strong>Rescue Analgesia</strong><span>${esc(st['Rescue analgesia'] || 'None/not reported')}</span></div>
+        <div class="meta-item"><strong>Multimodal Background</strong><span>${esc(st['Multimodal analgesia in all groups'] || '—')} (${esc(st['Non-opioid components'] || 'None')})</span></div>
+        <div class="meta-item"><strong>Routine Non-opioid Timing (D7)</strong><span>${esc(st['Timing of the routine non-opioid (decision D7)'] || '—')}</span></div>
+      </div>
+    `;
+
+    // Result-specific RoBs for this study
+    const robs = d.rob.judgements.filter(j => j.Report === reportId);
+    if (robs.length > 0) {
+      content += `<h4>Risk of Bias (RoB 2) Assessments for this Study (${robs.length})</h4>`;
+      content += table(['Result ID', 'Outcome', 'Window', 'D1', 'D2', 'D3', 'D4', 'D5', 'Overall', 'Overall Rationale'],
+        robs.map(r => [
+          `<code>${esc(r['Result ID'])}</code>`,
+          esc(r.Outcome),
+          esc(r.Window),
+          tag(r.D1), tag(r.D2), tag(r.D3), tag(r.D4), tag(r.D5),
+          tag(r.Overall),
+          `<small>${esc(r['Overall rationale'] || '')}</small>`
+        ])
+      );
+    }
+
+    dialog.innerHTML = content;
+    dialog.showModal();
   }
-  document.addEventListener('click',e=>{const tm=e.target.closest('.term');if(tm){showTip(tm);return;}const nav=e.target.closest('[data-view]');if(nav){if(nav.tagName==='A'&&(e.metaKey||e.ctrlKey||e.shiftKey||e.altKey||e.button))return;e.preventDefault();document.querySelectorAll('dialog[open]').forEach(x=>x.close());show(nav.dataset.view);return;}const model=e.target.closest('[data-model]');if(model){openModel(model.dataset.model);return;}const fig=e.target.closest('.figure-open');if(fig){$('figure-image').src=fig.dataset.src;$('figure-image').alt=fig.dataset.caption;$('figure-caption').innerHTML=esc(fig.dataset.caption)+(fig.dataset.svg?` · Download <a href="${esc(fig.dataset.svg)}" download>SVG</a> · <a href="${esc(fig.dataset.pdf)}" download>PDF</a> · <a href="${esc(fig.dataset.src)}" download>PNG</a>`:'');$('figure-dialog').showModal();return;}const toStudy=e.target.closest('[data-study]');if(toStudy){show('studies',{study:toStudy.dataset.study});return;}const toBody=e.target.closest('[data-e1e2]');if(toBody){show('e1e2',{body:toBody.dataset.e1e2});return;}const toRisk=e.target.closest('[data-risk-q]');if(toRisk){show('risk',{q:toRisk.dataset.riskQ});return;}const robBtn=e.target.closest('.rob-cell');if(robBtn){robCell(robBtn);return;}if(e.target.id==='close-rob-dialog'){$('rob-dialog').close();return;}const riskLink=e.target.closest('[data-risk-model]');if(riskLink){show('risk',{model:riskLink.dataset.riskModel});return;}const cardBtn=e.target.closest('[data-card-action]');if(cardBtn){cardAction(cardBtn);return;}const bodyBtn=e.target.closest('.e1e2-body');if(bodyBtn){show('e1e2',{body:bodyBtn.dataset.body});return;}const memF=e.target.closest('[data-e1e2-in]');if(memF){e1e2Filter({in:memF.getAttribute('aria-pressed')==='true'?'':memF.dataset.e1e2In});return;}if(e.target.closest('[data-e1e2-clear]')){e1e2Filter({in:'',disp:''});return;}const res=e.target.closest('.result-open');if(res){openResultDrawer(res.dataset.result,res.dataset.resultModel);return;}if(e.target.id==='close-result-drawer'){$('result-drawer').close();clearResultKey();}});
-  // E1 vs E2 filters are URL state (back/forward restore them).
-  function e1e2Filter(p){const cur=parseHash().params,next={body:cur.get('body')||'',in:cur.get('in')||'',disp:cur.get('disp')||'',...p};show('e1e2',next);}
-  // Keyboard: SVG labels and other non-button controls with role=button/link activate like buttons and links.
-  document.addEventListener('keydown',e=>{if(e.key==='Escape')hideTip();const el=e.target;if(!el.matches||!el.matches('[role=button]:not(button),[role=link]:not(a)'))return;
-    if(e.key==='Enter'||(e.key===' '&&el.getAttribute('role')==='button')){e.preventDefault();el.dispatchEvent(new MouseEvent('click',{bubbles:true}));}});
-  // Glossary tooltip: one fixed-position element, kept inside the viewport, shown on hover and keyboard focus, dismissed with Escape.
-  const tip=document.createElement('div');tip.id='term-tip';tip.setAttribute('role','tooltip');tip.hidden=true;document.body.appendChild(tip);
-  let tipAnchor=null;
-  function showTip(el){tipAnchor=el;tip.textContent=el.dataset.tip;tip.hidden=false;const r=el.getBoundingClientRect(),w=tip.offsetWidth,h=tip.offsetHeight;
-    tip.style.left=Math.max(8,Math.min(r.left,innerWidth-w-8))+'px';tip.style.top=(r.bottom+6+h>innerHeight?r.top-h-6:r.bottom+6)+'px';}
-  function hideTip(){tip.hidden=true;tipAnchor=null;}
-  document.addEventListener('mouseover',e=>{const el=e.target.closest('.term,.vs[data-tip]');if(el)showTip(el);else if(!tip.hidden&&!e.target.closest('#term-tip')&&tipAnchor!==document.activeElement)hideTip();});
-  document.addEventListener('focusin',e=>{const el=e.target.closest('.term');if(el)showTip(el);else hideTip();});
-  // Scrolling moves a tooltip that belongs to the focused control (focus can scroll it into view); others close.
-  document.addEventListener('scroll',()=>{if(tipAnchor&&tipAnchor===document.activeElement&&!tip.hidden)showTip(tipAnchor);else hideTip();},{passive:true,capture:true});
-  document.addEventListener('input',e=>{if(e.target.id==='dl-search')filterDownloads();if(e.target.id==='risk-search')riskRows();if(e.target.id==='study-search')studyRows(e.target.value);});
-  document.addEventListener('change',e=>{if(e.target.id==='dl-group'||e.target.id==='dl-primary'){filterDownloads();return;}if(e.target.id==='risk-scope'){riskRows();return;}if(e.target.id==='e1e2-disp'){e1e2Filter({disp:e.target.value});return;}if(e.target.id==='model-select'){history.pushState(null,'',hashFor('results',{model:e.target.value}));routed=location.hash;modelDetail(e.target.value);}});
-  $('close-figure').addEventListener('click',()=>$('figure-dialog').close());
-  window.addEventListener('hashchange',()=>route());
-  window.addEventListener('popstate',()=>route());
-  // Theme: theme.js (in <head>) applies the stored or system theme before first paint and keeps an explicit choice.
-  // The switch reports the theme in effect: pressed = dark.
-  const TH=window.reviewTheme;
-  if(TH){
-    document.querySelector('.nav').insertAdjacentHTML('afterend','<div class="header-tools"><button type="button" id="theme-toggle" aria-pressed="false"><span aria-hidden="true">◐</span> Dark theme</button></div>');
-    const sync=()=>$('theme-toggle').setAttribute('aria-pressed',String(TH.current()==='dark'));
-    $('theme-toggle').addEventListener('click',()=>{TH.set(TH.current()==='dark'?'light':'dark');sync();});
-    TH.onSystemChange(sync);sync();
+  window.openStudyProfile = openStudyProfile;
+
+  // View: Overview
+  function overview() {
+    const m = d.metadata;
+    const p = m.primary_summary;
+    const c = m.counts;
+
+    return `
+      <div class="panel" style="margin-bottom: 24px; border-left: 4px solid var(--accent);">
+        <span class="eyebrow">${esc(d.version)} · PROSPERO ${esc(d.registration)} · ${esc(d.date)}</span>
+        <h2>${esc(m.title)}</h2>
+        <p class="lede">${esc(m.subtitle)}</p>
+        <p>${esc(d.citation)}</p>
+      </div>
+
+      <div class="kpi-row">
+        <div class="kpi-card"><div class="kpi-lbl">Included Reports</div><div class="kpi-val">${c.included_reports}</div><small>43 trial families</small></div>
+        <div class="kpi-card"><div class="kpi-lbl">Total Participants</div><div class="kpi-val">${c.total_participants.toLocaleString()}</div><small>All surgical cohorts</small></div>
+        <div class="kpi-card"><div class="kpi-lbl">Assessed Results</div><div class="kpi-val">${c.rob_assessments}</div><small>Result-specific RoB 2</small></div>
+        <div class="kpi-card"><div class="kpi-lbl">High Risk of Bias</div><div class="kpi-val">${c.rob_high_percent}%</div><small>52 / 180 results</small></div>
+      </div>
+
+      <h3>Core Evidence Summary</h3>
+      ${table(
+        ['Construct / Comparison', 'Trials (k)', 'Participants (N)', 'Pooled / Single Estimate [95% CI]', 'Certainty (GRADE)'],
+        [
+          ['<strong>Primary 24-h systemic opioid:</strong> TEAS vs sham', `${p.opioid_teas_sham.trials}`, `${p.opioid_teas_sham.participants}`, `MD ${num(p.opioid_teas_sham.md)} [${num(p.opioid_teas_sham.ci_low)}, ${num(p.opioid_teas_sham.ci_high)}] mg IV MME`, certaintyBadge(p.opioid_teas_sham.certainty)],
+          ['<strong>Primary 24-h systemic opioid:</strong> EA vs sham', `${p.opioid_ea_sham.trials}`, `${p.opioid_ea_sham.participants}`, `No eligible quantitative data`, certaintyBadge('Unrated')],
+          ['<strong>Supportive:</strong> TEAS vs usual care', `${p.opioid_teas_usual.trials}`, `${p.opioid_teas_usual.participants}`, `MD ${num(p.opioid_teas_usual.md)} [${num(p.opioid_teas_usual.ci_low)}, ${num(p.opioid_teas_usual.ci_high)}] mg IV MME`, certaintyBadge(p.opioid_teas_usual.certainty)],
+          ['<strong>Supportive:</strong> EA vs usual care', `${p.opioid_ea_usual.trials}`, `${p.opioid_ea_usual.participants}`, `MD ${num(p.opioid_ea_usual.md)} [${num(p.opioid_ea_usual.ci_low)}, ${num(p.opioid_ea_usual.ci_high)}] mg IV MME`, certaintyBadge(p.opioid_ea_usual.certainty)],
+          ['<strong>Co-primary pain at ~24 h:</strong> TEAS vs sham (Wang 1997)', `${p.coprimary_rest_pain.trials}`, `${p.coprimary_rest_pain.participants}`, `MD ${num(p.coprimary_rest_pain.md)} [${num(p.coprimary_rest_pain.ci_low)}, ${num(p.coprimary_rest_pain.ci_high)}] points (0-10)`, certaintyBadge(p.coprimary_rest_pain.certainty)],
+          ['<strong>Secondary PONV (0-24 h):</strong> TEAS vs sham', `${p.secondary_ponv.trials}`, `${p.secondary_ponv.participants}`, `RR ${num(p.secondary_ponv.rr)} [${num(p.secondary_ponv.ci_low)}, ${num(p.secondary_ponv.ci_high)}]`, certaintyBadge(p.secondary_ponv.certainty)],
+          ['<strong>Rescue opioid receipt:</strong> TEAS vs sham', `${p.rescue_receipt.trials}`, `${p.rescue_receipt.participants}`, `RR ${num(p.rescue_receipt.rr)} [${num(p.rescue_receipt.ci_low)}, ${num(p.rescue_receipt.ci_high)}]`, certaintyBadge(p.rescue_receipt.certainty)],
+          ['<strong>Broader first-day dose (E2 sensitivity):</strong> TEAS vs sham', `${p.broader_first_day_e2.trials}`, `${p.broader_first_day_e2.participants}`, `MD ${num(p.broader_first_day_e2.md)} [${num(p.broader_first_day_e2.ci_low)}, ${num(p.broader_first_day_e2.ci_high)}] mg IV MME`, certaintyBadge(p.broader_first_day_e2.certainty)]
+        ]
+      )}
+
+      <div class="panel" style="margin: 20px 0;">
+        <h4>Registered Clinical-Importance Joint Criterion</h4>
+        <p><strong>Criterion:</strong> A reduction of at least 10 mg IV MME in first-day opioid consumption, paired with same-trial proof that rest pain at about 24 hours was not worse (upper 95% CI limit &lt; +1 point on a 0–10 scale).</p>
+        ${note(`<strong>Status:</strong> ${p.joint_criterion_status}`)}
+      </div>
+
+      <div class="grid-2col">
+        <div class="panel">
+          <h4>Authors &amp; Affiliations</h4>
+          <ul>
+            ${m.authors.map(a => `<li><strong>${esc(a.name)}</strong> (${esc(a.role)})<br><small>${a.affiliations.map(af => esc(m.affiliations.find(x => x.id === af)?.text || '')).join('; ')}</small></li>`).join('')}
+          </ul>
+        </div>
+        <div class="panel">
+          <h4>Supervisor Reading Copy Note</h4>
+          <p>Prepared for faculty review at Lund University. All references verified against PubMed and Crossref. RoB 2 conducted per outcome result; GRADE profiles established across all syntheses. Operational definitions and 11 Additional files are locked.</p>
+          <p><a href="#manuscript" class="text-button">Read Full Manuscript Text</a> · <a href="#downloads" class="text-button">Download All 11 Additional Files</a></p>
+        </div>
+      </div>
+
+      <h3>Quick Navigation</h3>
+      <div class="summary-grid">
+        <article>
+          <strong><a href="#results">Quantitative Results &amp; Models</a></strong>
+          <p>Explore 80 opioid syntheses, secondary outcomes, single-trial estimates, and sensitivity models (Wang 1997, Colak/Fu, D6 selection what-ifs).</p>
+        </article>
+        <article>
+          <strong><a href="#studies">Study Explorer (44 Reports)</a></strong>
+          <p>Search and filter all 44 included reports / 43 trials by modality (TEAS/EA), comparator, surgery, country, and stimulation parameters.</p>
+        </article>
+        <article>
+          <strong><a href="#risk">Risk of Bias (180 Results)</a></strong>
+          <p>Interactive Cochrane RoB 2 dashboard with domain summaries, signalling questions (968 items), and result-specific rationales.</p>
+        </article>
+        <article>
+          <strong><a href="#prisma">PRISMA 2020 Flow &amp; Ledger</a></strong>
+          <p>Interactive flow diagram and full 226-record screened register with categorized exclusion reasons for all 173 excluded reports.</p>
+        </article>
+      </div>
+    `;
   }
-  // Footer: the same analysis and build provenance as the Overview.
-  if($('provenance-line'))$('provenance-line').innerHTML=provenance();
-  route();if(!views[parseHash().view])setHash('#overview');booted=true;
+
+  // View: Results
+  function results() {
+    const opioid = d.models.opioid || [];
+    const other = d.models.other || [];
+    const single = d.models.single_trials || [];
+
+    return `
+      <h2>Quantitative Syntheses &amp; Model Results</h2>
+      <p class="lede">All meta-analyses and single-trial estimates from Additional file 11 and Additional file 10.</p>
+
+      <div class="filter-bar">
+        <input type="search" id="results-search" placeholder="Search models by name, outcome, or study..." oninput="window.filterResultsTable()">
+        <div class="filter-group">
+          <label for="results-cat"><strong>Category:</strong></label>
+          <select id="results-cat" onchange="window.filterResultsTable()">
+            <option value="all">All Models (${opioid.length + other.length + single.length})</option>
+            <option value="primary">Primary Opioid Syntheses</option>
+            <option value="e2">Broader First-day Dose (E2)</option>
+            <option value="rescue">Rescue Opioid Receipt</option>
+            <option value="pain">Pain Outcomes</option>
+            <option value="ponv">PONV / Nausea / Vomiting</option>
+            <option value="single">Single-Trial Estimates</option>
+            <option value="sensitivity">Sensitivity &amp; What-Ifs</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="note" style="margin-bottom: 20px;">
+        <strong>Methodology:</strong> Random-effects meta-analysis via Restricted Maximum Likelihood (REML) with safeguarded Hartung-Knapp (HK) confidence intervals. Prediction intervals (PI) are shown for models pooling at least 5 trials.
+      </div>
+
+      <div id="results-table-container">
+        <!-- Rendered by window.filterResultsTable() -->
+      </div>
+
+      <h3>Key Publication Figures</h3>
+      <div class="fig-cards">
+        <div class="fig-card">
+          <button type="button" class="fig-thumb" onclick="window.openFigure('Fig3')">
+            <img src="figures_png/Fig3.png" alt="Fig 3">
+          </button>
+          <figcaption><strong>Fig. 3 Primary &amp; Supportive Opioid Forest Plot</strong><span>Szmit 2021 &amp; El-Rakshy / Seevaunnamtum</span></figcaption>
+        </div>
+        <div class="fig-card">
+          <button type="button" class="fig-thumb" onclick="window.openFigure('Fig4')">
+            <img src="figures_png/Fig4.png" alt="Fig 4">
+          </button>
+          <figcaption><strong>Fig. 4 Broader First-Day Opioid Consumption</strong><span>E2 sensitivity across all four bodies</span></figcaption>
+        </div>
+        <div class="fig-card">
+          <button type="button" class="fig-thumb" onclick="window.openFigure('Fig5')">
+            <img src="figures_png/Fig5.png" alt="Fig 5">
+          </button>
+          <figcaption><strong>Fig. 5 Receipt of Additional Rescue Opioid</strong><span>TEAS vs sham pooled analyses</span></figcaption>
+        </div>
+      </div>
+    `;
+  }
+
+  window.filterResultsTable = function () {
+    const q = ($('results-search')?.value || '').toLowerCase();
+    const cat = $('results-cat')?.value || 'all';
+    const container = $('results-table-container');
+    if (!container) return;
+
+    let rows = [];
+
+    // Helper to match category
+    const matchCat = (item, isOpioid) => {
+      if (cat === 'all') return true;
+      const id = (item.Analysis || item.Outcome || '').toLowerCase();
+      const role = (item['Original role'] || item.Role || item.Type || '').toLowerCase();
+      if (cat === 'primary') return id.startsWith('opioid24_') && !id.startsWith('e2_');
+      if (cat === 'e2') return id.startsWith('e2_');
+      if (cat === 'rescue') return id.includes('rescue') || id.includes('receipt');
+      if (cat === 'pain') return id.includes('pain') || id.includes('vas') || id.includes('nrs');
+      if (cat === 'ponv') return id.includes('ponv') || id.includes('nausea') || id.includes('vomiting');
+      if (cat === 'single') return !!item.Report;
+      if (cat === 'sensitivity') return role.includes('sensitivity') || id.includes('without') || id.includes('what_if') || id.includes('wang') || id.includes('colak');
+      return true;
+    };
+
+    // 1. Opioid models
+    d.models.opioid.forEach(m => {
+      if (!matchCat(m, true)) return;
+      const str = `${m.Analysis} ${m.Outcome} ${m.Reports || ''} ${m.Measure || ''}`.toLowerCase();
+      if (q && !str.includes(q)) return;
+      rows.push([
+        `<strong><code>${esc(m.Analysis)}</code></strong><br><small>${esc(m.Outcome)}</small>`,
+        `<span class="tag">${esc(m.Type || m['Original role'] || 'Meta-analysis')}</span>`,
+        `${m.Trials || 0} / ${m.Participants || 0}`,
+        `<strong>${esc(m.Measure || 'MD')}: ${num(m.Effect)}</strong> [${num(m['95% CI low'])}, ${num(m['95% CI high'])}]`,
+        `I²: ${m['I² (%)'] !== '' && m['I² (%)'] !== null ? num(m['I² (%)'], 1) + '%' : '—'}; τ²: ${num(m['τ²'])}`,
+        `<small>${esc(m.Reports || '—')}</small>`
+      ]);
+    });
+
+    // 2. Other outcomes
+    d.models.other.forEach(m => {
+      if (!matchCat(m, false)) return;
+      const str = `${m.Analysis} ${m.Label} ${m.Reports || ''} ${m['Outcome family'] || ''}`.toLowerCase();
+      if (q && !str.includes(q)) return;
+      rows.push([
+        `<strong><code>${esc(m.Analysis)}</code></strong><br><small>${esc(m.Label || m['Outcome family'])}</small>`,
+        `<span class="tag">${esc(m.Role || 'Secondary')}</span>`,
+        `${m.Trials || 0} / ${m.Participants || 0}`,
+        `<strong>${esc(m.Measure || 'RR')}: ${num(m.Effect)}</strong> [${num(m['95% CI low'])}, ${num(m['95% CI high'])}]`,
+        `I²: ${m['I² (%)'] !== '' && m['I² (%)'] !== null ? num(m['I² (%)'], 1) + '%' : '—'}; τ²: ${num(m['τ²'])}`,
+        `<small>${esc(m.Reports || '—')}</small>`
+      ]);
+    });
+
+    // 3. Single trial estimates
+    d.models.single_trials.forEach(m => {
+      if (cat !== 'all' && cat !== 'single') return;
+      const str = `${m.Report} ${m.Outcome} ${m.Opioid || ''} ${m.Modality || ''}`.toLowerCase();
+      if (q && !str.includes(q)) return;
+      rows.push([
+        `<strong>${esc(m.Report)}</strong>: ${esc(m.Outcome)} (${esc(m.Window || '')})`,
+        `<span class="tag">Single trial (${esc(m.Modality)} vs ${esc(m.Comparator)})</span>`,
+        `1 / ${(+m['N, intervention'] || 0) + (+m['N, control'] || 0)}`,
+        `<strong>${esc(m.Measure || 'MD')}: ${num(m.Effect)}</strong> [${num(m['95% CI low'])}, ${num(m['95% CI high'])}] ${esc(m.Unit || '')}`,
+        `Single unpooled study`,
+        `<small>${esc(m.Note || m['Source location'] || '—')}</small>`
+      ]);
+    });
+
+    container.innerHTML = table(['Analysis / Outcome', 'Role / Design', 'Trials / N', 'Estimate [95% CI]', 'Heterogeneity', 'Contributing Studies'], rows);
+  };
+
+  // View: E1 vs E2
+  function e1e2() {
+    return `
+      <h2>E1 (Registered Primary) vs E2 (Broader First-Day Dose)</h2>
+      <p class="lede">Comparison between the registered primary construct and the post-hoc broader first-day sensitivity analysis.</p>
+
+      <div class="grid-2col">
+        <div class="panel">
+          <h3>E1 — Registered Primary Construct</h3>
+          <p><strong>Definition:</strong> Cumulative systemic opioid from the end of surgery to 24 hours, in mg IV morphine equivalents. A result qualifies only where the source establishes that it captures <em>all delivered systemic opioid</em>, including any quantified rescue. Permitted but unquantified rescue is never treated as zero.</p>
+          ${table(['Comparison', 'k / N', 'MD [95% CI]', 'Certainty'], [
+            ['TEAS vs sham', '1 / 48 (Szmit 2021)', '-7.70 [-10.62, -4.78] mg', certaintyBadge('Low')],
+            ['EA vs sham', '0 / 0', 'No eligible data', certaintyBadge('Unrated')],
+            ['TEAS vs usual care', '1 / 47 (Szmit 2021)', '-8.00 [-10.92, -5.08] mg', certaintyBadge('Low')],
+            ['EA vs usual care', '2 / 159', '-6.83 [-76.39, 62.73] mg', certaintyBadge('Very low')]
+          ])}
+          ${note('E1 is the prespecified primary outcome registered in PROSPERO CRD420261452908.')}
+        </div>
+
+        <div class="panel">
+          <h3>E2 — Broader First-Day Sensitivity (Post Hoc)</h3>
+          <p><strong>Definition:</strong> Cumulative postoperative opioid reported as consumed or delivered in the first 24 postoperative hours (or POD1). Admitted PCA-only totals and totals where rescue was permitted but not quantified. Unquantified components are not imputed.</p>
+          ${table(['Comparison', 'k / N', 'MD [95% CI]', 'Certainty'], [
+            ['TEAS vs sham (base)', '6 / 547', '-6.67 [-14.53, 1.18] mg', certaintyBadge('Very low')],
+            ['TEAS vs sham (with Wang 1997)', '7 / 622', '-7.22 [-14.13, -0.32] mg', certaintyBadge('Very low')],
+            ['EA vs sham (Lin 2002)', '1 / 75', '-11.80 [-18.52, -5.08] mg', certaintyBadge('Very low')],
+            ['EA vs usual care', '4 / 414', '-8.14 [-23.06, 6.77] mg', certaintyBadge('Very low')]
+          ])}
+          ${note('E2 was defined post hoc after results were known; E1 was retained as primary. E2 does not establish clinical importance.')}
+        </div>
+      </div>
+
+      <div class="panel" style="margin-top: 24px;">
+        <h3>Joint Clinical-Importance Criterion Evaluation</h3>
+        <p>A clinically important benefit required demonstrating >= 10 mg IV MME opioid sparing and same-trial upper 95% CI for ~24h pain &lt; +1.0 point.</p>
+        ${table(['Body', 'E1 Opioid Limb', 'E1 Pain Limb', 'E1 Joint Status', 'E2 Joint Status'], [
+          ['TEAS vs sham', 'Interval includes 10mg (-7.70)', 'Szmit 2021 reported no 24h pain', 'Cannot be evaluated', 'Not met (-6.67 mg, CI spans 0)'],
+          ['EA vs sham', 'No eligible data', 'No eligible data', 'No data', 'Cannot be evaluated (Lin 2002 has no 24h pain result)'],
+          ['TEAS vs usual care', 'Not met (-8.00 mg)', 'No 24h pain reported', 'Not met', 'Not met'],
+          ['EA vs usual care', 'Not met (-6.83 mg)', 'Upper CI &gt; +1', 'Not met', 'Not met']
+        ])}
+      </div>
+    `;
+  }
+
+  // View: QoR
+  function qor() {
+    return `
+      <h2>Quality of Recovery &amp; Functional Milestones</h2>
+      <p class="lede">Patient-reported recovery scores (QoR-15, QoR-40) and gastrointestinal recovery milestones.</p>
+
+      <div class="summary-grid">
+        <article>
+          <strong>QoR-15 at ~24 h (TEAS vs sham)</strong>
+          <p>k = 3 trials, N = 256 participants<br>Mean difference: <strong>+8.47 points</strong> [95% CI -5.18 to 22.12]<br>Certainty: Very low (CI spans zero and minimal important difference)</p>
+        </article>
+        <article>
+          <strong>QoR-15 on POD 3 (TEAS vs sham)</strong>
+          <p>k = 1 trial (Fu 2024), N = 59 participants<br>Mean difference: <strong>+6.40 points</strong> [95% CI 3.98 to 8.82]<br>Certainty: Low</p>
+        </article>
+      </div>
+
+      <h3>Gastrointestinal &amp; Discharge Milestones</h3>
+      ${table(['Outcome', 'Comparison', 'k / N', 'Estimate [95% CI]', 'Interpretation'], [
+        ['Time to first flatus (hours)', 'TEAS vs sham', '6 / 542', 'MD -5.84 h [-8.92, -2.76]', 'Moderate heterogeneity; low certainty of earlier flatus'],
+        ['Time to first defecation (hours)', 'TEAS vs sham', '3 / 248', 'MD -8.12 h [-14.50, -1.74]', 'Very low certainty'],
+        ['Time to ambulation (hours)', 'TEAS vs sham', '2 / 180', 'MD -3.40 h [-5.80, -1.00]', 'Low certainty'],
+        ['Hospital length of stay (days)', 'TEAS vs sham', '5 / 430', 'MD -0.65 d [-1.15, -0.15]', 'Low certainty; influenced by discharge criteria']
+      ])}
+    `;
+  }
+
+  // View: Studies
+  function studies() {
+    return `
+      <h2>Included Studies Explorer (44 Reports / 43 Trials)</h2>
+      <p class="lede">Comprehensive clinical, demographic, electrostimulation, and analgesia characteristics for all 44 included reports.</p>
+
+      <div class="filter-bar">
+        <input type="search" id="study-search" placeholder="Search by author, surgery, procedure, acupoint..." oninput="window.filterStudiesTable()">
+        <div class="filter-group">
+          <label for="study-modality"><strong>Modality:</strong></label>
+          <select id="study-modality" onchange="window.filterStudiesTable()">
+            <option value="all">All Modalities (44)</option>
+            <option value="TEAS">TEAS (32 reports)</option>
+            <option value="EA">EA (12 reports)</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="study-comparator"><strong>Comparator:</strong></label>
+          <select id="study-comparator" onchange="window.filterStudiesTable()">
+            <option value="all">All Comparators</option>
+            <option value="sham">Sham</option>
+            <option value="usual">Usual Care</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="studies-table-container">
+        <!-- Rendered by window.filterStudiesTable() -->
+      </div>
+
+      <h3>Stimulation Protocol &amp; Effect Directions</h3>
+      <div class="details-box">
+        <summary>View Summary Effect Direction Table (${d.effect_directions.length} entries)</summary>
+        ${table(
+          ['Analysis', 'Report', 'Modality', 'Timing', 'Frequency', 'Intensity', 'MD (mg IV MME) [95% CI]', 'Direction'],
+          d.effect_directions.map(e => [
+            esc(e.Analysis),
+            `<strong>${esc(e.Report)}</strong>`,
+            esc(e.Modality),
+            esc(e.Timing),
+            esc(e.Frequency),
+            esc(e.Intensity),
+            `${num(e['MD (mg IV MME)'])} [${num(e['95% CI low'])}, ${num(e['95% CI high'])}]`,
+            `<span class="tag ${e.Direction === 'Favours TEAS' || e.Direction === 'Favours EA' ? 'risk-low' : ''}">${esc(e.Direction)}</span>`
+          ])
+        )}
+      </div>
+    `;
+  }
+
+  window.filterStudiesTable = function () {
+    const q = ($('study-search')?.value || '').toLowerCase();
+    const mod = $('study-modality')?.value || 'all';
+    const comp = $('study-comparator')?.value || 'all';
+    const container = $('studies-table-container');
+    if (!container) return;
+
+    const filtered = d.characteristics.filter(s => {
+      if (mod !== 'all' && s.Modality !== mod) return false;
+      if (comp !== 'all') {
+        const cText = (s['Comparator (as extracted)'] || '').toLowerCase();
+        if (comp === 'sham' && !cText.includes('sham')) return false;
+        if (comp === 'usual' && !cText.includes('usual') && !cText.includes('control')) return false;
+      }
+      if (q) {
+        const str = `${s.Report} ${s.Country} ${s['Surgical category']} ${s.Procedure} ${s.Acupoints || ''} ${s.Setting || ''}`.toLowerCase();
+        if (!str.includes(q)) return false;
+      }
+      return true;
+    });
+
+    const rows = filtered.map(s => [
+      `<strong>${esc(s.Report)}</strong><br><small>${esc(s.Year)} · ${esc(s.Country)}</small>`,
+      `<span class="tag">${esc(s.Modality)}</span> vs <small>${esc(s['Comparator (as extracted)'])}</small>`,
+      `<strong>${esc(s['Surgical category'] || '')}</strong><br><small>${esc(s.Procedure || '')}</small>`,
+      `${s['N randomised'] || '—'} / ${s['N analysed'] || '—'}`,
+      `<small><strong>Points:</strong> ${esc(s.Acupoints || '—')}<br><strong>Freq:</strong> ${esc(s.Frequency || '—')}; <strong>Int:</strong> ${esc(s.Intensity || '—')}<br><strong>Timing:</strong> ${esc(s.Timing || '—')}</small>`,
+      `<small><strong>PCA:</strong> ${esc(s['PCA regimen'] || '—')}<br><strong>Rescue:</strong> ${esc(s['Rescue analgesia'] || '—')}</small>`,
+      `<button type="button" class="text-button" onclick="window.openStudyProfile('${esc(s.Report)}')">View Profile</button>`
+    ]);
+
+    container.innerHTML = `
+      <p class="source" style="margin-bottom:8px">Showing ${filtered.length} of ${d.characteristics.length} reports</p>
+      ${table(['Report / Country', 'Comparison', 'Surgery / Procedure', 'N (Rand / Anal)', 'Stimulation Protocol', 'Postop Analgesia', 'Details'], rows)}
+    `;
+  };
+
+  // View: Coverage
+  function coverage() {
+    return `
+      <h2>Outcome Coverage &amp; Inventory</h2>
+      <p class="lede">Mapping of which clinical and patient-reported outcomes were reported across all 44 included reports.</p>
+
+      <div class="note" style="margin-bottom: 20px;">
+        <strong>Selection requirement:</strong> Every included report was required to have an English full text, a confirmed postoperative opioid result, and a 24-hour opioid or pain outcome.
+      </div>
+
+      ${table(
+        ['Report', 'Modality', 'Surgery', '24-h Opioid', 'Pain (~24h)', 'PONV', 'Rescue Receipt', 'Adverse Events', 'QoR / PROM'],
+        d.characteristics.map(s => {
+          const rep = s.Report;
+          const inputs = d.inputs.filter(i => i.Report === rep);
+          const robs = d.rob.judgements.filter(j => j.Report === rep);
+          const hasOpioid = inputs.some(i => (i.Outcome || '').toLowerCase().includes('opioid') || (i.Outcome || '').toLowerCase().includes('morphine'));
+          const hasPain = robs.some(r => (r.Outcome || '').toLowerCase().includes('pain') || (r.Outcome || '').toLowerCase().includes('vas'));
+          const hasPonv = robs.some(r => (r.Outcome || '').toLowerCase().includes('ponv') || (r.Outcome || '').toLowerCase().includes('nausea') || (r.Outcome || '').toLowerCase().includes('vomiting'));
+          const hasRescue = (s['Rescue analgesia'] && s['Rescue analgesia'] !== 'None/not reported') || robs.some(r => (r.Outcome || '').toLowerCase().includes('rescue'));
+          const hasQor = robs.some(r => (r.Outcome || '').toLowerCase().includes('qor') || (r.Outcome || '').toLowerCase().includes('recovery'));
+
+          return [
+            `<strong>${esc(rep)}</strong>`,
+            `<span class="tag">${esc(s.Modality)}</span>`,
+            `<small>${esc(s['Surgical category'] || '')}</small>`,
+            hasOpioid ? `<span class="tag risk-low">Yes</span>` : `<span class="tag">Held/No</span>`,
+            hasPain ? `<span class="tag risk-low">Yes</span>` : `<span class="tag">—</span>`,
+            hasPonv ? `<span class="tag risk-low">Yes</span>` : `<span class="tag">—</span>`,
+            hasRescue ? `<span class="tag risk-low">Reported</span>` : `<span class="tag">—</span>`,
+            `<small>${esc(s['Rescue analgesia'] ? 'Monitored' : '—')}</small>`,
+            hasQor ? `<span class="tag risk-low">Reported</span>` : `<span class="tag">—</span>`
+          ];
+        })
+      )}
+    `;
+  }
+
+  // View: Risk of Bias
+  function risk() {
+    const summary = d.rob.summary || [];
+    const overallRow = summary.find(s => s.Domain === 'Overall') || {};
+
+    return `
+      <h2>Risk of Bias (Cochrane RoB 2)</h2>
+      <p class="lede">Result-specific assessments across 180 outcomes using the Cochrane Risk of Bias 2 tool.</p>
+
+      <div class="kpi-row">
+        <div class="kpi-card"><div class="kpi-lbl">Total Assessed Results</div><div class="kpi-val">${d.rob.judgements.length}</div><small>Across 44 reports</small></div>
+        <div class="kpi-card"><div class="kpi-lbl">High Risk of Bias</div><div class="kpi-val">${overallRow.High || 52}</div><small>29% of assessed results</small></div>
+        <div class="kpi-card"><div class="kpi-lbl">Some Concerns</div><div class="kpi-val">${overallRow['Some concerns'] || 126}</div><small>70% of assessed results</small></div>
+        <div class="kpi-card"><div class="kpi-lbl">Low Risk of Bias</div><div class="kpi-val">${overallRow.Low || 2}</div><small>1% of assessed results</small></div>
+      </div>
+
+      <h3>Domain Summary Breakdown</h3>
+      ${table(
+        ['Domain', 'Low Risk', 'Some Concerns', 'High Risk', 'Domain Focus'],
+        summary.map(row => [
+          `<strong>${esc(row.Domain)}</strong>`,
+          `<span class="tag risk-low">${row.Low}</span>`,
+          `<span class="tag risk-sc">${row['Some concerns']}</span>`,
+          `<span class="tag risk-high">${row.High}</span>`,
+          row.Domain.includes('D1') ? 'Sequence generation & allocation concealment' :
+          row.Domain.includes('D2') ? 'Blinding of participants, carers & protocol deviations' :
+          row.Domain.includes('D3') ? 'Missing outcome data & differential attrition' :
+          row.Domain.includes('D4') ? 'Measurement of outcome & assessor blinding' :
+          row.Domain.includes('D5') ? 'Selective outcome reporting & trial registration' : 'Overall rating per result'
+        ])
+      )}
+
+      <div style="margin: 20px 0;">
+        <button type="button" class="filter-btn active" onclick="window.openFigure('Fig3')">View RoB 2 Publication Summary Plot (Fig. 3)</button>
+      </div>
+
+      <div class="filter-bar">
+        <input type="search" id="rob-search" placeholder="Search by study or outcome..." oninput="window.filterRobTable()">
+        <div class="filter-group">
+          <label for="rob-rating"><strong>Overall Rating:</strong></label>
+          <select id="rob-rating" onchange="window.filterRobTable()">
+            <option value="all">All Ratings (180)</option>
+            <option value="High">High Risk (52)</option>
+            <option value="Some concerns">Some Concerns (126)</option>
+            <option value="Low">Low Risk (2)</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="rob-table-container">
+        <!-- Rendered by window.filterRobTable() -->
+      </div>
+
+      <h3>Signalling Questions &amp; Detailed Justifications</h3>
+      <div class="details-box">
+        <summary>Search Signalling Questions Database (${d.rob.signalling.length} items)</summary>
+        <div style="margin: 12px 0;">
+          <input type="search" id="sig-search" placeholder="Filter signalling questions by question number, study or keyword..." oninput="window.filterSigTable()" style="width:100%; padding:8px 12px; background:var(--input-bg); color:var(--ink); border:1px solid var(--input-border); border-radius:6px;">
+        </div>
+        <div id="sig-table-container">
+          <!-- Rendered by window.filterSigTable() -->
+        </div>
+      </div>
+    `;
+  }
+
+  window.filterRobTable = function () {
+    const q = ($('rob-search')?.value || '').toLowerCase();
+    const rating = $('rob-rating')?.value || 'all';
+    const container = $('rob-table-container');
+    if (!container) return;
+
+    const filtered = d.rob.judgements.filter(r => {
+      if (rating !== 'all' && r.Overall !== rating) return false;
+      if (q) {
+        const str = `${r['Result ID']} ${r.Report} ${r.Outcome} ${r.Comparison || ''} ${r['Overall rationale'] || ''}`.toLowerCase();
+        if (!str.includes(q)) return false;
+      }
+      return true;
+    });
+
+    const rows = filtered.map(r => [
+      `<code>${esc(r['Result ID'])}</code>`,
+      `<strong>${esc(r.Report)}</strong>`,
+      `<strong>${esc(r.Outcome)}</strong><br><small>${esc(r.Window || '')} · ${esc(r.Comparison || '')}</small>`,
+      tag(r.D1), tag(r.D2), tag(r.D3), tag(r.D4), tag(r.D5),
+      tag(r.Overall),
+      `<details><summary>Rationale</summary><small><strong>Overall:</strong> ${esc(r['Overall rationale'] || '—')}<br><strong>D1:</strong> ${esc(r['D1 rationale'] || '—')}<br><strong>D2:</strong> ${esc(r['D2 rationale'] || '—')}<br><strong>D3:</strong> ${esc(r['D3 rationale'] || '—')}<br><strong>D4:</strong> ${esc(r['D4 rationale'] || '—')}<br><strong>D5:</strong> ${esc(r['D5 rationale'] || '—')}</small></details>`
+    ]);
+
+    container.innerHTML = `
+      <p class="source" style="margin-bottom:8px">Showing ${filtered.length} of ${d.rob.judgements.length} assessments</p>
+      ${table(['Result ID', 'Report', 'Outcome / Window', 'D1', 'D2', 'D3', 'D4', 'D5', 'Overall', 'Rationales'], rows)}
+    `;
+  };
+
+  window.filterSigTable = function () {
+    const q = ($('sig-search')?.value || '').toLowerCase();
+    const container = $('sig-table-container');
+    if (!container) return;
+
+    const filtered = d.rob.signalling.filter(s => {
+      if (!q) return true;
+      const str = `${s['Assessment ID']} ${s.Report} ${s.Question} ${s['Signalling question']} ${s.Answer} ${s.Justification || ''}`.toLowerCase();
+      return str.includes(q);
+    }).slice(0, 50); // limit to 50 for performance
+
+    const rows = filtered.map(s => [
+      esc(s.Report),
+      `<strong>${esc(s.Question)}</strong>`,
+      `<small>${esc(s['Signalling question'])}</small>`,
+      `<strong>${esc(s.Answer)}</strong>`,
+      `<small>${esc(s.Justification || '—')}</small>`
+    ]);
+
+    container.innerHTML = table(['Study', 'Q#', 'Signalling Question', 'Answer', 'Justification'], rows);
+  };
+
+  // View: GRADE Certainty
+  function evidence() {
+    return `
+      <h2>GRADE Evidence Profiles &amp; Summary of Findings</h2>
+      <p class="lede">Systematic assessment of evidence certainty across primary, supportive, and secondary bodies (Additional file 10).</p>
+
+      <div class="note" style="margin-bottom: 20px;">
+        <strong>Certainty framework:</strong> Randomised trial evidence starts at <strong>High certainty</strong> and is downgraded for: (1) Risk of bias, (2) Inconsistency, (3) Indirectness, (4) Imprecision, and (5) Publication bias.
+      </div>
+
+      <h3>Primary &amp; Supportive Opioid Syntheses</h3>
+      ${renderGradeTable(d.grade['Primary outcome'] || [])}
+
+      <h3>Broader First-Day Dose (E2 Sensitivity)</h3>
+      ${renderGradeTable(d.grade['Broader first-day dose'] || [])}
+
+      <h3>Rescue Opioid Receipt</h3>
+      ${renderRescueGradeTable(d.grade['Rescue opioid receipt'] || [])}
+
+      <h3>Secondary Outcomes (PONV, Nausea, Vomiting, Pain)</h3>
+      ${renderGradeTable(d.grade['Other outcomes'] || [])}
+
+      <h3>Sensitivity Evidence Profiles (With Wang 1997 &amp; Colak/Fu)</h3>
+      ${renderGradeTable(d.grade['With Wang 1997'] || [])}
+
+      <h3>Selection What-Ifs (Decision D6)</h3>
+      ${renderD6Table(d.grade['Selection what-ifs (D6)'] || [])}
+    `;
+  }
+
+  function renderGradeTable(data) {
+    if (!data || data.length === 0) return '<p>No profile entries available.</p>';
+    const rows = data.map(g => [
+      `<strong>${esc(g.Analysis || g['Target of the rating'] || g.Comparison || '')}</strong>`,
+      `${g.Trials || 0} / ${g.Participants || 0}`,
+      `<strong>${num(g.Effect || g.MD)}</strong> [${num(g['95% CI low'])}, ${num(g['95% CI high'])}]`,
+      certaintyBadge(g.Certainty),
+      `<div class="downgrades">
+        <span class="downgrade-pill ${+g['Risk of bias (levels)'] > 0 ? 'penalized' : ''}">RoB: -${g['Risk of bias (levels)'] || 0}</span>
+        <span class="downgrade-pill ${+g['Inconsistency (levels)'] > 0 ? 'penalized' : ''}">Incon: -${g['Inconsistency (levels)'] || 0}</span>
+        <span class="downgrade-pill ${+g['Indirectness (levels)'] > 0 ? 'penalized' : ''}">Indir: -${g['Indirectness (levels)'] || 0}</span>
+        <span class="downgrade-pill ${+g['Imprecision (levels)'] > 0 ? 'penalized' : ''}">Imprec: -${g['Imprecision (levels)'] || 0}</span>
+        <span class="downgrade-pill ${+g['Publication bias (levels)'] > 0 ? 'penalized' : ''}">PubBias: -${g['Publication bias (levels)'] || 0}</span>
+      </div>`,
+      `<small>${esc(g.Reasons || g['Risk of bias'] || g.Assessor || '—')}</small>`
+    ]);
+    return table(['Analysis / Body', 'Trials / N', 'Effect [95% CI]', 'Certainty', 'Downgrades', 'Downgrade Rationales'], rows);
+  }
+
+  function renderRescueGradeTable(data) {
+    if (!data || data.length === 0) return '<p>No rescue profile entries available.</p>';
+    const rows = data.map(g => [
+      `<strong>${esc(g.Analysis)}</strong><br><small>${esc(g.Reports || '')}</small>`,
+      `${g.Trials || 0} / ${g.Participants || 0}`,
+      `Intervention: ${g['Events, intervention (TEAS or EA)'] || 0}/${g.N_intervention || g['N, intervention'] || 0}<br>Control: ${g['Events, control'] || 0}/${g.N_control || g['N, control'] || 0}`,
+      `<strong>RR: ${num(g.Effect)}</strong> [${num(g['95% CI low'])}, ${num(g['95% CI high'])}]`,
+      certaintyBadge(g.Certainty),
+      `<small>Control: ${g['Control risk per 1000'] || '—'} / 1000; Intervention: ${g['Intervention risk per 1000'] || '—'} / 1000</small>`
+    ]);
+    return table(['Analysis', 'Trials / N', 'Events / N', 'Risk Ratio [95% CI]', 'Certainty', 'Absolute Risk'], rows);
+  }
+
+  function renderD6Table(data) {
+    if (!data || data.length === 0) return '<p>No what-if data.</p>';
+    const rows = data.map(w => [
+      `<strong>${esc(w.Scenario)}</strong>`,
+      esc(w.Assumption),
+      `${w.Trials} / ${w.Participants}`,
+      `<strong>${esc(w.Measure)}: ${num(w.Effect)}</strong> [${num(w['95% CI low'])}, ${num(w['95% CI high'])}]`,
+      w['I² (%)'] !== '' && w['I² (%)'] !== null ? `${num(w['I² (%)'])}%` : '—',
+      `<small>${esc(w.Reports || '')}</small>`
+    ]);
+    return table(['Scenario', 'Assumption', 'Trials / N', 'Estimate [95% CI]', 'Heterogeneity I²', 'Reports Included'], rows);
+  }
+
+  // View: PRISMA
+  function prisma() {
+    const c = d.prisma.counts;
+    return `
+      <h2>PRISMA 2020 Selection Flow &amp; Excluded Reports Ledger</h2>
+      <p class="lede">Complete accounting of all 226 screened records and 173 excluded reports (Additional file 3).</p>
+
+      <div class="summary-grid">
+        <article>
+          <strong>226 Records Assessed</strong>
+          <p>224 identified through databases (PubMed, CENTRAL, Embase, CINAHL)<br>1 identified through citation searching (Wu 2016)</p>
+        </article>
+        <article>
+          <strong>44 Reports Included (43 Trials)</strong>
+          <p>7,703 randomised participants<br>173 reports excluded with specific declared reasons<br>6 duplicate reports; 2 reports not retrieved</p>
+        </article>
+      </div>
+
+      <div style="margin: 20px 0;">
+        <button type="button" class="filter-btn active" onclick="window.openFigure('Fig1')">View High-Resolution PRISMA Flow Diagram (Fig. 1)</button>
+      </div>
+
+      <h3>Full-Text Exclusion Reasons Breakdown</h3>
+      ${table(['Reason for Exclusion', 'Number of Reports'], [
+        ['No eligible analgesic outcome', `${c['No eligible analgesic outcome'] || 88}`],
+        ['No confirmed postoperative opioid result', `${c['No confirmed postoperative opioid result'] || 42}`],
+        ['Publication language (non-English)', `${c['Publication language'] || 19}`],
+        ['Wrong surgical setting', `${c['Wrong setting'] || 9}`],
+        ['Wrong intervention', `${c['Wrong intervention'] || 7}`],
+        ['Wrong comparator', `${c['Wrong comparator'] || 4}`],
+        ['Wrong patient population', `${c['Wrong population'] || 2}`],
+        ['Abstract only', `${c['Abstract only'] || 1}`],
+        ['Wrong study design', `${c['Wrong study design'] || 1}`],
+        ['Duplicate reports', `${c['Duplicate reports'] || 6}`],
+        ['Reports not retrieved', `${c['Reports not retrieved'] || 2}`],
+        ['<strong>Total Excluded Reports</strong>', `<strong>${c['Total excluded'] || 173}</strong>`]
+      ])}
+
+      <h3>Complete Screened Records Register (${d.prisma.reports.length})</h3>
+      <div class="filter-bar">
+        <input type="search" id="prisma-search" placeholder="Search by report name, title, or DOI..." oninput="window.filterPrismaTable()">
+        <div class="filter-group">
+          <label for="prisma-decision"><strong>Decision:</strong></label>
+          <select id="prisma-decision" onchange="window.filterPrismaTable()">
+            <option value="all">All Records (225)</option>
+            <option value="Included">Included (44)</option>
+            <option value="Excluded">Excluded (173)</option>
+            <option value="Duplicate report">Duplicates (6)</option>
+            <option value="Not retrieved">Not Retrieved (2)</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="prisma-table-container">
+        <!-- Rendered by window.filterPrismaTable() -->
+      </div>
+    `;
+  }
+
+  window.filterPrismaTable = function () {
+    const q = ($('prisma-search')?.value || '').toLowerCase();
+    const dec = $('prisma-decision')?.value || 'all';
+    const container = $('prisma-table-container');
+    if (!container) return;
+
+    const filtered = d.prisma.reports.filter(r => {
+      if (dec !== 'all' && r.Decision !== dec) return false;
+      if (q) {
+        const str = `${r.Report} ${r.Title || ''} ${r.DOI || ''} ${r['Reason for exclusion (as in Fig. 1)'] || ''}`.toLowerCase();
+        if (!str.includes(q)) return false;
+      }
+      return true;
+    });
+
+    const rows = filtered.map(r => [
+      `<strong>${esc(r.Report)}</strong>`,
+      `<small>${esc(r.Title || '—')}</small>`,
+      r.DOI ? `<a href="https://doi.org/${esc(r.DOI)}" target="_blank" rel="noopener">${esc(r.DOI)}</a>` : '—',
+      `<span class="tag ${r.Decision === 'Included' ? 'risk-low' : (r.Decision === 'Excluded' ? 'risk-high' : '')}">${esc(r.Decision)}</span>`,
+      `<small>${esc(r['Reason for exclusion (as in Fig. 1)'] || '—')}</small>`,
+      `<small>${esc(r.Note || '—')}</small>`
+    ]);
+
+    container.innerHTML = `
+      <p class="source" style="margin-bottom:8px">Showing ${filtered.length} of ${d.prisma.reports.length} records</p>
+      ${table(['Report', 'Title', 'DOI', 'Decision', 'Exclusion Reason', 'Notes'], rows)}
+    `;
+  };
+
+  // View: Methods
+  function methods() {
+    return `
+      <h2>Review Methodology, Rules &amp; Conversions</h2>
+      <p class="lede">Operational definitions, opioid conversion factors, prohibited rules, and database search strategies.</p>
+
+      <h3>Operational Synthesis Rules (Additional file 5)</h3>
+      ${table(
+        ['Rule', 'Operational Definition'],
+        d.rules.map(r => [`<strong>${esc(r.rule)}</strong>`, esc(r.definition)])
+      )}
+
+      <h3>Opioid Morphine Equivalent (MME) Register (Additional file 6)</h3>
+      <p>Conversion factors to intravenous morphine milligram equivalents.</p>
+      ${table(
+        ['Opioid', 'Route', 'Source Unit', 'Factor (mg IV morphine)', 'Role / Certainty', 'Context / Reference Source'],
+        d.conversions.factors.map(f => [
+          `<strong>${esc(f.Opioid)}</strong>`,
+          esc(f.Route),
+          esc(f.Source_unit || f['Source unit']),
+          `<strong>${esc(f.Factor || f['Factor (mg IV morphine per source unit)'])}</strong>`,
+          `<span class="tag">${esc(f.Role || 'Standard')}</span> ${esc(f.Certainty || '')}`,
+          `<small>${esc(f.Source || '')} (${esc(f.Context || '')})</small>`
+        ])
+      )}
+
+      <h3>Prohibited Conversions (Additional file 6)</h3>
+      ${table(
+        ['Conversion Not Made', 'Methodological Reason'],
+        d.conversions.prohibited.map(p => [
+          `<strong>${esc(p.Conversion_not_made || p['Conversion not made'])}</strong>`,
+          esc(p.Reason)
+        ])
+      )}
+
+      <h3>Within-Report Contradictions &amp; Sensitivity Dispositions (Additional file 4)</h3>
+      ${table(
+        ['Report', 'Contradiction or Source Limitation', 'Disposition in Meta-Analyses'],
+        d.contradictions.source_contradictions.map(c => [
+          `<strong>${esc(c.Report)}</strong>`,
+          `<small>${esc(c['Contradiction or source problem'] || c.Contradiction)}</small>`,
+          `<small>${esc(c['Disposition and effect on the analyses'] || c.Disposition)}</small>`
+        ])
+      )}
+
+      <h3>Database Search Strategies (Additional file 2)</h3>
+      <div class="note">
+        Searches conducted across PubMed, CENTRAL, Embase, and CINAHL on 21–23 July 2026 without date, language, or outcome restrictions.
+      </div>
+      <div class="details-box">
+        <summary>View Full Search Query Strategies and Text</summary>
+        ${d.search_strategies.text.map(p => `<p><small>${esc(p)}</small></p>`).join('')}
+      </div>
+
+      <h3>PRISMA 2020 Checklist (Additional file 1)</h3>
+      <div class="details-box">
+        <summary>View PRISMA 2020 Item Locations in Manuscript</summary>
+        ${d.prisma_checklist.text.map(p => `<p><small>${esc(p)}</small></p>`).join('')}
+      </div>
+    `;
+  }
+
+  // View: Figures Gallery
+  function figures() {
+    return `
+      <h2>Publication Figures Gallery</h2>
+      <p class="lede">High-resolution figures from the review manuscript and additional files. Click any figure to open the interactive lightbox.</p>
+
+      <div class="fig-cards">
+        ${d.figures.map(fig => `
+          <div class="fig-card">
+            <button type="button" class="fig-thumb" onclick="window.openFigure('${esc(fig.id)}')">
+              <img src="figures_png/${esc(fig.file)}" alt="${esc(fig.title)}" loading="lazy">
+            </button>
+            <figcaption>
+              <strong>${esc(fig.title)}</strong>
+              <span>${esc(fig.legend)}</span>
+              <small><a href="figures_png/${esc(fig.file)}" download="${esc(fig.file)}">Download High-Res PNG</a></small>
+            </figcaption>
+          </div>
+        `).join('')}
+      </div>
+    `;
+  }
+
+  // View: Manuscript
+  function manuscript() {
+    const txt = d.manuscript_text;
+    return `
+      <h2>Manuscript Reading Copy</h2>
+      <p class="lede">Full text from <code>TEAS_EA_review_READING_COPY_with_figures.docx</code> prepared for supervisor review.</p>
+
+      <div class="note" style="margin-bottom:24px">
+        <strong>Document Status:</strong> Reading copy with figures placed in text. Submission targets BMC Anesthesiology (second choice: BMC Complementary Medicine and Therapies).
+      </div>
+
+      <div class="manuscript-section">
+        <h3>Abstract</h3>
+        ${(txt.Abstract || []).map(p => `<p>${esc(p)}</p>`).join('')}
+
+        <h3>Background</h3>
+        ${(txt.Background || []).map(p => `<p>${esc(p)}</p>`).join('')}
+
+        <h3>Methods</h3>
+        ${(txt.Methods || []).map(p => `<p>${esc(p)}</p>`).join('')}
+
+        <h3>Results</h3>
+        ${(txt.Results || []).map(p => `<p>${esc(p)}</p>`).join('')}
+
+        <h3>Discussion</h3>
+        ${(txt.Discussion || []).map(p => `<p>${esc(p)}</p>`).join('')}
+
+        <h3>Conclusions</h3>
+        ${(txt.Conclusions || []).map(p => `<p>${esc(p)}</p>`).join('')}
+
+        <h3>Declarations</h3>
+        ${(txt.Declarations || []).map(p => `<p>${esc(p)}</p>`).join('')}
+      </div>
+    `;
+  }
+
+  // View: Downloads
+  function downloads() {
+    return `
+      <h2>Download Center</h2>
+      <p class="lede">Download all 11 Additional files, 5 high-resolution figures, and the Reading Copy manuscript docx.</p>
+
+      <div class="filter-bar">
+        <input type="search" id="dl-search" placeholder="Filter download files..." oninput="window.filterDownloads()">
+        <div class="filter-group">
+          <label for="dl-cat"><strong>Category:</strong></label>
+          <select id="dl-cat" onchange="window.filterDownloads()">
+            <option value="all">All Files (${d.downloads.length})</option>
+            <option value="Additional Files">Additional Files (11)</option>
+            <option value="Figures (High-res PNG)">Figures (5)</option>
+            <option value="Manuscript">Manuscript DOCX (1)</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="dl-cards-container" class="fig-cards">
+        <!-- Rendered by window.filterDownloads() -->
+      </div>
+    `;
+  }
+
+  window.filterDownloads = function () {
+    const q = ($('dl-search')?.value || '').toLowerCase();
+    const cat = $('dl-cat')?.value || 'all';
+    const container = $('dl-cards-container');
+    if (!container) return;
+
+    const filtered = d.downloads.filter(item => {
+      if (cat !== 'all' && item.category !== cat) return false;
+      if (q) {
+        const str = `${item.name} ${item.label} ${item.category}`.toLowerCase();
+        if (!str.includes(q)) return false;
+      }
+      return true;
+    });
+
+    container.innerHTML = filtered.map(item => `
+      <div class="fig-card">
+        <div style="font-size:24px; color:var(--accent); margin-bottom:4px;">
+          ${item.name.endsWith('.xlsx') ? '📊' : (item.name.endsWith('.docx') ? '📄' : (item.name.endsWith('.zip') ? '📦' : '🖼️'))}
+        </div>
+        <figcaption>
+          <strong>${esc(item.label)}</strong>
+          <span>Category: ${esc(item.category)}</span>
+          <small>Size: ${(item.size / 1024).toFixed(1)} KB · SHA-256: <code>${esc(item.sha256.slice(0, 12))}...</code></small>
+          <div style="margin-top:8px">
+            <a href="${esc(item.relative_path)}" download="${esc(item.name)}" class="text-button" style="text-decoration:none; font-weight:600;">Download ${esc(item.name)}</a>
+          </div>
+        </figcaption>
+      </div>
+    `).join('');
+  };
+
+  // Router & Navigation
+  const views = {
+    overview,
+    results,
+    e1e2,
+    qor,
+    studies,
+    coverage,
+    risk,
+    evidence,
+    prisma,
+    methods,
+    figures,
+    manuscript,
+    downloads
+  };
+
+  function renderView(id) {
+    if (!views[id]) id = 'overview';
+    const content = $('content');
+    if (content) {
+      content.innerHTML = views[id]();
+    }
+
+    // Update active nav links
+    document.querySelectorAll('.nav a[data-view]').forEach(a => {
+      const active = a.dataset.view === id;
+      a.classList.toggle('active', active);
+      if (active) a.setAttribute('aria-current', 'page');
+      else a.removeAttribute('aria-current');
+    });
+
+    // Run view-specific post-render initializers
+    if (id === 'results') window.filterResultsTable();
+    if (id === 'studies') window.filterStudiesTable();
+    if (id === 'risk') { window.filterRobTable(); window.filterSigTable(); }
+    if (id === 'prisma') window.filterPrismaTable();
+    if (id === 'downloads') window.filterDownloads();
+
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  }
+
+  function handleHash() {
+    const raw = location.hash.replace(/^#/, '');
+    const [view] = raw.split('?');
+    renderView(view || 'overview');
+  }
+
+  window.addEventListener('hashchange', handleHash);
+
+  // Setup Figure Dialog close handler
+  document.addEventListener('DOMContentLoaded', () => {
+    const dialog = $('figure-dialog');
+    const closeBtn = $('close-figure');
+    if (dialog && closeBtn) {
+      closeBtn.addEventListener('click', () => dialog.close());
+      dialog.addEventListener('click', e => {
+        if (e.target === dialog) dialog.close();
+      });
+    }
+
+    const studyDialog = $('study-dialog');
+    if (studyDialog) {
+      studyDialog.addEventListener('click', e => {
+        if (e.target === studyDialog) studyDialog.close();
+      });
+    }
+
+    handleHash();
+  });
+
+  if (document.readyState === 'complete' || document.readyState === 'interactive') {
+    handleHash();
+  }
+
 })();

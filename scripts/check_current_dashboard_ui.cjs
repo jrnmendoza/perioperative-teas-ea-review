@@ -17,6 +17,152 @@ let BASE=(process.env.DASHBOARD_URL||'').replace(/\/$/,''),server=null;
 const EXPECTED_ASSETS=['theme.js','current_review.css','evidence_graph.js','current_review.js','article_figures.js','search_strategies.js','interactive_explorer.js','current_review_ui.js'];
 let passed=0;const ok=(name)=>{passed++;console.log('PASS '+name);};
 
+async function runBmcRevisionSuite({page, browser, BASE, server, errors, newPage, requested, go}) {
+  let passed = 0;
+  const ok = (name) => { passed++; console.log('PASS ' + name); };
+
+  const navigate = async (p, r) => {
+    const view = r.replace(/^#/, '').split('?')[0];
+    await p.goto(BASE + '/index.html#' + view, { waitUntil: 'domcontentloaded' });
+    await p.waitForFunction((v) => document.querySelector(`.nav a[data-view="${v}"][aria-current="page"]`), view);
+  };
+
+  // 1. Assets check
+  const assets = [...new Set(requested.filter(n => /\.(js|css)$/.test(n)))].sort();
+  const EXPECTED_BMC_ASSETS = ['current_review.css', 'current_review.js', 'current_review_ui.js', 'theme.js'].sort();
+  assert.deepEqual(assets, EXPECTED_BMC_ASSETS, 'Loaded assets must match BMC Revision assets');
+  assert.ok(!requested.includes('app.js') && !requested.includes('v34_data.js'), 'Legacy bundles must not load');
+  ok('only BMC Revision JS/CSS assets load (no app.js)');
+
+  // 2. Build metadata and provenance line
+  const meta = await page.evaluate(() => JSON.parse(document.getElementById('build-meta').textContent));
+  assert.equal(meta.master_version, 'BMC_Revision_44_reports');
+  assert.equal(meta.canonical_studies, 43);
+  assert.equal(meta.canonical_reports, 44);
+  assert.equal(meta.fresh_rob_assessments, 180);
+  ok('build-meta has BMC Revision metadata with 44 reports / 43 trials');
+
+  const prov = await page.locator('#provenance-line').textContent();
+  assert.ok(prov.includes('BMC Revision (44 Reports)') && prov.includes('CRD420261452908'), 'Provenance line matches');
+  ok('provenance line shows BMC Revision');
+
+  // 3. Navigation across all 13 routes
+  const routes = ['overview', 'results', 'e1e2', 'qor', 'studies', 'coverage', 'risk', 'evidence', 'prisma', 'methods', 'figures', 'manuscript', 'downloads'];
+  for (const r of routes) {
+    await navigate(page, '#' + r);
+    const active = await page.evaluate((view) => document.querySelector(`.nav a[data-view="${view}"]`)?.getAttribute('aria-current'), r);
+    assert.equal(active, 'page', `Route ${r} must be active in nav`);
+    const h2 = await page.locator('#content h2').first().textContent();
+    assert.ok(h2.length > 0, `H2 heading present for route ${r}`);
+  }
+  ok(`all ${routes.length} navigation routes render with aria-current="page" and h2 headings`);
+
+  // 4. Overview KPIs and primary outcome limitations
+  await navigate(page, '#overview');
+  const overviewText = await page.locator('#content').innerText();
+  assert.ok(overviewText.includes('44') && /included reports/i.test(overviewText), 'KPI includes 44 Included Reports');
+  assert.ok(overviewText.includes('43') && /trial families/i.test(overviewText), 'KPI includes 43 trial families');
+  assert.ok((overviewText.includes('7,703') || overviewText.includes('7703')) && /participants/i.test(overviewText), 'KPI includes 7,703 Participants');
+  assert.ok(overviewText.includes('180') && overviewText.includes('29%'), 'KPI includes 180 RoB 2 Assessments & 29% High Risk');
+  assert.ok(overviewText.includes('Szmit 2021'), 'Overview highlights primary trial Szmit 2021');
+  assert.ok(overviewText.includes('Szmit 2021 did not report a 24-hour pain result') || overviewText.includes('could not be evaluated'), 'Joint clinical importance criterion limitation explained');
+  ok('Overview displays verified KPIs and clinical importance limitations');
+
+  // 5. Studies explorer & Study Profile Dialog
+  await navigate(page, '#studies');
+  const countText = await page.locator('.source').first().textContent();
+  assert.ok(countText.includes('44 of 44 reports'), 'Showing 44 of 44 reports initially');
+  
+  // Filter search
+  await page.fill('#study-search', 'Szmit');
+  await page.waitForFunction(() => document.querySelector('.source')?.textContent.includes('1 of 44 reports'));
+  ok('Study search filters to 1 report for Szmit');
+
+  // Open profile
+  await page.locator('button.text-button', { hasText: 'View Profile' }).first().click();
+  await page.waitForSelector('#study-dialog[open]');
+  const dialogText = await page.locator('#study-dialog').innerText();
+  assert.ok(/Szmit 2021/i.test(dialogText), 'Dialog contains Szmit 2021');
+  assert.ok(/Poland/i.test(dialogText), 'Dialog contains Poland');
+  assert.ok(/TEAS/i.test(dialogText), 'Dialog contains TEAS');
+  assert.ok(/Sham/i.test(dialogText), 'Dialog contains Sham');
+  assert.ok(/Risk of Bias \(RoB 2\) Assessments/i.test(dialogText), 'Dialog contains RoB 2 assessments for this study');
+  
+  // Close dialog
+  await page.locator('#study-dialog .btn-close').click();
+  await page.waitForFunction(() => !document.getElementById('study-dialog').hasAttribute('open'));
+  ok('Study Profile dialog opens with complete metadata & RoB 2 assessments, and closes properly');
+
+  // Clear search
+  await page.fill('#study-search', '');
+  await page.waitForFunction(() => document.querySelector('.source')?.textContent.includes('44 of 44 reports'));
+
+  // 6. Risk of Bias Matrix & Filter
+  await navigate(page, '#risk');
+  const robRows = await page.locator('.table-scroll tbody tr').count();
+  assert.ok(robRows >= 50, 'RoB matrix table displays result assessments');
+  await page.fill('#rob-search', 'Szmit');
+  await page.waitForFunction(() => document.querySelectorAll('#rob-table-container tbody tr').length === 6);
+  assert.equal(await page.locator('#rob-table-container tbody tr').count(), 6, 'Szmit has 6 result-specific RoB assessments');
+  await page.fill('#rob-search', '');
+  await page.waitForFunction(() => document.querySelectorAll('#rob-table-container tbody tr').length === 180);
+  ok('Risk of bias matrix displays domain judgements and filters by study');
+
+  // 7. Figures View & Lightbox
+  await navigate(page, '#figures');
+  const figCount = await page.locator('.fig-card').count();
+  assert.equal(figCount, 5, 'Figures view renders 5 figures (Fig 1 - Fig 5)');
+  await page.locator('.fig-thumb').first().click();
+  await page.waitForSelector('#figure-dialog[open]');
+  assert.ok(await page.locator('#figure-image').getAttribute('src'), 'Figure lightbox has image src');
+  await page.locator('#close-figure').click();
+  await page.waitForFunction(() => !document.getElementById('figure-dialog').hasAttribute('open'));
+  ok('Figures view displays 5 figures and lightbox opens/closes');
+
+  // 8. Manuscript View
+  await navigate(page, '#manuscript');
+  const msText = await page.locator('#content').innerText();
+  assert.ok(msText.includes('Perioperative electrical acupoint stimulation') || msText.includes('Abstract') || msText.includes('Background'), 'Manuscript text rendered');
+  ok('Manuscript view renders full text from reading copy docx');
+
+  // 9. Downloads Manifest (17 assets: 11 AFs, 5 Figs, 1 DOCX)
+  await navigate(page, '#downloads');
+  const dlLinks = await page.evaluate(() => [...document.querySelectorAll('#dl-cards-container a[download]')].map(a => a.getAttribute('href')));
+  assert.equal(dlLinks.length, 17, 'Downloads page lists all 17 assets');
+  for (const link of dlLinks) {
+    const resp = await page.request.get(new URL(link, BASE + '/').href);
+    assert.equal(resp.status(), 200, `Download asset ${link} must resolve with 200 OK`);
+  }
+  ok('all 17 download assets exist and resolve with HTTP 200');
+
+  // 10. Theme toggle
+  await navigate(page, '#overview');
+  await page.locator('#theme-toggle').click();
+  const themeVal = await page.evaluate(() => document.documentElement.dataset.theme);
+  assert.ok(themeVal === 'light' || themeVal === 'dark');
+  await page.locator('#theme-toggle').click();
+  ok('theme toggle works and updates dataset theme');
+
+  // 11. Responsive layout (no horizontal scroll)
+  for (const width of [1440, 1024, 768, 390]) {
+    const p = await newPage({ viewport: { width, height: 900 }, isMobile: width < 700 });
+    for (const route of ['#overview', '#results', '#studies', '#risk', '#evidence', '#downloads']) {
+      await p.goto(BASE + '/index.html' + route, { waitUntil: 'load' });
+      const o = await p.evaluate(() => ({ sw: document.documentElement.scrollWidth, w: innerWidth }));
+      assert.ok(o.sw <= o.w + 1, `${width}px ${route}: whole page horizontal overflow (${o.sw} > ${o.w})`);
+    }
+    await p.context().close();
+  }
+  ok('responsive layout tested at 1440, 1024, 768, 390 px without sideways scroll');
+
+  assert.deepEqual(errors, [], 'Page errors: ' + errors.join(' | '));
+  ok('no console or page errors during BMC Revision test execution');
+
+  await browser.close();
+  if (server) server.close();
+  console.log(`PASS BMC Revision dashboard UI: ${passed} checks passed at ${BASE}`);
+}
+
 (async()=>{
   if(!BASE){assert.ok(fs.existsSync(path.join(SITE,'index.html')),`No built site at ${SITE}: run scripts/build_site.py first`);server=await serve();BASE=`http://127.0.0.1:${server.address().port}`;}
   const browser=await chromium.launch({headless:true,channel:process.env.BROWSER_CHANNEL||'chrome'});
@@ -34,6 +180,13 @@ let passed=0;const ok=(name)=>{passed++;console.log('PASS '+name);};
   let page=await newPage({colorScheme:'dark'});
   const requested=[];page.on('request',r=>requested.push(new URL(r.url()).pathname.split('/').pop()));
   await go(page,'#overview');
+
+  const revVersion = await page.evaluate(() => window.CURRENT_REVIEW?.version);
+  if (revVersion && revVersion.startsWith('BMC Revision')) {
+    await runBmcRevisionSuite({page, browser, BASE, server, errors, newPage, requested, go});
+    return;
+  }
+
   const assets=requested.filter(n=>/\.(js|css)$/.test(n));
   assert.deepEqual([...new Set(assets)].sort(),[...EXPECTED_ASSETS].sort(),'Loaded JS/CSS must be exactly the v38 assets');
   assert.ok(!requested.includes('app.js')&&!requested.includes('v34_data.js'),'Legacy bundles must not load');

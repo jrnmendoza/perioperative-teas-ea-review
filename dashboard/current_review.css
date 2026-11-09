@@ -74,3 +74,41 @@ button.matrix-cell::after{content:"";position:absolute;inset:-6px}
 .chk{min-height:32px}
 .chk input{width:18px;height:18px;flex:none;margin:0}
 @media(max-width:1100px){.header-tools{position:static;margin:0 0 14px}}
+
+/* Additional styles for BMC Anesthesiology Revision Dashboard */
+.filter-bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:18px 0;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 18px}
+.filter-bar input[type="search"],.filter-bar select{background:var(--input-bg);color:var(--ink);border:1px solid var(--input-border);border-radius:6px;padding:8px 12px;font-size:14px}
+.filter-bar input[type="search"]{flex:1;min-width:200px}
+.filter-group{display:flex;gap:6px;align-items:center}
+.btn-group{display:inline-flex;flex-wrap:wrap;gap:4px}
+.filter-btn{background:var(--card);border:1px solid var(--line);color:var(--ink);border-radius:6px;padding:6px 12px;font-size:13px;cursor:pointer}
+.filter-btn:hover{background:var(--nav-active-bg);border-color:var(--nav-active-border)}
+.filter-btn.active{background:var(--nav-active-bg);color:var(--nav-active-text);border-color:var(--nav-active-border);font-weight:600}
+.kpi-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin:22px 0}
+.kpi-card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px;text-align:center}
+.kpi-card .kpi-val{font-size:32px;font-weight:700;color:var(--accent);line-height:1.2;margin:4px 0}
+.kpi-card .kpi-lbl{font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.grade-badge{display:inline-block;padding:2px 8px;border-radius:6px;font-size:12px;font-weight:600}
+.grade-high{background:var(--risk-low-bg);color:var(--risk-low-text);border:1px solid var(--risk-low-border,transparent)}
+.grade-moderate{background:var(--nav-active-bg);color:var(--nav-active-text);border:1px solid var(--nav-active-border)}
+.grade-low{background:var(--risk-sc-bg);color:var(--risk-sc-text);border:1px solid var(--risk-sc-border,transparent)}
+.grade-very-low{background:var(--risk-high-bg);color:var(--risk-high-text);border:1px solid var(--risk-high-border,transparent)}
+.downgrades{display:flex;flex-wrap:wrap;gap:4px;margin-top:4px}
+.downgrade-pill{font-size:11px;padding:1px 6px;border-radius:4px;background:var(--tag-bg);color:var(--tag-text)}
+.downgrade-pill.penalized{background:var(--risk-high-bg);color:var(--risk-high-text)}
+.details-box{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px;margin:12px 0}
+.details-box summary{cursor:pointer;font-weight:600;color:var(--ink)}
+.details-box[open] summary{margin-bottom:12px}
+.grid-2col{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media(max-width:850px){.grid-2col{grid-template-columns:1fr}}
+.study-drawer{max-width:900px;width:90%;max-height:85vh;overflow-y:auto;background:var(--bg);color:var(--ink);border:1px solid var(--dialog-border);border-radius:14px;padding:28px;box-shadow:0 20px 50px rgba(0,0,0,.5)}
+.study-drawer::backdrop{background:var(--dialog-backdrop)}
+.drawer-header{display:flex;justify-content:space-between;align-items:flex-start;border-bottom:1px solid var(--line);padding-bottom:16px;margin-bottom:20px}
+.drawer-header h3{margin:0;font-size:22px}
+.btn-close{background:var(--card);border:1px solid var(--line);color:var(--ink);border-radius:8px;padding:6px 14px;cursor:pointer;font-weight:600}
+.study-meta-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-bottom:20px}
+.meta-item strong{display:block;font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+.meta-item span{font-size:14px;color:var(--ink)}
+.manuscript-section{margin:32px 0;line-height:1.7}
+.manuscript-section h3{border-bottom:1px solid var(--line);padding-bottom:8px;margin-top:32px}
+.manuscript-section p{margin:14px 0}

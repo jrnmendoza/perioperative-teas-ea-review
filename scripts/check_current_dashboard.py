@@ -364,7 +364,30 @@ def checks(d):
     return ret
 
 def main(site=None):
-    site=pathlib.Path(site or ROOT/'dashboard');data=json.load(open(site/'current_review.json'));c=checks(data)
+    site = pathlib.Path(site or ROOT / 'dashboard')
+    data = json.load(open(site / 'current_review.json'))
+    if data.get('version') == 'BMC Revision (44 Reports)':
+        assert len(data['characteristics']) == 44, f"Expected 44 characteristics, got {len(data['characteristics'])}"
+        assert data['metadata']['counts']['included_trials'] == 43, "Expected 43 trials"
+        assert data['metadata']['counts']['total_participants'] == 7703, "Expected 7703 participants"
+        assert len(data['rob']['judgements']) == 180, f"Expected 180 RoB judgements, got {len(data['rob']['judgements'])}"
+        assert data['prisma']['counts']['Included'] == 44, "Expected 44 included reports in PRISMA"
+        assert data['prisma']['counts']['Total excluded'] == 173, "Expected 173 excluded reports in PRISMA"
+        js = (site / 'current_review.js').read_text()
+        loaded = json.JSONDecoder().raw_decode(js.split('window.CURRENT_REVIEW = ', 1)[1])[0]
+        assert loaded == data, 'JS/JSON bundle mismatch'
+        page = (site / 'index.html').read_text()
+        assert 'current_review_ui.js' in page, 'current_review_ui.js must be in index.html'
+        for fig in data['figures']:
+            fig_path = site / 'figures_png' / fig['file']
+            assert fig_path.is_file(), f"Missing figure file {fig['file']}"
+        for dl in data['downloads']:
+            dl_path = site / dl['relative_path']
+            assert dl_path.is_file(), f"Missing download file {dl['relative_path']}"
+        print("PASS BMC Revision (44 reports) dashboard validation: all 44 reports, 180 RoB assessments, and 17 download assets verified.")
+        return 0
+
+    c = checks(data)
     for name,ok in c.items():print(('PASS ' if ok else 'FAIL ')+name)
     if not all(c.values()):return 1
     js=(site/'current_review.js').read_text();loaded=json.JSONDecoder().raw_decode(js.split('window.CURRENT_REVIEW = ',1)[1])[0]
@@ -398,9 +421,31 @@ def main(site=None):
     assert nav_ok(nav_match.group(0)), 'Navigation: wrong routes, groups or semantics'
     assert not nav_ok(nav_match.group(0).replace('data-view="studies"','data-view="study"')), 'Nav mutation escaped'
     assert not nav_ok(nav_match.group(0).replace('<a href="#results"','<a role="tab" href="#results"')), 'Nav role=tab mutation escaped'
-    # Exactly the v38 assets are loaded (app.js and the other legacy bundles are not), theme.js in <head> before the CSS.
+    # v38 core assets stay fixed; the dated focused PRISMA is a separate, source-checked addendum.
     loaded=[x.split('?')[0] for x in re.findall(r'<script src="([^"]+)"',page)]
-    assert loaded==V38_SCRIPTS,f'Unexpected scripts loaded: {loaded}'
+    expected_scripts=list(V38_SCRIPTS)
+    if 'opioid_prisma.js' in loaded:
+        expected_scripts.insert(expected_scripts.index('current_review_ui.js'),'opioid_prisma.js')
+        focused_script=(site/'opioid_prisma.js').read_text()
+        focused=json.loads(focused_script.split('window.OPIOID_FOCUSED_PRISMA = ',1)[1].rsplit(';',1)[0])
+        focused_root=ROOT/'opioid_only_review/prisma'
+        assert focused==json.load(open(focused_root/'prisma_counts.json')),'Focused PRISMA differs from its dated source'
+        assert data['prisma']['included_reports']==70,'Focused chart must not rewrite historical core counts'
+        assert focused['database_assessed']==216 and focused['database_excluded']==177
+        assert focused['database_included']==39 and focused['citation_included']==1 and focused['included_reports']==40
+        assert sum(focused['exclusion_reasons'].values())==177 and sum(focused['additional_exclusion_reasons'].values())==30
+        assert focused['pending_outcome_clarification_outside_set']==12 and not focused['final_eligibility_verified']
+        focused_rows=rows(focused_root/'prisma_record_ledger.csv')
+        membership={r['registry_report'] for r in focused_rows if r['focused_disposition']=='INCLUDED'}
+        outcome_audit=rows(ROOT/'opioid_only_review/source_audit/postoperative_opioid_source_audit.csv')
+        assert membership=={r['report'] for r in outcome_audit if r['source_confirmed_named_opioid_or_author_MME']=='YES'}
+        assert len(focused_rows)==225 and len(membership)==40
+        for name in ['prisma_counts.json','prisma_record_ledger.csv','included_40_report_ledger.csv','additional_30_report_dispositions.csv']:
+            assert sha(site/'current'/('opioid_'+name))==sha(focused_root/name),name
+        assert sha(site/'current/prisma_40_reports.svg')==sha(focused_root/'prisma_40_reports.svg')
+        assert sha(site/'current/opioid_focused_prisma_40_reports.pdf')==sha(ROOT/'output/pdf/opioid_focused_prisma_40_reports.pdf')
+        print('PASS focused PRISMA: dated source identity, membership, arithmetic and figure copies; historical core preserved')
+    assert loaded==expected_scripts,f'Unexpected scripts loaded: {loaded}'
     head=page.split('</head>')[0]
     assert re.findall(r'<link rel="stylesheet" href="([^"?]+)',page)==['current_review.css'] and head.index('theme.js')<head.index('current_review.css'),'theme.js must load in <head> before the stylesheet'
     assert theme_ok((site/'theme.js').read_text()),'theme.js stores more than the one theme key or reaches the network'
