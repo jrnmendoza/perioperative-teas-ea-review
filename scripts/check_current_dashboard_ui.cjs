@@ -108,6 +108,32 @@ async function runBmcRevisionSuite({page, browser, BASE, server, errors, newPage
   await page.waitForFunction(() => document.querySelectorAll('#rob-table-container tbody tr').length === 180);
   ok('Risk of bias matrix displays domain judgements and filters by study');
 
+  // 6b. RoB 2 & GRADE Assessment Hover Tooltips
+  const robTag = page.locator('#rob-table-container .tag[data-tooltip]').first();
+  await robTag.hover();
+  await page.waitForSelector('#assessment-tooltip.visible');
+  const robTipText = await page.locator('#assessment-tooltip .tip-body').innerText();
+  assert.ok(robTipText.length > 10, 'RoB assessment tooltip displays informative rationale text');
+  await page.keyboard.press('Escape');
+  await page.waitForFunction(() => !document.getElementById('assessment-tooltip')?.classList.contains('visible'));
+
+  // GRADE view hover tooltips
+  await navigate(page, '#evidence');
+  const gradeBadge = page.locator('.grade-badge[data-tooltip]').first();
+  await gradeBadge.hover();
+  await page.waitForSelector('#assessment-tooltip.visible');
+  const gradeTipText = await page.locator('#assessment-tooltip').innerText();
+  assert.ok(gradeTipText.includes('Certainty') || gradeTipText.includes('GRADE'), 'GRADE Certainty tooltip header displayed');
+  
+  const downPill = page.locator('.downgrade-pill[data-tooltip]').first();
+  await downPill.hover();
+  await page.waitForSelector('#assessment-tooltip.visible');
+  const pillTipText = await page.locator('#assessment-tooltip').innerText();
+  assert.ok(pillTipText.length > 5, 'GRADE downgrade pill tooltip displays domain reason');
+  await page.keyboard.press('Escape');
+  await page.waitForFunction(() => !document.getElementById('assessment-tooltip')?.classList.contains('visible'));
+  ok('Risk of bias and GRADE assessment result hover tooltips display informative snippets');
+
   // 7. Figures View & Lightbox
   await navigate(page, '#figures');
   const figCount = await page.locator('.fig-card').count();

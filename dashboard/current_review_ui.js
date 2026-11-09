@@ -46,19 +46,74 @@
   };
   window.reviewTerm = term;
 
-  function tag(x) {
-    const val = String(x || '').trim();
-    const cls = val === 'High' ? 'risk-high' : (val === 'Low' ? 'risk-low' : (val === 'Some concerns' ? 'risk-sc' : ''));
-    return `<span class="tag ${cls}">${esc(val || '—')}</span>`;
+  function getDefaultRobExplanation(domain, rating) {
+    const dStr = String(domain || '').toUpperCase();
+    const rStr = String(rating || '').toLowerCase();
+    
+    if (dStr.includes('D1') || dStr.includes('RANDOM')) {
+      if (rStr.includes('low')) return 'Low risk: Random sequence generation and allocation concealment judged robust with low potential for bias.';
+      if (rStr.includes('high')) return 'High risk: Inadequate concealment or baseline imbalances indicating compromised randomisation.';
+      return 'Some concerns: Method of sequence generation or concealment not fully detailed in the publication.';
+    }
+    if (dStr.includes('D2') || dStr.includes('DEVIAT')) {
+      if (rStr.includes('low')) return 'Low risk: Blinding of participants and personnel adequate, or deviations balanced with no differential care.';
+      if (rStr.includes('high')) return 'High risk: Lack of blinding or substantial protocol deviations likely to affect outcomes.';
+      return 'Some concerns: Active stimulation perceptible compared with sham; minor deviations cannot be ruled out.';
+    }
+    if (dStr.includes('D3') || dStr.includes('MISS')) {
+      if (rStr.includes('low')) return 'Low risk: Outcome data complete, or missingness balanced across arms with minimal attrition.';
+      if (rStr.includes('high')) return 'High risk: Substantial or differential missing outcome data likely related to true effect.';
+      return 'Some concerns: Exclusions or lost to follow-up without complete intention-to-treat accounting.';
+    }
+    if (dStr.includes('D4') || dStr.includes('MEASUR')) {
+      if (rStr.includes('low')) return 'Low risk: Objective measurement method (e.g. automated pump electronic recording) or masked outcome assessment.';
+      if (rStr.includes('high')) return 'High risk: Unblinded assessment of subjective outcome or unequal measurement methods.';
+      return 'Some concerns: Subjective patient-reported outcome without fully verified assessor masking.';
+    }
+    if (dStr.includes('D5') || dStr.includes('SELECT')) {
+      if (rStr.includes('low')) return 'Low risk: Pre-specified analysis plan or registry protocol matched reported results.';
+      if (rStr.includes('high')) return 'High risk: Selective choice of outcome measurement or analysis from multiple options.';
+      return 'Some concerns: Registry protocol not independently verified for this exact endpoint, though outcome reported as planned.';
+    }
+    if (rStr.includes('low')) return 'Low risk of bias across all assessed domains.';
+    if (rStr.includes('high')) return 'High risk of bias in at least one domain, or multiple substantial concerns.';
+    return 'Some concerns in one or more domains, but no domain at high risk of bias.';
   }
 
-  function certaintyBadge(c) {
+  function getDefaultGradeExplanation(certainty) {
+    const cStr = String(certainty || '').toLowerCase();
+    if (cStr.includes('high')) return 'High certainty: Very confident that the true effect lies close to that of the estimate of the effect.';
+    if (cStr.includes('moderate')) return 'Moderate certainty: Moderately confident in the effect estimate; the true effect is likely to be close, but may differ.';
+    if (cStr.includes('very low') || cStr.includes('very-low')) return 'Very low certainty: Very little confidence in the effect estimate; the true effect is likely to be substantially different.';
+    if (cStr.includes('low')) return 'Low certainty: Limited confidence in the effect estimate; the true effect may be substantially different.';
+    return 'Certainty not formalised or insufficient quantitative evidence.';
+  }
+
+  function tag(x, rationale, title) {
+    const val = String(x || '').trim();
+    const cls = val === 'High' ? 'risk-high' : (val === 'Low' ? 'risk-low' : (val === 'Some concerns' ? 'risk-sc' : ''));
+    if (!val || val === '—') return `<span class="tag ${cls}">—</span>`;
+    
+    if (rationale || title) {
+      const tipText = rationale || getDefaultRobExplanation(title, val);
+      return `<span class="tag ${cls} has-tooltip" tabindex="0" data-tooltip="${esc(tipText)}" data-tooltip-title="${esc(title || 'Risk of bias')}" data-tooltip-badge="${esc(val)}" role="img" aria-label="${esc(title || 'Rating')}: ${esc(val)}. ${esc(tipText)}">${esc(val)}</span>`;
+    }
+    return `<span class="tag ${cls}">${esc(val)}</span>`;
+  }
+
+  function certaintyBadge(c, rationale, title) {
     const val = String(c || '').trim();
     let cls = 'grade-very-low';
     if (val.toLowerCase().includes('high')) cls = 'grade-high';
     else if (val.toLowerCase().includes('moderate')) cls = 'grade-moderate';
     else if (val.toLowerCase().includes('low') && !val.toLowerCase().includes('very')) cls = 'grade-low';
-    return `<span class="grade-badge ${cls}">${esc(val || 'Unrated')}</span>`;
+    if (!val) return `<span class="grade-badge ${cls}">Unrated</span>`;
+    
+    if (rationale || title) {
+      const tipText = rationale || getDefaultGradeExplanation(val);
+      return `<span class="grade-badge ${cls} has-tooltip" tabindex="0" data-tooltip="${esc(tipText)}" data-tooltip-title="${esc(title || 'GRADE Certainty')}" data-tooltip-badge="${esc(val)}" role="img" aria-label="${esc(title || 'Certainty')}: ${esc(val)}. ${esc(tipText)}">${esc(val)}</span>`;
+    }
+    return `<span class="grade-badge ${cls}">${esc(val)}</span>`;
   }
 
   const table = (heads, rows) => `<div class="table-scroll"><table><thead><tr>${heads.map(h => `<th scope="col">${h}</th>`).join('')}</tr></thead><tbody>${rows.map(row => `<tr>${row.map(v => `<td>${v}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
@@ -130,9 +185,13 @@
           `<code>${esc(r['Result ID'])}</code>`,
           esc(r.Outcome),
           esc(r.Window),
-          tag(r.D1), tag(r.D2), tag(r.D3), tag(r.D4), tag(r.D5),
-          tag(r.Overall),
-          `<small>${esc(r['Overall rationale'] || '')}</small>`
+          tag(r.D1, r['D1 rationale'] || (r['Overall rationale'] ? `D1: ${getDefaultRobExplanation('D1', r.D1)} Note: ${r['Overall rationale']}` : ''), 'Domain 1: Randomisation Process'),
+          tag(r.D2, r['D2 rationale'] || (r['Overall rationale'] ? `D2: ${getDefaultRobExplanation('D2', r.D2)} Note: ${r['Overall rationale']}` : ''), 'Domain 2: Deviations from Intervention'),
+          tag(r.D3, r['D3 rationale'] || (r['Overall rationale'] ? `D3: ${getDefaultRobExplanation('D3', r.D3)} Note: ${r['Overall rationale']}` : ''), 'Domain 3: Missing Outcome Data'),
+          tag(r.D4, r['D4 rationale'] || (r['Overall rationale'] ? `D4: ${getDefaultRobExplanation('D4', r.D4)} Note: ${r['Overall rationale']}` : ''), 'Domain 4: Outcome Measurement'),
+          tag(r.D5, r['D5 rationale'] || (r['Overall rationale'] ? `D5: ${getDefaultRobExplanation('D5', r.D5)} Note: ${r['Overall rationale']}` : ''), 'Domain 5: Selection of Reported Result'),
+          tag(r.Overall, r['Overall rationale'] || `Overall RoB 2 rating: ${r.Overall}`, 'Overall Risk of Bias'),
+          `<small>${esc(r['Overall rationale'] || '—')}</small>`
         ])
       );
     }
@@ -167,14 +226,14 @@
       ${table(
         ['Construct / Comparison', 'Trials (k)', 'Participants (N)', 'Pooled / Single Estimate [95% CI]', 'Certainty (GRADE)'],
         [
-          ['<strong>Primary 24-h systemic opioid:</strong> TEAS vs sham', `${p.opioid_teas_sham.trials}`, `${p.opioid_teas_sham.participants}`, `MD ${num(p.opioid_teas_sham.md)} [${num(p.opioid_teas_sham.ci_low)}, ${num(p.opioid_teas_sham.ci_high)}] mg IV MME`, certaintyBadge(p.opioid_teas_sham.certainty)],
-          ['<strong>Primary 24-h systemic opioid:</strong> EA vs sham', `${p.opioid_ea_sham.trials}`, `${p.opioid_ea_sham.participants}`, `No eligible quantitative data`, certaintyBadge('Unrated')],
-          ['<strong>Supportive:</strong> TEAS vs usual care', `${p.opioid_teas_usual.trials}`, `${p.opioid_teas_usual.participants}`, `MD ${num(p.opioid_teas_usual.md)} [${num(p.opioid_teas_usual.ci_low)}, ${num(p.opioid_teas_usual.ci_high)}] mg IV MME`, certaintyBadge(p.opioid_teas_usual.certainty)],
-          ['<strong>Supportive:</strong> EA vs usual care', `${p.opioid_ea_usual.trials}`, `${p.opioid_ea_usual.participants}`, `MD ${num(p.opioid_ea_usual.md)} [${num(p.opioid_ea_usual.ci_low)}, ${num(p.opioid_ea_usual.ci_high)}] mg IV MME`, certaintyBadge(p.opioid_ea_usual.certainty)],
-          ['<strong>Co-primary pain at ~24 h:</strong> TEAS vs sham (Wang 1997)', `${p.coprimary_rest_pain.trials}`, `${p.coprimary_rest_pain.participants}`, `MD ${num(p.coprimary_rest_pain.md)} [${num(p.coprimary_rest_pain.ci_low)}, ${num(p.coprimary_rest_pain.ci_high)}] points (0-10)`, certaintyBadge(p.coprimary_rest_pain.certainty)],
-          ['<strong>Secondary PONV (0-24 h):</strong> TEAS vs sham', `${p.secondary_ponv.trials}`, `${p.secondary_ponv.participants}`, `RR ${num(p.secondary_ponv.rr)} [${num(p.secondary_ponv.ci_low)}, ${num(p.secondary_ponv.ci_high)}]`, certaintyBadge(p.secondary_ponv.certainty)],
-          ['<strong>Rescue opioid receipt:</strong> TEAS vs sham', `${p.rescue_receipt.trials}`, `${p.rescue_receipt.participants}`, `RR ${num(p.rescue_receipt.rr)} [${num(p.rescue_receipt.ci_low)}, ${num(p.rescue_receipt.ci_high)}]`, certaintyBadge(p.rescue_receipt.certainty)],
-          ['<strong>Broader first-day dose (E2 sensitivity):</strong> TEAS vs sham', `${p.broader_first_day_e2.trials}`, `${p.broader_first_day_e2.participants}`, `MD ${num(p.broader_first_day_e2.md)} [${num(p.broader_first_day_e2.ci_low)}, ${num(p.broader_first_day_e2.ci_high)}] mg IV MME`, certaintyBadge(p.broader_first_day_e2.certainty)]
+          ['<strong>Primary 24-h systemic opioid:</strong> TEAS vs sham', `${p.opioid_teas_sham.trials}`, `${p.opioid_teas_sham.participants}`, `MD ${num(p.opioid_teas_sham.md)} [${num(p.opioid_teas_sham.ci_low)}, ${num(p.opioid_teas_sham.ci_high)}] mg IV MME`, certaintyBadge(p.opioid_teas_sham.certainty, 'Low certainty: Downgraded 1 level for risk of bias (prespecification concerns in Szmit 2021) and 1 level for serious imprecision (single small trial, N=48, crossing registered 10 mg threshold).', 'Primary 24-h Opioid (TEAS vs Sham)')],
+          ['<strong>Primary 24-h systemic opioid:</strong> EA vs sham', `${p.opioid_ea_sham.trials}`, `${p.opioid_ea_sham.participants}`, `No eligible quantitative data`, certaintyBadge('Unrated', 'No eligible quantitative data reported for needle electroacupuncture vs sham.', 'Primary 24-h Opioid (EA vs Sham)')],
+          ['<strong>Supportive:</strong> TEAS vs usual care', `${p.opioid_teas_usual.trials}`, `${p.opioid_teas_usual.participants}`, `MD ${num(p.opioid_teas_usual.md)} [${num(p.opioid_teas_usual.ci_low)}, ${num(p.opioid_teas_usual.ci_high)}] mg IV MME`, certaintyBadge(p.opioid_teas_usual.certainty, 'Low certainty: Downgraded 1 level for risk of bias and 1 level for imprecision (single trial, N=47).', 'TEAS vs Usual Care')],
+          ['<strong>Supportive:</strong> EA vs usual care', `${p.opioid_ea_usual.trials}`, `${p.opioid_ea_usual.participants}`, `MD ${num(p.opioid_ea_usual.md)} [${num(p.opioid_ea_usual.ci_low)}, ${num(p.opioid_ea_usual.ci_high)}] mg IV MME`, certaintyBadge(p.opioid_ea_usual.certainty, 'Very low certainty: Downgraded for serious risk of bias (El-Rakshy high risk) and very wide confidence interval [-76.39, 62.73].', 'EA vs Usual Care')],
+          ['<strong>Co-primary pain at ~24 h:</strong> TEAS vs sham (Wang 1997)', `${p.coprimary_rest_pain.trials}`, `${p.coprimary_rest_pain.participants}`, `MD ${num(p.coprimary_rest_pain.md)} [${num(p.coprimary_rest_pain.ci_low)}, ${num(p.coprimary_rest_pain.ci_high)}] points (0-10)`, certaintyBadge(p.coprimary_rest_pain.certainty, 'Low certainty: Downgraded for risk of bias and single-trial imprecision (Wang 1997, N=60).', 'Co-primary Rest Pain')],
+          ['<strong>Secondary PONV (0-24 h):</strong> TEAS vs sham', `${p.secondary_ponv.trials}`, `${p.secondary_ponv.participants}`, `RR ${num(p.secondary_ponv.rr)} [${num(p.secondary_ponv.ci_low)}, ${num(p.secondary_ponv.ci_high)}]`, certaintyBadge(p.secondary_ponv.certainty, 'Low certainty: Most results have some concerns; moderate between-study inconsistency (I² 61%); CI supports reduction.', 'Secondary PONV (0-24 h)')],
+          ['<strong>Rescue opioid receipt:</strong> TEAS vs sham', `${p.rescue_receipt.trials}`, `${p.rescue_receipt.participants}`, `RR ${num(p.rescue_receipt.rr)} [${num(p.rescue_receipt.ci_low)}, ${num(p.rescue_receipt.ci_high)}]`, certaintyBadge(p.rescue_receipt.certainty, 'Low certainty: Outcome-specific ratings have concerns; 135 events / 478 participants below illustrative post-hoc information sizes.', 'Rescue Opioid Receipt')],
+          ['<strong>Broader first-day dose (E2 sensitivity):</strong> TEAS vs sham', `${p.broader_first_day_e2.trials}`, `${p.broader_first_day_e2.participants}`, `MD ${num(p.broader_first_day_e2.md)} [${num(p.broader_first_day_e2.ci_low)}, ${num(p.broader_first_day_e2.ci_high)}] mg IV MME`, certaintyBadge(p.broader_first_day_e2.certainty, 'Very low certainty: High heterogeneity (I² 91%); incomplete systemic exposure capture; CI spans zero effect [-14.53, 1.18].', 'Broader First-Day Dose (E2)')]
         ]
       )}
 
@@ -556,6 +615,10 @@
       <h2>Risk of Bias (Cochrane RoB 2)</h2>
       <p class="lede">Result-specific assessments across 180 outcomes using the Cochrane Risk of Bias 2 tool.</p>
 
+      <div class="note" style="margin: 14px 0;">
+        <strong>Interactive Hover Snippet:</strong> Hover over or focus any domain badge (<strong>Low</strong>, <strong>Some concerns</strong>, <strong>High</strong>) or overall badge in the tables below to reveal the verbatim source-grounded rationale explaining why it was judged that way.
+      </div>
+
       <div class="kpi-row">
         <div class="kpi-card"><div class="kpi-lbl">Total Assessed Results</div><div class="kpi-val">${d.rob.judgements.length}</div><small>Across 44 reports</small></div>
         <div class="kpi-card"><div class="kpi-lbl">High Risk of Bias</div><div class="kpi-val">${overallRow.High || 52}</div><small>29% of assessed results</small></div>
@@ -568,9 +631,9 @@
         ['Domain', 'Low Risk', 'Some Concerns', 'High Risk', 'Domain Focus'],
         summary.map(row => [
           `<strong>${esc(row.Domain)}</strong>`,
-          `<span class="tag risk-low">${row.Low}</span>`,
-          `<span class="tag risk-sc">${row['Some concerns']}</span>`,
-          `<span class="tag risk-high">${row.High}</span>`,
+          `<span class="tag risk-low has-tooltip" tabindex="0" data-tooltip-title="${esc(row.Domain)}" data-tooltip-badge="Low Risk: ${row.Low}" data-tooltip="${row.Low} assessed results (${((row.Low / 180) * 100).toFixed(1)}%) met all criteria for Low risk in ${esc(row.Domain)}.">${row.Low}</span>`,
+          `<span class="tag risk-sc has-tooltip" tabindex="0" data-tooltip-title="${esc(row.Domain)}" data-tooltip-badge="Some Concerns: ${row['Some concerns']}" data-tooltip="${row['Some concerns']} assessed results (${((row['Some concerns'] / 180) * 100).toFixed(1)}%) raised Some concerns in ${esc(row.Domain)}.">${row['Some concerns']}</span>`,
+          `<span class="tag risk-high has-tooltip" tabindex="0" data-tooltip-title="${esc(row.Domain)}" data-tooltip-badge="High Risk: ${row.High}" data-tooltip="${row.High} assessed results (${((row.High / 180) * 100).toFixed(1)}%) judged at High risk of material bias in ${esc(row.Domain)}.">${row.High}</span>`,
           row.Domain.includes('D1') ? 'Sequence generation & allocation concealment' :
           row.Domain.includes('D2') ? 'Blinding of participants, carers & protocol deviations' :
           row.Domain.includes('D3') ? 'Missing outcome data & differential attrition' :
@@ -632,8 +695,12 @@
       `<code>${esc(r['Result ID'])}</code>`,
       `<strong>${esc(r.Report)}</strong>`,
       `<strong>${esc(r.Outcome)}</strong><br><small>${esc(r.Window || '')} · ${esc(r.Comparison || '')}</small>`,
-      tag(r.D1), tag(r.D2), tag(r.D3), tag(r.D4), tag(r.D5),
-      tag(r.Overall),
+      tag(r.D1, r['D1 rationale'] || (r['Overall rationale'] ? `D1: ${getDefaultRobExplanation('D1', r.D1)} Note: ${r['Overall rationale']}` : ''), 'Domain 1: Randomisation Process'),
+      tag(r.D2, r['D2 rationale'] || (r['Overall rationale'] ? `D2: ${getDefaultRobExplanation('D2', r.D2)} Note: ${r['Overall rationale']}` : ''), 'Domain 2: Deviations from Intervention'),
+      tag(r.D3, r['D3 rationale'] || (r['Overall rationale'] ? `D3: ${getDefaultRobExplanation('D3', r.D3)} Note: ${r['Overall rationale']}` : ''), 'Domain 3: Missing Outcome Data'),
+      tag(r.D4, r['D4 rationale'] || (r['Overall rationale'] ? `D4: ${getDefaultRobExplanation('D4', r.D4)} Note: ${r['Overall rationale']}` : ''), 'Domain 4: Outcome Measurement'),
+      tag(r.D5, r['D5 rationale'] || (r['Overall rationale'] ? `D5: ${getDefaultRobExplanation('D5', r.D5)} Note: ${r['Overall rationale']}` : ''), 'Domain 5: Selection of Reported Result'),
+      tag(r.Overall, r['Overall rationale'] || `Overall RoB 2 rating: ${r.Overall}`, 'Overall Risk of Bias'),
       `<details><summary>Rationale</summary><small><strong>Overall:</strong> ${esc(r['Overall rationale'] || '—')}<br><strong>D1:</strong> ${esc(r['D1 rationale'] || '—')}<br><strong>D2:</strong> ${esc(r['D2 rationale'] || '—')}<br><strong>D3:</strong> ${esc(r['D3 rationale'] || '—')}<br><strong>D4:</strong> ${esc(r['D4 rationale'] || '—')}<br><strong>D5:</strong> ${esc(r['D5 rationale'] || '—')}</small></details>`
     ]);
 
@@ -673,6 +740,7 @@
 
       <div class="note" style="margin-bottom: 20px;">
         <strong>Certainty framework:</strong> Randomised trial evidence starts at <strong>High certainty</strong> and is downgraded for: (1) Risk of bias, (2) Inconsistency, (3) Indirectness, (4) Imprecision, and (5) Publication bias.
+        <br><span style="display:inline-block; margin-top:6px;"><strong>Interactive Hover Snippet:</strong> Hover over or focus any <strong>Certainty badge</strong> or individual <strong>Downgrade pill</strong> (RoB, Incon, Indir, Imprec, PubBias) below to reveal the detailed rationale explaining why that rating was assigned.</span>
       </div>
 
       <h3>Primary &amp; Supportive Opioid Syntheses</h3>
@@ -697,33 +765,65 @@
 
   function renderGradeTable(data) {
     if (!data || data.length === 0) return '<p>No profile entries available.</p>';
-    const rows = data.map(g => [
-      `<strong>${esc(g.Analysis || g['Target of the rating'] || g.Comparison || '')}</strong>`,
-      `${g.Trials || 0} / ${g.Participants || 0}`,
-      `<strong>${num(g.Effect || g.MD)}</strong> [${num(g['95% CI low'])}, ${num(g['95% CI high'])}]`,
-      certaintyBadge(g.Certainty),
-      `<div class="downgrades">
-        <span class="downgrade-pill ${+g['Risk of bias (levels)'] > 0 ? 'penalized' : ''}">RoB: -${g['Risk of bias (levels)'] || 0}</span>
-        <span class="downgrade-pill ${+g['Inconsistency (levels)'] > 0 ? 'penalized' : ''}">Incon: -${g['Inconsistency (levels)'] || 0}</span>
-        <span class="downgrade-pill ${+g['Indirectness (levels)'] > 0 ? 'penalized' : ''}">Indir: -${g['Indirectness (levels)'] || 0}</span>
-        <span class="downgrade-pill ${+g['Imprecision (levels)'] > 0 ? 'penalized' : ''}">Imprec: -${g['Imprecision (levels)'] || 0}</span>
-        <span class="downgrade-pill ${+g['Publication bias (levels)'] > 0 ? 'penalized' : ''}">PubBias: -${g['Publication bias (levels)'] || 0}</span>
-      </div>`,
-      `<small>${esc(g.Reasons || g['Risk of bias'] || g.Assessor || '—')}</small>`
-    ]);
+    const rows = data.map(g => {
+      const name = g.Analysis || g['Target of the rating'] || g.Comparison || '';
+      const certRationale = g.Reasons || [g['Risk of bias'], g['Inconsistency'], g['Indirectness'], g['Imprecision'], g['Publication bias']].filter(Boolean).join('; ') || getDefaultGradeExplanation(g.Certainty);
+      return [
+        `<strong>${esc(name)}</strong>`,
+        `${g.Trials || 0} / ${g.Participants || 0}`,
+        `<strong>${num(g.Effect || g.MD)}</strong> [${num(g['95% CI low'])}, ${num(g['95% CI high'])}]`,
+        certaintyBadge(g.Certainty, certRationale, `GRADE Certainty: ${name}`),
+        `<div class="downgrades">
+          <span class="downgrade-pill ${+g['Risk of bias (levels)'] > 0 ? 'penalized' : ''} has-tooltip" tabindex="0"
+                data-tooltip-title="GRADE: Risk of Bias"
+                data-tooltip-badge="${+g['Risk of bias (levels)'] > 0 ? `-${g['Risk of bias (levels)']} level(s)` : '0 levels'}"
+                data-tooltip="${esc(g['Risk of bias'] || (g.Reasons && g.Reasons.includes('Risk of bias') ? g.Reasons : (+g['Risk of bias (levels)'] > 0 ? 'Downgraded for study limitations / risk of bias in contributing trials.' : 'No serious risk of bias limitations identified in contributing trials.')))}">
+            RoB: -${g['Risk of bias (levels)'] || 0}
+          </span>
+          <span class="downgrade-pill ${+g['Inconsistency (levels)'] > 0 ? 'penalized' : ''} has-tooltip" tabindex="0"
+                data-tooltip-title="GRADE: Inconsistency"
+                data-tooltip-badge="${+g['Inconsistency (levels)'] > 0 ? `-${g['Inconsistency (levels)']} level(s)` : '0 levels'}"
+                data-tooltip="${esc(g['Inconsistency'] || (g.Reasons && g.Reasons.includes('Inconsistency') ? g.Reasons : (+g['Inconsistency (levels)'] > 0 ? 'Downgraded for substantial unexplained between-study heterogeneity.' : 'No serious inconsistency detected across trial findings.')))}">
+            Incon: -${g['Inconsistency (levels)'] || 0}
+          </span>
+          <span class="downgrade-pill ${+g['Indirectness (levels)'] > 0 ? 'penalized' : ''} has-tooltip" tabindex="0"
+                data-tooltip-title="GRADE: Indirectness"
+                data-tooltip-badge="${+g['Indirectness (levels)'] > 0 ? `-${g['Indirectness (levels)']} level(s)` : '0 levels'}"
+                data-tooltip="${esc(g['Indirectness'] || (g.Reasons && g.Reasons.includes('Indirectness') ? g.Reasons : (+g['Indirectness (levels)'] > 0 ? 'Downgraded for differences in population, intervention or outcome construct.' : 'Directly addresses the pre-specified research question.')))}">
+            Indir: -${g['Indirectness (levels)'] || 0}
+          </span>
+          <span class="downgrade-pill ${+g['Imprecision (levels)'] > 0 ? 'penalized' : ''} has-tooltip" tabindex="0"
+                data-tooltip-title="GRADE: Imprecision"
+                data-tooltip-badge="${+g['Imprecision (levels)'] > 0 ? `-${g['Imprecision (levels)']} level(s)` : '0 levels'}"
+                data-tooltip="${esc(g['Imprecision'] || (g.Reasons && g.Reasons.includes('Imprecision') ? g.Reasons : (+g['Imprecision (levels)'] > 0 ? 'Downgraded for wide confidence interval crossing clinical importance thresholds or sparse data.' : 'Confidence interval provides precise estimate of effect.')))}">
+            Imprec: -${g['Imprecision (levels)'] || 0}
+          </span>
+          <span class="downgrade-pill ${+g['Publication bias (levels)'] > 0 ? 'penalized' : ''} has-tooltip" tabindex="0"
+                data-tooltip-title="GRADE: Publication Bias"
+                data-tooltip-badge="${+g['Publication bias (levels)'] > 0 ? `-${g['Publication bias (levels)']} level(s)` : '0 levels'}"
+                data-tooltip="${esc(g['Publication bias'] || (g.Reasons && g.Reasons.includes('Publication bias') ? g.Reasons : 'No compelling evidence to assert publication bias.'))}">
+            PubBias: -${g['Publication bias (levels)'] || 0}
+          </span>
+        </div>`,
+        `<small>${esc(g.Reasons || g['Risk of bias'] || g.Assessor || '—')}</small>`
+      ];
+    });
     return table(['Analysis / Body', 'Trials / N', 'Effect [95% CI]', 'Certainty', 'Downgrades', 'Downgrade Rationales'], rows);
   }
 
   function renderRescueGradeTable(data) {
     if (!data || data.length === 0) return '<p>No rescue profile entries available.</p>';
-    const rows = data.map(g => [
-      `<strong>${esc(g.Analysis)}</strong><br><small>${esc(g.Reports || '')}</small>`,
-      `${g.Trials || 0} / ${g.Participants || 0}`,
-      `Intervention: ${g['Events, intervention (TEAS or EA)'] || 0}/${g.N_intervention || g['N, intervention'] || 0}<br>Control: ${g['Events, control'] || 0}/${g.N_control || g['N, control'] || 0}`,
-      `<strong>RR: ${num(g.Effect)}</strong> [${num(g['95% CI low'])}, ${num(g['95% CI high'])}]`,
-      certaintyBadge(g.Certainty),
-      `<small>Control: ${g['Control risk per 1000'] || '—'} / 1000; Intervention: ${g['Intervention risk per 1000'] || '—'} / 1000</small>`
-    ]);
+    const rows = data.map(g => {
+      const certRationale = `Risk of Bias: ${g['Risk of bias'] || 'Outcome-specific concerns'}; Imprecision: ${g['Imprecision'] || 'Sparse event counts'}; Absolute Risk: Control ${g['Control risk per 1000'] || '—'} / 1000 vs Intervention ${g['Intervention risk per 1000'] || '—'} / 1000. ${g['Absolute risk note'] || ''}`;
+      return [
+        `<strong>${esc(g.Analysis)}</strong><br><small>${esc(g.Reports || '')}</small>`,
+        `${g.Trials || 0} / ${g.Participants || 0}`,
+        `Intervention: ${g['Events, intervention (TEAS or EA)'] || 0}/${g.N_intervention || g['N, intervention'] || 0}<br>Control: ${g['Events, control'] || 0}/${g.N_control || g['N, control'] || 0}`,
+        `<strong>RR: ${num(g.Effect)}</strong> [${num(g['95% CI low'])}, ${num(g['95% CI high'])}]`,
+        certaintyBadge(g.Certainty, certRationale, `Rescue Opioid Certainty: ${g.Analysis}`),
+        `<small>Control: ${g['Control risk per 1000'] || '—'} / 1000; Intervention: ${g['Intervention risk per 1000'] || '—'} / 1000</small>`
+      ];
+    });
     return table(['Analysis', 'Trials / N', 'Events / N', 'Risk Ratio [95% CI]', 'Certainty', 'Absolute Risk'], rows);
   }
 
@@ -1057,6 +1157,115 @@
 
   window.addEventListener('hashchange', handleHash);
 
+  // Floating Assessment Tooltips (RoB 2 & GRADE Snippets)
+  let currentTooltipTarget = null;
+
+  function showTooltip(el) {
+    if (!el) return;
+    const text = el.getAttribute('data-tooltip');
+    if (!text) return;
+    currentTooltipTarget = el;
+    const title = el.getAttribute('data-tooltip-title') || '';
+    const badge = el.getAttribute('data-tooltip-badge') || '';
+
+    let tip = document.getElementById('assessment-tooltip');
+    if (!tip) {
+      tip = document.createElement('div');
+      tip.id = 'assessment-tooltip';
+      tip.setAttribute('role', 'tooltip');
+      tip.innerHTML = '<div class="tip-header"></div><div class="tip-body"></div><div class="tip-arrow"></div>';
+      document.body.appendChild(tip);
+    }
+
+    const headerEl = tip.querySelector('.tip-header');
+    if (title || badge) {
+      headerEl.innerHTML = `<span>${esc(title)}</span>${badge ? `<span class="tag">${esc(badge)}</span>` : ''}`;
+      headerEl.style.display = 'flex';
+    } else {
+      headerEl.style.display = 'none';
+    }
+
+    tip.querySelector('.tip-body').innerHTML = esc(text);
+
+    tip.style.visibility = 'hidden';
+    tip.style.display = 'block';
+    tip.classList.remove('visible', 'tip-above', 'tip-below');
+
+    const rect = el.getBoundingClientRect();
+    const tipRect = tip.getBoundingClientRect();
+    const margin = 10;
+
+    let top = rect.top - tipRect.height - 8;
+    let isAbove = true;
+    if (top < margin) {
+      top = rect.bottom + 8;
+      isAbove = false;
+    }
+
+    let left = rect.left + (rect.width / 2) - (tipRect.width / 2);
+    if (left < margin) left = margin;
+    if (left + tipRect.width > window.innerWidth - margin) {
+      left = window.innerWidth - margin - tipRect.width;
+    }
+
+    const arrowEl = tip.querySelector('.tip-arrow');
+    const arrowLeft = Math.max(12, Math.min(tipRect.width - 20, (rect.left + rect.width / 2) - left - 4));
+    arrowEl.style.left = `${arrowLeft}px`;
+
+    tip.style.top = `${Math.round(top)}px`;
+    tip.style.left = `${Math.round(left)}px`;
+    tip.style.visibility = 'visible';
+    tip.classList.add(isAbove ? 'tip-above' : 'tip-below');
+    tip.classList.add('visible');
+  }
+
+  function hideTooltip() {
+    currentTooltipTarget = null;
+    const tip = document.getElementById('assessment-tooltip');
+    if (tip) {
+      tip.classList.remove('visible');
+    }
+  }
+
+  let tooltipsInitialized = false;
+  function initAssessmentTooltips() {
+    if (tooltipsInitialized) return;
+    tooltipsInitialized = true;
+    document.addEventListener('mouseover', e => {
+      const target = e.target.closest('[data-tooltip]');
+      if (target && target !== currentTooltipTarget) {
+        showTooltip(target);
+      }
+    });
+    document.addEventListener('mouseout', e => {
+      const target = e.target.closest('[data-tooltip]');
+      if (target && (!e.relatedTarget || !target.contains(e.relatedTarget))) {
+        hideTooltip();
+      }
+    });
+    document.addEventListener('focusin', e => {
+      const target = e.target.closest('[data-tooltip]');
+      if (target) showTooltip(target);
+    });
+    document.addEventListener('focusout', e => {
+      const target = e.target.closest('[data-tooltip]');
+      if (target) hideTooltip();
+    });
+    window.addEventListener('keydown', e => {
+      if (e.key === 'Escape') hideTooltip();
+    });
+    window.addEventListener('scroll', () => {
+      if (currentTooltipTarget) {
+        const rect = currentTooltipTarget.getBoundingClientRect();
+        if (rect.bottom < 0 || rect.top > window.innerHeight) {
+          hideTooltip();
+        } else {
+          showTooltip(currentTooltipTarget);
+        }
+      }
+    }, { passive: true });
+  }
+
   // Setup Figure Dialog close handler
   document.addEventListener('DOMContentLoaded', () => {
     const dialog = $('figure-dialog');
@@ -1075,10 +1284,12 @@
       });
     }
 
+    initAssessmentTooltips();
     handleHash();
   });
 
   if (document.readyState === 'complete' || document.readyState === 'interactive') {
+    initAssessmentTooltips();
     handleHash();
   }
 

@@ -112,3 +112,18 @@ button.matrix-cell::after{content:"";position:absolute;inset:-6px}
 .manuscript-section{margin:32px 0;line-height:1.7}
 .manuscript-section h3{border-bottom:1px solid var(--line);padding-bottom:8px;margin-top:32px}
 .manuscript-section p{margin:14px 0}
+
+/* Assessment Result Tooltips (Risk of Bias & GRADE) */
+.has-tooltip{cursor:help;position:relative;display:inline-block;transition:transform .12s ease,box-shadow .12s ease}
+.has-tooltip:hover,.has-tooltip:focus-visible{outline:2px solid var(--accent);outline-offset:2px;box-shadow:0 0 0 3px rgba(56,189,248,.25)}
+.has-tooltip.tag,.has-tooltip.grade-badge,.has-tooltip.downgrade-pill{text-decoration:underline dotted 1px rgba(148,163,184,.7);text-underline-offset:3px}
+
+#assessment-tooltip{position:fixed;z-index:2147483647;pointer-events:none;max-width:380px;min-width:220px;padding:10px 14px;background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:8px;box-shadow:0 12px 30px rgba(0,0,0,.35);font-size:12.5px;line-height:1.45;transition:opacity .14s ease,transform .14s ease;opacity:0;transform:translateY(4px);display:none}
+#assessment-tooltip.visible{opacity:1;transform:translateY(0);display:block}
+#assessment-tooltip .tip-header{display:flex;align-items:center;justify-content:space-between;gap:8px;font-weight:700;font-size:11.5px;color:var(--accent);border-bottom:1px solid var(--line);padding-bottom:5px;margin-bottom:6px;text-transform:uppercase;letter-spacing:.04em}
+#assessment-tooltip .tip-body{color:var(--ink);font-size:12px;font-weight:400}
+#assessment-tooltip .tip-body strong{color:var(--accent);font-weight:600}
+#assessment-tooltip .tip-arrow{position:absolute;width:8px;height:8px;background:var(--card);border:1px solid var(--line);transform:rotate(45deg)}
+#assessment-tooltip.tip-above .tip-arrow{bottom:-5px;border-top:none;border-left:none}
+#assessment-tooltip.tip-below .tip-arrow{top:-5px;border-bottom:none;border-right:none}
+
