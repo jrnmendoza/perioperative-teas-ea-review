@@ -9,7 +9,10 @@ import sys
 import json
 import hashlib
 import openpyxl
-import docx
+try:
+    import docx
+except ImportError:
+    docx = None
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -226,40 +229,53 @@ for r in srows[1:]:
         rescue_missing_outcomes.append({hs[i]: clean_val(r[i]) for i in range(len(hs)) if i < len(r)})
 
 print("9. Reading Word Documents (PRISMA checklist, Search strategies, Reading copy)...")
-doc1 = docx.Document(AF / 'Additional_file_1.docx')
-af1_text = [p.text.strip() for p in doc1.paragraphs if p.text.strip()]
-af1_tables = []
-for t in doc1.tables:
-    table_data = []
-    for row in t.rows:
-        table_data.append([c.text.strip() for c in row.cells])
-    if table_data:
-        af1_tables.append(table_data)
+if docx is not None:
+    doc1 = docx.Document(AF / 'Additional_file_1.docx')
+    af1_text = [p.text.strip() for p in doc1.paragraphs if p.text.strip()]
+    af1_tables = []
+    for t in doc1.tables:
+        table_data = []
+        for row in t.rows:
+            table_data.append([c.text.strip() for c in row.cells])
+        if table_data:
+            af1_tables.append(table_data)
 
-doc2 = docx.Document(AF / 'Additional_file_2.docx')
-af2_text = [p.text.strip() for p in doc2.paragraphs if p.text.strip()]
-af2_tables = []
-for t in doc2.tables:
-    table_data = []
-    for row in t.rows:
-        table_data.append([c.text.strip() for c in row.cells])
-    if table_data:
-        af2_tables.append(table_data)
+    doc2 = docx.Document(AF / 'Additional_file_2.docx')
+    af2_text = [p.text.strip() for p in doc2.paragraphs if p.text.strip()]
+    af2_tables = []
+    for t in doc2.tables:
+        table_data = []
+        for row in t.rows:
+            table_data.append([c.text.strip() for c in row.cells])
+        if table_data:
+            af2_tables.append(table_data)
 
-doc_reading = docx.Document(RC_DOCX)
-manuscript_sections = {}
-current_sec = 'Header'
-manuscript_sections[current_sec] = []
-for p in doc_reading.paragraphs:
-    txt = p.text.strip()
-    if not txt: continue
-    if p.style.name.startswith('Heading 1'):
-        current_sec = txt
-        manuscript_sections[current_sec] = []
-    elif p.style.name.startswith('Heading 2'):
-        manuscript_sections[current_sec].append(f'### {txt}')
-    else:
-        manuscript_sections[current_sec].append(txt)
+    doc_reading = docx.Document(RC_DOCX)
+    manuscript_sections = {}
+    current_sec = 'Header'
+    manuscript_sections[current_sec] = []
+    for p in doc_reading.paragraphs:
+        txt = p.text.strip()
+        if not txt: continue
+        if p.style.name.startswith('Heading 1'):
+            current_sec = txt
+            manuscript_sections[current_sec] = []
+        elif p.style.name.startswith('Heading 2'):
+            manuscript_sections[current_sec].append(f'### {txt}')
+        else:
+            manuscript_sections[current_sec].append(txt)
+else:
+    print("   (python-docx not installed; reusing pre-compiled docx sections)")
+    existing = {}
+    for td in TARGET_DIRS:
+        if (td / 'current_review.json').exists():
+            existing = json.loads((td / 'current_review.json').read_text(encoding='utf-8'))
+            break
+    af1_text = existing.get('prisma_checklist', {}).get('text', [])
+    af1_tables = existing.get('prisma_checklist', {}).get('tables', [])
+    af2_text = existing.get('search_strategies', {}).get('text', [])
+    af2_tables = existing.get('search_strategies', {}).get('tables', [])
+    manuscript_sections = existing.get('manuscript_text', {})
 
 print("10. Gathering Figures and Downloads metadata...")
 figures_info = [
